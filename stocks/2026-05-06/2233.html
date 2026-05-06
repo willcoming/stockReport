@@ -15,7 +15,7 @@
     <section class="report-hero">
       <p>Stock Research</p>
       <h1>2233 — 宇隆</h1>
-      <span>2233.TW · 資料不足</span>
+      <span>2233.TW · 完成</span>
     </section>
     <article class="report-content">
       <h2>來源提及</h2>
@@ -24,68 +24,186 @@
 </ul>
 
       <h2>DCF 估值</h2>
-      <h1>2233.TW — DCF 估值報告 (2026-05-06)</h1>
-<h2>狀態</h2>
-<p>資料不足或分析流程失敗，今日先建立占位頁。</p>
-<h2>錯誤摘要</h2>
-<pre><code class="language-text">2233.TW: codex exec failed with exit 2
-STDOUT:
-
-STDERR:
-error: unexpected argument '--search' found
-
-  tip: to pass '--search' as a value, use '-- --search'
-
-Usage: codex exec [OPTIONS] [PROMPT]
-       codex exec [OPTIONS] &lt;COMMAND&gt; [ARGS]
-
-For more information, try '--help'.
- | 2233.TWO: codex exec failed with exit 2
-STDOUT:
-
-STDERR:
-error: unexpected argument '--search' found
-
-  tip: to pass '--search' as a value, use '-- --search'
-
-Usage: codex exec [OPTIONS] [PROMPT]
-       codex exec [OPTIONS] &lt;COMMAND&gt; [ARGS]
-
-For more information, try '--help'.
-</code></pre>
-<p>⚠️ <strong>免責聲明：</strong> 本頁內容為根據公開資訊整理的教育性研究，不構成投資建議、招攬或交易指示。任何估值、情境與結論都可能失準；請自行查證並諮詢合格理財顧問後再做任何投資決策。</p>
+      <h1>2233.TW — DCF 估值報告</h1>
+<p>as_of_date：2026-05-06<br>
+projection_years：5 年<br>
+primary ticker：2233.TW；fallback_ticker：2233.TWO（未使用，primary ticker 資料可取得）</p>
+<h2>數據來源</h2>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>數值</th>
+<th>來源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>最近一年 FCF</td>
+<td>NT$419.78M</td>
+<td><a href="https://stockanalysis.com/quote/tpe/2233/financials/cash-flow-statement/">StockAnalysis 現金流量表</a>：FY2025 Free Cash Flow</td>
+</tr>
+<tr>
+<td>5yr FCF CAGR</td>
+<td>-9.05%</td>
+<td>以 FY2021 FCF NT$613.49M 至 FY2025 FCF NT$419.78M 計算；來源同上</td>
+</tr>
+<tr>
+<td>Beta</td>
+<td>0.52</td>
+<td><a href="https://stockanalysis.com/quote/tpe/2233/statistics/">StockAnalysis Statistics</a>：Beta (5Y)</td>
+</tr>
+<tr>
+<td>Net Debt</td>
+<td>NT$553.00M</td>
+<td><a href="https://stockanalysis.com/quote/tpe/2233/financials/balance-sheet/">StockAnalysis 資產負債表</a>：FY2025 Total Debt NT$1,860M - Cash &amp; Equivalents NT$1,307M</td>
+</tr>
+<tr>
+<td>流通股數</td>
+<td>60.29M</td>
+<td><a href="https://stockanalysis.com/quote/tpe/2233/financials/balance-sheet/">StockAnalysis 資產負債表</a>：Total Common Shares Outstanding</td>
+</tr>
+<tr>
+<td>無風險利率 (10Y)</td>
+<td>4.43%</td>
+<td><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve">U.S. Treasury Daily Treasury Par Yield Curve Rates</a>：2026-05-05 10 Yr；2026-05-06 官方表尚未更新</td>
+</tr>
+<tr>
+<td>WACC</td>
+<td>7.29%</td>
+<td>計算：4.43% + 0.52 x 5.5%</td>
+</tr>
+<tr>
+<td>現價</td>
+<td>NT$315.50</td>
+<td><a href="https://stockanalysis.com/quote/tpe/2233/financials/cash-flow-statement/">StockAnalysis 現金流量表頁面</a>：2026-05-06 delayed price</td>
+</tr>
+</tbody>
+</table>
+<h2>DCF 估值結果</h2>
+<table>
+<thead>
+<tr>
+<th>情境</th>
+<th>FCF 成長率 (yr1-5)</th>
+<th>終值成長率</th>
+<th>WACC</th>
+<th>內在價值/股</th>
+<th>現價</th>
+<th>安全邊際</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>悲觀</td>
+<td>-12.67%</td>
+<td>1.5%</td>
+<td>7.79%</td>
+<td>NT$49.39</td>
+<td>NT$315.50</td>
+<td>-84.35% (高估)</td>
+</tr>
+<tr>
+<td>基準</td>
+<td>-9.05%</td>
+<td>2.5%</td>
+<td>7.29%</td>
+<td>NT$77.84</td>
+<td>NT$315.50</td>
+<td>-75.33% (高估)</td>
+</tr>
+<tr>
+<td>樂觀</td>
+<td>-5.43%</td>
+<td>3.5%</td>
+<td>6.79%</td>
+<td>NT$134.66</td>
+<td>NT$315.50</td>
+<td>-57.32% (高估)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
+</blockquote>
+<h2>關鍵假設說明</h2>
+<ul>
+<li>FCF 成長率來源：以 StockAnalysis/S&amp;P Global Market Intelligence 的 FY2021-FY2025 annual FCF 計算 CAGR；因歷史 CAGR 為負，悲觀情境採更深負成長、樂觀情境採較淺負成長，以維持情境語意。</li>
+<li>WACC 組成：無風險利率 4.43% + Beta 0.52 x 5.5% ERP = 7.29%；悲觀情境加 0.5%，樂觀情境減 0.5%。</li>
+<li>終值佔總估值比重：74.96%（基準情境）。</li>
+<li>基準與樂觀情境終值佔比 &gt;70%，結果對終值成長率與 WACC 假設高度敏感，請謹慎解讀。</li>
+<li>本次未啟用 EV/EBITDA fallback，因最近 5 年 FCF 皆為正值。</li>
+</ul>
+<h2>結論</h2>
+<p>基準情境估算 2233.TW 內在價值約 NT$77.84/股，較 2026-05-06 現價 NT$315.50 低約 75.33%，在此 DCF 假設下安全邊際不足。主要不確定因子是 FY2025 FCF 下滑後是否能恢復成長，以及終值假設對估值結果的放大影響。</p>
+<hr>
+<p>⚠️ <strong>免責聲明：</strong> 本報告根據公開財務數據以 DCF 模型計算，為教育性研究，<strong>不構成投資建議</strong>、
+不是招攬、不是交易指示。DCF 估值對假設高度敏感，實際結果可能大幅偏離。
+請自行查證並諮詢合格理財顧問後再做任何投資決策。</p>
 
       <h2>多角色股票分析</h2>
       <h1>2233.TW — 多角色股票分析（2026-05-06）</h1>
-<h2>狀態</h2>
-<p>資料不足或分析流程失敗，今日先建立占位頁。</p>
-<h2>錯誤摘要</h2>
-<pre><code class="language-text">2233.TW: codex exec failed with exit 2
-STDOUT:
-
-STDERR:
-error: unexpected argument '--search' found
-
-  tip: to pass '--search' as a value, use '-- --search'
-
-Usage: codex exec [OPTIONS] [PROMPT]
-       codex exec [OPTIONS] &lt;COMMAND&gt; [ARGS]
-
-For more information, try '--help'.
- | 2233.TWO: codex exec failed with exit 2
-STDOUT:
-
-STDERR:
-error: unexpected argument '--search' found
-
-  tip: to pass '--search' as a value, use '-- --search'
-
-Usage: codex exec [OPTIONS] [PROMPT]
-       codex exec [OPTIONS] &lt;COMMAND&gt; [ARGS]
-
-For more information, try '--help'.
-</code></pre>
-<p>⚠️ <strong>免責聲明：</strong> 本頁內容為根據公開資訊整理的教育性研究，不構成投資建議、招攬或交易指示。任何估值、情境與結論都可能失準；請自行查證並諮詢合格理財顧問後再做任何投資決策。</p>
+<p><strong>投資期間：</strong> 中期（1-6 個月） · <strong>分析深度：</strong> 標準</p>
+<h2>最終建議</h2>
+<ul>
+<li><strong>操作傾向：</strong> HOLD（續抱 / 觀望）</li>
+<li><strong>信心程度：</strong> MEDIUM（中）</li>
+<li><strong>風險結論：</strong> APPROVES WITH ADJUSTMENT（調整後通過）</li>
+<li><strong>進場確認條件：</strong> 需看到 2026 年 4-5 月營收延續年增，且 UQD / 機器人減速機從題材轉為實際出貨貢獻；技術面需站穩 300 元上方並消化 4/30-5/5 急漲後籌碼。</li>
+<li><strong>失效條件：</strong> 若股價跌回 258-260 元區間且 1-3 月累計營收年減 -7.46% 的趨勢未改善，或機器人 / UQD 出貨延後，則中期重估 thesis 失效。</li>
+</ul>
+<h2>分析師發現</h2>
+<h3>基本面</h3>
+<ul>
+<li>宇隆主要業務仍是精密金屬零件、汽機車零組件與金屬加工；公司基本資料列示「精密金屬零件之機械加工、製造及買賣」為主要業務。https://tweb.money-link.com.tw/TWStock/StockBasic.aspx?SymId=2233</li>
+<li>2025 年營收 32.75 億元，年減約 10.5%；毛利率由 2024 年 37% 降至 2025 年 31%；營業利益率由 19% 降至 13%；基本 EPS 由 10.96 元降至 6.70 元。https://www.turvo.com.tw/proimages/1C/2025%E5%B9%B4%E7%AC%AC%E5%9B%9B%E5%AD%A3%E6%AF%8D%E5%AD%90%E5%85%AC%E5%8F%B8%E5%90%88%E4%BD%B5%E8%B2%A1%E5%8B%99%E5%A0%B1%E5%91%8A.pdf</li>
+<li>2026 年 3 月營收 3.03 億元，年增 2.9%，但 2026 年 1-3 月累計營收 8.13 億元，仍年減 7.46%；基本面尚未完全證明成長反轉。https://news.cnyes.com/news/print/6413557</li>
+<li>資產負債表截至 2025 年底：現金及約當現金 13.07 億元，總負債 26.59 億元，權益 39.65 億元；負債比約 40%，財務結構尚可，但短期借款由 4.48 億元升至 12.55 億元，需追蹤資金成本與擴產需求。https://www.turvo.com.tw/proimages/1C/2025%E5%B9%B4%E7%AC%AC%E5%9B%9B%E5%AD%A3%E6%AF%8D%E5%AD%90%E5%85%AC%E5%8F%B8%E5%90%88%E4%BD%B5%E8%B2%A1%E5%8B%99%E5%A0%B1%E5%91%8A.pdf</li>
+<li>以 2026/05/05 可得報價 324 元與 2025 EPS 6.70 元粗估，本益比約 48 倍；此估值已反映部分機器人 / 液冷供應鏈重估預期。https://tweb.money-link.com.tw/TWStock/StockBasic.aspx?SymId=2233</li>
+</ul>
+<h3>情緒面</h3>
+<ul>
+<li>市場情緒偏多但偏題材驅動：新聞聚焦人形機器人減速機、機器狗、搬運車與 UQD 液冷接頭，帶動 4/27-4/30 單週大漲約 24%。https://m.cnyes.com/news/id/6439708</li>
+<li>日報上下文指出宇隆被市場視為 AI 機器人「關節」零組件概念股，且突破前波高點、題材發酵；這支持短線資金關注度，但也提醒目前實質 AI 機器人營收佔比偏低。</li>
+<li>零售社群、選擇權異常與放空數據：unavailable。台股個股可得公開資料未充分支撐量化判斷，因此不捏造情緒指標。</li>
+</ul>
+<h3>新聞（過去 30 天）</h3>
+<ul>
+<li>宇隆3月營收3.03億元年增2.9% 1—3月達8.13億元 — 2026-04-09 — https://news.cnyes.com/news/print/6413557</li>
+<li>台股焦點：宇隆(2233.TW)，盤中成交價 258 元、3 月營收年增 2.90% — 2026-04-29 — https://www.moneydj.com/kmdj/news/newsviewer.aspx?a=37856ed8-42df-48bd-b7e9-b2549ce7a0ca</li>
+<li>盤中速報 - 宇隆股價拉至漲停，漲停價300.0元，成交4,360張 — 2026-04-30 — https://news.cnyes.com/news/id/6438078</li>
+<li>宇隆第一次無擔保轉換公司債首次轉換普通股上市買賣，轉換 400 股，開始買賣日 2026/05/06 — 2026-04-30 — https://news.cnyes.com/news/id/6438286</li>
+<li>〈熱門股〉宇隆擁散熱、機器人雙利多 周漲逾2成挑戰股價新高 — 2026-05-01 — https://m.cnyes.com/news/id/6439708</li>
+<li>機器人、散熱雙利多助攻！精密金屬零件廠週飆24.22%，股價站上漲停新高 — 2026-05-02 — https://www.ftnn.com.tw/news/542397</li>
+</ul>
+<h3>技術面</h3>
+<ul>
+<li>趨勢：短線明顯轉強。4/29 盤中成交價 258 元，4/30 收在 300 元，5/5 可得報價 324 元，顯示題材與動能快速推升。https://www.moneydj.com/kmdj/news/newsviewer.aspx?a=37856ed8-42df-48bd-b7e9-b2549ce7a0ca ; https://m.cnyes.com/news/id/6439708 ; https://tweb.money-link.com.tw/TWStock/StockBasic.aspx?SymId=2233</li>
+<li>阻力：5/5 可得資料顯示最高 325.5 元；突破後上方缺乏可靠歷史壓力資料，不能捏造更高目標價。https://tweb.money-link.com.tw/TWStock/StockBasic.aspx?SymId=2233</li>
+<li>支撐：300 元為 4/30 漲停收盤與 5/1 新聞提及的重要整數關卡；258-260 元為 4/29 起漲前盤中區。https://m.cnyes.com/news/id/6439708 ; https://www.moneydj.com/kmdj/news/newsviewer.aspx?a=37856ed8-42df-48bd-b7e9-b2549ce7a0ca</li>
+<li>RSI、MACD、均線精確數值：unavailable。可確認的是價格已遠高於 4 月中旬 213 元附近與 4/29 的 258 元，短線乖離風險上升。https://wwwc.twse.com.tw/pdf/en/2233_en.pdf</li>
+</ul>
+<h2>多空辯論</h2>
+<p><strong>多方論點：</strong> 宇隆的投資故事已從傳統車用精密加工，延伸到機器人關節減速機與伺服器液冷 UQD。新聞指出 UQD 獲輝達客戶認證並切入 GB300 液冷系統供應鏈，若 2026 年開始放量，產品組合與毛利率有機會改善；同時機器人「關節」零組件具估值重塑空間，這也解釋近期股價突破前波高點。最大反方挑戰是：2025 獲利與毛利率已明顯下滑，2026 年首季累計營收仍年減，題材尚未完全落到財報。</p>
+<p><strong>空方論點：</strong> 目前估值已提前反映機器人與液冷供應鏈期待；以 324 元與 2025 EPS 6.70 元粗估，本益比約 48 倍，而 2025 EPS 年減、毛利率下滑、1-3 月累計營收仍年減，基本面尚不足以支撐 aggressively BUY。最大多方反駁是：3 月營收已恢復年增，若 UQD 與減速機出貨從 Q2 起放量，市場可能先用新產品週期重新定價，而不是只看 2025 舊財報。</p>
+<p><strong>關鍵分歧：</strong></p>
+<ul>
+<li>2026 年 UQD、機器狗、搬運車與 AI 減速機是否能在 1-2 季內轉為可驗證營收，而非只停留在新聞題材。</li>
+<li>毛利率能否從 2025 年 31% 的低點回升，證明產品組合改善。</li>
+<li>急漲後 300 元上方能否換手成功；若跌回 258-260 元區間，代表題材資金退潮。</li>
+</ul>
+<h2>風險管理員備註</h2>
+<ul>
+<li>Trader 的 HOLD 判斷合理，但風險結論為 APPROVES WITH ADJUSTMENT（調整後通過）：不宜在急漲後用追價方式建立完整部位，需等待營收與出貨證據確認。</li>
+<li>主要 downside scenario 是「估值先重估、財報後落空」：若 AI 機器人營收佔比仍偏低，48 倍左右的粗估本益比容易被壓縮。</li>
+<li>流動性風險中等：5/5 可得總量 683 張、4/30 新聞提及成交 4,360 張，題材日與一般交易日量能差距大，追高後出場滑價風險需納入。</li>
+<li>集中度風險：宇隆仍屬單一中小型題材股，不應用作高度集中曝險；若納入觀察，需搭配嚴格事件檢查點，例如每月營收、法說 / 公告對 UQD 與減速機出貨的具體說法。</li>
+<li>風控調整：中期偏多觀察可以保留，但操作上應以「站穩 300 元且營收確認」作為條件；若跌破 258-260 元區間或 4-5 月營收未改善，應降評為 SELL（偏空 / 賣出）或移出觀察名單。</li>
+</ul>
+<hr>
+<p>⚠️ <strong>免責聲明：</strong> 本內容是根據公開資訊整理的教育性研究。
+不構成投資建議、招攬或交易建議。市場可能朝任何 thesis 的反方向波動。
+交易前請自行研究，並諮詢合格持牌顧問。此 skill 不會下任何訂單。</p>
 
     </article>
   </main>
