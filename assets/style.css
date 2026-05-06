@@ -176,3 +176,30 @@ th {
   padding: 0 0 56px;
   list-style: none;
 }
+
+.stock-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.stock-list a {
+  display: block;
+  padding: 12px 14px;
+  color: var(--ink);
+  text-decoration: none;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.stock-list strong,
+.stock-list span {
+  display: block;
+}
+
+.stock-list span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
