@@ -15,7 +15,7 @@
     <section class="report-hero">
       <p>Stock Research</p>
       <h1>2344 — 華邦電</h1>
-      <span>2344.TW · 資料不足</span>
+      <span>2344.TW · 完成</span>
     </section>
     <article class="report-content">
       <h2>來源提及</h2>
@@ -24,68 +24,195 @@
 </ul>
 
       <h2>DCF 估值</h2>
-      <h1>2344.TW — DCF 估值報告 (2026-05-06)</h1>
-<h2>狀態</h2>
-<p>資料不足或分析流程失敗，今日先建立占位頁。</p>
-<h2>錯誤摘要</h2>
-<pre><code class="language-text">2344.TW: codex exec failed with exit 2
-STDOUT:
-
-STDERR:
-error: unexpected argument '--search' found
-
-  tip: to pass '--search' as a value, use '-- --search'
-
-Usage: codex exec [OPTIONS] [PROMPT]
-       codex exec [OPTIONS] &lt;COMMAND&gt; [ARGS]
-
-For more information, try '--help'.
- | 2344.TWO: codex exec failed with exit 2
-STDOUT:
-
-STDERR:
-error: unexpected argument '--search' found
-
-  tip: to pass '--search' as a value, use '-- --search'
-
-Usage: codex exec [OPTIONS] [PROMPT]
-       codex exec [OPTIONS] &lt;COMMAND&gt; [ARGS]
-
-For more information, try '--help'.
-</code></pre>
-<p>⚠️ <strong>免責聲明：</strong> 本頁內容為根據公開資訊整理的教育性研究，不構成投資建議、招攬或交易指示。任何估值、情境與結論都可能失準；請自行查證並諮詢合格理財顧問後再做任何投資決策。</p>
+      <h1>2344.TW — DCF 估值報告</h1>
+<p>as_of_date：2026-05-06<br>
+projection_years：5<br>
+fallback_ticker：未使用；2344.TW 資料可取得。</p>
+<h2>數據來源</h2>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>數值</th>
+<th>來源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>最近一年 FCF</td>
+<td>NT$15.33B</td>
+<td><a href="https://stockanalysis.com/quote/tpe/2344/statistics/">StockAnalysis：TTM Cash Flow</a></td>
+</tr>
+<tr>
+<td>FY2021-FY2025 FCF</td>
+<td>NT$18.573B / -26.411B / -10.186B / -6.027B / 4.687B</td>
+<td><a href="https://stockanalysis.com/quote/tpe/2344/financials/cash-flow-statement/">StockAnalysis：Annual Cash Flow Statement</a></td>
+</tr>
+<tr>
+<td>5yr FCF CAGR</td>
+<td>-29.1%</td>
+<td>由 FY2021 NT$18.573B 與 FY2025 NT$4.687B 計算</td>
+</tr>
+<tr>
+<td>Beta</td>
+<td>1.59</td>
+<td><a href="https://stockanalysis.com/quote/tpe/2344/statistics/">StockAnalysis：Statistics</a></td>
+</tr>
+<tr>
+<td>Net Debt</td>
+<td>-NT$3.69B（淨現金）</td>
+<td><a href="https://stockanalysis.com/quote/tpe/2344/statistics/">StockAnalysis：Statistics</a></td>
+</tr>
+<tr>
+<td>流通股數</td>
+<td>4.50B</td>
+<td><a href="https://stockanalysis.com/quote/tpe/2344/statistics/">StockAnalysis：Statistics</a></td>
+</tr>
+<tr>
+<td>無風險利率 (10Y)</td>
+<td>4.3654%</td>
+<td><a href="https://www.mortgagenewsdaily.com/treasury/10yr">Mortgage News Daily：10 Year US Treasury</a></td>
+</tr>
+<tr>
+<td>WACC</td>
+<td>13.11%（基準）</td>
+<td>計算：4.3654% + 1.59 x 5.5%</td>
+</tr>
+<tr>
+<td>現價</td>
+<td>NT$108.50</td>
+<td><a href="https://stockanalysis.com/quote/tpe/2344/statistics/">StockAnalysis：2344 Statistics / Price</a></td>
+</tr>
+</tbody>
+</table>
+<h2>DCF 估值結果</h2>
+<table>
+<thead>
+<tr>
+<th>情境</th>
+<th>FCF 成長率 (yr1-5)</th>
+<th>終值成長率</th>
+<th>WACC</th>
+<th>內在價值/股</th>
+<th>現價</th>
+<th>安全邊際</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>悲觀</td>
+<td>-40.8%</td>
+<td>1.5%</td>
+<td>13.61%</td>
+<td>NT$5.49</td>
+<td>NT$108.50</td>
+<td>-94.9%（高估）</td>
+</tr>
+<tr>
+<td>基準</td>
+<td>-29.1%</td>
+<td>2.5%</td>
+<td>13.11%</td>
+<td>NT$9.16</td>
+<td>NT$108.50</td>
+<td>-91.6%（高估）</td>
+</tr>
+<tr>
+<td>樂觀</td>
+<td>-17.5%</td>
+<td>3.5%</td>
+<td>12.61%</td>
+<td>NT$16.37</td>
+<td>NT$108.50</td>
+<td>-84.9%（高估）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
+</blockquote>
+<h2>關鍵假設說明</h2>
+<ul>
+<li>FCF 成長率來源：以 FY2021 FCF NT$18.573B 與 FY2025 FCF NT$4.687B 計算 5yr CAGR 為 -29.1%；因基準成長率為負，悲觀情境採更深衰退（base_rate x 1.4），樂觀情境採較淺衰退（base_rate x 0.6）。</li>
+<li>WACC 組成：無風險利率 4.3654% + Beta 1.59 x 5.5% ERP = 13.11%；悲觀情境加 0.5%，樂觀情境減 0.5%。</li>
+<li>起始 FCF：採 TTM FCF NT$15.33B，而歷史 CAGR 採 FY2021-FY2025 年度 FCF。</li>
+<li>終值佔總估值比重：38.1%（基準情境）。</li>
+<li>2344.TW 近 5 年 FCF 中有 3 年為負，DCF 對週期性復甦、資本支出與終值假設高度敏感；本次結果不適合單獨作為投資判斷。</li>
+</ul>
+<h2>結論</h2>
+<p>基準情境下，2344.TW 的 DCF 內在價值約 NT$9.16/股，較現價 NT$108.50 低約 91.6%，顯示以近 5 年 FCF CAGR 外推時安全邊際不足。最主要不確定因子是記憶體景氣循環、2026 後 FCF 是否能維持 TTM 改善，以及高資本支出對自由現金流的壓力。</p>
+<hr>
+<p>⚠️ <strong>免責聲明：</strong> 本報告根據公開財務數據以 DCF 模型計算，為教育性研究，<strong>不構成投資建議</strong>、
+不是招攬、不是交易指示。DCF 估值對假設高度敏感，實際結果可能大幅偏離。
+請自行查證並諮詢合格理財顧問後再做任何投資決策。</p>
 
       <h2>多角色股票分析</h2>
       <h1>2344.TW — 多角色股票分析（2026-05-06）</h1>
-<h2>狀態</h2>
-<p>資料不足或分析流程失敗，今日先建立占位頁。</p>
-<h2>錯誤摘要</h2>
-<pre><code class="language-text">2344.TW: codex exec failed with exit 2
-STDOUT:
-
-STDERR:
-error: unexpected argument '--search' found
-
-  tip: to pass '--search' as a value, use '-- --search'
-
-Usage: codex exec [OPTIONS] [PROMPT]
-       codex exec [OPTIONS] &lt;COMMAND&gt; [ARGS]
-
-For more information, try '--help'.
- | 2344.TWO: codex exec failed with exit 2
-STDOUT:
-
-STDERR:
-error: unexpected argument '--search' found
-
-  tip: to pass '--search' as a value, use '-- --search'
-
-Usage: codex exec [OPTIONS] [PROMPT]
-       codex exec [OPTIONS] &lt;COMMAND&gt; [ARGS]
-
-For more information, try '--help'.
-</code></pre>
-<p>⚠️ <strong>免責聲明：</strong> 本頁內容為根據公開資訊整理的教育性研究，不構成投資建議、招攬或交易指示。任何估值、情境與結論都可能失準；請自行查證並諮詢合格理財顧問後再做任何投資決策。</p>
+<p><strong>投資期間：</strong> 中期（1-6 個月） · <strong>分析深度：</strong> 標準</p>
+<h2>最終建議</h2>
+<ul>
+<li><strong>操作傾向：</strong> HOLD（續抱 / 觀望）</li>
+<li><strong>信心程度：</strong> MEDIUM（中）</li>
+<li><strong>風險結論：</strong> APPROVES WITH ADJUSTMENT（調整後通過）</li>
+<li><strong>進場確認條件：</strong> 2026-05-06 跳空缺口低點 104.0 元能守住，且後續月營收 / Q2 記憶體報價續證明 DRAM、Flash 漲價仍可轉化為毛利率；若股價放量站穩 108.5 元以上，才算技術面確認。（TWSE 價量：https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260506&amp;stockNo=2344&amp;response=json）</li>
+<li><strong>失效條件：</strong> 跌破 104.0 元缺口下緣後無法快速收復，或跌破 20 日均線約 92.68 元；基本面上，若 DDR / NAND / NOR 報價轉弱、月營收年增率明顯降溫，或毛利率自 Q1 高峰快速回落，則中期 thesis 失效。</li>
+</ul>
+<h2>分析師發現</h2>
+<h3>基本面</h3>
+<ul>
+<li>華邦電 2026Q1 營收 382.53 億元，季增 43.7%、年增 91.3%；毛利率 53.4%，營益率 32.8%，稅後純益 101.14 億元，EPS 2.25 元，較去年同期轉盈。來源：https://tw.stock.yahoo.com/news/%E8%8F%AF%E9%82%A6%E9%9B%BB%E6%B3%95%E8%AA%AA-q1%E6%AF%9B%E5%88%A9%E7%8E%87%E9%A3%8653-4-%E5%96%AE%E5%AD%A3%E5%A4%A7%E8%B3%BA%E8%B6%85%E9%81%8E%E7%99%BE%E5%84%84%E5%85%83-eps-100153650.html</li>
+<li>產品結構 Q1 以 DRAM 約 60%、Flash 約 40%；DRAM ASP 季增 51-53%，Flash ASP 季增 34-36%，獲利改善主要來自報價上漲與接近滿載稼動。來源同上。</li>
+<li>產業面，TrendForce 預估 2026Q2 一般型 DRAM 合約價季增 58-63%，NAND Flash 合約價季增 70-75%，AI 伺服器需求與產能轉向 HBM / server 應用造成供給吃緊。來源：https://www.trendforce.com.tw/presscenter/news/20260331-12994.html</li>
+<li>資產負債表健康度屬可承受但非低槓桿：2025Q4 負債佔資產比約 40.62%，StockAnalysis 顯示 FY2025 net cash / debt 為 -251.57 億元。來源：https://www.wantgoo.com/stock/2344/financial-security/debts-ratio、https://stockanalysis.com/quote/tpe/2344/financials/balance-sheet/</li>
+<li>估值已反映部分景氣反轉：Yahoo 股市顯示本益比 29.32、同業平均 128.19；鉅亨網 2026-04-30 資料顯示市值約 4,041 億元、本益比 102.00，估值資料來源口徑差異大，應以最新 EPS 週期化後再重估。來源：https://tw.stock.yahoo.com/quote/2344.TW、https://www.cnyes.com/twstock/2344</li>
+</ul>
+<h3>情緒面</h3>
+<ul>
+<li>市場情緒偏多但已明顯擁擠：5/4 外資買超華邦電 38,896 張，列外資買超第二大個股，顯示籌碼短線轉強。來源：https://ww2.money-link.com.tw/realtimenews/NewsContent.aspx?PU=1002&amp;SN=6161012001</li>
+<li>散戶與社群訊號混合偏多：4/21 PTT 討論出現「回檔只是洗盤、等待再上漲」看法，但 1 月也曾出現放空與「漲不動」論點，代表市場不是單邊共識。來源：https://udn.com/news/story/12806/9453024、https://udn.com/news/story/12806/9279585</li>
+<li>期權 / unusual options：台股個股選擇權與美股式 unusual options 資料未取得，unavailable。</li>
+<li>融資融券：4/13 StockGo 顯示融資餘額 130,858 張、融資使用率 11.63%、融券餘額 2,107 張；高融資使上漲時助攻、回檔時也可能放大波動。來源：https://stockgo.tw/stock/2344/margin-trading/</li>
+</ul>
+<h3>新聞（過去 30 天）</h3>
+<ul>
+<li>〈華邦電法說〉Q1毛利率飆53.4% 單季大賺超過百億元、EPS 2.25元飆新高 — 2026-05-05 — https://tw.stock.yahoo.com/news/%E8%8F%AF%E9%82%A6%E9%9B%BB%E6%B3%95%E8%AA%AA-q1%E6%AF%9B%E5%88%A9%E7%8E%87%E9%A3%8653-4-%E5%96%AE%E5%AD%A3%E5%A4%A7%E8%B3%BA%E8%B6%85%E9%81%8E%E7%99%BE%E5%84%84%E5%85%83-eps-100153650.html</li>
+<li>華邦電法說／Q1淨利破百億、毛利站上5成 單季EPS 2.25元 — 2026-05-05 — https://news.tvbs.com.tw/money/3196096</li>
+<li>華邦電獲利爆發 第1季純益逾百億 EPS 2.25元 — 2026-05-06 — https://money.udn.com/money/amp/story/5710/9483732</li>
+<li>美股記憶體四雄大漲、台股記憶體族群回溫，華邦電跟進上漲 — 2026-05-05 — https://tw.stock.yahoo.com/quote/2344.TW</li>
+<li>華邦電 3 月營收 145.01 億元，月增 21.11%、年增 91.49%，單月連四月創新高 — 2026-04-09 — https://tw.stock.yahoo.com/quote/2344.TW/technical-analysis</li>
+<li>TrendForce：AI server 需求支撐 2026Q2 DRAM / NAND 合約價上行 — 2026-03-31 — https://www.trendforce.com.tw/presscenter/news/20260331-12994.html</li>
+<li>外資 5/4 買超華邦電 38,896 張，列外資買超第二 — 2026-05-05 — https://ww2.money-link.com.tw/realtimenews/NewsContent.aspx?PU=1002&amp;SN=6161012001</li>
+<li>華邦電回檔只是洗盤？PTT 看多與加碼討論升溫 — 2026-04-21 — https://udn.com/news/story/12806/9453024</li>
+</ul>
+<h3>技術面</h3>
+<ul>
+<li>2026-05-06 收盤 108.5 元、漲跌 +9.70 元，開高 108.5、最高 108.5、最低 104.0，成交量 241,792,428 股；這是強勢跳空且近似鎖漲停型態。來源：https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260506&amp;stockNo=2344&amp;response=json</li>
+<li>以 TWSE 日資料計算，截至 2026-05-06：5 日均線約 97.04、10 日均線約 94.12、20 日均線約 92.68、60 日均線約 103.55、120 日均線約 90.14。股價站上短中期均線，但剛突破 60 日線，需確認不是財報後一次性跳空。</li>
+<li>RSI14 約 70.2，進入偏熱區；MACD 仍略低於零軸但柱狀體轉正擴大，代表動能由修復轉為轉強。</li>
+<li>支撐：104.0 元跳空低點、100.5 元前一日高點、98.8 元前收盤、92.7 元 20 日均線。壓力：108.5 元當日高收，若無法續創高，容易形成短線獲利了結壓力。</li>
+<li>使用者提供的每日報告上下文「觀察跳空缺口能否守穩」與技術面一致：缺口守穩才代表市場願意重新定價 Q1 獲利與 Q2 報價。</li>
+</ul>
+<h2>多空辯論</h2>
+<p><strong>多方論點：</strong> 華邦電的核心變化不是單純題材，而是 Q1 財報已把記憶體漲價轉成獲利：營收年增 91.3%、毛利率 53.4%、EPS 2.25 元，且 TrendForce 指出 Q2 DRAM / NAND 合約價仍大幅季增。若 DRAM、NOR、SLC NAND 報價延續，華邦電從長期底部橫盤後進入獲利重估期，100 元附近不再只是心理關卡，而是估值重新錨定的起點。最大反方風險是股價已用跳空漲停反應財報，短線追價風險升高。</p>
+<p><strong>空方論點：</strong> 華邦電仍是高度循環股，Q1 毛利率 53.4% 可能是供需最緊時的高峰數字，PC 市場仍有出貨修正風險，且融資餘額偏高、RSI 進入偏熱區，若 DDR / NAND 現貨或合約價轉弱，市場會快速把「高 EPS」視為不可持續。最大多方反駁是目前 TrendForce 的 Q2 合約價預測仍顯示供給吃緊，還沒有看到週期反轉證據。</p>
+<p><strong>關鍵分歧：</strong></p>
+<ul>
+<li>Q1 毛利率 53.4% 是新平台，還是記憶體急漲週期中的高峰值。</li>
+<li>Q2 DRAM / NAND / NOR 報價能否延續，並同步反映到月營收與毛利率，而不只是市場預期。</li>
+<li>2026-05-06 的 104.0-100.5 元跳空缺口能否守穩；若守穩，多方取得技術確認，若失守，財報利多可能被解讀為短線出貨點。</li>
+</ul>
+<h2>風險管理員備註</h2>
+<ul>
+<li>風險結論為 APPROVES WITH ADJUSTMENT（調整後通過）：交易員的 HOLD 判斷可接受，但不應把財報後跳空當成無條件追價訊號。</li>
+<li>調整建議：等待 104.0 元缺口下緣守穩，或等待下一次月營收 / 報價資料確認後再提高風險曝險；若已有部位，應把 104.0、98.8、92.7 作為不同層級的風險檢查點。</li>
+<li>下行情境：記憶體報價高檔反轉、PC / 消費需求下修、融資籌碼鬆動、外資買超轉賣超，會讓高 beta 記憶體股快速回吐。</li>
+<li>部位控管：華邦電成交量大、流動性佳，但波動也明顯放大；不適合用過高集中度押單一景氣循環 thesis。</li>
+<li>風險管理員不同意直接 BUY，因為技術面已偏熱且缺口尚未經過回測；也不支持 SELL，因為基本面與產業報價證據仍偏多。</li>
+</ul>
+<hr>
+<p>⚠️ <strong>免責聲明：</strong> 本內容是根據公開資訊整理的教育性研究。
+不構成投資建議、招攬或交易建議。市場可能朝任何 thesis 的反方向波動。
+交易前請自行研究，並諮詢合格持牌顧問。此 skill 不會下任何訂單。</p>
 
     </article>
   </main>

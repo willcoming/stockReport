@@ -203,3 +203,49 @@ th {
   color: var(--muted);
   font-size: 0.9rem;
 }
+
+.tabs {
+  display: grid;
+  grid-template-columns: max-content max-content 1fr;
+  gap: 0 8px;
+  margin-bottom: 56px;
+}
+
+.tabs input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.tabs label {
+  grid-row: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 8px 14px;
+  color: var(--muted);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-bottom: 0;
+  border-radius: 8px 8px 0 0;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.tabs input:checked + label {
+  color: var(--accent-ink);
+  border-color: var(--accent);
+}
+
+.tab-panel {
+  display: none;
+  grid-column: 1 / -1;
+  grid-row: 2;
+  border-top-color: var(--accent);
+}
+
+#tab-trading:checked ~ .trading-panel,
+#tab-dcf:checked ~ .dcf-panel {
+  display: block;
+}
