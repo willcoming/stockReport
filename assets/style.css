@@ -373,7 +373,7 @@ tbody tr:nth-child(even) {
 
 .tabs {
   display: grid;
-  grid-template-columns: max-content max-content 1fr;
+  grid-template-columns: max-content max-content max-content 1fr;
   gap: 0 8px;
   margin-bottom: 56px;
 }
@@ -415,7 +415,8 @@ tbody tr:nth-child(even) {
 }
 
 #tab-trading:checked ~ .trading-panel,
-#tab-dcf:checked ~ .dcf-panel {
+#tab-dcf:checked ~ .dcf-panel,
+#tab-review:checked ~ .review-panel {
   display: block;
 }
 
@@ -447,7 +448,7 @@ tbody tr:nth-child(even) {
   }
 
   .tabs {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   .tabs label {
