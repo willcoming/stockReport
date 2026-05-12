@@ -115,7 +115,7 @@ label:focus-visible {
 h1 {
   margin: 0;
   max-width: 920px;
-  font-size: clamp(2.25rem, 5vw, 4.6rem);
+  font-size: clamp(2rem, 4vw, 3.7rem);
   line-height: 1.02;
   letter-spacing: 0;
   font-weight: 800;
@@ -468,9 +468,17 @@ tbody tr:nth-child(even) {
   color: var(--accent-ink);
 }
 
+.priority-page {
+  max-width: none;
+}
+
+.priority-page .priority-market {
+  grid-column: 1 / -1;
+}
+
 .priority-list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 10px;
   padding: 0;
   margin: 0 0 22px;
