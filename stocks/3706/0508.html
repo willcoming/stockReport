@@ -6,7 +6,7 @@
   <title>3706 — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-4col">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-table-dcf">
 </head>
 <body>
   <header class="site-header">
@@ -132,10 +132,56 @@
 
       </article>
       <article class="tab-panel dcf-panel report-content" role="tabpanel">
-        <h1>3706.TW — DCF 估值報告</h1>
+<h1>3706.TW — DCF 估值報告</h1>
 <p>as_of_date: 2026-05-08<br>
 projection_years: 5<br>
 fallback_ticker: 3706.TWO 未使用，因 3706.TW 可取得 Yahoo Finance 財務資料。</p>
+<h2>DCF 估值結果</h2>
+<table>
+<thead>
+<tr>
+<th>情境</th>
+<th>FCF 成長率 (yr1-5)</th>
+<th>終值成長率</th>
+<th>WACC</th>
+<th>內在價值/股</th>
+<th>現價</th>
+<th>安全邊際</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>悲觀</td>
+<td>-2.66%</td>
+<td>1.5%</td>
+<td>6.92%</td>
+<td>TWD -14.48</td>
+<td>TWD 86.20</td>
+<td>-116.8% (高估)</td>
+</tr>
+<tr>
+<td>基準</td>
+<td>-4.43%</td>
+<td>2.5%</td>
+<td>6.42%</td>
+<td>TWD -18.99</td>
+<td>TWD 86.20</td>
+<td>-122.0% (高估)</td>
+</tr>
+<tr>
+<td>樂觀</td>
+<td>-6.20%</td>
+<td>3.5%</td>
+<td>5.92%</td>
+<td>TWD -29.40</td>
+<td>TWD 86.20</td>
+<td>-134.1% (高估)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
+</blockquote>
 <h2>數據來源</h2>
 <table>
 <thead>
@@ -203,52 +249,6 @@ fallback_ticker: 3706.TWO 未使用，因 3706.TW 可取得 Yahoo Finance 財務
 </tr>
 </tbody>
 </table>
-<h2>DCF 估值結果</h2>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>FCF 成長率 (yr1-5)</th>
-<th>終值成長率</th>
-<th>WACC</th>
-<th>內在價值/股</th>
-<th>現價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>-2.66%</td>
-<td>1.5%</td>
-<td>6.92%</td>
-<td>TWD -14.48</td>
-<td>TWD 86.20</td>
-<td>-116.8% (高估)</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>-4.43%</td>
-<td>2.5%</td>
-<td>6.42%</td>
-<td>TWD -18.99</td>
-<td>TWD 86.20</td>
-<td>-122.0% (高估)</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>-6.20%</td>
-<td>3.5%</td>
-<td>5.92%</td>
-<td>TWD -29.40</td>
-<td>TWD 86.20</td>
-<td>-134.1% (高估)</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
 <h2>關鍵假設說明</h2>
 <ul>
 <li>FCF 成長率來源：3706.TW 可取得 2022-2025 年 FCF，但 2025 FCF 為負，無法用 2025 作為 CAGR 終點；因此採用 2022-2024 正 FCF CAGR -4.43% 作為 base_rate，再依 skill 規則套用 Bear x0.6、Base x1.0、Bull x1.4。</li>

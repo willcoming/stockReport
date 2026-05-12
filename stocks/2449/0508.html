@@ -6,7 +6,7 @@
   <title>2449 — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-4col">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-table-dcf">
 </head>
 <body>
   <header class="site-header">
@@ -146,10 +146,56 @@
 
       </article>
       <article class="tab-panel dcf-panel report-content" role="tabpanel">
-        <h1>2449.TW — DCF 估值報告</h1>
+<h1>2449.TW — DCF 估值報告</h1>
 <p>as_of_date：2026-05-07<br>
 projection_years：5<br>
 幣別：新台幣 TWD；金額除每股外為 NT$ billion。primary ticker <code>2449.TW</code> 可取得資料，未使用 fallback ticker <code>2449.TWO</code>。</p>
+<h2>DCF 估值結果</h2>
+<table>
+<thead>
+<tr>
+<th>情境</th>
+<th>FCF 成長率 (yr1-5)</th>
+<th>終值成長率</th>
+<th>WACC</th>
+<th>內在價值/股</th>
+<th>現價</th>
+<th>安全邊際</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>悲觀</td>
+<td>-21.17%</td>
+<td>1.5%</td>
+<td>9.92%</td>
+<td>-NT$80.59</td>
+<td>NT$328.50</td>
+<td>-124.5%（高估 / 模型輸出為負）</td>
+</tr>
+<tr>
+<td>基準</td>
+<td>-35.28%</td>
+<td>2.5%</td>
+<td>9.42%</td>
+<td>-NT$50.34</td>
+<td>NT$328.50</td>
+<td>-115.3%（高估 / 模型輸出為負）</td>
+</tr>
+<tr>
+<td>樂觀</td>
+<td>-49.39%</td>
+<td>3.5%</td>
+<td>8.92%</td>
+<td>-NT$32.24</td>
+<td>NT$328.50</td>
+<td>-109.8%（高估 / 模型輸出為負）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
+</blockquote>
 <h2>數據來源</h2>
 <table>
 <thead>
@@ -222,52 +268,6 @@ projection_years：5<br>
 </tr>
 </tbody>
 </table>
-<h2>DCF 估值結果</h2>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>FCF 成長率 (yr1-5)</th>
-<th>終值成長率</th>
-<th>WACC</th>
-<th>內在價值/股</th>
-<th>現價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>-21.17%</td>
-<td>1.5%</td>
-<td>9.92%</td>
-<td>-NT$80.59</td>
-<td>NT$328.50</td>
-<td>-124.5%（高估 / 模型輸出為負）</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>-35.28%</td>
-<td>2.5%</td>
-<td>9.42%</td>
-<td>-NT$50.34</td>
-<td>NT$328.50</td>
-<td>-115.3%（高估 / 模型輸出為負）</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>-49.39%</td>
-<td>3.5%</td>
-<td>8.92%</td>
-<td>-NT$32.24</td>
-<td>NT$328.50</td>
-<td>-109.8%（高估 / 模型輸出為負）</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
 <h2>關鍵假設說明</h2>
 <ul>
 <li>FCF 成長率來源：FY2021 與 FY2025 FCF 均為負，5yr CAGR 不具經濟意義；改用 FY2022 到 FY2024 的正 FCF window CAGR（-35.28%）作為 base_rate，並依 skill 規則套用悲觀 0.6x、基準 1.0x、樂觀 1.4x。</li>

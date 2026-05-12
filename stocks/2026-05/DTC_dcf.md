@@ -4,6 +4,18 @@
 **projection_years：5 年**  
 **公司識別：DTC 為 Solo Brands 舊 ticker；公開報價與財務頁目前多以 SBDS 顯示。**
 
+## DCF 估值結果
+
+DTC / SBDS 最近 5 年 FCF 為：2025 -$58.65M、2024 -$4.00M、2023 $53.33M、2022 $23.15M、2021 -$20.89M。因 5 年中有 3 年 FCF 為負，依 skill 規則改用 **EV/EBITDA multiple-based fallback**；下表不是標準 FCF DCF，而是 distressed / multiple fallback 估值。
+
+| 情境 | FCF 成長率 (yr1-5) | 終值成長率 | WACC | 估值方法 | 內在價值/股 | 現價 | 安全邊際 |
+|------|-----------------|----------|------|----------|-----------|------|---------|
+| 悲觀 | N/A | N/A | 31.89% | 12.34x EV/EBITDA | -$68.65 | $5.35 | -1,383%（高估） |
+| 基準 | N/A | N/A | 31.39% | 15.43x EV/EBITDA | -$62.19 | $5.35 | -1,262%（高估） |
+| 樂觀 | N/A | N/A | 30.89% | 18.52x EV/EBITDA | -$55.72 | $5.35 | -1,141%（高估） |
+
+> 安全邊際 = (內在價值 - 現價) / 現價 x 100%
+
 ## 數據來源
 
 | 項目 | 數值 | 來源 |
@@ -20,18 +32,6 @@
 | Base WACC | 31.39% | 計算：4.332% + 4.92 × 5.5% |
 | 現價 | $5.35 | [MarketBeat](https://www.marketbeat.com/stocks/NYSE/SBDS/) |
 | Consumer Cyclical median EV/EBITDA | 15.43x | [Westmount Fundamentals 2026 EV/EBITDA](https://westmountfundamentals.com/ev-ebitda-sectors) |
-
-## DCF 估值結果
-
-DTC / SBDS 最近 5 年 FCF 為：2025 -$58.65M、2024 -$4.00M、2023 $53.33M、2022 $23.15M、2021 -$20.89M。因 5 年中有 3 年 FCF 為負，依 skill 規則改用 **EV/EBITDA multiple-based fallback**；下表不是標準 FCF DCF，而是 distressed / multiple fallback 估值。
-
-| 情境 | FCF 成長率 (yr1-5) | 終值成長率 | WACC | 估值方法 | 內在價值/股 | 現價 | 安全邊際 |
-|------|-----------------|----------|------|----------|-----------|------|---------|
-| 悲觀 | N/A | N/A | 31.89% | 12.34x EV/EBITDA | -$68.65 | $5.35 | -1,383%（高估） |
-| 基準 | N/A | N/A | 31.39% | 15.43x EV/EBITDA | -$62.19 | $5.35 | -1,262%（高估） |
-| 樂觀 | N/A | N/A | 30.89% | 18.52x EV/EBITDA | -$55.72 | $5.35 | -1,141%（高估） |
-
-> 安全邊際 = (內在價值 - 現價) / 現價 x 100%
 
 ## 關鍵假設說明
 

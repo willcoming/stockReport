@@ -3,6 +3,18 @@
 as_of_date：2026-05-09  
 projection_years：5 年
 
+## DCF 估值結果
+
+BA 最近 5 年有 3 年 FCF 為負，因此依 $dcf-valuation skill 規則使用 EV/EBITDA fallback；下表是 multiple-based fallback，不是標準 DCF。
+
+| 情境 | FCF 成長率 (yr1-5) | 終值成長率 | WACC | EV/EBITDA | 內在價值/股 | 現價 | 安全邊際 |
+|------|-----------------|----------|------|-----------|-----------|------|---------|
+| 悲觀 | N/A | N/A | N/A | 12.22x | $42.02 | $237.36 | -82.3% (高估) |
+| 基準 | N/A | N/A | N/A | 15.27x | $66.23 | $237.36 | -72.1% (高估) |
+| 樂觀 | N/A | N/A | N/A | 18.32x | $90.44 | $237.36 | -61.9% (高估) |
+
+> 安全邊際 = (內在價值 - 現價) / 現價 x 100%
+
 ## 數據來源
 
 | 項目 | 數值 | 來源 |
@@ -17,18 +29,6 @@ projection_years：5 年
 | 現價 | $237.36 | [StockAnalysis BA quote, May 8 2026 close](https://stockanalysis.com/stocks/ba/) |
 | 2025 EBITDA | $6.23B | 計算：2025 operating earnings $4.281B + D&A $1.953B；[Boeing 2025 Form 10-K](https://www.sec.gov/Archives/edgar/data/12927/000162828026004357/ba-20251231.htm) |
 | Aerospace & Defense EV/EBITDA median | 15.27x | [CalcMastery 2025-2026 industry benchmark](https://www.calcmastery.com/benchmarks/ev-ebitda-by-industry/) |
-
-## DCF 估值結果
-
-BA 最近 5 年有 3 年 FCF 為負，因此依 $dcf-valuation skill 規則使用 EV/EBITDA fallback；下表是 multiple-based fallback，不是標準 DCF。
-
-| 情境 | FCF 成長率 (yr1-5) | 終值成長率 | WACC | EV/EBITDA | 內在價值/股 | 現價 | 安全邊際 |
-|------|-----------------|----------|------|-----------|-----------|------|---------|
-| 悲觀 | N/A | N/A | N/A | 12.22x | $42.02 | $237.36 | -82.3% (高估) |
-| 基準 | N/A | N/A | N/A | 15.27x | $66.23 | $237.36 | -72.1% (高估) |
-| 樂觀 | N/A | N/A | N/A | 18.32x | $90.44 | $237.36 | -61.9% (高估) |
-
-> 安全邊際 = (內在價值 - 現價) / 現價 x 100%
 
 ## 關鍵假設說明
 

@@ -6,7 +6,7 @@
   <title>3081 — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-4col">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-table-dcf">
 </head>
 <body>
   <header class="site-header">
@@ -148,7 +148,53 @@
 
       </article>
       <article class="tab-panel dcf-panel report-content" role="tabpanel">
-        <h1>3081.TW — DCF 估值報告</h1>
+<h1>3081.TW — DCF 估值報告</h1>
+<h2>DCF 估值結果</h2>
+<table>
+<thead>
+<tr>
+<th>情境</th>
+<th>FCF 成長率 (yr1-5)</th>
+<th>終值成長率</th>
+<th>WACC</th>
+<th>內在價值/股</th>
+<th>現價</th>
+<th>安全邊際</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>悲觀</td>
+<td>18.9%</td>
+<td>1.5%</td>
+<td>16.55%</td>
+<td>NT$90.93</td>
+<td>NT$2,780</td>
+<td>-96.7%（高估）</td>
+</tr>
+<tr>
+<td>基準</td>
+<td>31.5%</td>
+<td>2.5%</td>
+<td>16.05%</td>
+<td>NT$150.25</td>
+<td>NT$2,780</td>
+<td>-94.6%（高估）</td>
+</tr>
+<tr>
+<td>樂觀</td>
+<td>44.1%</td>
+<td>3.5%</td>
+<td>15.55%</td>
+<td>NT$248.90</td>
+<td>NT$2,780</td>
+<td>-91.0%（高估）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
+</blockquote>
 <h2>數據來源</h2>
 <blockquote>
 <p><code>3081.TW</code> 在 Yahoo Finance quoteSummary 查無有效報價/財報資料，因此依輸入規則改用 <code>fallback_ticker=3081.TWO</code>（聯亞，LandMark Optoelectronics Corp.）。<code>as_of_date=2026-05-12</code>；Yahoo 最新可得股價資料為 2026-05-11 收盤。</p>
@@ -224,52 +270,6 @@
 </tr>
 </tbody>
 </table>
-<h2>DCF 估值結果</h2>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>FCF 成長率 (yr1-5)</th>
-<th>終值成長率</th>
-<th>WACC</th>
-<th>內在價值/股</th>
-<th>現價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>18.9%</td>
-<td>1.5%</td>
-<td>16.55%</td>
-<td>NT$90.93</td>
-<td>NT$2,780</td>
-<td>-96.7%（高估）</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>31.5%</td>
-<td>2.5%</td>
-<td>16.05%</td>
-<td>NT$150.25</td>
-<td>NT$2,780</td>
-<td>-94.6%（高估）</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>44.1%</td>
-<td>3.5%</td>
-<td>15.55%</td>
-<td>NT$248.90</td>
-<td>NT$2,780</td>
-<td>-91.0%（高估）</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
 <h2>關鍵假設說明</h2>
 <ul>
 <li>FCF 成長率來源：Yahoo Finance 可得 2022-2025 年 FCF，因 5 年資料不足，依 skill 規則改用 3yr CAGR：31.5%；悲觀/基準/樂觀分別為 base rate x 0.6 / 1.0 / 1.4。</li>

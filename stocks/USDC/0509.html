@@ -6,7 +6,7 @@
   <title>USDC — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-4col">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-table-dcf">
 </head>
 <body>
   <header class="site-header">
@@ -134,9 +134,56 @@
 
       </article>
       <article class="tab-panel dcf-panel report-content" role="tabpanel">
-        <h1>USDC — DCF 估值報告</h1>
+<h1>USDC — DCF 估值報告</h1>
 <p>As of date: 2026-05-09<br>
 Projection years: 5</p>
+<h2>DCF 估值結果</h2>
+<table>
+<thead>
+<tr>
+<th>情境</th>
+<th>FCF 成長率 (yr1-5)</th>
+<th>終值成長率</th>
+<th>WACC</th>
+<th>內在價值/股</th>
+<th>現價</th>
+<th>安全邊際</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>悲觀</td>
+<td>N/A</td>
+<td>1.5%</td>
+<td>10.37%</td>
+<td>N/A</td>
+<td>$0.9999</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>基準</td>
+<td>N/A</td>
+<td>2.5%</td>
+<td>9.87%</td>
+<td>N/A</td>
+<td>$0.9999</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>樂觀</td>
+<td>N/A</td>
+<td>3.5%</td>
+<td>9.37%</td>
+<td>N/A</td>
+<td>$0.9999</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
+</blockquote>
+<p>Python 計算狀態：因 USDC 沒有可歸屬於代幣持有人的股東 FCF、Net Debt、普通股流通股數與有效 Beta，三情境 DCF 輸出均為 <code>null / N/A</code>。</p>
 <h2>數據來源</h2>
 <table>
 <thead>
@@ -199,53 +246,6 @@ Projection years: 5</p>
 </tr>
 </tbody>
 </table>
-<h2>DCF 估值結果</h2>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>FCF 成長率 (yr1-5)</th>
-<th>終值成長率</th>
-<th>WACC</th>
-<th>內在價值/股</th>
-<th>現價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>N/A</td>
-<td>1.5%</td>
-<td>10.37%</td>
-<td>N/A</td>
-<td>$0.9999</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>N/A</td>
-<td>2.5%</td>
-<td>9.87%</td>
-<td>N/A</td>
-<td>$0.9999</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>N/A</td>
-<td>3.5%</td>
-<td>9.37%</td>
-<td>N/A</td>
-<td>$0.9999</td>
-<td>N/A</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
-<p>Python 計算狀態：因 USDC 沒有可歸屬於代幣持有人的股東 FCF、Net Debt、普通股流通股數與有效 Beta，三情境 DCF 輸出均為 <code>null / N/A</code>。</p>
 <h2>關鍵假設說明</h2>
 <ul>
 <li>FCF 成長率來源：資料不足。USDC 是穩定幣，不是普通股；代幣持有人通常沒有 Circle 股東現金流請求權。</li>

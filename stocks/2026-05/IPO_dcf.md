@@ -4,6 +4,16 @@ as_of_date: 2026-05-09
 projection_years: 5  
 標的判定：IPO = Renaissance IPO ETF（NYSE Arca: IPO）。此標的是 ETF，不是單一營運公司，因此沒有可直接用於公司 DCF 的 Free Cash Flow、Total Debt、Cash 等公司財務項目。
 
+## DCF 估值結果
+
+| 情境 | FCF 成長率 (yr1-5) | 終值成長率 | WACC | 內在價值/股 | 現價 | 安全邊際 |
+|------|-----------------|----------|------|-----------|------|---------|
+| 悲觀 | N/A | 1.5% | 12.13% | N/A | $49.17 | N/A |
+| 基準 | N/A | 2.5% | 11.63% | N/A | $49.17 | N/A |
+| 樂觀 | N/A | 3.5% | 11.13% | N/A | $49.17 | N/A |
+
+> 安全邊際 = (內在價值 - 現價) / 現價 x 100%
+
 ## 數據來源
 
 | 項目 | 數值 | 來源 |
@@ -18,16 +28,6 @@ projection_years: 5
 | 現價 | $49.17 | [StockAnalysis IPO](https://stockanalysis.com/etf/ipo/) |
 | ETF Assets / AUM | $148.96M | [StockAnalysis IPO](https://stockanalysis.com/etf/ipo/) |
 | Expense Ratio | 0.60% | [Renaissance Capital ETF 頁](https://etfs.renaissancecapital.com/us-ipo-etf) |
-
-## DCF 估值結果
-
-| 情境 | FCF 成長率 (yr1-5) | 終值成長率 | WACC | 內在價值/股 | 現價 | 安全邊際 |
-|------|-----------------|----------|------|-----------|------|---------|
-| 悲觀 | N/A | 1.5% | 12.13% | N/A | $49.17 | N/A |
-| 基準 | N/A | 2.5% | 11.63% | N/A | $49.17 | N/A |
-| 樂觀 | N/A | 3.5% | 11.13% | N/A | $49.17 | N/A |
-
-> 安全邊際 = (內在價值 - 現價) / 現價 x 100%
 
 ## 關鍵假設說明
 

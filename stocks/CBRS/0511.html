@@ -6,7 +6,7 @@
   <title>CBRS — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-4col">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-table-dcf">
 </head>
 <body>
   <header class="site-header">
@@ -132,7 +132,54 @@
 
       </article>
       <article class="tab-panel dcf-panel report-content" role="tabpanel">
-        <h1>CBRS — DCF 估值報告 (2026-05-09)</h1>
+<h1>CBRS — DCF 估值報告 (2026-05-09)</h1>
+<h2>DCF 估值結果</h2>
+<p>CBRS 最近一年 FCF 為負，且公開 IPO 財務資料僅涵蓋 2024-2025，無法計算 3 年或 5 年 FCF CAGR；因此依 skill 規則，以下採用 <strong>EV/EBITDA multiple-based fallback，不是標準 DCF</strong>。計算已透過 Bash <code>python3</code> 執行。</p>
+<table>
+<thead>
+<tr>
+<th>情境</th>
+<th>方法</th>
+<th>EV/EBITDA 假設</th>
+<th>WACC</th>
+<th>內在價值/股</th>
+<th>現價 / 參考價</th>
+<th>安全邊際</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>悲觀</td>
+<td>EV/EBITDA fallback</td>
+<td>13.22x</td>
+<td>N/A</td>
+<td>$22.61</td>
+<td>$120.00 IPO midpoint</td>
+<td>-81.2% (高估)</td>
+</tr>
+<tr>
+<td>基準</td>
+<td>EV/EBITDA fallback</td>
+<td>18.89x</td>
+<td>N/A</td>
+<td>$30.04</td>
+<td>$120.00 IPO midpoint</td>
+<td>-75.0% (高估)</td>
+</tr>
+<tr>
+<td>樂觀</td>
+<td>EV/EBITDA fallback</td>
+<td>24.56x</td>
+<td>N/A</td>
+<td>$37.47</td>
+<td>$120.00 IPO midpoint</td>
+<td>-68.8% (高估)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
+</blockquote>
 <h2>數據來源</h2>
 <table>
 <thead>
@@ -225,53 +272,6 @@
 </tr>
 </tbody>
 </table>
-<h2>DCF 估值結果</h2>
-<p>CBRS 最近一年 FCF 為負，且公開 IPO 財務資料僅涵蓋 2024-2025，無法計算 3 年或 5 年 FCF CAGR；因此依 skill 規則，以下採用 <strong>EV/EBITDA multiple-based fallback，不是標準 DCF</strong>。計算已透過 Bash <code>python3</code> 執行。</p>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>方法</th>
-<th>EV/EBITDA 假設</th>
-<th>WACC</th>
-<th>內在價值/股</th>
-<th>現價 / 參考價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>EV/EBITDA fallback</td>
-<td>13.22x</td>
-<td>N/A</td>
-<td>$22.61</td>
-<td>$120.00 IPO midpoint</td>
-<td>-81.2% (高估)</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>EV/EBITDA fallback</td>
-<td>18.89x</td>
-<td>N/A</td>
-<td>$30.04</td>
-<td>$120.00 IPO midpoint</td>
-<td>-75.0% (高估)</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>EV/EBITDA fallback</td>
-<td>24.56x</td>
-<td>N/A</td>
-<td>$37.47</td>
-<td>$120.00 IPO midpoint</td>
-<td>-68.8% (高估)</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
 <h2>關鍵假設說明</h2>
 <ul>
 <li>FCF 成長率來源：資料不足。CBRS 只有 2024-2025 公開 IPO 財務資料，且 2025 FCF 為 -$392.79M，無法合理推導 3 年或 5 年 FCF CAGR。</li>

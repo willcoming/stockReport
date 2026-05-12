@@ -6,7 +6,7 @@
   <title>2383 — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-macd-dcf">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-table-dcf">
 </head>
 <body>
   <header class="site-header">
@@ -134,12 +134,58 @@
 
       </article>
       <article class="tab-panel dcf-panel report-content" role="tabpanel">
-        <h1>2383.TW — DCF 估值報告</h1>
+<h1>2383.TW — DCF 估值報告</h1>
 <p>as_of_date：2026-05-08<br>
 projection_years：5<br>
 公司：Elite Material Co., Ltd.<br>
 幣別：TWD / NT$<br>
 資料狀態：primary ticker <code>2383.TW</code> 可取得資料，未使用 fallback ticker <code>2383.TWO</code>。</p>
+<h2>DCF 估值結果</h2>
+<table>
+<thead>
+<tr>
+<th>情境</th>
+<th>FCF 成長率 (yr1-5)</th>
+<th>終值成長率</th>
+<th>WACC</th>
+<th>內在價值/股</th>
+<th>現價</th>
+<th>安全邊際</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>悲觀</td>
+<td>17.9%</td>
+<td>1.5%</td>
+<td>13.45%</td>
+<td>NT$92.62</td>
+<td>NT$4,750</td>
+<td>-98.1%（高估）</td>
+</tr>
+<tr>
+<td>基準</td>
+<td>29.9%</td>
+<td>2.5%</td>
+<td>12.95%</td>
+<td>NT$159.88</td>
+<td>NT$4,750</td>
+<td>-96.6%（高估）</td>
+</tr>
+<tr>
+<td>樂觀</td>
+<td>41.8%</td>
+<td>3.5%</td>
+<td>12.45%</td>
+<td>NT$276.58</td>
+<td>NT$4,750</td>
+<td>-94.2%（高估）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
+</blockquote>
 <h2>數據來源</h2>
 <table>
 <thead>
@@ -207,52 +253,6 @@ projection_years：5<br>
 </tr>
 </tbody>
 </table>
-<h2>DCF 估值結果</h2>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>FCF 成長率 (yr1-5)</th>
-<th>終值成長率</th>
-<th>WACC</th>
-<th>內在價值/股</th>
-<th>現價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>17.9%</td>
-<td>1.5%</td>
-<td>13.45%</td>
-<td>NT$92.62</td>
-<td>NT$4,750</td>
-<td>-98.1%（高估）</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>29.9%</td>
-<td>2.5%</td>
-<td>12.95%</td>
-<td>NT$159.88</td>
-<td>NT$4,750</td>
-<td>-96.6%（高估）</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>41.8%</td>
-<td>3.5%</td>
-<td>12.45%</td>
-<td>NT$276.58</td>
-<td>NT$4,750</td>
-<td>-94.2%（高估）</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
 <h2>關鍵假設說明</h2>
 <ul>
 <li>FCF 成長率來源：Yahoo Finance 年度 FCF。因 5 年 FCF 資料不足，依 skill 規則改用 2022-2025 的 3 年 CAGR，計算基準成長率為 29.9%。</li>

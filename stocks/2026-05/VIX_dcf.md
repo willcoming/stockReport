@@ -3,6 +3,16 @@
 as_of_date: 2026-05-11  
 projection_years: 5
 
+## DCF 估值結果
+
+| 情境 | FCF 成長率 (yr1-5) | 終值成長率 | WACC | 內在價值/股 | 現價 | 安全邊際 |
+|------|-----------------|----------|------|-----------|------|---------|
+| 悲觀 | N/A | 1.5% | N/A | N/A | N/A | N/A |
+| 基準 | N/A | 2.5% | N/A | N/A | N/A | N/A |
+| 樂觀 | N/A | 3.5% | N/A | N/A | N/A | N/A |
+
+> 安全邊際 = (內在價值 - 現價) / 現價 x 100%
+
 ## 數據來源
 
 | 項目 | 數值 | 來源 |
@@ -16,16 +26,6 @@ projection_years: 5
 | 無風險利率 (10Y) | 4.39% | [Trading Economics, 2026-05-11](https://tradingeconomics.com/united-states/government-bond-yield) |
 | WACC | 資料不足／不適用 | 缺 Beta 與公司資本結構 |
 | 現價 | 不適用於 DCF；Yahoo 顯示 ^VIX 指數值 17.39（2026-05-06 close） | [Yahoo Finance ^VIX](https://finance.yahoo.com/quote/%5EVIX/) |
-
-## DCF 估值結果
-
-| 情境 | FCF 成長率 (yr1-5) | 終值成長率 | WACC | 內在價值/股 | 現價 | 安全邊際 |
-|------|-----------------|----------|------|-----------|------|---------|
-| 悲觀 | N/A | 1.5% | N/A | N/A | N/A | N/A |
-| 基準 | N/A | 2.5% | N/A | N/A | N/A | N/A |
-| 樂觀 | N/A | 3.5% | N/A | N/A | N/A | N/A |
-
-> 安全邊際 = (內在價值 - 現價) / 現價 x 100%
 
 ## 關鍵假設說明
 

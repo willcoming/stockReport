@@ -1,5 +1,15 @@
 # TPU — DCF 估值報告 (2026-05-11)
 
+## DCF 估值結果
+
+| 情境 | FCF 成長率 (yr1-5) | 終值成長率 | WACC | 內在價值/股 | 現價 | 安全邊際 |
+|------|-----------------|----------|------|-----------|------|---------|
+| 悲觀 | N/A | 1.5% | N/A | N/A | N/A | N/A |
+| 基準 | N/A | 2.5% | N/A | N/A | N/A | N/A |
+| 樂觀 | N/A | 3.5% | N/A | N/A | N/A | N/A |
+
+> 安全邊際 = (內在價值 - 現價) / 現價 x 100%
+
 ## 數據來源
 
 | 項目 | 數值 | 來源 |
@@ -13,16 +23,6 @@
 | 無風險利率 (10Y) | 4.38%（2026-05-08，2026-05-11 尚無官方日資料） | [U.S. Treasury Daily Treasury Rates](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_yield_curve) |
 | WACC | 資料不足；若僅用預設 Beta 1.00，基準 WACC = 9.88% | 計算：4.38% + 1.00 x 5.5% |
 | 現價 | 資料不足；`TPU.TO` ETF 價格為 CAD 57.59，但非本 DCF 採用標的 | [Yahoo Finance TPU.TO](https://query1.finance.yahoo.com/v8/finance/chart/TPU.TO?range=1d&interval=1d) |
-
-## DCF 估值結果
-
-| 情境 | FCF 成長率 (yr1-5) | 終值成長率 | WACC | 內在價值/股 | 現價 | 安全邊際 |
-|------|-----------------|----------|------|-----------|------|---------|
-| 悲觀 | N/A | 1.5% | N/A | N/A | N/A | N/A |
-| 基準 | N/A | 2.5% | N/A | N/A | N/A | N/A |
-| 樂觀 | N/A | 3.5% | N/A | N/A | N/A | N/A |
-
-> 安全邊際 = (內在價值 - 現價) / 現價 x 100%
 
 ## 關鍵假設說明
 

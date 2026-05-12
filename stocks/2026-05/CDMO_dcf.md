@@ -1,5 +1,17 @@
 # CDMO — DCF 估值報告 (2026-05-08)
 
+## DCF 估值結果
+
+| 情境 | FCF 成長率 (yr1-5) | 終值成長率 | WACC | 內在價值/股 | 現價 | 安全邊際 |
+|------|-----------------|----------|------|-----------|------|---------|
+| 悲觀 | 23.2% | 1.5% | 12.51% | $0.62 | $12.50（收購價參考） | -95.0%（高估） |
+| 基準 | 38.7% | 2.5% | 12.01% | $3.77 | $12.50（收購價參考） | -69.8%（高估） |
+| 樂觀 | 54.2% | 3.5% | 11.51% | $9.82 | $12.50（收購價參考） | -21.5%（高估） |
+
+> 安全邊際 = (內在價值 - 現價) / 現價 x 100%
+
+補充參考：Avid merger proxy 披露的 Moelis DCF 參考區間為 $8.13–$11.89 / 股；Sensitivity A 為 $6.25–$9.68，Sensitivity B 為 $11.50–$16.07。上述表格為依本 skill 指定 WACC / terminal growth 架構重新用 Bash/Python 計算，未納入 Moelis 另行估算的 NOL 與 R&D tax credit 現值。
+
 ## 數據來源
 
 | 項目 | 數值 | 來源 |
@@ -15,18 +27,6 @@
 | 無風險利率 (10Y) | 4.36%（2026-05-06，Fed H.15 於 2026-05-07 發布的最新可用 10Y constant maturity） | [Federal Reserve H.15](https://www.federalreserve.gov/releases/h15/) |
 | WACC | 悲觀 12.51% / 基準 12.01% / 樂觀 11.51% | Bash/Python 計算：risk-free + Beta x 5.5% ERP ± 0.5% |
 | 現價 | N/A（已下市）；參考收購對價 $12.50 / last trade $12.49 | [Avid press release](https://avidbio.com/wp-content/uploads/2025/02/Exhibit-99.2-Avid-Press-Release-Fundamental-Change-and-Make-Whole-Fundamental-Change-Updated-2.1.25.pdf)、[StockAnalysis](https://stockanalysis.com/stocks/cdmo/financials/) |
-
-## DCF 估值結果
-
-| 情境 | FCF 成長率 (yr1-5) | 終值成長率 | WACC | 內在價值/股 | 現價 | 安全邊際 |
-|------|-----------------|----------|------|-----------|------|---------|
-| 悲觀 | 23.2% | 1.5% | 12.51% | $0.62 | $12.50（收購價參考） | -95.0%（高估） |
-| 基準 | 38.7% | 2.5% | 12.01% | $3.77 | $12.50（收購價參考） | -69.8%（高估） |
-| 樂觀 | 54.2% | 3.5% | 11.51% | $9.82 | $12.50（收購價參考） | -21.5%（高估） |
-
-> 安全邊際 = (內在價值 - 現價) / 現價 x 100%
-
-補充參考：Avid merger proxy 披露的 Moelis DCF 參考區間為 $8.13–$11.89 / 股；Sensitivity A 為 $6.25–$9.68，Sensitivity B 為 $11.50–$16.07。上述表格為依本 skill 指定 WACC / terminal growth 架構重新用 Bash/Python 計算，未納入 Moelis 另行估算的 NOL 與 R&D tax credit 現值。
 
 ## 關鍵假設說明
 

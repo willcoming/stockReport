@@ -1,5 +1,17 @@
 # CBRS — DCF 估值報告 (2026-05-09)
 
+## DCF 估值結果
+
+CBRS 最近一年 FCF 為負，且公開 IPO 財務資料僅涵蓋 2024-2025，無法計算 3 年或 5 年 FCF CAGR；因此依 skill 規則，以下採用 **EV/EBITDA multiple-based fallback，不是標準 DCF**。計算已透過 Bash `python3` 執行。
+
+| 情境 | 方法 | EV/EBITDA 假設 | WACC | 內在價值/股 | 現價 / 參考價 | 安全邊際 |
+|------|------|----------------|------|------------|---------------|----------|
+| 悲觀 | EV/EBITDA fallback | 13.22x | N/A | $22.61 | $120.00 IPO midpoint | -81.2% (高估) |
+| 基準 | EV/EBITDA fallback | 18.89x | N/A | $30.04 | $120.00 IPO midpoint | -75.0% (高估) |
+| 樂觀 | EV/EBITDA fallback | 24.56x | N/A | $37.47 | $120.00 IPO midpoint | -68.8% (高估) |
+
+> 安全邊際 = (內在價值 - 現價) / 現價 x 100%
+
 ## 數據來源
 
 | 項目 | 數值 | 來源 |
@@ -20,18 +32,6 @@
 | 現價 | 資料不足；尚未上市交易 | [StockAnalysis 顯示 IPO Price Range $115-$125](https://stockanalysis.com/stocks/cbrs/financials/) |
 | IPO 參考價 | $120.00 midpoint | [Yahoo Finance / Bloomberg：$115-$125 IPO range](https://finance.yahoo.com/markets/stocks/articles/cerebras-ipo-roadshow-targets-115-114502679.html) |
 | 同業 EV/EBITDA median | Technology sector 18.89x | [Westmount Fundamentals 2026 sector EV/EBITDA](https://westmountfundamentals.com/ev-ebitda-sectors) |
-
-## DCF 估值結果
-
-CBRS 最近一年 FCF 為負，且公開 IPO 財務資料僅涵蓋 2024-2025，無法計算 3 年或 5 年 FCF CAGR；因此依 skill 規則，以下採用 **EV/EBITDA multiple-based fallback，不是標準 DCF**。計算已透過 Bash `python3` 執行。
-
-| 情境 | 方法 | EV/EBITDA 假設 | WACC | 內在價值/股 | 現價 / 參考價 | 安全邊際 |
-|------|------|----------------|------|------------|---------------|----------|
-| 悲觀 | EV/EBITDA fallback | 13.22x | N/A | $22.61 | $120.00 IPO midpoint | -81.2% (高估) |
-| 基準 | EV/EBITDA fallback | 18.89x | N/A | $30.04 | $120.00 IPO midpoint | -75.0% (高估) |
-| 樂觀 | EV/EBITDA fallback | 24.56x | N/A | $37.47 | $120.00 IPO midpoint | -68.8% (高估) |
-
-> 安全邊際 = (內在價值 - 現價) / 現價 x 100%
 
 ## 關鍵假設說明
 

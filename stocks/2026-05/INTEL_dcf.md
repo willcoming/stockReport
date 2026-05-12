@@ -3,6 +3,18 @@
 as_of_date: 2026-05-08  
 實際上市代號：Intel Corporation (`INTC`)
 
+## DCF 估值結果
+
+由於 Intel 最近 5 個年度中有 4 年 FCF 為負，依 `$dcf-valuation` skill 規則，本次不使用標準 DCF 終值模型，改採 EV/EBITDA multiple-based fallback；下表不是標準 DCF。
+
+| 情境 | FCF 成長率 (yr1-5) | 終值成長率 | WACC | 估值方法 / 倍數 | 內在價值/股 | 現價 | 安全邊際 |
+|------|-----------------|----------|------|----------------|-----------|------|---------|
+| 悲觀 | N/A | N/A | 16.91% | EV/EBITDA 20.9x | $56.44 | $116.97 | -51.7% (高估) |
+| 基準 | N/A | N/A | 16.41% | EV/EBITDA 26.35x | $71.80 | $116.97 | -38.6% (高估) |
+| 樂觀 | N/A | N/A | 15.91% | EV/EBITDA 31.8x | $87.15 | $116.97 | -25.5% (高估) |
+
+> 安全邊際 = (內在價值 - 現價) / 現價 x 100%
+
 ## 數據來源
 
 | 項目 | 數值 | 來源 |
@@ -18,18 +30,6 @@ as_of_date: 2026-05-08
 | WACC | 16.41%（基準） | 計算：4.36% + 2.19 × 5.5% |
 | 現價 | $116.97 | [StockAnalysis Overview](https://stockanalysis.com/stocks/intc/) |
 | 半導體 EV/EBITDA median | NTM 20.9x / LTM 31.8x | [Pendo Advisors Market Multiples, Feb 2026](https://www.pendoadvisors.com/wp-content/uploads/2026/03/Pendo-Market-Multiples-2026_2.pdf) |
-
-## DCF 估值結果
-
-由於 Intel 最近 5 個年度中有 4 年 FCF 為負，依 `$dcf-valuation` skill 規則，本次不使用標準 DCF 終值模型，改採 EV/EBITDA multiple-based fallback；下表不是標準 DCF。
-
-| 情境 | FCF 成長率 (yr1-5) | 終值成長率 | WACC | 估值方法 / 倍數 | 內在價值/股 | 現價 | 安全邊際 |
-|------|-----------------|----------|------|----------------|-----------|------|---------|
-| 悲觀 | N/A | N/A | 16.91% | EV/EBITDA 20.9x | $56.44 | $116.97 | -51.7% (高估) |
-| 基準 | N/A | N/A | 16.41% | EV/EBITDA 26.35x | $71.80 | $116.97 | -38.6% (高估) |
-| 樂觀 | N/A | N/A | 15.91% | EV/EBITDA 31.8x | $87.15 | $116.97 | -25.5% (高估) |
-
-> 安全邊際 = (內在價值 - 現價) / 現價 x 100%
 
 ## 關鍵假設說明
 

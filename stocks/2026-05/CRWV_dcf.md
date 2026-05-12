@@ -4,6 +4,18 @@ as_of_date: 2026-05-10
 projection_years: 5  
 註：2026-05-10 為週日，現價採用最近收盤日 2026-05-08。
 
+## DCF 估值結果
+
+CRWV 最近 3 年以上 FCF 為負，依 skill 規則改用 EV/EBITDA fallback；下表為 multiple-based fallback，不是標準 DCF 現金流折現結果。
+
+| 情境 | FCF 成長率 (yr1-5) | 終值成長率 | WACC | EV/EBITDA 假設 | 內在價值/股 | 現價 | 安全邊際 |
+|------|-----------------|----------|------|---------------|-----------|------|---------|
+| 悲觀 | N/A | N/A | 10.38% | 20.00x | $50.68 | $114.15 | -55.6%（高估） |
+| 基準 | N/A | N/A | 9.88% | 24.48x | $75.60 | $114.15 | -33.8%（高估） |
+| 樂觀 | N/A | N/A | 9.38% | 30.26x | $107.75 | $114.15 | -5.6%（高估） |
+
+> 安全邊際 = (內在價值 - 現價) / 現價 x 100%
+
 ## 數據來源
 
 | 項目 | 數值 | 來源 |
@@ -21,18 +33,6 @@ projection_years: 5
 | 現價 | $114.15 | [StockAnalysis CRWV](https://stockanalysis.com/stocks/crwv/financials/) |
 | 目前 EV / EBITDA | 31.37x | [StockAnalysis Statistics](https://stockanalysis.com/stocks/crwv/statistics/) |
 | 產業 EV/EBITDA 參考 | Software System & Application 24.48x；Software Internet 30.26x | [Damodaran NYU Stern, Jan 2026](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/vebitda.html) |
-
-## DCF 估值結果
-
-CRWV 最近 3 年以上 FCF 為負，依 skill 規則改用 EV/EBITDA fallback；下表為 multiple-based fallback，不是標準 DCF 現金流折現結果。
-
-| 情境 | FCF 成長率 (yr1-5) | 終值成長率 | WACC | EV/EBITDA 假設 | 內在價值/股 | 現價 | 安全邊際 |
-|------|-----------------|----------|------|---------------|-----------|------|---------|
-| 悲觀 | N/A | N/A | 10.38% | 20.00x | $50.68 | $114.15 | -55.6%（高估） |
-| 基準 | N/A | N/A | 9.88% | 24.48x | $75.60 | $114.15 | -33.8%（高估） |
-| 樂觀 | N/A | N/A | 9.38% | 30.26x | $107.75 | $114.15 | -5.6%（高估） |
-
-> 安全邊際 = (內在價值 - 現價) / 現價 x 100%
 
 ## 關鍵假設說明
 

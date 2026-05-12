@@ -4,25 +4,6 @@ as_of_date: 2026-05-09
 projection_years: 5  
 公司識別：RiskOn International, Inc. 原 ticker `ROI`，Nasdaq 停牌後交易代號變為 `ROII`；本報告以 `ROI/ROII` 對應同一公司處理，依 SEC 10-K 說明。
 
-## 數據來源
-
-| 項目 | 數值 | 來源 |
-|------|------|------|
-| 最近一年 FCF | -$28.56M | [StockAnalysis Cash Flow / S&P Global Market Intelligence](https://stockanalysis.com/quote/otc/ROII/financials/cash-flow-statement/) |
-| FY2020-FY2024 FCF | -$5.49M, -$18.74M, -$24.83M, -$14.26M, -$28.56M | [StockAnalysis Cash Flow](https://stockanalysis.com/quote/otc/ROII/financials/cash-flow-statement/) |
-| 5yr FCF CAGR | N/A（5/5 年 FCF 為負，標準 CAGR 不適用） | 計算；原始 FCF 來自 [StockAnalysis Cash Flow](https://stockanalysis.com/quote/otc/ROII/financials/cash-flow-statement/) |
-| Beta | -0.86 | [StockAnalysis Statistics](https://stockanalysis.com/quote/otc/ROII/statistics/) |
-| Cash & Equivalents | $7.25M | [StockAnalysis Statistics](https://stockanalysis.com/quote/otc/ROII/statistics/) |
-| Total Debt | $7.36M | [StockAnalysis Statistics](https://stockanalysis.com/quote/otc/ROII/statistics/) |
-| Net Debt | $0.11M | 計算：$7.36M - $7.25M；來源同上 |
-| 流通股數 | 33.02M | [StockAnalysis Statistics](https://stockanalysis.com/quote/otc/ROII/statistics/) |
-| EBITDA | -$32.91M | [StockAnalysis Statistics / Income Statement](https://stockanalysis.com/quote/otc/ROII/statistics/) |
-| 無風險利率 (10Y) | 4.38% | [U.S. Treasury Daily Treasury Par Yield Curve Rates, 2026-05-08](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_yield_curve) |
-| WACC（基準公式） | -0.35% | 計算：4.38% + (-0.86 × 5.5%) |
-| 現價 | $0.0001 | [StockAnalysis ROII delayed quote](https://stockanalysis.com/quote/otc/ROII/statistics/) |
-| ROI → ROII ticker 說明 | 2024-02-28 Nasdaq 停牌後變為 ROII | [RiskOn International 10-K](https://wikirate-production-storage.fra1.cdn.digitaloceanspaces.com/files/22199223/51944067.pdf) |
-| Communication Services median EV/EBITDA | 13.38x | [Westmount Fundamentals 2026 Sector Medians](https://westmountfundamentals.com/ev-ebitda-sectors) |
-
 ## DCF 估值結果
 
 因最近 5 年 FCF 全部為負，依 skill 規則觸發 EV/EBITDA fallback；但 EBITDA 亦為負，且負 EBITDA 的 EV/EBITDA multiple 被資料來源說明為通常不具估值意義。因此本次不輸出可投資判斷用的每股內在價值，避免捏造數字。
@@ -41,6 +22,25 @@ projection_years: 5
 | Market Cap | 約 $0.0033M | $0.0001 × 33.02M shares |
 | Enterprise Value | 約 $0.1133M | Market Cap + Net Debt |
 | Sector median EV/EBITDA | 13.38x | 只適用於正 EBITDA 公司；不套用於 ROI/ROII |
+
+## 數據來源
+
+| 項目 | 數值 | 來源 |
+|------|------|------|
+| 最近一年 FCF | -$28.56M | [StockAnalysis Cash Flow / S&P Global Market Intelligence](https://stockanalysis.com/quote/otc/ROII/financials/cash-flow-statement/) |
+| FY2020-FY2024 FCF | -$5.49M, -$18.74M, -$24.83M, -$14.26M, -$28.56M | [StockAnalysis Cash Flow](https://stockanalysis.com/quote/otc/ROII/financials/cash-flow-statement/) |
+| 5yr FCF CAGR | N/A（5/5 年 FCF 為負，標準 CAGR 不適用） | 計算；原始 FCF 來自 [StockAnalysis Cash Flow](https://stockanalysis.com/quote/otc/ROII/financials/cash-flow-statement/) |
+| Beta | -0.86 | [StockAnalysis Statistics](https://stockanalysis.com/quote/otc/ROII/statistics/) |
+| Cash & Equivalents | $7.25M | [StockAnalysis Statistics](https://stockanalysis.com/quote/otc/ROII/statistics/) |
+| Total Debt | $7.36M | [StockAnalysis Statistics](https://stockanalysis.com/quote/otc/ROII/statistics/) |
+| Net Debt | $0.11M | 計算：$7.36M - $7.25M；來源同上 |
+| 流通股數 | 33.02M | [StockAnalysis Statistics](https://stockanalysis.com/quote/otc/ROII/statistics/) |
+| EBITDA | -$32.91M | [StockAnalysis Statistics / Income Statement](https://stockanalysis.com/quote/otc/ROII/statistics/) |
+| 無風險利率 (10Y) | 4.38% | [U.S. Treasury Daily Treasury Par Yield Curve Rates, 2026-05-08](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_yield_curve) |
+| WACC（基準公式） | -0.35% | 計算：4.38% + (-0.86 × 5.5%) |
+| 現價 | $0.0001 | [StockAnalysis ROII delayed quote](https://stockanalysis.com/quote/otc/ROII/statistics/) |
+| ROI → ROII ticker 說明 | 2024-02-28 Nasdaq 停牌後變為 ROII | [RiskOn International 10-K](https://wikirate-production-storage.fra1.cdn.digitaloceanspaces.com/files/22199223/51944067.pdf) |
+| Communication Services median EV/EBITDA | 13.38x | [Westmount Fundamentals 2026 Sector Medians](https://westmountfundamentals.com/ev-ebitda-sectors) |
 
 ## 關鍵假設說明
 

@@ -1,5 +1,17 @@
 # IREN — DCF 估值報告 (2026-05-08)
 
+## DCF 估值結果
+
+因 IREN 最近 5 年與 TTM FCF 均為負，傳統 DCF 對「最近 FCF 作為基準」不具可解釋性；依 skill 規則，本節改用 **EV/EBITDA multiple-based fallback**，不是標準 DCF。計算使用 TTM EBITDA $194.25M、Net Debt $0.582B、流通股數 332.28M。資料中心資產估值參考區間採 15x-25x EBITDA，基準使用 19x，來源為 [AlixPartners 2026 Data Center Outlook](https://www.alixpartners.com/media/k3xbcssw/2026-alixpartners-data-center-outlook-tmt02sig2025.pdf)。
+
+| 情境 | FCF 成長率 (yr1-5) | 終值成長率 | WACC | EV/EBITDA | 內在價值/股 | 現價 | 安全邊際 |
+|------|-----------------|----------|------|-----------|-----------|------|---------|
+| 悲觀 | N/A（FCF<0） | N/A | 27.88% | 15.0x | $7.02 | $56.85 | -87.7%（高估） |
+| 基準 | N/A（FCF<0） | N/A | 27.38% | 19.0x | $9.36 | $56.85 | -83.5%（高估） |
+| 樂觀 | N/A（FCF<0） | N/A | 26.88% | 25.0x | $12.86 | $56.85 | -77.4%（高估） |
+
+> 安全邊際 = (內在價值 - 現價) / 現價 x 100%
+
 ## 數據來源
 
 | 項目 | 數值 | 來源 |
@@ -18,18 +30,6 @@
 | 無風險利率 (10Y) | 4.39% | [Investing.com 10Y Treasury historical data](https://www.investing.com/rates-bonds/u.s.-10-year-bond-yield-historical-data)；[Trading Economics](https://tradingeconomics.com/united-states/government-bond-yield) |
 | WACC（基準） | 27.38% | 計算：4.39% + 4.18 × 5.5% |
 | 現價 | $56.85（May 7, 2026 close；as of 2026-05-08 Asia/Taipei） | [StockAnalysis Statistics](https://stockanalysis.com/stocks/iren/statistics/) |
-
-## DCF 估值結果
-
-因 IREN 最近 5 年與 TTM FCF 均為負，傳統 DCF 對「最近 FCF 作為基準」不具可解釋性；依 skill 規則，本節改用 **EV/EBITDA multiple-based fallback**，不是標準 DCF。計算使用 TTM EBITDA $194.25M、Net Debt $0.582B、流通股數 332.28M。資料中心資產估值參考區間採 15x-25x EBITDA，基準使用 19x，來源為 [AlixPartners 2026 Data Center Outlook](https://www.alixpartners.com/media/k3xbcssw/2026-alixpartners-data-center-outlook-tmt02sig2025.pdf)。
-
-| 情境 | FCF 成長率 (yr1-5) | 終值成長率 | WACC | EV/EBITDA | 內在價值/股 | 現價 | 安全邊際 |
-|------|-----------------|----------|------|-----------|-----------|------|---------|
-| 悲觀 | N/A（FCF<0） | N/A | 27.88% | 15.0x | $7.02 | $56.85 | -87.7%（高估） |
-| 基準 | N/A（FCF<0） | N/A | 27.38% | 19.0x | $9.36 | $56.85 | -83.5%（高估） |
-| 樂觀 | N/A（FCF<0） | N/A | 26.88% | 25.0x | $12.86 | $56.85 | -77.4%（高估） |
-
-> 安全邊際 = (內在價值 - 現價) / 現價 x 100%
 
 ## 關鍵假設說明
 

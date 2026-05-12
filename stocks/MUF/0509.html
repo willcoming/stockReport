@@ -6,7 +6,7 @@
   <title>MUF — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-4col">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-table-dcf">
 </head>
 <body>
   <header class="site-header">
@@ -132,7 +132,60 @@
 
       </article>
       <article class="tab-panel dcf-panel report-content" role="tabpanel">
-        <h1>MUF — DCF 估值報告 (2026-05-09)</h1>
+<h1>MUF — DCF 估值報告 (2026-05-09)</h1>
+<h2>DCF 估值結果</h2>
+<blockquote>
+<p>因 MUF 最近可得年度 FCF 多數為負，依 skill 規則改用 EV/EBITDA fallback；以下為 multiple-based fallback，不是標準 DCF。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>情境</th>
+<th>FCF 成長率 (yr1-5)</th>
+<th>終值成長率</th>
+<th>WACC</th>
+<th>EV/EBITDA 倍數</th>
+<th>內在價值/股</th>
+<th>現價</th>
+<th>安全邊際</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>悲觀</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>8.12%</td>
+<td>10.56x</td>
+<td>€11.22</td>
+<td>€16.17</td>
+<td>-30.6% (高估)</td>
+</tr>
+<tr>
+<td>基準</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>7.62%</td>
+<td>13.20x</td>
+<td>€15.25</td>
+<td>€16.17</td>
+<td>-5.7% (高估)</td>
+</tr>
+<tr>
+<td>樂觀</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>7.12%</td>
+<td>15.84x</td>
+<td>€19.29</td>
+<td>€16.17</td>
+<td>+19.3% (低估)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
+</blockquote>
 <h2>數據來源</h2>
 <table>
 <thead>
@@ -215,59 +268,6 @@
 </tr>
 </tbody>
 </table>
-<h2>DCF 估值結果</h2>
-<blockquote>
-<p>因 MUF 最近可得年度 FCF 多數為負，依 skill 規則改用 EV/EBITDA fallback；以下為 multiple-based fallback，不是標準 DCF。</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>FCF 成長率 (yr1-5)</th>
-<th>終值成長率</th>
-<th>WACC</th>
-<th>EV/EBITDA 倍數</th>
-<th>內在價值/股</th>
-<th>現價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>8.12%</td>
-<td>10.56x</td>
-<td>€11.22</td>
-<td>€16.17</td>
-<td>-30.6% (高估)</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>7.62%</td>
-<td>13.20x</td>
-<td>€15.25</td>
-<td>€16.17</td>
-<td>-5.7% (高估)</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>7.12%</td>
-<td>15.84x</td>
-<td>€19.29</td>
-<td>€16.17</td>
-<td>+19.3% (低估)</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
 <h2>關鍵假設說明</h2>
 <ul>
 <li>FCF 成長率來源：Yahoo Finance 顯示 FY2022-FY2025 FCF 皆為負，無法建立有意義的 5 年 FCF CAGR，因此觸發 EV/EBITDA fallback。</li>

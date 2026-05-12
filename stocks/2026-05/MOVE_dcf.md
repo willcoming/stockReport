@@ -1,5 +1,17 @@
 # MOVE — DCF 估值報告 (2026-05-07)
 
+## DCF 估值結果
+
+由於 MOVE 最近年度 FCF 為負，且 2026 年剛完成從 Movano/legacy healthcare 到 Corvex AI infrastructure 的重大併購轉型，歷史 FCF CAGR 不具可用性。本次以 Python 跑 5 年 DCF 檢查後，模型輸出為負值，因此不採用為有效內在價值估算；EV/EBITDA fallback 也因 EBITDA / operating profit 為負而不適用。
+
+| 情境 | FCF 成長率 (yr1-5) | 終值成長率 | WACC | 內在價值/股 | 現價 | 安全邊際 |
+|------|-----------------|----------|------|-----------|------|---------|
+| 悲觀 | N/A（負 FCF） | 1.5% | 13.85% | N/A（Python 檢查值約 -$1.55，不具估值意義） | $13.93 | N/A |
+| 基準 | N/A（負 FCF） | 2.5% | 13.35% | N/A（Python 檢查值約 -$1.74，不具估值意義） | $13.93 | N/A |
+| 樂觀 | N/A（負 FCF） | 3.5% | 12.85% | N/A（Python 檢查值約 -$2.00，不具估值意義） | $13.93 | N/A |
+
+> 安全邊際 = (內在價值 - 現價) / 現價 x 100%
+
 ## 數據來源
 
 | 項目 | 數值 | 來源 |
@@ -13,18 +25,6 @@
 | 無風險利率 (10Y) | 4.33% | [MarketScreener / Reuters](https://www.marketscreener.com/news/u-s-treasury-yields-hold-declines-after-data-yield-on-10-year-treasury-note-last-down-2-2-basis-po-ce7f58d3de88f020)；U.S. Treasury 2026-05-06 最新官方 10Y 為 4.36% |
 | WACC | 13.35%（基準） | 計算：4.33% + 1.64 × 5.5% |
 | 現價 | $13.93 | [Robinhood](https://robinhood.com/us/en/stocks/MOVE/) |
-
-## DCF 估值結果
-
-由於 MOVE 最近年度 FCF 為負，且 2026 年剛完成從 Movano/legacy healthcare 到 Corvex AI infrastructure 的重大併購轉型，歷史 FCF CAGR 不具可用性。本次以 Python 跑 5 年 DCF 檢查後，模型輸出為負值，因此不採用為有效內在價值估算；EV/EBITDA fallback 也因 EBITDA / operating profit 為負而不適用。
-
-| 情境 | FCF 成長率 (yr1-5) | 終值成長率 | WACC | 內在價值/股 | 現價 | 安全邊際 |
-|------|-----------------|----------|------|-----------|------|---------|
-| 悲觀 | N/A（負 FCF） | 1.5% | 13.85% | N/A（Python 檢查值約 -$1.55，不具估值意義） | $13.93 | N/A |
-| 基準 | N/A（負 FCF） | 2.5% | 13.35% | N/A（Python 檢查值約 -$1.74，不具估值意義） | $13.93 | N/A |
-| 樂觀 | N/A（負 FCF） | 3.5% | 12.85% | N/A（Python 檢查值約 -$2.00，不具估值意義） | $13.93 | N/A |
-
-> 安全邊際 = (內在價值 - 現價) / 現價 x 100%
 
 ## 關鍵假設說明
 

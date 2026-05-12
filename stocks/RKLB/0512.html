@@ -6,7 +6,7 @@
   <title>RKLB — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-macd-dcf">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-table-dcf">
 </head>
 <body>
   <header class="site-header">
@@ -147,7 +147,56 @@
 
       </article>
       <article class="tab-panel dcf-panel report-content" role="tabpanel">
-        <h1>RKLB — DCF 估值報告 (2026-05-08)</h1>
+<h1>RKLB — DCF 估值報告 (2026-05-08)</h1>
+<h2>DCF 估值結果</h2>
+<blockquote>
+<p>RKLB 最近 5 年與 TTM FCF 均為負，依 skill 規則應啟用 EV/EBITDA fallback；但 RKLB TTM EBITDA 亦為負，因此 EV/EBITDA fallback 不具可用性。下表為使用 TTM FCF -$316.3M、以 5yr revenue growth forecast 33.98% 作為成長率 proxy 的機械式 DCF 壓力測試，不能視為穩健內在價值。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>情境</th>
+<th>FCF 成長率 (yr1-5)</th>
+<th>終值成長率</th>
+<th>WACC</th>
+<th>內在價值/股</th>
+<th>現價</th>
+<th>安全邊際</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>悲觀</td>
+<td>20.4%</td>
+<td>1.5%</td>
+<td>17.59%</td>
+<td>-$4.68</td>
+<td>$78.58</td>
+<td>-106.0%（高估；模型不適用）</td>
+</tr>
+<tr>
+<td>基準</td>
+<td>34.0%</td>
+<td>2.5%</td>
+<td>17.09%</td>
+<td>-$9.60</td>
+<td>$78.58</td>
+<td>-112.2%（高估；模型不適用）</td>
+</tr>
+<tr>
+<td>樂觀</td>
+<td>47.6%</td>
+<td>3.5%</td>
+<td>16.59%</td>
+<td>-$17.83</td>
+<td>$78.58</td>
+<td>-122.7%（高估；模型不適用）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
+</blockquote>
 <h2>數據來源</h2>
 <table>
 <thead>
@@ -215,55 +264,6 @@
 </tr>
 </tbody>
 </table>
-<h2>DCF 估值結果</h2>
-<blockquote>
-<p>RKLB 最近 5 年與 TTM FCF 均為負，依 skill 規則應啟用 EV/EBITDA fallback；但 RKLB TTM EBITDA 亦為負，因此 EV/EBITDA fallback 不具可用性。下表為使用 TTM FCF -$316.3M、以 5yr revenue growth forecast 33.98% 作為成長率 proxy 的機械式 DCF 壓力測試，不能視為穩健內在價值。</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>FCF 成長率 (yr1-5)</th>
-<th>終值成長率</th>
-<th>WACC</th>
-<th>內在價值/股</th>
-<th>現價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>20.4%</td>
-<td>1.5%</td>
-<td>17.59%</td>
-<td>-$4.68</td>
-<td>$78.58</td>
-<td>-106.0%（高估；模型不適用）</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>34.0%</td>
-<td>2.5%</td>
-<td>17.09%</td>
-<td>-$9.60</td>
-<td>$78.58</td>
-<td>-112.2%（高估；模型不適用）</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>47.6%</td>
-<td>3.5%</td>
-<td>16.59%</td>
-<td>-$17.83</td>
-<td>$78.58</td>
-<td>-122.7%（高估；模型不適用）</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
 <h2>關鍵假設說明</h2>
 <ul>
 <li>FCF 成長率來源：5yr FCF CAGR 因 FCF 全為負而不適用；本表改用 5yr revenue growth forecast 33.98% 作為壓力測試 proxy，悲觀 / 基準 / 樂觀分別為 0.6x / 1.0x / 1.4x。</li>

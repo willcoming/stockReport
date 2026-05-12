@@ -6,7 +6,7 @@
   <title>KTOS — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-4col">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-table-dcf">
 </head>
 <body>
   <header class="site-header">
@@ -135,9 +135,64 @@
 
       </article>
       <article class="tab-panel dcf-panel report-content" role="tabpanel">
-        <h1>KTOS — DCF 估值報告</h1>
+<h1>KTOS — DCF 估值報告</h1>
 <p>as_of_date：2026-05-08<br>
 projection_years：5</p>
+<h2>DCF 估值結果</h2>
+<p>KTOS 最近 5 個年度 FCF 有 4 年為負，依 skill 規則改用 EV/EBITDA fallback；下表不是標準 FCF DCF，而是 multiple-based fallback。</p>
+<table>
+<thead>
+<tr>
+<th>情境</th>
+<th>估值方法</th>
+<th>FCF 成長率 (yr1-5)</th>
+<th>終值成長率</th>
+<th>WACC</th>
+<th>EV/EBITDA 假設</th>
+<th>內在價值/股</th>
+<th>現價</th>
+<th>安全邊際</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>悲觀</td>
+<td>EV/EBITDA fallback</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>10.68%</td>
+<td>15.10x</td>
+<td>$13.36</td>
+<td>$57.25</td>
+<td>-76.7% (高估)</td>
+</tr>
+<tr>
+<td>基準</td>
+<td>EV/EBITDA fallback</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>10.18%</td>
+<td>18.87x</td>
+<td>$14.99</td>
+<td>$57.25</td>
+<td>-73.8% (高估)</td>
+</tr>
+<tr>
+<td>樂觀</td>
+<td>EV/EBITDA fallback</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>9.68%</td>
+<td>22.64x</td>
+<td>$16.63</td>
+<td>$57.25</td>
+<td>-71.0% (高估)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
+</blockquote>
 <h2>數據來源</h2>
 <table>
 <thead>
@@ -215,61 +270,6 @@ projection_years：5</p>
 </tr>
 </tbody>
 </table>
-<h2>DCF 估值結果</h2>
-<p>KTOS 最近 5 個年度 FCF 有 4 年為負，依 skill 規則改用 EV/EBITDA fallback；下表不是標準 FCF DCF，而是 multiple-based fallback。</p>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>估值方法</th>
-<th>FCF 成長率 (yr1-5)</th>
-<th>終值成長率</th>
-<th>WACC</th>
-<th>EV/EBITDA 假設</th>
-<th>內在價值/股</th>
-<th>現價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>EV/EBITDA fallback</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>10.68%</td>
-<td>15.10x</td>
-<td>$13.36</td>
-<td>$57.25</td>
-<td>-76.7% (高估)</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>EV/EBITDA fallback</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>10.18%</td>
-<td>18.87x</td>
-<td>$14.99</td>
-<td>$57.25</td>
-<td>-73.8% (高估)</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>EV/EBITDA fallback</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>9.68%</td>
-<td>22.64x</td>
-<td>$16.63</td>
-<td>$57.25</td>
-<td>-71.0% (高估)</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
 <h2>關鍵假設說明</h2>
 <ul>
 <li>FCF 成長率來源：KTOS 過去 5 年 FCF 為 -$137.4M、-$8.5M、+$12.8M、-$71.1M、-$51.0M，其中 4 年為負，標準 FCF CAGR 不適用。</li>

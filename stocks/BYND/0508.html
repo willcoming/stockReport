@@ -6,7 +6,7 @@
   <title>BYND — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-4col">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-table-dcf">
 </head>
 <body>
   <header class="site-header">
@@ -147,7 +147,54 @@
 
       </article>
       <article class="tab-panel dcf-panel report-content" role="tabpanel">
-        <h1>BYND — DCF 估值報告 (2026-05-08)</h1>
+<h1>BYND — DCF 估值報告 (2026-05-08)</h1>
+<h2>DCF 估值結果</h2>
+<p>BYND 最近 5 年 FCF 皆為負，且 TTM EBITDA 亦為負，因此標準 DCF 與 EV/EBITDA fallback 都不具備可靠估值意義。下表為按 skill 要求透過 Bash/Python 執行的機械式診斷結果，FCF 成長率以 0.0% 作為中性占位，不應視為可投資內在價值。</p>
+<table>
+<thead>
+<tr>
+<th>情境</th>
+<th>FCF 成長率 (yr1-5)</th>
+<th>終值成長率</th>
+<th>WACC</th>
+<th>內在價值/股</th>
+<th>現價</th>
+<th>安全邊際</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>悲觀</td>
+<td>N/M（診斷用 0.0%）</td>
+<td>1.5%</td>
+<td>20.57%</td>
+<td>N/M（機械值 -$1.91）</td>
+<td>$0.8928</td>
+<td>N/M（機械值 -313.9%）</td>
+</tr>
+<tr>
+<td>基準</td>
+<td>N/M（診斷用 0.0%）</td>
+<td>2.5%</td>
+<td>20.06%</td>
+<td>N/M（機械值 -$1.99）</td>
+<td>$0.8928</td>
+<td>N/M（機械值 -322.9%）</td>
+</tr>
+<tr>
+<td>樂觀</td>
+<td>N/M（診斷用 0.0%）</td>
+<td>3.5%</td>
+<td>19.56%</td>
+<td>N/M（機械值 -$2.08）</td>
+<td>$0.8928</td>
+<td>N/M（機械值 -333.0%）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
+</blockquote>
 <h2>數據來源</h2>
 <table>
 <thead>
@@ -210,53 +257,6 @@
 </tr>
 </tbody>
 </table>
-<h2>DCF 估值結果</h2>
-<p>BYND 最近 5 年 FCF 皆為負，且 TTM EBITDA 亦為負，因此標準 DCF 與 EV/EBITDA fallback 都不具備可靠估值意義。下表為按 skill 要求透過 Bash/Python 執行的機械式診斷結果，FCF 成長率以 0.0% 作為中性占位，不應視為可投資內在價值。</p>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>FCF 成長率 (yr1-5)</th>
-<th>終值成長率</th>
-<th>WACC</th>
-<th>內在價值/股</th>
-<th>現價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>N/M（診斷用 0.0%）</td>
-<td>1.5%</td>
-<td>20.57%</td>
-<td>N/M（機械值 -$1.91）</td>
-<td>$0.8928</td>
-<td>N/M（機械值 -313.9%）</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>N/M（診斷用 0.0%）</td>
-<td>2.5%</td>
-<td>20.06%</td>
-<td>N/M（機械值 -$1.99）</td>
-<td>$0.8928</td>
-<td>N/M（機械值 -322.9%）</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>N/M（診斷用 0.0%）</td>
-<td>3.5%</td>
-<td>19.56%</td>
-<td>N/M（機械值 -$2.08）</td>
-<td>$0.8928</td>
-<td>N/M（機械值 -333.0%）</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
 <h2>關鍵假設說明</h2>
 <ul>
 <li>FCF 成長率來源：FY2021-FY2025 與 TTM FCF 均為負，無法計算有經濟意義的 5yr FCF CAGR；因此 DCF 結果標記為 N/M。</li>

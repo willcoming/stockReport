@@ -6,7 +6,7 @@
   <title>3227 — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-4col">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-table-dcf">
 </head>
 <body>
   <header class="site-header">
@@ -132,10 +132,56 @@
 
       </article>
       <article class="tab-panel dcf-panel report-content" role="tabpanel">
-        <h1>3227.TW — DCF 估值報告</h1>
+<h1>3227.TW — DCF 估值報告</h1>
 <p>as_of_date：2026-05-07<br>
 projection_years：5 年<br>
 資料註記：Yahoo Finance 查無足夠 <code>3227.TW</code> 財務資料，依輸入規則改用 fallback ticker <code>3227.TWO</code>（PixArt Imaging Inc. / 原相）。</p>
+<h2>DCF 估值結果</h2>
+<table>
+<thead>
+<tr>
+<th>情境</th>
+<th>FCF 成長率 (yr1-5)</th>
+<th>終值成長率</th>
+<th>WACC</th>
+<th>內在價值/股</th>
+<th>現價</th>
+<th>安全邊際</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>悲觀</td>
+<td>108.0%</td>
+<td>1.5%</td>
+<td>10.18%</td>
+<td>NT$5,488.28</td>
+<td>NT$219.00</td>
+<td>+2,406.1% (低估)</td>
+</tr>
+<tr>
+<td>基準</td>
+<td>180.0%</td>
+<td>2.5%</td>
+<td>9.68%</td>
+<td>NT$28,581.77</td>
+<td>NT$219.00</td>
+<td>+12,951.0% (低估)</td>
+</tr>
+<tr>
+<td>樂觀</td>
+<td>252.0%</td>
+<td>3.5%</td>
+<td>9.18%</td>
+<td>NT$113,426.98</td>
+<td>NT$219.00</td>
+<td>+51,693.1% (低估)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
+</blockquote>
 <h2>數據來源</h2>
 <table>
 <thead>
@@ -203,52 +249,6 @@ projection_years：5 年<br>
 </tr>
 </tbody>
 </table>
-<h2>DCF 估值結果</h2>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>FCF 成長率 (yr1-5)</th>
-<th>終值成長率</th>
-<th>WACC</th>
-<th>內在價值/股</th>
-<th>現價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>108.0%</td>
-<td>1.5%</td>
-<td>10.18%</td>
-<td>NT$5,488.28</td>
-<td>NT$219.00</td>
-<td>+2,406.1% (低估)</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>180.0%</td>
-<td>2.5%</td>
-<td>9.68%</td>
-<td>NT$28,581.77</td>
-<td>NT$219.00</td>
-<td>+12,951.0% (低估)</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>252.0%</td>
-<td>3.5%</td>
-<td>9.18%</td>
-<td>NT$113,426.98</td>
-<td>NT$219.00</td>
-<td>+51,693.1% (低估)</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
 <h2>關鍵假設說明</h2>
 <ul>
 <li>FCF 成長率來源：Yahoo Finance 可取得 2022-2025 FCF；因 5 年 FCF 不足，依 skill 規則改用 3yr CAGR。2022 年 FCF 基期極低，導致 CAGR 達 180.0%，此為本估值最主要敏感因子。</li>

@@ -6,7 +6,7 @@
   <title>6891 — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-4col">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-table-dcf">
 </head>
 <body>
   <header class="site-header">
@@ -132,7 +132,54 @@
 
       </article>
       <article class="tab-panel dcf-panel report-content" role="tabpanel">
-        <h1>6891.TW — DCF 估值報告 (2026-05-08)</h1>
+<h1>6891.TW — DCF 估值報告 (2026-05-08)</h1>
+<h2>DCF 估值結果</h2>
+<table>
+<thead>
+<tr>
+<th>情境</th>
+<th>FCF 成長率 (yr1-5)</th>
+<th>終值成長率</th>
+<th>WACC</th>
+<th>內在價值/股</th>
+<th>現價</th>
+<th>安全邊際</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>悲觀</td>
+<td>不適用</td>
+<td>1.5%</td>
+<td>19.68%</td>
+<td>N/A</td>
+<td>57.40 TWD</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>基準</td>
+<td>不適用</td>
+<td>2.5%</td>
+<td>19.18%</td>
+<td>N/A</td>
+<td>57.40 TWD</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>樂觀</td>
+<td>不適用</td>
+<td>3.5%</td>
+<td>18.68%</td>
+<td>N/A</td>
+<td>57.40 TWD</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
+</blockquote>
+<p>本次未輸出 DCF 每股內在價值，原因是 FY2021-FY2025 自由現金流全部為負，且 FY2025 EBITDA 也為負。依 skill 規則，FCF 多數年份為負時應切換 EV/EBITDA fallback；但 EBITDA 為負時，EV/EBITDA 不具經濟意義。Python 計算顯示目前 EV 約 11.25B TWD，FY2025 EBITDA 為 -158.94M TWD，機械式 EV/EBITDA 約 -70.78x，因此不應用產業正倍數推導內在價值。</p>
 <h2>數據來源</h2>
 <table>
 <thead>
@@ -215,53 +262,6 @@
 </tr>
 </tbody>
 </table>
-<h2>DCF 估值結果</h2>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>FCF 成長率 (yr1-5)</th>
-<th>終值成長率</th>
-<th>WACC</th>
-<th>內在價值/股</th>
-<th>現價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>不適用</td>
-<td>1.5%</td>
-<td>19.68%</td>
-<td>N/A</td>
-<td>57.40 TWD</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>不適用</td>
-<td>2.5%</td>
-<td>19.18%</td>
-<td>N/A</td>
-<td>57.40 TWD</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>不適用</td>
-<td>3.5%</td>
-<td>18.68%</td>
-<td>N/A</td>
-<td>57.40 TWD</td>
-<td>N/A</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
-<p>本次未輸出 DCF 每股內在價值，原因是 FY2021-FY2025 自由現金流全部為負，且 FY2025 EBITDA 也為負。依 skill 規則，FCF 多數年份為負時應切換 EV/EBITDA fallback；但 EBITDA 為負時，EV/EBITDA 不具經濟意義。Python 計算顯示目前 EV 約 11.25B TWD，FY2025 EBITDA 為 -158.94M TWD，機械式 EV/EBITDA 約 -70.78x，因此不應用產業正倍數推導內在價值。</p>
 <h2>關鍵假設說明</h2>
 <ul>
 <li>FCF 成長率來源：FY2021-FY2025 FCF 分別為 -30.22M、-62.12M、-158.87M、-548.26M、-599.57M TWD；因全數為負，無法建立正向 FCF CAGR 作為 DCF 成長率。</li>

@@ -6,7 +6,7 @@
   <title>SLT — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-4col">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-table-dcf">
 </head>
 <body>
   <header class="site-header">
@@ -141,9 +141,55 @@
 
       </article>
       <article class="tab-panel dcf-panel report-content" role="tabpanel">
-        <h1>SLT — DCF 估值報告</h1>
+<h1>SLT — DCF 估值報告</h1>
 <p>As of date：2026-05-08<br>
 假設標的：Saltire Capital Ltd.（TSX: SLT；同一發行人亦有 TSX:SLT.U / OTCQX:SLTEF 報價）</p>
+<h2>DCF 估值結果</h2>
+<table>
+<thead>
+<tr>
+<th>情境</th>
+<th>FCF 成長率 (yr1-5)</th>
+<th>終值成長率</th>
+<th>WACC</th>
+<th>內在價值/股</th>
+<th>現價</th>
+<th>安全邊際</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>悲觀</td>
+<td>0.0%</td>
+<td>1.5%</td>
+<td>10.36%</td>
+<td>-C$14.53</td>
+<td>C$4.40</td>
+<td>-430.2% (高估 / 不具安全邊際)</td>
+</tr>
+<tr>
+<td>基準</td>
+<td>0.0%</td>
+<td>2.5%</td>
+<td>9.86%</td>
+<td>-C$14.87</td>
+<td>C$4.40</td>
+<td>-438.0% (高估 / 不具安全邊際)</td>
+</tr>
+<tr>
+<td>樂觀</td>
+<td>0.0%</td>
+<td>3.5%</td>
+<td>9.36%</td>
+<td>-C$15.38</td>
+<td>C$4.40</td>
+<td>-449.5% (高估 / 不具安全邊際)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
+</blockquote>
 <h2>數據來源</h2>
 <table>
 <thead>
@@ -206,52 +252,6 @@
 </tr>
 </tbody>
 </table>
-<h2>DCF 估值結果</h2>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>FCF 成長率 (yr1-5)</th>
-<th>終值成長率</th>
-<th>WACC</th>
-<th>內在價值/股</th>
-<th>現價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>0.0%</td>
-<td>1.5%</td>
-<td>10.36%</td>
-<td>-C$14.53</td>
-<td>C$4.40</td>
-<td>-430.2% (高估 / 不具安全邊際)</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>0.0%</td>
-<td>2.5%</td>
-<td>9.86%</td>
-<td>-C$14.87</td>
-<td>C$4.40</td>
-<td>-438.0% (高估 / 不具安全邊際)</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>0.0%</td>
-<td>3.5%</td>
-<td>9.36%</td>
-<td>-C$15.38</td>
-<td>C$4.40</td>
-<td>-449.5% (高估 / 不具安全邊際)</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
 <h2>關鍵假設說明</h2>
 <ul>
 <li>FCF 成長率來源：歷史 FCF 因正負號翻轉，無法計算有意義 CAGR；為避免捏造成長假設，本模型以 0.0% FCF 成長作壓力測試。</li>

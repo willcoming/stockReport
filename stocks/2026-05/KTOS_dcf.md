@@ -3,6 +3,18 @@
 as_of_date：2026-05-08  
 projection_years：5
 
+## DCF 估值結果
+
+KTOS 最近 5 個年度 FCF 有 4 年為負，依 skill 規則改用 EV/EBITDA fallback；下表不是標準 FCF DCF，而是 multiple-based fallback。
+
+| 情境 | 估值方法 | FCF 成長率 (yr1-5) | 終值成長率 | WACC | EV/EBITDA 假設 | 內在價值/股 | 現價 | 安全邊際 |
+|------|----------|-----------------|----------|------|---------------|-----------|------|---------|
+| 悲觀 | EV/EBITDA fallback | N/A | N/A | 10.68% | 15.10x | $13.36 | $57.25 | -76.7% (高估) |
+| 基準 | EV/EBITDA fallback | N/A | N/A | 10.18% | 18.87x | $14.99 | $57.25 | -73.8% (高估) |
+| 樂觀 | EV/EBITDA fallback | N/A | N/A | 9.68% | 22.64x | $16.63 | $57.25 | -71.0% (高估) |
+
+> 安全邊際 = (內在價值 - 現價) / 現價 x 100%
+
 ## 數據來源
 
 | 項目 | 數值 | 來源 |
@@ -20,18 +32,6 @@ projection_years：5
 | WACC | Bear 10.68%；Base 10.18%；Bull 9.68% | 計算：10Y + Beta x 5.5% ERP ± 0.5% |
 | 現價 | $57.25 | [StockAnalysis Statistics, May 8 2026 10:59 AM EDT](https://stockanalysis.com/stocks/ktos/statistics/) |
 | 產業 TEV/EBITDA median | 18.87x | [PCE Aerospace & Government M&A Update, Apr 15 2026](https://www.pcecompanies.com/resources/industry-reports/aerospace-government-ma-update?hs_amp=true) |
-
-## DCF 估值結果
-
-KTOS 最近 5 個年度 FCF 有 4 年為負，依 skill 規則改用 EV/EBITDA fallback；下表不是標準 FCF DCF，而是 multiple-based fallback。
-
-| 情境 | 估值方法 | FCF 成長率 (yr1-5) | 終值成長率 | WACC | EV/EBITDA 假設 | 內在價值/股 | 現價 | 安全邊際 |
-|------|----------|-----------------|----------|------|---------------|-----------|------|---------|
-| 悲觀 | EV/EBITDA fallback | N/A | N/A | 10.68% | 15.10x | $13.36 | $57.25 | -76.7% (高估) |
-| 基準 | EV/EBITDA fallback | N/A | N/A | 10.18% | 18.87x | $14.99 | $57.25 | -73.8% (高估) |
-| 樂觀 | EV/EBITDA fallback | N/A | N/A | 9.68% | 22.64x | $16.63 | $57.25 | -71.0% (高估) |
-
-> 安全邊際 = (內在價值 - 現價) / 現價 x 100%
 
 ## 關鍵假設說明
 

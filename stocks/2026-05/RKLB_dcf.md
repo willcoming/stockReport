@@ -1,5 +1,17 @@
 # RKLB — DCF 估值報告 (2026-05-08)
 
+## DCF 估值結果
+
+> RKLB 最近 5 年與 TTM FCF 均為負，依 skill 規則應啟用 EV/EBITDA fallback；但 RKLB TTM EBITDA 亦為負，因此 EV/EBITDA fallback 不具可用性。下表為使用 TTM FCF -$316.3M、以 5yr revenue growth forecast 33.98% 作為成長率 proxy 的機械式 DCF 壓力測試，不能視為穩健內在價值。
+
+| 情境 | FCF 成長率 (yr1-5) | 終值成長率 | WACC | 內在價值/股 | 現價 | 安全邊際 |
+|------|-----------------|----------|------|-----------|------|---------|
+| 悲觀 | 20.4% | 1.5% | 17.59% | -$4.68 | $78.58 | -106.0%（高估；模型不適用） |
+| 基準 | 34.0% | 2.5% | 17.09% | -$9.60 | $78.58 | -112.2%（高估；模型不適用） |
+| 樂觀 | 47.6% | 3.5% | 16.59% | -$17.83 | $78.58 | -122.7%（高估；模型不適用） |
+
+> 安全邊際 = (內在價值 - 現價) / 現價 x 100%
+
 ## 數據來源
 
 | 項目 | 數值 | 來源 |
@@ -15,18 +27,6 @@
 | 現價 | $78.58 | [StockAnalysis：May 7, 2026 regular close](https://stockanalysis.com/stocks/rklb/) |
 | EBITDA / EV/EBITDA | EBITDA -$176.0M；EV/EBITDA N/A | [StockAnalysis Statistics](https://stockanalysis.com/stocks/rklb/statistics/) |
 | 5yr revenue growth forecast | 33.98% | [StockAnalysis Analyst Forecast](https://stockanalysis.com/stocks/rklb/statistics/) |
-
-## DCF 估值結果
-
-> RKLB 最近 5 年與 TTM FCF 均為負，依 skill 規則應啟用 EV/EBITDA fallback；但 RKLB TTM EBITDA 亦為負，因此 EV/EBITDA fallback 不具可用性。下表為使用 TTM FCF -$316.3M、以 5yr revenue growth forecast 33.98% 作為成長率 proxy 的機械式 DCF 壓力測試，不能視為穩健內在價值。
-
-| 情境 | FCF 成長率 (yr1-5) | 終值成長率 | WACC | 內在價值/股 | 現價 | 安全邊際 |
-|------|-----------------|----------|------|-----------|------|---------|
-| 悲觀 | 20.4% | 1.5% | 17.59% | -$4.68 | $78.58 | -106.0%（高估；模型不適用） |
-| 基準 | 34.0% | 2.5% | 17.09% | -$9.60 | $78.58 | -112.2%（高估；模型不適用） |
-| 樂觀 | 47.6% | 3.5% | 16.59% | -$17.83 | $78.58 | -122.7%（高估；模型不適用） |
-
-> 安全邊際 = (內在價值 - 現價) / 現價 x 100%
 
 ## 關鍵假設說明
 

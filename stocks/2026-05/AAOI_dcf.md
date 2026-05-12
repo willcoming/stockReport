@@ -1,5 +1,17 @@
 # AAOI — DCF 估值報告 (2026-05-12)
 
+## DCF 估值結果
+
+AAOI 最近 5 個年度 FCF 全部為負，依 skill 規則觸發 EV/EBITDA fallback；但 TTM EBITDA 亦為負，EV/EBITDA 無法形成可解讀的正向倍數，因此本次不輸出捏造的每股內在價值。
+
+| 情境 | FCF 成長率 (yr1-5) | 終值成長率 | WACC | 內在價值/股 | 現價 | 安全邊際 |
+|------|-----------------|----------|------|-----------|------|---------|
+| 悲觀 | N/A | 1.5% | 25.60% | N/A | $184.90 | N/A |
+| 基準 | N/A | 2.5% | 25.10% | N/A | $184.90 | N/A |
+| 樂觀 | N/A | 3.5% | 24.60% | N/A | $184.90 | N/A |
+
+> 安全邊際 = (內在價值 - 現價) / 現價 x 100%
+
 ## 數據來源
 
 | 項目 | 數值 | 來源 |
@@ -17,18 +29,6 @@
 | Q1 2026 Adjusted EBITDA | $0.966M | [SEC Exhibit 99.1](https://www.sec.gov/Archives/edgar/data/1158114/000168316826003562/aaoi_ex9901.htm) |
 | 無風險利率 (10Y) | 4.42% | [U.S. Treasury Daily Treasury Rates, 2026-05-11](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_yield_curve) |
 | WACC | 悲觀 25.60%；基準 25.10%；樂觀 24.60% | 計算：4.42% + 3.76 x 5.5%，再依情境 +/-0.5% |
-
-## DCF 估值結果
-
-AAOI 最近 5 個年度 FCF 全部為負，依 skill 規則觸發 EV/EBITDA fallback；但 TTM EBITDA 亦為負，EV/EBITDA 無法形成可解讀的正向倍數，因此本次不輸出捏造的每股內在價值。
-
-| 情境 | FCF 成長率 (yr1-5) | 終值成長率 | WACC | 內在價值/股 | 現價 | 安全邊際 |
-|------|-----------------|----------|------|-----------|------|---------|
-| 悲觀 | N/A | 1.5% | 25.60% | N/A | $184.90 | N/A |
-| 基準 | N/A | 2.5% | 25.10% | N/A | $184.90 | N/A |
-| 樂觀 | N/A | 3.5% | 24.60% | N/A | $184.90 | N/A |
-
-> 安全邊際 = (內在價值 - 現價) / 現價 x 100%
 
 ## 關鍵假設說明
 

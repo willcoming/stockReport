@@ -6,7 +6,7 @@
   <title>POET — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-4col">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-table-dcf">
 </head>
 <body>
   <header class="site-header">
@@ -131,10 +131,59 @@
 
       </article>
       <article class="tab-panel dcf-panel report-content" role="tabpanel">
-        <h1>POET — DCF 估值報告</h1>
+<h1>POET — DCF 估值報告</h1>
 <p>as_of_date：2026-05-12<br>
 projection_years：5 年<br>
 幣別：USD；金額單位除每股外為百萬美元</p>
+<h2>DCF 估值結果</h2>
+<blockquote>
+<p>POET 最近 5 年 FCF 全為負，且 EBITDA 也為負，因此 EV/EBITDA fallback 無法形成有效估值倍數。本表為以實際負 FCF 與淨現金部位跑出的機械式 DCF 敏感度，不代表成熟企業的穩態 DCF。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>情境</th>
+<th>FCF 成長率 (yr1-5)</th>
+<th>終值成長率</th>
+<th>WACC</th>
+<th>內在價值/股</th>
+<th>現價</th>
+<th>安全邊際</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>悲觀</td>
+<td>-17.5%</td>
+<td>1.5%</td>
+<td>7.89%</td>
+<td>$0.57</td>
+<td>$13.90</td>
+<td>-95.9% (高估)</td>
+</tr>
+<tr>
+<td>基準</td>
+<td>-29.1%</td>
+<td>2.5%</td>
+<td>7.39%</td>
+<td>$1.06</td>
+<td>$13.90</td>
+<td>-92.4% (高估)</td>
+</tr>
+<tr>
+<td>樂觀</td>
+<td>-40.7%</td>
+<td>3.5%</td>
+<td>6.89%</td>
+<td>$1.40</td>
+<td>$13.90</td>
+<td>-89.9% (高估)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
+</blockquote>
 <h2>數據來源</h2>
 <table>
 <thead>
@@ -202,55 +251,6 @@ projection_years：5 年<br>
 </tr>
 </tbody>
 </table>
-<h2>DCF 估值結果</h2>
-<blockquote>
-<p>POET 最近 5 年 FCF 全為負，且 EBITDA 也為負，因此 EV/EBITDA fallback 無法形成有效估值倍數。本表為以實際負 FCF 與淨現金部位跑出的機械式 DCF 敏感度，不代表成熟企業的穩態 DCF。</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>FCF 成長率 (yr1-5)</th>
-<th>終值成長率</th>
-<th>WACC</th>
-<th>內在價值/股</th>
-<th>現價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>-17.5%</td>
-<td>1.5%</td>
-<td>7.89%</td>
-<td>$0.57</td>
-<td>$13.90</td>
-<td>-95.9% (高估)</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>-29.1%</td>
-<td>2.5%</td>
-<td>7.39%</td>
-<td>$1.06</td>
-<td>$13.90</td>
-<td>-92.4% (高估)</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>-40.7%</td>
-<td>3.5%</td>
-<td>6.89%</td>
-<td>$1.40</td>
-<td>$13.90</td>
-<td>-89.9% (高估)</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
 <h2>關鍵假設說明</h2>
 <ul>
 <li>FCF 成長率來源：因 POET 的 2021-2025 年 FCF 全為負，傳統正 FCF CAGR 不適用；此處以 FCF cash-burn CAGR 29.1% 作為基準，並把情境設為 cash burn 收斂率。</li>

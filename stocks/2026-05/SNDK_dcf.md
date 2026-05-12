@@ -1,5 +1,17 @@
 # SNDK — DCF 估值報告 (2026-05-10)
 
+## DCF 估值結果
+
+SNDK 最近 5 個 FCF 觀察值中有 3 個為負值，因此依 $dcf-valuation skill 規則觸發 EV/EBITDA fallback；下表為 multiple-based fallback，不是純 DCF。
+
+| 情境 | 方法 | 終值成長率 | 參考 WACC | 估值倍數 | 內在價值/股 | 現價 | 安全邊際 |
+|------|------|----------|----------|----------|-----------|------|---------|
+| 悲觀 | EV/EBITDA fallback | N/A | 10.39% | 10.18x | $404.54 | $1,562.34 | -74.1%（高估） |
+| 基準 | EV/EBITDA fallback | N/A | 9.89% | 15.33x | $596.43 | $1,562.34 | -61.8%（高估） |
+| 樂觀 | EV/EBITDA fallback | N/A | 9.39% | 22.67x | $869.93 | $1,562.34 | -44.3%（高估） |
+
+> 安全邊際 = (內在價值 - 現價) / 現價 x 100%
+
 ## 數據來源
 
 | 項目 | 數值 | 來源 |
@@ -18,18 +30,6 @@
 | WACC | 9.89%（base；Beta 1.00） | 計算 |
 | 現價 | $1,562.34（2026-05-08 收盤） | [StockAnalysis Statistics](https://stockanalysis.com/stocks/sndk/statistics/) |
 | 半導體 EV/EBITDA median | 15.33x | [CSIMarket Semiconductors Valuation](https://csimarket.com/Industry/Industry_Valuation.php?ind=1010) |
-
-## DCF 估值結果
-
-SNDK 最近 5 個 FCF 觀察值中有 3 個為負值，因此依 $dcf-valuation skill 規則觸發 EV/EBITDA fallback；下表為 multiple-based fallback，不是純 DCF。
-
-| 情境 | 方法 | 終值成長率 | 參考 WACC | 估值倍數 | 內在價值/股 | 現價 | 安全邊際 |
-|------|------|----------|----------|----------|-----------|------|---------|
-| 悲觀 | EV/EBITDA fallback | N/A | 10.39% | 10.18x | $404.54 | $1,562.34 | -74.1%（高估） |
-| 基準 | EV/EBITDA fallback | N/A | 9.89% | 15.33x | $596.43 | $1,562.34 | -61.8%（高估） |
-| 樂觀 | EV/EBITDA fallback | N/A | 9.39% | 22.67x | $869.93 | $1,562.34 | -44.3%（高估） |
-
-> 安全邊際 = (內在價值 - 現價) / 現價 x 100%
 
 ## 關鍵假設說明
 

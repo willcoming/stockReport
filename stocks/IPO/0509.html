@@ -6,7 +6,7 @@
   <title>IPO — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-4col">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-table-dcf">
 </head>
 <body>
   <header class="site-header">
@@ -135,10 +135,56 @@
 
       </article>
       <article class="tab-panel dcf-panel report-content" role="tabpanel">
-        <h1>IPO — DCF 估值報告</h1>
+<h1>IPO — DCF 估值報告</h1>
 <p>as_of_date: 2026-05-09<br>
 projection_years: 5<br>
 標的判定：IPO = Renaissance IPO ETF（NYSE Arca: IPO）。此標的是 ETF，不是單一營運公司，因此沒有可直接用於公司 DCF 的 Free Cash Flow、Total Debt、Cash 等公司財務項目。</p>
+<h2>DCF 估值結果</h2>
+<table>
+<thead>
+<tr>
+<th>情境</th>
+<th>FCF 成長率 (yr1-5)</th>
+<th>終值成長率</th>
+<th>WACC</th>
+<th>內在價值/股</th>
+<th>現價</th>
+<th>安全邊際</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>悲觀</td>
+<td>N/A</td>
+<td>1.5%</td>
+<td>12.13%</td>
+<td>N/A</td>
+<td>$49.17</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>基準</td>
+<td>N/A</td>
+<td>2.5%</td>
+<td>11.63%</td>
+<td>N/A</td>
+<td>$49.17</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>樂觀</td>
+<td>N/A</td>
+<td>3.5%</td>
+<td>11.13%</td>
+<td>N/A</td>
+<td>$49.17</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
+</blockquote>
 <h2>數據來源</h2>
 <table>
 <thead>
@@ -201,52 +247,6 @@ projection_years: 5<br>
 </tr>
 </tbody>
 </table>
-<h2>DCF 估值結果</h2>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>FCF 成長率 (yr1-5)</th>
-<th>終值成長率</th>
-<th>WACC</th>
-<th>內在價值/股</th>
-<th>現價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>N/A</td>
-<td>1.5%</td>
-<td>12.13%</td>
-<td>N/A</td>
-<td>$49.17</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>N/A</td>
-<td>2.5%</td>
-<td>11.63%</td>
-<td>N/A</td>
-<td>$49.17</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>N/A</td>
-<td>3.5%</td>
-<td>11.13%</td>
-<td>N/A</td>
-<td>$49.17</td>
-<td>N/A</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
 <h2>關鍵假設說明</h2>
 <ul>
 <li>FCF 成長率來源：N/A。IPO 是追蹤 Renaissance IPO Index 的 ETF，持有一籃子近期上市公司，不是單一營運公司，因此沒有公司層級的 annual Free Cash Flow 可用於 DCF。</li>

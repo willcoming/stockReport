@@ -6,7 +6,7 @@
   <title>8086 — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-4col">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-table-dcf">
 </head>
 <body>
   <header class="site-header">
@@ -134,9 +134,60 @@
 
       </article>
       <article class="tab-panel dcf-panel report-content" role="tabpanel">
-        <h1>8086.TW — DCF 估值報告</h1>
+<h1>8086.TW — DCF 估值報告</h1>
 <p>as_of_date: 2026-05-11<br>
 實際資料代號：8086.TWO / TPEX:8086（8086.TW 在 Yahoo Finance 查無有效報價，依要求使用 fallback_ticker）</p>
+<h2>DCF 估值結果</h2>
+<p>由於最近 5 年 FCF 中 2021、2022、2023 為負，符合 skill 的 EV/EBITDA fallback 條件；以下為 multiple-based fallback，不是標準 DCF。</p>
+<table>
+<thead>
+<tr>
+<th>情境</th>
+<th>FCF 成長率 (yr1-5)</th>
+<th>終值成長率</th>
+<th>WACC</th>
+<th>估值方法</th>
+<th>內在價值/股</th>
+<th>現價</th>
+<th>安全邊際</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>悲觀</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>11.31%（參考）</td>
+<td>EV/EBITDA 4.95x</td>
+<td>NT$46.19</td>
+<td>NT$157.50</td>
+<td>-70.7%（高估）</td>
+</tr>
+<tr>
+<td>基準</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>10.81%（參考）</td>
+<td>EV/EBITDA 6.19x</td>
+<td>NT$55.13</td>
+<td>NT$157.50</td>
+<td>-65.0%（高估）</td>
+</tr>
+<tr>
+<td>樂觀</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>10.31%（參考）</td>
+<td>EV/EBITDA 7.43x</td>
+<td>NT$64.07</td>
+<td>NT$157.50</td>
+<td>-59.3%（高估）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
+</blockquote>
 <h2>數據來源</h2>
 <table>
 <thead>
@@ -209,57 +260,6 @@
 </tr>
 </tbody>
 </table>
-<h2>DCF 估值結果</h2>
-<p>由於最近 5 年 FCF 中 2021、2022、2023 為負，符合 skill 的 EV/EBITDA fallback 條件；以下為 multiple-based fallback，不是標準 DCF。</p>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>FCF 成長率 (yr1-5)</th>
-<th>終值成長率</th>
-<th>WACC</th>
-<th>估值方法</th>
-<th>內在價值/股</th>
-<th>現價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>11.31%（參考）</td>
-<td>EV/EBITDA 4.95x</td>
-<td>NT$46.19</td>
-<td>NT$157.50</td>
-<td>-70.7%（高估）</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>10.81%（參考）</td>
-<td>EV/EBITDA 6.19x</td>
-<td>NT$55.13</td>
-<td>NT$157.50</td>
-<td>-65.0%（高估）</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>10.31%（參考）</td>
-<td>EV/EBITDA 7.43x</td>
-<td>NT$64.07</td>
-<td>NT$157.50</td>
-<td>-59.3%（高估）</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
 <h2>關鍵假設說明</h2>
 <ul>
 <li>FCF 成長率來源：2021-2025 FCF 分別為 -NT$949.49M、-NT$573.35M、-NT$365.71M、NT$386.14M、NT$1.083B；因負基期導致 5yr / 3yr FCF CAGR 不具經濟意義，依 skill 規則改用 EV/EBITDA fallback。</li>

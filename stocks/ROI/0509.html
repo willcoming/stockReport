@@ -6,7 +6,7 @@
   <title>ROI — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-4col">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-table-dcf">
 </head>
 <body>
   <header class="site-header">
@@ -135,10 +135,88 @@ RiskOn 仍有 askROI.com、RiskOn360、GuyCare 等可敘事資產；AI Agent 與
 
       </article>
       <article class="tab-panel dcf-panel report-content" role="tabpanel">
-        <h1>ROI — DCF 估值報告</h1>
+<h1>ROI — DCF 估值報告</h1>
 <p>as_of_date: 2026-05-09<br>
 projection_years: 5<br>
 公司識別：RiskOn International, Inc. 原 ticker <code>ROI</code>，Nasdaq 停牌後交易代號變為 <code>ROII</code>；本報告以 <code>ROI/ROII</code> 對應同一公司處理，依 SEC 10-K 說明。</p>
+<h2>DCF 估值結果</h2>
+<p>因最近 5 年 FCF 全部為負，依 skill 規則觸發 EV/EBITDA fallback；但 EBITDA 亦為負，且負 EBITDA 的 EV/EBITDA multiple 被資料來源說明為通常不具估值意義。因此本次不輸出可投資判斷用的每股內在價值，避免捏造數字。</p>
+<table>
+<thead>
+<tr>
+<th>情境</th>
+<th>FCF 成長率 (yr1-5)</th>
+<th>終值成長率</th>
+<th>WACC</th>
+<th>內在價值/股</th>
+<th>現價</th>
+<th>安全邊際</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>悲觀</td>
+<td>N/A（FCF 為負）</td>
+<td>1.5%</td>
+<td>0.15%</td>
+<td>N/A</td>
+<td>$0.0001</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>基準</td>
+<td>N/A（FCF 為負）</td>
+<td>2.5%</td>
+<td>-0.35%</td>
+<td>N/A</td>
+<td>$0.0001</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>樂觀</td>
+<td>N/A（FCF 為負）</td>
+<td>3.5%</td>
+<td>-0.85%</td>
+<td>N/A</td>
+<td>$0.0001</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Fallback 檢查項</th>
+<th style="text-align:right">數值</th>
+<th>判斷</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>最近一年 EBITDA</td>
+<td style="text-align:right">-$32.91M</td>
+<td>負值，EV/EBITDA multiple 不具估值意義</td>
+</tr>
+<tr>
+<td>Market Cap</td>
+<td style="text-align:right">約 $0.0033M</td>
+<td>$0.0001 × 33.02M shares</td>
+</tr>
+<tr>
+<td>Enterprise Value</td>
+<td style="text-align:right">約 $0.1133M</td>
+<td>Market Cap + Net Debt</td>
+</tr>
+<tr>
+<td>Sector median EV/EBITDA</td>
+<td style="text-align:right">13.38x</td>
+<td>只適用於正 EBITDA 公司；不套用於 ROI/ROII</td>
+</tr>
+</tbody>
+</table>
 <h2>數據來源</h2>
 <table>
 <thead>
@@ -218,84 +296,6 @@ projection_years: 5<br>
 <td>Communication Services median EV/EBITDA</td>
 <td>13.38x</td>
 <td><a href="https://westmountfundamentals.com/ev-ebitda-sectors" target="_blank" rel="noopener noreferrer">Westmount Fundamentals 2026 Sector Medians</a></td>
-</tr>
-</tbody>
-</table>
-<h2>DCF 估值結果</h2>
-<p>因最近 5 年 FCF 全部為負，依 skill 規則觸發 EV/EBITDA fallback；但 EBITDA 亦為負，且負 EBITDA 的 EV/EBITDA multiple 被資料來源說明為通常不具估值意義。因此本次不輸出可投資判斷用的每股內在價值，避免捏造數字。</p>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>FCF 成長率 (yr1-5)</th>
-<th>終值成長率</th>
-<th>WACC</th>
-<th>內在價值/股</th>
-<th>現價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>N/A（FCF 為負）</td>
-<td>1.5%</td>
-<td>0.15%</td>
-<td>N/A</td>
-<td>$0.0001</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>N/A（FCF 為負）</td>
-<td>2.5%</td>
-<td>-0.35%</td>
-<td>N/A</td>
-<td>$0.0001</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>N/A（FCF 為負）</td>
-<td>3.5%</td>
-<td>-0.85%</td>
-<td>N/A</td>
-<td>$0.0001</td>
-<td>N/A</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>Fallback 檢查項</th>
-<th style="text-align:right">數值</th>
-<th>判斷</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>最近一年 EBITDA</td>
-<td style="text-align:right">-$32.91M</td>
-<td>負值，EV/EBITDA multiple 不具估值意義</td>
-</tr>
-<tr>
-<td>Market Cap</td>
-<td style="text-align:right">約 $0.0033M</td>
-<td>$0.0001 × 33.02M shares</td>
-</tr>
-<tr>
-<td>Enterprise Value</td>
-<td style="text-align:right">約 $0.1133M</td>
-<td>Market Cap + Net Debt</td>
-</tr>
-<tr>
-<td>Sector median EV/EBITDA</td>
-<td style="text-align:right">13.38x</td>
-<td>只適用於正 EBITDA 公司；不套用於 ROI/ROII</td>
 </tr>
 </tbody>
 </table>

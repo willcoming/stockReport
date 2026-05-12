@@ -6,7 +6,7 @@
   <title>8046 — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-4col">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-table-dcf">
 </head>
 <body>
   <header class="site-header">
@@ -133,10 +133,56 @@
 
       </article>
       <article class="tab-panel dcf-panel report-content" role="tabpanel">
-        <h1>8046.TW — DCF 估值報告</h1>
+<h1>8046.TW — DCF 估值報告</h1>
 <p>as_of_date: 2026-05-09<br>
 projection_years: 5<br>
 primary ticker: 8046.TW；fallback ticker 8046.TWO 未使用，因 primary ticker 資料可用。</p>
+<h2>DCF 估值結果</h2>
+<table>
+<thead>
+<tr>
+<th>情境</th>
+<th>FCF 成長率 (yr1-5)</th>
+<th>終值成長率</th>
+<th>WACC</th>
+<th>內在價值/股</th>
+<th>現價</th>
+<th>安全邊際</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>悲觀</td>
+<td>-28.0%</td>
+<td>1.5%</td>
+<td>16.93%</td>
+<td>NT$13.29</td>
+<td>NT$854.00</td>
+<td>-98.4% (高估)</td>
+</tr>
+<tr>
+<td>基準</td>
+<td>-46.7%</td>
+<td>2.5%</td>
+<td>16.43%</td>
+<td>NT$12.30</td>
+<td>NT$854.00</td>
+<td>-98.6% (高估)</td>
+</tr>
+<tr>
+<td>樂觀</td>
+<td>-65.3%</td>
+<td>3.5%</td>
+<td>15.93%</td>
+<td>NT$11.80</td>
+<td>NT$854.00</td>
+<td>-98.6% (高估)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
+</blockquote>
 <h2>數據來源</h2>
 <table>
 <thead>
@@ -204,52 +250,6 @@ primary ticker: 8046.TW；fallback ticker 8046.TWO 未使用，因 primary ticke
 </tr>
 </tbody>
 </table>
-<h2>DCF 估值結果</h2>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>FCF 成長率 (yr1-5)</th>
-<th>終值成長率</th>
-<th>WACC</th>
-<th>內在價值/股</th>
-<th>現價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>-28.0%</td>
-<td>1.5%</td>
-<td>16.93%</td>
-<td>NT$13.29</td>
-<td>NT$854.00</td>
-<td>-98.4% (高估)</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>-46.7%</td>
-<td>2.5%</td>
-<td>16.43%</td>
-<td>NT$12.30</td>
-<td>NT$854.00</td>
-<td>-98.6% (高估)</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>-65.3%</td>
-<td>3.5%</td>
-<td>15.93%</td>
-<td>NT$11.80</td>
-<td>NT$854.00</td>
-<td>-98.6% (高估)</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
 <h2>關鍵假設說明</h2>
 <ul>
 <li>FCF 成長率來源：依 skill 規則使用 5yr FCF CAGR；FY2021 FCF NT$7,478M 至 FY2025 FCF NT$604.66M，計算得 -46.7%。因歷史 CAGR 為負，套用 <code>base_rate x 1.4</code> 後，樂觀情境的短期 FCF 下滑率在機械規則下反而更大。</li>

@@ -6,7 +6,7 @@
   <title>CDMO — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-4col">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-table-dcf">
 </head>
 <body>
   <header class="site-header">
@@ -142,7 +142,54 @@
 
       </article>
       <article class="tab-panel dcf-panel report-content" role="tabpanel">
-        <h1>CDMO — DCF 估值報告 (2026-05-08)</h1>
+<h1>CDMO — DCF 估值報告 (2026-05-08)</h1>
+<h2>DCF 估值結果</h2>
+<table>
+<thead>
+<tr>
+<th>情境</th>
+<th>FCF 成長率 (yr1-5)</th>
+<th>終值成長率</th>
+<th>WACC</th>
+<th>內在價值/股</th>
+<th>現價</th>
+<th>安全邊際</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>悲觀</td>
+<td>23.2%</td>
+<td>1.5%</td>
+<td>12.51%</td>
+<td>$0.62</td>
+<td>$12.50（收購價參考）</td>
+<td>-95.0%（高估）</td>
+</tr>
+<tr>
+<td>基準</td>
+<td>38.7%</td>
+<td>2.5%</td>
+<td>12.01%</td>
+<td>$3.77</td>
+<td>$12.50（收購價參考）</td>
+<td>-69.8%（高估）</td>
+</tr>
+<tr>
+<td>樂觀</td>
+<td>54.2%</td>
+<td>3.5%</td>
+<td>11.51%</td>
+<td>$9.82</td>
+<td>$12.50（收購價參考）</td>
+<td>-21.5%（高估）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
+</blockquote>
+<p>補充參考：Avid merger proxy 披露的 Moelis DCF 參考區間為 $8.13–$11.89 / 股；Sensitivity A 為 $6.25–$9.68，Sensitivity B 為 $11.50–$16.07。上述表格為依本 skill 指定 WACC / terminal growth 架構重新用 Bash/Python 計算，未納入 Moelis 另行估算的 NOL 與 R&amp;D tax credit 現值。</p>
 <h2>數據來源</h2>
 <table>
 <thead>
@@ -210,53 +257,6 @@
 </tr>
 </tbody>
 </table>
-<h2>DCF 估值結果</h2>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>FCF 成長率 (yr1-5)</th>
-<th>終值成長率</th>
-<th>WACC</th>
-<th>內在價值/股</th>
-<th>現價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>23.2%</td>
-<td>1.5%</td>
-<td>12.51%</td>
-<td>$0.62</td>
-<td>$12.50（收購價參考）</td>
-<td>-95.0%（高估）</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>38.7%</td>
-<td>2.5%</td>
-<td>12.01%</td>
-<td>$3.77</td>
-<td>$12.50（收購價參考）</td>
-<td>-69.8%（高估）</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>54.2%</td>
-<td>3.5%</td>
-<td>11.51%</td>
-<td>$9.82</td>
-<td>$12.50（收購價參考）</td>
-<td>-21.5%（高估）</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
-<p>補充參考：Avid merger proxy 披露的 Moelis DCF 參考區間為 $8.13–$11.89 / 股；Sensitivity A 為 $6.25–$9.68，Sensitivity B 為 $11.50–$16.07。上述表格為依本 skill 指定 WACC / terminal growth 架構重新用 Bash/Python 計算，未納入 Moelis 另行估算的 NOL 與 R&amp;D tax credit 現值。</p>
 <h2>關鍵假設說明</h2>
 <ul>
 <li>FCF 成長率來源：因歷史 FCF 不適合直接計算 CAGR（FY2020–FY2024：$2.02M、$21.32M、-$46.95M、-$90.53M、-$20.85M；TTM -$9.68M），本模型改用 merger proxy 披露的 2025E–2029E unlevered FCF projections，基準 CAGR = 38.7%；悲觀 / 樂觀依 skill 規則使用 base_rate x 0.6 / x 1.4。</li>

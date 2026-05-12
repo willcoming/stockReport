@@ -1,5 +1,17 @@
 # INTC — DCF 估值報告 (2026-05-07)
 
+## DCF 估值結果
+
+INTC 最近 5 年中有 3 年以上 FCF 為負，且 TTM FCF 仍為負，因此依 skill 規則改用 **EV/EBITDA fallback**；以下不是標準 DCF，而是 multiple-based fallback intrinsic value。
+
+| 情境 | FCF 成長率 (yr1-5) | 終值成長率 | WACC | 內在價值/股 | 現價 | 安全邊際 |
+|------|-----------------|----------|------|-----------|------|---------|
+| 悲觀 | N/A（FCF 多年為負） | N/A | 16.91% | $75.94 | $113.01 | -32.8%（高估） |
+| 基準 | N/A（FCF 多年為負） | N/A | 16.41% | $95.52 | $113.01 | -15.5%（高估） |
+| 樂觀 | N/A（FCF 多年為負） | N/A | 15.90% | $115.10 | $113.01 | +1.9%（低估） |
+
+> 安全邊際 = (內在價值 - 現價) / 現價 x 100%
+
 ## 數據來源
 
 | 項目 | 數值 | 來源 |
@@ -14,18 +26,6 @@
 | 無風險利率 (10Y) | 4.36% | [U.S. Treasury Daily Yield Curve](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value_month=202605) |
 | WACC | 基準 16.41% | 計算：4.36% + 2.19 x 5.5% |
 | 現價 | $113.01 | [Investing.com](https://www.investing.com/equities/intel-corp) / [FinanceCharts](https://www.financecharts.com/stocks/INTC/summary/price) |
-
-## DCF 估值結果
-
-INTC 最近 5 年中有 3 年以上 FCF 為負，且 TTM FCF 仍為負，因此依 skill 規則改用 **EV/EBITDA fallback**；以下不是標準 DCF，而是 multiple-based fallback intrinsic value。
-
-| 情境 | FCF 成長率 (yr1-5) | 終值成長率 | WACC | 內在價值/股 | 現價 | 安全邊際 |
-|------|-----------------|----------|------|-----------|------|---------|
-| 悲觀 | N/A（FCF 多年為負） | N/A | 16.91% | $75.94 | $113.01 | -32.8%（高估） |
-| 基準 | N/A（FCF 多年為負） | N/A | 16.41% | $95.52 | $113.01 | -15.5%（高估） |
-| 樂觀 | N/A（FCF 多年為負） | N/A | 15.90% | $115.10 | $113.01 | +1.9%（低估） |
-
-> 安全邊際 = (內在價值 - 現價) / 現價 x 100%
 
 ## 關鍵假設說明
 

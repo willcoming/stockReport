@@ -6,7 +6,7 @@
   <title>MOVE — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-4col">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-table-dcf">
 </head>
 <body>
   <header class="site-header">
@@ -131,7 +131,54 @@
 
       </article>
       <article class="tab-panel dcf-panel report-content" role="tabpanel">
-        <h1>MOVE — DCF 估值報告 (2026-05-07)</h1>
+<h1>MOVE — DCF 估值報告 (2026-05-07)</h1>
+<h2>DCF 估值結果</h2>
+<p>由於 MOVE 最近年度 FCF 為負，且 2026 年剛完成從 Movano/legacy healthcare 到 Corvex AI infrastructure 的重大併購轉型，歷史 FCF CAGR 不具可用性。本次以 Python 跑 5 年 DCF 檢查後，模型輸出為負值，因此不採用為有效內在價值估算；EV/EBITDA fallback 也因 EBITDA / operating profit 為負而不適用。</p>
+<table>
+<thead>
+<tr>
+<th>情境</th>
+<th>FCF 成長率 (yr1-5)</th>
+<th>終值成長率</th>
+<th>WACC</th>
+<th>內在價值/股</th>
+<th>現價</th>
+<th>安全邊際</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>悲觀</td>
+<td>N/A（負 FCF）</td>
+<td>1.5%</td>
+<td>13.85%</td>
+<td>N/A（Python 檢查值約 -$1.55，不具估值意義）</td>
+<td>$13.93</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>基準</td>
+<td>N/A（負 FCF）</td>
+<td>2.5%</td>
+<td>13.35%</td>
+<td>N/A（Python 檢查值約 -$1.74，不具估值意義）</td>
+<td>$13.93</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>樂觀</td>
+<td>N/A（負 FCF）</td>
+<td>3.5%</td>
+<td>12.85%</td>
+<td>N/A（Python 檢查值約 -$2.00，不具估值意義）</td>
+<td>$13.93</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
+</blockquote>
 <h2>數據來源</h2>
 <table>
 <thead>
@@ -189,53 +236,6 @@
 </tr>
 </tbody>
 </table>
-<h2>DCF 估值結果</h2>
-<p>由於 MOVE 最近年度 FCF 為負，且 2026 年剛完成從 Movano/legacy healthcare 到 Corvex AI infrastructure 的重大併購轉型，歷史 FCF CAGR 不具可用性。本次以 Python 跑 5 年 DCF 檢查後，模型輸出為負值，因此不採用為有效內在價值估算；EV/EBITDA fallback 也因 EBITDA / operating profit 為負而不適用。</p>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>FCF 成長率 (yr1-5)</th>
-<th>終值成長率</th>
-<th>WACC</th>
-<th>內在價值/股</th>
-<th>現價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>N/A（負 FCF）</td>
-<td>1.5%</td>
-<td>13.85%</td>
-<td>N/A（Python 檢查值約 -$1.55，不具估值意義）</td>
-<td>$13.93</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>N/A（負 FCF）</td>
-<td>2.5%</td>
-<td>13.35%</td>
-<td>N/A（Python 檢查值約 -$1.74，不具估值意義）</td>
-<td>$13.93</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>N/A（負 FCF）</td>
-<td>3.5%</td>
-<td>12.85%</td>
-<td>N/A（Python 檢查值約 -$2.00，不具估值意義）</td>
-<td>$13.93</td>
-<td>N/A</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
 <h2>關鍵假設說明</h2>
 <ul>
 <li>FCF 成長率來源：資料不足；2025 pro forma/combined FCF 仍為負，且公司 2026 年完成重大併購轉型，歷史 CAGR 不適合外推。</li>

@@ -6,7 +6,7 @@
   <title>DTC — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-4col">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260512-priority-table-dcf">
 </head>
 <body>
   <header class="site-header">
@@ -144,10 +144,61 @@
 
       </article>
       <article class="tab-panel dcf-panel report-content" role="tabpanel">
-        <h1>DTC — DCF 估值報告</h1>
+<h1>DTC — DCF 估值報告</h1>
 <p><strong>as_of_date：2026-05-07</strong><br>
 <strong>projection_years：5 年</strong><br>
 <strong>公司識別：DTC 為 Solo Brands 舊 ticker；公開報價與財務頁目前多以 SBDS 顯示。</strong></p>
+<h2>DCF 估值結果</h2>
+<p>DTC / SBDS 最近 5 年 FCF 為：2025 -$58.65M、2024 -$4.00M、2023 $53.33M、2022 $23.15M、2021 -$20.89M。因 5 年中有 3 年 FCF 為負，依 skill 規則改用 <strong>EV/EBITDA multiple-based fallback</strong>；下表不是標準 FCF DCF，而是 distressed / multiple fallback 估值。</p>
+<table>
+<thead>
+<tr>
+<th>情境</th>
+<th>FCF 成長率 (yr1-5)</th>
+<th>終值成長率</th>
+<th>WACC</th>
+<th>估值方法</th>
+<th>內在價值/股</th>
+<th>現價</th>
+<th>安全邊際</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>悲觀</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>31.89%</td>
+<td>12.34x EV/EBITDA</td>
+<td>-$68.65</td>
+<td>$5.35</td>
+<td>-1,383%（高估）</td>
+</tr>
+<tr>
+<td>基準</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>31.39%</td>
+<td>15.43x EV/EBITDA</td>
+<td>-$62.19</td>
+<td>$5.35</td>
+<td>-1,262%（高估）</td>
+</tr>
+<tr>
+<td>樂觀</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>30.89%</td>
+<td>18.52x EV/EBITDA</td>
+<td>-$55.72</td>
+<td>$5.35</td>
+<td>-1,141%（高估）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
+</blockquote>
 <h2>數據來源</h2>
 <table>
 <thead>
@@ -220,57 +271,6 @@
 </tr>
 </tbody>
 </table>
-<h2>DCF 估值結果</h2>
-<p>DTC / SBDS 最近 5 年 FCF 為：2025 -$58.65M、2024 -$4.00M、2023 $53.33M、2022 $23.15M、2021 -$20.89M。因 5 年中有 3 年 FCF 為負，依 skill 規則改用 <strong>EV/EBITDA multiple-based fallback</strong>；下表不是標準 FCF DCF，而是 distressed / multiple fallback 估值。</p>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>FCF 成長率 (yr1-5)</th>
-<th>終值成長率</th>
-<th>WACC</th>
-<th>估值方法</th>
-<th>內在價值/股</th>
-<th>現價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>31.89%</td>
-<td>12.34x EV/EBITDA</td>
-<td>-$68.65</td>
-<td>$5.35</td>
-<td>-1,383%（高估）</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>31.39%</td>
-<td>15.43x EV/EBITDA</td>
-<td>-$62.19</td>
-<td>$5.35</td>
-<td>-1,262%（高估）</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>30.89%</td>
-<td>18.52x EV/EBITDA</td>
-<td>-$55.72</td>
-<td>$5.35</td>
-<td>-1,141%（高估）</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
 <h2>關鍵假設說明</h2>
 <ul>
 <li>FCF 成長率來源：不適用；最近 5 年 FCF 有 3 年為負，且最近一年 FCF 為 -$58.65M，因此未使用 FCF CAGR 作為 DCF 成長率。</li>
