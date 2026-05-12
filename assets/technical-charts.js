@@ -2,8 +2,8 @@
   const colors = {
     grid: "#dce3de",
     text: "#66736f",
-    up: "#0f8f72",
-    down: "#b94a3a",
+    up: "#d70015",
+    down: "#008f3a",
     ema5: "#1f77b4",
     ema20: "#ff9f1c",
     ema60: "#7b61ff",
