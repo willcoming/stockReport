@@ -523,6 +523,101 @@ tbody tr:nth-child(even) {
   font-weight: 700;
 }
 
+.performance-page {
+  max-width: none;
+}
+
+.performance-overview,
+.performance-section {
+  margin: 0 0 34px;
+  padding: 24px 0 8px;
+  border-top: 1px solid rgba(60, 60, 67, 0.12);
+}
+
+.performance-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.performance-stat {
+  display: grid;
+  gap: 5px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm), var(--shadow-inset);
+}
+
+.performance-stat strong,
+.performance-stat span {
+  display: block;
+  overflow-wrap: anywhere;
+  word-break: break-all;
+}
+
+.performance-stat strong {
+  font-size: 1.08rem;
+}
+
+.performance-stat span {
+  color: var(--muted);
+}
+
+.performance-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 12px;
+}
+
+.performance-controls button {
+  min-height: 34px;
+  padding: 7px 12px;
+  color: var(--accent-ink);
+  background: var(--accent-soft);
+  border: 1px solid rgba(0, 113, 227, 0.18);
+  border-radius: 8px;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.performance-controls button:hover {
+  border-color: rgba(0, 113, 227, 0.42);
+}
+
+.performance-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.performance-table {
+  min-width: 1180px;
+}
+
+.performance-table td:first-child,
+.performance-table td:nth-child(4),
+.performance-table td:nth-child(5),
+.performance-table td:nth-child(10) {
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.performance-return {
+  font-weight: 900;
+}
+
+.return-positive {
+  color: #d70015;
+}
+
+.return-negative {
+  color: #008f3a;
+}
+
 .technical-charts {
   margin-top: 22px;
   padding: 18px;
@@ -702,11 +797,13 @@ tbody tr:nth-child(even) {
   .report-list,
   .stock-list,
   .priority-list,
-  .priority-grid {
+  .priority-grid,
+  .performance-stats {
     grid-template-columns: 1fr;
   }
 
-  .priority-section {
+  .priority-section,
+  .performance-section {
     margin-bottom: 24px;
     padding-top: 18px;
   }

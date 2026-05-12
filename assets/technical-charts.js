@@ -12,8 +12,10 @@
     rsi: "#156f63",
     macd: "#156f63",
     signal: "#9f6b18",
-    histUp: "rgba(15, 143, 114, 0.48)",
-    histDown: "rgba(185, 74, 58, 0.48)",
+    histPositiveRising: "#ff3f57",
+    histPositiveFalling: "#ffd6dc",
+    histNegativeFalling: "#18c7ad",
+    histNegativeRising: "#b8eee6",
     trendUpBg: "rgba(185, 74, 58, 0.10)",
     trendDownBg: "rgba(15, 143, 114, 0.10)",
     rsiOverbought: "rgba(185, 74, 58, 0.12)",
@@ -135,6 +137,15 @@
     return `<svg viewBox="0 0 ${width} ${height}" aria-hidden="true">${zones}${guide}<path d="${linePath(rows, "rsi", y, width)}" fill="none" stroke="${colors.rsi}" stroke-width="2"/>${dateLabels(rows, width, height)}</svg>`;
   }
 
+  function macdHistogramColor(rows, index) {
+    const value = rows[index].macd_hist;
+    const previous = index > 0 && finite(rows[index - 1].macd_hist) ? rows[index - 1].macd_hist : 0;
+    if (value >= 0) {
+      return value >= previous ? colors.histPositiveRising : colors.histPositiveFalling;
+    }
+    return value <= previous ? colors.histNegativeFalling : colors.histNegativeRising;
+  }
+
   function renderMacd(rows) {
     const width = 920;
     const height = 240;
@@ -151,7 +162,7 @@
       const yValue = y(row.macd_hist);
       const top = Math.min(zero, yValue);
       const h = Math.max(1, Math.abs(zero - yValue));
-      const color = row.macd_hist >= 0 ? colors.histUp : colors.histDown;
+      const color = macdHistogramColor(rows, index);
       return `<rect x="${x}" y="${top}" width="${barWidth}" height="${h}" fill="${color}"/>`;
     }).join("");
     const labels = [{ label: maxAbs.toFixed(2) }, { label: "0" }, { label: (-maxAbs).toFixed(2) }];
