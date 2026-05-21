@@ -126,6 +126,7 @@ label:focus-visible {
 }
 
 .site-nav a,
+.site-nav-parent,
 .site-subnav-list a {
   display: inline-flex;
   align-items: center;
@@ -140,6 +141,10 @@ label:focus-visible {
   transition: background 160ms ease, color 160ms ease, box-shadow 160ms ease;
 }
 
+.site-nav-parent {
+  cursor: default;
+}
+
 .site-subnav-list a {
   min-height: 36px;
   padding: 5px 9px;
@@ -150,6 +155,7 @@ label:focus-visible {
 
 .site-nav a:hover,
 .site-nav a.active,
+.site-nav-parent.active,
 .site-subnav-list a:hover,
 .site-subnav-list a.active {
   color: var(--accent-ink);
@@ -615,6 +621,32 @@ tbody tr:nth-child(even) {
   box-shadow: var(--shadow-sm);
 }
 
+.priority-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 12px;
+}
+
+.priority-controls button {
+  min-height: 34px;
+  padding: 7px 12px;
+  color: var(--accent-ink);
+  background: var(--accent-soft);
+  border: 1px solid rgba(0, 113, 227, 0.18);
+  border-radius: 8px;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.priority-controls button:hover,
+.priority-controls button[aria-pressed="true"] {
+  border-color: rgba(0, 113, 227, 0.42);
+  box-shadow: inset 0 0 0 1px rgba(0, 113, 227, 0.08);
+}
+
 .priority-table {
   width: 100%;
   min-width: 840px;
@@ -1001,6 +1033,7 @@ tbody tr:nth-child(even) {
   }
 
   .site-nav a,
+  .site-nav-parent,
   .site-subnav-list a {
     width: auto;
     min-height: 36px;
