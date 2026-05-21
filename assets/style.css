@@ -76,6 +76,39 @@ label:focus-visible {
   font-weight: 600;
 }
 
+.site-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 7px;
+  color: var(--muted);
+  font-size: 0.94rem;
+  font-weight: 800;
+}
+
+.site-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 4px 8px;
+  color: var(--ink);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 160ms ease, color 160ms ease;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  color: var(--accent-ink);
+  background: var(--accent-soft);
+}
+
+.site-nav-separator {
+  color: rgba(60, 60, 67, 0.32);
+  font-weight: 700;
+}
+
 .back-link {
   display: inline-flex;
   align-items: center;
@@ -842,6 +875,11 @@ tbody tr:nth-child(even) {
     align-items: flex-start;
     flex-direction: column;
     gap: 4px;
+  }
+
+  .site-nav {
+    justify-content: flex-start;
+    width: 100%;
   }
 
   .report-shell,
