@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>台股起漲股篩選成效</title>
+  <link rel="icon" href="../assets/radar-icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../assets/radar-icon.svg">
+  <link rel="stylesheet" href="../assets/style.css?v=20260521-breakout-v1">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="back-link site-brand" href="../index.html">投資情報雷達</a>
+      <div class="site-header-navs">
+        <nav class="site-nav site-nav-tree" aria-label="主導覽">
+        <ul class="site-nav-list">
+          <li><a href="../index.html">首頁</a></li>
+          <li class="site-nav-group">
+            <span class="site-nav-parent active">台股</span>
+            <ul class="site-subnav-list">
+              <li><a href="../priority/tw.html">30 日熱門股</a></li>
+              <li><a href="../performance/tw.html">熱門股篩選成效</a></li>
+              <li><a href="../breakout/tw.html">30 日起漲股</a></li>
+              <li><a class="active" aria-current="page" href="../breakout/performance.html">起漲股篩選成效</a></li>
+            </ul>
+          </li>
+          <li class="site-nav-group">
+            <span class="site-nav-parent">美股</span>
+            <ul class="site-subnav-list">
+              <li><a href="../priority/us.html">30 日熱門股</a></li>
+              <li><a href="../performance/us.html">熱門股篩選成效</a></li>
+            </ul>
+          </li>
+          <li><a href="../reports/index.html">熱門股報告</a></li>
+        </ul>
+      </nav>
+      </div>
+      <div class="site-header-meta"><span aria-hidden="true"></span></div>
+    </div>
+  </header>
+  <main class="index-shell performance-page">
+    <section class="index-hero">
+      <p>Breakout Performance</p>
+      <h1>台股起漲股篩選成效</h1>
+      <span>追蹤首次進入台股起漲股最終精選名單的標的，排除今日首次進榜，從次交易日收盤價起算，共 0 檔。</span>
+    </section>
+    <section class="performance-overview" aria-label="起漲股篩選成效總覽">
+      <div class="performance-stats">
+        <div class="performance-stat">
+          <strong>台股起漲股</strong>
+          <span>0 檔追蹤 · 0 檔有價格資料</span>
+          <span class="performance-return ">平均 資料不足</span>
+          <span>上漲 0 檔</span>
+        </div>
+      </div>
+    </section>
+    <section class="performance-section" aria-labelledby="breakout-performance-table">
+      <div class="section-heading">
+        <p>Breakout Performance</p>
+        <h2 id="breakout-performance-table">台股起漲股篩選成效</h2>
+      </div>
+      <p class="chart-empty">目前沒有可計算的台股起漲股標的。</p>
+    </section>
+  </main>
+  <script>
+(() => {
+  function numericValue(row, key) {
+    const raw = row.dataset[key] || "";
+    if (!raw) return null;
+    if (key === "date") return Number(raw.replaceAll("-", ""));
+    const value = Number(raw);
+    return Number.isFinite(value) ? value : null;
+  }
+
+  document.querySelectorAll("[data-sort-table]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const table = document.querySelector(`[data-performance-table="${button.dataset.sortTable}"]`);
+      const body = table?.querySelector("tbody");
+      if (!body) return;
+      const key = button.dataset.sortKey;
+      const direction = button.dataset.direction === "desc" ? "asc" : "desc";
+      button.dataset.direction = direction;
+      const rows = Array.from(body.querySelectorAll("tr"));
+      rows.sort((a, b) => {
+        const aValue = numericValue(a, key);
+        const bValue = numericValue(b, key);
+        if (aValue === null && bValue === null) return 0;
+        if (aValue === null) return 1;
+        if (bValue === null) return -1;
+        const delta = aValue - bValue;
+        return direction === "asc" ? delta : -delta;
+      });
+      rows.forEach((row) => body.appendChild(row));
+    });
+  });
+})();
+  </script>
+</body>
+</html>
