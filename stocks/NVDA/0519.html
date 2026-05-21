@@ -6,7 +6,7 @@
   <title>NVDA — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-tw-candles">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260521-hot-stocks-v1">
 </head>
 <body>
   <header class="site-header">
@@ -65,9 +65,7 @@
     <div class="tabs" role="tablist" aria-label="股票分析內容">
       <input id="tab-trading" type="radio" name="stock-tabs" checked>
       <label for="tab-trading" role="tab">多角色股票分析</label>
-      <input id="tab-dcf" type="radio" name="stock-tabs">
-      <label for="tab-dcf" role="tab">DCF 估值報告</label>
-      <input id="tab-review" type="radio" name="stock-tabs">
+<input id="tab-review" type="radio" name="stock-tabs">
       <label for="tab-review" role="tab">回顧</label>
       <article class="tab-panel trading-panel report-content" role="tabpanel">
         <h1>NVDA — 多角色股票分析（2026-05-19）</h1>
@@ -140,122 +138,6 @@ NVDA 仍是 AI 伺服器資本支出的核心受益者。Q4 FY26 Data Center 營
 <p>⚠️ <strong>免責聲明：</strong> 本內容是根據公開資訊整理的教育性研究。
 不構成投資建議、招攬或交易建議。市場可能朝任何 thesis 的反方向波動。
 交易前請自行研究，並諮詢合格持牌顧問。此 skill 不會下任何訂單。</p>
-
-      </article>
-      <article class="tab-panel dcf-panel report-content" role="tabpanel">
-        <h1>NVDA — DCF 估值報告 (2026-05-08)</h1>
-<h2>DCF 估值結果</h2>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>FCF 成長率 (yr1-5)</th>
-<th>終值成長率</th>
-<th>WACC</th>
-<th>內在價值/股</th>
-<th>現價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>51.4%</td>
-<td>1.5%</td>
-<td>17.21%</td>
-<td>$140.32</td>
-<td>$211.50</td>
-<td>-33.7% (高估)</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>85.7%</td>
-<td>2.5%</td>
-<td>16.71%</td>
-<td>$393.13</td>
-<td>$211.50</td>
-<td>+85.9% (低估)</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>120.0%</td>
-<td>3.5%</td>
-<td>16.21%</td>
-<td>$985.67</td>
-<td>$211.50</td>
-<td>+366.0% (低估)</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
-<h2>數據來源</h2>
-<table>
-<thead>
-<tr>
-<th>項目</th>
-<th>數值</th>
-<th>來源</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>最近一年 FCF</td>
-<td>$96.68B</td>
-<td><a href="https://stockanalysis.com/stocks/nvda/financials/cash-flow-statement/" target="_blank" rel="noopener noreferrer">StockAnalysis Cash Flow：FY2026 OCF $102.72B - CapEx $6.04B</a></td>
-</tr>
-<tr>
-<td>5yr FCF CAGR</td>
-<td>85.7%</td>
-<td>計算：FY2022 $8.132B → FY2026 $96.676B，資料來自 <a href="https://stockanalysis.com/stocks/nvda/financials/cash-flow-statement/" target="_blank" rel="noopener noreferrer">StockAnalysis Cash Flow</a></td>
-</tr>
-<tr>
-<td>Beta</td>
-<td>2.24</td>
-<td><a href="https://stockanalysis.com/stocks/nvda/" target="_blank" rel="noopener noreferrer">StockAnalysis Overview / Statistics</a></td>
-</tr>
-<tr>
-<td>Net Debt</td>
-<td>-$51.15B</td>
-<td>計算：Total Debt $11.41B - Cash $62.56B，資料來自 <a href="https://stockanalysis.com/stocks/nvda/statistics/" target="_blank" rel="noopener noreferrer">StockAnalysis Statistics</a></td>
-</tr>
-<tr>
-<td>流通股數</td>
-<td>24.30B</td>
-<td><a href="https://stockanalysis.com/stocks/nvda/statistics/" target="_blank" rel="noopener noreferrer">StockAnalysis Statistics</a></td>
-</tr>
-<tr>
-<td>無風險利率 (10Y)</td>
-<td>4.39%</td>
-<td><a href="https://tradingeconomics.com/united-states/government-bond-yield" target="_blank" rel="noopener noreferrer">Trading Economics：US 10Y May 8, 2026</a></td>
-</tr>
-<tr>
-<td>WACC</td>
-<td>16.71%</td>
-<td>計算：4.39% + 2.24 x 5.5%</td>
-</tr>
-<tr>
-<td>現價</td>
-<td>$211.50</td>
-<td><a href="https://stockanalysis.com/stocks/nvda/" target="_blank" rel="noopener noreferrer">StockAnalysis：May 7, 2026 close</a></td>
-</tr>
-</tbody>
-</table>
-<h2>關鍵假設說明</h2>
-<ul>
-<li>FCF 成長率來源：依 skill 規則採用歷史 FCF CAGR；以 FY2022-FY2026 五個財年 FCF 序列計算，基準成長率為 85.7%，悲觀/樂觀分別為基準的 0.6x / 1.4x。</li>
-<li>WACC 組成：無風險利率 4.39% + Beta 2.24 x 5.5% ERP = 16.71%；悲觀情境加 0.5%，樂觀情境減 0.5%。</li>
-<li>終值佔總估值比重：74.8%（基準情境）。</li>
-<li>基準與樂觀情境終值佔比 &gt;70%，結果對終值假設高度敏感，請謹慎解讀。</li>
-<li>本模型直接套用歷史高成長期 FCF CAGR，因此估值結果會高度依賴 NVIDIA 是否能延續 FY2024-FY2026 的 AI 需求與高 FCF margin。</li>
-</ul>
-<h2>結論</h2>
-<p>基準情境下，DCF 內在價值約為 $393.13/股，相對 $211.50 現價顯示約 +85.9% 安全邊際；但該結論主要由極高歷史 FCF CAGR 與終值假設驅動。最主要不確定因子是 AI 加速器需求、毛利率、競爭格局，以及高成長 FCF 是否能持續 5 年。</p>
-<hr>
-<p>⚠️ <strong>免責聲明：</strong> 本報告根據公開財務數據以 DCF 模型計算，為教育性研究，<strong>不構成投資建議</strong>、
-不是招攬、不是交易指示。DCF 估值對假設高度敏感，實際結果可能大幅偏離。
-請自行查證並諮詢合格理財顧問後再做任何投資決策。</p>
 
       </article>
       <article class="tab-panel review-panel report-content" role="tabpanel">

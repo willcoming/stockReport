@@ -6,7 +6,7 @@
   <title>BBU — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-tw-candles">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260521-hot-stocks-v1">
 </head>
 <body>
   <header class="site-header">
@@ -61,9 +61,7 @@
     <div class="tabs" role="tablist" aria-label="股票分析內容">
       <input id="tab-trading" type="radio" name="stock-tabs" checked>
       <label for="tab-trading" role="tab">多角色股票分析</label>
-      <input id="tab-dcf" type="radio" name="stock-tabs">
-      <label for="tab-dcf" role="tab">DCF 估值報告</label>
-      <input id="tab-review" type="radio" name="stock-tabs">
+<input id="tab-review" type="radio" name="stock-tabs">
       <label for="tab-review" role="tab">回顧</label>
       <article class="tab-panel trading-panel report-content" role="tabpanel">
         <h1>BBU — 多角色股票分析（2026-05-11）</h1>
@@ -132,143 +130,6 @@ BBUC 的多方 case 主要在於「底層資產價值釋放 + 公司結構簡化
 <p>⚠️ <strong>免責聲明：</strong> 本內容是根據公開資訊整理的教育性研究。
 不構成投資建議、招攬或交易建議。市場可能朝任何 thesis 的反方向波動。
 交易前請自行研究，並諮詢合格持牌顧問。此 skill 不會下任何訂單。</p>
-
-      </article>
-      <article class="tab-panel dcf-panel report-content" role="tabpanel">
-<h1>BBU — DCF 估值報告</h1>
-<p>as_of_date：2026-05-11<br>
-projection_years：5</p>
-<h2>DCF 估值結果</h2>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>FCF 成長率 (yr1-5)</th>
-<th>終值成長率</th>
-<th>WACC</th>
-<th>內在價值/股</th>
-<th>現價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>-22.4%</td>
-<td>1.5%</td>
-<td>12.15%</td>
-<td>-$408.53</td>
-<td>$31.46</td>
-<td>-1398.6% (高估)</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>-16.0%</td>
-<td>2.5%</td>
-<td>11.65%</td>
-<td>-$387.36</td>
-<td>$31.46</td>
-<td>-1331.3% (高估)</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>-9.6%</td>
-<td>3.5%</td>
-<td>11.15%</td>
-<td>-$352.86</td>
-<td>$31.46</td>
-<td>-1221.6% (高估)</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
-<h2>數據來源</h2>
-<table>
-<thead>
-<tr>
-<th>項目</th>
-<th>數值</th>
-<th>來源</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>公司</td>
-<td>Brookfield Business Partners LP</td>
-<td><a href="https://finance.yahoo.com/quote/BBU/" target="_blank" rel="noopener noreferrer">Yahoo Finance</a></td>
-</tr>
-<tr>
-<td>最近一年 FCF</td>
-<td>$1.17B</td>
-<td><a href="https://finance.yahoo.com/quote/BBU/financials/" target="_blank" rel="noopener noreferrer">Yahoo Finance Financials</a></td>
-</tr>
-<tr>
-<td>2020 FCF</td>
-<td>$2.80B</td>
-<td><a href="https://stockanalysis.com/stocks/bbu/financials/cash-flow-statement/" target="_blank" rel="noopener noreferrer">StockAnalysis / S&amp;P Capital IQ</a></td>
-</tr>
-<tr>
-<td>5yr FCF CAGR</td>
-<td>-16.0%</td>
-<td>計算：$1.17B / $2.80B，5 年 CAGR</td>
-</tr>
-<tr>
-<td>Beta</td>
-<td>1.322</td>
-<td><a href="https://finance.yahoo.com/quote/BBU/" target="_blank" rel="noopener noreferrer">Yahoo Finance</a></td>
-</tr>
-<tr>
-<td>Total Debt</td>
-<td>$43.75B</td>
-<td><a href="https://finance.yahoo.com/quote/BBU/balance-sheet/" target="_blank" rel="noopener noreferrer">Yahoo Finance Balance Sheet</a></td>
-</tr>
-<tr>
-<td>Cash</td>
-<td>$3.55B</td>
-<td><a href="https://finance.yahoo.com/quote/BBU/balance-sheet/" target="_blank" rel="noopener noreferrer">Yahoo Finance Balance Sheet</a></td>
-</tr>
-<tr>
-<td>Net Debt</td>
-<td>$40.20B</td>
-<td>計算：Total Debt - Cash</td>
-</tr>
-<tr>
-<td>流通股數</td>
-<td>88.68M</td>
-<td><a href="https://finance.yahoo.com/quote/BBU/" target="_blank" rel="noopener noreferrer">Yahoo Finance</a></td>
-</tr>
-<tr>
-<td>無風險利率 (10Y)</td>
-<td>4.38%</td>
-<td><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve" target="_blank" rel="noopener noreferrer">U.S. Treasury Daily Treasury Rates</a>，2026-05-08 最新官方 10Y</td>
-</tr>
-<tr>
-<td>WACC</td>
-<td>11.65%</td>
-<td>計算：4.38% + 1.322 × 5.5%</td>
-</tr>
-<tr>
-<td>現價</td>
-<td>$31.46</td>
-<td><a href="https://finance.yahoo.com/quote/BBU/" target="_blank" rel="noopener noreferrer">Yahoo Finance</a></td>
-</tr>
-</tbody>
-</table>
-<h2>關鍵假設說明</h2>
-<ul>
-<li>FCF 成長率來源：使用 2020 FCF $2.80B 與 2025 FCF $1.17B 計算 5yr CAGR，得到 -16.0%。因 base_rate 為負，悲觀情境採較大收縮幅度，樂觀情境採較小收縮幅度。</li>
-<li>WACC 組成：無風險利率 4.38% + Beta 1.322 x 5.5% ERP = 11.65%。</li>
-<li>終值佔總估值比重：53.9%（基準情境）。</li>
-<li>基準情境下，DCF enterprise value 約 $5.85B，但低於 net debt $40.20B，因此 equity value 為負；此結果對 BBU 這類持有型、槓桿與少數股權結構複雜的公司解讀限制較大。</li>
-</ul>
-<h2>結論</h2>
-<p>基準情境下，BBU 的 DCF 內在價值為 -$387.36/股，低於現價 $31.46，依模型公式顯示安全邊際為 -1331.3%。主要不確定因子是 BBU 的 consolidated net debt、非經常性資產買賣、子公司槓桿與 FCF 波動，這些因素會使簡化 DCF 對估值非常敏感。</p>
-<hr>
-<p>⚠️ <strong>免責聲明：</strong> 本報告根據公開財務數據以 DCF 模型計算，為教育性研究，<strong>不構成投資建議</strong>、
-不是招攬、不是交易指示。DCF 估值對假設高度敏感，實際結果可能大幅偏離。
-請自行查證並諮詢合格理財顧問後再做任何投資決策。</p>
 
       </article>
       <article class="tab-panel review-panel report-content" role="tabpanel">

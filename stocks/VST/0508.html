@@ -6,7 +6,7 @@
   <title>VST — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-tw-candles">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260521-hot-stocks-v1">
 </head>
 <body>
   <header class="site-header">
@@ -62,9 +62,7 @@
     <div class="tabs" role="tablist" aria-label="股票分析內容">
       <input id="tab-trading" type="radio" name="stock-tabs" checked>
       <label for="tab-trading" role="tab">多角色股票分析</label>
-      <input id="tab-dcf" type="radio" name="stock-tabs">
-      <label for="tab-dcf" role="tab">DCF 估值報告</label>
-      <input id="tab-review" type="radio" name="stock-tabs">
+<input id="tab-review" type="radio" name="stock-tabs">
       <label for="tab-review" role="tab">回顧</label>
       <article class="tab-panel trading-panel report-content" role="tabpanel">
         <h1>VST — 多角色股票分析（2026-05-08）</h1>
@@ -133,121 +131,6 @@ VST 是 AI 電力需求與美國基載 / dispatchable generation 需求上升的
 <p>⚠️ <strong>免責聲明：</strong> 本內容是根據公開資訊整理的教育性研究。
 不構成投資建議、招攬或交易建議。市場可能朝任何 thesis 的反方向波動。
 交易前請自行研究，並諮詢合格持牌顧問。此 skill 不會下任何訂單。</p>
-
-      </article>
-      <article class="tab-panel dcf-panel report-content" role="tabpanel">
-<h1>VST — DCF 估值報告 (2026-05-08)</h1>
-<h2>DCF 估值結果</h2>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>FCF 成長率 (yr1-5)</th>
-<th>終值成長率</th>
-<th>WACC</th>
-<th>內在價值/股</th>
-<th>現價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>-57.3%</td>
-<td>1.5%</td>
-<td>12.87%</td>
-<td>-$57.43</td>
-<td>$150.50</td>
-<td>-138.2% (高估)</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>-40.9%</td>
-<td>2.5%</td>
-<td>12.37%</td>
-<td>-$54.28</td>
-<td>$150.50</td>
-<td>-136.1% (高估)</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>-24.6%</td>
-<td>3.5%</td>
-<td>11.87%</td>
-<td>-$46.39</td>
-<td>$150.50</td>
-<td>-130.8% (高估)</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
-<h2>數據來源</h2>
-<table>
-<thead>
-<tr>
-<th>項目</th>
-<th>數值</th>
-<th>來源</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>最近一年 FCF</td>
-<td>$1.318B（FY2025，Operating Cash Flow $4.070B - CapEx $2.752B）</td>
-<td><a href="https://stockanalysis.com/stocks/vst/financials/cash-flow-statement/" target="_blank" rel="noopener noreferrer">StockAnalysis Cash Flow</a></td>
-</tr>
-<tr>
-<td>歷史 FCF CAGR</td>
-<td>-40.9%（2023-2025 正 FCF 年度 CAGR；5yr 因 2021/2022 FCF 為負不可直接計算）</td>
-<td><a href="https://stockanalysis.com/stocks/vst/financials/cash-flow-statement/" target="_blank" rel="noopener noreferrer">StockAnalysis Cash Flow</a>、計算</td>
-</tr>
-<tr>
-<td>Beta</td>
-<td>1.45</td>
-<td><a href="https://stockanalysis.com/stocks/vst/statistics/" target="_blank" rel="noopener noreferrer">StockAnalysis Statistics</a></td>
-</tr>
-<tr>
-<td>Net Debt</td>
-<td>$20.329B（Total Debt $21.000B - Cash $0.671B）</td>
-<td><a href="https://stockanalysis.com/stocks/vst/financials/balance-sheet/" target="_blank" rel="noopener noreferrer">StockAnalysis Balance Sheet</a></td>
-</tr>
-<tr>
-<td>流通股數</td>
-<td>338.55M</td>
-<td><a href="https://stockanalysis.com/stocks/vst/" target="_blank" rel="noopener noreferrer">StockAnalysis Overview</a></td>
-</tr>
-<tr>
-<td>無風險利率 (10Y)</td>
-<td>4.39%</td>
-<td><a href="https://tradingeconomics.com/united-states/government-bond-yield" target="_blank" rel="noopener noreferrer">Trading Economics</a></td>
-</tr>
-<tr>
-<td>WACC</td>
-<td>12.37%（基準情境）</td>
-<td>計算</td>
-</tr>
-<tr>
-<td>現價</td>
-<td>$150.50</td>
-<td><a href="https://stockanalysis.com/stocks/vst/financials/balance-sheet/" target="_blank" rel="noopener noreferrer">StockAnalysis Balance Sheet page quote, May 8 2026</a></td>
-</tr>
-</tbody>
-</table>
-<h2>關鍵假設說明</h2>
-<ul>
-<li>FCF 成長率來源：FY2023 FCF $3.777B、FY2024 FCF $2.485B、FY2025 FCF $1.318B，使用 2023-2025 正 FCF 年度 CAGR = -40.9%；因 base_rate 為負，悲觀情境使用更大降幅、樂觀情境使用較小降幅。</li>
-<li>WACC 組成：無風險利率 4.39% + Beta 1.45 x 5.5% ERP = 12.37%（基準情境）。</li>
-<li>終值佔總估值比重：28.2%（基準情境）。</li>
-<li>終值佔比未超過 70%，但本次模型結果高度受 FCF 基期與未來 FCF 是否正常化影響；VST 的成長 CapEx、營運資金與發電/電力價格週期會使 GAAP FCF 波動很大。</li>
-</ul>
-<h2>結論</h2>
-<p>以嚴格的 GAAP FCF（Operating Cash Flow - CapEx）作為 DCF 基礎，VST 在基準情境下模型輸出為 -$54.28/股，代表在此組假設下 PV cash flows 低於 net debt，安全邊際為 -136.1%。最主要的不確定因子是 FY2025 FCF 是否代表可持續水準，或是否應以公司披露的 adjusted free cash flow before growth 作為另一套敏感度分析基礎。</p>
-<hr>
-<p>⚠️ <strong>免責聲明：</strong> 本報告根據公開財務數據以 DCF 模型計算，為教育性研究，<strong>不構成投資建議</strong>、
-不是招攬、不是交易指示。DCF 估值對假設高度敏感，實際結果可能大幅偏離。
-請自行查證並諮詢合格理財顧問後再做任何投資決策。</p>
 
       </article>
       <article class="tab-panel review-panel report-content" role="tabpanel">

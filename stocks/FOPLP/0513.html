@@ -6,7 +6,7 @@
   <title>FOPLP — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-tw-candles">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260521-hot-stocks-v1">
 </head>
 <body>
   <header class="site-header">
@@ -62,9 +62,7 @@
     <div class="tabs" role="tablist" aria-label="股票分析內容">
       <input id="tab-trading" type="radio" name="stock-tabs" checked>
       <label for="tab-trading" role="tab">多角色股票分析</label>
-      <input id="tab-dcf" type="radio" name="stock-tabs">
-      <label for="tab-dcf" role="tab">DCF 估值報告</label>
-      <input id="tab-review" type="radio" name="stock-tabs">
+<input id="tab-review" type="radio" name="stock-tabs">
       <label for="tab-review" role="tab">回顧</label>
       <article class="tab-panel trading-panel report-content" role="tabpanel">
         <h1>FOPLP — 多角色股票分析（2026-05-13）</h1>
@@ -129,131 +127,6 @@
 <p>⚠️ <strong>免責聲明：</strong> 本內容是根據公開資訊整理的教育性研究。
 不構成投資建議、招攬或交易建議。市場可能朝任何 thesis 的反方向波動。
 交易前請自行研究，並諮詢合格持牌顧問。此 skill 不會下任何訂單。</p>
-
-      </article>
-      <article class="tab-panel dcf-panel report-content" role="tabpanel">
-        <h1>FOPLP — DCF 估值報告</h1>
-<h2>DCF 估值結果</h2>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>FCF 成長率 (yr1-5)</th>
-<th>終值成長率</th>
-<th>WACC</th>
-<th>內在價值/股</th>
-<th>現價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>資料不足</td>
-<td>1.5%</td>
-<td>資料不足</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>資料不足</td>
-<td>2.5%</td>
-<td>資料不足</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>資料不足</td>
-<td>3.5%</td>
-<td>資料不足</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
-<h2>數據來源</h2>
-<table>
-<thead>
-<tr>
-<th>項目</th>
-<th>數值</th>
-<th>來源</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Ticker 驗證</td>
-<td>未能確認 <code>FOPLP</code> 為可估值上市股票 ticker</td>
-<td>Yahoo Finance <code>https://finance.yahoo.com/quote/FOPLP/</code>；SEC company tickers <code>https://www.sec.gov/files/company_tickers.json</code></td>
-</tr>
-<tr>
-<td>最近一年 FCF</td>
-<td>資料不足</td>
-<td>Yahoo Finance <code>FOPLP</code> 無可用 quote/financials</td>
-</tr>
-<tr>
-<td>5yr FCF CAGR</td>
-<td>資料不足</td>
-<td>缺少可驗證 FCF 歷史資料，無法計算</td>
-</tr>
-<tr>
-<td>Beta</td>
-<td>資料不足</td>
-<td>Yahoo Finance <code>FOPLP</code> 無可用 summary data</td>
-</tr>
-<tr>
-<td>Net Debt</td>
-<td>資料不足</td>
-<td>Yahoo Finance <code>FOPLP</code> 無可用 balance sheet data</td>
-</tr>
-<tr>
-<td>流通股數</td>
-<td>資料不足</td>
-<td>Yahoo Finance <code>FOPLP</code> 無可用 shares outstanding data</td>
-</tr>
-<tr>
-<td>無風險利率 (10Y)</td>
-<td>4.46%</td>
-<td>U.S. Treasury Daily Treasury Yield Curve，2026-05-12 最新可得 10Y</td>
-</tr>
-<tr>
-<td>WACC</td>
-<td>資料不足</td>
-<td>缺少可驗證 Beta 與公司資料，未計算可用 WACC</td>
-</tr>
-<tr>
-<td>現價</td>
-<td>資料不足</td>
-<td>Yahoo Finance <code>FOPLP</code> 無可用 quote price</td>
-</tr>
-<tr>
-<td>計算方式</td>
-<td>Python calculation 已執行，但必要輸入缺失，三情境皆輸出 N/A</td>
-<td>Bash / Python DCF guard calculation</td>
-</tr>
-</tbody>
-</table>
-<h2>關鍵假設說明</h2>
-<ul>
-<li>FCF 成長率來源：資料不足；未能取得 <code>FOPLP</code> 的公開年度 FCF，不能計算 3yr/5yr FCF CAGR。</li>
-<li>WACC 組成：無風險利率可取得為 4.46%，但 <code>FOPLP</code> 的 Beta 不可驗證，因此未產生可用 WACC。</li>
-<li>終值佔總估值比重：N/A；因 FCF、WACC、net debt、shares outstanding、現價皆不足，無法計算 enterprise value 或 terminal value。</li>
-<li><code>FOPLP</code> 亦常見作為 Fan-Out Panel-Level Packaging 技術縮寫，而非明確上市公司 ticker；因此本次不進行替代公司推測。</li>
-</ul>
-<h2>結論</h2>
-<p>基準情境下無法判斷 <code>FOPLP</code> 被高估或低估，因為缺少可驗證的上市 ticker、FCF、股數、淨負債與現價。依 skill 規則，不能捏造數字，因此本報告將 DCF 估值結果標示為 N/A。</p>
-<hr>
-<p>⚠️ <strong>免責聲明：</strong> 本報告根據公開財務數據以 DCF 模型計算，為教育性研究，<strong>不構成投資建議</strong>、
-不是招攬、不是交易指示。DCF 估值對假設高度敏感，實際結果可能大幅偏離。
-請自行查證並諮詢合格理財顧問後再做任何投資決策。</p>
 
       </article>
       <article class="tab-panel review-panel report-content" role="tabpanel">

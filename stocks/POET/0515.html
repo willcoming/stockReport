@@ -6,7 +6,7 @@
   <title>POET — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-tw-candles">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260521-hot-stocks-v1">
 </head>
 <body>
   <header class="site-header">
@@ -61,9 +61,7 @@
     <div class="tabs" role="tablist" aria-label="股票分析內容">
       <input id="tab-trading" type="radio" name="stock-tabs" checked>
       <label for="tab-trading" role="tab">多角色股票分析</label>
-      <input id="tab-dcf" type="radio" name="stock-tabs">
-      <label for="tab-dcf" role="tab">DCF 估值報告</label>
-      <input id="tab-review" type="radio" name="stock-tabs">
+<input id="tab-review" type="radio" name="stock-tabs">
       <label for="tab-review" role="tab">回顧</label>
       <article class="tab-panel trading-panel report-content" role="tabpanel">
         <h1>POET — 多角色股票分析（2026-05-15）</h1>
@@ -126,142 +124,6 @@
 <p>⚠️ <strong>免責聲明：</strong> 本內容是根據公開資訊整理的教育性研究。
 不構成投資建議、招攬或交易建議。市場可能朝任何 thesis 的反方向波動。
 交易前請自行研究，並諮詢合格持牌顧問。此 skill 不會下任何訂單。</p>
-
-      </article>
-      <article class="tab-panel dcf-panel report-content" role="tabpanel">
-        <h1>POET — DCF 估值報告</h1>
-<p>as_of_date：2026-05-12<br>
-projection_years：5 年<br>
-幣別：USD；金額單位除每股外為百萬美元</p>
-<h2>DCF 估值結果</h2>
-<blockquote>
-<p>POET 最近 5 年 FCF 全為負，且 EBITDA 也為負，因此 EV/EBITDA fallback 無法形成有效估值倍數。本表為以實際負 FCF 與淨現金部位跑出的機械式 DCF 敏感度，不代表成熟企業的穩態 DCF。</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>FCF 成長率 (yr1-5)</th>
-<th>終值成長率</th>
-<th>WACC</th>
-<th>內在價值/股</th>
-<th>現價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>-17.5%</td>
-<td>1.5%</td>
-<td>7.89%</td>
-<td>$0.57</td>
-<td>$13.90</td>
-<td>-95.9% (高估)</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>-29.1%</td>
-<td>2.5%</td>
-<td>7.39%</td>
-<td>$1.06</td>
-<td>$13.90</td>
-<td>-92.4% (高估)</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>-40.7%</td>
-<td>3.5%</td>
-<td>6.89%</td>
-<td>$1.40</td>
-<td>$13.90</td>
-<td>-89.9% (高估)</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
-<h2>數據來源</h2>
-<table>
-<thead>
-<tr>
-<th>項目</th>
-<th>數值</th>
-<th>來源</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>最近一年 FCF</td>
-<td>-$33.34M</td>
-<td><a href="https://stockanalysis.com/stocks/poet/financials/cash-flow-statement/" target="_blank" rel="noopener noreferrer">StockAnalysis Cash Flow</a></td>
-</tr>
-<tr>
-<td>5yr FCF CAGR</td>
-<td>資料不足；5 年 FCF 皆為負，傳統 CAGR 不適用</td>
-<td><a href="https://stockanalysis.com/stocks/poet/financials/cash-flow-statement/" target="_blank" rel="noopener noreferrer">StockAnalysis Cash Flow</a></td>
-</tr>
-<tr>
-<td>FCF cash-burn CAGR</td>
-<td>29.1%</td>
-<td>以 2021 FCF -$12.00M 至 2025 FCF -$33.34M 計算</td>
-</tr>
-<tr>
-<td>Beta</td>
-<td>0.54</td>
-<td><a href="https://stockanalysis.com/stocks/poet/statistics/" target="_blank" rel="noopener noreferrer">StockAnalysis Statistics</a></td>
-</tr>
-<tr>
-<td>Total Debt</td>
-<td>$7.07M</td>
-<td><a href="https://stockanalysis.com/stocks/poet/financials/balance-sheet/" target="_blank" rel="noopener noreferrer">StockAnalysis Balance Sheet</a></td>
-</tr>
-<tr>
-<td>Cash &amp; Equivalents + Short-Term Investments</td>
-<td>$313.40M</td>
-<td><a href="https://stockanalysis.com/stocks/poet/statistics/" target="_blank" rel="noopener noreferrer">StockAnalysis Statistics</a></td>
-</tr>
-<tr>
-<td>Net Debt</td>
-<td>-$306.33M</td>
-<td>Total Debt - Cash &amp; Short-Term Investments</td>
-</tr>
-<tr>
-<td>流通股數</td>
-<td>152.71M</td>
-<td><a href="https://stockanalysis.com/stocks/poet/statistics/" target="_blank" rel="noopener noreferrer">StockAnalysis Statistics</a></td>
-</tr>
-<tr>
-<td>無風險利率 (10Y)</td>
-<td>4.42%</td>
-<td><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve" target="_blank" rel="noopener noreferrer">U.S. Treasury Daily Treasury Par Yield Curve Rates, 2026-05-11</a></td>
-</tr>
-<tr>
-<td>WACC</td>
-<td>7.39%</td>
-<td>4.42% + 0.54 x 5.5%</td>
-</tr>
-<tr>
-<td>現價</td>
-<td>$13.90</td>
-<td><a href="https://stockanalysis.com/stocks/poet/" target="_blank" rel="noopener noreferrer">StockAnalysis, 2026-05-11 close</a></td>
-</tr>
-</tbody>
-</table>
-<h2>關鍵假設說明</h2>
-<ul>
-<li>FCF 成長率來源：因 POET 的 2021-2025 年 FCF 全為負，傳統正 FCF CAGR 不適用；此處以 FCF cash-burn CAGR 29.1% 作為基準，並把情境設為 cash burn 收斂率。</li>
-<li>WACC 組成：無風險利率 4.42% + Beta 0.54 x 5.5% ERP = 7.39%。</li>
-<li>終值佔總估值比重：60.7%（基準情境，以 PV terminal / enterprise value 的絕對值估算）。</li>
-<li>由於 FCF 與 EBITDA 均為負，本估值主要受「現金消耗速度是否收斂」與「淨現金是否足以支撐商業化」影響；若未能轉正 FCF，DCF 結果不具穩定參考性。</li>
-</ul>
-<h2>結論</h2>
-<p>基準情境下，POET 的機械式 DCF 內在價值約為 $1.06/股，較 $13.90 現價低約 92.4%，顯示目前股價主要反映未來商業化與成長選擇權，而非現有自由現金流。最大不確定因子是 POET 能否把目前負 FCF 與負 EBITDA 轉為可持續正現金流。</p>
-<hr>
-<p>⚠️ <strong>免責聲明：</strong> 本報告根據公開財務數據以 DCF 模型計算，為教育性研究，<strong>不構成投資建議</strong>、
-不是招攬、不是交易指示。DCF 估值對假設高度敏感，實際結果可能大幅偏離。
-請自行查證並諮詢合格理財顧問後再做任何投資決策。</p>
 
       </article>
       <article class="tab-panel review-panel report-content" role="tabpanel">

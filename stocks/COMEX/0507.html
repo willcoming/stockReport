@@ -6,7 +6,7 @@
   <title>COMEX — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-tw-candles">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260521-hot-stocks-v1">
 </head>
 <body>
   <header class="site-header">
@@ -61,9 +61,7 @@
     <div class="tabs" role="tablist" aria-label="股票分析內容">
       <input id="tab-trading" type="radio" name="stock-tabs" checked>
       <label for="tab-trading" role="tab">多角色股票分析</label>
-      <input id="tab-dcf" type="radio" name="stock-tabs">
-      <label for="tab-dcf" role="tab">DCF 估值報告</label>
-      <input id="tab-review" type="radio" name="stock-tabs">
+<input id="tab-review" type="radio" name="stock-tabs">
       <label for="tab-review" role="tab">回顧</label>
       <article class="tab-panel trading-panel report-content" role="tabpanel">
         <h1>COMEX（黃金期貨 GC）— 多角色股票分析（2026-05-07）</h1>
@@ -128,134 +126,6 @@
 <p>⚠️ <strong>免責聲明：</strong> 本內容是根據公開資訊整理的教育性研究。
 不構成投資建議、招攬或交易建議。市場可能朝任何 thesis 的反方向波動。
 交易前請自行研究，並諮詢合格持牌顧問。此 skill 不會下任何訂單。</p>
-
-      </article>
-      <article class="tab-panel dcf-panel report-content" role="tabpanel">
-<h1>COMEX — DCF 估值報告</h1>
-<p>as_of_date：2026-05-07<br>
-projection_years：5</p>
-<h2>DCF 估值結果</h2>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>FCF 成長率 (yr1-5)</th>
-<th>終值成長率</th>
-<th>WACC</th>
-<th>內在價值/股</th>
-<th>現價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>N/A</td>
-<td>1.5%</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>N/A</td>
-<td>2.5%</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>N/A</td>
-<td>3.5%</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
-<h2>數據來源</h2>
-<table>
-<thead>
-<tr>
-<th>項目</th>
-<th>數值</th>
-<th>來源</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Ticker 狀態</td>
-<td><code>COMEX</code> 非可辨識上市股權 ticker；Yahoo Finance quoteSummary 回傳 <code>Quote not found for symbol: COMEX</code></td>
-<td><a href="https://finance.yahoo.com/quote/COMEX" target="_blank" rel="noopener noreferrer">Yahoo Finance Quote</a>；本地 Bash/yfinance 查詢</td>
-</tr>
-<tr>
-<td>標的性質</td>
-<td>COMEX 是 CME Group 旗下 Designated Contract Market / exchange division，不是單一上市公司普通股</td>
-<td><a href="https://www.cmegroup.com/company/comex.html" target="_blank" rel="noopener noreferrer">CME Group COMEX</a></td>
-</tr>
-<tr>
-<td>最近一年 FCF</td>
-<td>資料不足</td>
-<td>Yahoo Finance 無 <code>COMEX</code> 股權財務報表</td>
-</tr>
-<tr>
-<td>5yr FCF CAGR</td>
-<td>資料不足</td>
-<td>無可用 FCF 序列，未計算</td>
-</tr>
-<tr>
-<td>Beta</td>
-<td>資料不足</td>
-<td>Yahoo Finance 無 <code>COMEX</code> 股權 quote</td>
-</tr>
-<tr>
-<td>Net Debt</td>
-<td>資料不足</td>
-<td>Yahoo Finance 無 <code>COMEX</code> balance sheet</td>
-</tr>
-<tr>
-<td>流通股數</td>
-<td>資料不足</td>
-<td>Yahoo Finance 無 <code>COMEX</code> shares outstanding</td>
-</tr>
-<tr>
-<td>無風險利率 (10Y)</td>
-<td>N/A</td>
-<td>因缺少股權 DCF 必要輸入，未納入估值</td>
-</tr>
-<tr>
-<td>WACC</td>
-<td>N/A</td>
-<td>缺少 Beta 與可估值股權標的，未計算</td>
-</tr>
-<tr>
-<td>現價</td>
-<td>資料不足</td>
-<td>Yahoo Finance 無 <code>COMEX</code> 股權 quote</td>
-</tr>
-</tbody>
-</table>
-<h2>關鍵假設說明</h2>
-<ul>
-<li>FCF 成長率來源：資料不足；<code>COMEX</code> 不是可直接取得 FCF、debt、shares outstanding 的上市股權 ticker。</li>
-<li>WACC 組成：未計算；缺少 Beta、股權現價、流通股數與可歸屬於單一上市公司的資本結構資料。</li>
-<li>終值佔總估值比重：N/A；DCF 未能執行。</li>
-<li>Bash/Python 計算驗證結果：必要輸入缺少 <code>fcf_base</code>、<code>growth</code>、<code>terminal_g</code>、<code>wacc</code>、<code>net_debt</code>、<code>shares</code>，因此 <code>intrinsic_value_per_share = null</code>。</li>
-<li>因 <code>COMEX</code> 指向交易所 division，而非股票 ticker，本報告不以 <code>CME</code> 替代估值；若要估 CME Group Inc.，需使用 ticker <code>CME</code> 重新執行。</li>
-</ul>
-<h2>結論</h2>
-<p><code>COMEX</code> 目前無法作為單一上市公司股權 ticker 執行 DCF 估值；公開來源顯示它是 CME Group 旗下交易所 division，而非獨立上市公司普通股。因此本次不產生內在價值/股、安全邊際或高估/低估判斷。</p>
-<hr>
-<p>⚠️ <strong>免責聲明：</strong> 本報告根據公開財務數據以 DCF 模型計算，為教育性研究，<strong>不構成投資建議</strong>、
-不是招攬、不是交易指示。DCF 估值對假設高度敏感，實際結果可能大幅偏離。
-請自行查證並諮詢合格理財顧問後再做任何投資決策。</p>
 
       </article>
       <article class="tab-panel review-panel report-content" role="tabpanel">

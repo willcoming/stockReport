@@ -6,7 +6,7 @@
   <title>BYND — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-tw-candles">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260521-hot-stocks-v1">
 </head>
 <body>
   <header class="site-header">
@@ -61,9 +61,7 @@
     <div class="tabs" role="tablist" aria-label="股票分析內容">
       <input id="tab-trading" type="radio" name="stock-tabs" checked>
       <label for="tab-trading" role="tab">多角色股票分析</label>
-      <input id="tab-dcf" type="radio" name="stock-tabs">
-      <label for="tab-dcf" role="tab">DCF 估值報告</label>
-      <input id="tab-review" type="radio" name="stock-tabs">
+<input id="tab-review" type="radio" name="stock-tabs">
       <label for="tab-review" role="tab">回顧</label>
       <article class="tab-panel trading-panel report-content" role="tabpanel">
         <h1>BYND — 多角色股票分析（2026-05-08）</h1>
@@ -144,132 +142,6 @@
 <p>⚠️ <strong>免責聲明：</strong> 本內容是根據公開資訊整理的教育性研究。
 不構成投資建議、招攬或交易建議。市場可能朝任何 thesis 的反方向波動。
 交易前請自行研究，並諮詢合格持牌顧問。此 skill 不會下任何訂單。</p>
-
-      </article>
-      <article class="tab-panel dcf-panel report-content" role="tabpanel">
-<h1>BYND — DCF 估值報告 (2026-05-08)</h1>
-<h2>DCF 估值結果</h2>
-<p>BYND 最近 5 年 FCF 皆為負，且 TTM EBITDA 亦為負，因此標準 DCF 與 EV/EBITDA fallback 都不具備可靠估值意義。下表為按 skill 要求透過 Bash/Python 執行的機械式診斷結果，FCF 成長率以 0.0% 作為中性占位，不應視為可投資內在價值。</p>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>FCF 成長率 (yr1-5)</th>
-<th>終值成長率</th>
-<th>WACC</th>
-<th>內在價值/股</th>
-<th>現價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>N/M（診斷用 0.0%）</td>
-<td>1.5%</td>
-<td>20.57%</td>
-<td>N/M（機械值 -$1.91）</td>
-<td>$0.8928</td>
-<td>N/M（機械值 -313.9%）</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>N/M（診斷用 0.0%）</td>
-<td>2.5%</td>
-<td>20.06%</td>
-<td>N/M（機械值 -$1.99）</td>
-<td>$0.8928</td>
-<td>N/M（機械值 -322.9%）</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>N/M（診斷用 0.0%）</td>
-<td>3.5%</td>
-<td>19.56%</td>
-<td>N/M（機械值 -$2.08）</td>
-<td>$0.8928</td>
-<td>N/M（機械值 -333.0%）</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
-<h2>數據來源</h2>
-<table>
-<thead>
-<tr>
-<th>項目</th>
-<th>數值</th>
-<th>來源</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>最近一年 FCF</td>
-<td>-$134.16M</td>
-<td><a href="https://stockanalysis.com/stocks/bynd/statistics/" target="_blank" rel="noopener noreferrer">StockAnalysis TTM FCF</a>；OCF -$123.81M、CapEx -$10.35M</td>
-</tr>
-<tr>
-<td>FY2021-FY2025 FCF</td>
-<td>-$437.33M / -$393.54M / -$118.39M / -$109.83M / -$157.24M</td>
-<td><a href="https://stockanalysis.com/stocks/bynd/financials/cash-flow-statement/" target="_blank" rel="noopener noreferrer">StockAnalysis cash flow</a></td>
-</tr>
-<tr>
-<td>5yr FCF CAGR</td>
-<td>N/M</td>
-<td>FCF 全部為負，CAGR 不具經濟意義</td>
-</tr>
-<tr>
-<td>Beta</td>
-<td>2.85</td>
-<td><a href="https://stockanalysis.com/stocks/bynd/statistics/" target="_blank" rel="noopener noreferrer">StockAnalysis statistics</a></td>
-</tr>
-<tr>
-<td>Net Debt</td>
-<td>約 $205.84M</td>
-<td><a href="https://www.sec.gov/Archives/edgar/data/1655210/000165521026000033/ex991pressrelease-q12026ea.htm" target="_blank" rel="noopener noreferrer">SEC Q1 2026 release</a>：debt $411.6M、cash incl. restricted cash $205.756M</td>
-</tr>
-<tr>
-<td>流通股數</td>
-<td>463.20M</td>
-<td><a href="https://www.sec.gov/Archives/edgar/data/1655210/000165521026000033/ex991pressrelease-q12026ea.htm" target="_blank" rel="noopener noreferrer">SEC Q1 2026 release</a></td>
-</tr>
-<tr>
-<td>無風險利率 (10Y)</td>
-<td>4.39%</td>
-<td><a href="https://tradingeconomics.com/united-states/government-bond-yield" target="_blank" rel="noopener noreferrer">Trading Economics, May 8 2026</a></td>
-</tr>
-<tr>
-<td>WACC</td>
-<td>20.06%</td>
-<td>計算：4.39% + 2.85 × 5.5%</td>
-</tr>
-<tr>
-<td>現價</td>
-<td>$0.8928</td>
-<td><a href="https://stockanalysis.com/stocks/bynd/statistics/" target="_blank" rel="noopener noreferrer">StockAnalysis, latest available close May 7 2026</a></td>
-</tr>
-<tr>
-<td>EBITDA fallback</td>
-<td>不適用</td>
-<td>TTM EBITDA -$134.89M；<a href="https://www.mnp.ca/-/media/files/mnp/pdf/service/corporate-finance/middle-market-m-and-a-update/2026/food-and-beverage-quarterly-update-q1-2026.pdf" target="_blank" rel="noopener noreferrer">Natural Foods median LTM EV/EBITDA 10.6x</a> 不能套用於負 EBITDA</td>
-</tr>
-</tbody>
-</table>
-<h2>關鍵假設說明</h2>
-<ul>
-<li>FCF 成長率來源：FY2021-FY2025 與 TTM FCF 均為負，無法計算有經濟意義的 5yr FCF CAGR；因此 DCF 結果標記為 N/M。</li>
-<li>WACC 組成：無風險利率 4.39% + Beta 2.85 x 5.5% ERP = 20.06%；悲觀 / 樂觀情境分別加減 0.5%。</li>
-<li>終值佔總估值比重：基準情境機械計算為 43.9%，但因 enterprise value 為負，此比例僅為診斷值。</li>
-<li>EV/EBITDA fallback：BYND TTM EBITDA 與調整後 EBITDA 皆為負，產業 median multiple 無法產生有意義的正向企業價值。</li>
-</ul>
-<h2>結論</h2>
-<p>基準情境下，BYND 的公開財務資料不支持有效的正向 DCF 內在價值估算；主要原因是持續負 FCF、負 EBITDA、較高槓桿與顯著稀釋風險。此案的核心不確定因子不是折現率微調，而是公司能否先恢復正 EBITDA 與正自由現金流。</p>
-<hr>
-<p>⚠️ <strong>免責聲明：</strong> 本報告根據公開財務數據以 DCF 模型計算，為教育性研究，<strong>不構成投資建議</strong>、
-不是招攬、不是交易指示。DCF 估值對假設高度敏感，實際結果可能大幅偏離。
-請自行查證並諮詢合格理財顧問後再做任何投資決策。</p>
 
       </article>
       <article class="tab-panel review-panel report-content" role="tabpanel">

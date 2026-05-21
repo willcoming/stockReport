@@ -6,7 +6,7 @@
   <title>LEO — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-tw-candles">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260521-hot-stocks-v1">
 </head>
 <body>
   <header class="site-header">
@@ -61,9 +61,7 @@
     <div class="tabs" role="tablist" aria-label="股票分析內容">
       <input id="tab-trading" type="radio" name="stock-tabs" checked>
       <label for="tab-trading" role="tab">多角色股票分析</label>
-      <input id="tab-dcf" type="radio" name="stock-tabs">
-      <label for="tab-dcf" role="tab">DCF 估值報告</label>
-      <input id="tab-review" type="radio" name="stock-tabs">
+<input id="tab-review" type="radio" name="stock-tabs">
       <label for="tab-review" role="tab">回顧</label>
       <article class="tab-panel trading-panel report-content" role="tabpanel">
         <h1>LEO — 多角色股票分析（2026-05-21）</h1>
@@ -122,137 +120,6 @@
 <p>⚠️ <strong>免責聲明：</strong> 本內容是根據公開資訊整理的教育性研究。
 不構成投資建議、招攬或交易建議。市場可能朝任何 thesis 的反方向波動。
 交易前請自行研究，並諮詢合格持牌顧問。此 skill 不會下任何訂單。</p>
-
-      </article>
-      <article class="tab-panel dcf-panel report-content" role="tabpanel">
-        <h1>LEO — DCF 估值報告</h1>
-<h2>DCF 估值結果</h2>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>FCF 成長率 (yr1-5)</th>
-<th>終值成長率</th>
-<th>WACC</th>
-<th>內在價值/股</th>
-<th>現價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>-20.7%</td>
-<td>1.5%</td>
-<td>8.57%</td>
-<td>-$1.19</td>
-<td>$6.24</td>
-<td>-119.1% (高估)</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>-34.6%</td>
-<td>2.5%</td>
-<td>8.07%</td>
-<td>-$1.64</td>
-<td>$6.24</td>
-<td>-126.3% (高估)</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>-48.4%</td>
-<td>3.5%</td>
-<td>7.57%</td>
-<td>-$1.92</td>
-<td>$6.24</td>
-<td>-130.7% (高估)</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
-<h2>數據來源</h2>
-<table>
-<thead>
-<tr>
-<th>項目</th>
-<th>數值</th>
-<th>來源</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>標的</td>
-<td>BNY Mellon Strategic Municipals, Inc.；封閉式市政債基金</td>
-<td><a href="https://finance.yahoo.com/quote/LEO" target="_blank" rel="noopener noreferrer">Yahoo Finance - LEO</a>、<a href="https://www.bny.com/investments/us/en/intermediary/products/closed-end-funds/fund/bny-mellon-strategic-municipals-inc.shareclass.Common-Stock.html" target="_blank" rel="noopener noreferrer">BNY Investments fund page</a></td>
-</tr>
-<tr>
-<td>最近一年 FCF</td>
-<td>$12.65M</td>
-<td><a href="https://finance.yahoo.com/quote/LEO/cash-flow" target="_blank" rel="noopener noreferrer">Yahoo Finance Cash Flow</a></td>
-</tr>
-<tr>
-<td>3yr FCF CAGR</td>
-<td>-34.6%</td>
-<td>以 Yahoo Finance 2022 FCF $45.19M 與 2025 FCF $12.65M 計算；5yr FCF 不完整</td>
-</tr>
-<tr>
-<td>Beta</td>
-<td>0.627</td>
-<td><a href="https://finance.yahoo.com/quote/LEO" target="_blank" rel="noopener noreferrer">Yahoo Finance Summary</a></td>
-</tr>
-<tr>
-<td>Total Debt</td>
-<td>$139.05M</td>
-<td><a href="https://finance.yahoo.com/quote/LEO/balance-sheet" target="_blank" rel="noopener noreferrer">Yahoo Finance Balance Sheet</a></td>
-</tr>
-<tr>
-<td>Cash &amp; Equivalents</td>
-<td>$0.11M</td>
-<td><a href="https://finance.yahoo.com/quote/LEO/balance-sheet" target="_blank" rel="noopener noreferrer">Yahoo Finance Balance Sheet</a></td>
-</tr>
-<tr>
-<td>Net Debt</td>
-<td>$138.94M</td>
-<td>Total Debt - Cash</td>
-</tr>
-<tr>
-<td>流通股數</td>
-<td>62.29M</td>
-<td><a href="https://finance.yahoo.com/quote/LEO" target="_blank" rel="noopener noreferrer">Yahoo Finance Summary</a></td>
-</tr>
-<tr>
-<td>無風險利率 (10Y)</td>
-<td>4.623%</td>
-<td>WebSearch / Yahoo Finance <code>^TNX</code>，2026-05-18 最近收盤</td>
-</tr>
-<tr>
-<td>WACC</td>
-<td>基準 8.07%</td>
-<td>無風險利率 4.623% + Beta 0.627 x 5.5% ERP</td>
-</tr>
-<tr>
-<td>現價</td>
-<td>$6.24</td>
-<td><a href="https://finance.yahoo.com/quote/LEO" target="_blank" rel="noopener noreferrer">Yahoo Finance Summary</a>，2026-05-19 查詢時最近價</td>
-</tr>
-</tbody>
-</table>
-<h2>關鍵假設說明</h2>
-<ul>
-<li>FCF 成長率來源：Yahoo Finance 可取得的年度 FCF 僅有 2022-2025，因此依 skill 規則使用 3yr FCF CAGR；基準情境為 -34.6%。</li>
-<li>WACC 組成：無風險利率 4.623% + Beta 0.627 x 5.5% ERP = 8.07%；悲觀情境加 0.5%，樂觀情境減 0.5%。</li>
-<li>終值佔總估值比重：51.5%（基準情境）。</li>
-<li>LEO 是封閉式基金，不是一般營運公司；Yahoo Finance 的 FCF 主要反映基金現金流與投資組合活動，DCF 解讀限制高於一般企業估值。</li>
-<li>因基準 FCF CAGR 為負值，依 skill 的「base_rate x 0.6 / x 1.4」機械規則計算後，情境標籤的經濟直覺會被負成長率扭曲；結果應以敏感度參考，不宜視為精確估值。</li>
-</ul>
-<h2>結論</h2>
-<p>基準情境下，LEO 的 DCF 內在價值為 -$1.64/股，相對 $6.24 現價呈現 -126.3% 安全邊際，主要原因是近年 FCF 大幅下滑且 net debt 相對最近一年 FCF 偏高。最主要的不確定因子是：LEO 作為封閉式市政債基金，DCF 並非最適合的估值框架，NAV 折溢價與投資組合收益率通常更關鍵。</p>
-<hr>
-<p>⚠️ <strong>免責聲明：</strong> 本報告根據公開財務數據以 DCF 模型計算，為教育性研究，<strong>不構成投資建議</strong>、
-不是招攬、不是交易指示。DCF 估值對假設高度敏感，實際結果可能大幅偏離。
-請自行查證並諮詢合格理財顧問後再做任何投資決策。</p>
 
       </article>
       <article class="tab-panel review-panel report-content" role="tabpanel">

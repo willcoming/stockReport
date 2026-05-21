@@ -6,7 +6,7 @@
   <title>BA — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-tw-candles">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260521-hot-stocks-v1">
 </head>
 <body>
   <header class="site-header">
@@ -62,9 +62,7 @@
     <div class="tabs" role="tablist" aria-label="股票分析內容">
       <input id="tab-trading" type="radio" name="stock-tabs" checked>
       <label for="tab-trading" role="tab">多角色股票分析</label>
-      <input id="tab-dcf" type="radio" name="stock-tabs">
-      <label for="tab-dcf" role="tab">DCF 估值報告</label>
-      <input id="tab-review" type="radio" name="stock-tabs">
+<input id="tab-review" type="radio" name="stock-tabs">
       <label for="tab-review" role="tab">回顧</label>
       <article class="tab-panel trading-panel report-content" role="tabpanel">
         <h1>BA — 多角色股票分析（2026-05-09）</h1>
@@ -133,138 +131,6 @@
 <p>⚠️ <strong>免責聲明：</strong> 本內容是根據公開資訊整理的教育性研究。
 不構成投資建議、招攬或交易建議。市場可能朝任何 thesis 的反方向波動。
 交易前請自行研究，並諮詢合格持牌顧問。此 skill 不會下任何訂單。</p>
-
-      </article>
-      <article class="tab-panel dcf-panel report-content" role="tabpanel">
-<h1>BA — DCF 估值報告</h1>
-<p>as_of_date：2026-05-09<br>
-projection_years：5 年</p>
-<h2>DCF 估值結果</h2>
-<p>BA 最近 5 年有 3 年 FCF 為負，因此依 $dcf-valuation skill 規則使用 EV/EBITDA fallback；下表是 multiple-based fallback，不是標準 DCF。</p>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>FCF 成長率 (yr1-5)</th>
-<th>終值成長率</th>
-<th>WACC</th>
-<th>EV/EBITDA</th>
-<th>內在價值/股</th>
-<th>現價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>12.22x</td>
-<td>$42.02</td>
-<td>$237.36</td>
-<td>-82.3% (高估)</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>15.27x</td>
-<td>$66.23</td>
-<td>$237.36</td>
-<td>-72.1% (高估)</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>18.32x</td>
-<td>$90.44</td>
-<td>$237.36</td>
-<td>-61.9% (高估)</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
-<h2>數據來源</h2>
-<table>
-<thead>
-<tr>
-<th>項目</th>
-<th>數值</th>
-<th>來源</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>最近一年 FCF</td>
-<td>-$1.88B</td>
-<td><a href="https://www.sec.gov/Archives/edgar/data/12927/000162828026004357/ba-20251231.htm" target="_blank" rel="noopener noreferrer">Boeing 2025 Form 10-K, SEC</a>；2025 operating cash flow $1.065B - capex $2.942B</td>
-</tr>
-<tr>
-<td>5yr FCF CAGR</td>
-<td>不適用</td>
-<td>2021、2024、2025 FCF 為負，依 skill 規則觸發 EV/EBITDA fallback；<a href="https://www.sec.gov/Archives/edgar/data/12927/000001292723000003/a202212dec318kprex991.htm" target="_blank" rel="noopener noreferrer">2022/2021 Boeing Q4 release</a>、<a href="https://www.sec.gov/Archives/edgar/data/12927/000162828026004357/ba-20251231.htm" target="_blank" rel="noopener noreferrer">2025 Form 10-K</a></td>
-</tr>
-<tr>
-<td>Beta</td>
-<td>1.21</td>
-<td><a href="https://stockanalysis.com/stocks/ba/" target="_blank" rel="noopener noreferrer">StockAnalysis BA quote</a></td>
-</tr>
-<tr>
-<td>Net Debt</td>
-<td>$43.18B</td>
-<td><a href="https://www.sec.gov/Archives/edgar/data/12927/000162828026004357/ba-20251231.htm" target="_blank" rel="noopener noreferrer">Boeing 2025 Form 10-K, SEC</a>：Total debt $54.098B - cash $10.921B</td>
-</tr>
-<tr>
-<td>流通股數</td>
-<td>785.35M</td>
-<td><a href="https://www.sec.gov/Archives/edgar/data/12927/000162828026004357/ba-20251231.htm" target="_blank" rel="noopener noreferrer">Boeing 2025 Form 10-K, SEC</a></td>
-</tr>
-<tr>
-<td>無風險利率 (10Y)</td>
-<td>4.37%</td>
-<td><a href="https://tradingeconomics.com/united-states/government-bond-yield" target="_blank" rel="noopener noreferrer">Trading Economics, US 10Y, May 8 2026</a></td>
-</tr>
-<tr>
-<td>WACC</td>
-<td>11.03%</td>
-<td>計算：4.37% + 1.21 x 5.5%</td>
-</tr>
-<tr>
-<td>現價</td>
-<td>$237.36</td>
-<td><a href="https://stockanalysis.com/stocks/ba/" target="_blank" rel="noopener noreferrer">StockAnalysis BA quote, May 8 2026 close</a></td>
-</tr>
-<tr>
-<td>2025 EBITDA</td>
-<td>$6.23B</td>
-<td>計算：2025 operating earnings $4.281B + D&amp;A $1.953B；<a href="https://www.sec.gov/Archives/edgar/data/12927/000162828026004357/ba-20251231.htm" target="_blank" rel="noopener noreferrer">Boeing 2025 Form 10-K</a></td>
-</tr>
-<tr>
-<td>Aerospace &amp; Defense EV/EBITDA median</td>
-<td>15.27x</td>
-<td><a href="https://www.calcmastery.com/benchmarks/ev-ebitda-by-industry/" target="_blank" rel="noopener noreferrer">CalcMastery 2025-2026 industry benchmark</a></td>
-</tr>
-</tbody>
-</table>
-<h2>關鍵假設說明</h2>
-<ul>
-<li>FCF 成長率來源：不適用；BA 的 5 年 FCF 序列含 3 個負值年份，無法合理使用 FCF CAGR 建立標準 DCF。</li>
-<li>WACC 組成：無風險利率 4.37% + Beta 1.21 x 5.5% ERP = 11.03%；fallback 估值未直接使用 WACC。</li>
-<li>EV/EBITDA fallback：以 2025 EBITDA $6.234B，套用 Aerospace &amp; Defense median 15.27x；悲觀/樂觀分別採約 -20% / +20% multiple range。</li>
-<li>終值佔總估值比重：N/A；本次未使用 Gordon Growth terminal value，因此無 terminal value sensitivity。</li>
-</ul>
-<h2>結論</h2>
-<p>基準 fallback 情境估算 BA 內在價值約 $66.23/股，較 $237.36 現價低約 72.1%，安全邊際不足。最主要不確定因子是 Boeing 2025 EBITDA 包含重大處分收益與營運修復週期，若未來 normalized EBITDA / FCF 明顯改善，估值結果可能大幅改變。</p>
-<hr>
-<p>⚠️ <strong>免責聲明：</strong> 本報告根據公開財務數據以 DCF 模型計算，為教育性研究，<strong>不構成投資建議</strong>、
-不是招攬、不是交易指示。DCF 估值對假設高度敏感，實際結果可能大幅偏離。
-請自行查證並諮詢合格理財顧問後再做任何投資決策。</p>
 
       </article>
       <article class="tab-panel review-panel report-content" role="tabpanel">

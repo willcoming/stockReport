@@ -232,6 +232,24 @@ h1 {
   font-size: 0.95rem;
 }
 
+.reports-section {
+  padding: 24px 0 0;
+  border-top: 1px solid rgba(60, 60, 67, 0.12);
+}
+
+.report-list-compact {
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.report-list-compact a {
+  align-items: center;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  padding: 14px 16px;
+  box-shadow: none;
+}
+
 .report-list time {
   color: var(--gold);
   font-size: 0.9rem;
@@ -815,7 +833,6 @@ tbody tr:nth-child(even) {
 }
 
 #tab-trading:checked ~ .trading-panel,
-#tab-dcf:checked ~ .dcf-panel,
 #tab-review:checked ~ .review-panel {
   display: block;
 }
@@ -889,6 +906,10 @@ tbody tr:nth-child(even) {
 
   .date-heading {
     position: static;
+  }
+
+  .report-list-compact a {
+    grid-template-columns: 1fr;
   }
 
   .tabs {

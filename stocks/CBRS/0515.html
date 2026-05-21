@@ -6,7 +6,7 @@
   <title>CBRS — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-tw-candles">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260521-hot-stocks-v1">
 </head>
 <body>
   <header class="site-header">
@@ -63,9 +63,7 @@
     <div class="tabs" role="tablist" aria-label="股票分析內容">
       <input id="tab-trading" type="radio" name="stock-tabs" checked>
       <label for="tab-trading" role="tab">多角色股票分析</label>
-      <input id="tab-dcf" type="radio" name="stock-tabs">
-      <label for="tab-dcf" role="tab">DCF 估值報告</label>
-      <input id="tab-review" type="radio" name="stock-tabs">
+<input id="tab-review" type="radio" name="stock-tabs">
       <label for="tab-review" role="tab">回顧</label>
       <article class="tab-panel trading-panel report-content" role="tabpanel">
         <h1>CBRS — 多角色股票分析（2026-05-15）</h1>
@@ -131,163 +129,6 @@
 <p>⚠️ <strong>免責聲明：</strong> 本內容是根據公開資訊整理的教育性研究。
 不構成投資建議、招攬或交易建議。市場可能朝任何 thesis 的反方向波動。
 交易前請自行研究，並諮詢合格持牌顧問。此 skill 不會下任何訂單。</p>
-
-      </article>
-      <article class="tab-panel dcf-panel report-content" role="tabpanel">
-        <h1>CBRS — DCF 估值報告 (2026-05-09)</h1>
-<h2>DCF 估值結果</h2>
-<p>CBRS 最近一年 FCF 為負，且公開 IPO 財務資料僅涵蓋 2024-2025，無法計算 3 年或 5 年 FCF CAGR；因此依 skill 規則，以下採用 <strong>EV/EBITDA multiple-based fallback，不是標準 DCF</strong>。計算已透過 Bash <code>python3</code> 執行。</p>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>方法</th>
-<th>EV/EBITDA 假設</th>
-<th>WACC</th>
-<th>內在價值/股</th>
-<th>現價 / 參考價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>EV/EBITDA fallback</td>
-<td>13.22x</td>
-<td>N/A</td>
-<td>$22.61</td>
-<td>$120.00 IPO midpoint</td>
-<td>-81.2% (高估)</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>EV/EBITDA fallback</td>
-<td>18.89x</td>
-<td>N/A</td>
-<td>$30.04</td>
-<td>$120.00 IPO midpoint</td>
-<td>-75.0% (高估)</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>EV/EBITDA fallback</td>
-<td>24.56x</td>
-<td>N/A</td>
-<td>$37.47</td>
-<td>$120.00 IPO midpoint</td>
-<td>-68.8% (高估)</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
-<h2>數據來源</h2>
-<table>
-<thead>
-<tr>
-<th>項目</th>
-<th>數值</th>
-<th>來源</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>公司</td>
-<td>Cerebras Systems Inc.</td>
-<td><a href="https://stockanalysis.com/stocks/cbrs/financials/" target="_blank" rel="noopener noreferrer">StockAnalysis / SEC S-1 資料</a></td>
-</tr>
-<tr>
-<td>最近一年 FCF</td>
-<td>-$392.79M</td>
-<td><a href="https://stockanalysis.com/stocks/cbrs/financials/cash-flow-statement/" target="_blank" rel="noopener noreferrer">StockAnalysis Cash Flow；來源標示為 SEC S-1/S-1A</a></td>
-</tr>
-<tr>
-<td>2024 FCF</td>
-<td>$428.54M</td>
-<td><a href="https://stockanalysis.com/stocks/cbrs/financials/cash-flow-statement/" target="_blank" rel="noopener noreferrer">StockAnalysis Cash Flow；來源標示為 SEC S-1/S-1A</a></td>
-</tr>
-<tr>
-<td>5yr FCF CAGR</td>
-<td>資料不足</td>
-<td>CBRS 僅有 2024-2025 IPO 財務資料，且 2025 FCF 轉負</td>
-</tr>
-<tr>
-<td>Revenue</td>
-<td>$509.99M</td>
-<td><a href="https://stockanalysis.com/stocks/cbrs/financials/" target="_blank" rel="noopener noreferrer">StockAnalysis Income Statement</a></td>
-</tr>
-<tr>
-<td>EBITDA</td>
-<td>$279.34M</td>
-<td><a href="https://stockanalysis.com/stocks/cbrs/financials/" target="_blank" rel="noopener noreferrer">StockAnalysis Income Statement</a></td>
-</tr>
-<tr>
-<td>Beta</td>
-<td>資料不足；模型預設 1.00</td>
-<td><a href="https://stockanalysis.com/stocks/cbrs/statistics/" target="_blank" rel="noopener noreferrer">StockAnalysis Statistics 顯示 Beta n/a</a></td>
-</tr>
-<tr>
-<td>Total Debt</td>
-<td>$215.96M</td>
-<td><a href="https://stockanalysis.com/stocks/cbrs/financials/balance-sheet/" target="_blank" rel="noopener noreferrer">StockAnalysis Balance Sheet</a></td>
-</tr>
-<tr>
-<td>Cash &amp; Cash Equivalents</td>
-<td>$1.337B</td>
-<td><a href="https://stockanalysis.com/stocks/cbrs/financials/balance-sheet/" target="_blank" rel="noopener noreferrer">StockAnalysis Balance Sheet</a></td>
-</tr>
-<tr>
-<td>Net Debt</td>
-<td>-$1.121B</td>
-<td>計算：$215.96M - $1.337B</td>
-</tr>
-<tr>
-<td>流通股數</td>
-<td>212.97M</td>
-<td><a href="https://www.webull.com/quote/nasdaq-cbrs" target="_blank" rel="noopener noreferrer">Webull IPO 資料</a></td>
-</tr>
-<tr>
-<td>無風險利率 (10Y)</td>
-<td>4.364%</td>
-<td><a href="https://www.investing.com/rates-bonds/u.s.-10-year-bond-yield-historical-data" target="_blank" rel="noopener noreferrer">Investing.com，美債 10Y 於 2026-05-08 收盤；2026-05-09 為週六</a></td>
-</tr>
-<tr>
-<td>WACC</td>
-<td>悲觀 10.36% / 基準 9.86% / 樂觀 9.36%</td>
-<td>計算：risk-free + Beta 1.00 x 5.5% ERP，並依 skill 加減 0.5%</td>
-</tr>
-<tr>
-<td>現價</td>
-<td>資料不足；尚未上市交易</td>
-<td><a href="https://stockanalysis.com/stocks/cbrs/financials/" target="_blank" rel="noopener noreferrer">StockAnalysis 顯示 IPO Price Range $115-$125</a></td>
-</tr>
-<tr>
-<td>IPO 參考價</td>
-<td>$120.00 midpoint</td>
-<td><a href="https://finance.yahoo.com/markets/stocks/articles/cerebras-ipo-roadshow-targets-115-114502679.html" target="_blank" rel="noopener noreferrer">Yahoo Finance / Bloomberg：$115-$125 IPO range</a></td>
-</tr>
-<tr>
-<td>同業 EV/EBITDA median</td>
-<td>Technology sector 18.89x</td>
-<td><a href="https://westmountfundamentals.com/ev-ebitda-sectors" target="_blank" rel="noopener noreferrer">Westmount Fundamentals 2026 sector EV/EBITDA</a></td>
-</tr>
-</tbody>
-</table>
-<h2>關鍵假設說明</h2>
-<ul>
-<li>FCF 成長率來源：資料不足。CBRS 只有 2024-2025 公開 IPO 財務資料，且 2025 FCF 為 -$392.79M，無法合理推導 3 年或 5 年 FCF CAGR。</li>
-<li>WACC 組成：無風險利率 4.364% + Beta 1.00 x 5.5% ERP = 9.86%（基準情境）；但 fallback 估值使用 EV/EBITDA，未直接使用 WACC 折現。</li>
-<li>fallback multiple：基準情境使用 Technology sector median EV/EBITDA 18.89x；悲觀與樂觀分別使用 0.7x / 1.3x 的情境折減與溢價。</li>
-<li>終值佔總估值比重：N/A。因未使用 Gordon Growth terminal value，本次沒有終值佔比；估值敏感度主要來自 EV/EBITDA multiple 與 EBITDA 可持續性。</li>
-<li>CBRS 於 as_of_date 仍未正式上市交易，沒有可用現價；本表以 IPO range midpoint $120 作為比較參考，不等同二級市場成交價。</li>
-</ul>
-<h2>結論</h2>
-<p>在基準 EV/EBITDA fallback 下，CBRS 估算內在價值約 $30.04/股，較 $120 IPO midpoint 低約 75.0%；主要不確定性在於 2025 EBITDA 是否可持續、FCF 轉負是否為短期資本開支週期，以及 IPO 後市場是否願意給予 AI 基礎設施公司遠高於同業中位數的估值倍數。</p>
-<hr>
-<p>⚠️ <strong>免責聲明：</strong> 本報告根據公開財務數據以 DCF 模型計算，為教育性研究，<strong>不構成投資建議</strong>、
-不是招攬、不是交易指示。DCF 估值對假設高度敏感，實際結果可能大幅偏離。
-請自行查證並諮詢合格理財顧問後再做任何投資決策。</p>
 
       </article>
       <article class="tab-panel review-panel report-content" role="tabpanel">

@@ -6,7 +6,7 @@
   <title>PPA — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-tw-candles">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260521-hot-stocks-v1">
 </head>
 <body>
   <header class="site-header">
@@ -61,9 +61,7 @@
     <div class="tabs" role="tablist" aria-label="股票分析內容">
       <input id="tab-trading" type="radio" name="stock-tabs" checked>
       <label for="tab-trading" role="tab">多角色股票分析</label>
-      <input id="tab-dcf" type="radio" name="stock-tabs">
-      <label for="tab-dcf" role="tab">DCF 估值報告</label>
-      <input id="tab-review" type="radio" name="stock-tabs">
+<input id="tab-review" type="radio" name="stock-tabs">
       <label for="tab-review" role="tab">回顧</label>
       <article class="tab-panel trading-panel report-content" role="tabpanel">
         <h1>PPA — 多角色股票分析（2026-05-13）</h1>
@@ -124,127 +122,6 @@
 <p>⚠️ <strong>免責聲明：</strong> 本內容是根據公開資訊整理的教育性研究。
 不構成投資建議、招攬或交易建議。市場可能朝任何 thesis 的反方向波動。
 交易前請自行研究，並諮詢合格持牌顧問。此 skill 不會下任何訂單。</p>
-
-      </article>
-      <article class="tab-panel dcf-panel report-content" role="tabpanel">
-        <h1>PPA — DCF 估值報告</h1>
-<h2>DCF 估值結果</h2>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>FCF 成長率 (yr1-5)</th>
-<th>終值成長率</th>
-<th>WACC</th>
-<th>內在價值/股</th>
-<th>現價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>N/A</td>
-<td>1.5%</td>
-<td>9.80%</td>
-<td>N/A</td>
-<td>$167.44</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>N/A</td>
-<td>2.5%</td>
-<td>9.30%</td>
-<td>N/A</td>
-<td>$167.44</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>N/A</td>
-<td>3.5%</td>
-<td>8.80%</td>
-<td>N/A</td>
-<td>$167.44</td>
-<td>N/A</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
-<p>PPA 是 Invesco Aerospace &amp; Defense ETF，不是單一營運公司；Yahoo Finance 現金流量表、損益表與資產負債表未提供可用的 ETF issuer-level FCF、Total Debt、Cash 與公司層級 EBITDA。因此，本次不能在不捏造數字的前提下完成標準 DCF 或 EV/EBITDA fallback。</p>
-<h2>數據來源</h2>
-<table>
-<thead>
-<tr>
-<th>項目</th>
-<th>數值</th>
-<th>來源</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>最近一年 FCF</td>
-<td>資料不足</td>
-<td>Yahoo Finance <code>PPA</code> financials / cash flow 透過 <code>yfinance</code> 查詢為空表</td>
-</tr>
-<tr>
-<td>5yr FCF CAGR</td>
-<td>資料不足</td>
-<td>因 ETF 無 issuer-level FCF，無法計算</td>
-</tr>
-<tr>
-<td>Beta</td>
-<td>0.88</td>
-<td>Yahoo Finance quote API / <code>yfinance</code>，<code>beta3Year</code></td>
-</tr>
-<tr>
-<td>Net Debt</td>
-<td>資料不足</td>
-<td>Yahoo Finance balance sheet 透過 <code>yfinance</code> 查詢為空表</td>
-</tr>
-<tr>
-<td>流通股數</td>
-<td>47.56M</td>
-<td>Kraken PPA quote：Shares outstanding 47.56M，https://www.kraken.com/stocks/ppa</td>
-</tr>
-<tr>
-<td>無風險利率 (10Y)</td>
-<td>4.46%</td>
-<td>U.S. Treasury Daily Treasury Rates，2026-05-12 10 Yr，https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&amp;type=daily_treasury_yield_curve</td>
-</tr>
-<tr>
-<td>WACC</td>
-<td>悲觀 9.80% / 基準 9.30% / 樂觀 8.80%</td>
-<td>計算：4.46% + 0.88 x 5.5%，並依情境加減 0.5%</td>
-</tr>
-<tr>
-<td>現價</td>
-<td>$167.44</td>
-<td>Yahoo Finance quote API / <code>yfinance</code>，regular market price as of 2026-05-13 13:52 UTC</td>
-</tr>
-<tr>
-<td>ETF 結構</td>
-<td>ETF，追蹤 SPADE Defense Index</td>
-<td>ETFdb PPA profile，https://etfdb.com/etf/PPA/；Invesco fact sheet search result</td>
-</tr>
-</tbody>
-</table>
-<h2>關鍵假設說明</h2>
-<ul>
-<li>FCF 成長率來源：N/A。PPA 為 ETF，沒有可直接折現的 issuer-level Free Cash Flow；若要估值，需建立 look-through holdings DCF，對各持股逐一估值後按權重加總，這超出此單一 ticker 標準 DCF 模型。</li>
-<li>WACC 組成：無風險利率 4.46% + Beta 0.88 x 5.5% ERP = 9.30%（基準情境）；悲觀情境加 0.50%，樂觀情境減 0.50%。</li>
-<li>終值佔總估值比重：N/A（基準情境未能計算）。</li>
-<li>DCF 計算已透過 Python 執行；由於 <code>fcf_base</code>、<code>growth_rate</code>、<code>net_debt</code> 缺失，三情境內在價值結果均為 <code>null</code>，未輸出估值數字以避免捏造。</li>
-</ul>
-<h2>結論</h2>
-<p>基準情境下，PPA 無法用標準單一公司 DCF 得出可靠的每股內在價值，因此也無法計算安全邊際。主要不確定因子不是折現率，而是 ETF 缺少公司層級 FCF 與資本結構資料；合理做法是改用 look-through holdings valuation 或 ETF 相對估值框架。</p>
-<hr>
-<p>⚠️ <strong>免責聲明：</strong> 本報告根據公開財務數據以 DCF 模型計算，為教育性研究，<strong>不構成投資建議</strong>、
-不是招攬、不是交易指示。DCF 估值對假設高度敏感，實際結果可能大幅偏離。
-請自行查證並諮詢合格理財顧問後再做任何投資決策。</p>
 
       </article>
       <article class="tab-panel review-panel report-content" role="tabpanel">

@@ -6,7 +6,7 @@
   <title>3231 — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-tw-candles">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260521-hot-stocks-v1">
 </head>
 <body>
   <header class="site-header">
@@ -61,9 +61,7 @@
     <div class="tabs" role="tablist" aria-label="股票分析內容">
       <input id="tab-trading" type="radio" name="stock-tabs" checked>
       <label for="tab-trading" role="tab">多角色股票分析</label>
-      <input id="tab-dcf" type="radio" name="stock-tabs">
-      <label for="tab-dcf" role="tab">DCF 估值報告</label>
-      <input id="tab-review" type="radio" name="stock-tabs">
+<input id="tab-review" type="radio" name="stock-tabs">
       <label for="tab-review" role="tab">回顧</label>
       <article class="tab-panel trading-panel report-content" role="tabpanel">
         <h1>3231.TW — 多角色股票分析（2026-05-07）</h1>
@@ -132,157 +130,6 @@
 <p>⚠️ <strong>免責聲明：</strong> 本內容是根據公開資訊整理的教育性研究。
 不構成投資建議、招攬或交易建議。市場可能朝任何 thesis 的反方向波動。
 交易前請自行研究，並諮詢合格持牌顧問。此 skill 不會下任何訂單。</p>
-
-      </article>
-      <article class="tab-panel dcf-panel report-content" role="tabpanel">
-<h1>3231.TW — DCF 估值報告</h1>
-<p>as_of_date：2026-05-07<br>
-projection_years：5<br>
-fallback_ticker：未使用，primary ticker <code>3231.TW</code> 可取得資料。</p>
-<h2>DCF 估值結果</h2>
-<p>由於 3231.TW 最近 5 年 FCF 有 3 年為負，依 <code>$dcf-valuation</code> skill 規則，本次不採用傳統 DCF 終值模型，改用 <strong>EV/EBITDA multiple-based fallback</strong>。計算公式：</p>
-<blockquote>
-<p>Implied Equity Value = EBITDA × EV/EBITDA multiple - Net Debt<br>
-內在價值/股 = Implied Equity Value / Shares Outstanding<br>
-安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>方法</th>
-<th>EV/EBITDA multiple</th>
-<th>TTM EBITDA</th>
-<th>Net Debt</th>
-<th>內在價值/股</th>
-<th>現價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>EV/EBITDA fallback</td>
-<td>5.2x</td>
-<td>NT$89.0B</td>
-<td>NT$191.2B</td>
-<td>NT$85.36</td>
-<td>NT$146.00</td>
-<td>-41.5%（高估）</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>EV/EBITDA fallback</td>
-<td>7.9x</td>
-<td>NT$89.0B</td>
-<td>NT$191.2B</td>
-<td>NT$160.90</td>
-<td>NT$146.00</td>
-<td>+10.2%（低估）</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>EV/EBITDA fallback</td>
-<td>10.1x</td>
-<td>NT$89.0B</td>
-<td>NT$191.2B</td>
-<td>NT$222.46</td>
-<td>NT$146.00</td>
-<td>+52.4%（低估）</td>
-</tr>
-</tbody>
-</table>
-<h2>數據來源</h2>
-<table>
-<thead>
-<tr>
-<th>項目</th>
-<th>數值</th>
-<th>來源</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>公司</td>
-<td>Wistron Corporation / 緯創</td>
-<td><a href="https://finance.yahoo.com/quote/3231.TW/" target="_blank" rel="noopener noreferrer">Yahoo Finance</a></td>
-</tr>
-<tr>
-<td>最近一年 FCF</td>
-<td>-NT$145.4B（FY2025）</td>
-<td><a href="https://stockanalysis.com/quote/tpe/3231/financials/cash-flow-statement/" target="_blank" rel="noopener noreferrer">StockAnalysis 現金流量表，S&amp;P Global Market Intelligence；Free Cash Flow row</a></td>
-</tr>
-<tr>
-<td>近 5 年 FCF</td>
-<td>FY2025 -145.4B、FY2024 -10.8B、FY2023 +35.3B、FY2022 +39.8B、FY2021 -32.0B TWD</td>
-<td><a href="https://stockanalysis.com/quote/tpe/3231/financials/cash-flow-statement/" target="_blank" rel="noopener noreferrer">StockAnalysis 現金流量表</a></td>
-</tr>
-<tr>
-<td>5yr FCF CAGR</td>
-<td>N/A（5 年中 3 年為負，依 skill 規則改用 EV/EBITDA fallback）</td>
-<td>計算</td>
-</tr>
-<tr>
-<td>Beta</td>
-<td>0.784</td>
-<td><a href="https://finance.yahoo.com/quote/3231.TW/" target="_blank" rel="noopener noreferrer">Yahoo Finance Summary</a></td>
-</tr>
-<tr>
-<td>TTM EBITDA</td>
-<td>NT$89.0B</td>
-<td><a href="https://finance.yahoo.com/quote/3231.TW/" target="_blank" rel="noopener noreferrer">Yahoo Finance Summary</a></td>
-</tr>
-<tr>
-<td>Market Cap</td>
-<td>NT$464.3B</td>
-<td><a href="https://finance.yahoo.com/quote/3231.TW/" target="_blank" rel="noopener noreferrer">Yahoo Finance Summary</a></td>
-</tr>
-<tr>
-<td>Net Debt</td>
-<td>NT$191.2B</td>
-<td><a href="https://finance.yahoo.com/quote/3231.TW/balance-sheet/" target="_blank" rel="noopener noreferrer">Yahoo Finance Balance Sheet</a></td>
-</tr>
-<tr>
-<td>流通股數</td>
-<td>3.180B shares</td>
-<td><a href="https://finance.yahoo.com/quote/3231.TW/" target="_blank" rel="noopener noreferrer">Yahoo Finance Balance Sheet / Summary</a></td>
-</tr>
-<tr>
-<td>無風險利率 (10Y)</td>
-<td>4.36%（U.S. Treasury 2026-05-06 latest official daily curve；as-of 2026-05-07 使用最近官方值）</td>
-<td><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&amp;field_tdr_date_value_month=202605" target="_blank" rel="noopener noreferrer">U.S. Treasury Daily Treasury Yield Curve Rates XML</a></td>
-</tr>
-<tr>
-<td>WACC</td>
-<td>Bear 9.17%、Base 8.67%、Bull 8.17%（fallback 估值未直接使用）</td>
-<td>計算：4.36% + 0.784 × 5.5%，Bear/Base/Bull 加減 0.5%</td>
-</tr>
-<tr>
-<td>現價</td>
-<td>NT$146.00</td>
-<td><a href="https://finance.yahoo.com/quote/3231.TW/" target="_blank" rel="noopener noreferrer">Yahoo Finance Summary</a></td>
-</tr>
-<tr>
-<td>產業 / 同業 EV/EBITDA 參考</td>
-<td>Wistron 2026E 5.2x；Taiwan ODM/server peer median 約 7.9x；上緣參考 Quanta 2026E 10.1x</td>
-<td><a href="https://file.alphasquare.co.kr/media/pdfs/market-report/%EB%B0%98%EB%8F%84%EC%B2%B4_Dec.20260113%ED%82%A4%EC%9B%80%EC%A6%9D%EA%B6%8C" target="_blank" rel="noopener noreferrer">Kiwoom / Bloomberg consensus Taiwan tech valuation table</a></td>
-</tr>
-</tbody>
-</table>
-<h2>關鍵假設說明</h2>
-<ul>
-<li>FCF 成長率來源：不適用。FY2021-FY2025 FCF 中有 3 年為負，5yr CAGR 不具經濟意義，因此依 skill 規則改用 EV/EBITDA fallback。</li>
-<li>WACC 組成：無風險利率 4.36% + Beta 0.784 x 5.5% ERP = 8.67%；悲觀/樂觀情境分別加減 0.5%。本次 fallback 估值未直接使用 WACC。</li>
-<li>EV/EBITDA multiple：悲觀採 Wistron 2026E 5.2x；基準採 Taiwan ODM/server peers 中位數約 7.9x；樂觀採上緣同業 Quanta 2026E 10.1x。</li>
-<li>終值佔總估值比重：N/A。本次為 multiple-based fallback，不是傳統 DCF 終值模型。</li>
-<li>Terminal value sensitivity：N/A；但本結果對 EV/EBITDA multiple 高度敏感，multiple 每變動 1.0x，估算內在價值約變動 NT$28/股。</li>
-</ul>
-<h2>結論</h2>
-<p>基準情境下，3231.TW 的估算內在價值約 NT$160.90/股，較現價 NT$146.00 高約 10.2%，安全邊際偏薄。主要不確定因子是 AI server/ODM 景氣能否轉化為穩定自由現金流；若營運資金需求持續壓低 FCF，multiple-based 估值也可能偏樂觀。</p>
-<hr>
-<p>⚠️ <strong>免責聲明：</strong> 本報告根據公開財務數據以 DCF 模型計算，為教育性研究，<strong>不構成投資建議</strong>、
-不是招攬、不是交易指示。DCF 估值對假設高度敏感，實際結果可能大幅偏離。
-請自行查證並諮詢合格理財顧問後再做任何投資決策。</p>
 
       </article>
       <article class="tab-panel review-panel report-content" role="tabpanel">

@@ -6,7 +6,7 @@
   <title>MELI — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-tw-candles">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260521-hot-stocks-v1">
 </head>
 <body>
   <header class="site-header">
@@ -64,9 +64,7 @@
     <div class="tabs" role="tablist" aria-label="股票分析內容">
       <input id="tab-trading" type="radio" name="stock-tabs" checked>
       <label for="tab-trading" role="tab">多角色股票分析</label>
-      <input id="tab-dcf" type="radio" name="stock-tabs">
-      <label for="tab-dcf" role="tab">DCF 估值報告</label>
-      <input id="tab-review" type="radio" name="stock-tabs">
+<input id="tab-review" type="radio" name="stock-tabs">
       <label for="tab-review" role="tab">回顧</label>
       <article class="tab-panel trading-panel report-content" role="tabpanel">
         <h1>MELI — 多角色股票分析（2026-05-10）</h1>
@@ -134,139 +132,6 @@
 <p>⚠️ <strong>免責聲明：</strong> 本內容是根據公開資訊整理的教育性研究。
 不構成投資建議、招攬或交易建議。市場可能朝任何 thesis 的反方向波動。
 交易前請自行研究，並諮詢合格持牌顧問。此 skill 不會下任何訂單。</p>
-
-      </article>
-      <article class="tab-panel dcf-panel report-content" role="tabpanel">
-<h1>MELI — DCF 估值報告</h1>
-<p>as_of_date：2026-05-09<br>
-projection_years：5 年</p>
-<h2>DCF 估值結果</h2>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>FCF 成長率 (yr1-5)</th>
-<th>終值成長率</th>
-<th>WACC</th>
-<th>內在價值/股</th>
-<th>現價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>37.83%</td>
-<td>1.5%</td>
-<td>13.30%</td>
-<td>$6,691.82</td>
-<td>$1,632.52</td>
-<td>+309.9% (低估)</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>63.04%</td>
-<td>2.5%</td>
-<td>12.80%</td>
-<td>$16,838.84</td>
-<td>$1,632.52</td>
-<td>+931.5% (低估)</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>88.26%</td>
-<td>3.5%</td>
-<td>12.30%</td>
-<td>$39,374.26</td>
-<td>$1,632.52</td>
-<td>+2,311.9% (低估)</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
-<h2>數據來源</h2>
-<table>
-<thead>
-<tr>
-<th>項目</th>
-<th>數值</th>
-<th>來源</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>最近一年 FCF</td>
-<td>$10.77B</td>
-<td>2025 Form 10-K：Operating Cash Flow $12.116B - Productive Assets CapEx $1.343B（SEC）</td>
-</tr>
-<tr>
-<td>5yr FCF CAGR</td>
-<td>63.04%</td>
-<td>2020-2025 FCF CAGR：$0.935B → $10.773B（SEC company facts / 10-K）</td>
-</tr>
-<tr>
-<td>Beta</td>
-<td>1.53</td>
-<td>Yahoo Finance</td>
-</tr>
-<tr>
-<td>Total Debt</td>
-<td>$12.00B</td>
-<td>2026 Q1 Form 10-Q：Long-term debt、notes payable、credit lines 合計（SEC）</td>
-</tr>
-<tr>
-<td>Cash &amp; Equivalents</td>
-<td>$3.68B</td>
-<td>2026 Q1 Form 10-Q Cash and Cash Equivalents（SEC）</td>
-</tr>
-<tr>
-<td>Net Debt</td>
-<td>$8.32B</td>
-<td>Total Debt - Cash &amp; Equivalents</td>
-</tr>
-<tr>
-<td>流通股數</td>
-<td>50.70M</td>
-<td>2026 Q1 Form 10-Q EntityCommonStockSharesOutstanding（SEC）</td>
-</tr>
-<tr>
-<td>無風險利率 (10Y)</td>
-<td>4.38%</td>
-<td>U.S. Treasury Daily Treasury Par Yield Curve Rates，2026-05-08</td>
-</tr>
-<tr>
-<td>WACC</td>
-<td>Bear 13.30% / Base 12.80% / Bull 12.30%</td>
-<td>4.38% + Beta 1.53 x 5.5% ERP，依情境 +/- 0.5%</td>
-</tr>
-<tr>
-<td>現價</td>
-<td>$1,632.52</td>
-<td>Yahoo Finance chart market data，2026-05-08 close</td>
-</tr>
-</tbody>
-</table>
-<p>來源連結：<br>
-SEC 2025 10-K：https://www.sec.gov/Archives/edgar/data/1099590/000109959026000006/meli-20251231.htm<br>
-SEC 2026 Q1 10-Q：https://www.sec.gov/Archives/edgar/data/1099590/000109959026000017/meli-20260331.htm<br>
-Yahoo Finance：https://finance.yahoo.com/quote/MELI/<br>
-U.S. Treasury：https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202605&amp;type=daily_treasury_yield_curve</p>
-<h2>關鍵假設說明</h2>
-<ul>
-<li>FCF 成長率來源：以 2020-2025 年 FCF CAGR 63.04% 作為 base rate；悲觀為 base x 0.6，樂觀為 base x 1.4。</li>
-<li>WACC 組成：無風險利率 4.38% + Beta 1.53 x 5.5% ERP = 12.80%；悲觀情境加 0.5%，樂觀情境減 0.5%。</li>
-<li>終值佔總估值比重：悲觀 71.0%、基準 78.5%、樂觀 83.7%。</li>
-<li>終值佔比 &gt;70%，結果對終值假設高度敏感，請謹慎解讀。</li>
-<li>MELI 近年 FCF 從低基期快速放大，機械套用 5yr CAGR 會大幅推高 DCF 結果；這是本模型最主要敏感點。</li>
-</ul>
-<h2>結論</h2>
-<p>基準情境下，DCF 內在價值為 $16,838.84/股，相對現價 $1,632.52 顯示 +931.5% 安全邊際；但估值高度依賴 63.04% 的歷史 FCF CAGR 能否延續。最主要不確定因子是 MELI 在高成長、金融業務擴張與物流投資下，未來 FCF 成長是否會快速均值回歸。</p>
-<hr>
-<p>⚠️ <strong>免責聲明：</strong> 本報告根據公開財務數據以 DCF 模型計算，為教育性研究，<strong>不構成投資建議</strong>、
-不是招攬、不是交易指示。DCF 估值對假設高度敏感，實際結果可能大幅偏離。
-請自行查證並諮詢合格理財顧問後再做任何投資決策。</p>
 
       </article>
       <article class="tab-panel review-panel report-content" role="tabpanel">

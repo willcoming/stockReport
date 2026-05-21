@@ -6,7 +6,7 @@
   <title>NOK — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-tw-candles">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260521-hot-stocks-v1">
 </head>
 <body>
   <header class="site-header">
@@ -63,9 +63,7 @@
     <div class="tabs" role="tablist" aria-label="股票分析內容">
       <input id="tab-trading" type="radio" name="stock-tabs" checked>
       <label for="tab-trading" role="tab">多角色股票分析</label>
-      <input id="tab-dcf" type="radio" name="stock-tabs">
-      <label for="tab-dcf" role="tab">DCF 估值報告</label>
-      <input id="tab-review" type="radio" name="stock-tabs">
+<input id="tab-review" type="radio" name="stock-tabs">
       <label for="tab-review" role="tab">回顧</label>
       <article class="tab-panel trading-panel report-content" role="tabpanel">
         <h1>NOK — 多角色股票分析（2026-05-10）</h1>
@@ -132,129 +130,6 @@
 <p>⚠️ <strong>免責聲明：</strong> 本內容是根據公開資訊整理的教育性研究。
 不構成投資建議、招攬或交易建議。市場可能朝任何 thesis 的反方向波動。
 交易前請自行研究，並諮詢合格持牌顧問。此 skill 不會下任何訂單。</p>
-
-      </article>
-      <article class="tab-panel dcf-panel report-content" role="tabpanel">
-<h1>NOK — DCF 估值報告</h1>
-<p>as_of_date: 2026-05-10<br>
-projection_years: 5</p>
-<h2>DCF 估值結果</h2>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>FCF 成長率 (yr1-5)</th>
-<th>終值成長率</th>
-<th>WACC</th>
-<th>內在價值/股</th>
-<th>現價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>11.3%</td>
-<td>1.5%</td>
-<td>9.10%</td>
-<td>$6.55</td>
-<td>$12.82</td>
-<td>-48.9% (高估)</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>18.8%</td>
-<td>2.5%</td>
-<td>8.60%</td>
-<td>$10.54</td>
-<td>$12.82</td>
-<td>-17.8% (高估)</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>26.4%</td>
-<td>3.5%</td>
-<td>8.10%</td>
-<td>$18.08</td>
-<td>$12.82</td>
-<td>+41.0% (低估)</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
-<h2>數據來源</h2>
-<table>
-<thead>
-<tr>
-<th>項目</th>
-<th>數值</th>
-<th>來源</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>最近一年 FCF</td>
-<td>€1.465B</td>
-<td><a href="https://finance.yahoo.com/quote/NOK/cash-flow/" target="_blank" rel="noopener noreferrer">Yahoo Finance Cash Flow</a>；<a href="https://www.nokia.com/newsroom/nokia-corporation-financial-report-for-q4-2025-and-full-year-2025/" target="_blank" rel="noopener noreferrer">Nokia FY2025 release</a></td>
-</tr>
-<tr>
-<td>3yr FCF CAGR</td>
-<td>18.8%</td>
-<td>以 2022 €0.873B 至 2025 €1.465B 計算；5 年 FCF 資料不完整，改用 3 年</td>
-</tr>
-<tr>
-<td>Beta</td>
-<td>0.77</td>
-<td><a href="https://stockanalysis.com/stocks/nok/" target="_blank" rel="noopener noreferrer">StockAnalysis NOK overview</a> / Yahoo Finance</td>
-</tr>
-<tr>
-<td>Net Debt</td>
-<td>-€1.63B</td>
-<td><a href="https://stockanalysis.com/stocks/nok/financials/balance-sheet/" target="_blank" rel="noopener noreferrer">StockAnalysis balance sheet</a>：Total Debt €3.325B - Cash €4.951B</td>
-</tr>
-<tr>
-<td>流通股數</td>
-<td>5.58B</td>
-<td><a href="https://stockanalysis.com/stocks/nok/" target="_blank" rel="noopener noreferrer">StockAnalysis NOK overview</a> / Yahoo Finance</td>
-</tr>
-<tr>
-<td>無風險利率 (10Y)</td>
-<td>4.364%</td>
-<td><a href="https://www.investing.com/rates-bonds/u.s.-10-year-bond-yield-historical-data" target="_blank" rel="noopener noreferrer">Investing.com U.S. 10Y, May 8 2026 close</a></td>
-</tr>
-<tr>
-<td>WACC</td>
-<td>8.60%（基準）</td>
-<td>計算：4.364% + 0.77 x 5.5%</td>
-</tr>
-<tr>
-<td>現價</td>
-<td>$12.82</td>
-<td><a href="https://stockanalysis.com/stocks/nok/" target="_blank" rel="noopener noreferrer">StockAnalysis NOK overview</a>，May 8 2026 close</td>
-</tr>
-<tr>
-<td>EUR/USD</td>
-<td>1.1790</td>
-<td><a href="https://www.exchange-rates.org/converter/eur-usd" target="_blank" rel="noopener noreferrer">Exchange-rates.org EUR/USD</a> / Yahoo Finance</td>
-</tr>
-</tbody>
-</table>
-<h2>關鍵假設說明</h2>
-<ul>
-<li>FCF 成長率來源：Yahoo Finance annual FCF；因 5 年完整資料不足，採用 2022-2025 3 年 CAGR。2022 基期偏低，會放大成長率假設。</li>
-<li>WACC 組成：無風險利率 4.364% + Beta 0.77 x 5.5% ERP = 8.60%（基準情境）；悲觀/樂觀分別加減 0.5 個百分點。</li>
-<li>DCF 以 EUR 現金流計算，內在價值再用 EUR/USD 1.1790 換算為 USD/ADR。</li>
-<li>終值佔總估值比重：80.0%（基準情境）。</li>
-<li>終值佔比 &gt;70%，結果對終值假設高度敏感，請謹慎解讀。</li>
-</ul>
-<h2>結論</h2>
-<p>基準情境下，NOK 的 DCF 內在價值約為 $10.54/股，較 $12.82 現價低約 17.8%，安全邊際不足。主要不確定因子是 2022 低基期導致的高 FCF CAGR、2026 後 AI/Cloud 網路需求能否轉化為穩定自由現金流，以及終值假設對估值的高敏感度。</p>
-<hr>
-<p>⚠️ <strong>免責聲明：</strong> 本報告根據公開財務數據以 DCF 模型計算，為教育性研究，<strong>不構成投資建議</strong>、
-不是招攬、不是交易指示。DCF 估值對假設高度敏感，實際結果可能大幅偏離。
-請自行查證並諮詢合格理財顧問後再做任何投資決策。</p>
 
       </article>
       <article class="tab-panel review-panel report-content" role="tabpanel">

@@ -6,7 +6,7 @@
   <title>HVDC — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-tw-candles">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260521-hot-stocks-v1">
 </head>
 <body>
   <header class="site-header">
@@ -62,9 +62,7 @@
     <div class="tabs" role="tablist" aria-label="股票分析內容">
       <input id="tab-trading" type="radio" name="stock-tabs" checked>
       <label for="tab-trading" role="tab">多角色股票分析</label>
-      <input id="tab-dcf" type="radio" name="stock-tabs">
-      <label for="tab-dcf" role="tab">DCF 估值報告</label>
-      <input id="tab-review" type="radio" name="stock-tabs">
+<input id="tab-review" type="radio" name="stock-tabs">
       <label for="tab-review" role="tab">回顧</label>
       <article class="tab-panel trading-panel report-content" role="tabpanel">
         <h1>HVDC — 多角色股票分析（2026-05-21）</h1>
@@ -128,122 +126,6 @@
 <p>⚠️ <strong>免責聲明：</strong> 本內容是根據公開資訊整理的教育性研究。
 不構成投資建議、招攬或交易建議。市場可能朝任何 thesis 的反方向波動。
 交易前請自行研究，並諮詢合格持牌顧問。此 skill 不會下任何訂單。</p>
-
-      </article>
-      <article class="tab-panel dcf-panel report-content" role="tabpanel">
-        <h1>HVDC — DCF 估值報告</h1>
-<h2>DCF 估值結果</h2>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>FCF 成長率 (yr1-5)</th>
-<th>終值成長率</th>
-<th>WACC</th>
-<th>內在價值/股</th>
-<th>現價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>資料不足</td>
-<td>1.5%</td>
-<td>10.57%</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>資料不足</td>
-<td>2.5%</td>
-<td>10.07%</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>資料不足</td>
-<td>3.5%</td>
-<td>9.57%</td>
-<td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
-<h2>數據來源</h2>
-<table>
-<thead>
-<tr>
-<th>項目</th>
-<th>數值</th>
-<th>來源</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>最近一年 FCF</td>
-<td>資料不足</td>
-<td><a href="https://query1.finance.yahoo.com/v8/finance/chart/HVDC?range=5d&amp;interval=1d" target="_blank" rel="noopener noreferrer">Yahoo Finance HVDC chart endpoint：No data found / symbol may be delisted</a></td>
-</tr>
-<tr>
-<td>5yr FCF CAGR</td>
-<td>資料不足</td>
-<td>Yahoo Finance 無有效 HVDC 報價資料，無法計算</td>
-</tr>
-<tr>
-<td>Beta</td>
-<td>資料不足；WACC 暫以 1.00 作模型預設</td>
-<td>Yahoo Finance 無有效 HVDC 報價資料；依 skill 規則 Beta 不可用時預設 1.0</td>
-</tr>
-<tr>
-<td>Net Debt</td>
-<td>資料不足</td>
-<td>Yahoo Finance 無有效 HVDC balance sheet 資料</td>
-</tr>
-<tr>
-<td>流通股數</td>
-<td>資料不足</td>
-<td>Yahoo Finance 無有效 HVDC quote / key statistics 資料</td>
-</tr>
-<tr>
-<td>無風險利率 (10Y)</td>
-<td>4.57%</td>
-<td><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&amp;field_tdr_date_value=2026" target="_blank" rel="noopener noreferrer">U.S. Treasury Daily Treasury Yield Curve Rates，最新可用資料為 2026-05-20</a></td>
-</tr>
-<tr>
-<td>WACC</td>
-<td>基準 10.07%</td>
-<td>計算：4.57% + 1.00 × 5.5%</td>
-</tr>
-<tr>
-<td>現價</td>
-<td>資料不足</td>
-<td><a href="https://query1.finance.yahoo.com/v8/finance/chart/HVDC?range=5d&amp;interval=1d" target="_blank" rel="noopener noreferrer">Yahoo Finance HVDC chart endpoint：No data found / symbol may be delisted</a></td>
-</tr>
-</tbody>
-</table>
-<h2>關鍵假設說明</h2>
-<ul>
-<li>FCF 成長率來源：資料不足；Yahoo Finance 查無有效 <code>HVDC</code> 報價、現價、FCF、負債、現金與股數資料，因此無法建立有效 DCF 現金流。</li>
-<li>WACC 組成：無風險利率 4.57% + Beta 1.00 x 5.5% ERP = 10.07%；悲觀 / 樂觀情境依 skill 規則分別加減 0.5%。</li>
-<li>終值佔總估值比重：N/A（基準情境無可用 FCF、Net Debt、Shares Outstanding，無法計算）。</li>
-<li>EV/EBITDA fallback：無法套用，因為 <code>HVDC</code> 缺少有效 market cap、EBITDA、net debt 與 shares outstanding 資料。</li>
-<li>若終值佔比 &gt;70%，結果對終值假設高度敏感，請謹慎解讀。</li>
-</ul>
-<h2>結論</h2>
-<p>基準情境下，<code>HVDC</code> 因公開市場資料不足且 Yahoo Finance 查無有效報價，無法得出可驗證的 DCF 每股內在價值或安全邊際。若 <code>HVDC</code> 代表特定交易所的完整 ticker，需先補充正確後綴或上市市場後才能重新估算。</p>
-<hr>
-<p>⚠️ <strong>免責聲明：</strong> 本報告根據公開財務數據以 DCF 模型計算，為教育性研究，<strong>不構成投資建議</strong>、
-不是招攬、不是交易指示。DCF 估值對假設高度敏感，實際結果可能大幅偏離。
-請自行查證並諮詢合格理財顧問後再做任何投資決策。</p>
 
       </article>
       <article class="tab-panel review-panel report-content" role="tabpanel">

@@ -6,7 +6,7 @@
   <title>NEE — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-tw-candles">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260521-hot-stocks-v1">
 </head>
 <body>
   <header class="site-header">
@@ -62,9 +62,7 @@
     <div class="tabs" role="tablist" aria-label="股票分析內容">
       <input id="tab-trading" type="radio" name="stock-tabs" checked>
       <label for="tab-trading" role="tab">多角色股票分析</label>
-      <input id="tab-dcf" type="radio" name="stock-tabs">
-      <label for="tab-dcf" role="tab">DCF 估值報告</label>
-      <input id="tab-review" type="radio" name="stock-tabs">
+<input id="tab-review" type="radio" name="stock-tabs">
       <label for="tab-review" role="tab">回顧</label>
       <article class="tab-panel trading-panel report-content" role="tabpanel">
         <h1>NEE — 多角色股票分析（2026-05-20）</h1>
@@ -129,132 +127,6 @@
 <p>⚠️ <strong>免責聲明：</strong> 本內容是根據公開資訊整理的教育性研究。
 不構成投資建議、招攬或交易建議。市場可能朝任何 thesis 的反方向波動。
 交易前請自行研究，並諮詢合格持牌顧問。此 skill 不會下任何訂單。</p>
-
-      </article>
-      <article class="tab-panel dcf-panel report-content" role="tabpanel">
-        <h1>NEE — DCF 估值報告 (2026-05-20)</h1>
-<h2>DCF 估值結果</h2>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>FCF 成長率 (yr1-5)</th>
-<th>終值成長率</th>
-<th>WACC</th>
-<th>內在價值/股</th>
-<th>現價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>21.2%</td>
-<td>1.5%</td>
-<td>9.08%</td>
-<td>-$3.50</td>
-<td>$90.06</td>
-<td>-103.9% (高估)</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>35.3%</td>
-<td>2.5%</td>
-<td>8.58%</td>
-<td>$44.64</td>
-<td>$90.06</td>
-<td>-50.4% (高估)</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>49.5%</td>
-<td>3.5%</td>
-<td>8.08%</td>
-<td>$149.54</td>
-<td>$90.06</td>
-<td>+66.0% (低估)</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
-<h2>數據來源</h2>
-<table>
-<thead>
-<tr>
-<th>項目</th>
-<th>數值</th>
-<th>來源</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>最近一年 FCF</td>
-<td>$3.211B</td>
-<td><a href="https://finance.yahoo.com/quote/NEE/financials" target="_blank" rel="noopener noreferrer">Yahoo Finance Financials</a></td>
-</tr>
-<tr>
-<td>5yr FCF CAGR</td>
-<td>資料不足；模型使用 2023-2025 正值 FCF CAGR 35.34%</td>
-<td><a href="https://finance.yahoo.com/quote/NEE/financials" target="_blank" rel="noopener noreferrer">Yahoo Finance Financials</a>、計算</td>
-</tr>
-<tr>
-<td>Beta</td>
-<td>0.721</td>
-<td><a href="https://finance.yahoo.com/quote/NEE" target="_blank" rel="noopener noreferrer">Yahoo Finance Summary</a></td>
-</tr>
-<tr>
-<td>Total Debt</td>
-<td>$104.403B</td>
-<td><a href="https://finance.yahoo.com/quote/NEE/balance-sheet" target="_blank" rel="noopener noreferrer">Yahoo Finance Balance Sheet</a></td>
-</tr>
-<tr>
-<td>Cash &amp; Equivalents</td>
-<td>$1.998B</td>
-<td><a href="https://finance.yahoo.com/quote/NEE/balance-sheet" target="_blank" rel="noopener noreferrer">Yahoo Finance Balance Sheet</a></td>
-</tr>
-<tr>
-<td>Net Debt</td>
-<td>$102.405B</td>
-<td>Yahoo Finance Balance Sheet、計算</td>
-</tr>
-<tr>
-<td>流通股數</td>
-<td>2.085B</td>
-<td><a href="https://finance.yahoo.com/quote/NEE/balance-sheet" target="_blank" rel="noopener noreferrer">Yahoo Finance Balance Sheet</a></td>
-</tr>
-<tr>
-<td>無風險利率 (10Y)</td>
-<td>4.61%</td>
-<td><a href="https://fred.stlouisfed.org/series/DGS10" target="_blank" rel="noopener noreferrer">FRED DGS10</a></td>
-</tr>
-<tr>
-<td>WACC</td>
-<td>悲觀 9.08%；基準 8.58%；樂觀 8.08%</td>
-<td>計算</td>
-</tr>
-<tr>
-<td>現價</td>
-<td>$90.06</td>
-<td><a href="https://finance.yahoo.com/quote/NEE" target="_blank" rel="noopener noreferrer">Yahoo Finance Summary</a></td>
-</tr>
-</tbody>
-</table>
-<h2>關鍵假設說明</h2>
-<ul>
-<li>FCF 成長率來源：Yahoo Finance 年度 FCF；5 年資料不足且 2022 年 FCF 為負，因此使用 2023 年 $1.753B 至 2025 年 $3.211B 的正值 FCF CAGR 35.34% 作為 base rate。</li>
-<li>WACC 組成：無風險利率 4.61% + Beta 0.721 x 5.5% ERP = 8.58%（基準情境）。</li>
-<li>Bear / Base / Bull：FCF 成長率分別為 base rate x 0.6、base rate、base rate x 1.4；終值成長率分別為 1.5%、2.5%、3.5%。</li>
-<li>終值佔總估值比重：83.3%（基準情境）。</li>
-<li>終值佔比 &gt;70%，結果對終值成長率與 WACC 假設高度敏感，請謹慎解讀。</li>
-</ul>
-<h2>結論</h2>
-<p>基準情境下，NEE 的 DCF 內在價值約為 $44.64/股，較現價 $90.06 低約 50.4%。主要不確定因子是 NEE 的 FCF 波動與資本支出週期；本模型的終值佔比偏高，因此估值對長期成長率與折現率非常敏感。</p>
-<hr>
-<p>⚠️ <strong>免責聲明：</strong> 本報告根據公開財務數據以 DCF 模型計算，為教育性研究，<strong>不構成投資建議</strong>、
-不是招攬、不是交易指示。DCF 估值對假設高度敏感，實際結果可能大幅偏離。
-請自行查證並諮詢合格理財顧問後再做任何投資決策。</p>
 
       </article>
       <article class="tab-panel review-panel report-content" role="tabpanel">

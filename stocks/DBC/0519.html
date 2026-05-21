@@ -6,7 +6,7 @@
   <title>DBC — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-tw-candles">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260521-hot-stocks-v1">
 </head>
 <body>
   <header class="site-header">
@@ -61,9 +61,7 @@
     <div class="tabs" role="tablist" aria-label="股票分析內容">
       <input id="tab-trading" type="radio" name="stock-tabs" checked>
       <label for="tab-trading" role="tab">多角色股票分析</label>
-      <input id="tab-dcf" type="radio" name="stock-tabs">
-      <label for="tab-dcf" role="tab">DCF 估值報告</label>
-      <input id="tab-review" type="radio" name="stock-tabs">
+<input id="tab-review" type="radio" name="stock-tabs">
       <label for="tab-review" role="tab">回顧</label>
       <article class="tab-panel trading-panel report-content" role="tabpanel">
         <h1>DBC — 多角色股票分析（2026-05-19）</h1>
@@ -129,121 +127,6 @@
 <p>⚠️ <strong>免責聲明：</strong> 本內容是根據公開資訊整理的教育性研究。
 不構成投資建議、招攬或交易建議。市場可能朝任何 thesis 的反方向波動。
 交易前請自行研究，並諮詢合格持牌顧問。此 skill 不會下任何訂單。</p>
-
-      </article>
-      <article class="tab-panel dcf-panel report-content" role="tabpanel">
-        <h1>DBC — DCF 估值報告</h1>
-<h2>DCF 估值結果</h2>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>FCF 成長率 (yr1-5)</th>
-<th>終值成長率</th>
-<th>WACC</th>
-<th>內在價值/股</th>
-<th>現價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>N/A</td>
-<td>1.5%</td>
-<td>5.77%</td>
-<td>N/A</td>
-<td>$31.38</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>N/A</td>
-<td>2.5%</td>
-<td>5.27%</td>
-<td>N/A</td>
-<td>$31.38</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>N/A</td>
-<td>3.5%</td>
-<td>4.77%</td>
-<td>N/A</td>
-<td>$31.38</td>
-<td>N/A</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
-<h2>數據來源</h2>
-<table>
-<thead>
-<tr>
-<th>項目</th>
-<th>數值</th>
-<th>來源</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>最近一年 FCF</td>
-<td>資料不足 / 不適用</td>
-<td>DBC 是商品期貨 ETF；SEC 10-Q 說明其目標是追蹤商品期貨指數，績效主要由期貨策略驅動，不是營運公司自由現金流：<a href="https://www.sec.gov/Archives/edgar/data/1328237/000119312526209724/dbc-20260331.htm" target="_blank" rel="noopener noreferrer">SEC 10-Q</a></td>
-</tr>
-<tr>
-<td>5yr FCF CAGR</td>
-<td>N/A</td>
-<td>因無可用、可比的營運公司 FCF，未計算</td>
-</tr>
-<tr>
-<td>Beta</td>
-<td>0.12</td>
-<td><a href="https://stockanalysis.com/etf/dbc/" target="_blank" rel="noopener noreferrer">StockAnalysis DBC quote</a></td>
-</tr>
-<tr>
-<td>Net Debt</td>
-<td>資料不足 / 不適用</td>
-<td>SEC 10-Q 顯示總負債 $26.63M、現金期末 $0，但這是基金資產負債與保證金/交易結算結構，不是公司債務資本結構：<a href="https://www.sec.gov/Archives/edgar/data/1328237/000119312526209724/dbc-20260331.htm" target="_blank" rel="noopener noreferrer">SEC 10-Q</a></td>
-</tr>
-<tr>
-<td>流通股數</td>
-<td>58.45M（2026-03-31）</td>
-<td><a href="https://www.sec.gov/Archives/edgar/data/1328237/000119312526209724/dbc-20260331.htm" target="_blank" rel="noopener noreferrer">SEC 10-Q</a></td>
-</tr>
-<tr>
-<td>無風險利率 (10Y)</td>
-<td>4.61%（2026-05-18）</td>
-<td><a href="https://www.yieldcurve.pro/yields/10-year" target="_blank" rel="noopener noreferrer">yieldcurve.pro</a></td>
-</tr>
-<tr>
-<td>WACC</td>
-<td>悲觀 5.77% / 基準 5.27% / 樂觀 4.77%</td>
-<td>公式計算：4.61% + Beta 0.12 × 5.5%，再依情境 +/- 0.5%</td>
-</tr>
-<tr>
-<td>現價</td>
-<td>$31.38（2026-05-18 US close）</td>
-<td><a href="https://stockanalysis.com/etf/dbc/" target="_blank" rel="noopener noreferrer">StockAnalysis DBC quote</a></td>
-</tr>
-</tbody>
-</table>
-<h2>關鍵假設說明</h2>
-<ul>
-<li>FCF 成長率來源：無法建立。DBC 是商品期貨 ETF，不是以營運自由現金流創造企業價值的公司；SEC 10-Q 說明其主要 cash flow activity 是向 Authorized Participants 發行 Shares 並配置到美債、貨幣市場基金、T-Bill ETF 與期貨保證金，非公司營運 FCF。</li>
-<li>WACC 組成：無風險利率 4.61% + Beta 0.12 × 5.5% ERP = 5.27%（基準）。此為 skill 公式的機械計算，但未用於產生內在價值，因 DBC 缺乏可用 DCF 輸入。</li>
-<li>終值佔總估值比重：N/A（基準情境未產生 DCF enterprise value）。</li>
-<li>EV/EBITDA fallback：不適用。DBC 是基金/商品池，並非可用 EBITDA multiple 估值的營運公司。</li>
-</ul>
-<h2>結論</h2>
-<p>基準情境下無法計算 DBC 的 DCF 內在價值或安全邊際，原因是 DBC 為商品期貨 ETF，其價值主要由 NAV、期貨曝險、抵押資產收益、費用與追蹤誤差決定，而非可折現的企業自由現金流。以 DCF 對 DBC 估值會產生不具經濟意義的結果。</p>
-<hr>
-<p>⚠️ <strong>免責聲明：</strong> 本報告根據公開財務數據以 DCF 模型計算，為教育性研究，<strong>不構成投資建議</strong>、
-不是招攬、不是交易指示。DCF 估值對假設高度敏感，實際結果可能大幅偏離。
-請自行查證並諮詢合格理財顧問後再做任何投資決策。</p>
 
       </article>
       <article class="tab-panel review-panel report-content" role="tabpanel">

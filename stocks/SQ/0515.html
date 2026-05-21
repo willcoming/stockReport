@@ -6,7 +6,7 @@
   <title>SQ — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-tw-candles">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260521-hot-stocks-v1">
 </head>
 <body>
   <header class="site-header">
@@ -61,9 +61,7 @@
     <div class="tabs" role="tablist" aria-label="股票分析內容">
       <input id="tab-trading" type="radio" name="stock-tabs" checked>
       <label for="tab-trading" role="tab">多角色股票分析</label>
-      <input id="tab-dcf" type="radio" name="stock-tabs">
-      <label for="tab-dcf" role="tab">DCF 估值報告</label>
-      <input id="tab-review" type="radio" name="stock-tabs">
+<input id="tab-review" type="radio" name="stock-tabs">
       <label for="tab-review" role="tab">回顧</label>
       <article class="tab-panel trading-panel report-content" role="tabpanel">
         <h1>SQ / XYZ — 多角色股票分析（2026-05-15）</h1>
@@ -131,139 +129,6 @@
 <p>⚠️ <strong>免責聲明：</strong> 本內容是根據公開資訊整理的教育性研究。
 不構成投資建議、招攬或交易建議。市場可能朝任何 thesis 的反方向波動。
 交易前請自行研究，並諮詢合格持牌顧問。此 skill 不會下任何訂單。</p>
-
-      </article>
-      <article class="tab-panel dcf-panel report-content" role="tabpanel">
-        <h1>SQ — DCF 估值報告 (2026-05-15)</h1>
-<h2>DCF 估值結果</h2>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>FCF 成長率 (yr1-5)</th>
-<th>終值成長率</th>
-<th>WACC</th>
-<th>內在價值/股</th>
-<th>現價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>21.5%</td>
-<td>1.5%</td>
-<td>19.07%</td>
-<td>$62.35</td>
-<td>$71.53</td>
-<td>-12.8% (高估)</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>35.8%</td>
-<td>2.5%</td>
-<td>18.57%</td>
-<td>$108.95</td>
-<td>$71.53</td>
-<td>+52.3% (低估)</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>50.1%</td>
-<td>3.5%</td>
-<td>18.07%</td>
-<td>$186.91</td>
-<td>$71.53</td>
-<td>+161.3% (低估)</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%<br>
-計算單位：除每股數字外，DCF 現金流、企業價值與淨債務皆以百萬美元計。<br>
-SQ 已更名為 Block 現行 NYSE ticker <code>XYZ</code>；Block 公告顯示 Class A common stock 自 2025-01-21 起以 <code>XYZ</code> 交易：<a href="https://investors.block.xyz/investor-news/news-details/2025/Block-Announces-Ticker-Symbol-Change-to-XYZ-To-Report-Fourth-Quarter-Results/default.aspx" target="_blank" rel="noopener noreferrer">Block IR</a>。</p>
-</blockquote>
-<h2>數據來源</h2>
-<table>
-<thead>
-<tr>
-<th>項目</th>
-<th>數值</th>
-<th>來源</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>最近一年 FCF</td>
-<td>$3.258B TTM</td>
-<td>Block Q1 2026 shareholder letter：TTM Free Cash Flow $3,258M（<a href="https://s29.q4cdn.com/628966176/files/doc_financials/2026/q1/Block_Q1-2026-Shareholder-Letter.pdf" target="_blank" rel="noopener noreferrer">Block IR PDF</a>）</td>
-</tr>
-<tr>
-<td>年度 FCF 序列</td>
-<td>FY2025 $2.425B、FY2024 $1.553B、FY2023 -$0.050B、FY2022 $0.005B、FY2021 $0.714B</td>
-<td><a href="https://stockanalysis.com/stocks/xyz/financials/cash-flow-statement/" target="_blank" rel="noopener noreferrer">StockAnalysis cash flow</a></td>
-</tr>
-<tr>
-<td>5yr FCF CAGR</td>
-<td>35.78%</td>
-<td>以 FY2021 $0.714B 至 FY2025 $2.425B 計算</td>
-</tr>
-<tr>
-<td>Beta</td>
-<td>2.57</td>
-<td><a href="https://stockanalysis.com/stocks/xyz/statistics/" target="_blank" rel="noopener noreferrer">StockAnalysis statistics</a></td>
-</tr>
-<tr>
-<td>Cash &amp; Equivalents</td>
-<td>$6.858B</td>
-<td>Block Q1 2026 balance sheet（<a href="https://s29.q4cdn.com/628966176/files/doc_financials/2026/q1/Block_Q1-2026-Shareholder-Letter.pdf" target="_blank" rel="noopener noreferrer">Block IR PDF</a>）</td>
-</tr>
-<tr>
-<td>Total Debt</td>
-<td>$7.835B</td>
-<td>Current portion of long-term debt + warehouse funding facilities + long-term debt，取自 Block Q1 2026 balance sheet（<a href="https://s29.q4cdn.com/628966176/files/doc_financials/2026/q1/Block_Q1-2026-Shareholder-Letter.pdf" target="_blank" rel="noopener noreferrer">Block IR PDF</a>）</td>
-</tr>
-<tr>
-<td>Net Debt</td>
-<td>$0.977B</td>
-<td>$7.835B - $6.858B，計算值</td>
-</tr>
-<tr>
-<td>流通股數</td>
-<td>595.271M</td>
-<td>Class A 535.280M + Class B 59.991M，取自 Block Q1 2026 balance sheet（<a href="https://s29.q4cdn.com/628966176/files/doc_financials/2026/q1/Block_Q1-2026-Shareholder-Letter.pdf" target="_blank" rel="noopener noreferrer">Block IR PDF</a>）</td>
-</tr>
-<tr>
-<td>無風險利率 (10Y)</td>
-<td>4.43%</td>
-<td>Trading Economics / Federal Reserve 10-year constant maturity rate, May 2026（<a href="https://tradingeconomics.com/united-states/10-year-treasury-constant-maturity-rate-percent-d-na-fed-data.html" target="_blank" rel="noopener noreferrer">Trading Economics</a>）</td>
-</tr>
-<tr>
-<td>WACC</td>
-<td>悲觀 19.07%、基準 18.57%、樂觀 18.07%</td>
-<td>4.43% + Beta 2.57 x 5.5% ERP，再依情境加減 0.5%</td>
-</tr>
-<tr>
-<td>現價</td>
-<td>$71.53</td>
-<td>2026-05-14 美股收盤價，as_of_date 2026-05-15 時最新收盤資料：<a href="https://stockanalysis.com/stocks/xyz/" target="_blank" rel="noopener noreferrer">StockAnalysis overview</a></td>
-</tr>
-</tbody>
-</table>
-<h2>關鍵假設說明</h2>
-<ul>
-<li>FCF 成長率來源：以 FY2021 至 FY2025 年度 FCF CAGR 35.78% 作為基準情境；悲觀情境為 0.6x，樂觀情境為 1.4x。</li>
-<li>WACC 組成：無風險利率 4.43% + Beta 2.57 x 5.5% ERP = 18.57%；悲觀情境加 0.5%，樂觀情境減 0.5%。</li>
-<li>DCF 使用最近 TTM FCF $3.258B 作為起始 FCF，預測期間為 5 年。</li>
-<li>終值佔總估值比重：54.6%（悲觀）、62.2%（基準）、68.4%（樂觀）。基準情境未超過 70%，但結果仍對終值成長率與 WACC 高度敏感。</li>
-<li>由於 SQ / XYZ 近年 FCF 從 FY2023 負值轉為 FY2025 與 TTM 明顯正值，35.78% CAGR 反映的是修復期增長，未必能線性外推。</li>
-</ul>
-<h2>結論</h2>
-<p>基準情境下，SQ（現行 ticker：XYZ）的 DCF 內在價值約為 $108.95/股，較 $71.53 現價高約 52.3%。模型顯示有安全邊際，但主要不確定因子是 FCF 高成長是否可持續，以及 Cash App Borrow / Afterpay 等 lending products 對現金流與資本需求的影響。</p>
-<hr>
-<p>⚠️ <strong>免責聲明：</strong> 本報告根據公開財務數據以 DCF 模型計算，為教育性研究，<strong>不構成投資建議</strong>、
-不是招攬、不是交易指示。DCF 估值對假設高度敏感，實際結果可能大幅偏離。
-請自行查證並諮詢合格理財顧問後再做任何投資決策。</p>
 
       </article>
       <article class="tab-panel review-panel report-content" role="tabpanel">

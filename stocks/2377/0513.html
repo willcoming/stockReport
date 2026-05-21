@@ -6,7 +6,7 @@
   <title>2377 — 股票分析</title>
   <link rel="icon" href="../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../assets/style.css?v=20260512-tw-candles">
+  <link rel="stylesheet" href="../../assets/style.css?v=20260521-hot-stocks-v1">
 </head>
 <body>
   <header class="site-header">
@@ -61,9 +61,7 @@
     <div class="tabs" role="tablist" aria-label="股票分析內容">
       <input id="tab-trading" type="radio" name="stock-tabs" checked>
       <label for="tab-trading" role="tab">多角色股票分析</label>
-      <input id="tab-dcf" type="radio" name="stock-tabs">
-      <label for="tab-dcf" role="tab">DCF 估值報告</label>
-      <input id="tab-review" type="radio" name="stock-tabs">
+<input id="tab-review" type="radio" name="stock-tabs">
       <label for="tab-review" role="tab">回顧</label>
       <article class="tab-panel trading-panel report-content" role="tabpanel">
         <h1>2377.TW — 多角色股票分析（2026-05-13）</h1>
@@ -140,143 +138,6 @@
 <p>⚠️ <strong>免責聲明：</strong> 本內容是根據公開資訊整理的教育性研究。
 不構成投資建議、招攬或交易建議。市場可能朝任何 thesis 的反方向波動。
 交易前請自行研究，並諮詢合格持牌顧問。此 skill 不會下任何訂單。</p>
-
-      </article>
-      <article class="tab-panel dcf-panel report-content" role="tabpanel">
-        <h1>2377.TW — DCF 估值報告</h1>
-<h2>DCF 估值結果</h2>
-<p>估值日：2026-05-13；幣別：TWD；projection_years：5</p>
-<table>
-<thead>
-<tr>
-<th>情境</th>
-<th>FCF 成長率 (yr1-5)</th>
-<th>終值成長率</th>
-<th>WACC</th>
-<th>內在價值/股</th>
-<th>現價</th>
-<th>安全邊際</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>悲觀</td>
-<td>-41.7%</td>
-<td>1.5%</td>
-<td>8.07%</td>
-<td>NT$24.03</td>
-<td>NT$115.50</td>
-<td>-79.2% (高估)</td>
-</tr>
-<tr>
-<td>基準</td>
-<td>-69.6%</td>
-<td>2.5%</td>
-<td>7.57%</td>
-<td>NT$23.34</td>
-<td>NT$115.50</td>
-<td>-79.8% (高估)</td>
-</tr>
-<tr>
-<td>樂觀</td>
-<td>-97.4%</td>
-<td>3.5%</td>
-<td>7.07%</td>
-<td>NT$23.14</td>
-<td>NT$115.50</td>
-<td>-80.0% (高估)</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>安全邊際 = (內在價值 - 現價) / 現價 x 100%</p>
-</blockquote>
-<h2>數據來源</h2>
-<table>
-<thead>
-<tr>
-<th>項目</th>
-<th>數值</th>
-<th>來源</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>最近一年 FCF</td>
-<td>NT$0.418B</td>
-<td><a href="https://finance.yahoo.com/quote/2377.TW/cash-flow/" target="_blank" rel="noopener noreferrer">Yahoo Finance cash flow</a></td>
-</tr>
-<tr>
-<td>年度 FCF 歷史</td>
-<td>2022: NT$14.818B；2023: NT$4.318B；2024: NT$2.694B；2025: NT$0.418B</td>
-<td><a href="https://finance.yahoo.com/quote/2377.TW/cash-flow/" target="_blank" rel="noopener noreferrer">Yahoo Finance cash flow</a></td>
-</tr>
-<tr>
-<td>5yr FCF CAGR</td>
-<td>資料不足；改用 3yr CAGR = -69.6%</td>
-<td>Yahoo Finance FCF 歷史值；Bash/Python 計算</td>
-</tr>
-<tr>
-<td>Beta</td>
-<td>0.562</td>
-<td><a href="https://finance.yahoo.com/quote/2377.TW/" target="_blank" rel="noopener noreferrer">Yahoo Finance summary</a></td>
-</tr>
-<tr>
-<td>Total Debt</td>
-<td>NT$11.701B</td>
-<td><a href="https://finance.yahoo.com/quote/2377.TW/balance-sheet/" target="_blank" rel="noopener noreferrer">Yahoo Finance balance sheet</a></td>
-</tr>
-<tr>
-<td>Cash &amp; Equivalents</td>
-<td>NT$31.242B</td>
-<td><a href="https://finance.yahoo.com/quote/2377.TW/balance-sheet/" target="_blank" rel="noopener noreferrer">Yahoo Finance balance sheet</a></td>
-</tr>
-<tr>
-<td>Net Debt</td>
-<td>-NT$19.541B（淨現金）</td>
-<td>Total Debt - Cash，Bash/Python 計算</td>
-</tr>
-<tr>
-<td>流通股數</td>
-<td>844.856M</td>
-<td><a href="https://finance.yahoo.com/quote/2377.TW/" target="_blank" rel="noopener noreferrer">Yahoo Finance summary</a>；<a href="https://tw.stock.yahoo.com/quote/2377.TW/profile" target="_blank" rel="noopener noreferrer">Yahoo 股市基本資料</a></td>
-</tr>
-<tr>
-<td>無風險利率 (10Y)</td>
-<td>4.481%</td>
-<td><a href="https://finance.yahoo.com/quote/%5ETNX/" target="_blank" rel="noopener noreferrer">Yahoo Finance ^TNX</a></td>
-</tr>
-<tr>
-<td>WACC</td>
-<td>悲觀 8.07%；基準 7.57%；樂觀 7.07%</td>
-<td>無風險利率 + Beta x 5.5% ERP；Bash/Python 計算</td>
-</tr>
-<tr>
-<td>現價</td>
-<td>NT$115.50</td>
-<td><a href="https://finance.yahoo.com/quote/2377.TW/" target="_blank" rel="noopener noreferrer">Yahoo Finance chart/quote</a></td>
-</tr>
-<tr>
-<td>fallback_ticker</td>
-<td>2377.TWO 未使用</td>
-<td>primary ticker 2377.TW 可取得資料；2377.TWO 查無足夠資料</td>
-</tr>
-</tbody>
-</table>
-<h2>關鍵假設說明</h2>
-<ul>
-<li>FCF 成長率來源：Yahoo Finance 可取得 2022-2025 年度 FCF，2021 年度 FCF 不足，因此依 skill 規則改用 3yr FCF CAGR；2022 至 2025 FCF 由 NT$14.818B 降至 NT$0.418B，基準 CAGR 為 -69.6%。</li>
-<li>WACC 組成：無風險利率 4.481% + Beta 0.562 x 5.5% ERP = 7.57%（基準情境）；悲觀加 0.5%，樂觀減 0.5%。</li>
-<li>終值佔總估值比重：8.5%（基準情境）。</li>
-<li>基準情境終值佔比未超過 70%，但估值高度受最近一年 FCF 大幅下降與未來 FCF 成長假設影響。</li>
-<li>因基準 FCF CAGR 為負值，依 skill 公式機械套用後，樂觀情境的成長率數值會比悲觀情境更負；此處保留公式結果並在解讀時視為敏感度情境。</li>
-</ul>
-<h2>結論</h2>
-<p>基準情境下，2377.TW 的 DCF 內在價值約 NT$23.34/股，較 2026-05-13 現價 NT$115.50 低約 79.8%。此結果主要由最近年度 FCF 明顯下滑與負 3yr FCF CAGR 驅動，最主要不確定因子是 2026 年後 FCF 是否能回復至歷史較高水準。</p>
-<hr>
-<p>⚠️ <strong>免責聲明：</strong> 本報告根據公開財務數據以 DCF 模型計算，為教育性研究，<strong>不構成投資建議</strong>、
-不是招攬、不是交易指示。DCF 估值對假設高度敏感，實際結果可能大幅偏離。
-請自行查證並諮詢合格理財顧問後再做任何投資決策。</p>
 
       </article>
       <article class="tab-panel review-panel report-content" role="tabpanel">
