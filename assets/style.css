@@ -22,6 +22,7 @@ html {
   --gold: #a35f00;
   --gold-soft: #fff4df;
   --danger: #d70015;
+  --sidebar-width: 256px;
   --shadow: 0 18px 48px rgba(0, 0, 0, 0.08);
   --shadow-sm: 0 8px 24px rgba(0, 0, 0, 0.055);
   --shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.72);
@@ -29,6 +30,7 @@ html {
 
 body {
   margin: 0;
+  padding-left: var(--sidebar-width);
   background:
     radial-gradient(circle at 18% -12%, rgba(0, 113, 227, 0.12), transparent 360px),
     radial-gradient(circle at 88% 8%, rgba(52, 199, 89, 0.08), transparent 320px),
@@ -54,20 +56,25 @@ label:focus-visible {
 }
 
 .site-header {
-  display: grid;
-  grid-template-columns: minmax(160px, 1fr) auto minmax(160px, 1fr);
-  align-items: center;
-  gap: 16px;
-  min-height: 64px;
-  padding: 12px clamp(18px, 4vw, 48px);
-  border-bottom: 1px solid rgba(60, 60, 67, 0.12);
+  position: fixed;
+  inset: 0 auto 0 0;
+  z-index: 10;
+  width: var(--sidebar-width);
+  min-height: 100vh;
+  padding: 20px 14px;
+  border-right: 1px solid rgba(60, 60, 67, 0.12);
   background: rgba(251, 251, 253, 0.78);
   backdrop-filter: saturate(180%) blur(20px);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.72);
+  overflow-y: auto;
+}
+
+.site-header-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-height: calc(100vh - 40px);
 }
 
 .site-header time {
@@ -77,62 +84,77 @@ label:focus-visible {
 }
 
 .site-header-navs {
-  display: grid;
-  justify-items: center;
-  gap: 2px;
+  display: block;
 }
 
 .site-header-meta {
-  justify-self: end;
+  margin-top: auto;
   color: var(--muted);
   font-size: 0.86rem;
   font-weight: 700;
 }
 
 .site-nav {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 7px;
   color: var(--muted);
   font-size: 0.94rem;
   font-weight: 800;
 }
 
-.site-subnav {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 6px;
-  color: var(--muted);
-  font-size: 0.84rem;
-  font-weight: 800;
+.site-nav-list,
+.site-subnav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav-list {
+  display: grid;
+  gap: 4px;
+}
+
+.site-nav-group {
+  display: grid;
+  gap: 3px;
+}
+
+.site-subnav-list {
+  display: grid;
+  gap: 2px;
+  padding-left: 16px;
+  margin: 2px 0 8px;
+  border-left: 1px solid rgba(60, 60, 67, 0.12);
 }
 
 .site-nav a,
-.site-subnav a {
+.site-subnav-list a {
   display: inline-flex;
   align-items: center;
-  min-height: 34px;
-  padding: 4px 8px;
+  justify-content: flex-start;
+  width: 100%;
+  min-height: 38px;
+  padding: 6px 10px;
   color: var(--ink);
   text-decoration: none;
   border-radius: 8px;
-  transition: background 160ms ease, color 160ms ease;
+  overflow-wrap: anywhere;
+  transition: background 160ms ease, color 160ms ease, box-shadow 160ms ease;
 }
 
-.site-subnav a {
-  min-height: 28px;
-  padding: 2px 7px;
+.site-subnav-list a {
+  min-height: 36px;
+  padding: 5px 9px;
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 750;
 }
 
 .site-nav a:hover,
 .site-nav a.active,
-.site-subnav a:hover {
+.site-subnav-list a:hover,
+.site-subnav-list a.active {
   color: var(--accent-ink);
   background: var(--accent-soft);
+  box-shadow: inset 0 0 0 1px rgba(0, 113, 227, 0.08);
 }
 
 .site-nav-separator {
@@ -143,15 +165,18 @@ label:focus-visible {
 .back-link {
   display: inline-flex;
   align-items: center;
-  min-height: 34px;
+  min-height: 40px;
+  padding: 0 10px;
   color: var(--ink);
-  font-size: 0.95rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 800;
   text-decoration: none;
+  border-radius: 8px;
 }
 
 .back-link:hover {
   color: var(--accent-ink);
+  background: rgba(0, 113, 227, 0.07);
 }
 
 .visually-hidden {
@@ -168,7 +193,7 @@ label:focus-visible {
 
 .report-shell,
 .index-shell {
-  width: calc(100vw - 32px);
+  width: min(1180px, calc(100% - 32px));
   max-width: 1180px;
   margin: 0 auto;
 }
@@ -356,6 +381,8 @@ h1 {
 .report-content p,
 .report-content li {
   color: #2d3735;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 table {
@@ -523,6 +550,15 @@ tbody tr:nth-child(even) {
   gap: 18px;
 }
 
+.priority-grid > *,
+.priority-market,
+.priority-table-wrap,
+.performance-section,
+.performance-table-wrap {
+  min-width: 0;
+  max-width: 100%;
+}
+
 .priority-link-card {
   display: grid;
   gap: 8px;
@@ -571,6 +607,7 @@ tbody tr:nth-child(even) {
 
 .priority-table-wrap {
   overflow-x: auto;
+  max-width: 100%;
   margin: 0 0 22px;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -913,25 +950,86 @@ tbody tr:nth-child(even) {
   display: block;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 1023px) {
+  body {
+    padding-left: 0;
+  }
+
   .site-header {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    gap: 4px;
+    position: sticky;
+    inset: auto;
+    width: 100%;
+    min-height: 0;
+    max-height: none;
+    padding: 10px 12px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(60, 60, 67, 0.12);
+    overflow: visible;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.72);
+  }
+
+  .site-header-inner {
+    display: grid;
+    gap: 8px;
+    min-height: 0;
   }
 
   .site-header-meta {
-    justify-self: center;
+    margin-top: 0;
   }
 
-  .site-nav,
-  .site-subnav {
+  .site-nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .site-nav-group {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 4px 6px;
+  }
+
+  .site-subnav-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin: 0;
+    padding-left: 8px;
+    border-left: 1px solid rgba(60, 60, 67, 0.12);
+  }
+
+  .site-nav a,
+  .site-subnav-list a {
+    width: auto;
+    min-height: 36px;
+    padding: 5px 9px;
+  }
+}
+
+@media (max-width: 720px) {
+  .site-header {
+    padding: 10px;
+  }
+
+  .site-header-meta {
+    font-size: 0.8rem;
+  }
+
+  .site-nav-list,
+  .site-nav-group,
+  .site-subnav-list {
     width: 100%;
+  }
+
+  .site-subnav-list {
+    padding-left: 10px;
   }
 
   .report-shell,
   .index-shell {
-    width: calc(100vw - 24px);
+    width: calc(100% - 24px);
   }
 
   .report-content {
