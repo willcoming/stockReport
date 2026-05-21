@@ -6,7 +6,7 @@
   <title>投資情報雷達</title>
   <link rel="icon" href="assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/radar-icon.svg">
-  <link rel="stylesheet" href="assets/style.css?v=20260521-dashboard-v2">
+  <link rel="stylesheet" href="assets/style.css?v=20260521-no-dashboard-v1">
 </head>
 <body>
   <header class="site-header">
@@ -17,163 +17,7 @@
     <section class="index-hero">
       <p>YouTube Investment Radar</p>
       <h1>每日投資情報報告</h1>
-      <span>彙整 YouTube 投資內容，整理市場主線、<br>候選標的、研究優先順序。</span>
-    </section>
-    <section class="dashboard-strip" aria-label="首頁成效摘要">
-      <div class="dashboard-metric">
-        <span>近 30 日平均</span>
-        <strong>+0.02%</strong>
-      </div>
-      <div class="dashboard-metric">
-        <span>勝率</span>
-        <strong>40.4%</strong>
-      </div>
-      <div class="dashboard-metric">
-        <span>追蹤標的</span>
-        <strong>104/108</strong>
-      </div>
-      <div class="dashboard-metric">
-        <span>今日第一主線</span>
-        <strong>AI 晶片與資料中心基礎建設</strong>
-      </div>
-    </section>
-    <section class="theme-section" aria-labelledby="theme-title">
-      <div class="section-heading">
-        <p>Market Themes</p>
-        <h2 id="theme-title">熱門主線</h2>
-      </div>
-      <div class="theme-grid">
-        <a class="theme-card" href="reports/2026-05-21-0701/"><span>#1 · 高</span><strong>AI 晶片與資料中心基礎建設</strong><em>輝達供應鏈 (組裝、晶片代工)</em><small>資本支出過高若未能快速反映在終端變現，恐引發泡沫疑慮。</small></a>
-        <a class="theme-card" href="reports/2026-05-21-0701/"><span>#2 · 高</span><strong>記憶體與 AI 儲存轉型</strong><em>記憶體製造與控制 IC 廠</em><small>三星罷工若全面爆發將衝擊全球供應鏈，進一步推升科技通膨。</small></a>
-        <a class="theme-card" href="reports/2026-05-21-0701/"><span>#3 · 高</span><strong>太空與低軌衛星 (LEO)</strong><em>RKLB、台系微波/網通設備廠</em><small>題材面領先基本面，短期漲幅過大易遇獲利了結賣壓。</small></a>
-        <a class="theme-card" href="reports/2026-05-21-0701/"><span>#4 · 中高</span><strong>矽光子 (CPO) 與光通訊</strong><em>具備光通訊、封裝技術之網通/IC設計</em><small>族群輪動快，許多公司現階段獲利尚無法支撐高本益比。</small></a>
-        <a class="theme-card" href="reports/2026-05-21-0701/"><span>#5 · 中高</span><strong>電網、電源與液冷散熱</strong><em>重電、電源供應器、散熱模組</em><small>散熱模組廠籌碼較凌亂，部分標的融資餘額過高。</small></a>
-      </div>
-    </section>
-    <section class="ticker-search-section" aria-labelledby="ticker-search-title">
-      <div class="section-heading">
-        <p>Stock Radar</p>
-        <h2 id="ticker-search-title">個股雷達</h2>
-      </div>
-      <form class="ticker-search" data-ticker-search>
-        <label class="sr-only" for="ticker-search-title-input">個股代號或公司名</label>
-        <input id="ticker-search-title-input" type="search" list="ticker-search-title-options" placeholder="2330 / NVDA / 台積電" autocomplete="off">
-        <button type="submit">開啟個股雷達</button>
-        <span class="ticker-search-status" aria-live="polite"></span>
-      </form>
-      <datalist id="ticker-search-title-options">
-        <option value="0050 元大台灣50"></option>
-        <option value="1514 亞力"></option>
-        <option value="1519 華城"></option>
-        <option value="1560 中砂"></option>
-        <option value="1717 長興"></option>
-        <option value="1785 光洋科"></option>
-        <option value="2049 上銀"></option>
-        <option value="2301 光寶科"></option>
-        <option value="2303 聯電"></option>
-        <option value="2308 台達電"></option>
-        <option value="2313 華通"></option>
-        <option value="2317 鴻海"></option>
-        <option value="2327 國巨"></option>
-        <option value="2330 台積電"></option>
-        <option value="2337 旺宏"></option>
-        <option value="2356 英業達"></option>
-        <option value="2357 華碩"></option>
-        <option value="2359 所羅門"></option>
-        <option value="2376 技嘉"></option>
-        <option value="2382 廣達"></option>
-        <option value="2404 漢唐"></option>
-        <option value="2408 南亞科"></option>
-        <option value="2436 偉詮電"></option>
-        <option value="2449 京元電子"></option>
-        <option value="2454 聯發科"></option>
-        <option value="2486 一詮"></option>
-        <option value="2884 玉山金"></option>
-        <option value="3006 晶豪科"></option>
-        <option value="3008 大立光"></option>
-        <option value="3017 奇鋐"></option>
-        <option value="3026 禾伸堂"></option>
-        <option value="3035 智原"></option>
-        <option value="3044 健鼎"></option>
-        <option value="3081 聯亞"></option>
-        <option value="3227 原相"></option>
-        <option value="3231 緯創"></option>
-        <option value="3260 威剛"></option>
-        <option value="3363 上詮"></option>
-        <option value="3374 精材"></option>
-        <option value="3406 玉晶光"></option>
-        <option value="3481 群創"></option>
-        <option value="3491 昇達科"></option>
-        <option value="3693 營邦"></option>
-        <option value="4575 大銀微系統"></option>
-        <option value="4749 新應材"></option>
-        <option value="4919 新唐"></option>
-        <option value="4958 臻鼎-KY"></option>
-        <option value="4966 譜瑞-KY"></option>
-        <option value="4971 IET-KY"></option>
-        <option value="5274 信驊"></option>
-        <option value="5347 世界先進"></option>
-        <option value="5536 聖暉*"></option>
-        <option value="6285 啟碁"></option>
-        <option value="6415 矽力*-KY"></option>
-        <option value="6472 保瑞"></option>
-        <option value="6526 達發"></option>
-        <option value="6640 均華"></option>
-        <option value="6669 緯穎"></option>
-        <option value="6770 力積電"></option>
-        <option value="6944 兆聯實業"></option>
-        <option value="8016 矽創"></option>
-        <option value="8299 群聯"></option>
-        <option value="8390 金益鼎"></option>
-        <option value="9945 潤泰新"></option>
-        <option value="AAPL 蘋果"></option>
-        <option value="AMD 超微半導體"></option>
-        <option value="AMZN Amazon"></option>
-        <option value="ARM Arm"></option>
-        <option value="ASTS AST SpaceMobile"></option>
-        <option value="AVGO 博通"></option>
-        <option value="BA Boeing"></option>
-        <option value="BRK.B 波克夏"></option>
-        <option value="CBRS Cerebras"></option>
-        <option value="CEG Constellation Energy"></option>
-        <option value="COHR Coherent"></option>
-        <option value="CRDO Credo"></option>
-        <option value="CSCO 思科"></option>
-        <option value="DDOG Datadog"></option>
-        <option value="DIS Disney"></option>
-        <option value="F Ford"></option>
-        <option value="FRVO Fervo Energy"></option>
-        <option value="GLW 康寧"></option>
-        <option value="GOOGL Alphabet"></option>
-        <option value="INOD Innodata"></option>
-        <option value="INTC 英特爾"></option>
-        <option value="IREN Iris Energy"></option>
-        <option value="LITE Lumentum"></option>
-        <option value="MCD 麥當勞"></option>
-        <option value="MELI MercadoLibre"></option>
-        <option value="META Meta"></option>
-        <option value="MRVL 邁威爾科技"></option>
-        <option value="MSFT Microsoft"></option>
-        <option value="MU Micron"></option>
-        <option value="NBIS Nebius"></option>
-        <option value="NEE 新世紀能源"></option>
-        <option value="NET Cloudflare"></option>
-        <option value="NOK 諾基亞"></option>
-        <option value="NOW ServiceNow"></option>
-        <option value="NVDA 輝達"></option>
-        <option value="ONDS Ondas"></option>
-        <option value="PLTR Palantir"></option>
-        <option value="RKLB Rocket Lab"></option>
-        <option value="SATS EchoStar"></option>
-        <option value="SNDKV SanDisk"></option>
-        <option value="TSEM Tower Semi"></option>
-        <option value="TSM 台積電ADR"></option>
-        <option value="TXN Texas Instruments"></option>
-        <option value="UBER Uber"></option>
-        <option value="WOLF Wolfspeed"></option>
-        <option value="XYZ Block"></option>
-      </datalist>
-      <script type="application/json" data-ticker-search-data>{"0050": "stocks/0050/", "0050 元大台灣50": "stocks/0050/", "1514": "stocks/1514/", "1514 亞力": "stocks/1514/", "1519": "stocks/1519/", "1519 華城": "stocks/1519/", "1560": "stocks/1560/", "1560 中砂": "stocks/1560/", "1717": "stocks/1717/", "1717 長興": "stocks/1717/", "1785": "stocks/1785/", "1785 光洋科": "stocks/1785/", "2049": "stocks/2049/", "2049 上銀": "stocks/2049/", "2301": "stocks/2301/", "2301 光寶科": "stocks/2301/", "2303": "stocks/2303/", "2303 聯電": "stocks/2303/", "2308": "stocks/2308/", "2308 台達電": "stocks/2308/", "2313": "stocks/2313/", "2313 華通": "stocks/2313/", "2317": "stocks/2317/", "2317 鴻海": "stocks/2317/", "2327": "stocks/2327/", "2327 國巨": "stocks/2327/", "2330": "stocks/2330/", "2330 台積電": "stocks/2330/", "2337": "stocks/2337/", "2337 旺宏": "stocks/2337/", "2356": "stocks/2356/", "2356 英業達": "stocks/2356/", "2357": "stocks/2357/", "2357 華碩": "stocks/2357/", "2359": "stocks/2359/", "2359 所羅門": "stocks/2359/", "2376": "stocks/2376/", "2376 技嘉": "stocks/2376/", "2382": "stocks/2382/", "2382 廣達": "stocks/2382/", "2404": "stocks/2404/", "2404 漢唐": "stocks/2404/", "2408": "stocks/2408/", "2408 南亞科": "stocks/2408/", "2436": "stocks/2436/", "2436 偉詮電": "stocks/2436/", "2449": "stocks/2449/", "2449 京元電子": "stocks/2449/", "2454": "stocks/2454/", "2454 聯發科": "stocks/2454/", "2486": "stocks/2486/", "2486 一詮": "stocks/2486/", "2884": "stocks/2884/", "2884 玉山金": "stocks/2884/", "3006": "stocks/3006/", "3006 晶豪科": "stocks/3006/", "3008": "stocks/3008/", "3008 大立光": "stocks/3008/", "3017": "stocks/3017/", "3017 奇鋐": "stocks/3017/", "3026": "stocks/3026/", "3026 禾伸堂": "stocks/3026/", "3035": "stocks/3035/", "3035 智原": "stocks/3035/", "3044": "stocks/3044/", "3044 健鼎": "stocks/3044/", "3081": "stocks/3081/", "3081 聯亞": "stocks/3081/", "3227": "stocks/3227/", "3227 原相": "stocks/3227/", "3231": "stocks/3231/", "3231 緯創": "stocks/3231/", "3260": "stocks/3260/", "3260 威剛": "stocks/3260/", "3363": "stocks/3363/", "3363 上詮": "stocks/3363/", "3374": "stocks/3374/", "3374 精材": "stocks/3374/", "3406": "stocks/3406/", "3406 玉晶光": "stocks/3406/", "3481": "stocks/3481/", "3481 群創": "stocks/3481/", "3491": "stocks/3491/", "3491 昇達科": "stocks/3491/", "3693": "stocks/3693/", "3693 營邦": "stocks/3693/", "4575": "stocks/4575/", "4575 大銀微系統": "stocks/4575/", "4749": "stocks/4749/", "4749 新應材": "stocks/4749/", "4919": "stocks/4919/", "4919 新唐": "stocks/4919/", "4958": "stocks/4958/", "4958 臻鼎-KY": "stocks/4958/", "4966": "stocks/4966/", "4966 譜瑞-KY": "stocks/4966/", "4971": "stocks/4971/", "4971 IET-KY": "stocks/4971/", "5274": "stocks/5274/", "5274 信驊": "stocks/5274/", "5347": "stocks/5347/", "5347 世界先進": "stocks/5347/", "5536": "stocks/5536/", "5536 聖暉*": "stocks/5536/", "6285": "stocks/6285/", "6285 啟碁": "stocks/6285/", "6415": "stocks/6415/", "6415 矽力*-KY": "stocks/6415/", "6472": "stocks/6472/", "6472 保瑞": "stocks/6472/", "6526": "stocks/6526/", "6526 達發": "stocks/6526/", "6640": "stocks/6640/", "6640 均華": "stocks/6640/", "6669": "stocks/6669/", "6669 緯穎": "stocks/6669/", "6770": "stocks/6770/", "6770 力積電": "stocks/6770/", "6944": "stocks/6944/", "6944 兆聯實業": "stocks/6944/", "8016": "stocks/8016/", "8016 矽創": "stocks/8016/", "8299": "stocks/8299/", "8299 群聯": "stocks/8299/", "8390": "stocks/8390/", "8390 金益鼎": "stocks/8390/", "9945": "stocks/9945/", "9945 潤泰新": "stocks/9945/", "AAPL": "stocks/AAPL/", "AAPL 蘋果": "stocks/AAPL/", "ALPHABET": "stocks/GOOGL/", "AMAZON": "stocks/AMZN/", "AMD": "stocks/AMD/", "AMD 超微半導體": "stocks/AMD/", "AMZN": "stocks/AMZN/", "AMZN AMAZON": "stocks/AMZN/", "ARM": "stocks/ARM/", "ARM ARM": "stocks/ARM/", "AST SPACEMOBILE": "stocks/ASTS/", "ASTS": "stocks/ASTS/", "ASTS AST SPACEMOBILE": "stocks/ASTS/", "AVGO": "stocks/AVGO/", "AVGO 博通": "stocks/AVGO/", "BA": "stocks/BA/", "BA BOEING": "stocks/BA/", "BLOCK": "stocks/XYZ/", "BOEING": "stocks/BA/", "BRK.B": "stocks/BRK.B/", "BRK.B 波克夏": "stocks/BRK.B/", "CBRS": "stocks/CBRS/", "CBRS CEREBRAS": "stocks/CBRS/", "CEG": "stocks/CEG/", "CEG CONSTELLATION ENERGY": "stocks/CEG/", "CEREBRAS": "stocks/CBRS/", "CLOUDFLARE": "stocks/NET/", "COHERENT": "stocks/COHR/", "COHR": "stocks/COHR/", "COHR COHERENT": "stocks/COHR/", "CONSTELLATION ENERGY": "stocks/CEG/", "CRDO": "stocks/CRDO/", "CRDO CREDO": "stocks/CRDO/", "CREDO": "stocks/CRDO/", "CSCO": "stocks/CSCO/", "CSCO 思科": "stocks/CSCO/", "DATADOG": "stocks/DDOG/", "DDOG": "stocks/DDOG/", "DDOG DATADOG": "stocks/DDOG/", "DIS": "stocks/DIS/", "DIS DISNEY": "stocks/DIS/", "DISNEY": "stocks/DIS/", "ECHOSTAR": "stocks/SATS/", "F": "stocks/F/", "F FORD": "stocks/F/", "FERVO ENERGY": "stocks/FRVO/", "FORD": "stocks/F/", "FRVO": "stocks/FRVO/", "FRVO FERVO ENERGY": "stocks/FRVO/", "GLW": "stocks/GLW/", "GLW 康寧": "stocks/GLW/", "GOOGL": "stocks/GOOGL/", "GOOGL ALPHABET": "stocks/GOOGL/", "IET-KY": "stocks/4971/", "INNODATA": "stocks/INOD/", "INOD": "stocks/INOD/", "INOD INNODATA": "stocks/INOD/", "INTC": "stocks/INTC/", "INTC 英特爾": "stocks/INTC/", "IREN": "stocks/IREN/", "IREN IRIS ENERGY": "stocks/IREN/", "IRIS ENERGY": "stocks/IREN/", "LITE": "stocks/LITE/", "LITE LUMENTUM": "stocks/LITE/", "LUMENTUM": "stocks/LITE/", "MCD": "stocks/MCD/", "MCD 麥當勞": "stocks/MCD/", "MELI": "stocks/MELI/", "MELI MERCADOLIBRE": "stocks/MELI/", "MERCADOLIBRE": "stocks/MELI/", "META": "stocks/META/", "META META": "stocks/META/", "MICRON": "stocks/MU/", "MICROSOFT": "stocks/MSFT/", "MRVL": "stocks/MRVL/", "MRVL 邁威爾科技": "stocks/MRVL/", "MSFT": "stocks/MSFT/", "MSFT MICROSOFT": "stocks/MSFT/", "MU": "stocks/MU/", "MU MICRON": "stocks/MU/", "NBIS": "stocks/NBIS/", "NBIS NEBIUS": "stocks/NBIS/", "NEBIUS": "stocks/NBIS/", "NEE": "stocks/NEE/", "NEE 新世紀能源": "stocks/NEE/", "NET": "stocks/NET/", "NET CLOUDFLARE": "stocks/NET/", "NOK": "stocks/NOK/", "NOK 諾基亞": "stocks/NOK/", "NOW": "stocks/NOW/", "NOW SERVICENOW": "stocks/NOW/", "NVDA": "stocks/NVDA/", "NVDA 輝達": "stocks/NVDA/", "ONDAS": "stocks/ONDS/", "ONDS": "stocks/ONDS/", "ONDS ONDAS": "stocks/ONDS/", "PALANTIR": "stocks/PLTR/", "PLTR": "stocks/PLTR/", "PLTR PALANTIR": "stocks/PLTR/", "RKLB": "stocks/RKLB/", "RKLB ROCKET LAB": "stocks/RKLB/", "ROCKET LAB": "stocks/RKLB/", "SANDISK": "stocks/SNDKV/", "SATS": "stocks/SATS/", "SATS ECHOSTAR": "stocks/SATS/", "SERVICENOW": "stocks/NOW/", "SNDKV": "stocks/SNDKV/", "SNDKV SANDISK": "stocks/SNDKV/", "TEXAS INSTRUMENTS": "stocks/TXN/", "TOWER SEMI": "stocks/TSEM/", "TSEM": "stocks/TSEM/", "TSEM TOWER SEMI": "stocks/TSEM/", "TSM": "stocks/TSM/", "TSM 台積電ADR": "stocks/TSM/", "TXN": "stocks/TXN/", "TXN TEXAS INSTRUMENTS": "stocks/TXN/", "UBER": "stocks/UBER/", "UBER UBER": "stocks/UBER/", "WOLF": "stocks/WOLF/", "WOLF WOLFSPEED": "stocks/WOLF/", "WOLFSPEED": "stocks/WOLF/", "XYZ": "stocks/XYZ/", "XYZ BLOCK": "stocks/XYZ/", "一詮": "stocks/2486/", "上詮": "stocks/3363/", "上銀": "stocks/2049/", "世界先進": "stocks/5347/", "中砂": "stocks/1560/", "亞力": "stocks/1514/", "京元電子": "stocks/2449/", "保瑞": "stocks/6472/", "信驊": "stocks/5274/", "偉詮電": "stocks/2436/", "健鼎": "stocks/3044/", "元大台灣50": "stocks/0050/", "兆聯實業": "stocks/6944/", "光寶科": "stocks/2301/", "光洋科": "stocks/1785/", "力積電": "stocks/6770/", "南亞科": "stocks/2408/", "博通": "stocks/AVGO/", "原相": "stocks/3227/", "台積電": "stocks/2330/", "台積電ADR": "stocks/TSM/", "台達電": "stocks/2308/", "啟碁": "stocks/6285/", "國巨": "stocks/2327/", "均華": "stocks/6640/", "大立光": "stocks/3008/", "大銀微系統": "stocks/4575/", "奇鋐": "stocks/3017/", "威剛": "stocks/3260/", "康寧": "stocks/GLW/", "廣達": "stocks/2382/", "思科": "stocks/CSCO/", "所羅門": "stocks/2359/", "技嘉": "stocks/2376/", "新世紀能源": "stocks/NEE/", "新唐": "stocks/4919/", "新應材": "stocks/4749/", "旺宏": "stocks/2337/", "昇達科": "stocks/3491/", "晶豪科": "stocks/3006/", "智原": "stocks/3035/", "波克夏": "stocks/BRK.B/", "漢唐": "stocks/2404/", "潤泰新": "stocks/9945/", "營邦": "stocks/3693/", "玉山金": "stocks/2884/", "玉晶光": "stocks/3406/", "矽創": "stocks/8016/", "矽力*-KY": "stocks/6415/", "禾伸堂": "stocks/3026/", "精材": "stocks/3374/", "緯創": "stocks/3231/", "緯穎": "stocks/6669/", "群創": "stocks/3481/", "群聯": "stocks/8299/", "聖暉*": "stocks/5536/", "聯亞": "stocks/3081/", "聯發科": "stocks/2454/", "聯電": "stocks/2303/", "臻鼎-KY": "stocks/4958/", "英業達": "stocks/2356/", "英特爾": "stocks/INTC/", "華城": "stocks/1519/", "華碩": "stocks/2357/", "華通": "stocks/2313/", "蘋果": "stocks/AAPL/", "諾基亞": "stocks/NOK/", "譜瑞-KY": "stocks/4966/", "超微半導體": "stocks/AMD/", "輝達": "stocks/NVDA/", "達發": "stocks/6526/", "邁威爾科技": "stocks/MRVL/", "金益鼎": "stocks/8390/", "長興": "stocks/1717/", "鴻海": "stocks/2317/", "麥當勞": "stocks/MCD/"}</script>
+      <span>每日彙整 YouTube 投資內容，生成市場主線、候選標的與研究優先順序。</span>
     </section>
     <section class="priority-section" aria-labelledby="priority-title">
       <div class="section-heading">
@@ -329,33 +173,5 @@
       </ul>
     </section>
   </main>
-  <script>
-(() => {
-  document.querySelectorAll("[data-ticker-search]").forEach((form) => {
-    const dataNode = form.parentElement?.querySelector("[data-ticker-search-data]");
-    const status = form.querySelector(".ticker-search-status");
-    let entries = {};
-    try {
-      entries = JSON.parse(dataNode?.textContent || "{}");
-    } catch (_error) {
-      entries = {};
-    }
-    form.addEventListener("submit", (event) => {
-      event.preventDefault();
-      const input = form.querySelector("input[type='search']");
-      const raw = (input?.value || "").trim();
-      const compact = raw.split(/\s+/)[0] || raw;
-      const key = raw.toUpperCase();
-      const compactKey = compact.toUpperCase();
-      const href = entries[key] || entries[compactKey];
-      if (href) {
-        window.location.href = href;
-        return;
-      }
-      if (status) status.textContent = "找不到符合的個股雷達頁";
-    });
-  });
-})();
-  </script>
 </body>
 </html>
