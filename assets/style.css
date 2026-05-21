@@ -199,9 +199,10 @@ label:focus-visible {
 
 .report-shell,
 .index-shell {
-  width: min(1180px, calc(100% - 32px));
-  max-width: 1180px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding-inline: clamp(12px, 2vw, 32px);
 }
 
 .report-hero,
@@ -221,7 +222,6 @@ label:focus-visible {
 
 h1 {
   margin: 0;
-  max-width: 920px;
   font-size: clamp(2rem, 4vw, 3.7rem);
   line-height: 1.02;
   letter-spacing: 0;
@@ -237,7 +237,6 @@ h1 {
   color: var(--muted);
   font-size: clamp(1rem, 1.5vw, 1.16rem);
   width: 100%;
-  max-width: 760px;
   overflow-wrap: anywhere;
   word-break: break-all;
 }
@@ -1058,11 +1057,6 @@ tbody tr:nth-child(even) {
 
   .site-subnav-list {
     padding-left: 10px;
-  }
-
-  .report-shell,
-  .index-shell {
-    width: calc(100% - 24px);
   }
 
   .report-content {
