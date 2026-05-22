@@ -6,7 +6,7 @@
   <title>2026-05-21 美股起漲股報告</title>
   <link rel="icon" href="../../../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../../../assets/style.css?v=20260522-technical-chart-max800-v1">
+  <link rel="stylesheet" href="../../../../assets/style.css?v=20260522-report-table-scroll-taipei-v1">
 </head>
 <body>
   <header class="site-header">
@@ -34,7 +34,7 @@
               <li><a href="../../../../breakout/us-performance.html">起漲股篩選成效</a></li>
             </ul>
           </li>
-          <li><a href="../../../../reports/index.html">熱門股報告</a></li>
+          <li><a href="../../../../reports/index.html">報告</a></li>
         </ul>
       </nav>
       </div>
@@ -45,694 +45,2095 @@
     <section class="report-hero">
       <p>US Breakout Report</p>
       <h1>2026-05-21 美股起漲股報告</h1>
-      <span>Generated 2026-05-21 15:31 UTC</span>
+      <span>Generated 2026-05-22 21:40 台北時間</span>
     </section>
     <article class="report-content">
       <p>資料日：2026-05-21<br>
-建立日：2026-05-21（Asia/Taipei）<br>
-來源：<code>reports/2026-05-21.md</code>、<code>data/usstock.sqlite3</code>、yfinance 日 K、公司 IR / SEC 公開資料<br>
-重要限制：本掃描於台灣時間 22:18 產生，約為紐約 2026-05-21 上午盤中，因此 <code>2026-05-21</code> 日 K 視為盤中候選，不視為收盤確認。</p>
-<h2>1. 整體結論摘要</h2>
-<p>本批 <code>成交量 &gt; 1,000,000</code> 的 NASDAQ / NYSE 普通股多方警報共 69 檔觸發，品質呈現明顯兩極：一邊是量子運算、AI data center、AI 光通訊、半導體設備等主線資金；另一邊是 penny stock、低價暴量、醫療小型股、meme / squeeze 屬性的短線反彈。真正值得優先研究的不是成交量最大的低價股，而是同時具備技術轉強、可驗證商業進展、現金或訂單支撐，且短線尚未完全失控的標的。</p>
-<p>1-6 個月起漲主線以量子運算最集中：<code><a href="/stockReport/stocks/RGTI/0521.html" target="_blank" rel="noopener noreferrer">RGTI</a></code>、<code><a href="/stockReport/stocks/QBTS/0521.html" target="_blank" rel="noopener noreferrer">QBTS</a></code>、<code><a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer">IONQ</a></code>、<code>QUBT</code> 同時出現在突破或趨勢轉強訊號。這裡 <code><a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer">IONQ</a></code> 的基本面驗證最強，<code><a href="/stockReport/stocks/RGTI/0521.html" target="_blank" rel="noopener noreferrer">RGTI</a></code> 與 <code><a href="/stockReport/stocks/QBTS/0521.html" target="_blank" rel="noopener noreferrer">QBTS</a></code> 的量價結構較像剛啟動，但收入基礎仍小或季度波動大，因此不可只因題材追價。AI data center / 算力租賃主線中，<code>APLD</code>、<code>IREN</code>、<code>NBIS</code> 都有可驗證的營收、合約或產能訊息，但多數已大幅發動，適合等回測，不適合把盤中突破當作無條件追高理由。</p>
-<p>6-12 個月中期基本面候選比較偏成熟或半成熟：<code><a href="/stockReport/stocks/IBM/0521.html" target="_blank" rel="noopener noreferrer">IBM</a></code>、<code><a href="/stockReport/stocks/LRCX/0521.html" target="_blank" rel="noopener noreferrer">LRCX</a></code>、<code>ARM</code>、<code><a href="/stockReport/stocks/LITE/0521.html" target="_blank" rel="noopener noreferrer">LITE</a></code>、<code>GFS</code>、<code>MS</code>、<code>BIRK</code>。這些標的的技術面未必最刺激，但財報能見度、現金流或產業位置較好。<code>NBIS</code>、<code>IREN</code>、<code>APLD</code> 介於起漲與中期之間，但資本支出、負債、股權稀釋與合約執行風險較高，應以「高成長高波動候選」處理。</p>
-<p>最大風險有五個：第一，2026-05-21 是盤中資料，收盤不確認就不能當正式突破。第二，量子與 AI infrastructure 多檔已有 20-60 日急漲，回撤風險高。第三，低價股如 <code>SBFM</code>、<code>LIMN</code>、<code>JUNS</code>、<code>NIVF</code>、<code>PCLA</code>、<code>ATPC</code>、<code>LAES</code> 雖然成交量暴增，但多數缺少足夠基本面資料或有低價 / 稀釋風險，不能升級。第四，AI data center 類的合約與 ARR 很吸引人，但 capex、融資與交付節奏會決定股價能否消化估值。第五，成熟股如 <code><a href="/stockReport/stocks/IBM/0521.html" target="_blank" rel="noopener noreferrer">IBM</a></code>、<code><a href="/stockReport/stocks/LRCX/0521.html" target="_blank" rel="noopener noreferrer">LRCX</a></code>、<code>MS</code>、<code>ARM</code> 較適合中期追蹤，不一定是短線爆發首選。</p>
-<h2>2. 起漲股優先研究名單</h2>
+建立日：2026-05-22（Asia/Taipei）<br>
+來源：<code>reports/2026-05-21.md</code>、<code>data/usstock.sqlite3</code>、公司 IR / SEC / 官方新聞稿、公開 short interest / institutional / insider 資料頁。<br>
+報告性質：公開資訊整理與教育性研究，不構成個人化投資建議、招攬或交易建議。</p>
+<p>完整 444 檔進榜標的技術分層：<code>本機來源檔</code><br>
+谷底翻身技術初篩：<code>本機來源檔</code></p>
+<h2>0. 全名單覆蓋漏斗與篩選母體</h2>
+<p>K 線報告有 714 筆普通股多方 signal rows，對應 444 檔 distinct tickers。本版先做全名單技術分層，再將少數標的進入財報、估值、籌碼與催化驗證。V4 依你的要求把每組候選名單擴大：主表不只列核心票，也列出下一批應補資料的研究池；但最後三選與最終精選仍維持嚴格。</p>
+<div class="table-scroll">
 <table>
 <thead>
 <tr>
-<th>排名</th>
-<th>Ticker</th>
-<th>公司名稱</th>
-<th>產業</th>
-<th style="text-align:right">起漲潛力分數</th>
-<th style="text-align:right">中期基本面分數</th>
-<th>狀態</th>
-<th>為什麼可能起漲</th>
-<th>催化因素</th>
-<th>操作建議</th>
-<th>失敗條件</th>
-<th>主要風險</th>
+<th>分層</th>
+<th style="text-align:right">檔數</th>
+<th>決策意義</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td><a href="/stockReport/stocks/RGTI/0521.html" target="_blank" rel="noopener noreferrer">RGTI</a></td>
-<td><a href="/stockReport/stocks/RGTI/0521.html" target="_blank" rel="noopener noreferrer">Rigetti</a> Computing</td>
-<td>量子運算</td>
-<td style="text-align:right">84</td>
-<td style="text-align:right">62</td>
-<td>剛發動</td>
-<td>[來源提及] 突破 ZLSMA、雙線向上，量 50.8M，20 日 +27.2%，52 週位置約 24.9%，尚非高檔。</td>
-<td>[資料支持] Q1 2026 revenue 4.4M，cash / investments 569M，108-qubit 系統與客戶部署。</td>
-<td>等回測再買</td>
-<td>跌回突破區且量縮，或下一季訂單未延續。</td>
-<td>營收仍小、虧損、量子題材估值波動。</td>
+<td>深度研究核心</td>
+<td style="text-align:right">5</td>
+<td>主線、技術與公開基本面資料相對完整</td>
 </tr>
 <tr>
-<td>2</td>
-<td><a href="/stockReport/stocks/QBTS/0521.html" target="_blank" rel="noopener noreferrer">QBTS</a></td>
-<td><a href="/stockReport/stocks/QBTS/0521.html" target="_blank" rel="noopener noreferrer">D-Wave</a> Quantum</td>
-<td>量子運算</td>
-<td style="text-align:right">82</td>
-<td style="text-align:right">58</td>
-<td>剛發動</td>
-<td>[來源提及] 突破 ZLSMA、空方趨勢結束，量 42.9M，相對量約 1.7x。</td>
-<td>[資料支持] Q1 bookings 33.4M、RPO 42.4M，但 revenue 僅 2.9M且 YoY 下滑。</td>
-<td>等回測再買</td>
-<td>bookings 無法轉 revenue，或收盤跌回趨勢線。</td>
-<td>revenue lumpy、營收基期小、題材波動。</td>
+<td>中期基本面追蹤</td>
+<td style="text-align:right">3</td>
+<td>財報與產業能見度較好，但短線位置需確認</td>
 </tr>
 <tr>
-<td>3</td>
-<td><a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer">IONQ</a></td>
-<td><a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer">IonQ</a></td>
-<td>量子運算</td>
-<td style="text-align:right">79</td>
-<td style="text-align:right">78</td>
-<td>已發動偏熱</td>
-<td>[來源提及] 突破 ZLSMA、背景轉紅，量 25.4M，60 日 +74.8%。</td>
-<td>[資料支持] Q1 2026 revenue 64.7M、YoY +755%，cash / investments 3.1B，全年 guidance 上修。</td>
-<td>等回測再買</td>
-<td>放量長黑跌破 20 日趨勢，或 guidance 被下修。</td>
-<td>短線已漲多，Adjusted EBITDA 仍虧損。</td>
+<td>已深度檢查但未列核心</td>
+<td style="text-align:right">17</td>
+<td>有討論價值，但因過熱、虧損、低價、資料不足或特殊結構降級</td>
 </tr>
 <tr>
-<td>4</td>
-<td>QUBT</td>
-<td>Quantum Computing Inc.</td>
-<td>量子題材</td>
-<td style="text-align:right">75</td>
+<td>下一批深度研究候選</td>
+<td style="text-align:right">9</td>
+<td>技術條件足夠，尚未補完整財報與新聞</td>
+</tr>
+<tr>
+<td>技術二線候選</td>
 <td style="text-align:right">45</td>
-<td>技術反彈</td>
-<td>[來源提及] 突破 ZLSMA、背景轉紅，量 22.0M。</td>
-<td>[推論] 受量子主線資金輪動帶動。</td>
-<td>等財報確認</td>
-<td>量縮跌回突破前平台，或財報無法驗證商業化。</td>
-<td>基本面資料不足，不能升級。</td>
+<td>有兩類以上技術訊號，但基本面未驗證</td>
 </tr>
 <tr>
-<td>5</td>
-<td>APLD</td>
-<td>Applied Digital</td>
-<td>AI data center</td>
-<td style="text-align:right">73</td>
-<td style="text-align:right">70</td>
-<td>已發動偏熱</td>
-<td>[來源提及] 突破 ZLSMA，收盤位置接近 52 週高位，60 日 +56.4%。</td>
-<td>[資料支持] Fiscal Q3 revenue 126.6M、YoY +139%，Adjusted EBITDA 44.1M。</td>
-<td>等回測再買</td>
-<td>AI data center 收入不續強，或 debt / capex 壓力擴大。</td>
-<td>GAAP net loss、債務與大型建置執行風險。</td>
+<td>大型股輪動觀察</td>
+<td style="text-align:right">81</td>
+<td>成交金額高但訊號較單薄，偏產業或資金輪動</td>
 </tr>
 <tr>
-<td>6</td>
-<td>IREN</td>
-<td>IREN</td>
-<td>AI Cloud / data center</td>
-<td style="text-align:right">72</td>
-<td style="text-align:right">68</td>
-<td>高成長高波動</td>
-<td>[來源提及] 背景轉紅、雙線向上，量 13.8M。</td>
-<td>[資料支持] NVIDIA 5 年 3.4B AI Cloud contract、CY26 目標 3.7B ARR；但 Q3 revenue 降至 144.8M且 net loss 247.8M。</td>
-<td>等財報確認</td>
-<td>合約 ramp 延後，或融資 / capex 條件惡化。</td>
-<td>Bitcoin 與 AI Cloud 轉型混合、虧損、稀釋與融資風險。</td>
+<td>低價或爆量風險</td>
+<td style="text-align:right">63</td>
+<td>低價、相對量異常或事件型反彈，先排除或只觀察</td>
 </tr>
 <tr>
-<td>7</td>
-<td><a href="/stockReport/stocks/LITE/0521.html" target="_blank" rel="noopener noreferrer">LITE</a></td>
-<td><a href="/stockReport/stocks/LITE/0521.html" target="_blank" rel="noopener noreferrer">Lumentum</a></td>
-<td>AI 光通訊</td>
-<td style="text-align:right">71</td>
-<td style="text-align:right">83</td>
-<td>已發動偏熱</td>
-<td>[來源提及] 空方趨勢結束，20 日 +12.0%，60 日 +31.1%。</td>
-<td>[資料支持] Fiscal Q3 net revenue 808.4M、YoY +90.1%，Q4 revenue guidance 960M-1.01B。</td>
-<td>等回測再買</td>
-<td>AI / cloud datacenter guidance 不達標或毛利率反轉。</td>
-<td>股價已在 52 週高位附近，供應鏈與客戶集中風險。</td>
-</tr>
-<tr>
-<td>8</td>
-<td>GFS</td>
-<td>GlobalFoundries</td>
-<td>半導體製造 / CPO</td>
-<td style="text-align:right">70</td>
-<td style="text-align:right">80</td>
-<td>已發動偏熱</td>
-<td>[來源提及] 突破 ZLSMA，60 日 +63.3%，52 週位置 100%。</td>
-<td>[資料支持] Q1 revenue 1.634B、Non-IFRS EPS 0.40、FCF 233M，推出 CPO SCALE。</td>
-<td>等回測再買</td>
-<td>站不穩突破後高檔，或 CPO 訂單驗證不足。</td>
-<td>已在高位，半導體景氣與估值修正風險。</td>
+<td>技術觀察池</td>
+<td style="text-align:right">221</td>
+<td>單一或弱組合訊號，不足以升級</td>
 </tr>
 </tbody>
 </table>
-<h2>3. 中期基本面候選名單</h2>
+</div>
+<p>谷底翻身初篩另外得到 327 檔技術修復候選，其中 A 層 61 檔、B 層 125 檔、C 層 141 檔。A 層不是買進名單，只表示價格位置與技術修復符合底部反轉初篩，下一步仍要補財報、現金流、估值、short interest 與內部人 / 機構持股。</p>
+<h2>1. 整體結論摘要</h2>
+<p>本批名單整體品質偏「主線明確，但追價與假反彈風險並存」。如果用強勢起漲邏輯看，最清楚的主線是 AI 雲與資料中心、量子運算、AI 光通訊 / 半導體 IP、電力與長時儲能；如果改用谷底翻身邏輯，候選會轉向仍低於 200 日線或距 52 週高點很遠、但已站回 20 / 60 日線的修復股。</p>
+<p>V4 擴充後，起漲研究池從 5 檔擴為 12 檔，谷底翻身研究池從 8 檔擴為 18 檔，中期基本面候選從 6 檔擴為 12 檔，等回測與等財報名單也各擴為 15 檔。新增標的大多仍屬「待補財報」或「只觀察」，不是升級成買進名單。</p>
+<p>核心決策不變：<a href="/stockReport/stocks/GLW/0521.html" target="_blank" rel="noopener noreferrer">GLW</a> 是本批基本面與技術證據最完整者；<a href="/stockReport/stocks/NBIS/0521.html" target="_blank" rel="noopener noreferrer">NBIS</a>、<a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer">IONQ</a>、<a href="/stockReport/stocks/RMBS/0521.html" target="_blank" rel="noopener noreferrer">RMBS</a>、<a href="/stockReport/stocks/IREN/0521.html" target="_blank" rel="noopener noreferrer">IREN</a> 屬於主線強但需等回測；<a href="/stockReport/stocks/ARM/0521.html" target="_blank" rel="noopener noreferrer">ARM</a>、<a href="/stockReport/stocks/VST/0521.html" target="_blank" rel="noopener noreferrer">VST</a>、<a href="/stockReport/stocks/SE/0521.html" target="_blank" rel="noopener noreferrer">SE</a> 偏中期基本面追蹤。谷底翻身模式下，<a href="/stockReport/stocks/SE/0521.html" target="_blank" rel="noopener noreferrer">SE</a>、<a href="/stockReport/stocks/VST/0521.html" target="_blank" rel="noopener noreferrer">VST</a>、<a href="/stockReport/stocks/SMCI/0521.html" target="_blank" rel="noopener noreferrer">SMCI</a>、FND、KMX、BIRK、BRZE、FOUR 是較乾淨的修復候選；EOSE、RGTI、QBTS、QUBT、ACHR、JOBY、QS、COMP、W、OTEX 可放進擴充觀察池，但必須用財報與現金流再次篩選。</p>
+<h2>2. 起漲股優先研究名單</h2>
+<div class="table-scroll">
 <table>
 <thead>
 <tr>
-<th>排名</th>
-<th>Ticker</th>
+<th style="text-align:right">排名</th>
+<th>股票代號</th>
 <th>公司名稱</th>
 <th>產業</th>
-<th style="text-align:right">中期基本面分數</th>
-<th style="text-align:right">起漲潛力分數</th>
-<th>中期投資理由</th>
-<th>財務驗證重點</th>
-<th>產業驗證重點</th>
+<th>中期分數</th>
+<th>起漲分數</th>
+<th>評級</th>
+<th>中期理由</th>
+<th>財務驗證</th>
+<th>產業驗證</th>
 <th>布局方式</th>
-<th>6-12 個月追蹤指標</th>
-<th>主要風險</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td><a href="/stockReport/stocks/IBM/0521.html" target="_blank" rel="noopener noreferrer">IBM</a></td>
-<td><a href="/stockReport/stocks/IBM/0521.html" target="_blank" rel="noopener noreferrer">IBM</a></td>
-<td>AI / hybrid cloud / software</td>
-<td style="text-align:right">88</td>
-<td style="text-align:right">66</td>
-<td>[資料支持] Q1 revenue 15.9B、constant currency +6%，FCF 2.2B，全年 revenue +5% 以上、FCF 年增約 1B。</td>
-<td>Software / Red Hat 成長、FCF、debt。</td>
-<td>AI enterprise adoption、software mix。</td>
-<td>可分批布局</td>
-<td>FCF、software growth、AI backlog。</td>
-<td>成長率不如高 beta AI，債務偏高。</td>
-</tr>
-<tr>
-<td>2</td>
-<td><a href="/stockReport/stocks/LRCX/0521.html" target="_blank" rel="noopener noreferrer">LRCX</a></td>
-<td><a href="/stockReport/stocks/LRCX/0521.html" target="_blank" rel="noopener noreferrer">Lam Research</a></td>
-<td>半導體設備</td>
-<td style="text-align:right">86</td>
-<td style="text-align:right">63</td>
-<td>[資料支持] March quarter revenue 5.84B、GAAP operating margin 35.0%、EPS 1.45，AI-driven demand 支撐。</td>
-<td>margin、orders、China exposure。</td>
-<td>WFE cycle、HBM / AI memory capex。</td>
-<td>等回檔布局</td>
-<td>revenue guidance、gross margin、China ratio。</td>
-<td>已接近 52 週高位，設備景氣循環。</td>
-</tr>
-<tr>
-<td>3</td>
-<td>ARM</td>
-<td>Arm Holdings</td>
-<td>CPU IP / AI edge / datacenter</td>
-<td style="text-align:right">87</td>
-<td style="text-align:right">64</td>
-<td>[資料支持] FY26 revenue 4.92B，Q4 revenue 1.49B，連續第三年 20%+ 成長。</td>
-<td>royalty growth、license revenue、margin。</td>
-<td>Cloud AI、Edge AI、Physical AI royalty。</td>
-<td>等回檔布局</td>
-<td>royalty YoY、AI server penetration。</td>
-<td>估值高、股價 60 日 +115.2%，不適合追高。</td>
-</tr>
-<tr>
-<td>4</td>
-<td><a href="/stockReport/stocks/LITE/0521.html" target="_blank" rel="noopener noreferrer">LITE</a></td>
-<td><a href="/stockReport/stocks/LITE/0521.html" target="_blank" rel="noopener noreferrer">Lumentum</a></td>
-<td>AI 光通訊 / CPO</td>
-<td style="text-align:right">83</td>
-<td style="text-align:right">71</td>
-<td>[資料支持] Q3 net revenue YoY +90.1%，Non-GAAP operating margin 32.2%，Q4 guidance 明確上修。</td>
-<td>revenue mix、non-GAAP margin、EPS guidance。</td>
-<td>OCS / CPO、cloud datacenter demand。</td>
-<td>等回檔布局</td>
-<td>Q4 revenue 960M-1.01B 是否達標。</td>
-<td>客戶需求、供應鏈與估值已反映。</td>
-</tr>
-<tr>
-<td>5</td>
-<td>GFS</td>
-<td>GlobalFoundries</td>
-<td>Specialty foundry / silicon photonics</td>
-<td style="text-align:right">80</td>
-<td style="text-align:right">70</td>
-<td>[資料支持] Q1 revenue 1.634B、cash 3.8B、operating cash flow 542M，CPO product launch。</td>
-<td>Non-IFRS margin、FCF、utilization。</td>
-<td>CPO / silicon photonics 訂單。</td>
-<td>等回檔布局</td>
-<td>CPO 客戶、gross margin、FCF。</td>
-<td>景氣循環與高位回檔。</td>
-</tr>
-<tr>
-<td>6</td>
-<td>MS</td>
-<td>Morgan Stanley</td>
-<td>金融 / wealth management</td>
-<td style="text-align:right">82</td>
-<td style="text-align:right">61</td>
-<td>[資料支持] Q1 net revenue 20.6B、EPS 3.43、ROTCE 27.1%，record quarter。</td>
-<td>Wealth net new assets、trading revenue、ROTCE。</td>
-<td>rate cycle、capital markets activity。</td>
-<td>中期觀察</td>
-<td>NNA、ROTCE、credit loss。</td>
-<td>金融週期與市場波動。</td>
-</tr>
-<tr>
-<td>7</td>
-<td>BIRK</td>
-<td>Birkenstock</td>
-<td>消費品牌</td>
-<td style="text-align:right">76</td>
-<td style="text-align:right">67</td>
-<td>[資料支持] Fiscal Q1 revenue EUR 402M，constant currency +17.8%，品牌需求穩。</td>
-<td>gross margin、tariff impact、net leverage。</td>
-<td>Americas / APAC growth、DTC mix。</td>
-<td>中期觀察</td>
-<td>gross margin、full-price sell-through。</td>
-<td>毛利受 FX / tariff 壓力，短線動能不如 AI。</td>
-</tr>
-</tbody>
-</table>
-<h2>4. 起漲股與中期候選交集名單</h2>
-<table>
-<thead>
-<tr>
-<th>Ticker</th>
-<th>公司名稱</th>
-<th style="text-align:right">起漲分數</th>
-<th style="text-align:right">中期分數</th>
-<th>為什麼同時符合</th>
-<th>最佳操作策略</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer">IONQ</a></td>
-<td><a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer">IonQ</a></td>
-<td style="text-align:right">79</td>
-<td style="text-align:right">78</td>
-<td>[來源提及] 技術突破；[資料支持] revenue、cash、guidance 與商業合約最完整，是量子鏈裡基本面驗證最強者。</td>
-<td>等回測到 20 日均線 / ZLSMA 附近，確認量縮不破再研究。</td>
-</tr>
-<tr>
-<td><a href="/stockReport/stocks/RGTI/0521.html" target="_blank" rel="noopener noreferrer">RGTI</a></td>
-<td><a href="/stockReport/stocks/RGTI/0521.html" target="_blank" rel="noopener noreferrer">Rigetti</a></td>
-<td style="text-align:right">84</td>
-<td style="text-align:right">62</td>
-<td>[來源提及] 量價最像剛發動；[資料支持] cash 充足、108-qubit 與客戶部署，但 revenue 很小。</td>
-<td>可列短線核心觀察，回測不破再研究。</td>
-</tr>
-<tr>
-<td><a href="/stockReport/stocks/LITE/0521.html" target="_blank" rel="noopener noreferrer">LITE</a></td>
-<td><a href="/stockReport/stocks/LITE/0521.html" target="_blank" rel="noopener noreferrer">Lumentum</a></td>
-<td style="text-align:right">71</td>
-<td style="text-align:right">83</td>
-<td>[來源提及] 趨勢轉強；[資料支持] AI / cloud optics revenue 與 guidance 強。</td>
-<td>中期優先，但短線只等回檔。</td>
-</tr>
-<tr>
-<td>GFS</td>
-<td>GlobalFoundries</td>
-<td style="text-align:right">70</td>
-<td style="text-align:right">80</td>
-<td>[來源提及] 突破；[資料支持] 仍有盈利與 FCF，CPO 題材可驗證。</td>
-<td>僅等高檔回測，不能追 52 週高位。</td>
-</tr>
-<tr>
-<td>APLD</td>
-<td>Applied Digital</td>
-<td style="text-align:right">73</td>
-<td style="text-align:right">70</td>
-<td>[來源提及] 技術突破；[資料支持] HPC hosting 收入增長，但 debt / net loss 仍高。</td>
-<td>高成長高風險，等回測與下一季確認。</td>
-</tr>
-</tbody>
-</table>
-<h2>5. 等回測再買名單</h2>
-<table>
-<thead>
-<tr>
-<th>Ticker</th>
-<th>公司名稱</th>
-<th>不追高原因</th>
-<th>合理回測觀察位置</th>
-<th>重新買進條件</th>
+<th>追蹤指標</th>
 <th>風險</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td style="text-align:right">1</td>
+<td><a href="/stockReport/stocks/GLW/0521.html" target="_blank" rel="noopener noreferrer">GLW</a></td>
+<td><a href="/stockReport/stocks/GLW/0521.html" target="_blank" rel="noopener noreferrer">Corning</a></td>
+<td>AI 光通訊 / 材料</td>
+<td>高</td>
+<td>中高</td>
+<td>A</td>
+<td>Q1 core sales +18%、Optical Communications +36% YoY，且新增 hyperscaler 長約，基本面有資料支持</td>
+<td>Core sales、core EPS、Optical Communications margin、自由現金流</td>
+<td>AI data center 光纖 / photonics demand、hyperscaler 採購延續性</td>
+<td>可以現在小量分批</td>
+<td>回測不破突破區、Q2 core sales guidance</td>
+<td>股價已離低點遠，AI capex cycle 與估值風險</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td><a href="/stockReport/stocks/NBIS/0521.html" target="_blank" rel="noopener noreferrer">NBIS</a></td>
+<td><a href="/stockReport/stocks/NBIS/0521.html" target="_blank" rel="noopener noreferrer">Nebius Group</a></td>
+<td>AI cloud / GPU infrastructure</td>
+<td>高</td>
+<td>高</td>
+<td>B</td>
+<td>AI Cloud revenue 與 2026 guidance 支撐主線，但掃描日接近 52 週高點</td>
+<td>AI Cloud EBITDA margin、CapEx、現金、debt / convertibles</td>
+<td>Microsoft / Meta / NVIDIA 合約執行、connected power 轉 active power</td>
+<td>等回測再買</td>
+<td>月線附近量縮止穩、connected power、pipeline 轉 revenue</td>
+<td>估值、產能交付與融資要求高</td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
 <td><a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer">IONQ</a></td>
 <td><a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer">IonQ</a></td>
-<td>60 日 +74.8%，盤中突破未收盤確認。</td>
-<td>需以最新 K 線確認：20 日均線 / ZLSMA 附近。</td>
-<td>縮量回測不破，下一季 guidance 維持。</td>
-<td>高估值、Adjusted EBITDA loss。</td>
+<td>量子運算</td>
+<td>中高</td>
+<td>高</td>
+<td>B</td>
+<td>Q1 revenue、RPO 與 guidance 上修提供題材外的驗證，但仍是高估值高波動股</td>
+<td>Adjusted EBITDA loss、cash、RPO 轉收入、交易整合影響</td>
+<td>256-qubit system sale、DARPA / 政府合約、商業客戶比例</td>
+<td>等回測再買</td>
+<td>回測 20 日線不破、RPO 續增、short interest 是否降溫</td>
+<td>虧損、估值敏感、量子題材擁擠</td>
 </tr>
 <tr>
-<td><a href="/stockReport/stocks/RGTI/0521.html" target="_blank" rel="noopener noreferrer">RGTI</a></td>
-<td><a href="/stockReport/stocks/RGTI/0521.html" target="_blank" rel="noopener noreferrer">Rigetti</a></td>
-<td>量子題材波動大，收入仍小。</td>
-<td>需以最新 K 線確認：突破平台上緣附近。</td>
-<td>回測不破且量能維持。</td>
-<td>商業化節奏慢。</td>
+<td style="text-align:right">4</td>
+<td><a href="/stockReport/stocks/RMBS/0521.html" target="_blank" rel="noopener noreferrer">RMBS</a></td>
+<td><a href="/stockReport/stocks/RMBS/0521.html" target="_blank" rel="noopener noreferrer">Rambus</a></td>
+<td>半導體 IP / AI memory</td>
+<td>高</td>
+<td>中高</td>
+<td>B</td>
+<td>Q1 revenue、product revenue 與 AI 記憶體頻寬需求互相支持</td>
+<td>Product revenue、licensing billings、operating cash flow</td>
+<td>HBM4E、DDR、AI server memory interface 採用</td>
+<td>等回測再買</td>
+<td>回測 20 日線或前波平台不破、Q2 product revenue outlook</td>
+<td>半導體循環與 royalty 波動</td>
 </tr>
 <tr>
-<td><a href="/stockReport/stocks/QBTS/0521.html" target="_blank" rel="noopener noreferrer">QBTS</a></td>
-<td><a href="/stockReport/stocks/QBTS/0521.html" target="_blank" rel="noopener noreferrer">D-Wave</a></td>
-<td>bookings 強但 revenue YoY 下降。</td>
-<td>需以最新 K 線確認：ZLSMA / 前波壓力轉支撐。</td>
-<td>bookings 轉 revenue，突破後不回落。</td>
-<td>收入認列 lumpy。</td>
+<td style="text-align:right">5</td>
+<td><a href="/stockReport/stocks/IREN/0521.html" target="_blank" rel="noopener noreferrer">IREN</a></td>
+<td><a href="/stockReport/stocks/IREN/0521.html" target="_blank" rel="noopener noreferrer">IREN</a></td>
+<td>AI cloud / Bitcoin mining 轉型</td>
+<td>中高</td>
+<td>高</td>
+<td>B</td>
+<td>AI Cloud Services revenue 與大型合約支持轉型，但股價已大幅修復</td>
+<td>AI cloud gross margin、net loss、debt / financing、ASIC 轉 GPU 進度</td>
+<td>AI cloud 交付、資料中心電力、GPU 供應</td>
+<td>等回測再買</td>
+<td>20 / 60 日均線間量縮止穩、AI cloud billing 續增</td>
+<td>淨損、折舊 / 減損、比特幣價格與電力成本</td>
 </tr>
 <tr>
-<td>APLD</td>
-<td>Applied Digital</td>
-<td>52 週位置約 97%，股價已反映 AI data center ramp。</td>
-<td>需以最新 K 線確認：20 日線 / 缺口支撐。</td>
-<td>HPC hosting 收入與 EBITDA 延續。</td>
-<td>debt、capex、GAAP loss。</td>
+<td style="text-align:right">6</td>
+<td>RGTI</td>
+<td>Rigetti Computing</td>
+<td>量子運算</td>
+<td>中</td>
+<td>高</td>
+<td>B</td>
+<td>三訊號同時轉強且成交活躍，但基本面成熟度低於 <a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer">IONQ</a></td>
+<td>Cash、net loss、QPU 銷售轉收入</td>
+<td>108-qubit adoption、政府 / 企業量子專案</td>
+<td>等回測再買</td>
+<td>突破後量縮回測不破、收入能否放大</td>
+<td>收入規模小、虧損與題材擁擠</td>
 </tr>
 <tr>
-<td>NBIS</td>
-<td>Nebius</td>
-<td>60 日 +109.7%、52 週位置 100%，明顯已發動。</td>
-<td>需以最新 K 線確認：高檔整理後第一次有效回測。</td>
-<td>revenue / ARR 繼續達標，價格不跌破中期趨勢。</td>
-<td>capex 很大、估值與執行風險。</td>
+<td style="text-align:right">7</td>
+<td>QBTS</td>
+<td>D-Wave Quantum</td>
+<td>量子運算</td>
+<td>中</td>
+<td>高</td>
+<td>B</td>
+<td>技術強度高且 bookings 題材明確，但 revenue timing 需確認</td>
+<td>Revenue、RPO、gross margin、net loss</td>
+<td>Advantage2、system sale、commercial customers</td>
+<td>等回測再買</td>
+<td>前高突破後回測不破、bookings 轉收入</td>
+<td>營收確認節奏、虧損與高波動</td>
 </tr>
 <tr>
-<td>ARM</td>
-<td>Arm</td>
-<td>60 日 +115.2%、52 週高位。</td>
-<td>需以最新 K 線確認：中期均線或前高回測。</td>
-<td>royalty 與 license growth 繼續加速。</td>
-<td>估值高。</td>
-</tr>
-<tr>
-<td><a href="/stockReport/stocks/LRCX/0521.html" target="_blank" rel="noopener noreferrer">LRCX</a></td>
-<td><a href="/stockReport/stocks/LRCX/0521.html" target="_blank" rel="noopener noreferrer">Lam Research</a></td>
-<td>接近 52 週高位，相對量偏低。</td>
-<td>需以最新 K 線確認：突破後回測不破。</td>
-<td>AI memory / WFE demand 繼續。</td>
-<td>半導體設備循環。</td>
-</tr>
-</tbody>
-</table>
-<h2>6. 等財報確認名單</h2>
-<table>
-<thead>
-<tr>
-<th>Ticker</th>
-<th>公司名稱</th>
-<th>技術面優點</th>
-<th>基本面缺口</th>
-<th>需要確認的資料</th>
-<th>確認後可能升級為</th>
-</tr>
-</thead>
-<tbody>
-<tr>
+<td style="text-align:right">8</td>
 <td>QUBT</td>
 <td>Quantum Computing Inc.</td>
-<td>突破 ZLSMA、雙線向上。</td>
-<td>缺少足夠 revenue、margin、cash runway 驗證。</td>
-<td>最近季度 revenue、cash、backlog、dilution。</td>
-<td>起漲觀察。</td>
+<td>量子 / 光子晶片</td>
+<td>低</td>
+<td>高</td>
+<td>C</td>
+<td>技術訊號與題材強，但本輪公開基本面驗證不足</td>
+<td>需補 revenue、cash runway、稀釋紀錄、客戶驗證</td>
+<td>光子晶片 / 量子題材是否有訂單落地</td>
+<td>只觀察</td>
+<td>回測不破且補出財報資料</td>
+<td>題材波動、資料不足、估值敏感</td>
 </tr>
 <tr>
-<td>IREN</td>
-<td>IREN</td>
-<td>趨勢背景轉紅，AI Cloud 合約題材強。</td>
-<td>Q3 revenue QoQ 下降、net loss 擴大，轉型仍需驗證。</td>
-<td>NVIDIA / Microsoft 合約 ramp、融資條件、AI Cloud revenue。</td>
-<td>短中期交集。</td>
-</tr>
-<tr>
+<td style="text-align:right">9</td>
 <td>APLD</td>
 <td>Applied Digital</td>
-<td>突破 ZLSMA，HPC hosting 收入大增。</td>
-<td>GAAP loss、debt、建置與融資壓力。</td>
-<td>下季 revenue、Adjusted EBITDA、cash / debt。</td>
-<td>高成長中期候選。</td>
+<td>AI / HPC data center</td>
+<td>中</td>
+<td>中高</td>
+<td>D</td>
+<td>HPC / AI data center 題材明確，但 debt、net loss、減值風險使追價不乾淨</td>
+<td>Debt service、net loss、HPC hosting revenue、現金流</td>
+<td>Polaris Forge / hyperscaler demand</td>
+<td>暫不追高</td>
+<td>Q4 revenue、租約收入、debt ratio</td>
+<td>高負債、股價貼近 52 週高點</td>
 </tr>
 <tr>
-<td>SMCI</td>
-<td>Super Micro Computer</td>
-<td>MACD 金叉。</td>
-<td>毛利率低、Q3 cash flow used in operations 6.6B，營運資金壓力大。</td>
-<td>Q4 sales、gross margin、operating cash flow。</td>
-<td>AI server 中期觀察。</td>
+<td style="text-align:right">10</td>
+<td>CIFR</td>
+<td>Cipher Digital</td>
+<td>AI / HPC / Bitcoin mining</td>
+<td>中</td>
+<td>中高</td>
+<td>C</td>
+<td>技術延續強，但仍需確認 AI compute 轉型與礦業週期曝險</td>
+<td>AI / HPC revenue、hashrate、電力成本、cash</td>
+<td>AI compute 合約、Bitcoin cycle、data center 電力</td>
+<td>等回測再買</td>
+<td>20 日線回測、AI revenue 佔比提升</td>
+<td>比特幣價格、稀釋、轉型執行</td>
 </tr>
 <tr>
-<td>PLUG</td>
-<td>Plug Power</td>
-<td>背景轉紅、雙線向上。</td>
-<td>長期虧損與資金需求需確認。</td>
-<td>cash runway、gross margin、hydrogen demand。</td>
-<td>只觀察或技術反彈。</td>
+<td style="text-align:right">11</td>
+<td>BTDR</td>
+<td>Bitdeer Technologies</td>
+<td>加密礦業 / AI compute</td>
+<td>中</td>
+<td>中高</td>
+<td>C</td>
+<td>站回多條均線且成交量充足，但仍偏週期與轉型股</td>
+<td>Mining margin、ASIC / cloud revenue、debt、cash</td>
+<td>Bitcoin cycle、AI compute 產能、晶片供應</td>
+<td>等回測再買</td>
+<td>回測 20 / 60 日線不破、財報確認轉型</td>
+<td>加密資產波動、CapEx、估值</td>
 </tr>
 <tr>
-<td>XPEV</td>
-<td>XPeng</td>
-<td>低位突破 ZLSMA。</td>
-<td>EV 競爭與交付動能需確認。</td>
-<td>Q1 2026 revenue、deliveries、margin、guidance。</td>
-<td>中期觀察。</td>
+<td style="text-align:right">12</td>
+<td>GTLS</td>
+<td>Chart Industries</td>
+<td>工業氣體 / 能源設備</td>
+<td>中</td>
+<td>中高</td>
+<td>C</td>
+<td>三類技術訊號齊全且成交金額高，但掃描日太接近 52 週高點</td>
+<td>Orders、backlog、margin、debt reduction</td>
+<td>LNG、hydrogen、工業氣體設備需求</td>
+<td>等回測再買</td>
+<td>靠近前高後量縮回測不破</td>
+<td>追高、槓桿與循環訂單風險</td>
 </tr>
 </tbody>
 </table>
-<h2>7. 暫時排除名單</h2>
+</div>
+<h2>3. 谷底翻身優先研究名單</h2>
+<div class="table-scroll">
 <table>
 <thead>
 <tr>
-<th>Ticker</th>
+<th style="text-align:right">排名</th>
+<th>股票代號</th>
 <th>公司名稱</th>
-<th>排除原因</th>
-<th>未來重新納入條件</th>
+<th>產業</th>
+<th>中期分數</th>
+<th>起漲分數</th>
+<th>評級</th>
+<th>中期理由</th>
+<th>財務驗證</th>
+<th>產業驗證</th>
+<th>布局方式</th>
+<th>追蹤指標</th>
+<th>風險</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>SBFM</td>
-<td>Sunshine Biopharma</td>
-<td>股價低於 1 美元，雖相對量 8.3x，但仍屬高風險低價反彈。</td>
-<td>站回合規價格區、財報與 cash runway 改善。</td>
+<td style="text-align:right">1</td>
+<td><a href="/stockReport/stocks/SE/0521.html" target="_blank" rel="noopener noreferrer">SE</a></td>
+<td><a href="/stockReport/stocks/SE/0521.html" target="_blank" rel="noopener noreferrer">Sea Limited</a></td>
+<td>電商 / 遊戲 / 金融</td>
+<td>中高</td>
+<td>中</td>
+<td>B</td>
+<td>距 52 週高點約 -55%，離低點約 14%，仍低於 200 日線但站回 20 / 60 日線，符合修復段</td>
+<td>Shopee margin、Monee NPL、Garena bookings、free cash flow</td>
+<td>東南亞消費、金融滲透率、遊戲活躍度</td>
+<td>突破確認再買</td>
+<td>站回 200 日線、NPL 維持穩定、財報成長延續</td>
+<td>信貸風險、競爭、監管</td>
 </tr>
 <tr>
-<td>LIMN</td>
-<td>Liminatus Pharma</td>
-<td>低價股，單日量暴增 107x，容易是事件 / squeeze。</td>
-<td>有明確臨床 / 財務驗證且價格結構穩定。</td>
+<td style="text-align:right">2</td>
+<td><a href="/stockReport/stocks/VST/0521.html" target="_blank" rel="noopener noreferrer">VST</a></td>
+<td><a href="/stockReport/stocks/VST/0521.html" target="_blank" rel="noopener noreferrer">Vistra</a></td>
+<td>電力 / 獨立發電</td>
+<td>高</td>
+<td>中</td>
+<td>B</td>
+<td>距 52 週高點約 -32%，離低點約 11%，仍低於 200 日線，偏底部修復</td>
+<td>EBITDA、FCF before growth、hedge quality、debt / credit rating</td>
+<td>AI / data center 用電需求、capacity pricing</td>
+<td>等回測再買</td>
+<td>站回 200 日線、guidance 維持、credit rating 變化</td>
+<td>電價、天氣、監管與避險損益</td>
 </tr>
 <tr>
-<td>JUNS</td>
-<td>Jupiter Neurosciences</td>
-<td>股價約 0.25，超低價 RSI 反彈。</td>
-<td>重新取得基本面驗證與合規價格結構。</td>
+<td style="text-align:right">3</td>
+<td><a href="/stockReport/stocks/SMCI/0521.html" target="_blank" rel="noopener noreferrer">SMCI</a></td>
+<td><a href="/stockReport/stocks/SMCI/0521.html" target="_blank" rel="noopener noreferrer">Super Micro Computer</a></td>
+<td>AI server</td>
+<td>中</td>
+<td>中</td>
+<td>C</td>
+<td>距 52 週高點約 -45%，站回 20 / 60 日線但仍低於 200 日線，技術像修復</td>
+<td>正式 10-Q、gross margin、customer commitments</td>
+<td>AI server demand、DLC / rack-scale adoption</td>
+<td>等財報確認</td>
+<td>正式財報與 preliminary data 是否一致</td>
+<td>preliminary data、margin 壓力、治理信任</td>
 </tr>
 <tr>
-<td>NIVF</td>
-<td>NewGenIvf</td>
-<td>多訊號但 60 日 -58%，52 週位置接近低位，像技術急彈。</td>
-<td>revenue、cash、股本稀釋風險清楚改善。</td>
+<td style="text-align:right">4</td>
+<td>FND</td>
+<td>Floor &amp; Decor</td>
+<td>家居零售 / 消費修復</td>
+<td>中</td>
+<td>中</td>
+<td>C</td>
+<td>距 52 週高點約 -46%，離低點約 11%，站回 20 日線但 60 日仍待確認</td>
+<td>同店銷售、gross margin、inventory、free cash flow</td>
+<td>房屋交易、裝修需求、利率敏感度</td>
+<td>等財報確認</td>
+<td>60 日線站穩、財報止跌</td>
+<td>房市疲弱、消費降級</td>
 </tr>
 <tr>
-<td>PCLA</td>
-<td>PicoCELA</td>
-<td>相對量異常，20 / 60 日仍大跌，基本面資料不足。</td>
-<td>財報、合約、cash runway 可驗證。</td>
+<td style="text-align:right">5</td>
+<td>KMX</td>
+<td>CarMax</td>
+<td>二手車 / 消費金融</td>
+<td>中</td>
+<td>中</td>
+<td>C</td>
+<td>距 52 週高點約 -46%，離低點約 26%，仍低於 200 日線，屬修復段</td>
+<td>Used unit sales、gross profit per unit、CAF credit loss</td>
+<td>二手車價格、汽車貸款利率</td>
+<td>等財報確認</td>
+<td>站穩 60 日線、credit loss 改善</td>
+<td>信貸風險、利率、消費疲弱</td>
 </tr>
 <tr>
-<td>ATPC</td>
-<td>Agape ATP</td>
-<td>訊號很多但相對量 570x，短線事件風險過高。</td>
-<td>放量後能高位整理且財報支撐。</td>
+<td style="text-align:right">6</td>
+<td>BIRK</td>
+<td>Birkenstock</td>
+<td>消費品牌</td>
+<td>中高</td>
+<td>中</td>
+<td>B</td>
+<td>距 52 週高點約 -31%，離低點約 27%，站回 20 / 60 日線但仍低於 200 日線</td>
+<td>Revenue growth、gross margin、DTC mix、inventory</td>
+<td>全球品牌需求、渠道擴張</td>
+<td>等回測再買</td>
+<td>回測 20 / 60 日線不破、margin 維持</td>
+<td>估值、消費波動</td>
 </tr>
 <tr>
-<td>LAES</td>
-<td>SEALSQ</td>
-<td>題材性強但 revenue / profitability 驗證不足。</td>
-<td>半導體安全 / post-quantum 訂單與營收連續驗證。</td>
+<td style="text-align:right">7</td>
+<td>BRZE</td>
+<td>Braze</td>
+<td>SaaS / 客戶互動平台</td>
+<td>中</td>
+<td>中</td>
+<td>C</td>
+<td>距 52 週高點約 -37%，離低點約 48%，站回 20 / 60 日線但仍低於 200 日線</td>
+<td>Revenue growth、net retention、operating loss、cash flow</td>
+<td>AI marketing / customer engagement demand</td>
+<td>等財報確認</td>
+<td>ARR / retention 改善、虧損縮小</td>
+<td>SaaS 估值、競爭、續約風險</td>
 </tr>
 <tr>
-<td>BYND</td>
-<td>Beyond Meat</td>
-<td>低價反彈與營運壓力，不適合作為起漲核心。</td>
-<td>revenue、gross margin、cash burn 明顯改善。</td>
+<td style="text-align:right">8</td>
+<td>FOUR</td>
+<td>Shift4 Payments</td>
+<td>支付 / 金融科技</td>
+<td>中</td>
+<td>中</td>
+<td>C</td>
+<td>距 52 週高點約 -59%，仍低於 200 日線，僅站回 20 日線，屬早期修復</td>
+<td>Payment volume、take rate、adjusted EBITDA、debt</td>
+<td>餐旅 / 娛樂支付需求</td>
+<td>等財報確認</td>
+<td>60 日線站穩、volume 轉強</td>
+<td>槓桿、競爭、消費循環</td>
 </tr>
 <tr>
-<td>FFAI</td>
-<td>Faraday Future</td>
-<td>低價 EV 高稀釋 / 執行風險。</td>
-<td>量產、交車、融資與合規風險改善。</td>
+<td style="text-align:right">9</td>
+<td>EOSE</td>
+<td>Eos Energy Enterprises</td>
+<td>長時儲能</td>
+<td>中</td>
+<td>高</td>
+<td>C</td>
+<td>距 52 週高點約 -57%，站回 20 / 60 日線但仍低於 200 日線，底部修復訊號強</td>
+<td>Gross margin、cash burn、製造良率、訂單轉收入</td>
+<td>長時儲能、電網儲能、政策支持</td>
+<td>等財報確認</td>
+<td>毛利率改善、現金消耗下降</td>
+<td>稀釋、製造爬坡、題材波動</td>
 </tr>
 <tr>
-<td>WHLR</td>
-<td>Wheeler REIT</td>
-<td>低價高波動，REIT 財務與資本結構風險。</td>
-<td>財務結構透明改善且趨勢可延續。</td>
+<td style="text-align:right">10</td>
+<td>RGTI</td>
+<td>Rigetti Computing</td>
+<td>量子運算</td>
+<td>中</td>
+<td>高</td>
+<td>B</td>
+<td>距 52 週高點約 -61%，站回 20 / 60 日線但仍低於 200 日線，偏高波動底部翻轉</td>
+<td>Cash、net loss、revenue scale、backlog</td>
+<td>量子硬體採用、政府研究計畫</td>
+<td>等回測再買</td>
+<td>回測突破區不破、成交量降溫</td>
+<td>商業化早期、虧損、題材擁擠</td>
+</tr>
+<tr>
+<td style="text-align:right">11</td>
+<td>QBTS</td>
+<td>D-Wave Quantum</td>
+<td>量子運算</td>
+<td>中</td>
+<td>高</td>
+<td>B</td>
+<td>距 52 週高點約 -43%，已站回 20 / 60 日線，仍有修復空間但波動大</td>
+<td>Revenue、bookings、gross margin、net loss</td>
+<td>Advantage2、system sale、commercial customers</td>
+<td>等回測再買</td>
+<td>前高回測不破、bookings 轉 revenue</td>
+<td>收入確認節奏與虧損</td>
+</tr>
+<tr>
+<td style="text-align:right">12</td>
+<td>QUBT</td>
+<td>Quantum Computing Inc.</td>
+<td>量子 / 光子晶片</td>
+<td>低</td>
+<td>高</td>
+<td>C</td>
+<td>距 52 週高點約 -54%，站回 20 / 60 日線但仍低於 200 日線，技術翻轉強於基本面</td>
+<td>Revenue、cash runway、稀釋、商業訂單</td>
+<td>光子晶片 / 量子題材落地</td>
+<td>只觀察</td>
+<td>補財報與客戶驗證後再升級</td>
+<td>資料不足、題材股波動</td>
+</tr>
+<tr>
+<td style="text-align:right">13</td>
+<td>ACHR</td>
+<td>Archer Aviation</td>
+<td>eVTOL / aerospace</td>
+<td>中</td>
+<td>中</td>
+<td>C</td>
+<td>距 52 週高點約 -55%，站回 20 / 60 日線但仍低於 200 日線，屬認證題材修復</td>
+<td>Cash burn、liquidity、revenue ramp</td>
+<td>FAA certification、commercial launch</td>
+<td>等財報確認</td>
+<td>認證節點、commercial launch、liquidity</td>
+<td>認證延遲、資本支出</td>
+</tr>
+<tr>
+<td style="text-align:right">14</td>
+<td>JOBY</td>
+<td>Joby Aviation</td>
+<td>eVTOL / aerospace</td>
+<td>中</td>
+<td>中</td>
+<td>C</td>
+<td>距 52 週高點約 -49%，站回 20 / 60 日線但仍低於 200 日線，修復訊號存在</td>
+<td>Cash runway、operating loss、certification spend</td>
+<td>FAA TIA、Dubai / US early operations</td>
+<td>等財報確認</td>
+<td>認證節點、載客試營運、現金消耗</td>
+<td>商業化延遲、融資需求</td>
+</tr>
+<tr>
+<td style="text-align:right">15</td>
+<td>QS</td>
+<td>QuantumScape</td>
+<td>固態電池</td>
+<td>低</td>
+<td>中</td>
+<td>C</td>
+<td>距 52 週高點約 -55%，站回 20 / 60 日線但仍低於 200 日線，屬早期技術修復</td>
+<td>Cash runway、sample shipment、partner progress</td>
+<td>EV battery adoption、OEM validation</td>
+<td>只觀察</td>
+<td>財報與商業化里程碑補足</td>
+<td>量產時程、稀釋、EV 景氣</td>
+</tr>
+<tr>
+<td style="text-align:right">16</td>
+<td>COMP</td>
+<td>Compass</td>
+<td>房地產科技</td>
+<td>中</td>
+<td>中</td>
+<td>C</td>
+<td>距 52 週高點約 -38%，站回 20 / 60 日線但仍低於 200 日線，修復偏景氣循環</td>
+<td>Revenue、adjusted EBITDA、free cash flow</td>
+<td>房屋交易量、佣金率、利率</td>
+<td>等財報確認</td>
+<td>房市成交回升、現金流改善</td>
+<td>房市低迷、利率</td>
+</tr>
+<tr>
+<td style="text-align:right">17</td>
+<td>W</td>
+<td>Wayfair</td>
+<td>家居電商</td>
+<td>中</td>
+<td>中</td>
+<td>C</td>
+<td>距 52 週高點約 -44%，站回 20 日線但 60 日仍待確認，偏消費修復</td>
+<td>Revenue growth、gross margin、cash flow、debt</td>
+<td>家居需求、利率與消費信心</td>
+<td>等財報確認</td>
+<td>60 日線站穩、margin 改善</td>
+<td>消費疲弱、槓桿</td>
+</tr>
+<tr>
+<td style="text-align:right">18</td>
+<td>OTEX</td>
+<td>OpenText</td>
+<td>企業軟體</td>
+<td>中</td>
+<td>低</td>
+<td>C</td>
+<td>距 52 週高點約 -42%，離低點約 13%，站回 20 / 60 日線且仍低於 200 日線</td>
+<td>Organic growth、debt reduction、free cash flow</td>
+<td>企業軟體支出、AI 文件管理需求</td>
+<td>只觀察</td>
+<td>現金流與去槓桿進度</td>
+<td>成長放緩、整合風險</td>
 </tr>
 </tbody>
 </table>
-<h2>8. 明確決策</h2>
-<h3>如果只能選 3 檔 1-6 個月起漲股</h3>
-<ol>
-<li><a href="/stockReport/stocks/RGTI/0521.html" target="_blank" rel="noopener noreferrer">RGTI</a> / <a href="/stockReport/stocks/RGTI/0521.html" target="_blank" rel="noopener noreferrer">Rigetti</a>：量價位置最好，52 週位置仍低，適合列短線起漲核心觀察；適合買法是等回測不破；失敗條件是跌回突破區且量能退潮。</li>
-<li><a href="/stockReport/stocks/QBTS/0521.html" target="_blank" rel="noopener noreferrer">QBTS</a> / <a href="/stockReport/stocks/QBTS/0521.html" target="_blank" rel="noopener noreferrer">D-Wave</a>：量能強、突破與空方趨勢結束同時出現；適合買法是等 bookings 轉 revenue 或技術回測確認；失敗條件是 Q2 revenue 無改善。</li>
-<li><a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer">IONQ</a> / <a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer">IonQ</a>：基本面驗證最強，但短線偏熱；適合買法是只等回測，不追盤中突破；失敗條件是 guidance 或商業合約動能下修。</li>
-</ol>
-<h3>如果只能選 3 檔 6-12 個月中期候選</h3>
-<ol>
-<li><a href="/stockReport/stocks/IBM/0521.html" target="_blank" rel="noopener noreferrer">IBM</a> / <a href="/stockReport/stocks/IBM/0521.html" target="_blank" rel="noopener noreferrer">IBM</a>：FCF、software mix、AI enterprise adoption 最穩；合理布局方式是分批或回檔；追蹤 FCF、software growth、AI backlog。</li>
-<li><a href="/stockReport/stocks/LRCX/0521.html" target="_blank" rel="noopener noreferrer">LRCX</a> / <a href="/stockReport/stocks/LRCX/0521.html" target="_blank" rel="noopener noreferrer">Lam Research</a>：AI memory / 半導體設備景氣支撐明確；合理布局方式是等回檔；追蹤 revenue guidance、gross margin、China exposure。</li>
-<li><a href="/stockReport/stocks/LITE/0521.html" target="_blank" rel="noopener noreferrer">LITE</a> / <a href="/stockReport/stocks/LITE/0521.html" target="_blank" rel="noopener noreferrer">Lumentum</a>：AI 光通訊與 cloud datacenter revenue 加速；合理布局方式是等回檔；追蹤 Q4 guidance 是否達標與 margin。</li>
-</ol>
-<h3>操作分類</h3>
-<ul>
-<li>可以現在小量分批：本批不建議用盤中資料直接升級；若一定要研究，只能是 <code><a href="/stockReport/stocks/IBM/0521.html" target="_blank" rel="noopener noreferrer">IBM</a></code> 這類中期穩健股的小量分批框架。</li>
-<li>等回測再買：<code><a href="/stockReport/stocks/RGTI/0521.html" target="_blank" rel="noopener noreferrer">RGTI</a></code> 剛發動但需確認；<code><a href="/stockReport/stocks/QBTS/0521.html" target="_blank" rel="noopener noreferrer">QBTS</a></code> 題材強但收入 lumpy；<code><a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer">IONQ</a></code> 基本面佳但短線偏熱；<code><a href="/stockReport/stocks/LITE/0521.html" target="_blank" rel="noopener noreferrer">LITE</a></code>、<code>GFS</code>、<code><a href="/stockReport/stocks/LRCX/0521.html" target="_blank" rel="noopener noreferrer">LRCX</a></code>、<code>ARM</code>、<code>NBIS</code> 都在高位附近。</li>
-<li>等財報確認：<code>QUBT</code> 基本面不足；<code>IREN</code>、<code>APLD</code> 需確認 AI Cloud / data center 合約轉收入；<code>SMCI</code> 需確認 cash flow 與 margin。</li>
-<li>只觀察：<code>BIRK</code> 品牌穩但短線動能普通；<code>MS</code> 中期穩健但非起漲高 beta；<code>XPEV</code> 需確認 EV 交付與 margin。</li>
-<li>暫時排除：<code>SBFM</code>、<code>LIMN</code>、<code>JUNS</code>、<code>NIVF</code>、<code>PCLA</code>、<code>ATPC</code>、<code>LAES</code>、<code>BYND</code>、<code>FFAI</code>、<code>WHLR</code>，理由是低價、暴量、資料不足或稀釋 / 營運風險過高。</li>
-</ul>
-<h2>9. 十個核心問題</h2>
-<ol>
-<li>
-<p>哪些是真正的起漲股？<br>
-<code><a href="/stockReport/stocks/RGTI/0521.html" target="_blank" rel="noopener noreferrer">RGTI</a></code>、<code><a href="/stockReport/stocks/QBTS/0521.html" target="_blank" rel="noopener noreferrer">QBTS</a></code> 最像剛發動；<code><a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer">IONQ</a></code> 是基本面最強但偏熱的起漲延伸。</p>
-</li>
-<li>
-<p>哪些只是低基期反彈或 short squeeze？<br>
-<code>SBFM</code>、<code>LIMN</code>、<code>JUNS</code>、<code>NIVF</code>、<code>PCLA</code>、<code>ATPC</code>、<code>WHLR</code> 都先視為低價反彈或事件交易。</p>
-</li>
-<li>
-<p>哪些適合 6-12 個月中期追蹤？<br>
-<code><a href="/stockReport/stocks/IBM/0521.html" target="_blank" rel="noopener noreferrer">IBM</a></code>、<code><a href="/stockReport/stocks/LRCX/0521.html" target="_blank" rel="noopener noreferrer">LRCX</a></code>、<code>ARM</code>、<code><a href="/stockReport/stocks/LITE/0521.html" target="_blank" rel="noopener noreferrer">LITE</a></code>、<code>GFS</code>、<code>MS</code>、<code>BIRK</code>。</p>
-</li>
-<li>
-<p>哪些短線強但不能追？<br>
-<code><a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer">IONQ</a></code>、<code>APLD</code>、<code>NBIS</code>、<code>ARM</code>、<code>GFS</code>，多數已接近或創 52 週高位。</p>
-</li>
-<li>
-<p>哪些需要等財報或 guidance？<br>
-<code>QUBT</code>、<code>IREN</code>、<code>APLD</code>、<code>SMCI</code>、<code>PLUG</code>、<code>XPEV</code>。</p>
-</li>
-<li>
-<p>哪些是價值陷阱或稀釋陷阱？<br>
-低價暴量股與長期虧損股優先警戒，尤其 <code>SBFM</code>、<code>JUNS</code>、<code>FFAI</code>、<code>BYND</code>、<code>WHLR</code>。</p>
-</li>
-<li>
-<p>哪些是短線波段，不適合長抱？<br>
-<code><a href="/stockReport/stocks/RGTI/0521.html" target="_blank" rel="noopener noreferrer">RGTI</a></code>、<code><a href="/stockReport/stocks/QBTS/0521.html" target="_blank" rel="noopener noreferrer">QBTS</a></code>、<code>QUBT</code> 在現階段以波段與事件驗證為主，不應直接當長期核心。</p>
-</li>
-<li>
-<p>哪些是中期穩健，但短線不會飆？<br>
-<code><a href="/stockReport/stocks/IBM/0521.html" target="_blank" rel="noopener noreferrer">IBM</a></code>、<code>MS</code>、<code>BIRK</code>。</p>
-</li>
-<li>
-<p>如果資金有限，最應該優先研究哪 5 檔？<br>
-<code><a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer">IONQ</a></code>、<code><a href="/stockReport/stocks/RGTI/0521.html" target="_blank" rel="noopener noreferrer">RGTI</a></code>、<code><a href="/stockReport/stocks/LITE/0521.html" target="_blank" rel="noopener noreferrer">LITE</a></code>、<code><a href="/stockReport/stocks/IBM/0521.html" target="_blank" rel="noopener noreferrer">IBM</a></code>、<code><a href="/stockReport/stocks/LRCX/0521.html" target="_blank" rel="noopener noreferrer">LRCX</a></code>。</p>
-</li>
-<li>
-<p>如果只能買 3 檔，會選哪 3 檔？為什麼？<br>
-教育性研究框架下，短線優先 <code><a href="/stockReport/stocks/RGTI/0521.html" target="_blank" rel="noopener noreferrer">RGTI</a></code>，中期優先 <code><a href="/stockReport/stocks/IBM/0521.html" target="_blank" rel="noopener noreferrer">IBM</a></code> 與 <code><a href="/stockReport/stocks/LITE/0521.html" target="_blank" rel="noopener noreferrer">LITE</a></code>；理由是分別代表剛發動量子、穩健 AI software / FCF、AI 光通訊成長。</p>
-</li>
-</ol>
-<h2>10. 最終精選名單</h2>
+</div>
+<h2>4. 中期基本面候選名單</h2>
+<div class="table-scroll">
 <table>
 <thead>
 <tr>
-<th>類別</th>
-<th>Ticker</th>
+<th style="text-align:right">排名</th>
+<th>股票代號</th>
 <th>公司名稱</th>
-<th>理由</th>
-<th>操作</th>
+<th>產業</th>
+<th>中期分數</th>
+<th>起漲分數</th>
+<th>評級</th>
+<th>中期理由</th>
+<th>財務驗證</th>
+<th>產業驗證</th>
+<th>布局方式</th>
+<th>追蹤指標</th>
+<th>風險</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>短線起漲首選</td>
-<td><a href="/stockReport/stocks/RGTI/0521.html" target="_blank" rel="noopener noreferrer">RGTI</a></td>
-<td><a href="/stockReport/stocks/RGTI/0521.html" target="_blank" rel="noopener noreferrer">Rigetti</a></td>
-<td>技術剛發動、52 週位置低、量能明顯，且有 108-qubit 與客戶部署資料支持。</td>
-<td>等回測再買</td>
+<td style="text-align:right">1</td>
+<td><a href="/stockReport/stocks/GLW/0521.html" target="_blank" rel="noopener noreferrer">GLW</a></td>
+<td><a href="/stockReport/stocks/GLW/0521.html" target="_blank" rel="noopener noreferrer">Corning</a></td>
+<td>AI 光通訊 / 材料</td>
+<td>高</td>
+<td>中高</td>
+<td>A</td>
+<td>AI data center 光通訊需求、長約與 Q1 財報互相驗證</td>
+<td>Core EPS、core gross margin、operating cash flow</td>
+<td>Hyperscaler 採購、photonics platform</td>
+<td>可以現在小量分批</td>
+<td>Q2 guidance、Optical Communications sales</td>
+<td>估值與 AI capex cycle 波動</td>
 </tr>
 <tr>
-<td>短線起漲首選</td>
-<td><a href="/stockReport/stocks/QBTS/0521.html" target="_blank" rel="noopener noreferrer">QBTS</a></td>
-<td><a href="/stockReport/stocks/QBTS/0521.html" target="_blank" rel="noopener noreferrer">D-Wave</a></td>
-<td>突破與空方趨勢結束，bookings / RPO 強，但 revenue 需轉化。</td>
-<td>等回測再買</td>
+<td style="text-align:right">2</td>
+<td><a href="/stockReport/stocks/ARM/0521.html" target="_blank" rel="noopener noreferrer">ARM</a></td>
+<td><a href="/stockReport/stocks/ARM/0521.html" target="_blank" rel="noopener noreferrer">Arm Holdings</a></td>
+<td>半導體 IP</td>
+<td>高</td>
+<td>中</td>
+<td>D</td>
+<td>平台型 royalty / licensing 品質高，但掃描日 52 週高點，短線不適合追</td>
+<td>Royalty revenue、licensing revenue、margin</td>
+<td>Cloud AI、Edge AI、Physical AI 採用</td>
+<td>暫不追高</td>
+<td>等回測或估值壓縮後，觀察 royalty growth</td>
+<td>高估值、insider sale supply</td>
 </tr>
 <tr>
-<td>短線起漲首選</td>
+<td style="text-align:right">3</td>
+<td><a href="/stockReport/stocks/VST/0521.html" target="_blank" rel="noopener noreferrer">VST</a></td>
+<td><a href="/stockReport/stocks/VST/0521.html" target="_blank" rel="noopener noreferrer">Vistra</a></td>
+<td>電力 / 獨立發電</td>
+<td>高</td>
+<td>中</td>
+<td>B</td>
+<td>電力現金流與 data center 用電主線支撐中期，但技術仍在修復</td>
+<td>EBITDA、FCF before growth、hedge quality、debt</td>
+<td>AI / data center 用電需求、capacity pricing</td>
+<td>等回測再買</td>
+<td>站回 200 日線、guidance 維持</td>
+<td>電價、天氣、監管</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td><a href="/stockReport/stocks/RMBS/0521.html" target="_blank" rel="noopener noreferrer">RMBS</a></td>
+<td><a href="/stockReport/stocks/RMBS/0521.html" target="_blank" rel="noopener noreferrer">Rambus</a></td>
+<td>半導體 IP / AI memory</td>
+<td>高</td>
+<td>中高</td>
+<td>B</td>
+<td>AI memory bandwidth 是中期主線，公司 Q1 現金流與產品收入有支撐</td>
+<td>Product revenue、licensing billings、operating cash flow</td>
+<td>HBM4E / DDR5 / CXL 相關採用</td>
+<td>等回測再買</td>
+<td>Q2 product revenue outlook、授權續約</td>
+<td>半導體 cycle 與大客戶採用節奏</td>
+</tr>
+<tr>
+<td style="text-align:right">5</td>
+<td><a href="/stockReport/stocks/NBIS/0521.html" target="_blank" rel="noopener noreferrer">NBIS</a></td>
+<td><a href="/stockReport/stocks/NBIS/0521.html" target="_blank" rel="noopener noreferrer">Nebius Group</a></td>
+<td>AI cloud</td>
+<td>高</td>
+<td>高</td>
+<td>B</td>
+<td>AI cloud revenue、ARR、power pipeline 高成長，但估值與 CapEx 要求高</td>
+<td>AI Cloud EBITDA margin、cash、convertibles、CapEx</td>
+<td>Microsoft / Meta / NVIDIA 合約、&gt;4GW contracted power</td>
+<td>等回測再買</td>
+<td>Connected power、active power、customer concentration</td>
+<td>執行、融資、GPU 供應與估值</td>
+</tr>
+<tr>
+<td style="text-align:right">6</td>
+<td><a href="/stockReport/stocks/SE/0521.html" target="_blank" rel="noopener noreferrer">SE</a></td>
+<td><a href="/stockReport/stocks/SE/0521.html" target="_blank" rel="noopener noreferrer">Sea Limited</a></td>
+<td>電商 / 遊戲 / 金融</td>
+<td>中高</td>
+<td>中</td>
+<td>B</td>
+<td>Shopee、Monee、Garena 共同改善，且股價仍在修復段</td>
+<td>Shopee margin、Monee NPL、Garena bookings、cash flow</td>
+<td>東南亞消費、金融滲透率</td>
+<td>突破確認再買</td>
+<td>站回 200 日線、NPL 維持穩定</td>
+<td>信貸風險、競爭、監管</td>
+</tr>
+<tr>
+<td style="text-align:right">7</td>
+<td>MU</td>
+<td>Micron Technology</td>
+<td>記憶體 / AI server</td>
+<td>中高</td>
+<td>中</td>
+<td>C</td>
+<td>AI server memory 主線明確，但本輪報告只完成技術與題材初篩</td>
+<td>DRAM / HBM revenue、gross margin、CapEx</td>
+<td>HBM demand、AI server buildout</td>
+<td>等回測再買</td>
+<td>回測前高或 20 日線、財報確認 HBM 成長</td>
+<td>記憶體循環、高資本支出</td>
+</tr>
+<tr>
+<td style="text-align:right">8</td>
+<td>LRCX</td>
+<td>Lam Research</td>
+<td>半導體設備</td>
+<td>中高</td>
+<td>中</td>
+<td>C</td>
+<td>大型半導體設備輪動，受 AI / memory capex 週期支撐，但掃描訊號單薄</td>
+<td>Orders、gross margin、China exposure、guidance</td>
+<td>HBM / foundry / memory capex</td>
+<td>等回測再買</td>
+<td>突破後回測不破、訂單 outlook</td>
+<td>半導體設備循環、政策限制</td>
+</tr>
+<tr>
+<td style="text-align:right">9</td>
+<td>ASML</td>
+<td>ASML</td>
+<td>半導體設備 / EUV</td>
+<td>高</td>
+<td>中</td>
+<td>C</td>
+<td>中期護城河強，但本輪僅 MACD 動能，需等價位與訂單資料確認</td>
+<td>Bookings、EUV revenue、gross margin、guidance</td>
+<td>Leading-edge logic / memory capex</td>
+<td>只觀察</td>
+<td>補訂單與估值資料後再決策</td>
+<td>估值、出口限制、客戶 capex</td>
+</tr>
+<tr>
+<td style="text-align:right">10</td>
+<td>IBM</td>
+<td>IBM</td>
+<td>企業 AI / 軟體服務</td>
+<td>中高</td>
+<td>中</td>
+<td>C</td>
+<td>大型股輪動與 AI / hybrid cloud 題材支撐，但短線不是爆發型</td>
+<td>Software growth、consulting margin、free cash flow</td>
+<td>Enterprise AI、hybrid cloud demand</td>
+<td>只觀察</td>
+<td>財報確認軟體成長與現金流</td>
+<td>成長速度、估值 re-rating 已反映</td>
+</tr>
+<tr>
+<td style="text-align:right">11</td>
+<td>SPOT</td>
+<td>Spotify</td>
+<td>串流音樂 / 平台</td>
+<td>中高</td>
+<td>中</td>
+<td>C</td>
+<td>股價仍低於 52 週高點且站回均線，具中期平台修復特徵</td>
+<td>Subscriber growth、gross margin、operating income</td>
+<td>Audio advertising、pricing power</td>
+<td>等回測再買</td>
+<td>20 / 60 日線回測、margin trend</td>
+<td>估值、匯率、使用者成長放緩</td>
+</tr>
+<tr>
+<td style="text-align:right">12</td>
+<td>FCX</td>
+<td>Freeport-McMoRan</td>
+<td>銅 / 礦業</td>
+<td>中</td>
+<td>中</td>
+<td>C</td>
+<td>銅週期與電力 / AI infrastructure 需求有中期支撐，但商品價格波動高</td>
+<td>Copper price、unit cost、capex、free cash flow</td>
+<td>電網、AI data center、EV copper demand</td>
+<td>只觀察</td>
+<td>銅價與礦山產量確認</td>
+<td>商品循環、政治與營運風險</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2>5. 起漲與中期交集名單</h2>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th style="text-align:right">排名</th>
+<th>股票代號</th>
+<th>公司名稱</th>
+<th>產業</th>
+<th>中期分數</th>
+<th>起漲分數</th>
+<th>評級</th>
+<th>中期理由</th>
+<th>財務驗證</th>
+<th>產業驗證</th>
+<th>布局方式</th>
+<th>追蹤指標</th>
+<th>風險</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td><a href="/stockReport/stocks/GLW/0521.html" target="_blank" rel="noopener noreferrer">GLW</a></td>
+<td><a href="/stockReport/stocks/GLW/0521.html" target="_blank" rel="noopener noreferrer">Corning</a></td>
+<td>AI 光通訊 / 材料</td>
+<td>高</td>
+<td>中高</td>
+<td>A</td>
+<td>技術剛轉強，Q1 / Q2 guidance 與 hyperscaler 長約提供基本面支撐</td>
+<td>Core sales、core EPS、Optical margin</td>
+<td>AI data center optical buildout</td>
+<td>可以現在小量分批</td>
+<td>回測不破突破區、Q2 guidance</td>
+<td>估值已部分反映 AI 光通訊</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td><a href="/stockReport/stocks/NBIS/0521.html" target="_blank" rel="noopener noreferrer">NBIS</a></td>
+<td><a href="/stockReport/stocks/NBIS/0521.html" target="_blank" rel="noopener noreferrer">Nebius Group</a></td>
+<td>AI cloud</td>
+<td>高</td>
+<td>高</td>
+<td>B</td>
+<td>AI cloud 高成長與 power / customer pipeline 支撐中期，但股價偏熱</td>
+<td>Revenue guidance、ARR、cash burn</td>
+<td>GPU cloud demand、Meta / Microsoft delivery</td>
+<td>等回測再買</td>
+<td>月線附近量縮止穩、connected power</td>
+<td>CapEx 與估值風險</td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td><a href="/stockReport/stocks/RMBS/0521.html" target="_blank" rel="noopener noreferrer">RMBS</a></td>
+<td><a href="/stockReport/stocks/RMBS/0521.html" target="_blank" rel="noopener noreferrer">Rambus</a></td>
+<td>半導體 IP / AI memory</td>
+<td>高</td>
+<td>中高</td>
+<td>B</td>
+<td>多重技術訊號配合 AI memory IP 基本面，不是單純短線反彈</td>
+<td>Product revenue、licensing billings</td>
+<td>HBM / memory controller adoption</td>
+<td>等回測再買</td>
+<td>守住 20 / 60 日線、Q2 outlook</td>
+<td>半導體循環與 royalty 波動</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td><a href="/stockReport/stocks/SE/0521.html" target="_blank" rel="noopener noreferrer">SE</a></td>
+<td><a href="/stockReport/stocks/SE/0521.html" target="_blank" rel="noopener noreferrer">Sea Limited</a></td>
+<td>電商 / 遊戲 / 金融</td>
+<td>中高</td>
+<td>中</td>
+<td>B</td>
+<td>同時具備中期基本面復甦與谷底修復特徵，但技術需站回 200 日線</td>
+<td>Monee NPL、Shopee margin、Garena bookings</td>
+<td>東南亞消費復甦</td>
+<td>突破確認再買</td>
+<td>站回 200 日線、信用風險穩定</td>
+<td>信貸與監管風險</td>
+</tr>
+<tr>
+<td style="text-align:right">5</td>
+<td><a href="/stockReport/stocks/VST/0521.html" target="_blank" rel="noopener noreferrer">VST</a></td>
+<td><a href="/stockReport/stocks/VST/0521.html" target="_blank" rel="noopener noreferrer">Vistra</a></td>
+<td>電力 / 獨立發電</td>
+<td>高</td>
+<td>中</td>
+<td>B</td>
+<td>電力現金流與低位修復兼具，屬中期主線但短線要等確認</td>
+<td>EBITDA、FCF、debt</td>
+<td>data center electricity demand</td>
+<td>等回測再買</td>
+<td>站回 200 日線、guidance 維持</td>
+<td>電價、天氣、監管</td>
+</tr>
+<tr>
+<td style="text-align:right">6</td>
 <td><a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer">IONQ</a></td>
 <td><a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer">IonQ</a></td>
-<td>量子鏈基本面驗證最佳，收入與 guidance 強，但短線偏熱。</td>
+<td>量子運算</td>
+<td>中高</td>
+<td>高</td>
+<td>B</td>
+<td>量子收入與 RPO 提供基本面線索，技術動能強，但波動太高</td>
+<td>Adjusted EBITDA loss、RPO 轉收入</td>
+<td>商業客戶與政府合約</td>
 <td>等回測再買</td>
+<td>月線附近止穩、short interest</td>
+<td>高估值、虧損</td>
 </tr>
 <tr>
-<td>中期基本面首選</td>
-<td><a href="/stockReport/stocks/IBM/0521.html" target="_blank" rel="noopener noreferrer">IBM</a></td>
-<td><a href="/stockReport/stocks/IBM/0521.html" target="_blank" rel="noopener noreferrer">IBM</a></td>
-<td>FCF、software mix、AI enterprise adoption 穩定，是本批防守型中期核心候選。</td>
-<td>可分批布局</td>
+<td style="text-align:right">7</td>
+<td><a href="/stockReport/stocks/IREN/0521.html" target="_blank" rel="noopener noreferrer">IREN</a></td>
+<td><a href="/stockReport/stocks/IREN/0521.html" target="_blank" rel="noopener noreferrer">IREN</a></td>
+<td>AI cloud / Bitcoin mining 轉型</td>
+<td>中高</td>
+<td>高</td>
+<td>B</td>
+<td>AI cloud 轉型與技術動能兼具，但已大幅離開低點</td>
+<td>AI cloud revenue、debt、net loss</td>
+<td>GPU deployment、power availability</td>
+<td>等回測再買</td>
+<td>20 / 60 日均線間量縮止穩</td>
+<td>CapEx、比特幣、客戶集中</td>
 </tr>
 <tr>
-<td>中期基本面首選</td>
-<td><a href="/stockReport/stocks/LRCX/0521.html" target="_blank" rel="noopener noreferrer">LRCX</a></td>
-<td><a href="/stockReport/stocks/LRCX/0521.html" target="_blank" rel="noopener noreferrer">Lam Research</a></td>
-<td>AI-driven 半導體設備需求帶動 record revenue / EPS。</td>
-<td>等回檔布局</td>
+<td style="text-align:right">8</td>
+<td>MU</td>
+<td>Micron Technology</td>
+<td>記憶體 / AI server</td>
+<td>中高</td>
+<td>中</td>
+<td>C</td>
+<td>AI memory 中期邏輯清楚，但本輪需等更乾淨的財報與價位</td>
+<td>HBM revenue、gross margin、CapEx</td>
+<td>AI server memory demand</td>
+<td>等回測再買</td>
+<td>回測不破、HBM demand 延續</td>
+<td>記憶體循環</td>
 </tr>
 <tr>
-<td>中期基本面首選</td>
-<td><a href="/stockReport/stocks/LITE/0521.html" target="_blank" rel="noopener noreferrer">LITE</a></td>
-<td><a href="/stockReport/stocks/LITE/0521.html" target="_blank" rel="noopener noreferrer">Lumentum</a></td>
-<td>AI / cloud datacenter 光通訊收入與 guidance 最具加速感。</td>
-<td>等回檔布局</td>
+<td style="text-align:right">9</td>
+<td>LRCX</td>
+<td>Lam Research</td>
+<td>半導體設備</td>
+<td>中高</td>
+<td>中</td>
+<td>C</td>
+<td>AI / memory capex 支撐中期，但掃描訊號較單一</td>
+<td>Orders、gross margin、guidance</td>
+<td>HBM / foundry / memory capex</td>
+<td>只觀察</td>
+<td>補訂單與估值後再決策</td>
+<td>半導體設備循環</td>
+</tr>
+<tr>
+<td style="text-align:right">10</td>
+<td>SPOT</td>
+<td>Spotify</td>
+<td>串流音樂 / 平台</td>
+<td>中高</td>
+<td>中</td>
+<td>C</td>
+<td>平台型基本面與修復位置兼具，但不是典型短線起漲股</td>
+<td>Subscriber growth、gross margin、operating income</td>
+<td>pricing power、audio ads</td>
+<td>等回測再買</td>
+<td>20 / 60 日線回測、margin trend</td>
+<td>估值與成長放緩</td>
 </tr>
 </tbody>
 </table>
-<h2>11. 最終一句話</h2>
-<blockquote>
-<p>這批名單最適合優先研究的是 <code><a href="/stockReport/stocks/RGTI/0521.html" target="_blank" rel="noopener noreferrer">RGTI</a></code>、<code><a href="/stockReport/stocks/QBTS/0521.html" target="_blank" rel="noopener noreferrer">QBTS</a></code>、<code><a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer">IONQ</a></code>、<code><a href="/stockReport/stocks/IBM/0521.html" target="_blank" rel="noopener noreferrer">IBM</a></code>、<code><a href="/stockReport/stocks/LRCX/0521.html" target="_blank" rel="noopener noreferrer">LRCX</a></code>、<code><a href="/stockReport/stocks/LITE/0521.html" target="_blank" rel="noopener noreferrer">LITE</a></code>；其中 <code><a href="/stockReport/stocks/RGTI/0521.html" target="_blank" rel="noopener noreferrer">RGTI</a></code>、<code><a href="/stockReport/stocks/QBTS/0521.html" target="_blank" rel="noopener noreferrer">QBTS</a></code>、<code><a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer">IONQ</a></code> 偏 1-6 個月起漲，<code><a href="/stockReport/stocks/IBM/0521.html" target="_blank" rel="noopener noreferrer">IBM</a></code>、<code><a href="/stockReport/stocks/LRCX/0521.html" target="_blank" rel="noopener noreferrer">LRCX</a></code>、<code><a href="/stockReport/stocks/LITE/0521.html" target="_blank" rel="noopener noreferrer">LITE</a></code> 偏 6-12 個月中期基本面。</p>
-</blockquote>
-<h2>資料來源與限制</h2>
+</div>
+<h2>6. 等回測再買名單</h2>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th style="text-align:right">排名</th>
+<th>股票代號</th>
+<th>公司名稱</th>
+<th>產業</th>
+<th>中期分數</th>
+<th>起漲分數</th>
+<th>評級</th>
+<th>中期理由</th>
+<th>財務驗證</th>
+<th>產業驗證</th>
+<th>布局方式</th>
+<th>追蹤指標</th>
+<th>風險</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td><a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer">IONQ</a></td>
+<td><a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer">IonQ</a></td>
+<td>量子運算</td>
+<td>中高</td>
+<td>高</td>
+<td>B</td>
+<td>量子主線中收入與 RPO 最可驗證，但虧損與 short interest 高</td>
+<td>Adjusted EBITDA loss、RPO 轉收入</td>
+<td>商業客戶與政府合約延續</td>
+<td>等回測再買</td>
+<td>月線附近量縮止穩、RPO 續增</td>
+<td>高估值、題材擁擠、交易整合</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td>RGTI</td>
+<td>Rigetti Computing</td>
+<td>量子運算</td>
+<td>中</td>
+<td>高</td>
+<td>B</td>
+<td>技術訊號極強，但 Q1 revenue 規模仍小，基本面成熟度不足</td>
+<td>Cash、net loss、QPU 銷售轉收入</td>
+<td>108-qubit adoption、UK investment</td>
+<td>等回測再買</td>
+<td>回測突破區不破、成交量降溫後續強</td>
+<td>收入小、波動高、商業化仍早期</td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td>QBTS</td>
+<td>D-Wave Quantum</td>
+<td>量子運算</td>
+<td>中</td>
+<td>高</td>
+<td>B</td>
+<td>Bookings 強，但 revenue timing 需看後續轉收入</td>
+<td>Revenue、RPO、gross margin、net loss</td>
+<td>Advantage2、system sale、commercial customers</td>
+<td>等回測再買</td>
+<td>前高突破後回測不破、RPO 消化</td>
+<td>Revenue timing、虧損、題材擁擠</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td><a href="/stockReport/stocks/IREN/0521.html" target="_blank" rel="noopener noreferrer">IREN</a></td>
+<td><a href="/stockReport/stocks/IREN/0521.html" target="_blank" rel="noopener noreferrer">IREN</a></td>
+<td>AI cloud / Bitcoin mining 轉型</td>
+<td>中高</td>
+<td>高</td>
+<td>B</td>
+<td>AI cloud 轉型具中期潛力，但股價已大幅修復</td>
+<td>AI cloud revenue、debt、net loss</td>
+<td>GPU deployment、power availability</td>
+<td>等回測再買</td>
+<td>20 / 60 日均線間量縮止穩</td>
+<td>CapEx、比特幣、客戶集中</td>
+</tr>
+<tr>
+<td style="text-align:right">5</td>
+<td><a href="/stockReport/stocks/VST/0521.html" target="_blank" rel="noopener noreferrer">VST</a></td>
+<td><a href="/stockReport/stocks/VST/0521.html" target="_blank" rel="noopener noreferrer">Vistra</a></td>
+<td>電力 / 獨立發電</td>
+<td>高</td>
+<td>中</td>
+<td>B</td>
+<td>基本面強，但技術尚未修復至 200 日線上</td>
+<td>EBITDA、FCF、hedge</td>
+<td>AI data center electricity demand</td>
+<td>等回測再買</td>
+<td>站回 200 日線、guidance 維持</td>
+<td>電價與監管風險</td>
+</tr>
+<tr>
+<td style="text-align:right">6</td>
+<td><a href="/stockReport/stocks/NBIS/0521.html" target="_blank" rel="noopener noreferrer">NBIS</a></td>
+<td><a href="/stockReport/stocks/NBIS/0521.html" target="_blank" rel="noopener noreferrer">Nebius Group</a></td>
+<td>AI cloud</td>
+<td>高</td>
+<td>高</td>
+<td>B</td>
+<td>主線與財報增速強，但掃描日接近 52 週高點</td>
+<td>AI Cloud margin、CapEx、cash</td>
+<td>GPU cloud demand、power pipeline</td>
+<td>等回測再買</td>
+<td>月線附近量縮止穩</td>
+<td>估值、融資、產能交付</td>
+</tr>
+<tr>
+<td style="text-align:right">7</td>
+<td><a href="/stockReport/stocks/RMBS/0521.html" target="_blank" rel="noopener noreferrer">RMBS</a></td>
+<td><a href="/stockReport/stocks/RMBS/0521.html" target="_blank" rel="noopener noreferrer">Rambus</a></td>
+<td>半導體 IP / AI memory</td>
+<td>高</td>
+<td>中高</td>
+<td>B</td>
+<td>主線清楚但股價已快速修復，等均線或平台回測較合理</td>
+<td>Product revenue、licensing billings</td>
+<td>AI memory interface adoption</td>
+<td>等回測再買</td>
+<td>守住 20 / 60 日線</td>
+<td>半導體循環</td>
+</tr>
+<tr>
+<td style="text-align:right">8</td>
+<td><a href="/stockReport/stocks/ARM/0521.html" target="_blank" rel="noopener noreferrer">ARM</a></td>
+<td><a href="/stockReport/stocks/ARM/0521.html" target="_blank" rel="noopener noreferrer">Arm Holdings</a></td>
+<td>半導體 IP</td>
+<td>高</td>
+<td>中</td>
+<td>D</td>
+<td>基本面品質高，但掃描日 52 週高點，短線追高風險明顯</td>
+<td>Royalty growth、licensing revenue</td>
+<td>Cloud / Edge AI adoption</td>
+<td>暫不追高</td>
+<td>估值壓縮或回測後再評估</td>
+<td>高估值</td>
+</tr>
+<tr>
+<td style="text-align:right">9</td>
+<td>APLD</td>
+<td>Applied Digital</td>
+<td>AI / HPC data center</td>
+<td>中</td>
+<td>中高</td>
+<td>D</td>
+<td>題材強但負債與虧損壓力高，必須等價格與財報雙確認</td>
+<td>Debt service、net loss、HPC hosting revenue</td>
+<td>Hyperscaler demand</td>
+<td>暫不追高</td>
+<td>Q4 revenue、debt ratio</td>
+<td>高負債與減值</td>
+</tr>
+<tr>
+<td style="text-align:right">10</td>
+<td>CIFR</td>
+<td>Cipher Digital</td>
+<td>AI / HPC / Bitcoin mining</td>
+<td>中</td>
+<td>中高</td>
+<td>C</td>
+<td>轉型與技術強，但仍受加密週期牽動</td>
+<td>AI / HPC revenue、hashrate、cash</td>
+<td>AI compute 合約、Bitcoin cycle</td>
+<td>等回測再買</td>
+<td>20 日線回測與 AI revenue</td>
+<td>比特幣價格、稀釋</td>
+</tr>
+<tr>
+<td style="text-align:right">11</td>
+<td>BTDR</td>
+<td>Bitdeer Technologies</td>
+<td>加密礦業 / AI compute</td>
+<td>中</td>
+<td>中高</td>
+<td>C</td>
+<td>技術轉強但週期屬性高，適合等回測與財報驗證</td>
+<td>Mining margin、ASIC / cloud revenue</td>
+<td>Bitcoin cycle、AI compute 產能</td>
+<td>等回測再買</td>
+<td>回測 20 / 60 日線</td>
+<td>加密波動、CapEx</td>
+</tr>
+<tr>
+<td style="text-align:right">12</td>
+<td>AAOI</td>
+<td>Applied Optoelectronics</td>
+<td>光通訊</td>
+<td>中</td>
+<td>中高</td>
+<td>C</td>
+<td>AI optical 題材與成交金額明顯，但本輪未補完整財報</td>
+<td>Revenue growth、gross margin、customer concentration</td>
+<td>AI data center optical transceiver demand</td>
+<td>等回測再買</td>
+<td>突破後量縮回測不破</td>
+<td>客戶集中、毛利波動</td>
+</tr>
+<tr>
+<td style="text-align:right">13</td>
+<td>LITE</td>
+<td>Lumentum</td>
+<td>光通訊 / photonics</td>
+<td>中高</td>
+<td>中</td>
+<td>C</td>
+<td>AI photonics 輪動與成交金額高，但需要補訂單與 margin 資料</td>
+<td>Revenue、non-GAAP margin、bookings</td>
+<td>Datacom / telecom optical demand</td>
+<td>等回測再買</td>
+<td>20 日線回測、財報確認</td>
+<td>光通訊循環、估值</td>
+</tr>
+<tr>
+<td style="text-align:right">14</td>
+<td>GTLS</td>
+<td>Chart Industries</td>
+<td>工業氣體 / 能源設備</td>
+<td>中</td>
+<td>中高</td>
+<td>C</td>
+<td>三訊號齊全但接近 52 週高點，適合放入等待池</td>
+<td>Orders、backlog、margin、debt</td>
+<td>LNG、hydrogen、industrial gas</td>
+<td>等回測再買</td>
+<td>前高附近量縮回測不破</td>
+<td>槓桿與週期訂單</td>
+</tr>
+<tr>
+<td style="text-align:right">15</td>
+<td>DECK</td>
+<td>Deckers Outdoor</td>
+<td>消費品牌</td>
+<td>中</td>
+<td>中</td>
+<td>C</td>
+<td>三訊號齊全且離高點約 -21%，但消費基本面需補資料</td>
+<td>Revenue growth、gross margin、inventory</td>
+<td>品牌需求、渠道擴張</td>
+<td>等回測再買</td>
+<td>回測 20 / 60 日線不破</td>
+<td>估值、消費波動</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2>7. 等財報確認名單</h2>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th style="text-align:right">排名</th>
+<th>股票代號</th>
+<th>公司名稱</th>
+<th>產業</th>
+<th>中期分數</th>
+<th>起漲分數</th>
+<th>評級</th>
+<th>中期理由</th>
+<th>財務驗證</th>
+<th>產業驗證</th>
+<th>布局方式</th>
+<th>追蹤指標</th>
+<th>風險</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td>EOSE</td>
+<td>Eos Energy Enterprises</td>
+<td>長時儲能</td>
+<td>中</td>
+<td>高</td>
+<td>C</td>
+<td>技術與營收成長都有亮點，但毛利 / 現金流尚不足以升級</td>
+<td>Gross margin、cash burn、second line ramp</td>
+<td>Frontier Power USA、grid storage demand</td>
+<td>等財報確認</td>
+<td>第二產線良率、毛利率改善</td>
+<td>稀釋、執行、製造爬坡</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td>APLD</td>
+<td>Applied Digital</td>
+<td>AI / HPC data center</td>
+<td>中</td>
+<td>中高</td>
+<td>D</td>
+<td>HPC hosting 有收入與 adjusted EBITDA 支撐，但 debt、net loss、減值使風險偏高</td>
+<td>Debt service、net loss、HPC hosting revenue</td>
+<td>Polaris Forge / hyperscaler demand</td>
+<td>等財報確認</td>
+<td>Q4 revenue、租約收入、debt ratio</td>
+<td>高負債、股價貼近 52 週高點</td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td>ACHR</td>
+<td>Archer Aviation</td>
+<td>eVTOL / aerospace</td>
+<td>中</td>
+<td>中</td>
+<td>C</td>
+<td>FAA progress 與 eIPP 是催化，但仍需證明量產收入</td>
+<td>Cash burn、liquidity、revenue ramp</td>
+<td>FAA Type Certification、US operations</td>
+<td>等財報確認</td>
+<td>認證進度、commercial launch、liquidity</td>
+<td>認證延遲、商業化未證明</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td>JOBY</td>
+<td>Joby Aviation</td>
+<td>eVTOL / aerospace</td>
+<td>中</td>
+<td>中</td>
+<td>C</td>
+<td>TIA / FAA-conforming aircraft 有催化，但仍是認證與量產前階段</td>
+<td>Cash runway、operating loss、certification spend</td>
+<td>FAA TIA、Dubai / US early operations</td>
+<td>等財報確認</td>
+<td>認證節點、載客試營運、現金消耗</td>
+<td>商業化延遲、資本支出</td>
+</tr>
+<tr>
+<td style="text-align:right">5</td>
+<td><a href="/stockReport/stocks/SMCI/0521.html" target="_blank" rel="noopener noreferrer">SMCI</a></td>
+<td><a href="/stockReport/stocks/SMCI/0521.html" target="_blank" rel="noopener noreferrer">Super Micro Computer</a></td>
+<td>AI server</td>
+<td>中</td>
+<td>中</td>
+<td>C</td>
+<td>preliminary data 顯示需求仍在，但公司治理與正式財報需確認</td>
+<td>正式 10-Q、gross margin、customer commitments</td>
+<td>AI server demand、DLC adoption</td>
+<td>等財報確認</td>
+<td>正式財報與 margin 是否一致</td>
+<td>preliminary data、margin 壓力、治理信任</td>
+</tr>
+<tr>
+<td style="text-align:right">6</td>
+<td>FND</td>
+<td>Floor &amp; Decor</td>
+<td>家居零售 / 消費修復</td>
+<td>中</td>
+<td>中</td>
+<td>C</td>
+<td>低位修復存在，但房市與同店銷售尚未補足</td>
+<td>同店銷售、gross margin、inventory、free cash flow</td>
+<td>房屋交易、裝修需求、利率</td>
+<td>等財報確認</td>
+<td>60 日線站穩、財報止跌</td>
+<td>房市疲弱、消費降級</td>
+</tr>
+<tr>
+<td style="text-align:right">7</td>
+<td>KMX</td>
+<td>CarMax</td>
+<td>二手車 / 消費金融</td>
+<td>中</td>
+<td>中</td>
+<td>C</td>
+<td>修復位置不錯，但信用週期與二手車需求要先驗證</td>
+<td>Used unit sales、gross profit per unit、CAF credit loss</td>
+<td>二手車價格、汽車貸款利率</td>
+<td>等財報確認</td>
+<td>credit loss 改善、unit sales 回升</td>
+<td>信貸風險、利率</td>
+</tr>
+<tr>
+<td style="text-align:right">8</td>
+<td>BRZE</td>
+<td>Braze</td>
+<td>SaaS / 客戶互動平台</td>
+<td>中</td>
+<td>中</td>
+<td>C</td>
+<td>站回短中均線，但 SaaS 成長與 retention 需確認</td>
+<td>Revenue growth、net retention、operating loss、cash flow</td>
+<td>AI marketing / customer engagement demand</td>
+<td>等財報確認</td>
+<td>ARR / retention 改善、虧損縮小</td>
+<td>SaaS 估值、續約風險</td>
+</tr>
+<tr>
+<td style="text-align:right">9</td>
+<td>FOUR</td>
+<td>Shift4 Payments</td>
+<td>支付 / 金融科技</td>
+<td>中</td>
+<td>中</td>
+<td>C</td>
+<td>距高點仍深但尚未站穩 60 日線，需補 volume 與槓桿資料</td>
+<td>Payment volume、take rate、adjusted EBITDA、debt</td>
+<td>餐旅 / 娛樂支付需求</td>
+<td>等財報確認</td>
+<td>60 日線站穩、volume 轉強</td>
+<td>槓桿、競爭、消費循環</td>
+</tr>
+<tr>
+<td style="text-align:right">10</td>
+<td>QS</td>
+<td>QuantumScape</td>
+<td>固態電池</td>
+<td>低</td>
+<td>中</td>
+<td>C</td>
+<td>技術修復明顯，但商業化與現金流仍是核心缺口</td>
+<td>Cash runway、sample shipment、partner progress</td>
+<td>EV battery adoption、OEM validation</td>
+<td>等財報確認</td>
+<td>量產里程碑與現金消耗</td>
+<td>商業化時程、稀釋</td>
+</tr>
+<tr>
+<td style="text-align:right">11</td>
+<td>COMP</td>
+<td>Compass</td>
+<td>房地產科技</td>
+<td>中</td>
+<td>中</td>
+<td>C</td>
+<td>房市修復題材存在，但需要財報確認成交量與獲利品質</td>
+<td>Revenue、adjusted EBITDA、free cash flow</td>
+<td>房屋交易量、利率敏感度</td>
+<td>等財報確認</td>
+<td>房市成交回升、現金流改善</td>
+<td>房市低迷、佣金壓力</td>
+</tr>
+<tr>
+<td style="text-align:right">12</td>
+<td>W</td>
+<td>Wayfair</td>
+<td>家居電商</td>
+<td>中</td>
+<td>中</td>
+<td>C</td>
+<td>低位修復與消費循環題材存在，但 60 日線與 margin 仍待確認</td>
+<td>Revenue growth、gross margin、cash flow、debt</td>
+<td>家居需求、利率與消費信心</td>
+<td>等財報確認</td>
+<td>60 日線站穩、margin 改善</td>
+<td>消費疲弱、槓桿</td>
+</tr>
+<tr>
+<td style="text-align:right">13</td>
+<td>OTEX</td>
+<td>OpenText</td>
+<td>企業軟體</td>
+<td>中</td>
+<td>低</td>
+<td>C</td>
+<td>位置符合修復，但成長與去槓桿資料需補足</td>
+<td>Organic growth、debt reduction、free cash flow</td>
+<td>企業軟體支出、AI 文件管理需求</td>
+<td>等財報確認</td>
+<td>free cash flow 與 debt reduction</td>
+<td>成長放緩、整合風險</td>
+</tr>
+<tr>
+<td style="text-align:right">14</td>
+<td>KVUE</td>
+<td>Kenvue</td>
+<td>消費防禦 / 個護</td>
+<td>中</td>
+<td>低</td>
+<td>C</td>
+<td>三訊號轉強但基本面催化不明，先等財報與訴訟 / margin 資料</td>
+<td>Organic growth、gross margin、litigation exposure</td>
+<td>consumer staples demand</td>
+<td>等財報確認</td>
+<td>60 日線站穩、margin 改善</td>
+<td>低成長、訴訟與品牌風險</td>
+</tr>
+<tr>
+<td style="text-align:right">15</td>
+<td>GAP</td>
+<td>Gap</td>
+<td>服飾零售</td>
+<td>中</td>
+<td>中</td>
+<td>C</td>
+<td>三訊號轉強且仍低於高點，但服飾零售需看同店銷售與庫存</td>
+<td>Comparable sales、gross margin、inventory</td>
+<td>消費復甦、品牌修復</td>
+<td>等財報確認</td>
+<td>同店銷售、庫存週轉</td>
+<td>消費波動、促銷壓力</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2>8. 暫時排除名單</h2>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th style="text-align:right">排名</th>
+<th>股票代號</th>
+<th>公司名稱</th>
+<th>產業</th>
+<th>中期分數</th>
+<th>起漲分數</th>
+<th>評級</th>
+<th>中期理由</th>
+<th>財務驗證</th>
+<th>產業驗證</th>
+<th>布局方式</th>
+<th>追蹤指標</th>
+<th>風險</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td>PCLA</td>
+<td>PicoCELA</td>
+<td>小型通訊 / ADS</td>
+<td>低</td>
+<td>中</td>
+<td>E</td>
+<td>多訊號但低價、爆量，且距 52 週高點仍極遠，較像事件型反彈</td>
+<td>需補營收、毛利、cash runway</td>
+<td>需確認商業訂單與產品採用</td>
+<td>暫時排除</td>
+<td>連續財報改善且不再單日爆量</td>
+<td>低價、流動性、反向分割 / 稀釋風險</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td>ATPC</td>
+<td>Agape ATP</td>
+<td>小型股</td>
+<td>低</td>
+<td>中</td>
+<td>E</td>
+<td>距 200 日均線很遠，結構性弱勢未解除</td>
+<td>需補財報、現金流、稀釋紀錄</td>
+<td>需確認營運主線</td>
+<td>暫時排除</td>
+<td>站回 200 日線且基本面改善</td>
+<td>低價、爆量、基本面不明</td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td>PLUG</td>
+<td>Plug Power</td>
+<td>氫能</td>
+<td>低</td>
+<td>中</td>
+<td>E</td>
+<td>技術修復，但 cash burn、融資與毛利壓力未解除</td>
+<td>Gross margin、cash burn、debt</td>
+<td>Hydrogen adoption、policy support</td>
+<td>暫時排除</td>
+<td>毛利轉正與現金流改善</td>
+<td>融資、稀釋、執行風險</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td>DXYZ</td>
+<td>Destiny Tech100</td>
+<td>封閉式投資 / 私募科技曝險</td>
+<td>低</td>
+<td>中</td>
+<td>E</td>
+<td>不適合用一般營運公司模型判讀，需另看 NAV premium / discount 與持倉</td>
+<td>NAV、折溢價、持倉透明度</td>
+<td>私募科技估值與流動性</td>
+<td>暫時排除</td>
+<td>折溢價回落、持倉估值清楚</td>
+<td>溢價、流動性、非營運公司</td>
+</tr>
+<tr>
+<td style="text-align:right">5</td>
+<td>LAES</td>
+<td>SEALSQ</td>
+<td>半導體安全 / IoT</td>
+<td>低</td>
+<td>中</td>
+<td>E</td>
+<td>低價且題材波動高，雖有多訊號但基本面驗證不足</td>
+<td>Revenue、cash runway、稀釋紀錄</td>
+<td>IoT security / post-quantum demand</td>
+<td>暫時排除</td>
+<td>站穩 200 日線且財報改善</td>
+<td>低價、題材炒作、稀釋</td>
+</tr>
+<tr>
+<td style="text-align:right">6</td>
+<td>RZLV</td>
+<td>Rezolve AI</td>
+<td>AI commerce / 小型股</td>
+<td>低</td>
+<td>中</td>
+<td>E</td>
+<td>低價且距高點約 -66%，技術轉強不足以抵銷流動性風險</td>
+<td>Revenue、cash runway、客戶合約</td>
+<td>AI commerce adoption</td>
+<td>暫時排除</td>
+<td>連續財報驗證收入</td>
+<td>低價、資料不足、流動性</td>
+</tr>
+<tr>
+<td style="text-align:right">7</td>
+<td>EDHL</td>
+<td>Everbright Digital</td>
+<td>小型 ADR</td>
+<td>低</td>
+<td>中</td>
+<td>E</td>
+<td>相對量異常且距高點約 -97%，更像事件型反彈</td>
+<td>財報、現金流、稀釋與上市合規</td>
+<td>需確認主營業務與訂單</td>
+<td>暫時排除</td>
+<td>量能正常化且基本面改善</td>
+<td>低價、爆量、資訊不足</td>
+</tr>
+<tr>
+<td style="text-align:right">8</td>
+<td>NIVF</td>
+<td>NewGenIvf</td>
+<td>醫療 / 生殖服務</td>
+<td>低</td>
+<td>中</td>
+<td>E</td>
+<td>低價、爆量且距高點極遠，RSI 反彈不能視為反轉</td>
+<td>Revenue、cash runway、合規 / 稀釋</td>
+<td>需確認醫療服務成長</td>
+<td>暫時排除</td>
+<td>站回長均線並補財報</td>
+<td>低價、流動性、稀釋</td>
+</tr>
+<tr>
+<td style="text-align:right">9</td>
+<td>LIMN</td>
+<td>Liminatus Pharma</td>
+<td>生技</td>
+<td>低</td>
+<td>中</td>
+<td>E</td>
+<td>低價且距高點約 -99%，技術反彈不等於基本面改善</td>
+<td>Cash runway、clinical progress、dilution</td>
+<td>臨床 / 監管催化</td>
+<td>暫時排除</td>
+<td>臨床里程碑與現金跑道清楚</td>
+<td>臨床失敗、稀釋、低流動性</td>
+</tr>
+<tr>
+<td style="text-align:right">10</td>
+<td>WHLR</td>
+<td>Wheeler REIT</td>
+<td>REIT / 小型股</td>
+<td>低</td>
+<td>中</td>
+<td>E</td>
+<td>低價爆量且距高點極遠，結構性風險高</td>
+<td>Debt、FFO、preferred obligations</td>
+<td>商業地產需求</td>
+<td>暫時排除</td>
+<td>資本結構改善</td>
+<td>槓桿、稀釋、流動性</td>
+</tr>
+<tr>
+<td style="text-align:right">11</td>
+<td>SBFM</td>
+<td>Sunshine Biopharma</td>
+<td>生技 / 小型股</td>
+<td>低</td>
+<td>中</td>
+<td>E</td>
+<td>低價且相對量高，較像短線事件，不適合升級研究</td>
+<td>Cash runway、pipeline、稀釋</td>
+<td>臨床 / 商業化驗證</td>
+<td>暫時排除</td>
+<td>不再爆量且財報改善</td>
+<td>低價、稀釋、資料不足</td>
+</tr>
+<tr>
+<td style="text-align:right">12</td>
+<td>SPCE</td>
+<td>Virgin Galactic</td>
+<td>太空旅遊</td>
+<td>低</td>
+<td>中</td>
+<td>E</td>
+<td>技術修復但商業模式與現金消耗仍未證明</td>
+<td>Cash burn、flight cadence、liquidity</td>
+<td>space tourism demand</td>
+<td>暫時排除</td>
+<td>收入規模化與現金消耗下降</td>
+<td>高資本支出、稀釋</td>
+</tr>
+<tr>
+<td style="text-align:right">13</td>
+<td>BYND</td>
+<td>Beyond Meat</td>
+<td>植物肉 / 消費</td>
+<td>低</td>
+<td>低</td>
+<td>E</td>
+<td>低價反彈但基本面修復證據不足</td>
+<td>Revenue trend、gross margin、cash burn、debt</td>
+<td>plant-based demand</td>
+<td>暫時排除</td>
+<td>營收止跌與毛利改善</td>
+<td>需求疲弱、融資壓力</td>
+</tr>
+<tr>
+<td style="text-align:right">14</td>
+<td>BTBT</td>
+<td>Bit Digital</td>
+<td>加密資產 / AI compute</td>
+<td>低</td>
+<td>中</td>
+<td>E</td>
+<td>低價且週期屬性高，本輪訊號不足以升級</td>
+<td>Mining revenue、AI hosting revenue、cash</td>
+<td>Bitcoin cycle、AI compute demand</td>
+<td>暫時排除</td>
+<td>財報確認 AI 轉型並站回長均線</td>
+<td>低價、加密波動、稀釋</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2>9. 明確決策</h2>
+<h3>A. 如果只能選 3 檔 1-6 個月起漲股</h3>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th style="text-align:right">排名</th>
+<th>股票代號</th>
+<th>公司名稱</th>
+<th>產業</th>
+<th>中期分數</th>
+<th>起漲分數</th>
+<th>評級</th>
+<th>中期理由</th>
+<th>財務驗證</th>
+<th>產業驗證</th>
+<th>布局方式</th>
+<th>追蹤指標</th>
+<th>風險</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td><a href="/stockReport/stocks/GLW/0521.html" target="_blank" rel="noopener noreferrer">GLW</a></td>
+<td><a href="/stockReport/stocks/GLW/0521.html" target="_blank" rel="noopener noreferrer">Corning</a></td>
+<td>AI 光通訊 / 材料</td>
+<td>高</td>
+<td>中高</td>
+<td>A</td>
+<td>短線起漲首選；財報、guidance、長約與技術訊號同時支持</td>
+<td>Core sales、core EPS、cash flow</td>
+<td>AI data center optical demand</td>
+<td>可以現在小量分批</td>
+<td>Q2 guidance、突破區支撐</td>
+<td>AI capex 波動</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td><a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer">IONQ</a></td>
+<td><a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer">IonQ</a></td>
+<td>量子運算</td>
+<td>中高</td>
+<td>高</td>
+<td>B</td>
+<td>短線起漲首選；量子主線中 revenue / RPO 支撐較強</td>
+<td>Adjusted EBITDA loss、RPO</td>
+<td>系統銷售與政府合約</td>
+<td>等回測再買</td>
+<td>月線止穩、short interest</td>
+<td>高估值與虧損</td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td><a href="/stockReport/stocks/IREN/0521.html" target="_blank" rel="noopener noreferrer">IREN</a></td>
+<td><a href="/stockReport/stocks/IREN/0521.html" target="_blank" rel="noopener noreferrer">IREN</a></td>
+<td>AI cloud / Bitcoin mining 轉型</td>
+<td>中高</td>
+<td>高</td>
+<td>B</td>
+<td>短線起漲首選；AI cloud 合約支撐，但財務風險仍高</td>
+<td>AI cloud margin、debt</td>
+<td>Microsoft / NVIDIA delivery</td>
+<td>等回測再買</td>
+<td>20 / 60 日線止穩</td>
+<td>CapEx、淨損、比特幣</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>B. 如果只能選 3 檔谷底翻身候選</h3>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th style="text-align:right">排名</th>
+<th>股票代號</th>
+<th>公司名稱</th>
+<th>產業</th>
+<th>中期分數</th>
+<th>起漲分數</th>
+<th>評級</th>
+<th>中期理由</th>
+<th>財務驗證</th>
+<th>產業驗證</th>
+<th>布局方式</th>
+<th>追蹤指標</th>
+<th>風險</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td><a href="/stockReport/stocks/SE/0521.html" target="_blank" rel="noopener noreferrer">SE</a></td>
+<td><a href="/stockReport/stocks/SE/0521.html" target="_blank" rel="noopener noreferrer">Sea Limited</a></td>
+<td>電商 / 遊戲 / 金融</td>
+<td>中高</td>
+<td>中</td>
+<td>B</td>
+<td>谷底翻身首選；低位修復與財報改善交集</td>
+<td>NPL、Shopee margin、Garena bookings</td>
+<td>東南亞消費與金融滲透率</td>
+<td>突破確認再買</td>
+<td>站回 200 日線</td>
+<td>信貸與監管</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td><a href="/stockReport/stocks/VST/0521.html" target="_blank" rel="noopener noreferrer">VST</a></td>
+<td><a href="/stockReport/stocks/VST/0521.html" target="_blank" rel="noopener noreferrer">Vistra</a></td>
+<td>電力 / 獨立發電</td>
+<td>高</td>
+<td>中</td>
+<td>B</td>
+<td>谷底翻身首選；電力現金流與底部修復兼具</td>
+<td>EBITDA、FCF、debt</td>
+<td>data center electricity demand</td>
+<td>等回測再買</td>
+<td>站回 200 日線</td>
+<td>電價與監管</td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td><a href="/stockReport/stocks/SMCI/0521.html" target="_blank" rel="noopener noreferrer">SMCI</a></td>
+<td><a href="/stockReport/stocks/SMCI/0521.html" target="_blank" rel="noopener noreferrer">Super Micro Computer</a></td>
+<td>AI server</td>
+<td>中</td>
+<td>中</td>
+<td>C</td>
+<td>谷底翻身首選但需財報確認；技術像底部修復</td>
+<td>正式 10-Q、gross margin</td>
+<td>AI server demand</td>
+<td>等財報確認</td>
+<td>財報與 margin</td>
+<td>preliminary data、治理信任</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>C. 如果只能選 3 檔 6-12 個月中期候選</h3>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th style="text-align:right">排名</th>
+<th>股票代號</th>
+<th>公司名稱</th>
+<th>產業</th>
+<th>中期分數</th>
+<th>起漲分數</th>
+<th>評級</th>
+<th>中期理由</th>
+<th>財務驗證</th>
+<th>產業驗證</th>
+<th>布局方式</th>
+<th>追蹤指標</th>
+<th>風險</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td><a href="/stockReport/stocks/ARM/0521.html" target="_blank" rel="noopener noreferrer">ARM</a></td>
+<td><a href="/stockReport/stocks/ARM/0521.html" target="_blank" rel="noopener noreferrer">Arm Holdings</a></td>
+<td>半導體 IP</td>
+<td>高</td>
+<td>中</td>
+<td>D</td>
+<td>中期基本面首選但短線暫不追；平台型 royalty 品質高</td>
+<td>Royalty growth、licensing revenue</td>
+<td>Cloud / Edge AI adoption</td>
+<td>暫不追高</td>
+<td>回測或估值壓縮</td>
+<td>高估值</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td><a href="/stockReport/stocks/RMBS/0521.html" target="_blank" rel="noopener noreferrer">RMBS</a></td>
+<td><a href="/stockReport/stocks/RMBS/0521.html" target="_blank" rel="noopener noreferrer">Rambus</a></td>
+<td>半導體 IP / AI memory</td>
+<td>高</td>
+<td>中高</td>
+<td>B</td>
+<td>中期基本面首選；AI memory bandwidth 主線與現金流支撐</td>
+<td>Product revenue、licensing billings</td>
+<td>HBM / memory interface 採用</td>
+<td>等回測再買</td>
+<td>守住 20 / 60 日線</td>
+<td>半導體循環</td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td><a href="/stockReport/stocks/NBIS/0521.html" target="_blank" rel="noopener noreferrer">NBIS</a></td>
+<td><a href="/stockReport/stocks/NBIS/0521.html" target="_blank" rel="noopener noreferrer">Nebius Group</a></td>
+<td>AI cloud</td>
+<td>高</td>
+<td>高</td>
+<td>B</td>
+<td>中期基本面首選；AI cloud 高成長但需控制追高風險</td>
+<td>AI Cloud margin、cash、CapEx</td>
+<td>GPU cloud demand、power pipeline</td>
+<td>等回測再買</td>
+<td>connected power、active power</td>
+<td>估值、融資、執行</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>D. 操作分類</h3>
 <ul>
-<li>使用資料：<code>本機來源檔</code>、<code>本機來源檔</code>、yfinance 日 K、成交量與訊號結果。</li>
-<li>官方資料來源：<a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer">IonQ</a> Q1 2026 results、<a href="/stockReport/stocks/QBTS/0521.html" target="_blank" rel="noopener noreferrer">D-Wave</a> Q1 2026 results、<a href="/stockReport/stocks/RGTI/0521.html" target="_blank" rel="noopener noreferrer">Rigetti</a> Q1 2026 results、Applied Digital fiscal Q3 2026 results、IREN Q3 FY26 business update、Nebius Q1 2026 results、<a href="/stockReport/stocks/IBM/0521.html" target="_blank" rel="noopener noreferrer">IBM</a> Q1 2026 results、<a href="/stockReport/stocks/LRCX/0521.html" target="_blank" rel="noopener noreferrer">Lam Research</a> March 2026 quarter results、GlobalFoundries Q1 2026 results、<a href="/stockReport/stocks/LITE/0521.html" target="_blank" rel="noopener noreferrer">Lumentum</a> fiscal Q3 2026 results、Supermicro fiscal Q3 2026 results、Birkenstock fiscal Q1 2026 results、Morgan Stanley Q1 2026 results、Freeport Q1 2026 results。</li>
-<li>來源連結：
-<ul>
-<li><a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer">IonQ</a>: https://investors.ionq.com/news/news-details/2026/<a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer">IonQ</a>-Announces-First-Quarter-2026-Financial-Results/default.aspx</li>
-<li><a href="/stockReport/stocks/QBTS/0521.html" target="_blank" rel="noopener noreferrer">D-Wave</a>: https://ir.dwavequantum.com/news/news-details/2026/<a href="/stockReport/stocks/QBTS/0521.html" target="_blank" rel="noopener noreferrer">D-Wave</a>-Reports-First-Quarter-2026-Results/default.aspx</li>
-<li><a href="/stockReport/stocks/RGTI/0521.html" target="_blank" rel="noopener noreferrer">Rigetti</a>: https://investors.rigetti.com/node/11041/pdf</li>
-<li>Applied Digital: https://ir.applieddigital.com/news-events/press-releases/detail/148/applied-digital-reports-fiscal-third-quarter-2026-results</li>
-<li>IREN: https://iren.gcs-web.com/news-releases/news-release-details/iren-business-update-and-q3-fy26-results</li>
-<li>Nebius: https://assets.nebius.com/assets/6fc0ea6c-0884-4a1f-bed8-1f797eb9628f/Financial%20results_Q1%202026.pdf</li>
-<li><a href="/stockReport/stocks/IBM/0521.html" target="_blank" rel="noopener noreferrer">IBM</a>: https://newsroom.ibm.com/2026-04-22-<a href="/stockReport/stocks/IBM/0521.html" target="_blank" rel="noopener noreferrer">IBM</a>-RELEASES-FIRST-QUARTER-RESULTS</li>
-<li><a href="/stockReport/stocks/LRCX/0521.html" target="_blank" rel="noopener noreferrer">Lam Research</a>: https://investor.lamresearch.com/2026-04-22-Lam-Research-Corporation-Reports-Financial-Results-for-the-Quarter-Ended-March-29%2C-2026?asPDF=</li>
-<li>GlobalFoundries: https://www.sec.gov/Archives/edgar/data/1709048/000170904826000111/globalfoundries1q2026earni.htm</li>
-<li><a href="/stockReport/stocks/LITE/0521.html" target="_blank" rel="noopener noreferrer">Lumentum</a>: https://investor.lumentum.com/financial-news-releases/news-details/2026/<a href="/stockReport/stocks/LITE/0521.html" target="_blank" rel="noopener noreferrer">Lumentum</a>-Announces-Third-Quarter-of-Fiscal-Year-2026-Financial-Results/default.aspx</li>
-<li>Supermicro: https://ir.supermicro.com/news/news-details/2026/Supermicro-Announces-Third-Quarter-Fiscal-Year-2026-Financial-Results/default.aspx</li>
-<li>Birkenstock: https://www.sec.gov/Archives/edgar/data/1977102/000119312526047586/birk-ex99_1.htm</li>
-<li>Morgan Stanley: https://www.morganstanley.com/about-us-ir/shareholder/1q2026.pdf</li>
-<li>Freeport-McMoRan: https://investors.fcx.com/investors/news-releases/news-release-details/2026/Freeport-Reports-First-Quarter-2026-Results/default.aspx</li>
+<li>可以現在小量分批：<a href="/stockReport/stocks/GLW/0521.html" target="_blank" rel="noopener noreferrer">GLW</a>，基本面與技術證據最完整，但仍需小量與條件式追蹤。</li>
+<li>等回測再買：<a href="/stockReport/stocks/NBIS/0521.html" target="_blank" rel="noopener noreferrer">NBIS</a>、<a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer">IONQ</a>、<a href="/stockReport/stocks/RMBS/0521.html" target="_blank" rel="noopener noreferrer">RMBS</a>、<a href="/stockReport/stocks/IREN/0521.html" target="_blank" rel="noopener noreferrer">IREN</a>、RGTI、QBTS、CIFR、BTDR、<a href="/stockReport/stocks/VST/0521.html" target="_blank" rel="noopener noreferrer">VST</a>、BIRK、MU、LRCX、SPOT、AAOI、LITE、GTLS、DECK，主線或修復條件不差，但追價風險高。</li>
+<li>突破確認再買：<a href="/stockReport/stocks/SE/0521.html" target="_blank" rel="noopener noreferrer">SE</a>，財報改善但技術仍需站回長均線確認。</li>
+<li>等財報確認：EOSE、APLD、ACHR、JOBY、<a href="/stockReport/stocks/SMCI/0521.html" target="_blank" rel="noopener noreferrer">SMCI</a>、FND、KMX、BRZE、FOUR、QS、COMP、W、OTEX、KVUE、GAP，催化或修復存在但財報仍需補足。</li>
+<li>只觀察：QUBT、FCX、ASML、IBM、QS、COMP、OTEX、KVUE，題材或底部修復存在但本輪資料不足以升級。</li>
+<li>暫不追高：<a href="/stockReport/stocks/ARM/0521.html" target="_blank" rel="noopener noreferrer">ARM</a>、APLD、<a href="/stockReport/stocks/NBIS/0521.html" target="_blank" rel="noopener noreferrer">NBIS</a>，基本面不差但掃描日位置偏高。</li>
+<li>續抱但不加碼：本批暫無符合標的，因未提供持倉成本與部位。</li>
+<li>逢高減碼：本批暫無符合標的，需持倉成本與風險承受度才可判斷。</li>
+<li>暫時排除：PCLA、ATPC、PLUG、DXYZ、LAES、RZLV、EDHL、NIVF、LIMN、WHLR、SBFM、SPCE、BYND、BTBT，低價、爆量、資料不足或模型不適用。</li>
 </ul>
-</li>
-<li>尚未取得或未完整驗證：即時盤後收盤 K 線、完整估值倍數、short interest、機構持股、內部人交易、所有小型股最新 10-Q / going concern / offering 資料。</li>
-<li>因缺少完整財報或現金流驗證，<code>QUBT</code> 與多數低價暴量股只能列觀察或排除，不能升級為推薦。</li>
-</ul>
-<blockquote>
+<h2>10. 十一個核心問題</h2>
+<ol>
+<li>真正起漲股：<a href="/stockReport/stocks/GLW/0521.html" target="_blank" rel="noopener noreferrer">GLW</a>、<a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer">IONQ</a>、<a href="/stockReport/stocks/IREN/0521.html" target="_blank" rel="noopener noreferrer">IREN</a>、<a href="/stockReport/stocks/NBIS/0521.html" target="_blank" rel="noopener noreferrer">NBIS</a>、<a href="/stockReport/stocks/RMBS/0521.html" target="_blank" rel="noopener noreferrer">RMBS</a>；擴充研究池可加 RGTI、QBTS、APLD、CIFR、BTDR、GTLS。</li>
+<li>真正谷底翻身候選：<a href="/stockReport/stocks/SE/0521.html" target="_blank" rel="noopener noreferrer">SE</a>、<a href="/stockReport/stocks/VST/0521.html" target="_blank" rel="noopener noreferrer">VST</a>、<a href="/stockReport/stocks/SMCI/0521.html" target="_blank" rel="noopener noreferrer">SMCI</a>、FND、KMX、BIRK、BRZE、FOUR；擴充觀察可加 EOSE、RGTI、QBTS、QUBT、ACHR、JOBY、QS、COMP、W、OTEX。</li>
+<li>只是低基期反彈：PCLA、ATPC、LAES、RZLV、EDHL、NIVF、LIMN、WHLR、SBFM、SPCE、BYND。</li>
+<li>適合 6-12 個月追蹤：<a href="/stockReport/stocks/GLW/0521.html" target="_blank" rel="noopener noreferrer">GLW</a>、<a href="/stockReport/stocks/ARM/0521.html" target="_blank" rel="noopener noreferrer">ARM</a>、<a href="/stockReport/stocks/VST/0521.html" target="_blank" rel="noopener noreferrer">VST</a>、<a href="/stockReport/stocks/RMBS/0521.html" target="_blank" rel="noopener noreferrer">RMBS</a>、<a href="/stockReport/stocks/NBIS/0521.html" target="_blank" rel="noopener noreferrer">NBIS</a>、<a href="/stockReport/stocks/SE/0521.html" target="_blank" rel="noopener noreferrer">SE</a>、MU、LRCX、ASML、IBM、SPOT、FCX。</li>
+<li>短線強但不能追：<a href="/stockReport/stocks/NBIS/0521.html" target="_blank" rel="noopener noreferrer">NBIS</a>、<a href="/stockReport/stocks/ARM/0521.html" target="_blank" rel="noopener noreferrer">ARM</a>、APLD、<a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer">IONQ</a>、RGTI、QBTS、<a href="/stockReport/stocks/IREN/0521.html" target="_blank" rel="noopener noreferrer">IREN</a>、GTLS、LITE、AAOI。</li>
+<li>需要等財報：EOSE、APLD、ACHR、JOBY、<a href="/stockReport/stocks/SMCI/0521.html" target="_blank" rel="noopener noreferrer">SMCI</a>、FND、KMX、BRZE、FOUR、QS、COMP、W、OTEX、KVUE、GAP。</li>
+<li>價值陷阱：PLUG、PCLA、ATPC、DXYZ、WHLR、BYND、SPCE、部分低價爆量股風險最高。</li>
+<li>短線波段不適合長抱：RGTI、QBTS、QUBT、EOSE、CIFR、BTDR、AAOI、APLD。</li>
+<li>中期穩健但短線不會飆：<a href="/stockReport/stocks/VST/0521.html" target="_blank" rel="noopener noreferrer">VST</a>、<a href="/stockReport/stocks/GLW/0521.html" target="_blank" rel="noopener noreferrer">GLW</a>、<a href="/stockReport/stocks/RMBS/0521.html" target="_blank" rel="noopener noreferrer">RMBS</a>、<a href="/stockReport/stocks/SE/0521.html" target="_blank" rel="noopener noreferrer">SE</a>、ASML、IBM、FCX。</li>
+<li>資金有限優先研究 5 檔：<a href="/stockReport/stocks/GLW/0521.html" target="_blank" rel="noopener noreferrer">GLW</a>、<a href="/stockReport/stocks/SE/0521.html" target="_blank" rel="noopener noreferrer">SE</a>、<a href="/stockReport/stocks/VST/0521.html" target="_blank" rel="noopener noreferrer">VST</a>、<a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer">IONQ</a>、<a href="/stockReport/stocks/RMBS/0521.html" target="_blank" rel="noopener noreferrer">RMBS</a>。</li>
+<li>只能選 3 檔：起漲偏 <a href="/stockReport/stocks/GLW/0521.html" target="_blank" rel="noopener noreferrer">GLW</a>、<a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer">IONQ</a>、<a href="/stockReport/stocks/IREN/0521.html" target="_blank" rel="noopener noreferrer">IREN</a>；谷底翻身偏 <a href="/stockReport/stocks/SE/0521.html" target="_blank" rel="noopener noreferrer">SE</a>、<a href="/stockReport/stocks/VST/0521.html" target="_blank" rel="noopener noreferrer">VST</a>、<a href="/stockReport/stocks/SMCI/0521.html" target="_blank" rel="noopener noreferrer">SMCI</a>；中期偏 <a href="/stockReport/stocks/ARM/0521.html" target="_blank" rel="noopener noreferrer">ARM</a>、<a href="/stockReport/stocks/RMBS/0521.html" target="_blank" rel="noopener noreferrer">RMBS</a>、<a href="/stockReport/stocks/NBIS/0521.html" target="_blank" rel="noopener noreferrer">NBIS</a>。</li>
+</ol>
+<h2>11. 最終精選名單</h2>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th style="text-align:right">排名</th>
+<th>股票代號</th>
+<th>公司名稱</th>
+<th>產業</th>
+<th>中期分數</th>
+<th>起漲分數</th>
+<th>評級</th>
+<th>中期理由</th>
+<th>財務驗證</th>
+<th>產業驗證</th>
+<th>布局方式</th>
+<th>追蹤指標</th>
+<th>風險</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td><a href="/stockReport/stocks/GLW/0521.html" target="_blank" rel="noopener noreferrer">GLW</a></td>
+<td><a href="/stockReport/stocks/GLW/0521.html" target="_blank" rel="noopener noreferrer">Corning</a></td>
+<td>AI 光通訊 / 材料</td>
+<td>高</td>
+<td>中高</td>
+<td>A</td>
+<td>短線起漲首選；財報、guidance、長約與技術訊號同時支持</td>
+<td>Core sales、core EPS、cash flow</td>
+<td>AI data center optical demand</td>
+<td>可以現在小量分批</td>
+<td>Q2 guidance、突破區支撐</td>
+<td>AI capex 波動</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td><a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer">IONQ</a></td>
+<td><a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer">IonQ</a></td>
+<td>量子運算</td>
+<td>中高</td>
+<td>高</td>
+<td>B</td>
+<td>短線起漲首選；量子主線中 revenue / RPO 支撐較強</td>
+<td>Adjusted EBITDA loss、RPO</td>
+<td>系統銷售與政府合約</td>
+<td>等回測再買</td>
+<td>月線止穩、short interest</td>
+<td>高估值與虧損</td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td><a href="/stockReport/stocks/IREN/0521.html" target="_blank" rel="noopener noreferrer">IREN</a></td>
+<td><a href="/stockReport/stocks/IREN/0521.html" target="_blank" rel="noopener noreferrer">IREN</a></td>
+<td>AI cloud / Bitcoin mining 轉型</td>
+<td>中高</td>
+<td>高</td>
+<td>B</td>
+<td>短線起漲首選；AI cloud 合約支撐，但財務風險仍高</td>
+<td>AI cloud margin、debt</td>
+<td>Microsoft / NVIDIA delivery</td>
+<td>等回測再買</td>
+<td>20 / 60 日線止穩</td>
+<td>CapEx、淨損、比特幣</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td><a href="/stockReport/stocks/SE/0521.html" target="_blank" rel="noopener noreferrer">SE</a></td>
+<td><a href="/stockReport/stocks/SE/0521.html" target="_blank" rel="noopener noreferrer">Sea Limited</a></td>
+<td>電商 / 遊戲 / 金融</td>
+<td>中高</td>
+<td>中</td>
+<td>B</td>
+<td>谷底翻身首選；低位修復與財報改善交集</td>
+<td>NPL、Shopee margin、Garena bookings</td>
+<td>東南亞消費與金融滲透率</td>
+<td>突破確認再買</td>
+<td>站回 200 日線</td>
+<td>信貸與監管</td>
+</tr>
+<tr>
+<td style="text-align:right">5</td>
+<td><a href="/stockReport/stocks/VST/0521.html" target="_blank" rel="noopener noreferrer">VST</a></td>
+<td><a href="/stockReport/stocks/VST/0521.html" target="_blank" rel="noopener noreferrer">Vistra</a></td>
+<td>電力 / 獨立發電</td>
+<td>高</td>
+<td>中</td>
+<td>B</td>
+<td>谷底翻身首選；電力現金流與底部修復兼具</td>
+<td>EBITDA、FCF、debt</td>
+<td>data center electricity demand</td>
+<td>等回測再買</td>
+<td>站回 200 日線</td>
+<td>電價與監管</td>
+</tr>
+<tr>
+<td style="text-align:right">6</td>
+<td><a href="/stockReport/stocks/SMCI/0521.html" target="_blank" rel="noopener noreferrer">SMCI</a></td>
+<td><a href="/stockReport/stocks/SMCI/0521.html" target="_blank" rel="noopener noreferrer">Super Micro Computer</a></td>
+<td>AI server</td>
+<td>中</td>
+<td>中</td>
+<td>C</td>
+<td>谷底翻身首選但需財報確認；技術像底部修復</td>
+<td>正式 10-Q、gross margin</td>
+<td>AI server demand</td>
+<td>等財報確認</td>
+<td>財報與 margin</td>
+<td>preliminary data、治理信任</td>
+</tr>
+<tr>
+<td style="text-align:right">7</td>
+<td><a href="/stockReport/stocks/ARM/0521.html" target="_blank" rel="noopener noreferrer">ARM</a></td>
+<td><a href="/stockReport/stocks/ARM/0521.html" target="_blank" rel="noopener noreferrer">Arm Holdings</a></td>
+<td>半導體 IP</td>
+<td>高</td>
+<td>中</td>
+<td>D</td>
+<td>中期基本面首選但短線暫不追；平台型 royalty 品質高</td>
+<td>Royalty growth、licensing revenue</td>
+<td>Cloud / Edge AI adoption</td>
+<td>暫不追高</td>
+<td>回測或估值壓縮</td>
+<td>高估值</td>
+</tr>
+<tr>
+<td style="text-align:right">8</td>
+<td><a href="/stockReport/stocks/RMBS/0521.html" target="_blank" rel="noopener noreferrer">RMBS</a></td>
+<td><a href="/stockReport/stocks/RMBS/0521.html" target="_blank" rel="noopener noreferrer">Rambus</a></td>
+<td>半導體 IP / AI memory</td>
+<td>高</td>
+<td>中高</td>
+<td>B</td>
+<td>中期基本面首選；AI memory bandwidth 主線與現金流支撐</td>
+<td>Product revenue、licensing billings</td>
+<td>HBM / memory interface 採用</td>
+<td>等回測再買</td>
+<td>守住 20 / 60 日線</td>
+<td>半導體循環</td>
+</tr>
+<tr>
+<td style="text-align:right">9</td>
+<td><a href="/stockReport/stocks/NBIS/0521.html" target="_blank" rel="noopener noreferrer">NBIS</a></td>
+<td><a href="/stockReport/stocks/NBIS/0521.html" target="_blank" rel="noopener noreferrer">Nebius Group</a></td>
+<td>AI cloud</td>
+<td>高</td>
+<td>高</td>
+<td>B</td>
+<td>中期基本面首選；AI cloud 高成長但需控制追高風險</td>
+<td>AI Cloud margin、cash、CapEx</td>
+<td>GPU cloud demand、power pipeline</td>
+<td>等回測再買</td>
+<td>connected power、active power</td>
+<td>估值、融資、執行</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2>12. 最終一句話</h2>
+<p>這批名單中，最適合優先研究的是 <a href="/stockReport/stocks/GLW/0521.html" target="_blank" rel="noopener noreferrer">GLW</a>、<a href="/stockReport/stocks/SE/0521.html" target="_blank" rel="noopener noreferrer">SE</a>、<a href="/stockReport/stocks/VST/0521.html" target="_blank" rel="noopener noreferrer">VST</a>、<a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer">IONQ</a>、<a href="/stockReport/stocks/RMBS/0521.html" target="_blank" rel="noopener noreferrer">RMBS</a>、<a href="/stockReport/stocks/SMCI/0521.html" target="_blank" rel="noopener noreferrer">SMCI</a>、<a href="/stockReport/stocks/ARM/0521.html" target="_blank" rel="noopener noreferrer">ARM</a>、<a href="/stockReport/stocks/NBIS/0521.html" target="_blank" rel="noopener noreferrer">NBIS</a>、<a href="/stockReport/stocks/IREN/0521.html" target="_blank" rel="noopener noreferrer">IREN</a>；其中 <a href="/stockReport/stocks/GLW/0521.html" target="_blank" rel="noopener noreferrer">GLW</a>、<a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer">IONQ</a>、<a href="/stockReport/stocks/IREN/0521.html" target="_blank" rel="noopener noreferrer">IREN</a> 偏 1-6 個月起漲，<a href="/stockReport/stocks/SE/0521.html" target="_blank" rel="noopener noreferrer">SE</a>、<a href="/stockReport/stocks/VST/0521.html" target="_blank" rel="noopener noreferrer">VST</a>、<a href="/stockReport/stocks/SMCI/0521.html" target="_blank" rel="noopener noreferrer">SMCI</a> 偏谷底翻身，<a href="/stockReport/stocks/ARM/0521.html" target="_blank" rel="noopener noreferrer">ARM</a>、<a href="/stockReport/stocks/RMBS/0521.html" target="_blank" rel="noopener noreferrer">RMBS</a>、<a href="/stockReport/stocks/NBIS/0521.html" target="_blank" rel="noopener noreferrer">NBIS</a> 偏 6-12 個月中期基本面。擴充研究池則優先補 RGTI、QBTS、EOSE、FND、KMX、BIRK、BRZE、FOUR、MU、LRCX、SPOT 的財報與估值。</p>
+<h2>13. 資料來源與限制</h2>
+<p>使用資料：<code>reports/2026-05-21.md</code>、<code>data/usstock.sqlite3</code>、公司 IR / SEC / 官方新聞稿與公開市場資料。主要公開來源包括 <a href="/stockReport/stocks/GLW/0521.html" target="_blank" rel="noopener noreferrer">Corning</a>、Nebius、<a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer">IonQ</a>、D-Wave、Rigetti、<a href="/stockReport/stocks/IREN/0521.html" target="_blank" rel="noopener noreferrer">IREN</a>、Applied Digital、Cipher Digital、Bitdeer、Eos Energy、<a href="/stockReport/stocks/RMBS/0521.html" target="_blank" rel="noopener noreferrer">Rambus</a>、Arm、Supermicro、<a href="/stockReport/stocks/SE/0521.html" target="_blank" rel="noopener noreferrer">Sea Limited</a>、Archer、Joby、<a href="/stockReport/stocks/VST/0521.html" target="_blank" rel="noopener noreferrer">Vistra</a> 等官方財報或新聞稿。</p>
+<p>限制：本報告以 2026-05-21 收盤 K 線為基準；V4 新增標的多數只完成技術分層與題材初篩，尚未逐檔補 SEC filings、估值、short interest、內部人交易、機構持股與最新新聞。所有操作建議均為條件式研究分類，不代表立即買進、賣出或持有建議。</p>
 <p>免責聲明：本內容根據公開資訊與使用者提供名單整理，僅供教育性研究與投資流程設計參考，不構成個人化投資建議、招攬或交易建議。市場可能朝任何判斷的反方向波動，交易前請自行研究並諮詢合格持牌顧問。</p>
-</blockquote>
 
 
       <h2>本次提及股票</h2>
       <ul class="stock-list">
-        <li><a href="/stockReport/stocks/IBM/0521.html" target="_blank" rel="noopener noreferrer"><strong>IBM</strong><span class="status-pill">完成</span></a></li>
-        <li><a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer"><strong>IONQ — IonQ</strong><span class="status-pill">完成</span></a></li>
-        <li><a href="/stockReport/stocks/LITE/0521.html" target="_blank" rel="noopener noreferrer"><strong>LITE — Lumentum</strong><span class="status-pill">完成</span></a></li>
-        <li><a href="/stockReport/stocks/LRCX/0521.html" target="_blank" rel="noopener noreferrer"><strong>LRCX — Lam Research</strong><span class="status-pill">完成</span></a></li>
-        <li><a href="/stockReport/stocks/QBTS/0521.html" target="_blank" rel="noopener noreferrer"><strong>QBTS — D-Wave</strong><span class="status-pill">完成</span></a></li>
-        <li><a href="/stockReport/stocks/RGTI/0521.html" target="_blank" rel="noopener noreferrer"><strong>RGTI — Rigetti</strong><span class="status-pill">完成</span></a></li>
+        <li><a href="/stockReport/stocks/ARM/0521.html" target="_blank" rel="noopener noreferrer"><strong>ARM — Arm Holdings</strong><span class="status-pill">完成</span></a></li>
+        <li><a href="/stockReport/stocks/GLW/0521.html" target="_blank" rel="noopener noreferrer"><strong>GLW — Corning</strong><span class="status-pill">完成</span></a></li>
+        <li><a href="/stockReport/stocks/IONQ/0521.html" target="_blank" rel="noopener noreferrer"><strong>IONQ — IonQ</strong><span class="status-pill">已產出</span></a></li>
+        <li><a href="/stockReport/stocks/IREN/0521.html" target="_blank" rel="noopener noreferrer"><strong>IREN</strong><span class="status-pill">完成</span></a></li>
+        <li><a href="/stockReport/stocks/NBIS/0521.html" target="_blank" rel="noopener noreferrer"><strong>NBIS — Nebius Group</strong><span class="status-pill">完成</span></a></li>
+        <li><a href="/stockReport/stocks/RMBS/0521.html" target="_blank" rel="noopener noreferrer"><strong>RMBS — Rambus</strong><span class="status-pill">完成</span></a></li>
+        <li><a href="/stockReport/stocks/SE/0521.html" target="_blank" rel="noopener noreferrer"><strong>SE — Sea Limited</strong><span class="status-pill">完成</span></a></li>
+        <li><a href="/stockReport/stocks/SMCI/0521.html" target="_blank" rel="noopener noreferrer"><strong>SMCI — Super Micro Computer</strong><span class="status-pill">完成</span></a></li>
+        <li><a href="/stockReport/stocks/VST/0521.html" target="_blank" rel="noopener noreferrer"><strong>VST — Vistra</strong><span class="status-pill">完成</span></a></li>
       </ul>
     </article>
   </main>
