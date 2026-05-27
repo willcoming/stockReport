@@ -785,7 +785,53 @@ tbody tr:nth-child(even) {
 }
 
 .performance-table {
-  min-width: 1120px;
+  min-width: 1900px;
+  table-layout: fixed;
+}
+
+.performance-col-target {
+  width: 190px;
+}
+
+.performance-col-entry-date,
+.performance-col-start-date {
+  width: 102px;
+}
+
+.performance-col-days {
+  width: 72px;
+}
+
+.performance-col-start-price {
+  width: 105px;
+}
+
+.performance-col-latest-price {
+  width: 120px;
+}
+
+.performance-col-return {
+  width: 92px;
+}
+
+.performance-col-layout {
+  width: 135px;
+}
+
+.performance-col-holding {
+  width: 210px;
+}
+
+.performance-col-breakout-reason {
+  width: 270px;
+}
+
+.performance-col-midterm {
+  width: 280px;
+}
+
+.performance-col-risk {
+  width: 230px;
 }
 
 .performance-table th:first-child,
@@ -798,8 +844,8 @@ tbody tr:nth-child(even) {
 .performance-table td:first-child {
   left: 0;
   z-index: 3;
-  width: 210px;
-  min-width: 210px;
+  width: 190px;
+  min-width: 190px;
   box-shadow: 8px 0 14px rgba(0, 0, 0, 0.04);
 }
 
@@ -814,10 +860,29 @@ tbody tr:nth-child(even) {
 
 .performance-table td:first-child,
 .performance-table td:nth-child(4),
-.performance-table td:nth-child(5),
-.performance-table td:nth-child(10) {
+.performance-table td:nth-child(8) {
   font-weight: 800;
+}
+
+.performance-table td:first-child,
+.performance-table td:nth-child(2),
+.performance-table td:nth-child(3),
+.performance-table td:nth-child(4),
+.performance-table td:nth-child(5),
+.performance-table td:nth-child(6),
+.performance-table td:nth-child(7),
+.performance-table td:nth-child(8) {
   white-space: nowrap;
+}
+
+.performance-table td:nth-child(9),
+.performance-table td:nth-child(10),
+.performance-table td:nth-child(11),
+.performance-table td:nth-child(12) {
+  line-height: 1.5;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .performance-symbol-company {
