@@ -6,7 +6,7 @@
   <title>2026-05-27 台股起漲股報告</title>
   <link rel="icon" href="../../../assets/radar-icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../../assets/radar-icon.svg">
-  <link rel="stylesheet" href="../../../assets/style.css?v=20260527-performance-widths-v1">
+  <link rel="stylesheet" href="../../../assets/style.css?v=20260527-performance-trim-reasons-v1">
 </head>
 <body>
   <header class="site-header">
@@ -41,74 +41,433 @@
     <section class="report-hero">
       <p>Taiwan Breakout Report</p>
       <h1>2026-05-27 台股起漲股報告</h1>
-      <span>Generated 2026-05-27 17:27 台北時間</span>
+      <span>Generated 2026-05-27 19:36 台北時間</span>
     </section>
     <article class="report-content">
       <p>資料日：2026-05-27<br>
-建立日：2026-05-27（Asia/Taipei）<br>
-資料來源：K 線警報清單 / 技術掃描<br>
-來源檔：<code>2026-05-27.md</code><br>
-公開交易資料參考：<a href="https://wwwc.twse.com.tw/en/page/trading/exchange/MI_INDEX4.html" target="_blank" rel="noopener noreferrer">TWSE Daily Trading Info</a> / <a href="https://www.tpex.org.tw/openapi/" target="_blank" rel="noopener noreferrer">TPEx OpenAPI</a><br>
-分析限制：本報告主要根據提供的台股 K 線警報掃描進行持股管理評估。來源未提供持股成本、持股比例、財報、新聞、法說會與產業資料，因此所有加減倉建議均屬「技術初篩」，財務與產業資料需後續補強。本報告為公開市場研究，不是個人化投資建議。</p>
-<hr>
-<h2>1. 整體持股結論摘要</h2>
-<p>本批台股 K 線掃描共有 204 檔觸發多方訊號，整體屬於「技術面廣泛轉強，但分化明顯」的盤勢。訊號最集中在半導體、IC 設計、PCB、散熱、電力設備、電子零組件與金融證券股；不過多檔高成交金額個股出現開高走低、收盤遠離高點，代表不是所有轉強訊號都適合追價。</p>
-<p>適合小比例加倉的標的不多，主要限於同時具備突破 ZLSMA、MACD 金叉、EMA20 / ZLSMA 雙線向上，且收盤位置偏強者，例如 4966 譜瑞-KY、3293 鈊象、1303 南亞、6190 萬泰科、6175 立敦。這些仍只能視為技術初篩加碼，不宜重倉。</p>
-<p>只能續抱、不適合加碼的標的包括 2308 台達電、2360 致茂、1519 華城、8016 矽創等。這些標的仍有多方訊號，但買點不夠乾淨，或只有單一 MACD / 突破訊號，應等回測或確認財報後再提高部位。</p>
-<p>需要停利或減倉觀察的標的集中在高成交金額、高波動族群，包括 2383 台光電、3017 奇鋐、3105 穩懋、6147 頎邦、6274 台燿、6223 旺矽、2301 光寶科。這些標的不是基本面被否定，而是當日量價結構顯示追價風險升高。</p>
-<p>本批沒有足夠資料判定「賣出 / 出清」標的，因為來源未提供跌破長期支撐、財報惡化、公司指引下修或產業趨勢反轉證據。最需要補充的資料是：持股成本、持股比例、是否已有獲利、月營收、季報、毛利率、EPS、法說會與產業供需資料。</p>
-<hr>
-<h2>2. 持股狀態與風險概覽</h2>
+建立日：2026-05-27 19:26 (Asia/Taipei)<br>
+生成方式：指定 Gemini Gem Deep Research，使用上傳 prompt 檔與台股 K 線警報掃描結果生成。<br>
+來源基礎：台股 K 線警報系統 2026-05-27.md、公開市場交易數據、三大法人資金動向、企業正式財報與法說會摘要。</p>
+<h2>0. 掃描資料完整度</h2>
+<p>本日 TWSE 與 TPEX 當日資料源已取得；系統提示「207 檔證券歷史 K 棒不足」是歷史 K 棒長度不足提醒，不是今日資料沒有撈到。若要完成全市場長週期訊號覆蓋，需另外執行 <code>uv run twstock backfill --days 260</code> 補齊歷史資料。</p>
+<p>本日 K 線掃描摘要：</p>
 <div class="table-scroll">
 <table>
 <thead>
 <tr>
-<th>項目</th>
-<th>判斷</th>
+<th>指標</th>
+<th style="text-align:right">數量</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>加倉標的多不多</td>
-<td>不多。多數標的是技術轉強，但不少已漲高或收盤不佳，只能小比例處理。</td>
+<td>普通股多方警報，量 &gt; 500,000</td>
+<td style="text-align:right">588</td>
 </tr>
 <tr>
-<td>需要減倉的標的多不多</td>
-<td>中等偏多。高成交金額 AI、半導體、PCB、散熱股有明顯開高走低或長上影。</td>
+<td>觸發標的</td>
+<td style="text-align:right">204</td>
 </tr>
 <tr>
-<td>是否過度集中單一產業</td>
-<td>是。訊號高度集中在半導體、電子零組件、AI 硬體供應鏈。</td>
+<td>突破 ZLSMA</td>
+<td style="text-align:right">139</td>
 </tr>
 <tr>
-<td>是否可跨市場比較風險</td>
-<td>本批只提供台股資料，無法跨市場比較。</td>
+<td>RSI 低檔反轉</td>
+<td style="text-align:right">4</td>
 </tr>
 <tr>
-<td>是否需要保留現金等待回測</td>
-<td>需要。多數強勢股應等 5 日線、10 日線或突破平台回測不破再加。</td>
+<td>趨勢轉強</td>
+<td style="text-align:right">303</td>
 </tr>
 <tr>
-<td>是否有財報前不宜重倉標的</td>
-<td>有。所有財務驗證未提供的高估值或高波動標的，財報前不宜重倉。</td>
+<td>MACD 動能</td>
+<td style="text-align:right">142</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>本報告屬於持股技術初篩，財務與產業資料需後續補強。</p>
-<hr>
-<h2>3. 可加倉名單</h2>
+<h2>1. 整體結論摘要</h2>
+<p>今日台股出現明顯風險偏好回升，AI 供應鏈、電源散熱、封測、矽光子與部分金融股成為主軸。整體盤勢雖強，但強勢集中在大型權值與少數具財報驗證的產業鏈，並非所有技術突破股都具備中期可持有品質。</p>
+<p>本次最值得優先研究的核心名單為台達電（2308）、穩懋（3105）與南茂（8150）。台達電與南茂偏向 1-6 個月起漲候選；穩懋偏向 6-12 個月中期基本面候選；南亞（1303）屬於谷底翻身與高階電子材料轉機追蹤；凱基金（2883）則是台股成交熱度放大下的金融受惠股。</p>
+<p>持股處理上，迎廣（6117）與直得（1597）因在強勢盤中逆勢轉弱，列為優先賣出或出清觀察；九豪（6127）與雷科（6207）短線雖觸發技術突破，但長上影線與高檔爆量使籌碼風險升高，適合停利部分減倉。</p>
+<h2>2. 來源與主線概覽</h2>
 <div class="table-scroll">
 <table>
 <thead>
 <tr>
-<th>排名</th>
+<th>來源</th>
+<th>主要投資主線</th>
+<th>明確看多股票</th>
+<th>提到但未推薦股票</th>
+<th>主觀買法</th>
+<th>主觀風險提醒</th>
+<th>可信度判斷</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>台股 K 線多方警報系統</td>
+<td>技術突破、趨勢轉強、MACD 動能、ZLSMA 多方訊號</td>
+<td>台達電、穩懋、南茂、南亞、凱基金</td>
+<td>其餘多檔技術警報標的</td>
+<td>突破關鍵均線與 ZLSMA 後分批，避免追高</td>
+<td>開高走低、長上影線、歷史 K 棒不足</td>
+<td>高</td>
+</tr>
+<tr>
+<td>市場主流財經機構與公開資料</td>
+<td>AI 基礎設施、半導體復甦、封測、矽光子、電源散熱</td>
+<td>台積電、聯發科、台達電、聯電、南茂、穩懋</td>
+<td>傳統產業與部分題材股</td>
+<td>順勢配置產業能見度與財報已驗證標的</td>
+<td>散戶情緒過熱、籌碼擁擠、題材股缺乏財報驗證</td>
+<td>高</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2>3. 來源提到的重點股票總表</h2>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th style="text-align:right">排名</th>
+<th>股票代號</th>
+<th>公司名稱</th>
+<th>類型</th>
+<th>核心觀察</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td><a href="https://www.wantgoo.com/stock/2308" target="_blank" rel="noopener noreferrer">2308</a></td>
+<td>台達電</td>
+<td>起漲與中期基本面</td>
+<td>AI 電源與液冷散熱龍頭，營收與法人資金同步驗證</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td><a href="https://www.wantgoo.com/stock/3105" target="_blank" rel="noopener noreferrer">3105</a></td>
+<td>穩懋</td>
+<td>中期基本面</td>
+<td>1.6T 矽光子與雷射產能擴張，法說會與資本支出具催化</td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td><a href="https://www.wantgoo.com/stock/8150" target="_blank" rel="noopener noreferrer">8150</a></td>
+<td>南茂</td>
+<td>起漲</td>
+<td>記憶體與高階封測復甦，量價與財報同步轉強</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td><a href="https://www.wantgoo.com/stock/1303" target="_blank" rel="noopener noreferrer">1303</a></td>
+<td>南亞</td>
+<td>谷底翻身</td>
+<td>高階玻纖布與電子材料轉機，仍需等待回測與報價驗證</td>
+</tr>
+<tr>
+<td style="text-align:right">5</td>
+<td><a href="https://www.wantgoo.com/stock/2883" target="_blank" rel="noopener noreferrer">2883</a></td>
+<td>凱基金</td>
+<td>起漲</td>
+<td>市場成交熱度與證券業務受惠，須追蹤債券部位風險</td>
+</tr>
+<tr>
+<td style="text-align:right">6</td>
+<td><a href="https://www.wantgoo.com/stock/6127" target="_blank" rel="noopener noreferrer">6127</a></td>
+<td>九豪</td>
+<td>高風險強勢股</td>
+<td>技術突破但長上影線與爆量，適合停利減倉而非追價</td>
+</tr>
+<tr>
+<td style="text-align:right">7</td>
+<td><a href="https://www.wantgoo.com/stock/6207" target="_blank" rel="noopener noreferrer">6207</a></td>
+<td>雷科</td>
+<td>高風險強勢股</td>
+<td>題材強但開高走低，短線籌碼壓力偏高</td>
+</tr>
+<tr>
+<td style="text-align:right">8</td>
+<td><a href="https://www.wantgoo.com/stock/6117" target="_blank" rel="noopener noreferrer">6117</a></td>
+<td>迎廣</td>
+<td>轉弱排除</td>
+<td>強勢盤中逆勢破位，二線機殼題材驗證不足</td>
+</tr>
+<tr>
+<td style="text-align:right">9</td>
+<td><a href="https://www.wantgoo.com/stock/1597" target="_blank" rel="noopener noreferrer">1597</a></td>
+<td>直得</td>
+<td>轉弱排除</td>
+<td>工具機與自動化需求未見同步復甦，技術破線</td>
+</tr>
+<tr>
+<td style="text-align:right">10</td>
+<td><a href="https://www.wantgoo.com/stock/8112" target="_blank" rel="noopener noreferrer">8112</a></td>
+<td>至上</td>
+<td>觀察</td>
+<td>記憶體通路受惠想像存在，但來源未提供財報驗證</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2>4. 台股起漲股優先研究</h2>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th style="text-align:right">排名</th>
+<th>股票代號</th>
+<th>公司名稱</th>
+<th>評級</th>
+<th>佈局方式</th>
+<th>核心理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td><a href="https://www.wantgoo.com/stock/2308" target="_blank" rel="noopener noreferrer">2308</a></td>
+<td>台達電</td>
+<td>A</td>
+<td>可以現在小量分批</td>
+<td>AI 電源與液冷散熱具產業龍頭地位，量價強勢且財報驗證較完整</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td><a href="https://www.wantgoo.com/stock/8150" target="_blank" rel="noopener noreferrer">8150</a></td>
+<td>南茂</td>
+<td>B</td>
+<td>可以現在小量分批</td>
+<td>封測景氣回升，Q1 與 4 月營收呈現明確復甦</td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td><a href="https://www.wantgoo.com/stock/2883" target="_blank" rel="noopener noreferrer">2883</a></td>
+<td>凱基金</td>
+<td>B</td>
+<td>可以現在小量分批</td>
+<td>台股成交量放大直接帶動證券與金控收益預期</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2>5. 谷底翻身候選</h2>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th style="text-align:right">排名</th>
+<th>股票代號</th>
+<th>公司名稱</th>
+<th>評級</th>
+<th>佈局方式</th>
+<th>核心理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td><a href="https://www.wantgoo.com/stock/1303" target="_blank" rel="noopener noreferrer">1303</a></td>
+<td>南亞</td>
+<td>B</td>
+<td>等回測再買</td>
+<td>高階電子材料與玻纖布報價轉機明確，但不宜追高</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td><a href="https://www.wantgoo.com/stock/8112" target="_blank" rel="noopener noreferrer">8112</a></td>
+<td>至上</td>
+<td>C</td>
+<td>只觀察</td>
+<td>技術面結束空方趨勢，但財務與合約驗證來源不足</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2>6. 中期基本面優先研究</h2>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th style="text-align:right">排名</th>
+<th>股票代號</th>
+<th>公司名稱</th>
+<th>評級</th>
+<th>佈局方式</th>
+<th>中期理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td><a href="https://www.wantgoo.com/stock/3105" target="_blank" rel="noopener noreferrer">3105</a></td>
+<td>穩懋</td>
+<td>A</td>
+<td>可以現在小量分批</td>
+<td>1.6T 矽光子與低軌衛星/RF 代工具稀缺性，資本支出上修具中期催化</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td><a href="https://www.wantgoo.com/stock/2308" target="_blank" rel="noopener noreferrer">2308</a></td>
+<td>台達電</td>
+<td>A</td>
+<td>可以現在小量分批</td>
+<td>AI 資料中心高瓦數電源與散熱需求延續，營收成長已驗證</td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td><a href="https://www.wantgoo.com/stock/1303" target="_blank" rel="noopener noreferrer">1303</a></td>
+<td>南亞</td>
+<td>B</td>
+<td>等回測再買</td>
+<td>電子材料轉型主線明確，但塑化景氣仍可能拖累整體獲利</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2>7. 技術起漲與中期基本面交集</h2>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>股票代號</th>
+<th>公司名稱</th>
+<th>交集原因</th>
+<th>操作重點</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.wantgoo.com/stock/2308" target="_blank" rel="noopener noreferrer">2308</a></td>
+<td>台達電</td>
+<td>技術創高、法人回補、營收動能與 AI 產業需求同時支持</td>
+<td>小量分批，避免一次追高</td>
+</tr>
+<tr>
+<td><a href="https://www.wantgoo.com/stock/3105" target="_blank" rel="noopener noreferrer">3105</a></td>
+<td>穩懋</td>
+<td>技術突破與法說會/資本支出上修同時出現</td>
+<td>平台拉回守穩時建立中期部位</td>
+</tr>
+<tr>
+<td><a href="https://www.wantgoo.com/stock/8150" target="_blank" rel="noopener noreferrer">8150</a></td>
+<td>南茂</td>
+<td>技術放量突破且封測財報轉強</td>
+<td>可小量分批，但須追蹤產能利用率</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2>8. 等回測再買名單</h2>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>股票代號</th>
+<th>公司名稱</th>
+<th>等待條件</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.wantgoo.com/stock/1303" target="_blank" rel="noopener noreferrer">1303</a></td>
+<td>南亞</td>
+<td>回測 5 日線或前高平台不破</td>
+<td>題材與營收轉機明確，但短線漲幅已反映部分期待</td>
+</tr>
+<tr>
+<td><a href="https://www.wantgoo.com/stock/6488" target="_blank" rel="noopener noreferrer">6488</a></td>
+<td>環球晶</td>
+<td>矽晶圓報價與稼動率確認</td>
+<td>半導體景氣復甦想像存在，但來源未提供足夠財報驗證</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2>9. 等財報確認名單</h2>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>股票代號</th>
+<th>公司名稱</th>
+<th>等待資料</th>
+<th>目前判斷</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.wantgoo.com/stock/5483" target="_blank" rel="noopener noreferrer">5483</a></td>
+<td>中美晶</td>
+<td>2Q26 毛利率、本業獲利、太陽能業務折舊壓力</td>
+<td>只觀察，等財報確認</td>
+</tr>
+<tr>
+<td><a href="https://www.wantgoo.com/stock/4938" target="_blank" rel="noopener noreferrer">4938</a></td>
+<td>和碩</td>
+<td>AI 伺服器出貨規模與毛利率驗證</td>
+<td>只觀察，等財報確認</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2>10. 暫時排除或降低部位名單</h2>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>股票代號</th>
+<th>公司名稱</th>
+<th>操作建議</th>
+<th>排除原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.wantgoo.com/stock/6117" target="_blank" rel="noopener noreferrer">6117</a></td>
+<td>迎廣</td>
+<td>賣出 / 出清</td>
+<td>強勢盤中逆勢破位，二線機殼題材缺乏財報與產業驗證</td>
+</tr>
+<tr>
+<td><a href="https://www.wantgoo.com/stock/1597" target="_blank" rel="noopener noreferrer">1597</a></td>
+<td>直得</td>
+<td>賣出 / 出清</td>
+<td>工具機與自動化需求復甦未明，技術面跌破多方防線</td>
+</tr>
+<tr>
+<td><a href="https://www.wantgoo.com/stock/6127" target="_blank" rel="noopener noreferrer">6127</a></td>
+<td>九豪</td>
+<td>停利部分減倉</td>
+<td>長上影線與爆量顯示高檔套牢籌碼沉重</td>
+</tr>
+<tr>
+<td><a href="https://www.wantgoo.com/stock/6207" target="_blank" rel="noopener noreferrer">6207</a></td>
+<td>雷科</td>
+<td>停利部分減倉</td>
+<td>開高走低且短線過熱，假突破風險升高</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2>11. 持股最終處理優先名單</h2>
+<p>本表從所有持股中，依據「持股處理優先順序」，篩選出最需要立即執行部位調整的核心標的名單。包含轉弱減倉/賣出出清以避險，以及可加倉/等回測加倉以擴大獲利的候選。</p>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th style="text-align:right">排名</th>
 <th>市場</th>
 <th>股票代號</th>
 <th>公司名稱</th>
 <th>產業</th>
 <th>持股狀態</th>
 <th>操作建議</th>
+<th>持倉建議</th>
 <th>加減倉原因</th>
 <th>中期理由</th>
 <th>財務驗證</th>
@@ -120,1236 +479,451 @@
 </thead>
 <tbody>
 <tr>
-<td>1</td>
+<td style="text-align:right">1</td>
 <td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/4966" target="_blank" rel="noopener noreferrer">4966</a></td>
-<td>譜瑞-KY</td>
-<td>IC 設計 / 高速傳輸</td>
-<td>成本未提供；持股比例未提供</td>
-<td>可加倉</td>
-<td>突破 ZLSMA、MACD 金叉、背景轉紅，收盤在高點 870，量價偏強</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
+<td><a href="https://www.wantgoo.com/stock/6117" target="_blank" rel="noopener noreferrer">6117</a></td>
+<td>迎廣</td>
+<td>電腦機殼</td>
+<td>成本未提供，持股比例未提供</td>
+<td>賣出 / 出清</td>
+<td>已持有者優先降低風險，不把資金留在逆勢破位股</td>
+<td>大盤強勢時逆勢大跌，破位下跌且主力出貨訊號明顯</td>
+<td>伺服器機殼面臨大客戶規格升級與轉單壓力，二線廠商競爭力需重新驗證</td>
 <td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>小加 1/4 預計加碼部位；若回測 5 日線不破再加第 2 筆</td>
-<td>是否守住 824–870 區間、成交量是否維持</td>
-<td>財報未驗證、假突破、估值波動</td>
+<td>AI 伺服器機櫃升級使研發與產能規模落差放大</td>
+<td>明日開盤後評估流動性，優先出清既有持股</td>
+<td>5M/6M 營收、主力籌碼擴散、是否重新站回短均</td>
+<td>逆勢破位大跌，短多格局重創，中線下行空間仍大</td>
 </tr>
 <tr>
-<td>2</td>
+<td style="text-align:right">2</td>
 <td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/3293" target="_blank" rel="noopener noreferrer">3293</a></td>
-<td>鈊象</td>
-<td>遊戲 / 線上娛樂</td>
-<td>成本未提供；持股比例未提供</td>
-<td>可加倉</td>
-<td>突破 ZLSMA、MACD 金叉、雙線向上，收盤位置偏強</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
+<td><a href="https://www.wantgoo.com/stock/1597" target="_blank" rel="noopener noreferrer">1597</a></td>
+<td>直得</td>
+<td>線性滑軌</td>
+<td>成本未提供，持股比例未提供</td>
+<td>賣出 / 出清</td>
+<td>已持有者回收資金，等待產業復甦證據</td>
+<td>大盤創高時逆勢破線，多頭防線全面潰散</td>
+<td>自動化線性滑軌需求未明顯復甦，稀缺性尚未驗證</td>
 <td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>小加 1/4；跌破 734 停止加碼</td>
-<td>734 支撐、763 壓力、月營收</td>
-<td>財報未驗證、題材降溫、流動性波動</td>
+<td>全球工具機景氣未隨半導體行情同步爆發</td>
+<td>明日開盤後評估賣出，轉往主流強勢股</td>
+<td>製造業 PMI、工具機接單、本業毛利率</td>
+<td>資金棄傳產攻科技，非主流股跌勢恐延續</td>
 </tr>
 <tr>
-<td>3</td>
+<td style="text-align:right">3</td>
 <td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/1303" target="_blank" rel="noopener noreferrer">1303</a></td>
-<td>南亞</td>
-<td>塑化 / 電子材料</td>
-<td>成本未提供；持股比例未提供</td>
-<td>可加倉</td>
-<td>MACD 金叉、背景轉紅、雙線向上，第二根紅 K，成交金額放大</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
+<td><a href="https://www.wantgoo.com/stock/6127" target="_blank" rel="noopener noreferrer">6127</a></td>
+<td>九豪</td>
+<td>陶瓷基板</td>
+<td>成本未提供，持股比例未提供</td>
+<td>停利部分減倉</td>
+<td>已持有者先落袋 1/3 至 1/2，保留小部位觀察</td>
+<td>突破 ZLSMA 但收極長上影線，爆出大量，籌碼渙散</td>
+<td>被動元件電阻陶瓷基板受惠 AI 電源高規元件，但公司稀缺性尚未驗證</td>
 <td>來源未提供，需後續查證</td>
 <td>來源未提供，需後續查證</td>
-<td>小加 1/4；若跌破 92.3 停止加碼</td>
-<td>92.3 支撐、96.4 前高、塑化報價</td>
-<td>原物料價格、景氣循環、財報未驗證</td>
+<td>逢高停利部分部位，防範均線回測</td>
+<td>5 日線是否守住、當沖交易熱度、法人籌碼</td>
+<td>長上影線形成高檔套牢，短線回吐風險高</td>
 </tr>
 <tr>
-<td>4</td>
+<td style="text-align:right">4</td>
 <td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/6190" target="_blank" rel="noopener noreferrer">6190</a></td>
-<td>萬泰科</td>
-<td>線纜 / 電子零組件</td>
-<td>成本未提供；持股比例未提供</td>
-<td>可加倉</td>
-<td>突破 ZLSMA、MACD 金叉、雙線向上，收盤接近高點</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
+<td><a href="https://www.wantgoo.com/stock/6207" target="_blank" rel="noopener noreferrer">6207</a></td>
+<td>雷科</td>
+<td>被動元件設備</td>
+<td>成本未提供，持股比例未提供</td>
+<td>停利部分減倉</td>
+<td>已持有者停利 1/3，剩餘部位設移動停利</td>
+<td>技術突破 ZLSMA，但開高走低且短線過熱</td>
+<td>被動元件與先進封裝設備題材受惠 CoWoS 擴產，但短線股價可能超前反映</td>
 <td>來源未提供，需後續查證</td>
 <td>來源未提供，需後續查證</td>
-<td>小加 1/4；回測 77 不破可再評估</td>
-<td>77 支撐、80.5 壓力、成交量</td>
-<td>小型股波動、財報未驗證</td>
+<td>現價附近分批停利，等待整理後再評估</td>
+<td>先進封裝設備認列進度、外資籌碼、5 日線</td>
+<td>高檔假突破後可能出現均值回歸修正</td>
 </tr>
 <tr>
-<td>5</td>
+<td style="text-align:right">5</td>
 <td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/6175" target="_blank" rel="noopener noreferrer">6175</a></td>
-<td>立敦</td>
-<td>被動元件 / 電子材料</td>
-<td>成本未提供；持股比例未提供</td>
+<td><a href="https://www.wantgoo.com/stock/2308" target="_blank" rel="noopener noreferrer">2308</a></td>
+<td>台達電</td>
+<td>電源與散熱</td>
+<td>成本未提供，持股比例未提供</td>
 <td>可加倉</td>
-<td>突破 ZLSMA、MACD 金叉、背景轉紅，收盤位置偏強</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>小加 1/4；若量縮回測 92.7 不破再評估</td>
-<td>92.7 支撐、98.5 壓力、月營收</td>
-<td>追高、財報未驗證、題材不明</td>
+<td>已持有者可小比例分批加倉，未持有者避免一次追價</td>
+<td>MACD 金叉，強勢突破創高，外資與三大法人回補</td>
+<td>全球 AIDC 電源與液冷散熱龍頭，白區到灰區資料中心商機具護城河</td>
+<td>4 月營收 YoY +43.92%，前 4 月累計營收 YoY +36.53%</td>
+<td>AI 伺服器建置與大廠液冷散熱採購持續，外資評等上修</td>
+<td>拉回震盪時分批買進，單日急漲不追滿</td>
+<td>5 日與 10 日均線支撐、外資買盤連續性</td>
+<td>短期急漲後與均線偏離過高</td>
 </tr>
 <tr>
-<td>6</td>
+<td style="text-align:right">6</td>
 <td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/6141" target="_blank" rel="noopener noreferrer">6141</a></td>
-<td>柏承</td>
-<td>PCB</td>
-<td>成本未提供；持股比例未提供</td>
+<td><a href="https://www.wantgoo.com/stock/3105" target="_blank" rel="noopener noreferrer">3105</a></td>
+<td>穩懋</td>
+<td>砷化鎵晶圓代工</td>
+<td>成本未提供，持股比例未提供</td>
 <td>可加倉</td>
-<td>突破 ZLSMA、MACD 金叉、背景轉紅，第二根紅 K 且收盤高點</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>小加 1/4；跌破 37.55 停止加碼</td>
-<td>37.55 支撐、39.3 是否續強</td>
-<td>小型 PCB 股波動、財報未驗證</td>
+<td>已持有者逢低加倉，未持有者分批建立中期部位</td>
+<td>突破 ZLSMA 且 MACD 金叉，趨勢背景轉強</td>
+<td>5G/RF、低軌衛星與 1.6T 矽光雷射代工具稀缺性</td>
+<td>2026Q1 合併營收 YoY +28%，自結 EPS 1.26 元；4 月營收 YoY +48.89%</td>
+<td>2026 年資本支出上修至 20-30 億元，擴產雷射與光通訊產能</td>
+<td>價格拉回平台不破時加碼 10% 額度</td>
+<td>2Q26 光通訊營收占比、毛利率回升、資本支出執行</td>
+<td>矽光子晶片出貨量不達預期</td>
 </tr>
 <tr>
-<td>7</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/6291" target="_blank" rel="noopener noreferrer">6291</a></td>
-<td>沛亨</td>
-<td>類比 IC / 電源管理</td>
-<td>成本未提供；持股比例未提供</td>
-<td>可加倉</td>
-<td>突破 ZLSMA、MACD 金叉、雙線向上，收盤高點 645</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>只適合小比例加碼；跌破 625 停止加碼</td>
-<td>625 支撐、645 是否帶量突破</td>
-<td>高價股波動、流動性、財報未驗證</td>
-</tr>
-<tr>
-<td>8</td>
+<td style="text-align:right">7</td>
 <td>台股</td>
 <td><a href="https://www.wantgoo.com/stock/8150" target="_blank" rel="noopener noreferrer">8150</a></td>
 <td>南茂</td>
 <td>半導體封測</td>
-<td>成本未提供；持股比例未提供</td>
+<td>成本未提供，持股比例未提供</td>
 <td>可加倉</td>
-<td>突破 ZLSMA，收盤在當日高點且成交量大</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>僅小加 1/4；因只有單一突破訊號，隔日不續強則不追</td>
-<td>86 支撐、93.9 是否站穩</td>
-<td>單一技術訊號、假突破、財報未驗證</td>
+<td>已持有者小比例加碼，未持有者小量分批布局</td>
+<td>突破 ZLSMA，放量收在當日高點，量價齊揚</td>
+<td>HBM、DRAM、SSD 與高階 OLED 驅動 IC 封測復甦，具報價調漲優勢</td>
+<td>2026Q1 EPS 0.72 元，YoY +200%；4 月營收 24.6 億元，YoY +32.23%</td>
+<td>半導體景氣復甦帶動封測產能利用率，全年獲利預期上修</td>
+<td>現價小量分批，保留資金等待回測加碼</td>
+<td>2Q26 產能利用率、除息填息、記憶體報價</td>
+<td>驅動 IC 標準封測同業競爭加劇</td>
 </tr>
-</tbody>
-</table>
-</div>
-<hr>
-<h2>4. 等回測加倉名單</h2>
-<div class="table-scroll">
-<table>
-<thead>
 <tr>
-<th>排名</th>
-<th>市場</th>
-<th>股票代號</th>
-<th>公司名稱</th>
-<th>產業</th>
-<th>持股狀態</th>
-<th>操作建議</th>
-<th>加減倉原因</th>
-<th>中期理由</th>
-<th>財務驗證</th>
-<th>產業驗證</th>
-<th>建議動作</th>
-<th>追蹤指標</th>
-<th>風險</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
+<td style="text-align:right">8</td>
 <td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/6182" target="_blank" rel="noopener noreferrer">6182</a></td>
-<td>合晶</td>
-<td>矽晶圓</td>
-<td>成本未提供；持股比例未提供</td>
+<td><a href="https://www.wantgoo.com/stock/1303" target="_blank" rel="noopener noreferrer">1303</a></td>
+<td>南亞</td>
+<td>電子材料與塑化</td>
+<td>成本未提供，持股比例未提供</td>
 <td>等回測加倉</td>
-<td>多訊號共振但單日成交量極大，漲幅與波動偏高</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>等回測 85.4–90.2 區間不破再加 1/4</td>
-<td>85.4 支撐、92.8 高點、成交量是否降溫</td>
-<td>追高、爆量震盪、財報未驗證</td>
+<td>已持有者續抱，不追價；回測守穩再加倉</td>
+<td>趨勢轉強，MACD 金叉，資金切入高階材料轉機</td>
+<td>營運核心轉向高階 PCB 玻纖布與樹脂材料，卡位 AI 伺服器與交換器需求</td>
+<td>4 月營收 YoY +19.44%，累計營收轉強；公股買超支撐</td>
+<td>高階玻纖布產能緊缺，一般 E 布供給收縮，稼動率與報價轉強</td>
+<td>等回測 5 日線不破時加碼 10%</td>
+<td>玻纖布與環氧樹脂報價、公股籌碼</td>
+<td>傳統塑化景氣復甦疲弱可能拖累獲利</td>
 </tr>
 <tr>
-<td>2</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/6488" target="_blank" rel="noopener noreferrer">6488</a></td>
-<td>環球晶</td>
-<td>矽晶圓</td>
-<td>成本未提供；持股比例未提供</td>
-<td>等回測加倉</td>
-<td>突破 ZLSMA、MACD 金叉、雙線向上，但單日漲幅與成交金額偏大</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>等回測 854–883 不破再加碼</td>
-<td>854 支撐、949 高點、矽晶圓報價</td>
-<td>追高、產業循環、估值波動</td>
-</tr>
-<tr>
-<td>3</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/5536" target="_blank" rel="noopener noreferrer">5536</a></td>
-<td>聖暉*</td>
-<td>廠務工程 / 半導體工程</td>
-<td>成本未提供；持股比例未提供</td>
-<td>等回測加倉</td>
-<td>多方訊號完整，收盤偏強，但單日漲幅較大</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>等回測 1005–1050 不破再加 1/4</td>
-<td>1005 支撐、1130 壓力、訂單與營收</td>
-<td>高價股波動、財報未驗證</td>
-</tr>
-<tr>
-<td>4</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/3707" target="_blank" rel="noopener noreferrer">3707</a></td>
-<td>漢磊</td>
-<td>化合物半導體</td>
-<td>成本未提供；持股比例未提供</td>
-<td>等回測加倉</td>
-<td>突破 ZLSMA、MACD 金叉、雙線向上，收盤強但短線漲幅較快</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>等回測 82.4–85 不破再加</td>
-<td>82.4 支撐、90.5 前高</td>
-<td>題材波動、財報未驗證</td>
-</tr>
-<tr>
-<td>5</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/3444" target="_blank" rel="noopener noreferrer">3444</a></td>
-<td>利機</td>
-<td>半導體通路 / 材料</td>
-<td>成本未提供；持股比例未提供</td>
-<td>等回測加倉</td>
-<td>多方訊號完整且收盤高點，但單日上漲幅度偏大</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>等回測 107.5–111 不破再加</td>
-<td>107.5 支撐、117.5 是否站穩</td>
-<td>追高、流動性、財報未驗證</td>
-</tr>
-<tr>
-<td>6</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/2474" target="_blank" rel="noopener noreferrer">2474</a></td>
-<td>可成</td>
-<td>機殼 / 精密製造</td>
-<td>成本未提供；持股比例未提供</td>
-<td>等回測加倉</td>
-<td>突破 ZLSMA、MACD 金叉、第二根紅 K，但單日漲幅大</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>等回測 195–200 不破再加</td>
-<td>188–195 支撐、214.5 壓力</td>
-<td>追高、題材未驗證</td>
-</tr>
-<tr>
-<td>7</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/2070" target="_blank" rel="noopener noreferrer">2070</a></td>
-<td>精湛</td>
-<td>精密機械</td>
-<td>成本未提供；持股比例未提供</td>
-<td>等回測加倉</td>
-<td>多方訊號完整，收盤偏強，但短線已拉高</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>等回測 77–79 不破再加</td>
-<td>77 支撐、82.9 壓力</td>
-<td>小型股波動、財報未驗證</td>
-</tr>
-<tr>
-<td>8</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/6016" target="_blank" rel="noopener noreferrer">6016</a></td>
-<td>康和證</td>
-<td>證券</td>
-<td>成本未提供；持股比例未提供</td>
-<td>等回測加倉</td>
-<td>多方訊號完整且收盤高點，但金融證券股短線漲幅偏快</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>等回測 25.1–26 不破再加</td>
-<td>券商成交量、26.7 是否續強</td>
-<td>題材輪動、短線過熱</td>
-</tr>
-</tbody>
-</table>
-</div>
-<hr>
-<h2>5. 續抱觀察名單</h2>
-<div class="table-scroll">
-<table>
-<thead>
-<tr>
-<th>排名</th>
-<th>市場</th>
-<th>股票代號</th>
-<th>公司名稱</th>
-<th>產業</th>
-<th>持股狀態</th>
-<th>操作建議</th>
-<th>加減倉原因</th>
-<th>中期理由</th>
-<th>財務驗證</th>
-<th>產業驗證</th>
-<th>建議動作</th>
-<th>追蹤指標</th>
-<th>風險</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/2308" target="_blank" rel="noopener noreferrer">2308</a></td>
-<td>台達電</td>
-<td>電源 / 電力設備</td>
-<td>成本未提供；持股比例未提供</td>
-<td>續抱觀察</td>
-<td>MACD 金叉但收盤未靠近高點，尚不適合追價</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>續抱但不加碼；跌破 2490 轉弱觀察</td>
-<td>2490 支撐、2585 壓力、營收與毛利率</td>
-<td>高估值、財報前波動、追高</td>
-</tr>
-<tr>
-<td>2</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/2360" target="_blank" rel="noopener noreferrer">2360</a></td>
-<td>致茂</td>
-<td>測試設備</td>
-<td>成本未提供；持股比例未提供</td>
-<td>續抱觀察</td>
-<td>MACD 金叉且收盤尚可，但只有單一技術訊號</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>續抱不加碼；等站穩 2680 或回測不破再評估</td>
-<td>2495 支撐、2680 壓力</td>
-<td>單一訊號、財報未驗證</td>
-</tr>
-<tr>
-<td>3</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/1519" target="_blank" rel="noopener noreferrer">1519</a></td>
-<td>華城</td>
-<td>電力設備</td>
-<td>成本未提供；持股比例未提供</td>
-<td>續抱觀察</td>
-<td>突破 ZLSMA、MACD 金叉，但收盤離高點較遠，追價風險高</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>續抱不加碼；等回測 867–870 不破</td>
-<td>867 支撐、912 壓力、訂單與營收</td>
-<td>長上影、追高、財報未驗證</td>
-</tr>
-<tr>
-<td>4</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/8016" target="_blank" rel="noopener noreferrer">8016</a></td>
-<td>矽創</td>
-<td>IC 設計</td>
-<td>成本未提供；持股比例未提供</td>
-<td>續抱觀察</td>
-<td>突破 ZLSMA，收盤偏強，但缺少 MACD / 趨勢共振</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>續抱不加碼；站穩 305 再評估</td>
-<td>290 支撐、305 壓力</td>
-<td>單一突破訊號、財報未驗證</td>
-</tr>
-<tr>
-<td>5</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/6691" target="_blank" rel="noopener noreferrer">6691</a></td>
-<td>洋基工程</td>
-<td>廠務工程</td>
-<td>成本未提供；持股比例未提供</td>
-<td>續抱觀察</td>
-<td>MACD 金叉且收盤偏強，但缺少多訊號驗證</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>續抱不加碼；回測 648 不破再看</td>
-<td>648 支撐、677 壓力</td>
-<td>單一訊號、訂單未驗證</td>
-</tr>
-<tr>
-<td>6</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/2351" target="_blank" rel="noopener noreferrer">2351</a></td>
-<td>順德</td>
-<td>導線架 / 半導體材料</td>
-<td>成本未提供；持股比例未提供</td>
-<td>續抱觀察</td>
-<td>MACD 柱體連四日上升，收盤偏強，但尚非完整突破型態</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>續抱不加碼；站穩 232 再評估</td>
-<td>215 支撐、232 壓力</td>
-<td>動能訊號不足、財報未驗證</td>
-</tr>
-<tr>
-<td>7</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/8112" target="_blank" rel="noopener noreferrer">8112</a></td>
-<td>至上</td>
-<td>半導體通路</td>
-<td>成本未提供；持股比例未提供</td>
-<td>續抱觀察</td>
-<td>突破 ZLSMA 且空方趨勢結束，但尚未形成強勢多方背景</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>續抱不加碼；跌破 84.3 轉弱觀察</td>
-<td>84.3 支撐、86.7 壓力</td>
-<td>通路庫存、財報未驗證</td>
-</tr>
-<tr>
-<td>8</td>
+<td style="text-align:right">9</td>
 <td>台股</td>
 <td><a href="https://www.wantgoo.com/stock/2883" target="_blank" rel="noopener noreferrer">2883</a></td>
 <td>凱基金</td>
 <td>金融控股</td>
-<td>成本未提供；持股比例未提供</td>
+<td>成本未提供，持股比例未提供</td>
 <td>續抱觀察</td>
-<td>突破 ZLSMA、雙線向上，但收盤位置普通</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>續抱不加碼；回測 21.55 不破再看</td>
-<td>21.55 支撐、22.8 壓力</td>
-<td>金融股輪動、利率與市場成交量</td>
+<td>已持有者續抱但不追高；未持有者小量觀察</td>
+<td>突破 ZLSMA，成交量放大，受惠台股天量交投</td>
+<td>旗下證券業務受惠市場成交熱度，金控收益預期上修</td>
+<td>4 月營收 YoY +144.31%，前 4 月累計營收 YoY +319.62%</td>
+<td>台股多頭成交量放大有利券商經紀與承銷業務</td>
+<td>分批配置但不重倉，等待成交量延續</td>
+<td>台股日均成交金額、債市波動、金控月獲利</td>
+<td>國際債市波動可能影響投資組合評價</td>
 </tr>
 <tr>
-<td>9</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/4989" target="_blank" rel="noopener noreferrer">4989</a></td>
-<td>榮科</td>
-<td>銅箔基板 / 電子材料</td>
-<td>成本未提供；持股比例未提供</td>
-<td>續抱觀察</td>
-<td>MACD 金叉、突破 ZLSMA、第二根紅 K，但收盤未貼近高點</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>續抱不加碼；站穩 108 再評估</td>
-<td>101 支撐、108 壓力</td>
-<td>追高、財報未驗證</td>
-</tr>
-<tr>
-<td>10</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/2395" target="_blank" rel="noopener noreferrer">2395</a></td>
-<td>研華</td>
-<td>工業電腦</td>
-<td>成本未提供；持股比例未提供</td>
-<td>續抱觀察</td>
-<td>MACD 柱體轉強、第二根紅 K，但收盤離高點較遠</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>續抱不加碼；等 503–507 支撐確認</td>
-<td>503 支撐、530 壓力、訂單與毛利率</td>
-<td>長上影、財報未驗證</td>
-</tr>
-</tbody>
-</table>
-</div>
-<hr>
-<h2>6. 停利部分減倉名單</h2>
-<div class="table-scroll">
-<table>
-<thead>
-<tr>
-<th>排名</th>
-<th>市場</th>
-<th>股票代號</th>
-<th>公司名稱</th>
-<th>產業</th>
-<th>持股狀態</th>
-<th>操作建議</th>
-<th>加減倉原因</th>
-<th>中期理由</th>
-<th>財務驗證</th>
-<th>產業驗證</th>
-<th>建議動作</th>
-<th>追蹤指標</th>
-<th>風險</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/2383" target="_blank" rel="noopener noreferrer">2383</a></td>
-<td>台光電</td>
-<td>PCB / CCL</td>
-<td>成本未提供；持股比例未提供</td>
-<td>停利部分減倉</td>
-<td>MACD 金叉但開高走低，收盤接近低點，成交金額大</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>若已有獲利，先減 1/4–1/3；跌破 5300 再減</td>
-<td>5300 支撐、5545 壓力、量價是否修復</td>
-<td>高檔震盪、追高、財報未驗證</td>
-</tr>
-<tr>
-<td>2</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/3017" target="_blank" rel="noopener noreferrer">3017</a></td>
-<td>奇鋐</td>
-<td>散熱 / AI 伺服器</td>
-<td>成本未提供；持股比例未提供</td>
-<td>停利部分減倉</td>
-<td>MACD 金叉但收盤接近低點，開高走低明顯</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>若已有獲利，先減 1/4–1/3；跌破 2695 再減</td>
-<td>2695 支撐、2835 壓力、成交量</td>
-<td>高估值、短線過熱、財報前波動</td>
-</tr>
-<tr>
-<td>3</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/3105" target="_blank" rel="noopener noreferrer">3105</a></td>
-<td>穩懋</td>
-<td>砷化鎵 / 化合物半導體</td>
-<td>成本未提供；持股比例未提供</td>
-<td>停利部分減倉</td>
-<td>多方訊號完整但收盤在區間下緣，爆量後未能收高</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>若已有獲利，先減 1/4；重新站回 588 再評估</td>
-<td>545 支撐、588 壓力</td>
-<td>爆量震盪、假突破</td>
-</tr>
-<tr>
-<td>4</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/6147" target="_blank" rel="noopener noreferrer">6147</a></td>
-<td>頎邦</td>
-<td>封測 / 驅動 IC 封測</td>
-<td>成本未提供；持股比例未提供</td>
-<td>停利部分減倉</td>
-<td>多方訊號完整但開高走低，收盤位置偏弱</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>若已有獲利，先減 1/4；跌破 258 再減</td>
-<td>258 支撐、281 壓力</td>
-<td>假突破、財報未驗證</td>
-</tr>
-<tr>
-<td>5</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/6274" target="_blank" rel="noopener noreferrer">6274</a></td>
-<td>台燿</td>
-<td>PCB / CCL</td>
-<td>成本未提供；持股比例未提供</td>
-<td>停利部分減倉</td>
-<td>多方訊號完整但長上影，收盤低於高點幅度大</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>若已有獲利，減 1/4；跌破 1575 再減</td>
-<td>1575 支撐、1735 壓力</td>
-<td>高檔震盪、估值、財報未驗證</td>
-</tr>
-<tr>
-<td>6</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/6223" target="_blank" rel="noopener noreferrer">6223</a></td>
-<td>旺矽</td>
-<td>探針卡 / 半導體測試</td>
-<td>成本未提供；持股比例未提供</td>
-<td>停利部分減倉</td>
-<td>多方訊號完整但收盤低於高點，追價風險升高</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>若已有獲利，減 1/4；跌破 6280 再減</td>
-<td>6280 支撐、6645 壓力</td>
-<td>高價股波動、財報未驗證</td>
-</tr>
-<tr>
-<td>7</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/2301" target="_blank" rel="noopener noreferrer">2301</a></td>
-<td>光寶科</td>
-<td>電源 / 電子零組件</td>
-<td>成本未提供；持股比例未提供</td>
-<td>停利部分減倉</td>
-<td>MACD 柱體轉強但收盤接近低點，量大但承接不足</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>若已有獲利，減 1/4；跌破 242.5 再減</td>
-<td>242.5 支撐、262 壓力</td>
-<td>量價背離、財報未驗證</td>
-</tr>
-<tr>
-<td>8</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/6531" target="_blank" rel="noopener noreferrer">6531</a></td>
-<td>愛普*</td>
-<td>記憶體 IC / AI 邊緣運算</td>
-<td>成本未提供；持股比例未提供</td>
-<td>停利部分減倉</td>
-<td>MACD 柱體轉強但開高走低，收盤低於開盤較多</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>若已有獲利，先減 1/4–1/3</td>
-<td>1055 支撐、1145 壓力</td>
-<td>高波動、題材股回檔</td>
-</tr>
-<tr>
-<td>9</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/7750" target="_blank" rel="noopener noreferrer">7750</a></td>
-<td>新代</td>
-<td>CNC 控制器 / 工業自動化</td>
-<td>成本未提供；持股比例未提供</td>
-<td>停利部分減倉</td>
-<td>MACD 柱體轉強但收盤接近低點，單日波動大</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>若已有獲利，先減 1/4；跌破 2460 再減</td>
-<td>2460 支撐、2665 壓力</td>
-<td>流動性、高價股震盪</td>
-</tr>
-<tr>
-<td>10</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/5289" target="_blank" rel="noopener noreferrer">5289</a></td>
-<td>宜鼎</td>
-<td>工業記憶體</td>
-<td>成本未提供；持股比例未提供</td>
-<td>停利部分減倉</td>
-<td>趨勢轉強但開高走低，收盤接近低檔</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>若已有獲利，先減 1/4；跌破 1675 再減</td>
-<td>1675 支撐、1830 壓力</td>
-<td>記憶體循環、財報未驗證</td>
-</tr>
-</tbody>
-</table>
-</div>
-<hr>
-<h2>7. 轉弱減倉名單</h2>
-<div class="table-scroll">
-<table>
-<thead>
-<tr>
-<th>排名</th>
-<th>市場</th>
-<th>股票代號</th>
-<th>公司名稱</th>
-<th>產業</th>
-<th>持股狀態</th>
-<th>操作建議</th>
-<th>加減倉原因</th>
-<th>中期理由</th>
-<th>財務驗證</th>
-<th>產業驗證</th>
-<th>建議動作</th>
-<th>追蹤指標</th>
-<th>風險</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/3260" target="_blank" rel="noopener noreferrer">3260</a></td>
-<td>威剛</td>
-<td>記憶體模組</td>
-<td>成本未提供；持股比例未提供</td>
-<td>轉弱減倉</td>
-<td>突破與趨勢訊號出現，但收盤接近低點且跌破開盤，疑似突破失敗</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>先減 1/3；重新站回 430 再評估</td>
-<td>410.5 支撐、437.5 壓力</td>
-<td>記憶體價格波動、假突破</td>
-</tr>
-<tr>
-<td>2</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/5483" target="_blank" rel="noopener noreferrer">5483</a></td>
-<td>中美晶</td>
-<td>矽晶圓 / 太陽能</td>
-<td>成本未提供；持股比例未提供</td>
-<td>轉弱減倉</td>
-<td>多方訊號完整但收盤接近低點，開高走低</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>先減 1/3；重新站回 168.5 再評估</td>
-<td>160.5 支撐、168.5 壓力</td>
-<td>假突破、產業循環</td>
-</tr>
-<tr>
-<td>3</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/3363" target="_blank" rel="noopener noreferrer">3363</a></td>
-<td>上詮</td>
-<td>光通訊</td>
-<td>成本未提供；持股比例未提供</td>
-<td>轉弱減倉</td>
-<td>多方訊號完整但收盤低於開盤且接近低點</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>先減 1/3；跌破 836 再減</td>
-<td>836 支撐、900 壓力</td>
-<td>高波動、題材退潮</td>
-</tr>
-<tr>
-<td>4</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/3324" target="_blank" rel="noopener noreferrer">3324</a></td>
-<td>雙鴻</td>
-<td>散熱</td>
-<td>成本未提供；持股比例未提供</td>
-<td>轉弱減倉</td>
-<td>多方訊號完整但開高走低，收盤接近低點</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>先減 1/3；跌破 1025 再減</td>
-<td>1025 支撐、1080 壓力</td>
-<td>AI 散熱股估值、量價背離</td>
-</tr>
-<tr>
-<td>5</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/6207" target="_blank" rel="noopener noreferrer">6207</a></td>
-<td>雷科</td>
-<td>半導體設備 / 雷射應用</td>
-<td>成本未提供；持股比例未提供</td>
-<td>轉弱減倉</td>
-<td>多方訊號完整但收盤遠低於高點，跌幅相對開盤明顯</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>先減 1/3–1/2；重新站回 112 才評估</td>
-<td>101 支撐、112.5 壓力</td>
-<td>假突破、短線籌碼鬆動</td>
-</tr>
-<tr>
-<td>6</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/5351" target="_blank" rel="noopener noreferrer">5351</a></td>
-<td>鈺創</td>
-<td>記憶體 IC</td>
-<td>成本未提供；持股比例未提供</td>
-<td>轉弱減倉</td>
-<td>突破 ZLSMA 與 MACD 金叉，但收盤接近低點，量價品質差</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>先減 1/3；跌破 81.9 再減</td>
-<td>81.9 支撐、89.2 壓力</td>
-<td>記憶體循環、假突破</td>
-</tr>
-<tr>
-<td>7</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/6127" target="_blank" rel="noopener noreferrer">6127</a></td>
-<td>九豪</td>
-<td>電子零組件</td>
-<td>成本未提供；持股比例未提供</td>
-<td>轉弱減倉</td>
-<td>趨勢轉強但收盤遠低於開盤與高點，疑似突破失敗</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>先減 1/3–1/2；重新站回 62.5 再評估</td>
-<td>55.8 支撐、62.5 壓力</td>
-<td>短線波動、假突破</td>
-</tr>
-<tr>
-<td>8</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/6138" target="_blank" rel="noopener noreferrer">6138</a></td>
-<td>茂達</td>
-<td>電源管理 IC</td>
-<td>成本未提供；持股比例未提供</td>
-<td>轉弱減倉</td>
-<td>多方訊號完整但開高走低，收盤接近低點</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>先減 1/3；跌破 354 再減</td>
-<td>354 支撐、377 壓力</td>
-<td>假突破、財報未驗證</td>
-</tr>
-<tr>
-<td>9</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/4939" target="_blank" rel="noopener noreferrer">4939</a></td>
-<td>亞電</td>
-<td>PCB / 電子材料</td>
-<td>成本未提供；持股比例未提供</td>
-<td>轉弱減倉</td>
-<td>多方訊號完整但長上影，收盤低於開盤</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>先減 1/3；跌破 42.3 再減</td>
-<td>42.3 支撐、47.95 壓力</td>
-<td>爆量不穩、假突破</td>
-</tr>
-<tr>
-<td>10</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/5439" target="_blank" rel="noopener noreferrer">5439</a></td>
-<td>高技</td>
-<td>PCB</td>
-<td>成本未提供；持股比例未提供</td>
-<td>轉弱減倉</td>
-<td>多方訊號完整但收盤位置偏弱，開高走低</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>先減 1/3；跌破 380 再減</td>
-<td>380 支撐、401 壓力</td>
-<td>高檔震盪、財報未驗證</td>
-</tr>
-</tbody>
-</table>
-</div>
-<hr>
-<h2>8. 賣出 / 出清名單</h2>
-<p>本批暫無適合列入「賣出 / 出清」的標的，原因是本次來源只有多方 K 線警報與技術掃描，未提供基本面明顯惡化、公司指引下修、財報低於預期、跌破長期重要支撐後無法收復，或持股邏輯被否定等證據。</p>
-<hr>
-<h2>9. 暫不動作名單</h2>
-<div class="table-scroll">
-<table>
-<thead>
-<tr>
-<th>排名</th>
-<th>市場</th>
-<th>股票代號</th>
-<th>公司名稱</th>
-<th>產業</th>
-<th>持股狀態</th>
-<th>操作建議</th>
-<th>加減倉原因</th>
-<th>中期理由</th>
-<th>財務驗證</th>
-<th>產業驗證</th>
-<th>建議動作</th>
-<th>追蹤指標</th>
-<th>風險</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/6177" target="_blank" rel="noopener noreferrer">6177</a></td>
-<td>達麗</td>
-<td>營建</td>
-<td>成本未提供；持股比例未提供</td>
-<td>暫不動作</td>
-<td>僅 RSI 低檔反轉，尚未看到突破或趨勢確認</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>不買不賣；等站穩 42.7 再評估</td>
-<td>41.8 支撐、42.7 壓力</td>
-<td>單一 RSI 訊號、房市政策</td>
-</tr>
-<tr>
-<td>2</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/1712" target="_blank" rel="noopener noreferrer">1712</a></td>
-<td>興農</td>
-<td>農化 / 化工</td>
-<td>成本未提供；持股比例未提供</td>
-<td>暫不動作</td>
-<td>僅 RSI 低檔反轉，量價訊號不足</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>不買不賣；等放量站上 39.6</td>
-<td>39.05 支撐、39.6 壓力</td>
-<td>單一訊號、成交量不足</td>
-</tr>
-<tr>
-<td>3</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/1587" target="_blank" rel="noopener noreferrer">1587</a></td>
-<td>吉茂</td>
-<td>汽車零組件</td>
-<td>成本未提供；持股比例未提供</td>
-<td>暫不動作</td>
-<td>RSI 低檔反轉但未形成趨勢確認</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>不買不賣；等突破 30.15</td>
-<td>28 支撐、30.15 壓力</td>
-<td>單一訊號、財報未驗證</td>
-</tr>
-<tr>
-<td>4</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/2424" target="_blank" rel="noopener noreferrer">2424</a></td>
-<td>隴華</td>
-<td>資訊服務 / 軟體</td>
-<td>成本未提供；持股比例未提供</td>
-<td>暫不動作</td>
-<td>RSI 低檔反轉且第二根紅 K，但成交金額偏低</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>不買不賣；等量能擴大再評估</td>
-<td>12.25 支撐、13.55 壓力</td>
-<td>流動性不足、單一訊號</td>
-</tr>
-</tbody>
-</table>
-</div>
-<hr>
-<h2>10. 排除 / 不建議持有名單</h2>
-<div class="table-scroll">
-<table>
-<thead>
-<tr>
-<th>排名</th>
-<th>市場</th>
-<th>股票代號</th>
-<th>公司名稱</th>
-<th>產業</th>
-<th>持股狀態</th>
-<th>操作建議</th>
-<th>加減倉原因</th>
-<th>中期理由</th>
-<th>財務驗證</th>
-<th>產業驗證</th>
-<th>建議動作</th>
-<th>追蹤指標</th>
-<th>風險</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/4414" target="_blank" rel="noopener noreferrer">4414</a></td>
-<td>如興</td>
-<td>成衣 / 紡織</td>
-<td>成本未提供；持股比例未提供</td>
-<td>排除 / 不建議持有</td>
-<td>僅 MACD 柱體轉強，收盤偏弱，訊號品質不足</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>不建議加碼；若已持有以降低追蹤優先度為主</td>
-<td>是否重新站上 7.98</td>
-<td>訊號弱、流動性與財報未驗證</td>
-</tr>
-<tr>
-<td>2</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/5438" target="_blank" rel="noopener noreferrer">5438</a></td>
-<td>東友</td>
-<td>事務機 / 電子零組件</td>
-<td>成本未提供；持股比例未提供</td>
-<td>排除 / 不建議持有</td>
-<td>多方訊號出現但收盤在低點，技術表現矛盾</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>不建議加碼；跌破 19.3 減少追蹤</td>
-<td>19.3 支撐、21 壓力</td>
-<td>假突破、訊號矛盾</td>
-</tr>
-<tr>
-<td>3</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/1591" target="_blank" rel="noopener noreferrer">1591</a></td>
-<td>駿吉-KY</td>
-<td>機械 / 待確認</td>
-<td>成本未提供；持股比例未提供</td>
-<td>排除 / 不建議持有</td>
-<td>多方訊號但收盤遠離高點且低於開盤，量價品質差</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>不建議加碼；若已持有需降部位</td>
-<td>42.95 支撐、50.2 壓力</td>
-<td>長上影、假突破</td>
-</tr>
-<tr>
-<td>4</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/6441" target="_blank" rel="noopener noreferrer">6441</a></td>
-<td>廣錠</td>
-<td>工業電腦 / 儲能設備</td>
-<td>成本未提供；持股比例未提供</td>
-<td>排除 / 不建議持有</td>
-<td>突破訊號後收盤偏弱，價格表現與多方訊號矛盾</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>不建議加碼；跌破 25 需減少追蹤</td>
-<td>25 支撐、27.75 壓力</td>
-<td>假突破、財報未驗證</td>
-</tr>
-<tr>
-<td>5</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/3508" target="_blank" rel="noopener noreferrer">3508</a></td>
-<td>位速</td>
-<td>電子零組件</td>
-<td>成本未提供；持股比例未提供</td>
-<td>排除 / 不建議持有</td>
-<td>多方訊號但收盤低於開盤且靠近低點</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>不建議加碼；若持有需等待重新站回 22.2</td>
-<td>20.55 支撐、22.2 壓力</td>
-<td>訊號矛盾、流動性</td>
-</tr>
-</tbody>
-</table>
-</div>
-<hr>
-<h2>11. 持股最終處理優先名單</h2>
-<div class="table-scroll">
-<table>
-<thead>
-<tr>
-<th>排名</th>
-<th>市場</th>
-<th>股票代號</th>
-<th>公司名稱</th>
-<th>產業</th>
-<th>持股狀態</th>
-<th>操作建議</th>
-<th>加減倉原因</th>
-<th>中期理由</th>
-<th>財務驗證</th>
-<th>產業驗證</th>
-<th>建議動作</th>
-<th>追蹤指標</th>
-<th>風險</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/2383" target="_blank" rel="noopener noreferrer">2383</a></td>
-<td>台光電</td>
-<td>PCB / CCL</td>
-<td>成本未提供；持股比例未提供</td>
-<td>停利部分減倉</td>
-<td>MACD 金叉但開高走低，收盤接近低點，成交金額大</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>若已有獲利，先減 1/4–1/3；跌破 5300 再減</td>
-<td>5300 支撐、5545 壓力、量價修復</td>
-<td>高檔震盪、追高、財報未驗證</td>
-</tr>
-<tr>
-<td>2</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/3017" target="_blank" rel="noopener noreferrer">3017</a></td>
-<td>奇鋐</td>
-<td>散熱 / AI 伺服器</td>
-<td>成本未提供；持股比例未提供</td>
-<td>停利部分減倉</td>
-<td>MACD 金叉但收盤接近低點，開高走低明顯</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>若已有獲利，先減 1/4–1/3；跌破 2695 再減</td>
-<td>2695 支撐、2835 壓力</td>
-<td>高估值、短線過熱</td>
-</tr>
-<tr>
-<td>3</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/3105" target="_blank" rel="noopener noreferrer">3105</a></td>
-<td>穩懋</td>
-<td>砷化鎵 / 化合物半導體</td>
-<td>成本未提供；持股比例未提供</td>
-<td>停利部分減倉</td>
-<td>多方訊號完整但爆量後收盤不佳，短線風險報酬轉差</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>若已有獲利，先減 1/4；重新站回 588 再評估</td>
-<td>545 支撐、588 壓力</td>
-<td>爆量震盪、假突破</td>
-</tr>
-<tr>
-<td>4</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/3260" target="_blank" rel="noopener noreferrer">3260</a></td>
-<td>威剛</td>
-<td>記憶體模組</td>
-<td>成本未提供；持股比例未提供</td>
-<td>轉弱減倉</td>
-<td>趨勢訊號出現但收盤接近低點，疑似突破失敗</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>先減 1/3；重新站回 430 再評估</td>
-<td>410.5 支撐、437.5 壓力</td>
-<td>記憶體價格波動、假突破</td>
-</tr>
-<tr>
-<td>5</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/6147" target="_blank" rel="noopener noreferrer">6147</a></td>
-<td>頎邦</td>
-<td>封測 / 驅動 IC 封測</td>
-<td>成本未提供；持股比例未提供</td>
-<td>停利部分減倉</td>
-<td>多方訊號完整但收盤位置偏弱，短線不宜加碼</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>若已有獲利，先減 1/4；跌破 258 再減</td>
-<td>258 支撐、281 壓力</td>
-<td>假突破、財報未驗證</td>
-</tr>
-<tr>
-<td>6</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/4966" target="_blank" rel="noopener noreferrer">4966</a></td>
-<td>譜瑞-KY</td>
-<td>IC 設計 / 高速傳輸</td>
-<td>成本未提供；持股比例未提供</td>
-<td>可加倉</td>
-<td>突破 ZLSMA、MACD 金叉、背景轉紅，收盤高點，訊號品質佳</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>小加 1/4；回測 824–870 不破再加第 2 筆</td>
-<td>824 支撐、870 是否站穩</td>
-<td>財報未驗證、假突破</td>
-</tr>
-<tr>
-<td>7</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/3293" target="_blank" rel="noopener noreferrer">3293</a></td>
-<td>鈊象</td>
-<td>遊戲 / 線上娛樂</td>
-<td>成本未提供；持股比例未提供</td>
-<td>可加倉</td>
-<td>多方訊號完整，收盤位置偏強，尚未出現明顯反轉</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>小加 1/4；跌破 734 停止加碼</td>
-<td>734 支撐、763 壓力</td>
-<td>財報未驗證、題材降溫</td>
-</tr>
-<tr>
-<td>8</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/1303" target="_blank" rel="noopener noreferrer">1303</a></td>
-<td>南亞</td>
-<td>塑化 / 電子材料</td>
-<td>成本未提供；持股比例未提供</td>
-<td>可加倉</td>
-<td>MACD 金叉、背景轉紅、雙線向上，第二根紅 K，成交金額放大</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>小加 1/4；跌破 92.3 停止加碼</td>
-<td>92.3 支撐、96.4 壓力</td>
-<td>原物料循環、財報未驗證</td>
-</tr>
-<tr>
-<td>9</td>
-<td>台股</td>
-<td><a href="https://www.wantgoo.com/stock/6182" target="_blank" rel="noopener noreferrer">6182</a></td>
-<td>合晶</td>
-<td>矽晶圓</td>
-<td>成本未提供；持股比例未提供</td>
-<td>等回測加倉</td>
-<td>多方訊號完整且成交量巨大，但短線漲幅與波動偏高</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
-<td>來源未提供，需後續查證</td>
-<td>來源未提供，需後續查證</td>
-<td>等回測 85.4–90.2 不破再小加</td>
-<td>85.4 支撐、92.8 壓力</td>
-<td>追高、爆量震盪</td>
-</tr>
-<tr>
-<td>10</td>
+<td style="text-align:right">10</td>
 <td>台股</td>
 <td><a href="https://www.wantgoo.com/stock/6488" target="_blank" rel="noopener noreferrer">6488</a></td>
 <td>環球晶</td>
 <td>矽晶圓</td>
-<td>成本未提供；持股比例未提供</td>
-<td>等回測加倉</td>
-<td>多方訊號完整但單日成交金額大，追價風險偏高</td>
-<td>目前僅技術初篩，中期仍需財報與產業驗證</td>
+<td>成本未提供，持股比例未提供</td>
+<td>等回測再買</td>
+<td>未持有者等待回測與財報確認，已持有者續抱觀察</td>
+<td>半導體復甦題材存在，但短線需要等待量價與基本面同步</td>
+<td>矽晶圓需求有望隨半導體景氣回升，但價格與稼動率仍需確認</td>
 <td>來源未提供，需後續查證</td>
 <td>來源未提供，需後續查證</td>
-<td>等回測 854–883 不破再加 1/4</td>
-<td>854 支撐、949 壓力</td>
-<td>追高、產業循環、財報未驗證</td>
+<td>等回測支撐與 2Q26 財報後再評估加碼</td>
+<td>矽晶圓報價、稼動率、毛利率</td>
+<td>若報價未回升，股價容易只反映景氣想像</td>
 </tr>
 </tbody>
 </table>
 </div>
-<hr>
-<h2>12. 低優先處理摘要</h2>
-<p>本批其餘觸發標的多屬於下列情況，因此未列入前 10 名表格：只有單一 MACD 或 RSI 訊號、成交量不足、收盤位置不佳、短線漲幅過大、公司產業資料未提供，或雖然技術轉強但買點不漂亮。對這些標的，既有持股以續抱觀察或暫不動作為主，不建議為了看到多方警報就追價加碼。</p>
+<h2>12. 十二個核心問題</h2>
+<ol>
+<li>市場主流最明確看好的股票是台達電（2308）與穩懋（3105）。台達電的 AI 能效與液冷散熱主線已有營收驗證；穩懋則受惠於 1.6T 矽光子與雷射產能擴張。</li>
+<li>漢磊（3707）、至上（8112）與中美晶（5483）目前主要來自技術或題材提及，不能直接視為推薦買進。</li>
+<li>本次資料沒有納入美股個股掃描，因此不產生美股起漲候選。</li>
+<li>真正的台股起漲候選是台達電（2308）與南茂（8150），兩者皆具量價與產業主線支持。</li>
+<li>谷底翻身候選為南亞（1303）與至上（8112），其中南亞的財務與產業驗證較明確，至上仍需後續查證。</li>
+<li>吉茂（1587）與隴華（2424）較偏低基期技術反彈，缺乏足夠中長線驗證。</li>
+<li>穩懋（3105）與南亞（1303）最適合 6-12 個月中期追蹤。</li>
+<li>九豪（6127）與雷科（6207）短線雖強但不宜追價，因長上影線與高檔爆量可能代表假突破。</li>
+<li>中美晶（5483）與和碩（4938）需要等待正式財報確認。</li>
+<li>迎廣（6117）可能是 AI 機櫃題材下的價值陷阱，需優先控管持股風險。</li>
+<li>若資金有限，優先研究 5 檔為台達電、穩懋、南茂、南亞、凱基金。</li>
+<li>若只能挑選 3 檔台股起漲首選，決策鎖定台達電、南茂與凱基金；若偏中期基本面，則鎖定穩懋、台達電與南亞。</li>
+</ol>
+<h2>13. 最終精選名單 / 明確決策</h2>
+<h3>A. 3 檔台股 1-6 個月起漲首選</h3>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th style="text-align:right">排名</th>
+<th>市場</th>
+<th>股票代號</th>
+<th>公司名稱</th>
+<th>產業</th>
+<th>來源提及程度</th>
+<th>來源主觀看法</th>
+<th>中期分數</th>
+<th>起漲分數</th>
+<th>評級</th>
+<th>起漲原因</th>
+<th>中期理由</th>
+<th>財務驗證</th>
+<th>產業驗證</th>
+<th>布局方式</th>
+<th>持倉建議</th>
+<th>追蹤指標</th>
+<th>風險</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td>台股</td>
+<td><a href="https://www.wantgoo.com/stock/2308" target="_blank" rel="noopener noreferrer">2308</a></td>
+<td>台達電</td>
+<td>電源與散熱</td>
+<td>多位來源明確提及</td>
+<td>強烈看多</td>
+<td>高</td>
+<td>高</td>
+<td>A</td>
+<td>法人回補，帶量長紅大漲</td>
+<td>AIDC 高瓦數電源與液冷散熱龍頭</td>
+<td>4 月營收 YoY +43.92%，前 4 月累計營收 YoY +36.53%</td>
+<td>AI 伺服器與液冷散熱採購延續</td>
+<td>可以現在小量分批</td>
+<td>已持有者續抱加碼，未持有者分批配置</td>
+<td>5 日與 10 日均線、外資買盤</td>
+<td>急漲後均線乖離偏高</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td>台股</td>
+<td><a href="https://www.wantgoo.com/stock/8150" target="_blank" rel="noopener noreferrer">8150</a></td>
+<td>南茂</td>
+<td>半導體封測</td>
+<td>多位來源明確提及</td>
+<td>偏多</td>
+<td>高</td>
+<td>高</td>
+<td>B</td>
+<td>突破 ZLSMA，放量收高</td>
+<td>記憶體與 OLED 驅動 IC 封測復甦</td>
+<td>Q1 EPS YoY +200%；4 月營收 YoY +32.23%</td>
+<td>記憶體景氣與封測產能利用率回升</td>
+<td>可以現在小量分批</td>
+<td>小比例加碼，保留回測資金</td>
+<td>2Q26 產能利用率、填息動能</td>
+<td>封測同業競爭</td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td>台股</td>
+<td><a href="https://www.wantgoo.com/stock/2883" target="_blank" rel="noopener noreferrer">2883</a></td>
+<td>凱基金</td>
+<td>金融控股</td>
+<td>多位來源明確提及</td>
+<td>偏多</td>
+<td>中高</td>
+<td>高</td>
+<td>B</td>
+<td>價格突破 ZLSMA，成交量放大</td>
+<td>台股交投放大帶動券商業務</td>
+<td>4 月營收 YoY +144.31%，前 4 月累計營收 YoY +319.62%</td>
+<td>資本市場多頭有利經紀與承銷</td>
+<td>可以現在小量分批</td>
+<td>續抱但不重倉</td>
+<td>台股日均成交金額</td>
+<td>債市波動影響金控投資組合</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>B. 3 檔台股中期基本面首選</h3>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th style="text-align:right">排名</th>
+<th>市場</th>
+<th>股票代號</th>
+<th>公司名稱</th>
+<th>產業</th>
+<th>來源提及程度</th>
+<th>來源主觀看法</th>
+<th>中期分數</th>
+<th>起漲分數</th>
+<th>評級</th>
+<th>起漲原因</th>
+<th>中期理由</th>
+<th>財務驗證</th>
+<th>產業驗證</th>
+<th>布局方式</th>
+<th>持倉建議</th>
+<th>追蹤指標</th>
+<th>風險</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td>台股</td>
+<td><a href="https://www.wantgoo.com/stock/3105" target="_blank" rel="noopener noreferrer">3105</a></td>
+<td>穩懋</td>
+<td>砷化鎵晶圓代工</td>
+<td>多位來源明確提及</td>
+<td>偏多</td>
+<td>高</td>
+<td>中高</td>
+<td>A</td>
+<td>突破 ZLSMA，資本支出上修催化</td>
+<td>1.6T 矽光雷射代工與低軌衛星具中期稀缺性</td>
+<td>2026Q1 營收 YoY +28%，EPS 1.26 元；4 月營收 YoY +48.89%</td>
+<td>資本支出上修，擴產光通訊產能</td>
+<td>可以現在小量分批</td>
+<td>建立中期部位，逢低加倉</td>
+<td>光通訊營收占比、雷射產能</td>
+<td>手機 PA 復甦遲緩</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td>台股</td>
+<td><a href="https://www.wantgoo.com/stock/2308" target="_blank" rel="noopener noreferrer">2308</a></td>
+<td>台達電</td>
+<td>電源與散熱</td>
+<td>多位來源明確提及</td>
+<td>強烈看多</td>
+<td>高</td>
+<td>高</td>
+<td>A</td>
+<td>法人回補，帶量長紅</td>
+<td>AI 電源與液冷散熱具全球競爭力</td>
+<td>4 月營收 YoY +43.92%，前 4 月累計營收 YoY +36.53%</td>
+<td>AI 資料中心建置延續</td>
+<td>可以現在小量分批</td>
+<td>續抱加碼但避免追高</td>
+<td>外資買盤、均線支撐</td>
+<td>估值與乖離風險</td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td>台股</td>
+<td><a href="https://www.wantgoo.com/stock/1303" target="_blank" rel="noopener noreferrer">1303</a></td>
+<td>南亞</td>
+<td>電子材料與塑化</td>
+<td>多位來源明確提及</td>
+<td>偏多</td>
+<td>中高</td>
+<td>中</td>
+<td>B</td>
+<td>趨勢轉強，MACD 金叉</td>
+<td>高階電子材料與 PCB 供應鏈轉機</td>
+<td>4 月營收 YoY +19.44%</td>
+<td>玻纖布供給收縮與報價轉強</td>
+<td>等回測再買</td>
+<td>續抱但不追價</td>
+<td>電子材料報價、公股買超</td>
+<td>塑化景氣拖累</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>C. 3 檔谷底翻身首選</h3>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th style="text-align:right">排名</th>
+<th>市場</th>
+<th>股票代號</th>
+<th>公司名稱</th>
+<th>產業</th>
+<th>評級</th>
+<th>起漲原因</th>
+<th>中期理由</th>
+<th>財務驗證</th>
+<th>產業驗證</th>
+<th>布局方式</th>
+<th>持倉建議</th>
+<th>追蹤指標</th>
+<th>風險</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td>台股</td>
+<td><a href="https://www.wantgoo.com/stock/1303" target="_blank" rel="noopener noreferrer">1303</a></td>
+<td>南亞</td>
+<td>電子材料與塑化</td>
+<td>B</td>
+<td>趨勢轉強，MACD 金叉</td>
+<td>高階電子材料轉型與 AI PCB 材料需求</td>
+<td>4 月營收 YoY +19.44%</td>
+<td>玻纖布供給收縮與報價改善</td>
+<td>等回測再買</td>
+<td>回測守穩再加倉</td>
+<td>玻纖布與樹脂報價</td>
+<td>塑化拖累獲利</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td>台股</td>
+<td><a href="https://www.wantgoo.com/stock/8112" target="_blank" rel="noopener noreferrer">8112</a></td>
+<td>至上</td>
+<td>電子通路</td>
+<td>C</td>
+<td>技術面突破 ZLSMA</td>
+<td>記憶體代理與 HBM 擴張題材</td>
+<td>來源未提供，需後續查證</td>
+<td>來源未提供，需後續查證</td>
+<td>只觀察</td>
+<td>未持有者暫不介入</td>
+<td>三星記憶體合約報價</td>
+<td>通路毛利率受壓</td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td>台股</td>
+<td><a href="https://www.wantgoo.com/stock/8150" target="_blank" rel="noopener noreferrer">8150</a></td>
+<td>南茂</td>
+<td>半導體封測</td>
+<td>B</td>
+<td>放量突破 ZLSMA</td>
+<td>記憶體封測與 OLED 驅動 IC 復甦</td>
+<td>Q1 EPS YoY +200%；4 月營收 YoY +32.23%</td>
+<td>封測產能利用率回升</td>
+<td>可以現在小量分批</td>
+<td>小比例加碼</td>
+<td>2Q26 產能利用率</td>
+<td>封測競爭</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2>14. 最終一句話</h2>
+<p>這批資料與技術掃描中，最適合優先研究的是台達電（2308）、穩懋（3105）與南茂（8150）；其中台達電與南茂偏向台股 1-6 個月強勢起漲核心首選，南亞偏谷底翻身，穩懋偏 6-12 個月中期基本面黑馬。</p>
+<h2>15. 資料來源與限制</h2>
+<p>本報告主要基於台股 K 線警報掃描數據 2026-05-27.md，並整合上市公司 2026 年第一季財務自結報告、4 月官方營收速報、八大公股銀行籌碼動向、正式法說會指引與公開市場資訊。台達電、穩懋與南茂的資料驗證相對完整；九豪、雷科、至上、環球晶等標的在來源中主要呈現技術突破或題材線索，若財務驗證欄標示「來源未提供，需後續查證」，不應解讀為基本面已確認。</p>
+<p>本報告之持倉調整比例均為條件式研究指引，實際部位管理仍需投資人根據自身風險承受度、成本、持股比例與即時價格走勢動態評估。</p>
+<p>免責聲明：本內容根據公開資訊與使用者提供資料整理，僅供教育性研究與投資流程設計參考，不構成個人化投資建議、招攬或交易建議。市場可能朝任何判斷的反方向波動，交易前請自行研究並諮詢合格持牌顧問。</p>
 
 
     </article>
