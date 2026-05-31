@@ -759,14 +759,21 @@ tbody tr:nth-child(even) {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin: 0 0 12px;
+  margin: 0 0 10px;
 }
 
-.performance-controls button {
+.performance-filter-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 8px;
+}
+
+.performance-controls button,
+.performance-filter-controls button {
   min-height: 34px;
   padding: 7px 12px;
   color: var(--accent-ink);
-  background: var(--accent-soft);
   border: 1px solid rgba(0, 113, 227, 0.18);
   border-radius: 8px;
   font: inherit;
@@ -775,8 +782,40 @@ tbody tr:nth-child(even) {
   cursor: pointer;
 }
 
-.performance-controls button:hover {
+.performance-controls button {
+  background: var(--accent-soft);
+}
+
+.performance-filter-controls button {
+  color: var(--ink);
+  background: #fff;
+  border-color: var(--line);
+}
+
+.performance-controls button:hover,
+.performance-filter-controls button:hover {
   border-color: rgba(0, 113, 227, 0.42);
+}
+
+.performance-controls button[aria-pressed="true"],
+.performance-filter-controls button[aria-pressed="true"] {
+  color: #fff;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.performance-filter-count {
+  display: inline-block;
+  margin-left: 4px;
+  opacity: 0.76;
+  font-variant-numeric: tabular-nums;
+}
+
+.performance-filter-status {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 750;
 }
 
 .performance-table-wrap {
@@ -787,6 +826,113 @@ tbody tr:nth-child(even) {
 .performance-table {
   min-width: 1530px;
   table-layout: fixed;
+}
+
+.performance-table tbody tr[hidden] {
+  display: none;
+}
+
+.performance-filter-controls button[data-layout-tone="add"],
+.performance-table tbody tr[data-layout-tone="add"] {
+  --layout-bg: #ddf4e7;
+  --layout-bg-alt: #d2eedf;
+}
+
+.performance-filter-controls button[data-layout-tone="wait-add"],
+.performance-table tbody tr[data-layout-tone="wait-add"] {
+  --layout-bg: #e0f2f1;
+  --layout-bg-alt: #d4ebe9;
+}
+
+.performance-filter-controls button[data-layout-tone="hold"],
+.performance-table tbody tr[data-layout-tone="hold"] {
+  --layout-bg: #e6f0ff;
+  --layout-bg-alt: #dbe8fb;
+}
+
+.performance-filter-controls button[data-layout-tone="profit"],
+.performance-table tbody tr[data-layout-tone="profit"] {
+  --layout-bg: #fff4d6;
+  --layout-bg-alt: #f7e9c1;
+}
+
+.performance-filter-controls button[data-layout-tone="reduce"],
+.performance-table tbody tr[data-layout-tone="reduce"] {
+  --layout-bg: #ffe1e6;
+  --layout-bg-alt: #f6d4dc;
+}
+
+.performance-filter-controls button[data-layout-tone="sell"],
+.performance-table tbody tr[data-layout-tone="sell"] {
+  --layout-bg: #ffd9df;
+  --layout-bg-alt: #f0cbd3;
+}
+
+.performance-filter-controls button[data-layout-tone="neutral"],
+.performance-table tbody tr[data-layout-tone="neutral"] {
+  --layout-bg: #f1f3f5;
+  --layout-bg-alt: #e7eaee;
+}
+
+.performance-filter-controls button[data-layout-tone="exclude"],
+.performance-table tbody tr[data-layout-tone="exclude"] {
+  --layout-bg: #f3c5cc;
+  --layout-bg-alt: #e9b8c1;
+}
+
+.performance-filter-controls button[data-layout-tone="small-buy"],
+.performance-table tbody tr[data-layout-tone="small-buy"] {
+  --layout-bg: #ddf4e7;
+  --layout-bg-alt: #d2eedf;
+}
+
+.performance-filter-controls button[data-layout-tone="pullback"],
+.performance-table tbody tr[data-layout-tone="pullback"] {
+  --layout-bg: #e9e6ff;
+  --layout-bg-alt: #ddd9f5;
+}
+
+.performance-filter-controls button[data-layout-tone="breakout"],
+.performance-table tbody tr[data-layout-tone="breakout"] {
+  --layout-bg: #dff1ff;
+  --layout-bg-alt: #d1e7f7;
+}
+
+.performance-filter-controls button[data-layout-tone="earnings"],
+.performance-table tbody tr[data-layout-tone="earnings"] {
+  --layout-bg: #f3e8ff;
+  --layout-bg-alt: #e8daf7;
+}
+
+.performance-filter-controls button[data-layout-tone="watch"],
+.performance-table tbody tr[data-layout-tone="watch"] {
+  --layout-bg: #f1f3f5;
+  --layout-bg-alt: #e7eaee;
+}
+
+.performance-filter-controls button[data-layout-tone="no-chase"],
+.performance-table tbody tr[data-layout-tone="no-chase"] {
+  --layout-bg: #fff1c7;
+  --layout-bg-alt: #f4e4b5;
+}
+
+.performance-filter-controls button[data-layout-tone] {
+  background: var(--layout-bg);
+}
+
+.performance-filter-controls button[data-layout-tone][aria-pressed="true"] {
+  color: var(--ink);
+  background: var(--layout-bg-alt);
+  border-color: var(--accent);
+  box-shadow: inset 0 0 0 2px rgba(0, 113, 227, 0.18);
+}
+
+.performance-table tbody tr[data-layout-tone] td {
+  background: var(--layout-bg);
+}
+
+.performance-table tbody tr[data-layout-tone]:nth-child(even) td {
+  background: var(--layout-bg-alt);
 }
 
 .performance-col-target {
@@ -833,7 +979,6 @@ tbody tr:nth-child(even) {
 .performance-table th:first-child,
 .performance-table td:first-child {
   position: sticky;
-  background: var(--panel);
 }
 
 .performance-table th:first-child,
@@ -850,7 +995,11 @@ tbody tr:nth-child(even) {
   background: linear-gradient(180deg, #fbfcff 0%, var(--panel-soft) 100%);
 }
 
-.performance-table tbody tr:nth-child(even) td:first-child {
+.performance-table tbody tr:not([data-layout-tone]) td:first-child {
+  background: var(--panel);
+}
+
+.performance-table tbody tr:not([data-layout-tone]):nth-child(even) td:first-child {
   background: #f8f9fb;
 }
 
