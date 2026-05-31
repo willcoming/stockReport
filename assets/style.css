@@ -699,6 +699,48 @@ tbody tr:nth-child(even) {
   text-decoration: underline;
 }
 
+.stock-link-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  max-width: 100%;
+  vertical-align: baseline;
+}
+
+.stock-tradingview-link {
+  display: inline-flex;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(60, 60, 67, 0.16);
+  border-radius: 4px;
+  text-decoration: none;
+  vertical-align: -3px;
+}
+
+.stock-tradingview-link svg {
+  display: block;
+  width: 13px;
+  height: 13px;
+}
+
+.stock-tradingview-link:hover,
+.stock-tradingview-link:focus-visible {
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-color: rgba(0, 113, 227, 0.32);
+  text-decoration: none;
+}
+
+.stock-tradingview-link:focus-visible {
+  outline: 2px solid rgba(0, 113, 227, 0.38);
+  outline-offset: 2px;
+}
+
 .priority-table .priority-rank {
   color: var(--gold);
   font-weight: 800;
