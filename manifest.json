@@ -1,5 +1,139 @@
 {
-  "generated_at": "2026-06-17 21:13:50",
+  "generated_at": "2026-06-17 22:37:10",
+  "market_signal_cards": [
+    {
+      "id": "us-equity-five-signals",
+      "title": "美股 5 信號",
+      "badge": "低-中風險",
+      "tone": "blue",
+      "status": "低波動 fear，信用穩定",
+      "as_of": "2026-06-17 美股盤中；FRED 多數為 2026-06-16 收盤",
+      "summary": "VIX 仍在 calm 區間，Fear & Greed 屬 fear，但高收益信用利差與 HYG/JNK 未顯示凍結，較像非恐慌整理，不是系統性信用壓力。",
+      "metrics": [
+        {
+          "label": "波動 / 情緒",
+          "value": "VIX 16.52；Fear & Greed 39.29",
+          "note": "VIX 屬 12-18 calm；Fear & Greed 屬 25-45 fear。"
+        },
+        {
+          "label": "廣度",
+          "value": "SPY +0.16%，RSP +0.25%，IWM +0.83%",
+          "note": "等權與小型股盤中未落後，暫無明顯窄幅惡化。"
+        },
+        {
+          "label": "信用 / 跨資產",
+          "value": "HY OAS 2.71%；10Y 4.47%",
+          "note": "信用利差未快速擴大；利率仍是估值壓力觀察點。"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Cboe VIX",
+          "url": "https://www.cboe.com/en/tradable-products/vix/"
+        },
+        {
+          "label": "CNN Fear & Greed via MacroMicro",
+          "url": "https://en.macromicro.me/charts/50108/cnn-fear-and-greed"
+        },
+        {
+          "label": "FRED HY OAS",
+          "url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2"
+        },
+        {
+          "label": "FRED 10Y",
+          "url": "https://fred.stlouisfed.org/series/DGS10"
+        }
+      ]
+    },
+    {
+      "id": "tw-market-light",
+      "title": "台股市場燈號",
+      "badge": "黃燈",
+      "tone": "yellow",
+      "status": "可以看，但不要重壓。",
+      "as_of": "官方最新可用核心資料日 2026-06-16；查詢 2026-06-17",
+      "summary": "大盤與台積電站上 5/10 日線提供支撐，但自選股多數弱於大盤、現期貨差距略超門檻，總分 2 分維持黃燈。",
+      "metrics": [
+        {
+          "label": "總分",
+          "value": "2 分",
+          "note": ">= 3 才是綠燈；-2 以下才是紅燈。"
+        },
+        {
+          "label": "正面條件",
+          "value": "大盤站上 5/10 日線；台積電站上 10 日線",
+          "note": "TAIEX close 45809.19 > SMA5 44350.04 / SMA10 44716.50。"
+        },
+        {
+          "label": "壓抑條件",
+          "value": "9/14 自選股弱於大盤",
+          "note": "watchlist 弱勢比例 64.3%，降低重壓訊號可信度。"
+        }
+      ],
+      "sources": [
+        {
+          "label": "TWSE TAIEX",
+          "url": "https://openapi.twse.com.tw/v1/indicesReport/MI_5MINS_HIST"
+        },
+        {
+          "label": "TWSE quotes",
+          "url": "https://openapi.twse.com.tw/v1/exchangeReport/STOCK_DAY_ALL"
+        },
+        {
+          "label": "TPEx quotes",
+          "url": "https://www.tpex.org.tw/openapi/v1/tpex_mainboard_daily_close_quotes"
+        },
+        {
+          "label": "TAIFEX futures",
+          "url": "https://openapi.taifex.com.tw/v1/DailyMarketReportFut"
+        }
+      ]
+    },
+    {
+      "id": "tw-business-cycle-light",
+      "title": "台灣景氣循環燈號",
+      "badge": "紅燈 39分",
+      "tone": "red",
+      "status": "穩健擴張 / 過熱觀察",
+      "as_of": "2026-04 資料；國發會 2026-05-28 發布；查詢 2026-06-17",
+      "summary": "115 年 4 月景氣對策信號 39 分，與前月持平且續呈紅燈；領先與同時指標同步上升，總經背景偏強，但屬過熱觀察而非機械買賣訊號。",
+      "metrics": [
+        {
+          "label": "官方信號",
+          "value": "紅燈 39 分，月變化 0",
+          "note": "紅燈區間 38-45 分，代表景氣熱絡、過熱風險升高。"
+        },
+        {
+          "label": "領先 / 同時",
+          "value": "領先 103.63；同時 107.57",
+          "note": "兩者皆高於 100 且延續上升，支撐擴張判讀。"
+        },
+        {
+          "label": "構成項目變化",
+          "value": "製造業營業氣候測驗點轉綠；加班工時轉綠",
+          "note": "一項加分、一項扣分，總分因此持平。"
+        }
+      ],
+      "sources": [
+        {
+          "label": "NDC 景氣指標查詢系統",
+          "url": "https://index.ndc.gov.tw/n/zh_tw"
+        },
+        {
+          "label": "NDC 景氣對策信號",
+          "url": "https://index.ndc.gov.tw/n/zh_tw/lightscore"
+        },
+        {
+          "label": "Focus Taiwan",
+          "url": "https://focustaiwan.tw/business/202605280019"
+        },
+        {
+          "label": "鉅亨網",
+          "url": "https://news.cnyes.com/news/id/6472345"
+        }
+      ]
+    }
+  ],
   "action_reports": [
     {
       "lane": "tw_kline",
@@ -300,6 +434,13 @@
       "detail_path": "support/reports--twStock--2026-06-17_tw_kline_decision_report.html"
     },
     {
+      "title": "2026-06-17 台股 盤前 A/B 買入價格整理表",
+      "data_date": "2026-06-17",
+      "generated_at": "2026-06-17 21:24:58",
+      "source_path": "reports/twStock/2026-06-17_tw_premarket_ab_entry_table.md",
+      "detail_path": "support/reports--twStock--2026-06-17_tw_premarket_ab_entry_table.html"
+    },
+    {
       "title": "2026-06-12 美股 K 線警報掃描投資決策報告",
       "data_date": "2026-06-12",
       "generated_at": "2026-06-15 07:09:45",
@@ -347,6 +488,13 @@
       "generated_at": "2026-06-17 09:03:23",
       "source_path": "reports/usStock/2026-06-16_us_kline_decision_report.md",
       "detail_path": "support/reports--usStock--2026-06-16_us_kline_decision_report.html"
+    },
+    {
+      "title": "2026-06-16 美股 盤前 A/B 買入價格整理表",
+      "data_date": "2026-06-16",
+      "generated_at": "2026-06-17 21:25:12",
+      "source_path": "reports/usStock/2026-06-16_us_premarket_ab_entry_table.md",
+      "detail_path": "support/reports--usStock--2026-06-16_us_premarket_ab_entry_table.html"
     }
   ]
 }
