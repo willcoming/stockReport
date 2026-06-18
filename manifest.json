@@ -1,39 +1,39 @@
 {
-  "generated_at": "2026-06-17 22:37:10",
+  "generated_at": "2026-06-18 13:03:23",
   "market_signal_cards": [
     {
       "id": "us-equity-five-signals",
       "title": "美股 5 信號",
-      "badge": "低-中風險",
-      "tone": "blue",
-      "status": "低波動 fear，信用穩定",
-      "as_of": "2026-06-17 美股盤中；FRED 多數為 2026-06-16 收盤",
-      "summary": "VIX 仍在 calm 區間，Fear & Greed 屬 fear，但高收益信用利差與 HYG/JNK 未顯示凍結，較像非恐慌整理，不是系統性信用壓力。",
+      "badge": "low to medium",
+      "tone": "yellow",
+      "status": "Normal pullback / low-volatility fear",
+      "as_of": "2026-06-18 12:19:38 CST",
+      "summary": "Normal pullback / low-volatility fear；normal DCA / no panic。VIX 18.44，Fear & Greed 1.00，信用市場目前判讀為 stable。",
       "metrics": [
         {
           "label": "波動 / 情緒",
-          "value": "VIX 16.52；Fear & Greed 39.29",
-          "note": "VIX 屬 12-18 calm；Fear & Greed 屬 25-45 fear。"
+          "value": "VIX 18.44；Fear & Greed 1.00",
+          "note": "watch / extreme fear"
         },
         {
           "label": "廣度",
-          "value": "SPY +0.16%，RSP +0.25%，IWM +0.83%",
-          "note": "等權與小型股盤中未落後，暫無明顯窄幅惡化。"
+          "value": "SPY -1.25%，RSP -1.50%，IWM -0.75%",
+          "note": "觀察 RSP、IWM 是否跟上 SPY。"
         },
         {
           "label": "信用 / 跨資產",
-          "value": "HY OAS 2.71%；10Y 4.47%",
-          "note": "信用利差未快速擴大；利率仍是估值壓力觀察點。"
+          "value": "HY OAS unavailable%；HYG -0.37%，JNK -0.38%",
+          "note": "10Y 4.46%；UUP +0.90%；GLD -2.27%"
         }
       ],
       "sources": [
         {
-          "label": "Cboe VIX",
-          "url": "https://www.cboe.com/en/tradable-products/vix/"
+          "label": "Yahoo Finance chart",
+          "url": "https://finance.yahoo.com/quote/SPY"
         },
         {
-          "label": "CNN Fear & Greed via MacroMicro",
-          "url": "https://en.macromicro.me/charts/50108/cnn-fear-and-greed"
+          "label": "CNN Fear & Greed",
+          "url": "https://www.cnn.com/markets/fear-and-greed"
         },
         {
           "label": "FRED HY OAS",
@@ -48,26 +48,26 @@
     {
       "id": "tw-market-light",
       "title": "台股市場燈號",
-      "badge": "黃燈",
-      "tone": "yellow",
-      "status": "可以看，但不要重壓。",
-      "as_of": "官方最新可用核心資料日 2026-06-16；查詢 2026-06-17",
-      "summary": "大盤與台積電站上 5/10 日線提供支撐，但自選股多數弱於大盤、現期貨差距略超門檻，總分 2 分維持黃燈。",
+      "badge": "綠燈",
+      "tone": "green",
+      "status": "盤勢偏建設性，可維持正常研究節奏，但仍以分批與條件確認為主。",
+      "as_of": "官方資料日 2026-06-17；目標日 2026-06-18",
+      "summary": "總分 5；盤勢偏建設性，可維持正常研究節奏，但仍以分批與條件確認為主。",
       "metrics": [
         {
           "label": "總分",
-          "value": "2 分",
-          "note": ">= 3 才是綠燈；-2 以下才是紅燈。"
+          "value": "5",
+          "note": ">= 3 綠燈；-2 以下紅燈；其餘黃燈。"
         },
         {
-          "label": "正面條件",
-          "value": "大盤站上 5/10 日線；台積電站上 10 日線",
-          "note": "TAIEX close 45809.19 > SMA5 44350.04 / SMA10 44716.50。"
+          "label": "資料日期",
+          "value": "2026-06-17",
+          "note": "官方最新可用資料日為 2026-06-17，早於今天 2026-06-18。"
         },
         {
-          "label": "壓抑條件",
-          "value": "9/14 自選股弱於大盤",
-          "note": "watchlist 弱勢比例 64.3%，降低重壓訊號可信度。"
+          "label": "條件數",
+          "value": "10",
+          "note": "依 TAIEX、台積電/權值股、watchlist 與期貨條件加總。"
         }
       ],
       "sources": [
@@ -78,10 +78,6 @@
         {
           "label": "TWSE quotes",
           "url": "https://openapi.twse.com.tw/v1/exchangeReport/STOCK_DAY_ALL"
-        },
-        {
-          "label": "TPEx quotes",
-          "url": "https://www.tpex.org.tw/openapi/v1/tpex_mainboard_daily_close_quotes"
         },
         {
           "label": "TAIFEX futures",
@@ -95,46 +91,48 @@
       "badge": "紅燈 39分",
       "tone": "red",
       "status": "穩健擴張 / 過熱觀察",
-      "as_of": "2026-04 資料；國發會 2026-05-28 發布；查詢 2026-06-17",
-      "summary": "115 年 4 月景氣對策信號 39 分，與前月持平且續呈紅燈；領先與同時指標同步上升，總經背景偏強，但屬過熱觀察而非機械買賣訊號。",
+      "as_of": "2026-04 資料；查詢 2026-06-17",
+      "summary": "總經動能偏強，但紅燈代表景氣熱絡與過熱觀察，不應轉成機械買賣訊號。",
       "metrics": [
         {
           "label": "官方信號",
-          "value": "紅燈 39 分，月變化 0",
-          "note": "紅燈區間 38-45 分，代表景氣熱絡、過熱風險升高。"
+          "value": "紅燈 39 分",
+          "note": "較前月 0"
         },
         {
           "label": "領先 / 同時",
-          "value": "領先 103.63；同時 107.57",
-          "note": "兩者皆高於 100 且延續上升，支撐擴張判讀。"
+          "value": "103.63 / 107.57",
+          "note": "上升 / 上升"
         },
         {
-          "label": "構成項目變化",
-          "value": "製造業營業氣候測驗點轉綠；加班工時轉綠",
-          "note": "一項加分、一項扣分，總分因此持平。"
+          "label": "構成項目",
+          "value": "2 項主要變化",
+          "note": "使用官方頁或公開新聞稿 fallback 時需標註來源。"
         }
       ],
       "sources": [
-        {
-          "label": "NDC 景氣指標查詢系統",
-          "url": "https://index.ndc.gov.tw/n/zh_tw"
-        },
         {
           "label": "NDC 景氣對策信號",
           "url": "https://index.ndc.gov.tw/n/zh_tw/lightscore"
         },
         {
-          "label": "Focus Taiwan",
-          "url": "https://focustaiwan.tw/business/202605280019"
-        },
-        {
-          "label": "鉅亨網",
-          "url": "https://news.cnyes.com/news/id/6472345"
+          "label": "NDC 景氣指標查詢系統",
+          "url": "https://index.ndc.gov.tw/n/zh_tw"
         }
       ]
     }
   ],
   "action_reports": [
+    {
+      "lane": "kol",
+      "title": "2026-06-18-0848 KOL 建議與研究行動框架整合報告",
+      "run_id": "2026-06-18-0848",
+      "data_date": "2026-06-18",
+      "generated_at": "2026-06-18 12:40:00",
+      "source_path": "reports/2026-06-18-0848_integrated_kol_research_action_report.md",
+      "detail_path": "detail/2026-06-18-0848_integrated_kol_research_action_report.html",
+      "funnel": "A 0、B 8、C 22"
+    },
     {
       "lane": "tw_kline",
       "title": "2026-06-17-tw-kline 台股 K-line 研究行動框架整合報告",
@@ -234,267 +232,6 @@
       "source_path": "reports/2026-06-11-1116_integrated_kol_research_action_report.md",
       "detail_path": "detail/2026-06-11-1116_integrated_kol_research_action_report.html",
       "funnel": "A 1、B 18、C 34"
-    }
-  ],
-  "support_reports": [
-    {
-      "title": "2026-06-11-1116 KOL 觀點、新聞重點與投資決策報告",
-      "data_date": "2026-06-11",
-      "generated_at": "2026-06-16 12:26:12",
-      "source_path": "reports/news/2026-06-11-1116_kol_news_decision_report.md",
-      "detail_path": "support/reports--news--2026-06-11-1116_kol_news_decision_report.html"
-    },
-    {
-      "title": "2026-06-11-1116 下一步技能合併執行報告",
-      "data_date": "2026-06-11",
-      "generated_at": "2026-06-17 18:05:23",
-      "source_path": "reports/news/2026-06-11-1116_next_workflow_merged_report.md",
-      "detail_path": "support/reports--news--2026-06-11-1116_next_workflow_merged_report.html"
-    },
-    {
-      "title": "2026-06-11-1116 股票研究優先級整理",
-      "data_date": "2026-06-11",
-      "generated_at": "2026-06-16 12:26:45",
-      "source_path": "reports/news/2026-06-11-1116_stock_research_priority.md",
-      "detail_path": "support/reports--news--2026-06-11-1116_stock_research_priority.html"
-    },
-    {
-      "title": "2026-06-15-0957 KOL 觀點、新聞重點與投資決策報告",
-      "data_date": "2026-06-15",
-      "generated_at": "2026-06-15 10:32:46",
-      "source_path": "reports/news/2026-06-15-0957_kol_news_decision_report.md",
-      "detail_path": "support/reports--news--2026-06-15-0957_kol_news_decision_report.html"
-    },
-    {
-      "title": "2026-06-15-0957 下一步技能合併執行報告",
-      "data_date": "2026-06-15",
-      "generated_at": "2026-06-17 18:05:23",
-      "source_path": "reports/news/2026-06-15-0957_next_workflow_merged_report.md",
-      "detail_path": "support/reports--news--2026-06-15-0957_next_workflow_merged_report.html"
-    },
-    {
-      "title": "2026-06-15-0957 股票研究優先級整理",
-      "data_date": "2026-06-15",
-      "generated_at": "2026-06-16 07:47:09",
-      "source_path": "reports/news/2026-06-15-0957_stock_research_priority.md",
-      "detail_path": "support/reports--news--2026-06-15-0957_stock_research_priority.html"
-    },
-    {
-      "title": "2026-06-16-1401",
-      "data_date": "2026-06-16",
-      "generated_at": "2026-06-16 14:02:32",
-      "source_path": "reports/news/2026-06-16-1401_investment_brief.md",
-      "detail_path": "support/reports--news--2026-06-16-1401_investment_brief.html"
-    },
-    {
-      "title": "2026-06-16-1401 KOL 觀點、新聞重點與投資決策報告",
-      "data_date": "2026-06-16",
-      "generated_at": "2026-06-16 14:12:49",
-      "source_path": "reports/news/2026-06-16-1401_kol_news_decision_report.md",
-      "detail_path": "support/reports--news--2026-06-16-1401_kol_news_decision_report.html"
-    },
-    {
-      "title": "2026-06-16-1401 下一步技能合併執行報告",
-      "data_date": "2026-06-16",
-      "generated_at": "2026-06-17 18:05:23",
-      "source_path": "reports/news/2026-06-16-1401_next_workflow_merged_report.md",
-      "detail_path": "support/reports--news--2026-06-16-1401_next_workflow_merged_report.html"
-    },
-    {
-      "title": "2026-06-16-1401 股票研究優先級整理",
-      "data_date": "2026-06-16",
-      "generated_at": "2026-06-16 14:12:49",
-      "source_path": "reports/news/2026-06-16-1401_stock_research_priority.md",
-      "detail_path": "support/reports--news--2026-06-16-1401_stock_research_priority.html"
-    },
-    {
-      "title": "2026-06-16-1539",
-      "data_date": "2026-06-16",
-      "generated_at": "2026-06-16 15:42:41",
-      "source_path": "reports/news/2026-06-16-1539_investment_brief.md",
-      "detail_path": "support/reports--news--2026-06-16-1539_investment_brief.html"
-    },
-    {
-      "title": "2026-06-16-1539 KOL 觀點、新聞重點與投資決策報告",
-      "data_date": "2026-06-16",
-      "generated_at": "2026-06-16 15:52:25",
-      "source_path": "reports/news/2026-06-16-1539_kol_news_decision_report.md",
-      "detail_path": "support/reports--news--2026-06-16-1539_kol_news_decision_report.html"
-    },
-    {
-      "title": "2026-06-16-1539 下一步技能合併執行報告",
-      "data_date": "2026-06-16",
-      "generated_at": "2026-06-17 18:05:23",
-      "source_path": "reports/news/2026-06-16-1539_next_workflow_merged_report.md",
-      "detail_path": "support/reports--news--2026-06-16-1539_next_workflow_merged_report.html"
-    },
-    {
-      "title": "2026-06-16-1539 股票研究優先級整理",
-      "data_date": "2026-06-16",
-      "generated_at": "2026-06-16 15:57:35",
-      "source_path": "reports/news/2026-06-16-1539_stock_research_priority.md",
-      "detail_path": "support/reports--news--2026-06-16-1539_stock_research_priority.html"
-    },
-    {
-      "title": "2026-06-17-0728",
-      "data_date": "2026-06-17",
-      "generated_at": "2026-06-17 07:31:47",
-      "source_path": "reports/news/2026-06-17-0728_investment_brief.md",
-      "detail_path": "support/reports--news--2026-06-17-0728_investment_brief.html"
-    },
-    {
-      "title": "2026-06-17-0728 KOL 觀點、新聞重點與投資決策報告",
-      "data_date": "2026-06-17",
-      "generated_at": "2026-06-17 07:43:28",
-      "source_path": "reports/news/2026-06-17-0728_kol_news_decision_report.md",
-      "detail_path": "support/reports--news--2026-06-17-0728_kol_news_decision_report.html"
-    },
-    {
-      "title": "2026-06-17-0728 下一步技能合併執行報告",
-      "data_date": "2026-06-17",
-      "generated_at": "2026-06-17 18:05:23",
-      "source_path": "reports/news/2026-06-17-0728_next_workflow_merged_report.md",
-      "detail_path": "support/reports--news--2026-06-17-0728_next_workflow_merged_report.html"
-    },
-    {
-      "title": "2026-06-17-0728 股票研究優先級整理",
-      "data_date": "2026-06-17",
-      "generated_at": "2026-06-17 07:47:50",
-      "source_path": "reports/news/2026-06-17-0728_stock_research_priority.md",
-      "detail_path": "support/reports--news--2026-06-17-0728_stock_research_priority.html"
-    },
-    {
-      "title": "2026-06-12 台股 K 線警報掃描投資決策報告",
-      "data_date": "2026-06-12",
-      "generated_at": "2026-06-15 07:09:35",
-      "source_path": "reports/twStock/2026-06-12_tw_kline_decision_report.md",
-      "detail_path": "support/reports--twStock--2026-06-12_tw_kline_decision_report.html"
-    },
-    {
-      "title": "2026-06-15-tw-kline 下一步技能合併執行報告",
-      "data_date": "2026-06-15",
-      "generated_at": "2026-06-17 18:05:23",
-      "source_path": "reports/twStock/2026-06-15-tw-kline_next_workflow_merged_report.md",
-      "detail_path": "support/reports--twStock--2026-06-15-tw-kline_next_workflow_merged_report.html"
-    },
-    {
-      "title": "2026-06-15-tw-kline 台股 K-line 指標選股研究優先級",
-      "data_date": "2026-06-15",
-      "generated_at": "2026-06-16 01:08:45 。",
-      "source_path": "reports/twStock/2026-06-15-tw-kline_stock_research_priority.md",
-      "detail_path": "support/reports--twStock--2026-06-15-tw-kline_stock_research_priority.html"
-    },
-    {
-      "title": "2026-06-15 台股 K 線警報掃描投資決策報告",
-      "data_date": "2026-06-15",
-      "generated_at": "2026-06-16 01:02:58",
-      "source_path": "reports/twStock/2026-06-15_tw_kline_decision_report.md",
-      "detail_path": "support/reports--twStock--2026-06-15_tw_kline_decision_report.html"
-    },
-    {
-      "title": "2026-06-16-tw-kline 下一步技能合併執行報告",
-      "data_date": "2026-06-16",
-      "generated_at": "2026-06-17 18:05:23",
-      "source_path": "reports/twStock/2026-06-16-tw-kline_next_workflow_merged_report.md",
-      "detail_path": "support/reports--twStock--2026-06-16-tw-kline_next_workflow_merged_report.html"
-    },
-    {
-      "title": "2026-06-16-tw-kline 台股 K-line 指標選股研究優先級",
-      "data_date": "2026-06-16",
-      "generated_at": "2026-06-16 17:28:37",
-      "source_path": "reports/twStock/2026-06-16-tw-kline_stock_research_priority.md",
-      "detail_path": "support/reports--twStock--2026-06-16-tw-kline_stock_research_priority.html"
-    },
-    {
-      "title": "2026-06-16 台股 K 線警報掃描投資決策報告",
-      "data_date": "2026-06-16",
-      "generated_at": "2026-06-16 17:24:10",
-      "source_path": "reports/twStock/2026-06-16_tw_kline_decision_report.md",
-      "detail_path": "support/reports--twStock--2026-06-16_tw_kline_decision_report.html"
-    },
-    {
-      "title": "2026-06-17-tw-kline 下一步技能合併執行報告",
-      "data_date": "2026-06-17",
-      "generated_at": "2026-06-17 18:05:23",
-      "source_path": "reports/twStock/2026-06-17-tw-kline_next_workflow_merged_report.md",
-      "detail_path": "support/reports--twStock--2026-06-17-tw-kline_next_workflow_merged_report.html"
-    },
-    {
-      "title": "2026-06-17-tw-kline 台股 K-line 指標選股研究優先級",
-      "data_date": "2026-06-17",
-      "generated_at": "2026-06-17 16:57:35",
-      "source_path": "reports/twStock/2026-06-17-tw-kline_stock_research_priority.md",
-      "detail_path": "support/reports--twStock--2026-06-17-tw-kline_stock_research_priority.html"
-    },
-    {
-      "title": "2026-06-17 台股 K 線警報掃描投資決策報告",
-      "data_date": "2026-06-17",
-      "generated_at": "2026-06-17 16:49:58",
-      "source_path": "reports/twStock/2026-06-17_tw_kline_decision_report.md",
-      "detail_path": "support/reports--twStock--2026-06-17_tw_kline_decision_report.html"
-    },
-    {
-      "title": "2026-06-17 台股 盤前 A/B 買入價格整理表",
-      "data_date": "2026-06-17",
-      "generated_at": "2026-06-17 21:24:58",
-      "source_path": "reports/twStock/2026-06-17_tw_premarket_ab_entry_table.md",
-      "detail_path": "support/reports--twStock--2026-06-17_tw_premarket_ab_entry_table.html"
-    },
-    {
-      "title": "2026-06-12 美股 K 線警報掃描投資決策報告",
-      "data_date": "2026-06-12",
-      "generated_at": "2026-06-15 07:09:45",
-      "source_path": "reports/usStock/2026-06-12_us_kline_decision_report.md",
-      "detail_path": "support/reports--usStock--2026-06-12_us_kline_decision_report.html"
-    },
-    {
-      "title": "2026-06-15-us-kline 下一步技能合併執行報告",
-      "data_date": "2026-06-15",
-      "generated_at": "2026-06-17 18:05:23",
-      "source_path": "reports/usStock/2026-06-15-us-kline_next_workflow_merged_report.md",
-      "detail_path": "support/reports--usStock--2026-06-15-us-kline_next_workflow_merged_report.html"
-    },
-    {
-      "title": "2026-06-15-us-kline 美股 K-line 指標選股研究優先級",
-      "data_date": "2026-06-15",
-      "generated_at": "2026-06-16 14:17:33。",
-      "source_path": "reports/usStock/2026-06-15-us-kline_stock_research_priority.md",
-      "detail_path": "support/reports--usStock--2026-06-15-us-kline_stock_research_priority.html"
-    },
-    {
-      "title": "2026-06-15 美股 K 線警報掃描投資決策報告",
-      "data_date": "2026-06-15",
-      "generated_at": "2026-06-16 14:12:49",
-      "source_path": "reports/usStock/2026-06-15_us_kline_decision_report.md",
-      "detail_path": "support/reports--usStock--2026-06-15_us_kline_decision_report.html"
-    },
-    {
-      "title": "2026-06-16-us-kline 下一步技能合併執行報告",
-      "data_date": "2026-06-16",
-      "generated_at": "2026-06-17 18:05:23",
-      "source_path": "reports/usStock/2026-06-16-us-kline_next_workflow_merged_report.md",
-      "detail_path": "support/reports--usStock--2026-06-16-us-kline_next_workflow_merged_report.html"
-    },
-    {
-      "title": "2026-06-16-us-kline 美股 K-line 指標選股研究優先級",
-      "data_date": "2026-06-16",
-      "generated_at": "2026-06-17 09:07:55。",
-      "source_path": "reports/usStock/2026-06-16-us-kline_stock_research_priority.md",
-      "detail_path": "support/reports--usStock--2026-06-16-us-kline_stock_research_priority.html"
-    },
-    {
-      "title": "2026-06-16 美股 K 線警報掃描投資決策報告",
-      "data_date": "2026-06-16",
-      "generated_at": "2026-06-17 09:03:23",
-      "source_path": "reports/usStock/2026-06-16_us_kline_decision_report.md",
-      "detail_path": "support/reports--usStock--2026-06-16_us_kline_decision_report.html"
-    },
-    {
-      "title": "2026-06-16 美股 盤前 A/B 買入價格整理表",
-      "data_date": "2026-06-16",
-      "generated_at": "2026-06-17 21:25:12",
-      "source_path": "reports/usStock/2026-06-16_us_premarket_ab_entry_table.md",
-      "detail_path": "support/reports--usStock--2026-06-16_us_premarket_ab_entry_table.html"
     }
   ]
 }
