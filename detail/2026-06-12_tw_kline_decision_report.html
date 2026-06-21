@@ -1,0 +1,1032 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-06-12 台股 K 線警報掃描投資決策報告</title>
+  <link rel="stylesheet" href="../assets/report-center.css">
+</head>
+<body class="bg-slate-50 text-neutral-950 antialiased">
+
+<main class="w-full px-4 py-6 md:px-6 xl:px-8">
+  <nav class="mb-6 flex items-center justify-between text-sm text-slate-600">
+    <a class="font-bold tracking-normal text-neutral-950 underline decoration-emerald-700/30 underline-offset-4 hover:text-emerald-800" href="../index.html">← 報告中心</a>
+  </nav>
+  <article class="article-body w-full bg-white p-4 md:p-6 xl:p-8">
+    
+<header class="mb-7 border-b border-slate-200 pb-6">
+  <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+    <div class="min-w-0">
+      <span class="inline-flex w-fit items-center rounded-full border border-slate-300 px-2.5 py-1 text-xs text-slate-600">TW · 台股 K-line 研究行動</span>
+      <h1 class="mt-3 text-3xl font-black leading-tight tracking-normal md:text-4xl">2026-06-12 台股 K 線警報掃描投資決策報告</h1>
+    </div>
+    <div class="shrink-0 rounded-md border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-600">
+      產出時間：<strong class="font-semibold text-neutral-950">2026-06-15 07:09:35</strong>
+    </div>
+  </div>
+</header>
+
+    <p>本報告以已產出的 K 線警報掃描日報為來源，由 AI agent 進行規則化整理與風險分層。內容僅作研究輔助與情境推演，不構成個人化投資建議、投顧服務或下單指令。</p>
+<h2>資料來源與限制</h2>
+<ul>
+<li>資料日：2026-06-12</li>
+<li>產生時間：2026-06-15 07:09:35</li>
+<li>決策分層僅使用日報中的 K 線策略、開高低收、成交量與成交金額欄位；未接 NotebookLM、新聞、財報或 SQLite 補充資料。</li>
+<li><code>產業</code> 欄位會嘗試用網路公開資料補強；未命中時保留 <code>資料未提供</code>。</li>
+</ul>
+<h2>補充資料搜尋來源</h2>
+<ul>
+<li>網路補強：已啟用，補到產業資料 58 檔，未命中 0 檔。</li>
+<li>實際命中來源：TWSE OpenAPI 上市公司基本資料 58 檔</li>
+<li>優先搜尋列表：
+<ul>
+<li>TWSE OpenAPI 上市公司基本資料: https://openapi.twse.com.tw/v1/opendata/t187ap03_L</li>
+<li>TPEx OpenAPI 上櫃公司基本資料: https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_O</li>
+<li>TPEx OpenAPI 興櫃公司基本資料: https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_R</li>
+<li>Yahoo奇摩股市個股頁: https://tw.stock.yahoo.com/quote/{symbol}</li>
+</ul>
+</li>
+</ul>
+<h2>策略訊號總覽</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>項目</th>
+<th style="text-align:right">數值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>原始命中列</td>
+<td style="text-align:right">84</td>
+</tr>
+<tr>
+<td>合併後標的</td>
+<td style="text-align:right">58</td>
+</tr>
+<tr>
+<td>現在可以小量分批研究</td>
+<td style="text-align:right">9</td>
+</tr>
+<tr>
+<td>等買點或確認</td>
+<td style="text-align:right">31</td>
+</tr>
+<tr>
+<td>觀察</td>
+<td style="text-align:right">0</td>
+</tr>
+<tr>
+<td>暫時排除</td>
+<td style="text-align:right">18</td>
+</tr>
+</tbody>
+</table></div>
+<h2>現在可以小量分批研究名單</h2>
+<div class="table-scroll"><table class="research-table"><colgroup><col style="width: 110px"><col style="width: 160px"><col style="width: 180px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"></colgroup>
+<thead>
+<tr>
+<th>市場</th>
+<th>代號 / 公司</th>
+<th>產業</th>
+<th>來源提及程度</th>
+<th>來源主觀看法</th>
+<th>布局建議</th>
+<th>持倉建議</th>
+<th>追蹤指標</th>
+<th>風險</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/8039" rel="noopener noreferrer" target="_blank">8039(台虹)</a><a aria-label="在 TradingView 開啟 8039" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-8039/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 8039"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>電子零組件業</td>
+<td>雙策略共振</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>雙策略共振；收盤位置 100.0%；振幅 5.7%；entryScore 90.9；netScore 90.9；多空訊號 3/0；成交金額 2,661,932,337</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1303" rel="noopener noreferrer" target="_blank">1303(南亞)</a><a aria-label="在 TradingView 開啟 1303" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-1303/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1303"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>塑膠工業</td>
+<td>多策略命中</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>多策略命中；收盤位置 100.0%；振幅 5.2%；entryScore 88.1；netScore 88.1；多空訊號 3/0；成交金額 5,692,023,707</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6515" rel="noopener noreferrer" target="_blank">6515(穎崴)</a><a aria-label="在 TradingView 開啟 6515" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6515/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6515"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>半導體業</td>
+<td>多策略命中</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>多策略命中；收盤位置 100.0%；振幅 3.7%；entryScore 83.4；netScore 83.4；多空訊號 4/0；成交金額 5,864,299,415</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6691" rel="noopener noreferrer" target="_blank">6691(洋基工程)</a><a aria-label="在 TradingView 開啟 6691" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6691/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6691"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>其他電子業</td>
+<td>多策略命中</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>多策略命中；收盤位置 82.1%；振幅 8.1%；entryScore 80.8；netScore 80.8；多空訊號 3/0；成交金額 1,832,218,305</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2402" rel="noopener noreferrer" target="_blank">2402(毅嘉)</a><a aria-label="在 TradingView 開啟 2402" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2402/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2402"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>電子零組件業</td>
+<td>多策略命中</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>多策略命中；收盤位置 100.0%；振幅 6.8%；entryScore 73.5；netScore 73.5；多空訊號 3/0；成交金額 619,319,809</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6202" rel="noopener noreferrer" target="_blank">6202(盛群)</a><a aria-label="在 TradingView 開啟 6202" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6202/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6202"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>半導體業</td>
+<td>多策略命中</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>多策略命中；收盤位置 100.0%；振幅 4.7%；entryScore 73.5；netScore 73.5；多空訊號 3/0；成交金額 557,340,835</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3515" rel="noopener noreferrer" target="_blank">3515(華擎)</a><a aria-label="在 TradingView 開啟 3515" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-3515/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3515"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>電腦及週邊設備業</td>
+<td>多策略命中</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>多策略命中；收盤位置 100.0%；振幅 2.6%；entryScore 90.9；netScore 90.9；多空訊號 3/0；成交金額 222,313,627</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6205" rel="noopener noreferrer" target="_blank">6205(詮欣)</a><a aria-label="在 TradingView 開啟 6205" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6205/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6205"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>電子零組件業</td>
+<td>多策略命中</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>多策略命中；收盤位置 100.0%；振幅 7.5%；entryScore 73.5；netScore 73.5；多空訊號 3/0；成交金額 283,085,235</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2404" rel="noopener noreferrer" target="_blank">2404(漢唐)</a><a aria-label="在 TradingView 開啟 2404" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2404/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2404"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>其他電子業</td>
+<td>多策略命中</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>多策略命中；收盤位置 100.0%；振幅 3.4%；entryScore 53.2；netScore 53.2；多空訊號 3/0；成交金額 7,950,609,105</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+</tbody>
+</table></div>
+<h2>現在不能買，但值得等買點名單</h2>
+<div class="table-scroll"><table class="research-table"><colgroup><col style="width: 110px"><col style="width: 160px"><col style="width: 180px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"></colgroup>
+<thead>
+<tr>
+<th>市場</th>
+<th>代號 / 公司</th>
+<th>產業</th>
+<th>來源提及程度</th>
+<th>來源主觀看法</th>
+<th>布局建議</th>
+<th>持倉建議</th>
+<th>追蹤指標</th>
+<th>風險</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6944" rel="noopener noreferrer" target="_blank">6944(兆聯實業)</a><a aria-label="在 TradingView 開啟 6944" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6944/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6944"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>綠能環保</td>
+<td>多策略命中</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>多策略命中；收盤位置 63.6%；振幅 6.7%；entryScore 100.0；netScore 100.0；多空訊號 4/0；成交金額 2,032,152,759</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2439" rel="noopener noreferrer" target="_blank">2439(美律)</a><a aria-label="在 TradingView 開啟 2439" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2439/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2439"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>通信網路業</td>
+<td>多策略命中</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>多策略命中；收盤位置 55.0%；振幅 4.3%；entryScore 82.1；netScore 82.1；多空訊號 3/0；成交金額 524,896,462</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3060" rel="noopener noreferrer" target="_blank">3060(銘異)</a><a aria-label="在 TradingView 開啟 3060" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-3060/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3060"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>電腦及週邊設備業</td>
+<td>多策略命中</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>多策略命中；收盤位置 64.5%；振幅 5.0%；entryScore 79.9；netScore 71.8；多空訊號 3/2；成交金額 88,121,377</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2646" rel="noopener noreferrer" target="_blank">2646(星宇航空)</a><a aria-label="在 TradingView 開啟 2646" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2646/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2646"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>航運業</td>
+<td>多策略命中</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>多策略命中；收盤位置 55.6%；振幅 2.2%；entryScore 67.9；netScore 57.5；多空訊號 3/1；成交金額 123,813,489</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6505" rel="noopener noreferrer" target="_blank">6505(台塑化)</a><a aria-label="在 TradingView 開啟 6505" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6505/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6505"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>油電燃氣業</td>
+<td>多策略命中</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>多策略命中；收盤位置 87.5%；振幅 3.0%；entryScore 60.4；netScore 40.2；多空訊號 3/2；成交金額 299,081,118</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1101" rel="noopener noreferrer" target="_blank">1101(台泥)</a><a aria-label="在 TradingView 開啟 1101" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-1101/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1101"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>水泥工業</td>
+<td>多策略命中</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>多策略命中；收盤位置 50.0%；振幅 2.4%；entryScore 77.4；netScore 76.4；多空訊號 4/0；成交金額 742,893,054</td>
+<td>上影線壓力重：50.0%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/8131" rel="noopener noreferrer" target="_blank">8131(福懋科)</a><a aria-label="在 TradingView 開啟 8131" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-8131/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 8131"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>半導體業</td>
+<td>多策略命中</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>多策略命中；收盤位置 39.4%；振幅 4.6%；entryScore 88.1；netScore 88.1；多空訊號 3/0；成交金額 427,092,548</td>
+<td>上影線壓力重：60.6%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6133" rel="noopener noreferrer" target="_blank">6133(金橋)</a><a aria-label="在 TradingView 開啟 6133" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6133/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6133"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>電子零組件業</td>
+<td>多策略命中</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>多策略命中；收盤位置 38.2%；振幅 7.1%；entryScore 82.1；netScore 82.1；多空訊號 3/0；成交金額 51,540,789</td>
+<td>上影線壓力重：61.8%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3532" rel="noopener noreferrer" target="_blank">3532(台勝科)</a><a aria-label="在 TradingView 開啟 3532" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-3532/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3532"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>半導體業</td>
+<td>單一策略命中</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>單一策略命中；收盤位置 100.0%；振幅 6.7%；entryScore 83.8；netScore 83.8；多空訊號 2/0；成交金額 3,884,975,900</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2392" rel="noopener noreferrer" target="_blank">2392(正崴)</a><a aria-label="在 TradingView 開啟 2392" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2392/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2392"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>電子零組件業</td>
+<td>多策略命中</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>多策略命中；收盤位置 32.1%；振幅 3.6%；entryScore 73.5；netScore 73.5；多空訊號 3/0；成交金額 107,855,709</td>
+<td>上影線壓力重：67.9%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6139" rel="noopener noreferrer" target="_blank">6139(亞翔)</a><a aria-label="在 TradingView 開啟 6139" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6139/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6139"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>其他電子業</td>
+<td>單一策略命中</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>單一策略命中；收盤位置 100.0%；振幅 4.6%；entryScore 64.1；netScore 64.1；多空訊號 2/0；成交金額 4,629,575,491</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3665" rel="noopener noreferrer" target="_blank">3665(貿聯-KY)</a><a aria-label="在 TradingView 開啟 3665" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-3665/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3665"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>其他電子業</td>
+<td>單一策略命中</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>單一策略命中；收盤位置 65.2%；振幅 5.0%；entryScore 47.2；netScore 40.0；多空訊號 2/0；成交金額 9,603,984,145</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6757" rel="noopener noreferrer" target="_blank">6757(台灣虎航)</a><a aria-label="在 TradingView 開啟 6757" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6757/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6757"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>航運業</td>
+<td>單一策略命中</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>單一策略命中；收盤位置 57.1%；振幅 2.5%；entryScore 50.5；netScore 49.5；多空訊號 2/0；成交金額 194,769,472</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6269" rel="noopener noreferrer" target="_blank">6269(台郡)</a><a aria-label="在 TradingView 開啟 6269" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6269/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6269"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>電子零組件業</td>
+<td>單一策略命中</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>單一策略命中；收盤位置 100.0%；振幅 6.4%；entryScore 50.9；netScore 31.8；多空訊號 1/1；成交金額 578,375,856</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2014" rel="noopener noreferrer" target="_blank">2014(中鴻)</a><a aria-label="在 TradingView 開啟 2014" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2014/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2014"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>鋼鐵工業</td>
+<td>單一策略命中</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>單一策略命中；收盤位置 61.5%；振幅 3.6%；entryScore 64.1；netScore 61.6；多空訊號 2/1；成交金額 160,611,719</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2108" rel="noopener noreferrer" target="_blank">2108(南帝)</a><a aria-label="在 TradingView 開啟 2108" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2108/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2108"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>橡膠工業</td>
+<td>單一策略命中</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>單一策略命中；收盤位置 33.3%；振幅 3.0%；entryScore 70.1；netScore 70.1；多空訊號 2/0；成交金額 66,759,858</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2002" rel="noopener noreferrer" target="_blank">2002(中鋼)</a><a aria-label="在 TradingView 開啟 2002" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2002/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2002"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>鋼鐵工業</td>
+<td>單一策略命中</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>單一策略命中；收盤位置 71.4%；振幅 1.9%；entryScore 58.1；netScore 27.3；多空訊號 2/2；成交金額 1,086,907,332</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2637" rel="noopener noreferrer" target="_blank">2637(慧洋-KY)</a><a aria-label="在 TradingView 開啟 2637" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2637/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2637"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>航運業</td>
+<td>單一策略命中</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>單一策略命中；收盤位置 47.8%；振幅 2.9%；entryScore 70.1；netScore 70.1；多空訊號 2/0；成交金額 518,632,967</td>
+<td>上影線壓力重：52.2%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1477" rel="noopener noreferrer" target="_blank">1477(聚陽)</a><a aria-label="在 TradingView 開啟 1477" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-1477/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1477"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>紡織纖維</td>
+<td>單一策略命中</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>單一策略命中；收盤位置 11.1%；振幅 2.0%；entryScore 58.1；netScore 57.1；多空訊號 2/0；成交金額 246,589,179</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2393" rel="noopener noreferrer" target="_blank">2393(億光)</a><a aria-label="在 TradingView 開啟 2393" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2393/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2393"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>光電業</td>
+<td>單一策略命中</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>單一策略命中；收盤位置 80.6%；振幅 4.4%；成交金額 391,459,050</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6472" rel="noopener noreferrer" target="_blank">6472(保瑞)</a><a aria-label="在 TradingView 開啟 6472" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6472/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6472"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>生技醫療業</td>
+<td>單一策略命中</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>單一策略命中；收盤位置 93.8%；振幅 2.0%；成交金額 273,588,244</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/4934" rel="noopener noreferrer" target="_blank">4934(太極)</a><a aria-label="在 TradingView 開啟 4934" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-4934/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 4934"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>光電業</td>
+<td>單一策略命中</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>單一策略命中；收盤位置 40.0%；振幅 7.1%；entryScore 50.5；netScore 50.5；多空訊號 2/0；成交金額 104,692,813</td>
+<td>上影線壓力重：60.0%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1736" rel="noopener noreferrer" target="_blank">1736(喬山)</a><a aria-label="在 TradingView 開啟 1736" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-1736/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1736"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>運動休閒</td>
+<td>單一策略命中</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>單一策略命中；收盤位置 50.0%；振幅 2.6%；entryScore 50.5；netScore 49.5；多空訊號 2/0；成交金額 103,501,931</td>
+<td>上影線壓力重：50.0%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/5469" rel="noopener noreferrer" target="_blank">5469(瀚宇博)</a><a aria-label="在 TradingView 開啟 5469" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-5469/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 5469"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>電子零組件業</td>
+<td>單一策略命中</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>單一策略命中；收盤位置 48.4%；振幅 3.7%；entryScore 52.7；netScore 44.2；多空訊號 1/1；成交金額 255,841,620</td>
+<td>上影線壓力重：51.6%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/4952" rel="noopener noreferrer" target="_blank">4952(凌通)</a><a aria-label="在 TradingView 開啟 4952" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-4952/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 4952"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>半導體業</td>
+<td>單一策略命中</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>單一策略命中；收盤位置 9.7%；振幅 5.8%；entryScore 62.5；netScore 62.5；多空訊號 2/0；成交金額 256,408,751</td>
+<td>上影線壓力重：51.6%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2323" rel="noopener noreferrer" target="_blank">2323(中環)</a><a aria-label="在 TradingView 開啟 2323" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2323/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2323"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>光電業</td>
+<td>單一策略命中</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>單一策略命中；收盤位置 33.3%；振幅 2.7%；entryScore 50.9；netScore 50.9；多空訊號 1/1；成交金額 111,917,690</td>
+<td>上影線壓力重：66.7%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6477" rel="noopener noreferrer" target="_blank">6477(安集)</a><a aria-label="在 TradingView 開啟 6477" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6477/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6477"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>光電業</td>
+<td>單一策略命中</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>單一策略命中；收盤位置 0.0%；振幅 5.8%；entryScore 50.5；netScore 12.9；多空訊號 2/1；成交金額 84,818,597</td>
+<td>上影線壓力重：82.1%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2201" rel="noopener noreferrer" target="_blank">2201(裕隆)</a><a aria-label="在 TradingView 開啟 2201" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2201/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2201"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>汽車工業</td>
+<td>單一策略命中</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>單一策略命中；收盤位置 7.7%；振幅 2.3%；entryScore 50.5；netScore 28.3；多空訊號 2/2；成交金額 76,656,227</td>
+<td>上影線壓力重：69.2%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6672" rel="noopener noreferrer" target="_blank">6672(騰輝電子-KY)</a><a aria-label="在 TradingView 開啟 6672" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6672/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6672"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>電子零組件業</td>
+<td>單一策略命中</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>單一策略命中；收盤位置 26.3%；振幅 4.3%；成交金額 777,399,003</td>
+<td>上影線壓力重：73.7%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6191" rel="noopener noreferrer" target="_blank">6191(精成科)</a><a aria-label="在 TradingView 開啟 6191" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6191/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6191"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>電子零組件業</td>
+<td>單一策略命中</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>單一策略命中；收盤位置 6.7%；振幅 1.6%；成交金額 293,820,073</td>
+<td>上影線壓力重：93.3%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2634" rel="noopener noreferrer" target="_blank">2634(漢翔)</a><a aria-label="在 TradingView 開啟 2634" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2634/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2634"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>航運業</td>
+<td>單一策略命中</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>單一策略命中；收盤位置 30.8%；振幅 1.4%；成交金額 270,342,148</td>
+<td>上影線壓力重：69.2%</td>
+</tr>
+</tbody>
+</table></div>
+<h2>值得觀察，但目前還不能買名單</h2>
+<p>無符合名單。</p>
+<h2>明確不可以買 / 暫時排除名單</h2>
+<div class="table-scroll"><table class="research-table"><colgroup><col style="width: 110px"><col style="width: 160px"><col style="width: 180px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"></colgroup>
+<thead>
+<tr>
+<th>市場</th>
+<th>代號 / 公司</th>
+<th>產業</th>
+<th>來源提及程度</th>
+<th>來源主觀看法</th>
+<th>布局建議</th>
+<th>持倉建議</th>
+<th>追蹤指標</th>
+<th>風險</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2380" rel="noopener noreferrer" target="_blank">2380(虹光)</a><a aria-label="在 TradingView 開啟 2380" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2380/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2380"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>電腦及週邊設備業</td>
+<td>雙策略共振</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>雙策略共振；收盤位置 100.0%；振幅 10.0%；entryScore 98.0；netScore 98.0；多空訊號 4/0；成交金額 10,370,605</td>
+<td>低價風險：收盤 6.43 低於門檻 10；成交金額不足：10,370,605 低於 50,000,000</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6550" rel="noopener noreferrer" target="_blank">6550(北極星藥業-KY)</a><a aria-label="在 TradingView 開啟 6550" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6550/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6550"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>生技醫療業</td>
+<td>多策略命中</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>多策略命中；收盤位置 30.0%；振幅 3.8%；entryScore 47.1；netScore 47.1；多空訊號 3/0；成交金額 15,660,057</td>
+<td>成交金額不足：15,660,057 低於 50,000,000</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2015" rel="noopener noreferrer" target="_blank">2015(豐興)</a><a aria-label="在 TradingView 開啟 2015" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2015/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2015"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>鋼鐵工業</td>
+<td>多策略命中</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>多策略命中；收盤位置 48.5%；振幅 5.2%；entryScore 60.4；netScore 59.4；多空訊號 3/0；成交金額 41,901,151</td>
+<td>成交金額不足：41,901,151 低於 50,000,000；上影線壓力重：51.5%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2527" rel="noopener noreferrer" target="_blank">2527(宏璟)</a><a aria-label="在 TradingView 開啟 2527" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2527/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2527"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>建材營造業</td>
+<td>單一策略命中</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>單一策略命中；收盤位置 75.0%；振幅 5.5%；entryScore 64.1；netScore 64.1；多空訊號 2/0；成交金額 25,452,755</td>
+<td>成交金額不足：25,452,755 低於 50,000,000</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1506" rel="noopener noreferrer" target="_blank">1506(正道)</a><a aria-label="在 TradingView 開啟 1506" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-1506/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1506"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>電機機械</td>
+<td>多策略命中</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>多策略命中；收盤位置 30.8%；振幅 6.3%；entryScore 71.7；netScore 70.7；多空訊號 2/0；成交金額 9,667,541</td>
+<td>成交金額不足：9,667,541 低於 50,000,000；上影線壓力重：69.2%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6164" rel="noopener noreferrer" target="_blank">6164(華興)</a><a aria-label="在 TradingView 開啟 6164" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6164/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6164"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>光電業</td>
+<td>單一策略命中</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>單一策略命中；收盤位置 72.7%；振幅 4.3%；entryScore 64.1；netScore 49.9；多空訊號 2/2；成交金額 11,697,048</td>
+<td>成交金額不足：11,697,048 低於 50,000,000</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3011" rel="noopener noreferrer" target="_blank">3011(今皓)</a><a aria-label="在 TradingView 開啟 3011" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-3011/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3011"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>電子零組件業</td>
+<td>單一策略命中</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>單一策略命中；收盤位置 40.0%；振幅 5.2%；entryScore 65.0；netScore 65.0；多空訊號 2/0；成交金額 26,009,417</td>
+<td>成交金額不足：26,009,417 低於 50,000,000；上影線壓力重：60.0%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2258" rel="noopener noreferrer" target="_blank">2258(鴻華先進-創)</a><a aria-label="在 TradingView 開啟 2258" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2258/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2258"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>汽車工業</td>
+<td>單一策略命中</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>單一策略命中；收盤位置 9.5%；振幅 3.4%；entryScore 58.1；netScore 45.3；多空訊號 2/1；成交金額 15,962,387</td>
+<td>成交金額不足：15,962,387 低於 50,000,000</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1713" rel="noopener noreferrer" target="_blank">1713(國化)</a><a aria-label="在 TradingView 開啟 1713" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-1713/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1713"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>化學工業</td>
+<td>單一策略命中</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>單一策略命中；收盤位置 51.1%；振幅 4.5%；entryScore 70.1；netScore 70.1；多空訊號 2/1；成交金額 32,835,268</td>
+<td>成交金額不足：32,835,268 低於 50,000,000；上影線壓力重：48.9%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2023" rel="noopener noreferrer" target="_blank">2023(燁輝)</a><a aria-label="在 TradingView 開啟 2023" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2023/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2023"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>鋼鐵工業</td>
+<td>單一策略命中</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>單一策略命中；收盤位置 100.0%；振幅 1.1%；成交金額 20,333,704</td>
+<td>成交金額不足：20,333,704 低於 50,000,000</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1225" rel="noopener noreferrer" target="_blank">1225(福懋油)</a><a aria-label="在 TradingView 開啟 1225" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-1225/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1225"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>食品工業</td>
+<td>單一策略命中</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>單一策略命中；收盤位置 92.5%；振幅 6.4%；成交金額 18,874,303</td>
+<td>成交金額不足：18,874,303 低於 50,000,000</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/5608" rel="noopener noreferrer" target="_blank">5608(四維航)</a><a aria-label="在 TradingView 開啟 5608" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-5608/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 5608"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>航運業</td>
+<td>單一策略命中</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>單一策略命中；收盤位置 40.0%；振幅 3.3%；entryScore 59.0；netScore 58.0；多空訊號 2/0；成交金額 30,036,194</td>
+<td>成交金額不足：30,036,194 低於 50,000,000；上影線壓力重：60.0%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2107" rel="noopener noreferrer" target="_blank">2107(厚生)</a><a aria-label="在 TradingView 開啟 2107" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2107/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2107"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>橡膠工業</td>
+<td>單一策略命中</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>單一策略命中；收盤位置 77.8%；振幅 1.7%；成交金額 39,691,449</td>
+<td>成交金額不足：39,691,449 低於 50,000,000</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1337" rel="noopener noreferrer" target="_blank">1337(再生-KY)</a><a aria-label="在 TradingView 開啟 1337" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-1337/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1337"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>塑膠工業</td>
+<td>單一策略命中</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>單一策略命中；收盤位置 85.7%；振幅 1.4%；entryScore 59.0；netScore 58.0；多空訊號 2/0；成交金額 2,764,537</td>
+<td>低價風險：收盤 5.1 低於門檻 10；成交金額不足：2,764,537 低於 50,000,000</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/9935" rel="noopener noreferrer" target="_blank">9935(慶豐富)</a><a aria-label="在 TradingView 開啟 9935" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-9935/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 9935"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>居家生活</td>
+<td>單一策略命中</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>單一策略命中；收盤位置 20.0%；振幅 2.6%；entryScore 41.7；netScore 41.7；多空訊號 3/0；成交金額 11,717,231</td>
+<td>成交金額不足：11,717,231 低於 50,000,000；上影線壓力重：50.0%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2062" rel="noopener noreferrer" target="_blank">2062(橋椿)</a><a aria-label="在 TradingView 開啟 2062" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2062/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2062"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>居家生活</td>
+<td>單一策略命中</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>單一策略命中；收盤位置 40.0%；振幅 1.3%；成交金額 9,927,021</td>
+<td>成交金額不足：9,927,021 低於 50,000,000；上影線壓力重：60.0%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2614" rel="noopener noreferrer" target="_blank">2614(東森)</a><a aria-label="在 TradingView 開啟 2614" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2614/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2614"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>其他業</td>
+<td>單一策略命中</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>單一策略命中；收盤位置 15.4%；振幅 3.4%；成交金額 28,372,446</td>
+<td>成交金額不足：28,372,446 低於 50,000,000；上影線壓力重：46.2%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3058" rel="noopener noreferrer" target="_blank">3058(立德)</a><a aria-label="在 TradingView 開啟 3058" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-3058/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3058"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>電子零組件業</td>
+<td>單一策略命中</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>單一策略命中；收盤位置 5.6%；振幅 2.0%；entryScore 49.3；netScore 14.8；多空訊號 2/2；成交金額 7,219,182</td>
+<td>低價風險：收盤 9.22 低於門檻 10；成交金額不足：7,219,182 低於 50,000,000；上影線壓力重：94.4%</td>
+</tr>
+</tbody>
+</table></div>
+<h2>最終精選名單</h2>
+<div class="table-scroll"><table class="research-table"><colgroup><col style="width: 110px"><col style="width: 160px"><col style="width: 180px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"></colgroup>
+<thead>
+<tr>
+<th>市場</th>
+<th>代號 / 公司</th>
+<th>產業</th>
+<th>來源提及程度</th>
+<th>來源主觀看法</th>
+<th>布局建議</th>
+<th>持倉建議</th>
+<th>追蹤指標</th>
+<th>風險</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/8039" rel="noopener noreferrer" target="_blank">8039(台虹)</a><a aria-label="在 TradingView 開啟 8039" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-8039/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 8039"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>電子零組件業</td>
+<td>雙策略共振</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>雙策略共振；收盤位置 100.0%；振幅 5.7%；entryScore 90.9；netScore 90.9；多空訊號 3/0；成交金額 2,661,932,337</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1303" rel="noopener noreferrer" target="_blank">1303(南亞)</a><a aria-label="在 TradingView 開啟 1303" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-1303/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1303"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>塑膠工業</td>
+<td>多策略命中</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>多策略命中；收盤位置 100.0%；振幅 5.2%；entryScore 88.1；netScore 88.1；多空訊號 3/0；成交金額 5,692,023,707</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6515" rel="noopener noreferrer" target="_blank">6515(穎崴)</a><a aria-label="在 TradingView 開啟 6515" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6515/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6515"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>半導體業</td>
+<td>多策略命中</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>多策略命中；收盤位置 100.0%；振幅 3.7%；entryScore 83.4；netScore 83.4；多空訊號 4/0；成交金額 5,864,299,415</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6691" rel="noopener noreferrer" target="_blank">6691(洋基工程)</a><a aria-label="在 TradingView 開啟 6691" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6691/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6691"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>其他電子業</td>
+<td>多策略命中</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>多策略命中；收盤位置 82.1%；振幅 8.1%；entryScore 80.8；netScore 80.8；多空訊號 3/0；成交金額 1,832,218,305</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2402" rel="noopener noreferrer" target="_blank">2402(毅嘉)</a><a aria-label="在 TradingView 開啟 2402" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2402/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2402"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>電子零組件業</td>
+<td>多策略命中</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>多策略命中；收盤位置 100.0%；振幅 6.8%；entryScore 73.5；netScore 73.5；多空訊號 3/0；成交金額 619,319,809</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6202" rel="noopener noreferrer" target="_blank">6202(盛群)</a><a aria-label="在 TradingView 開啟 6202" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6202/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6202"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>半導體業</td>
+<td>多策略命中</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>多策略命中；收盤位置 100.0%；振幅 4.7%；entryScore 73.5；netScore 73.5；多空訊號 3/0；成交金額 557,340,835</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3515" rel="noopener noreferrer" target="_blank">3515(華擎)</a><a aria-label="在 TradingView 開啟 3515" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-3515/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3515"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>電腦及週邊設備業</td>
+<td>多策略命中</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>多策略命中；收盤位置 100.0%；振幅 2.6%；entryScore 90.9；netScore 90.9；多空訊號 3/0；成交金額 222,313,627</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6205" rel="noopener noreferrer" target="_blank">6205(詮欣)</a><a aria-label="在 TradingView 開啟 6205" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6205/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6205"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>電子零組件業</td>
+<td>多策略命中</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>多策略命中；收盤位置 100.0%；振幅 7.5%；entryScore 73.5；netScore 73.5；多空訊號 3/0；成交金額 283,085,235</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2404" rel="noopener noreferrer" target="_blank">2404(漢唐)</a><a aria-label="在 TradingView 開啟 2404" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2404/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2404"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>其他電子業</td>
+<td>多策略命中</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>多策略命中；收盤位置 100.0%；振幅 3.4%；entryScore 53.2；netScore 53.2；多空訊號 3/0；成交金額 7,950,609,105</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6944" rel="noopener noreferrer" target="_blank">6944(兆聯實業)</a><a aria-label="在 TradingView 開啟 6944" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6944/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6944"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>綠能環保</td>
+<td>多策略命中</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>多策略命中；收盤位置 63.6%；振幅 6.7%；entryScore 100.0；netScore 100.0；多空訊號 4/0；成交金額 2,032,152,759</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2439" rel="noopener noreferrer" target="_blank">2439(美律)</a><a aria-label="在 TradingView 開啟 2439" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2439/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2439"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>通信網路業</td>
+<td>多策略命中</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>多策略命中；收盤位置 55.0%；振幅 4.3%；entryScore 82.1；netScore 82.1；多空訊號 3/0；成交金額 524,896,462</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3060" rel="noopener noreferrer" target="_blank">3060(銘異)</a><a aria-label="在 TradingView 開啟 3060" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-3060/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3060"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>電腦及週邊設備業</td>
+<td>多策略命中</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>多策略命中；收盤位置 64.5%；振幅 5.0%；entryScore 79.9；netScore 71.8；多空訊號 3/2；成交金額 88,121,377</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2646" rel="noopener noreferrer" target="_blank">2646(星宇航空)</a><a aria-label="在 TradingView 開啟 2646" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2646/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2646"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>航運業</td>
+<td>多策略命中</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>多策略命中；收盤位置 55.6%；振幅 2.2%；entryScore 67.9；netScore 57.5；多空訊號 3/1；成交金額 123,813,489</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6505" rel="noopener noreferrer" target="_blank">6505(台塑化)</a><a aria-label="在 TradingView 開啟 6505" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6505/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6505"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>油電燃氣業</td>
+<td>多策略命中</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>多策略命中；收盤位置 87.5%；振幅 3.0%；entryScore 60.4；netScore 40.2；多空訊號 3/2；成交金額 299,081,118</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1101" rel="noopener noreferrer" target="_blank">1101(台泥)</a><a aria-label="在 TradingView 開啟 1101" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-1101/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1101"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>水泥工業</td>
+<td>多策略命中</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>多策略命中；收盤位置 50.0%；振幅 2.4%；entryScore 77.4；netScore 76.4；多空訊號 4/0；成交金額 742,893,054</td>
+<td>上影線壓力重：50.0%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/8131" rel="noopener noreferrer" target="_blank">8131(福懋科)</a><a aria-label="在 TradingView 開啟 8131" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-8131/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 8131"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>半導體業</td>
+<td>多策略命中</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>多策略命中；收盤位置 39.4%；振幅 4.6%；entryScore 88.1；netScore 88.1；多空訊號 3/0；成交金額 427,092,548</td>
+<td>上影線壓力重：60.6%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6133" rel="noopener noreferrer" target="_blank">6133(金橋)</a><a aria-label="在 TradingView 開啟 6133" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6133/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6133"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>電子零組件業</td>
+<td>多策略命中</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>多策略命中；收盤位置 38.2%；振幅 7.1%；entryScore 82.1；netScore 82.1；多空訊號 3/0；成交金額 51,540,789</td>
+<td>上影線壓力重：61.8%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3532" rel="noopener noreferrer" target="_blank">3532(台勝科)</a><a aria-label="在 TradingView 開啟 3532" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-3532/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3532"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>半導體業</td>
+<td>單一策略命中</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>單一策略命中；收盤位置 100.0%；振幅 6.7%；entryScore 83.8；netScore 83.8；多空訊號 2/0；成交金額 3,884,975,900</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2392" rel="noopener noreferrer" target="_blank">2392(正崴)</a><a aria-label="在 TradingView 開啟 2392" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2392/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2392"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>電子零組件業</td>
+<td>多策略命中</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>多策略命中；收盤位置 32.1%；振幅 3.6%；entryScore 73.5；netScore 73.5；多空訊號 3/0；成交金額 107,855,709</td>
+<td>上影線壓力重：67.9%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6139" rel="noopener noreferrer" target="_blank">6139(亞翔)</a><a aria-label="在 TradingView 開啟 6139" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6139/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6139"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>其他電子業</td>
+<td>單一策略命中</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>單一策略命中；收盤位置 100.0%；振幅 4.6%；entryScore 64.1；netScore 64.1；多空訊號 2/0；成交金額 4,629,575,491</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+</tbody>
+</table></div>
+<h2>重要校正與限制</h2>
+<ul>
+<li>本報告的 <code>來源主觀看法</code> 是 agent 依 K 線訊號與風險條件做出的技術面分層，不代表新聞、KOL 或基本面來源意見。</li>
+<li><code>可研究</code> 不等於無條件進場；仍需確認個人風險承受度、部位大小、隔日量價與大盤環境。</li>
+<li>對低價、低成交金額、過大振幅與重上影線標的，本報告會優先降級或排除。</li>
+<li>Futu/Moomoo OpenAPI 已列入常用來源清單；因需本機 OpenD gateway 與帳號權限，這版只列為人工複核/後續整合來源。</li>
+</ul>
+
+    <footer class="mt-9 border-t border-slate-200 pt-5 text-sm text-slate-500">
+      本頁由 K-line 決策報告產生，內容僅作一般化研究輔助，不構成個人化投資建議或下單指令。
+    </footer>
+  </article>
+</main>
+
+</body>
+</html>

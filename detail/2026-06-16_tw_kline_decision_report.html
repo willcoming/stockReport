@@ -1,0 +1,1162 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-06-16 台股 K 線警報掃描投資決策報告</title>
+  <link rel="stylesheet" href="../assets/report-center.css">
+</head>
+<body class="bg-slate-50 text-neutral-950 antialiased">
+
+<main class="w-full px-4 py-6 md:px-6 xl:px-8">
+  <nav class="mb-6 flex items-center justify-between text-sm text-slate-600">
+    <a class="font-bold tracking-normal text-neutral-950 underline decoration-emerald-700/30 underline-offset-4 hover:text-emerald-800" href="../index.html">← 報告中心</a>
+  </nav>
+  <article class="article-body w-full bg-white p-4 md:p-6 xl:p-8">
+    
+<header class="mb-7 border-b border-slate-200 pb-6">
+  <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+    <div class="min-w-0">
+      <span class="inline-flex w-fit items-center rounded-full border border-slate-300 px-2.5 py-1 text-xs text-slate-600">TW · 台股 K-line 研究行動</span>
+      <h1 class="mt-3 text-3xl font-black leading-tight tracking-normal md:text-4xl">2026-06-16 台股 K 線警報掃描投資決策報告</h1>
+    </div>
+    <div class="shrink-0 rounded-md border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-600">
+      產出時間：<strong class="font-semibold text-neutral-950">2026-06-16 17:24:10</strong>
+    </div>
+  </div>
+</header>
+
+    <p>本報告以已產出的 K 線警報掃描日報為來源，由 AI agent 進行規則化整理與風險分層。內容僅作研究輔助與情境推演，不構成個人化投資建議、投顧服務或下單指令。</p>
+<h2>資料來源與限制</h2>
+<ul>
+<li>資料日：2026-06-16</li>
+<li>產生時間：2026-06-16 17:24:10</li>
+<li>決策分層僅使用日報中的 K 線策略、開高低收、成交量與成交金額欄位；未接 NotebookLM、新聞、財報或 SQLite 補充資料。</li>
+<li><code>產業</code> 欄位會嘗試用網路公開資料補強；未命中時保留 <code>資料未提供</code>。</li>
+</ul>
+<h2>補充資料搜尋來源</h2>
+<ul>
+<li>網路補強：已啟用，補到產業資料 19 檔，未命中 0 檔。</li>
+<li>實際命中來源：TWSE OpenAPI 上市公司基本資料 19 檔</li>
+<li>優先搜尋列表：
+<ul>
+<li>TWSE OpenAPI 上市公司基本資料: https://openapi.twse.com.tw/v1/opendata/t187ap03_L</li>
+<li>TPEx OpenAPI 上櫃公司基本資料: https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_O</li>
+<li>TPEx OpenAPI 興櫃公司基本資料: https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_R</li>
+<li>Yahoo奇摩股市個股頁: https://tw.stock.yahoo.com/quote/{symbol}</li>
+</ul>
+</li>
+</ul>
+<h2>策略訊號總覽</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>項目</th>
+<th style="text-align:right">數值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>原始命中列</td>
+<td style="text-align:right">19</td>
+</tr>
+<tr>
+<td>合併後標的</td>
+<td style="text-align:right">19</td>
+</tr>
+<tr>
+<td>賣點觸發標的</td>
+<td style="text-align:right">113</td>
+</tr>
+<tr>
+<td>現在可以小量分批研究</td>
+<td style="text-align:right">9</td>
+</tr>
+<tr>
+<td>等買點或確認</td>
+<td style="text-align:right">9</td>
+</tr>
+<tr>
+<td>觀察</td>
+<td style="text-align:right">0</td>
+</tr>
+<tr>
+<td>暫時排除</td>
+<td style="text-align:right">1</td>
+</tr>
+</tbody>
+</table></div>
+<h2>賣點觸發清單</h2>
+<div class="table-scroll"><table class="research-table"><colgroup><col style="width: 180px"><col style="width: 220px"><col style="width: 220px"></colgroup>
+<thead>
+<tr>
+<th>代號</th>
+<th>名稱</th>
+<th style="text-align:right">觸及賣點數</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2476" rel="noopener noreferrer" target="_blank">2476</a><a aria-label="在 TradingView 開啟 2476" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2476/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2476"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>鉅祥</td>
+<td style="text-align:right">4</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2480" rel="noopener noreferrer" target="_blank">2480</a><a aria-label="在 TradingView 開啟 2480" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2480/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2480"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>敦陽科</td>
+<td style="text-align:right">4</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2850" rel="noopener noreferrer" target="_blank">2850</a><a aria-label="在 TradingView 開啟 2850" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2850/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2850"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>新產</td>
+<td style="text-align:right">4</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1477" rel="noopener noreferrer" target="_blank">1477</a><a aria-label="在 TradingView 開啟 1477" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-1477/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1477"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>聚陽</td>
+<td style="text-align:right">3</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2014" rel="noopener noreferrer" target="_blank">2014</a><a aria-label="在 TradingView 開啟 2014" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2014/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2014"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>中鴻</td>
+<td style="text-align:right">3</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2031" rel="noopener noreferrer" target="_blank">2031</a><a aria-label="在 TradingView 開啟 2031" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2031/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2031"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>新光鋼</td>
+<td style="text-align:right">3</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2069" rel="noopener noreferrer" target="_blank">2069</a><a aria-label="在 TradingView 開啟 2069" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2069/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2069"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>運錩</td>
+<td style="text-align:right">3</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2406" rel="noopener noreferrer" target="_blank">2406</a><a aria-label="在 TradingView 開啟 2406" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2406/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2406"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>國碩</td>
+<td style="text-align:right">3</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2428" rel="noopener noreferrer" target="_blank">2428</a><a aria-label="在 TradingView 開啟 2428" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2428/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2428"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>興勤</td>
+<td style="text-align:right">3</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3025" rel="noopener noreferrer" target="_blank">3025</a><a aria-label="在 TradingView 開啟 3025" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-3025/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3025"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>星通</td>
+<td style="text-align:right">3</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/4938" rel="noopener noreferrer" target="_blank">4938</a><a aria-label="在 TradingView 開啟 4938" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-4938/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 4938"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>和碩</td>
+<td style="text-align:right">3</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/9938" rel="noopener noreferrer" target="_blank">9938</a><a aria-label="在 TradingView 開啟 9938" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-9938/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 9938"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>百和</td>
+<td style="text-align:right">3</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2002" rel="noopener noreferrer" target="_blank">2002</a><a aria-label="在 TradingView 開啟 2002" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2002/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2002"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>中鋼</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2009" rel="noopener noreferrer" target="_blank">2009</a><a aria-label="在 TradingView 開啟 2009" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2009/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2009"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>第一銅</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2027" rel="noopener noreferrer" target="_blank">2027</a><a aria-label="在 TradingView 開啟 2027" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2027/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2027"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>大成鋼</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2206" rel="noopener noreferrer" target="_blank">2206</a><a aria-label="在 TradingView 開啟 2206" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2206/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2206"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>三陽工業</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2323" rel="noopener noreferrer" target="_blank">2323</a><a aria-label="在 TradingView 開啟 2323" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2323/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2323"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>中環</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2385" rel="noopener noreferrer" target="_blank">2385</a><a aria-label="在 TradingView 開啟 2385" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2385/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2385"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>群光</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2427" rel="noopener noreferrer" target="_blank">2427</a><a aria-label="在 TradingView 開啟 2427" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2427/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2427"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>三商電</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2439" rel="noopener noreferrer" target="_blank">2439</a><a aria-label="在 TradingView 開啟 2439" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2439/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2439"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>美律</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2468" rel="noopener noreferrer" target="_blank">2468</a><a aria-label="在 TradingView 開啟 2468" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2468/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2468"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>華經</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2603" rel="noopener noreferrer" target="_blank">2603</a><a aria-label="在 TradingView 開啟 2603" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2603/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2603"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>長榮</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2606" rel="noopener noreferrer" target="_blank">2606</a><a aria-label="在 TradingView 開啟 2606" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2606/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2606"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>裕民</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2609" rel="noopener noreferrer" target="_blank">2609</a><a aria-label="在 TradingView 開啟 2609" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2609/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2609"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>陽明</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3005" rel="noopener noreferrer" target="_blank">3005</a><a aria-label="在 TradingView 開啟 3005" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-3005/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3005"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>神基</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3015" rel="noopener noreferrer" target="_blank">3015</a><a aria-label="在 TradingView 開啟 3015" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-3015/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3015"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>全漢</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3029" rel="noopener noreferrer" target="_blank">3029</a><a aria-label="在 TradingView 開啟 3029" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-3029/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3029"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>零壹</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3047" rel="noopener noreferrer" target="_blank">3047</a><a aria-label="在 TradingView 開啟 3047" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-3047/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3047"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>訊舟</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3051" rel="noopener noreferrer" target="_blank">3051</a><a aria-label="在 TradingView 開啟 3051" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-3051/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3051"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>力特</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3576" rel="noopener noreferrer" target="_blank">3576</a><a aria-label="在 TradingView 開啟 3576" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-3576/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3576"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>聯合再生</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6112" rel="noopener noreferrer" target="_blank">6112</a><a aria-label="在 TradingView 開啟 6112" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6112/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6112"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>邁達特</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6205" rel="noopener noreferrer" target="_blank">6205</a><a aria-label="在 TradingView 開啟 6205" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6205/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6205"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>詮欣</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6271" rel="noopener noreferrer" target="_blank">6271</a><a aria-label="在 TradingView 開啟 6271" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6271/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6271"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>同欣電</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6414" rel="noopener noreferrer" target="_blank">6414</a><a aria-label="在 TradingView 開啟 6414" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6414/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6414"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>樺漢</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6443" rel="noopener noreferrer" target="_blank">6443</a><a aria-label="在 TradingView 開啟 6443" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6443/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6443"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>元晶</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6477" rel="noopener noreferrer" target="_blank">6477</a><a aria-label="在 TradingView 開啟 6477" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6477/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6477"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>安集</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6831" rel="noopener noreferrer" target="_blank">6831</a><a aria-label="在 TradingView 開啟 6831" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6831/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6831"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>邁科</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6862" rel="noopener noreferrer" target="_blank">6862</a><a aria-label="在 TradingView 開啟 6862" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6862/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6862"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>三集瑞-KY</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/8039" rel="noopener noreferrer" target="_blank">8039</a><a aria-label="在 TradingView 開啟 8039" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-8039/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 8039"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>台虹</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/8210" rel="noopener noreferrer" target="_blank">8210</a><a aria-label="在 TradingView 開啟 8210" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-8210/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 8210"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>勤誠</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/9910" rel="noopener noreferrer" target="_blank">9910</a><a aria-label="在 TradingView 開啟 9910" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-9910/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 9910"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>豐泰</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1301" rel="noopener noreferrer" target="_blank">1301</a><a aria-label="在 TradingView 開啟 1301" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-1301/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1301"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>台塑</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1308" rel="noopener noreferrer" target="_blank">1308</a><a aria-label="在 TradingView 開啟 1308" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-1308/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1308"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>亞聚</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1309" rel="noopener noreferrer" target="_blank">1309</a><a aria-label="在 TradingView 開啟 1309" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-1309/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1309"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>台達化</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1337" rel="noopener noreferrer" target="_blank">1337</a><a aria-label="在 TradingView 開啟 1337" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-1337/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1337"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>再生-KY</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1447" rel="noopener noreferrer" target="_blank">1447</a><a aria-label="在 TradingView 開啟 1447" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-1447/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1447"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>力鵬</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1810" rel="noopener noreferrer" target="_blank">1810</a><a aria-label="在 TradingView 開啟 1810" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-1810/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1810"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>和成</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2032" rel="noopener noreferrer" target="_blank">2032</a><a aria-label="在 TradingView 開啟 2032" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2032/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2032"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>新鋼</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2104" rel="noopener noreferrer" target="_blank">2104</a><a aria-label="在 TradingView 開啟 2104" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2104/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2104"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>國際中橡</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2313" rel="noopener noreferrer" target="_blank">2313</a><a aria-label="在 TradingView 開啟 2313" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2313/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2313"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>華通</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2349" rel="noopener noreferrer" target="_blank">2349</a><a aria-label="在 TradingView 開啟 2349" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2349/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2349"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>錸德</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2355" rel="noopener noreferrer" target="_blank">2355</a><a aria-label="在 TradingView 開啟 2355" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2355/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2355"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>敬鵬</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2359" rel="noopener noreferrer" target="_blank">2359</a><a aria-label="在 TradingView 開啟 2359" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2359/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2359"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>所羅門</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2367" rel="noopener noreferrer" target="_blank">2367</a><a aria-label="在 TradingView 開啟 2367" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2367/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2367"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>燿華</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2375" rel="noopener noreferrer" target="_blank">2375</a><a aria-label="在 TradingView 開啟 2375" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2375/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2375"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>凱美</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2397" rel="noopener noreferrer" target="_blank">2397</a><a aria-label="在 TradingView 開啟 2397" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2397/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2397"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>友通</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2404" rel="noopener noreferrer" target="_blank">2404</a><a aria-label="在 TradingView 開啟 2404" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2404/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2404"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>漢唐</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2426" rel="noopener noreferrer" target="_blank">2426</a><a aria-label="在 TradingView 開啟 2426" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2426/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2426"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>鼎元</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2444" rel="noopener noreferrer" target="_blank">2444</a><a aria-label="在 TradingView 開啟 2444" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2444/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2444"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>兆勁</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2465" rel="noopener noreferrer" target="_blank">2465</a><a aria-label="在 TradingView 開啟 2465" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2465/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2465"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>麗臺</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2501" rel="noopener noreferrer" target="_blank">2501</a><a aria-label="在 TradingView 開啟 2501" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2501/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2501"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>國建</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2537" rel="noopener noreferrer" target="_blank">2537</a><a aria-label="在 TradingView 開啟 2537" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2537/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2537"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>聯上發</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2542" rel="noopener noreferrer" target="_blank">2542</a><a aria-label="在 TradingView 開啟 2542" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2542/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2542"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>興富發</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2612" rel="noopener noreferrer" target="_blank">2612</a><a aria-label="在 TradingView 開啟 2612" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2612/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2612"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>中航</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2614" rel="noopener noreferrer" target="_blank">2614</a><a aria-label="在 TradingView 開啟 2614" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2614/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2614"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>東森</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2615" rel="noopener noreferrer" target="_blank">2615</a><a aria-label="在 TradingView 開啟 2615" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2615/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2615"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>萬海</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2816" rel="noopener noreferrer" target="_blank">2816</a><a aria-label="在 TradingView 開啟 2816" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2816/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2816"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>旺旺保</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2913" rel="noopener noreferrer" target="_blank">2913</a><a aria-label="在 TradingView 開啟 2913" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2913/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2913"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>農林</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3016" rel="noopener noreferrer" target="_blank">3016</a><a aria-label="在 TradingView 開啟 3016" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-3016/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3016"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>嘉晶</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3022" rel="noopener noreferrer" target="_blank">3022</a><a aria-label="在 TradingView 開啟 3022" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-3022/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3022"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>威強電</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3049" rel="noopener noreferrer" target="_blank">3049</a><a aria-label="在 TradingView 開啟 3049" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-3049/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3049"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>精金</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3050" rel="noopener noreferrer" target="_blank">3050</a><a aria-label="在 TradingView 開啟 3050" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-3050/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3050"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>鈺德</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3167" rel="noopener noreferrer" target="_blank">3167</a><a aria-label="在 TradingView 開啟 3167" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-3167/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3167"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>大量</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3305" rel="noopener noreferrer" target="_blank">3305</a><a aria-label="在 TradingView 開啟 3305" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-3305/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3305"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>昇貿</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3665" rel="noopener noreferrer" target="_blank">3665</a><a aria-label="在 TradingView 開啟 3665" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-3665/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3665"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>貿聯-KY</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3717" rel="noopener noreferrer" target="_blank">3717</a><a aria-label="在 TradingView 開啟 3717" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-3717/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3717"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>聯嘉投控</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/4142" rel="noopener noreferrer" target="_blank">4142</a><a aria-label="在 TradingView 開啟 4142" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-4142/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 4142"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>國光生</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/4526" rel="noopener noreferrer" target="_blank">4526</a><a aria-label="在 TradingView 開啟 4526" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-4526/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 4526"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>東台</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/4532" rel="noopener noreferrer" target="_blank">4532</a><a aria-label="在 TradingView 開啟 4532" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-4532/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 4532"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>瑞智</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/4906" rel="noopener noreferrer" target="_blank">4906</a><a aria-label="在 TradingView 開啟 4906" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-4906/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 4906"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>正文</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/4916" rel="noopener noreferrer" target="_blank">4916</a><a aria-label="在 TradingView 開啟 4916" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-4916/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 4916"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>事欣科</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/4919" rel="noopener noreferrer" target="_blank">4919</a><a aria-label="在 TradingView 開啟 4919" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-4919/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 4919"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>新唐</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/4952" rel="noopener noreferrer" target="_blank">4952</a><a aria-label="在 TradingView 開啟 4952" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-4952/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 4952"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>凌通</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/5285" rel="noopener noreferrer" target="_blank">5285</a><a aria-label="在 TradingView 開啟 5285" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-5285/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 5285"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>界霖</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/5388" rel="noopener noreferrer" target="_blank">5388</a><a aria-label="在 TradingView 開啟 5388" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-5388/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 5388"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>中磊</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/5484" rel="noopener noreferrer" target="_blank">5484</a><a aria-label="在 TradingView 開啟 5484" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-5484/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 5484"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>慧友</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/5871" rel="noopener noreferrer" target="_blank">5871</a><a aria-label="在 TradingView 開啟 5871" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-5871/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 5871"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>中租-KY</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6139" rel="noopener noreferrer" target="_blank">6139</a><a aria-label="在 TradingView 開啟 6139" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6139/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6139"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>亞翔</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6152" rel="noopener noreferrer" target="_blank">6152</a><a aria-label="在 TradingView 開啟 6152" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6152/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6152"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>百一</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6153" rel="noopener noreferrer" target="_blank">6153</a><a aria-label="在 TradingView 開啟 6153" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6153/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6153"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>嘉聯益</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6196" rel="noopener noreferrer" target="_blank">6196</a><a aria-label="在 TradingView 開啟 6196" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6196/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6196"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>帆宣</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6202" rel="noopener noreferrer" target="_blank">6202</a><a aria-label="在 TradingView 開啟 6202" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6202/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6202"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>盛群</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6257" rel="noopener noreferrer" target="_blank">6257</a><a aria-label="在 TradingView 開啟 6257" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6257/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6257"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>矽格</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6272" rel="noopener noreferrer" target="_blank">6272</a><a aria-label="在 TradingView 開啟 6272" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6272/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6272"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>驊陞</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6456" rel="noopener noreferrer" target="_blank">6456</a><a aria-label="在 TradingView 開啟 6456" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6456/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6456"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>GIS-KY</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6505" rel="noopener noreferrer" target="_blank">6505</a><a aria-label="在 TradingView 開啟 6505" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6505/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6505"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>台塑化</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6672" rel="noopener noreferrer" target="_blank">6672</a><a aria-label="在 TradingView 開啟 6672" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6672/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6672"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>騰輝電子-KY</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6691" rel="noopener noreferrer" target="_blank">6691</a><a aria-label="在 TradingView 開啟 6691" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6691/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6691"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>洋基工程</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6695" rel="noopener noreferrer" target="_blank">6695</a><a aria-label="在 TradingView 開啟 6695" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6695/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6695"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>芯鼎</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6834" rel="noopener noreferrer" target="_blank">6834</a><a aria-label="在 TradingView 開啟 6834" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6834/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6834"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>天二科技</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6901" rel="noopener noreferrer" target="_blank">6901</a><a aria-label="在 TradingView 開啟 6901" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6901/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6901"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>鑽石投資</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/7721" rel="noopener noreferrer" target="_blank">7721</a><a aria-label="在 TradingView 開啟 7721" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-7721/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 7721"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>微程式</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/8011" rel="noopener noreferrer" target="_blank">8011</a><a aria-label="在 TradingView 開啟 8011" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-8011/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 8011"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>台通</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/8070" rel="noopener noreferrer" target="_blank">8070</a><a aria-label="在 TradingView 開啟 8070" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-8070/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 8070"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>長華*</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/8215" rel="noopener noreferrer" target="_blank">8215</a><a aria-label="在 TradingView 開啟 8215" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-8215/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 8215"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>明基材</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/8261" rel="noopener noreferrer" target="_blank">8261</a><a aria-label="在 TradingView 開啟 8261" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-8261/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 8261"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>富鼎</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/8422" rel="noopener noreferrer" target="_blank">8422</a><a aria-label="在 TradingView 開啟 8422" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-8422/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 8422"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>可寧衛*</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/9103" rel="noopener noreferrer" target="_blank">9103</a><a aria-label="在 TradingView 開啟 9103" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-9103/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 9103"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>美德醫療-DR</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/9802" rel="noopener noreferrer" target="_blank">9802</a><a aria-label="在 TradingView 開啟 9802" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-9802/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 9802"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>鈺齊-KY</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/9904" rel="noopener noreferrer" target="_blank">9904</a><a aria-label="在 TradingView 開啟 9904" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-9904/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 9904"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>寶成</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/9917" rel="noopener noreferrer" target="_blank">9917</a><a aria-label="在 TradingView 開啟 9917" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-9917/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 9917"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>中保科</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/9934" rel="noopener noreferrer" target="_blank">9934</a><a aria-label="在 TradingView 開啟 9934" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-9934/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 9934"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>成霖</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/9945" rel="noopener noreferrer" target="_blank">9945</a><a aria-label="在 TradingView 開啟 9945" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-9945/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 9945"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>潤泰新</td>
+<td style="text-align:right">1</td>
+</tr>
+</tbody>
+</table></div>
+<h2>現在可以小量分批研究名單</h2>
+<div class="table-scroll"><table class="research-table"><colgroup><col style="width: 110px"><col style="width: 160px"><col style="width: 180px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"></colgroup>
+<thead>
+<tr>
+<th>市場</th>
+<th>代號 / 公司</th>
+<th>產業</th>
+<th>來源提及程度</th>
+<th>來源主觀看法</th>
+<th>布局建議</th>
+<th>持倉建議</th>
+<th>追蹤指標</th>
+<th>風險</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6668" rel="noopener noreferrer" target="_blank">6668(中揚光)</a><a aria-label="在 TradingView 開啟 6668" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6668/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6668"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>光電業</td>
+<td>四策略合併進場：A1L/A5LR/A1LR</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1L/A5LR/A1LR；收盤位置 100.0%；振幅 9.8%；buyCount 3；今日買點 A1L/A5LR/A1LR；波幅放大 rangeRatio 2.27；爆量 volumeRatio 5.45；entryScore 92.0；netScore 92.0；多空訊號 4/0；成交金額 211,119,840</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/4764" rel="noopener noreferrer" target="_blank">4764(雙鍵)</a><a aria-label="在 TradingView 開啟 4764" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-4764/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 4764"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>化學工業</td>
+<td>四策略合併進場：A1L/A1LR</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1L/A1LR；收盤位置 100.0%；振幅 8.5%；buyCount 2；今日買點 A1L/A1LR；entryScore 73.5；netScore 73.5；多空訊號 3/0；成交金額 896,937,034</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2492" rel="noopener noreferrer" target="_blank">2492(華新科)</a><a aria-label="在 TradingView 開啟 2492" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2492/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2492"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>電子零組件業</td>
+<td>四策略合併進場：A1L/A1LR</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1L/A1LR；收盤位置 100.0%；振幅 6.9%；buyCount 2；今日買點 A1L/A1LR；entryScore 53.2；netScore 53.2；多空訊號 3/0；成交金額 3,378,044,109</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/8249" rel="noopener noreferrer" target="_blank">8249(菱光)</a><a aria-label="在 TradingView 開啟 8249" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-8249/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 8249"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>電子零組件業</td>
+<td>四策略合併進場：A1LR</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1LR；收盤位置 78.3%；振幅 8.6%；buyCount 1；今日買點 A1LR；波幅放大 rangeRatio 2.10；成交量高於均量 volumeRatio 1.26；entryScore 73.5；netScore 73.5；多空訊號 3/0；成交金額 138,340,914</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/4958" rel="noopener noreferrer" target="_blank">4958(臻鼎-KY)</a><a aria-label="在 TradingView 開啟 4958" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-4958/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 4958"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>電子零組件業</td>
+<td>四策略合併進場：A1L</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1L；收盤位置 68.1%；振幅 7.5%；buyCount 1；今日買點 A1L；波幅放大 rangeRatio 1.34；成交量高於均量 volumeRatio 1.44；entryScore 53.2；netScore 53.2；多空訊號 3/0；成交金額 27,139,473,324</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2633" rel="noopener noreferrer" target="_blank">2633(台灣高鐵)</a><a aria-label="在 TradingView 開啟 2633" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2633/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2633"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>航運業</td>
+<td>四策略合併進場：A1L/A1LR/AMD</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1L/A1LR/AMD；收盤位置 85.7%；振幅 2.7%；buyCount 3；今日買點 A1L/A1LR/AMD；波幅放大 rangeRatio 1.79；entryScore 52.7；netScore 51.7；多空訊號 1/0；成交金額 464,519,659</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1905" rel="noopener noreferrer" target="_blank">1905(華紙)</a><a aria-label="在 TradingView 開啟 1905" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-1905/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1905"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>造紙工業</td>
+<td>四策略合併進場：A1LR</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1LR；收盤位置 100.0%；振幅 9.9%；buyCount 1；今日買點 A1LR；波幅放大 rangeRatio 2.84；爆量 volumeRatio 2.08；entryScore 46.0；netScore 46.0；多空訊號 2/0；成交金額 206,242,123</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2379" rel="noopener noreferrer" target="_blank">2379(瑞昱)</a><a aria-label="在 TradingView 開啟 2379" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2379/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2379"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>半導體業</td>
+<td>四策略合併進場：A1LR</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1LR；收盤位置 100.0%；振幅 6.9%；buyCount 1；今日買點 A1LR；波幅放大 rangeRatio 1.50；entryScore 51.5；netScore 43.3；多空訊號 2/2；成交金額 2,807,458,909</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6239" rel="noopener noreferrer" target="_blank">6239(力成)</a><a aria-label="在 TradingView 開啟 6239" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6239/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6239"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>半導體業</td>
+<td>四策略合併進場：A5LR</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A5LR；收盤位置 70.8%；振幅 10.4%；buyCount 1；今日買點 A5LR；波幅放大 rangeRatio 1.69；爆量 volumeRatio 1.71；entryScore 43.3；netScore 41.0；多空訊號 2/1；成交金額 17,920,827,363</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+</tbody>
+</table></div>
+<h2>現在不能買，但值得等買點名單</h2>
+<div class="table-scroll"><table class="research-table"><colgroup><col style="width: 110px"><col style="width: 160px"><col style="width: 180px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"></colgroup>
+<thead>
+<tr>
+<th>市場</th>
+<th>代號 / 公司</th>
+<th>產業</th>
+<th>來源提及程度</th>
+<th>來源主觀看法</th>
+<th>布局建議</th>
+<th>持倉建議</th>
+<th>追蹤指標</th>
+<th>風險</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3406" rel="noopener noreferrer" target="_blank">3406(玉晶光)</a><a aria-label="在 TradingView 開啟 3406" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-3406/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3406"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>光電業</td>
+<td>四策略合併進場：A1LR</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>四策略合併進場：A1LR；收盤位置 36.6%；振幅 5.5%；buyCount 1；今日買點 A1LR；爆量 volumeRatio 2.05；entryScore 66.7；netScore 66.7；多空訊號 2/0；成交金額 5,824,538,093</td>
+<td>上影線壓力重：63.4%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2489" rel="noopener noreferrer" target="_blank">2489(瑞軒)</a><a aria-label="在 TradingView 開啟 2489" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2489/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2489"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>光電業</td>
+<td>四策略合併進場：A1LR</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>四策略合併進場：A1LR；收盤位置 11.1%；振幅 8.8%；buyCount 1；今日買點 A1LR；波幅放大 rangeRatio 1.37；成交量高於均量 volumeRatio 1.49；entryScore 73.5；netScore 73.5；多空訊號 3/0；成交金額 3,077,516,917</td>
+<td>上影線壓力重：88.9%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6141" rel="noopener noreferrer" target="_blank">6141(柏承)</a><a aria-label="在 TradingView 開啟 6141" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6141/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6141"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>電子零組件業</td>
+<td>四策略合併進場：A1LR</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>四策略合併進場：A1LR；收盤位置 3.1%；振幅 9.1%；buyCount 1；今日買點 A1LR；波幅放大 rangeRatio 1.33；entryScore 56.5；netScore 56.5；多空訊號 2/0；成交金額 113,794,136</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/5521" rel="noopener noreferrer" target="_blank">5521(工信)</a><a aria-label="在 TradingView 開啟 5521" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-5521/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 5521"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>建材營造業</td>
+<td>四策略合併進場：A1L/AMD</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>四策略合併進場：A1L/AMD；收盤位置 50.0%；振幅 2.8%；buyCount 2；今日買點 A1L/AMD；entryScore 71.7；netScore 70.7；多空訊號 2/0；成交金額 50,780,148</td>
+<td>上影線壓力重：50.0%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2383" rel="noopener noreferrer" target="_blank">2383(台光電)</a><a aria-label="在 TradingView 開啟 2383" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2383/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2383"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>電子零組件業</td>
+<td>四策略合併進場：A1L/A1LR</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>四策略合併進場：A1L/A1LR；收盤位置 35.5%；振幅 3.0%；buyCount 2；今日買點 A1L/A1LR；entryScore 62.5；netScore 62.5；多空訊號 2/0；成交金額 11,161,870,990</td>
+<td>上影線壓力重：64.5%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6449" rel="noopener noreferrer" target="_blank">6449(鈺邦)</a><a aria-label="在 TradingView 開啟 6449" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6449/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6449"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>電子零組件業</td>
+<td>四策略合併進場：A5LR</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>四策略合併進場：A5LR；收盤位置 2.3%；振幅 15.9%；buyCount 1；今日買點 A5LR；波幅放大 rangeRatio 2.46；爆量 volumeRatio 7.07；entryScore 38.3；netScore 32.5；多空訊號 1/1；成交金額 2,432,728,292</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3006" rel="noopener noreferrer" target="_blank">3006(晶豪科)</a><a aria-label="在 TradingView 開啟 3006" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-3006/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3006"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>半導體業</td>
+<td>四策略合併進場：A1LR</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>四策略合併進場：A1LR；收盤位置 28.0%；振幅 5.6%；buyCount 1；今日買點 A1LR；entryScore 58.7；netScore 56.2；多空訊號 1/1；成交金額 2,601,941,449</td>
+<td>上影線壓力重：52.0%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3035" rel="noopener noreferrer" target="_blank">3035(智原)</a><a aria-label="在 TradingView 開啟 3035" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-3035/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3035"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>半導體業</td>
+<td>四策略合併進場：A5LR</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>四策略合併進場：A5LR；收盤位置 33.3%；振幅 3.7%；buyCount 1；今日買點 A5LR；entryScore 44.9；netScore 44.9；多空訊號 1/0；成交金額 2,080,106,804</td>
+<td>上影線壓力重：53.3%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3715" rel="noopener noreferrer" target="_blank">3715(定穎投控)</a><a aria-label="在 TradingView 開啟 3715" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-3715/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3715"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>電子零組件業</td>
+<td>四策略合併進場：AMD</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>四策略合併進場：AMD；收盤位置 25.0%；振幅 2.3%；buyCount 1；今日買點 AMD；entryScore 31.0；netScore 31.0；多空訊號 1/0；成交金額 1,104,509,965</td>
+<td>上影線壓力重：62.5%</td>
+</tr>
+</tbody>
+</table></div>
+<h2>值得觀察，但目前還不能買名單</h2>
+<p>無符合名單。</p>
+<h2>明確不可以買 / 暫時排除名單</h2>
+<div class="table-scroll"><table class="research-table"><colgroup><col style="width: 110px"><col style="width: 160px"><col style="width: 180px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"></colgroup>
+<thead>
+<tr>
+<th>市場</th>
+<th>代號 / 公司</th>
+<th>產業</th>
+<th>來源提及程度</th>
+<th>來源主觀看法</th>
+<th>布局建議</th>
+<th>持倉建議</th>
+<th>追蹤指標</th>
+<th>風險</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/4564" rel="noopener noreferrer" target="_blank">4564(元翎)</a><a aria-label="在 TradingView 開啟 4564" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-4564/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 4564"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>電機機械</td>
+<td>四策略合併進場：AMD</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>四策略合併進場：AMD；收盤位置 71.4%；振幅 4.4%；buyCount 1；今日買點 AMD；波幅放大 rangeRatio 1.46；entryScore 44.7；netScore 21.5；多空訊號 1/0；成交金額 12,611,638</td>
+<td>成交金額不足：12,611,638 低於 50,000,000</td>
+</tr>
+</tbody>
+</table></div>
+<h2>最終精選名單</h2>
+<div class="table-scroll"><table class="research-table"><colgroup><col style="width: 110px"><col style="width: 160px"><col style="width: 180px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"></colgroup>
+<thead>
+<tr>
+<th>市場</th>
+<th>代號 / 公司</th>
+<th>產業</th>
+<th>來源提及程度</th>
+<th>來源主觀看法</th>
+<th>布局建議</th>
+<th>持倉建議</th>
+<th>追蹤指標</th>
+<th>風險</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6668" rel="noopener noreferrer" target="_blank">6668(中揚光)</a><a aria-label="在 TradingView 開啟 6668" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6668/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6668"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>光電業</td>
+<td>四策略合併進場：A1L/A5LR/A1LR</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1L/A5LR/A1LR；收盤位置 100.0%；振幅 9.8%；buyCount 3；今日買點 A1L/A5LR/A1LR；波幅放大 rangeRatio 2.27；爆量 volumeRatio 5.45；entryScore 92.0；netScore 92.0；多空訊號 4/0；成交金額 211,119,840</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/4764" rel="noopener noreferrer" target="_blank">4764(雙鍵)</a><a aria-label="在 TradingView 開啟 4764" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-4764/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 4764"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>化學工業</td>
+<td>四策略合併進場：A1L/A1LR</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1L/A1LR；收盤位置 100.0%；振幅 8.5%；buyCount 2；今日買點 A1L/A1LR；entryScore 73.5；netScore 73.5；多空訊號 3/0；成交金額 896,937,034</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2492" rel="noopener noreferrer" target="_blank">2492(華新科)</a><a aria-label="在 TradingView 開啟 2492" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2492/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2492"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>電子零組件業</td>
+<td>四策略合併進場：A1L/A1LR</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1L/A1LR；收盤位置 100.0%；振幅 6.9%；buyCount 2；今日買點 A1L/A1LR；entryScore 53.2；netScore 53.2；多空訊號 3/0；成交金額 3,378,044,109</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/8249" rel="noopener noreferrer" target="_blank">8249(菱光)</a><a aria-label="在 TradingView 開啟 8249" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-8249/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 8249"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>電子零組件業</td>
+<td>四策略合併進場：A1LR</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1LR；收盤位置 78.3%；振幅 8.6%；buyCount 1；今日買點 A1LR；波幅放大 rangeRatio 2.10；成交量高於均量 volumeRatio 1.26；entryScore 73.5；netScore 73.5；多空訊號 3/0；成交金額 138,340,914</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/4958" rel="noopener noreferrer" target="_blank">4958(臻鼎-KY)</a><a aria-label="在 TradingView 開啟 4958" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-4958/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 4958"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>電子零組件業</td>
+<td>四策略合併進場：A1L</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1L；收盤位置 68.1%；振幅 7.5%；buyCount 1；今日買點 A1L；波幅放大 rangeRatio 1.34；成交量高於均量 volumeRatio 1.44；entryScore 53.2；netScore 53.2；多空訊號 3/0；成交金額 27,139,473,324</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2633" rel="noopener noreferrer" target="_blank">2633(台灣高鐵)</a><a aria-label="在 TradingView 開啟 2633" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2633/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2633"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>航運業</td>
+<td>四策略合併進場：A1L/A1LR/AMD</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1L/A1LR/AMD；收盤位置 85.7%；振幅 2.7%；buyCount 3；今日買點 A1L/A1LR/AMD；波幅放大 rangeRatio 1.79；entryScore 52.7；netScore 51.7；多空訊號 1/0；成交金額 464,519,659</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1905" rel="noopener noreferrer" target="_blank">1905(華紙)</a><a aria-label="在 TradingView 開啟 1905" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-1905/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1905"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>造紙工業</td>
+<td>四策略合併進場：A1LR</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1LR；收盤位置 100.0%；振幅 9.9%；buyCount 1；今日買點 A1LR；波幅放大 rangeRatio 2.84；爆量 volumeRatio 2.08；entryScore 46.0；netScore 46.0；多空訊號 2/0；成交金額 206,242,123</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2379" rel="noopener noreferrer" target="_blank">2379(瑞昱)</a><a aria-label="在 TradingView 開啟 2379" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2379/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2379"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>半導體業</td>
+<td>四策略合併進場：A1LR</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1LR；收盤位置 100.0%；振幅 6.9%；buyCount 1；今日買點 A1LR；波幅放大 rangeRatio 1.50；entryScore 51.5；netScore 43.3；多空訊號 2/2；成交金額 2,807,458,909</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6239" rel="noopener noreferrer" target="_blank">6239(力成)</a><a aria-label="在 TradingView 開啟 6239" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6239/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6239"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>半導體業</td>
+<td>四策略合併進場：A5LR</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A5LR；收盤位置 70.8%；振幅 10.4%；buyCount 1；今日買點 A5LR；波幅放大 rangeRatio 1.69；爆量 volumeRatio 1.71；entryScore 43.3；netScore 41.0；多空訊號 2/1；成交金額 17,920,827,363</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3406" rel="noopener noreferrer" target="_blank">3406(玉晶光)</a><a aria-label="在 TradingView 開啟 3406" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-3406/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3406"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>光電業</td>
+<td>四策略合併進場：A1LR</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>四策略合併進場：A1LR；收盤位置 36.6%；振幅 5.5%；buyCount 1；今日買點 A1LR；爆量 volumeRatio 2.05；entryScore 66.7；netScore 66.7；多空訊號 2/0；成交金額 5,824,538,093</td>
+<td>上影線壓力重：63.4%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2489" rel="noopener noreferrer" target="_blank">2489(瑞軒)</a><a aria-label="在 TradingView 開啟 2489" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2489/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2489"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>光電業</td>
+<td>四策略合併進場：A1LR</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>四策略合併進場：A1LR；收盤位置 11.1%；振幅 8.8%；buyCount 1；今日買點 A1LR；波幅放大 rangeRatio 1.37；成交量高於均量 volumeRatio 1.49；entryScore 73.5；netScore 73.5；多空訊號 3/0；成交金額 3,077,516,917</td>
+<td>上影線壓力重：88.9%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6141" rel="noopener noreferrer" target="_blank">6141(柏承)</a><a aria-label="在 TradingView 開啟 6141" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6141/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6141"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>電子零組件業</td>
+<td>四策略合併進場：A1LR</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>四策略合併進場：A1LR；收盤位置 3.1%；振幅 9.1%；buyCount 1；今日買點 A1LR；波幅放大 rangeRatio 1.33；entryScore 56.5；netScore 56.5；多空訊號 2/0；成交金額 113,794,136</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/5521" rel="noopener noreferrer" target="_blank">5521(工信)</a><a aria-label="在 TradingView 開啟 5521" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-5521/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 5521"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>建材營造業</td>
+<td>四策略合併進場：A1L/AMD</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>四策略合併進場：A1L/AMD；收盤位置 50.0%；振幅 2.8%；buyCount 2；今日買點 A1L/AMD；entryScore 71.7；netScore 70.7；多空訊號 2/0；成交金額 50,780,148</td>
+<td>上影線壓力重：50.0%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2383" rel="noopener noreferrer" target="_blank">2383(台光電)</a><a aria-label="在 TradingView 開啟 2383" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-2383/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2383"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>電子零組件業</td>
+<td>四策略合併進場：A1L/A1LR</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>四策略合併進場：A1L/A1LR；收盤位置 35.5%；振幅 3.0%；buyCount 2；今日買點 A1L/A1LR；entryScore 62.5；netScore 62.5；多空訊號 2/0；成交金額 11,161,870,990</td>
+<td>上影線壓力重：64.5%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6449" rel="noopener noreferrer" target="_blank">6449(鈺邦)</a><a aria-label="在 TradingView 開啟 6449" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-6449/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6449"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>電子零組件業</td>
+<td>四策略合併進場：A5LR</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>四策略合併進場：A5LR；收盤位置 2.3%；振幅 15.9%；buyCount 1；今日買點 A5LR；波幅放大 rangeRatio 2.46；爆量 volumeRatio 7.07；entryScore 38.3；netScore 32.5；多空訊號 1/1；成交金額 2,432,728,292</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3006" rel="noopener noreferrer" target="_blank">3006(晶豪科)</a><a aria-label="在 TradingView 開啟 3006" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-3006/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3006"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>半導體業</td>
+<td>四策略合併進場：A1LR</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>四策略合併進場：A1LR；收盤位置 28.0%；振幅 5.6%；buyCount 1；今日買點 A1LR；entryScore 58.7；netScore 56.2；多空訊號 1/1；成交金額 2,601,941,449</td>
+<td>上影線壓力重：52.0%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3035" rel="noopener noreferrer" target="_blank">3035(智原)</a><a aria-label="在 TradingView 開啟 3035" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-3035/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3035"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>半導體業</td>
+<td>四策略合併進場：A5LR</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>四策略合併進場：A5LR；收盤位置 33.3%；振幅 3.7%；buyCount 1；今日買點 A5LR；entryScore 44.9；netScore 44.9；多空訊號 1/0；成交金額 2,080,106,804</td>
+<td>上影線壓力重：53.3%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3715" rel="noopener noreferrer" target="_blank">3715(定穎投控)</a><a aria-label="在 TradingView 開啟 3715" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TWSE-3715/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3715"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>電子零組件業</td>
+<td>四策略合併進場：AMD</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>四策略合併進場：AMD；收盤位置 25.0%；振幅 2.3%；buyCount 1；今日買點 AMD；entryScore 31.0；netScore 31.0；多空訊號 1/0；成交金額 1,104,509,965</td>
+<td>上影線壓力重：62.5%</td>
+</tr>
+</tbody>
+</table></div>
+<h2>重要校正與限制</h2>
+<ul>
+<li>本報告的 <code>來源主觀看法</code> 是 agent 依 K 線訊號與風險條件做出的技術面分層，不代表新聞、KOL 或基本面來源意見。</li>
+<li><code>可研究</code> 不等於無條件進場；仍需確認個人風險承受度、部位大小、隔日量價與大盤環境。</li>
+<li>對低價、低成交金額、過大振幅與重上影線標的，本報告會優先降級或排除。</li>
+<li>Futu/Moomoo OpenAPI 已列入常用來源清單；因需本機 OpenD gateway 與帳號權限，這版只列為人工複核/後續整合來源。</li>
+</ul>
+
+    <footer class="mt-9 border-t border-slate-200 pt-5 text-sm text-slate-500">
+      本頁由 K-line 決策報告產生，內容僅作一般化研究輔助，不構成個人化投資建議或下單指令。
+    </footer>
+  </article>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,1039 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-06-15 美股 K 線警報掃描投資決策報告</title>
+  <link rel="stylesheet" href="../assets/report-center.css">
+</head>
+<body class="bg-slate-50 text-neutral-950 antialiased">
+
+<main class="w-full px-4 py-6 md:px-6 xl:px-8">
+  <nav class="mb-6 flex items-center justify-between text-sm text-slate-600">
+    <a class="font-bold tracking-normal text-neutral-950 underline decoration-emerald-700/30 underline-offset-4 hover:text-emerald-800" href="../index.html">← 報告中心</a>
+  </nav>
+  <article class="article-body w-full bg-white p-4 md:p-6 xl:p-8">
+    
+<header class="mb-7 border-b border-slate-200 pb-6">
+  <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+    <div class="min-w-0">
+      <span class="inline-flex w-fit items-center rounded-full border border-slate-300 px-2.5 py-1 text-xs text-slate-600">US · 美股 K-line 研究行動</span>
+      <h1 class="mt-3 text-3xl font-black leading-tight tracking-normal md:text-4xl">2026-06-15 美股 K 線警報掃描投資決策報告</h1>
+    </div>
+    <div class="shrink-0 rounded-md border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-600">
+      產出時間：<strong class="font-semibold text-neutral-950">2026-06-16 14:12:49</strong>
+    </div>
+  </div>
+</header>
+
+    <p>本報告以已產出的 K 線警報掃描日報為來源，由 AI agent 進行規則化整理與風險分層。內容僅作研究輔助與情境推演，不構成個人化投資建議、投顧服務或下單指令。</p>
+<h2>資料來源與限制</h2>
+<ul>
+<li>資料日：2026-06-15</li>
+<li>產生時間：2026-06-16 14:12:49</li>
+<li>決策分層僅使用日報中的 K 線策略、開高低收、成交量與成交金額欄位；未接 NotebookLM、新聞、財報或 SQLite 補充資料。</li>
+<li><code>產業</code> 欄位會嘗試用網路公開資料補強；未命中時保留 <code>資料未提供</code>。</li>
+</ul>
+<h2>補充資料搜尋來源</h2>
+<ul>
+<li>網路補強：已啟用，補到產業資料 41 檔，未命中 0 檔。</li>
+<li>實際命中來源：Nasdaq screener stocks API 41 檔</li>
+<li>優先搜尋列表：
+<ul>
+<li>Futu/Moomoo OpenAPI: https://openapi.futunn.com/futu-api-doc/intro/intro.html</li>
+<li>Nasdaq screener stocks API: https://api.nasdaq.com/api/screener/stocks?tableonly=true&amp;limit=25&amp;download=true</li>
+<li>Nasdaq company profile API: https://api.nasdaq.com/api/company/{symbol}/company-profile</li>
+<li>Nasdaq quote summary API: https://api.nasdaq.com/api/quote/{symbol}/summary?assetclass=stocks</li>
+<li>Morningstar profile: https://www.morningstar.com/stocks/xnys/{symbol}/quote</li>
+<li>Yahoo Finance profile: https://finance.yahoo.com/quote/{symbol}/profile/</li>
+<li>Yahoo Finance 個股頁: https://finance.yahoo.com/quote/{symbol}</li>
+</ul>
+</li>
+</ul>
+<h2>策略訊號總覽</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>項目</th>
+<th style="text-align:right">數值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>原始命中列</td>
+<td style="text-align:right">41</td>
+</tr>
+<tr>
+<td>合併後標的</td>
+<td style="text-align:right">41</td>
+</tr>
+<tr>
+<td>賣點觸發標的</td>
+<td style="text-align:right">35</td>
+</tr>
+<tr>
+<td>現在可以小量分批研究</td>
+<td style="text-align:right">13</td>
+</tr>
+<tr>
+<td>等買點或確認</td>
+<td style="text-align:right">21</td>
+</tr>
+<tr>
+<td>觀察</td>
+<td style="text-align:right">0</td>
+</tr>
+<tr>
+<td>暫時排除</td>
+<td style="text-align:right">7</td>
+</tr>
+</tbody>
+</table></div>
+<h2>賣點觸發清單</h2>
+<div class="table-scroll"><table class="research-table"><colgroup><col style="width: 180px"><col style="width: 220px"><col style="width: 220px"></colgroup>
+<thead>
+<tr>
+<th>代號</th>
+<th>名稱</th>
+<th style="text-align:right">觸及賣點數</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/AMT" rel="noopener noreferrer" target="_blank">AMT</a><a aria-label="在 TradingView 開啟 AMT" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/AMT/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 AMT"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>American Tower Corporation (REIT) Common Stock</td>
+<td style="text-align:right">3</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/BTU" rel="noopener noreferrer" target="_blank">BTU</a><a aria-label="在 TradingView 開啟 BTU" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/BTU/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 BTU"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Peabody Energy Corporation Common Stock</td>
+<td style="text-align:right">3</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/CNM" rel="noopener noreferrer" target="_blank">CNM</a><a aria-label="在 TradingView 開啟 CNM" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/CNM/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 CNM"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Core &amp; Main, Inc. Class A Common Stock</td>
+<td style="text-align:right">3</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/PRCT" rel="noopener noreferrer" target="_blank">PRCT</a><a aria-label="在 TradingView 開啟 PRCT" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/PRCT/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 PRCT"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>PROCEPT BioRobotics Corporation - Common Stock</td>
+<td style="text-align:right">3</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/RXO" rel="noopener noreferrer" target="_blank">RXO</a><a aria-label="在 TradingView 開啟 RXO" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/RXO/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 RXO"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>RXO, Inc. Common Stock</td>
+<td style="text-align:right">3</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/AMH" rel="noopener noreferrer" target="_blank">AMH</a><a aria-label="在 TradingView 開啟 AMH" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/AMH/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 AMH"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>American Homes 4 Rent Common Shares of Beneficial Interest</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/CWAN" rel="noopener noreferrer" target="_blank">CWAN</a><a aria-label="在 TradingView 開啟 CWAN" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/CWAN/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 CWAN"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Clearwater Analytics Holdings, Inc. Class A Common Stock</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/FOX" rel="noopener noreferrer" target="_blank">FOX</a><a aria-label="在 TradingView 開啟 FOX" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/FOX/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 FOX"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Fox Corporation - Class B Common Stock</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/FOXA" rel="noopener noreferrer" target="_blank">FOXA</a><a aria-label="在 TradingView 開啟 FOXA" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/FOXA/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 FOXA"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Fox Corporation - Class A Common Stock</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/MNTS" rel="noopener noreferrer" target="_blank">MNTS</a><a aria-label="在 TradingView 開啟 MNTS" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/MNTS/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 MNTS"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Momentus Inc. - Class A Common Stock</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/NN" rel="noopener noreferrer" target="_blank">NN</a><a aria-label="在 TradingView 開啟 NN" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/NN/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 NN"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>NextNav Inc. - Common stock</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/NOV" rel="noopener noreferrer" target="_blank">NOV</a><a aria-label="在 TradingView 開啟 NOV" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/NOV/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 NOV"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>NOV Inc. Common Stock</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/PBF" rel="noopener noreferrer" target="_blank">PBF</a><a aria-label="在 TradingView 開啟 PBF" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/PBF/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 PBF"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>PBF Energy Inc. Class A Common Stock</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/PLAY" rel="noopener noreferrer" target="_blank">PLAY</a><a aria-label="在 TradingView 開啟 PLAY" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/PLAY/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 PLAY"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Dave &amp; Buster's Entertainment, Inc. - Common Stock</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/SHEL" rel="noopener noreferrer" target="_blank">SHEL</a><a aria-label="在 TradingView 開啟 SHEL" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/SHEL/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 SHEL"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Shell PLC American Depositary Shares (each representing two (2) Ordinary Shares)</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/SPCE" rel="noopener noreferrer" target="_blank">SPCE</a><a aria-label="在 TradingView 開啟 SPCE" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/SPCE/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 SPCE"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Virgin Galactic Holdings, Inc. Common Stock</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/YPF" rel="noopener noreferrer" target="_blank">YPF</a><a aria-label="在 TradingView 開啟 YPF" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/YPF/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 YPF"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>YPF Sociedad Anonima Common Stock</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/AA" rel="noopener noreferrer" target="_blank">AA</a><a aria-label="在 TradingView 開啟 AA" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/AA/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 AA"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Alcoa Corporation Common Stock</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/AMPG" rel="noopener noreferrer" target="_blank">AMPG</a><a aria-label="在 TradingView 開啟 AMPG" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/AMPG/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 AMPG"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Amplitech Group, Inc. - Common Stock</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/APG" rel="noopener noreferrer" target="_blank">APG</a><a aria-label="在 TradingView 開啟 APG" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/APG/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 APG"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>APi Group Corporation Common Stock</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/ASTS" rel="noopener noreferrer" target="_blank">ASTS</a><a aria-label="在 TradingView 開啟 ASTS" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/ASTS/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 ASTS"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>AST SpaceMobile, Inc. - Class A Common Stock</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/BEKE" rel="noopener noreferrer" target="_blank">BEKE</a><a aria-label="在 TradingView 開啟 BEKE" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/BEKE/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 BEKE"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>KE Holdings Inc American Depositary Shares (each representing three Class A Ordinary Shares)</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/DKNG" rel="noopener noreferrer" target="_blank">DKNG</a><a aria-label="在 TradingView 開啟 DKNG" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/DKNG/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 DKNG"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>DraftKings Inc. - Class A Common Stock</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/ELVN" rel="noopener noreferrer" target="_blank">ELVN</a><a aria-label="在 TradingView 開啟 ELVN" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/ELVN/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 ELVN"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Enliven Therapeutics, Inc.  - Common Stock</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/GTX" rel="noopener noreferrer" target="_blank">GTX</a><a aria-label="在 TradingView 開啟 GTX" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/GTX/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 GTX"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Garrett Motion Inc. - Common Stock</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/KHC" rel="noopener noreferrer" target="_blank">KHC</a><a aria-label="在 TradingView 開啟 KHC" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/KHC/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 KHC"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>The Kraft Heinz Company - Common Stock</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/ONDS" rel="noopener noreferrer" target="_blank">ONDS</a><a aria-label="在 TradingView 開啟 ONDS" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/ONDS/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 ONDS"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Ondas Inc - Common Stock</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/PINS" rel="noopener noreferrer" target="_blank">PINS</a><a aria-label="在 TradingView 開啟 PINS" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/PINS/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 PINS"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Pinterest, Inc. Class A Common Stock</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/PR" rel="noopener noreferrer" target="_blank">PR</a><a aria-label="在 TradingView 開啟 PR" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/PR/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 PR"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Permian Resources Corporation Class A Common Stock</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/PSX" rel="noopener noreferrer" target="_blank">PSX</a><a aria-label="在 TradingView 開啟 PSX" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/PSX/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 PSX"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Phillips 66 Common Stock</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/RDW" rel="noopener noreferrer" target="_blank">RDW</a><a aria-label="在 TradingView 開啟 RDW" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/RDW/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 RDW"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Redwire Corporation Common Stock</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/SIDU" rel="noopener noreferrer" target="_blank">SIDU</a><a aria-label="在 TradingView 開啟 SIDU" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/SIDU/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 SIDU"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Sidus Space, Inc. - Class A Common Stock</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/UPST" rel="noopener noreferrer" target="_blank">UPST</a><a aria-label="在 TradingView 開啟 UPST" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/UPST/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 UPST"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Upstart Holdings, Inc. - Common stock</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/VICI" rel="noopener noreferrer" target="_blank">VICI</a><a aria-label="在 TradingView 開啟 VICI" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/VICI/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 VICI"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>VICI Properties Inc. Common Stock</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/VTR" rel="noopener noreferrer" target="_blank">VTR</a><a aria-label="在 TradingView 開啟 VTR" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/VTR/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 VTR"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Ventas, Inc. Common Stock</td>
+<td style="text-align:right">1</td>
+</tr>
+</tbody>
+</table></div>
+<h2>現在可以小量分批研究名單</h2>
+<div class="table-scroll"><table class="research-table"><colgroup><col style="width: 110px"><col style="width: 160px"><col style="width: 180px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"></colgroup>
+<thead>
+<tr>
+<th>市場</th>
+<th>代號 / 公司</th>
+<th>產業</th>
+<th>來源提及程度</th>
+<th>來源主觀看法</th>
+<th>布局建議</th>
+<th>持倉建議</th>
+<th>追蹤指標</th>
+<th>風險</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/TSM" rel="noopener noreferrer" target="_blank">TSM</a><a aria-label="在 TradingView 開啟 TSM" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TSM/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 TSM"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> (Taiwan Semiconductor Manufacturing Company Ltd.)</td>
+<td>Technology / Semiconductors</td>
+<td>四策略合併進場：A1L/A1LR</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1L/A1LR；收盤位置 88.9%；振幅 2.4%；buyCount 2；今日買點 A1L/A1LR；entryScore 66.7；netScore 66.7；多空訊號 2/0；估算成交金額USD 4,930,614,492</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/AFRM" rel="noopener noreferrer" target="_blank">AFRM</a><a aria-label="在 TradingView 開啟 AFRM" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/AFRM/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 AFRM"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Finance / Finance: Consumer Services</td>
+<td>四策略合併進場：A1L/A1LR/AMD</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1L/A1LR/AMD；收盤位置 68.9%；振幅 6.9%；buyCount 3；今日買點 A1L/A1LR/AMD；波幅放大 rangeRatio 1.30；成交量高於均量 volumeRatio 1.41；entryScore 70.1；netScore 70.1；多空訊號 2/0；估算成交金額USD 470,031,880</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/FIGS" rel="noopener noreferrer" target="_blank">FIGS</a><a aria-label="在 TradingView 開啟 FIGS" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/FIGS/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 FIGS"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Consumer Discretionary / Apparel</td>
+<td>四策略合併進場：A1L</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1L；收盤位置 81.8%；振幅 4.4%；buyCount 1；今日買點 A1L；爆量 volumeRatio 1.52；entryScore 71.7；netScore 71.7；多空訊號 2/0；估算成交金額USD 50,176,800</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/XYZ" rel="noopener noreferrer" target="_blank">XYZ</a><a aria-label="在 TradingView 開啟 XYZ" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/XYZ/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 XYZ"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Technology / Computer Software: Prepackaged Software</td>
+<td>四策略合併進場：A1L/A1LR/AMD</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1L/A1LR/AMD；收盤位置 84.8%；振幅 3.9%；buyCount 3；今日買點 A1L/A1LR/AMD；爆量 volumeRatio 1.64；entryScore 64.1；netScore 64.1；多空訊號 2/0；估算成交金額USD 709,522,035</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/ABNB" rel="noopener noreferrer" target="_blank">ABNB</a><a aria-label="在 TradingView 開啟 ABNB" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/ABNB/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 ABNB"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Consumer Discretionary / Diversified Commercial Services</td>
+<td>四策略合併進場：A1L/A1LR/AMD</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1L/A1LR/AMD；收盤位置 79.5%；振幅 4.2%；buyCount 3；今日買點 A1L/A1LR/AMD；波幅放大 rangeRatio 1.35；成交量高於均量 volumeRatio 1.25；entryScore 59.2；netScore 59.2；多空訊號 3/0；估算成交金額USD 652,292,168</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/AAOI" rel="noopener noreferrer" target="_blank">AAOI</a><a aria-label="在 TradingView 開啟 AAOI" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/AAOI/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 AAOI"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Technology / Semiconductors</td>
+<td>四策略合併進場：A1L/A1LR</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1L/A1LR；收盤位置 81.4%；振幅 9.6%；buyCount 2；今日買點 A1L/A1LR；entryScore 48.7；netScore 48.7；多空訊號 2/0；估算成交金額USD 2,791,477,349</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/DASH" rel="noopener noreferrer" target="_blank">DASH</a><a aria-label="在 TradingView 開啟 DASH" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/DASH/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 DASH"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Technology / EDP Services</td>
+<td>四策略合併進場：A1L/A1LR</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1L/A1LR；收盤位置 94.3%；振幅 10.2%；buyCount 2；今日買點 A1L/A1LR；波幅放大 rangeRatio 2.24；成交量高於均量 volumeRatio 1.44；entryScore 48.8；netScore 47.8；多空訊號 2/0；估算成交金額USD 1,147,516,787</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/UBER" rel="noopener noreferrer" target="_blank">UBER</a><a aria-label="在 TradingView 開啟 UBER" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/UBER/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 UBER"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Consumer Discretionary / Business Services</td>
+<td>四策略合併進場：A1L/A1LR</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1L/A1LR；收盤位置 79.1%；振幅 4.1%；buyCount 2；今日買點 A1L/A1LR；波幅放大 rangeRatio 1.47；成交量高於均量 volumeRatio 1.20；entryScore 60.4；netScore 59.4；多空訊號 3/0；估算成交金額USD 1,800,640,697</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/SNAP" rel="noopener noreferrer" target="_blank">SNAP</a><a aria-label="在 TradingView 開啟 SNAP" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/SNAP/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 SNAP"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> (Snap Inc. Class A Common Stock)</td>
+<td>Technology / Computer Software: Programming Data Processing</td>
+<td>四策略合併進場：A1L/A1LR/AMD</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1L/A1LR/AMD；收盤位置 91.7%；振幅 6.3%；buyCount 3；今日買點 A1L/A1LR/AMD；成交量高於均量 volumeRatio 1.22；entryScore 58.1；netScore 52.3；多空訊號 2/1；估算成交金額USD 268,628,094</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/RBLX" rel="noopener noreferrer" target="_blank">RBLX</a><a aria-label="在 TradingView 開啟 RBLX" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/RBLX/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 RBLX"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> (Roblox Corporation Class A Common Stock)</td>
+<td>Technology / Computer Software: Prepackaged Software</td>
+<td>四策略合併進場：A1LR</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1LR；收盤位置 92.9%；振幅 4.9%；buyCount 1；今日買點 A1LR；entryScore 50.5；netScore 49.5；多空訊號 2/0；估算成交金額USD 433,893,281</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/DBX" rel="noopener noreferrer" target="_blank">DBX</a><a aria-label="在 TradingView 開啟 DBX" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/DBX/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 DBX"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Technology / Computer Software: Prepackaged Software</td>
+<td>四策略合併進場：A5LR/A1LR</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A5LR/A1LR；收盤位置 79.6%；振幅 2.0%；buyCount 2；今日買點 A5LR/A1LR；entryScore 65.0；netScore 33.4；多空訊號 2/1；估算成交金額USD 101,311,936</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/BEAM" rel="noopener noreferrer" target="_blank">BEAM</a><a aria-label="在 TradingView 開啟 BEAM" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/BEAM/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 BEAM"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> (Beam Therapeutics Inc. - Common Stock)</td>
+<td>Health Care / Biotechnology: Biological Products (No Diagnostic Substances)</td>
+<td>四策略合併進場：A1L</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1L；收盤位置 95.3%；振幅 6.8%；buyCount 1；今日買點 A1L；爆量 volumeRatio 1.53；entryScore 56.5；netScore 56.5；多空訊號 2/0；估算成交金額USD 90,213,770</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/LYFT" rel="noopener noreferrer" target="_blank">LYFT</a><a aria-label="在 TradingView 開啟 LYFT" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/LYFT/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 LYFT"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Consumer Discretionary / Business Services</td>
+<td>四策略合併進場：A1L/AMD</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1L/AMD；收盤位置 68.1%；振幅 4.8%；buyCount 2；今日買點 A1L/AMD；entryScore 48.8；netScore 47.8；多空訊號 2/0；估算成交金額USD 186,412,989</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+</tbody>
+</table></div>
+<h2>現在不能買，但值得等買點名單</h2>
+<div class="table-scroll"><table class="research-table"><colgroup><col style="width: 110px"><col style="width: 160px"><col style="width: 180px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"></colgroup>
+<thead>
+<tr>
+<th>市場</th>
+<th>代號 / 公司</th>
+<th>產業</th>
+<th>來源提及程度</th>
+<th>來源主觀看法</th>
+<th>布局建議</th>
+<th>持倉建議</th>
+<th>追蹤指標</th>
+<th>風險</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/NTLA" rel="noopener noreferrer" target="_blank">NTLA</a><a aria-label="在 TradingView 開啟 NTLA" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/NTLA/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 NTLA"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Health Care / Biotechnology: In Vitro &amp; In Vivo Diagnostic Substances</td>
+<td>四策略合併進場：A1L/A1LR</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>四策略合併進場：A1L/A1LR；收盤位置 96.4%；振幅 15.0%；buyCount 2；今日買點 A1L/A1LR；波幅放大 rangeRatio 2.20；爆量 volumeRatio 2.69；entryScore 67.9；netScore 67.9；多空訊號 3/0；估算成交金額USD 244,534,325</td>
+<td>距訊號日低點較遠：14.5%</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/QBTS" rel="noopener noreferrer" target="_blank">QBTS</a><a aria-label="在 TradingView 開啟 QBTS" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/QBTS/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 QBTS"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> (D-Wave Quantum Inc. Common Shares)</td>
+<td>Technology / EDP Services</td>
+<td>四策略合併進場：A1LR</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>四策略合併進場：A1LR；收盤位置 60.3%；振幅 8.5%；buyCount 1；今日買點 A1LR；entryScore 64.1；netScore 64.1；多空訊號 2/0；估算成交金額USD 1,176,574,058</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/RCAT" rel="noopener noreferrer" target="_blank">RCAT</a><a aria-label="在 TradingView 開啟 RCAT" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/RCAT/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 RCAT"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Technology / Computer Software: Prepackaged Software</td>
+<td>四策略合併進場：A1L</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>四策略合併進場：A1L；收盤位置 60.9%；振幅 6.3%；buyCount 1；今日買點 A1L；entryScore 58.1；netScore 43.8；多空訊號 2/1；估算成交金額USD 132,351,096</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/MRAM" rel="noopener noreferrer" target="_blank">MRAM</a><a aria-label="在 TradingView 開啟 MRAM" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/MRAM/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 MRAM"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Technology / Semiconductors</td>
+<td>四策略合併進場：A1LR</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>四策略合併進場：A1LR；收盤位置 62.8%；振幅 10.5%；buyCount 1；今日買點 A1LR；entryScore 58.7；netScore 58.7；多空訊號 1/0；估算成交金額USD 97,199,286</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/BE" rel="noopener noreferrer" target="_blank">BE</a><a aria-label="在 TradingView 開啟 BE" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/BE/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 BE"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> (Bloom Energy Corporation Class A Common Stock)</td>
+<td>Energy / Industrial Machinery/Components</td>
+<td>四策略合併進場：A1LR</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>四策略合併進場：A1LR；收盤位置 45.3%；振幅 4.0%；buyCount 1；今日買點 A1LR；entryScore 82.1；netScore 82.1；多空訊號 3/0；估算成交金額USD 2,507,694,750</td>
+<td>上影線壓力重：54.7%</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/RGTI" rel="noopener noreferrer" target="_blank">RGTI</a><a aria-label="在 TradingView 開啟 RGTI" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/RGTI/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 RGTI"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Technology / EDP Services</td>
+<td>四策略合併進場：A1LR</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>四策略合併進場：A1LR；收盤位置 39.3%；振幅 6.3%；buyCount 1；今日買點 A1LR；entryScore 82.1；netScore 82.1；多空訊號 3/0；估算成交金額USD 1,016,249,524</td>
+<td>上影線壓力重：60.7%</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/MNST" rel="noopener noreferrer" target="_blank">MNST</a><a aria-label="在 TradingView 開啟 MNST" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/MNST/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 MNST"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> (Monster Beverage Corporation - Common Stock)</td>
+<td>Consumer Staples / Beverages (Production/Distribution)</td>
+<td>四策略合併進場：A5LR</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>四策略合併進場：A5LR；收盤位置 96.2%；振幅 2.0%；buyCount 1；今日買點 A5LR；entryScore 38.3；netScore 38.3；多空訊號 1/0；估算成交金額USD 443,970,599</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/KEEL" rel="noopener noreferrer" target="_blank">KEEL</a><a aria-label="在 TradingView 開啟 KEEL" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/KEEL/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 KEEL"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> (Keel Infrastructure Corp. - Common Stock)</td>
+<td>Finance / Finance: Consumer Services</td>
+<td>四策略合併進場：A1LR</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>四策略合併進場：A1LR；收盤位置 22.4%；振幅 8.7%；buyCount 1；今日買點 A1LR；entryScore 66.7；netScore 66.7；多空訊號 2/0；估算成交金額USD 233,411,602</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/META" rel="noopener noreferrer" target="_blank">META</a><a aria-label="在 TradingView 開啟 META" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/META/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 META"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Technology / Computer Software: Programming Data Processing</td>
+<td>四策略合併進場：AMD</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>四策略合併進場：AMD；收盤位置 64.5%；振幅 3.7%；buyCount 1；今日買點 AMD；entryScore 23.0；netScore 23.0；多空訊號 1/0；估算成交金額USD 10,454,209,204</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/SOFI" rel="noopener noreferrer" target="_blank">SOFI</a><a aria-label="在 TradingView 開啟 SOFI" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/SOFI/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 SOFI"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Finance / Finance: Consumer Services</td>
+<td>四策略合併進場：A1LR</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>四策略合併進場：A1LR；收盤位置 28.6%；振幅 2.5%；buyCount 1；今日買點 A1LR；entryScore 67.9；netScore 18.9；多空訊號 3/2；估算成交金額USD 1,308,776,474</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/PINS" rel="noopener noreferrer" target="_blank">PINS</a><a aria-label="在 TradingView 開啟 PINS" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/PINS/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 PINS"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Technology / Computer Software: Programming Data Processing</td>
+<td>四策略合併進場：AMD</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>四策略合併進場：AMD；收盤位置 80.2%；振幅 5.2%；buyCount 1；今日買點 AMD；今日賣點數 1；entryScore 64.1；netScore -2.2；多空訊號 2/3；估算成交金額USD 330,710,984</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/IONQ" rel="noopener noreferrer" target="_blank">IONQ</a><a aria-label="在 TradingView 開啟 IONQ" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/IONQ/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 IONQ"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Technology / EDP Services</td>
+<td>四策略合併進場：A1LR</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>四策略合併進場：A1LR；收盤位置 19.9%；振幅 4.9%；buyCount 1；今日買點 A1LR；entryScore 73.5；netScore 73.5；多空訊號 3/0；估算成交金額USD 1,543,540,818</td>
+<td>上影線壓力重：72.7%</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/BAM" rel="noopener noreferrer" target="_blank">BAM</a><a aria-label="在 TradingView 開啟 BAM" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/BAM/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 BAM"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> (Brookfield Asset Management Inc Class A Limited Voting Shares)</td>
+<td>Consumer Discretionary / Other Consumer Services</td>
+<td>四策略合併進場：A1L/A1LR</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>四策略合併進場：A1L/A1LR；收盤位置 29.8%；振幅 2.0%；buyCount 2；今日買點 A1L/A1LR；entryScore 67.5；netScore 66.5；多空訊號 3/0；估算成交金額USD 144,854,317</td>
+<td>上影線壓力重：70.2%</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/EXE" rel="noopener noreferrer" target="_blank">EXE</a><a aria-label="在 TradingView 開啟 EXE" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/EXE/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 EXE"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> (Expand Energy Corporation - Common Stock)</td>
+<td>Energy / Oil &amp; Gas Production</td>
+<td>四策略合併進場：A1LR</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>四策略合併進場：A1LR；收盤位置 29.6%；振幅 2.9%；buyCount 1；今日買點 A1LR；成交量高於均量 volumeRatio 1.23；entryScore 54.3；netScore 54.3；多空訊號 3/0；估算成交金額USD 349,059,696</td>
+<td>上影線壓力重：70.4%</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/TE" rel="noopener noreferrer" target="_blank">TE</a><a aria-label="在 TradingView 開啟 TE" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TE/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 TE"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> (T1 Energy Inc. Common Stock)</td>
+<td>Miscellaneous / Industrial Machinery/Components</td>
+<td>四策略合併進場：A1LR</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>四策略合併進場：A1LR；收盤位置 35.2%；振幅 11.2%；buyCount 1；今日買點 A1LR；entryScore 56.5；netScore 54.0；多空訊號 2/1；估算成交金額USD 275,300,638</td>
+<td>上影線壓力重：48.2%</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/OTIS" rel="noopener noreferrer" target="_blank">OTIS</a><a aria-label="在 TradingView 開啟 OTIS" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/OTIS/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 OTIS"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> (Otis Worldwide Corporation Common Stock)</td>
+<td>Technology / Consumer Electronics/Appliances</td>
+<td>四策略合併進場：A1LR/AMD</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>四策略合併進場：A1LR/AMD；收盤位置 25.0%；振幅 1.4%；buyCount 2；今日買點 A1LR/AMD；成交量高於均量 volumeRatio 1.24；entryScore 58.1；netScore 57.1；多空訊號 2/0；估算成交金額USD 306,822,577</td>
+<td>上影線壓力重：75.0%</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/FWONK" rel="noopener noreferrer" target="_blank">FWONK</a><a aria-label="在 TradingView 開啟 FWONK" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/FWONK/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 FWONK"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> (Liberty Media Corporation - Series C Liberty Formula One Common Stock)</td>
+<td>Industrials / Broadcasting</td>
+<td>四策略合併進場：A1L/A5LR/A1LR</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>四策略合併進場：A1L/A5LR/A1LR；收盤位置 34.1%；振幅 2.8%；buyCount 3；今日買點 A1L/A5LR/A1LR；成交量高於均量 volumeRatio 1.34；entryScore 66.4；netScore 11.5；多空訊號 3/2；估算成交金額USD 207,677,262</td>
+<td>上影線壓力重：65.9%</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/ASST" rel="noopener noreferrer" target="_blank">ASST</a><a aria-label="在 TradingView 開啟 ASST" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/ASST/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 ASST"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Technology / Computer Software: Prepackaged Software</td>
+<td>四策略合併進場：A1L</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>四策略合併進場：A1L；收盤位置 33.3%；振幅 8.1%；buyCount 1；今日買點 A1L；爆量 volumeRatio 1.65；entryScore 56.5；netScore 56.5；多空訊號 2/0；估算成交金額USD 139,917,979</td>
+<td>上影線壓力重：66.7%</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/RKT" rel="noopener noreferrer" target="_blank">RKT</a><a aria-label="在 TradingView 開啟 RKT" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/RKT/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 RKT"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Finance / Finance: Consumer Services</td>
+<td>四策略合併進場：A1LR</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>四策略合併進場：A1LR；收盤位置 11.2%；振幅 5.1%；buyCount 1；今日買點 A1LR；爆量 volumeRatio 1.82；entryScore 48.8；netScore 38.3；多空訊號 2/1；估算成交金額USD 592,177,905</td>
+<td>上影線壓力重：86.0%</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/TOST" rel="noopener noreferrer" target="_blank">TOST</a><a aria-label="在 TradingView 開啟 TOST" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TOST/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 TOST"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Technology / EDP Services</td>
+<td>四策略合併進場：A1L</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>四策略合併進場：A1L；收盤位置 23.0%；振幅 3.0%；buyCount 1；今日買點 A1L；entryScore 52.7；netScore 42.2；多空訊號 1/1；估算成交金額USD 246,181,373</td>
+<td>上影線壓力重：63.5%</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/UPST" rel="noopener noreferrer" target="_blank">UPST</a><a aria-label="在 TradingView 開啟 UPST" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/UPST/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 UPST"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Finance / Finance: Consumer Services</td>
+<td>四策略合併進場：A1L</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>四策略合併進場：A1L；收盤位置 16.2%；振幅 6.1%；buyCount 1；今日買點 A1L；今日賣點數 1；爆量 volumeRatio 1.50；entryScore 48.8；netScore 15.7；多空訊號 2/1；估算成交金額USD 228,943,768</td>
+<td>上影線壓力重：83.8%</td>
+</tr>
+</tbody>
+</table></div>
+<h2>值得觀察，但目前還不能買名單</h2>
+<p>無符合名單。</p>
+<h2>明確不可以買 / 暫時排除名單</h2>
+<div class="table-scroll"><table class="research-table"><colgroup><col style="width: 110px"><col style="width: 160px"><col style="width: 180px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"></colgroup>
+<thead>
+<tr>
+<th>市場</th>
+<th>代號 / 公司</th>
+<th>產業</th>
+<th>來源提及程度</th>
+<th>來源主觀看法</th>
+<th>布局建議</th>
+<th>持倉建議</th>
+<th>追蹤指標</th>
+<th>風險</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/ARQQ" rel="noopener noreferrer" target="_blank">ARQQ</a><a aria-label="在 TradingView 開啟 ARQQ" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/ARQQ/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 ARQQ"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> (Arqit Quantum Inc. - Ordinary Shares)</td>
+<td>Technology / Computer Software: Prepackaged Software</td>
+<td>四策略合併進場：A1L/A1LR</td>
+<td>不建議追高</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>四策略合併進場：A1L/A1LR；收盤位置 83.3%；振幅 23.8%；buyCount 2；今日買點 A1L/A1LR；波幅放大 rangeRatio 2.85；爆量 volumeRatio 4.04；entryScore 67.9；netScore 66.9；多空訊號 3/0；估算成交金額USD 54,388,992</td>
+<td>單日振幅過大：23.8%；距訊號日低點較遠：19.8%</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/BTBT" rel="noopener noreferrer" target="_blank">BTBT</a><a aria-label="在 TradingView 開啟 BTBT" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/BTBT/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 BTBT"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Finance / Finance: Consumer Services</td>
+<td>四策略合併進場：A1LR</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>四策略合併進場：A1LR；收盤位置 51.4%；振幅 9.1%；buyCount 1；今日買點 A1LR；成交量高於均量 volumeRatio 1.24；entryScore 65.0；netScore 65.0；多空訊號 2/0；估算成交金額USD 58,189,112</td>
+<td>低價風險：收盤 1.93 低於門檻 5；上影線壓力重：48.6%</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/LAES" rel="noopener noreferrer" target="_blank">LAES</a><a aria-label="在 TradingView 開啟 LAES" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/LAES/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 LAES"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> (SEALSQ Corp - Ordinary Shares)</td>
+<td>Technology / Semiconductors</td>
+<td>四策略合併進場：A1LR</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>四策略合併進場：A1LR；收盤位置 54.8%；振幅 9.2%；buyCount 1；今日買點 A1LR；entryScore 64.1；netScore 64.1；多空訊號 2/0；估算成交金額USD 71,841,658</td>
+<td>低價風險：收盤 3.37 低於門檻 5；上影線壓力重：45.2%</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/VELO" rel="noopener noreferrer" target="_blank">VELO</a><a aria-label="在 TradingView 開啟 VELO" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/VELO/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 VELO"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Technology / Industrial Machinery/Components</td>
+<td>四策略合併進場：A5LR</td>
+<td>不建議追高</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>四策略合併進場：A5LR；收盤位置 15.4%；振幅 21.7%；buyCount 1；今日買點 A5LR；波幅放大 rangeRatio 1.46；成交量高於均量 volumeRatio 1.23；entryScore 16.9；netScore 3.9；多空訊號 1/1；估算成交金額USD 130,894,902</td>
+<td>單日振幅過大：21.7%</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/QTEX" rel="noopener noreferrer" target="_blank">QTEX</a><a aria-label="在 TradingView 開啟 QTEX" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/QTEX/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 QTEX"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> (QTREX Quantum Ltd. - Ordinary Shares)</td>
+<td>Health Care / Medical/Dental Instruments</td>
+<td>四策略合併進場：A1L/A1LR</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>四策略合併進場：A1L/A1LR；收盤位置 64.1%；振幅 53.2%；buyCount 2；今日買點 A1L/A1LR；波幅放大 rangeRatio 2.33；爆量 volumeRatio 1.57；entryScore 70.1；netScore 51.0；多空訊號 2/1；估算成交金額USD 265,822,046</td>
+<td>低價風險：收盤 2.2 低於門檻 5；單日振幅過大：53.2%；距訊號日低點較遠：34.1%</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/OPEN" rel="noopener noreferrer" target="_blank">OPEN</a><a aria-label="在 TradingView 開啟 OPEN" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/OPEN/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 OPEN"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> (Opendoor Technologies Inc - Common Stock)</td>
+<td>Finance / Real Estate</td>
+<td>四策略合併進場：AMD</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>四策略合併進場：AMD；收盤位置 15.7%；振幅 5.5%；buyCount 1；今日買點 AMD；成交量高於均量 volumeRatio 1.23；entryScore 9.8；netScore 1.4；多空訊號 0/1；估算成交金額USD 212,355,968</td>
+<td>低價風險：收盤 4.61 低於門檻 5；上影線壓力重：76.5%</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/PRFX" rel="noopener noreferrer" target="_blank">PRFX</a><a aria-label="在 TradingView 開啟 PRFX" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/PRFX/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 PRFX"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> (PRF Technologies Ltd. - Ordinary Shares)</td>
+<td>Health Care / Biotechnology: Pharmaceutical Preparations</td>
+<td>四策略合併進場：A1L/A1LR</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>四策略合併進場：A1L/A1LR；收盤位置 43.8%；振幅 103.6%；buyCount 2；今日買點 A1L/A1LR；波幅放大 rangeRatio 7.87；爆量 volumeRatio 10.72；entryScore 67.9；netScore 37.2；多空訊號 3/2；估算成交金額USD 116,350,977</td>
+<td>低價風險：收盤 2.49 低於門檻 5；單日振幅過大：103.6%；上影線壓力重：56.2%；距訊號日低點較遠：45.4%</td>
+</tr>
+</tbody>
+</table></div>
+<h2>最終精選名單</h2>
+<div class="table-scroll"><table class="research-table"><colgroup><col style="width: 110px"><col style="width: 160px"><col style="width: 180px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"></colgroup>
+<thead>
+<tr>
+<th>市場</th>
+<th>代號 / 公司</th>
+<th>產業</th>
+<th>來源提及程度</th>
+<th>來源主觀看法</th>
+<th>布局建議</th>
+<th>持倉建議</th>
+<th>追蹤指標</th>
+<th>風險</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/TSM" rel="noopener noreferrer" target="_blank">TSM</a><a aria-label="在 TradingView 開啟 TSM" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TSM/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 TSM"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> (Taiwan Semiconductor Manufacturing Company Ltd.)</td>
+<td>Technology / Semiconductors</td>
+<td>四策略合併進場：A1L/A1LR</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1L/A1LR；收盤位置 88.9%；振幅 2.4%；buyCount 2；今日買點 A1L/A1LR；entryScore 66.7；netScore 66.7；多空訊號 2/0；估算成交金額USD 4,930,614,492</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/AFRM" rel="noopener noreferrer" target="_blank">AFRM</a><a aria-label="在 TradingView 開啟 AFRM" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/AFRM/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 AFRM"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Finance / Finance: Consumer Services</td>
+<td>四策略合併進場：A1L/A1LR/AMD</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1L/A1LR/AMD；收盤位置 68.9%；振幅 6.9%；buyCount 3；今日買點 A1L/A1LR/AMD；波幅放大 rangeRatio 1.30；成交量高於均量 volumeRatio 1.41；entryScore 70.1；netScore 70.1；多空訊號 2/0；估算成交金額USD 470,031,880</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/FIGS" rel="noopener noreferrer" target="_blank">FIGS</a><a aria-label="在 TradingView 開啟 FIGS" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/FIGS/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 FIGS"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Consumer Discretionary / Apparel</td>
+<td>四策略合併進場：A1L</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1L；收盤位置 81.8%；振幅 4.4%；buyCount 1；今日買點 A1L；爆量 volumeRatio 1.52；entryScore 71.7；netScore 71.7；多空訊號 2/0；估算成交金額USD 50,176,800</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/XYZ" rel="noopener noreferrer" target="_blank">XYZ</a><a aria-label="在 TradingView 開啟 XYZ" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/XYZ/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 XYZ"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Technology / Computer Software: Prepackaged Software</td>
+<td>四策略合併進場：A1L/A1LR/AMD</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1L/A1LR/AMD；收盤位置 84.8%；振幅 3.9%；buyCount 3；今日買點 A1L/A1LR/AMD；爆量 volumeRatio 1.64；entryScore 64.1；netScore 64.1；多空訊號 2/0；估算成交金額USD 709,522,035</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/ABNB" rel="noopener noreferrer" target="_blank">ABNB</a><a aria-label="在 TradingView 開啟 ABNB" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/ABNB/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 ABNB"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Consumer Discretionary / Diversified Commercial Services</td>
+<td>四策略合併進場：A1L/A1LR/AMD</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1L/A1LR/AMD；收盤位置 79.5%；振幅 4.2%；buyCount 3；今日買點 A1L/A1LR/AMD；波幅放大 rangeRatio 1.35；成交量高於均量 volumeRatio 1.25；entryScore 59.2；netScore 59.2；多空訊號 3/0；估算成交金額USD 652,292,168</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/AAOI" rel="noopener noreferrer" target="_blank">AAOI</a><a aria-label="在 TradingView 開啟 AAOI" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/AAOI/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 AAOI"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Technology / Semiconductors</td>
+<td>四策略合併進場：A1L/A1LR</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1L/A1LR；收盤位置 81.4%；振幅 9.6%；buyCount 2；今日買點 A1L/A1LR；entryScore 48.7；netScore 48.7；多空訊號 2/0；估算成交金額USD 2,791,477,349</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/DASH" rel="noopener noreferrer" target="_blank">DASH</a><a aria-label="在 TradingView 開啟 DASH" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/DASH/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 DASH"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Technology / EDP Services</td>
+<td>四策略合併進場：A1L/A1LR</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1L/A1LR；收盤位置 94.3%；振幅 10.2%；buyCount 2；今日買點 A1L/A1LR；波幅放大 rangeRatio 2.24；成交量高於均量 volumeRatio 1.44；entryScore 48.8；netScore 47.8；多空訊號 2/0；估算成交金額USD 1,147,516,787</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/UBER" rel="noopener noreferrer" target="_blank">UBER</a><a aria-label="在 TradingView 開啟 UBER" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/UBER/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 UBER"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Consumer Discretionary / Business Services</td>
+<td>四策略合併進場：A1L/A1LR</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1L/A1LR；收盤位置 79.1%；振幅 4.1%；buyCount 2；今日買點 A1L/A1LR；波幅放大 rangeRatio 1.47；成交量高於均量 volumeRatio 1.20；entryScore 60.4；netScore 59.4；多空訊號 3/0；估算成交金額USD 1,800,640,697</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/SNAP" rel="noopener noreferrer" target="_blank">SNAP</a><a aria-label="在 TradingView 開啟 SNAP" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/SNAP/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 SNAP"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> (Snap Inc. Class A Common Stock)</td>
+<td>Technology / Computer Software: Programming Data Processing</td>
+<td>四策略合併進場：A1L/A1LR/AMD</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1L/A1LR/AMD；收盤位置 91.7%；振幅 6.3%；buyCount 3；今日買點 A1L/A1LR/AMD；成交量高於均量 volumeRatio 1.22；entryScore 58.1；netScore 52.3；多空訊號 2/1；估算成交金額USD 268,628,094</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/RBLX" rel="noopener noreferrer" target="_blank">RBLX</a><a aria-label="在 TradingView 開啟 RBLX" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/RBLX/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 RBLX"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> (Roblox Corporation Class A Common Stock)</td>
+<td>Technology / Computer Software: Prepackaged Software</td>
+<td>四策略合併進場：A1LR</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1LR；收盤位置 92.9%；振幅 4.9%；buyCount 1；今日買點 A1LR；entryScore 50.5；netScore 49.5；多空訊號 2/0；估算成交金額USD 433,893,281</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/DBX" rel="noopener noreferrer" target="_blank">DBX</a><a aria-label="在 TradingView 開啟 DBX" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/DBX/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 DBX"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Technology / Computer Software: Prepackaged Software</td>
+<td>四策略合併進場：A5LR/A1LR</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A5LR/A1LR；收盤位置 79.6%；振幅 2.0%；buyCount 2；今日買點 A5LR/A1LR；entryScore 65.0；netScore 33.4；多空訊號 2/1；估算成交金額USD 101,311,936</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/BEAM" rel="noopener noreferrer" target="_blank">BEAM</a><a aria-label="在 TradingView 開啟 BEAM" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/BEAM/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 BEAM"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> (Beam Therapeutics Inc. - Common Stock)</td>
+<td>Health Care / Biotechnology: Biological Products (No Diagnostic Substances)</td>
+<td>四策略合併進場：A1L</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1L；收盤位置 95.3%；振幅 6.8%；buyCount 1；今日買點 A1L；爆量 volumeRatio 1.53；entryScore 56.5；netScore 56.5；多空訊號 2/0；估算成交金額USD 90,213,770</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/LYFT" rel="noopener noreferrer" target="_blank">LYFT</a><a aria-label="在 TradingView 開啟 LYFT" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/LYFT/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 LYFT"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Consumer Discretionary / Business Services</td>
+<td>四策略合併進場：A1L/AMD</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>四策略合併進場：A1L/AMD；收盤位置 68.1%；振幅 4.8%；buyCount 2；今日買點 A1L/AMD；entryScore 48.8；netScore 47.8；多空訊號 2/0；估算成交金額USD 186,412,989</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/NTLA" rel="noopener noreferrer" target="_blank">NTLA</a><a aria-label="在 TradingView 開啟 NTLA" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/NTLA/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 NTLA"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Health Care / Biotechnology: In Vitro &amp; In Vivo Diagnostic Substances</td>
+<td>四策略合併進場：A1L/A1LR</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>四策略合併進場：A1L/A1LR；收盤位置 96.4%；振幅 15.0%；buyCount 2；今日買點 A1L/A1LR；波幅放大 rangeRatio 2.20；爆量 volumeRatio 2.69；entryScore 67.9；netScore 67.9；多空訊號 3/0；估算成交金額USD 244,534,325</td>
+<td>距訊號日低點較遠：14.5%</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/QBTS" rel="noopener noreferrer" target="_blank">QBTS</a><a aria-label="在 TradingView 開啟 QBTS" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/QBTS/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 QBTS"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> (D-Wave Quantum Inc. Common Shares)</td>
+<td>Technology / EDP Services</td>
+<td>四策略合併進場：A1LR</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>四策略合併進場：A1LR；收盤位置 60.3%；振幅 8.5%；buyCount 1；今日買點 A1LR；entryScore 64.1；netScore 64.1；多空訊號 2/0；估算成交金額USD 1,176,574,058</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/RCAT" rel="noopener noreferrer" target="_blank">RCAT</a><a aria-label="在 TradingView 開啟 RCAT" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/RCAT/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 RCAT"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Technology / Computer Software: Prepackaged Software</td>
+<td>四策略合併進場：A1L</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>四策略合併進場：A1L；收盤位置 60.9%；振幅 6.3%；buyCount 1；今日買點 A1L；entryScore 58.1；netScore 43.8；多空訊號 2/1；估算成交金額USD 132,351,096</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/MRAM" rel="noopener noreferrer" target="_blank">MRAM</a><a aria-label="在 TradingView 開啟 MRAM" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/MRAM/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 MRAM"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Technology / Semiconductors</td>
+<td>四策略合併進場：A1LR</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>四策略合併進場：A1LR；收盤位置 62.8%；振幅 10.5%；buyCount 1；今日買點 A1LR；entryScore 58.7；netScore 58.7；多空訊號 1/0；估算成交金額USD 97,199,286</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/BE" rel="noopener noreferrer" target="_blank">BE</a><a aria-label="在 TradingView 開啟 BE" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/BE/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 BE"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> (Bloom Energy Corporation Class A Common Stock)</td>
+<td>Energy / Industrial Machinery/Components</td>
+<td>四策略合併進場：A1LR</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>四策略合併進場：A1LR；收盤位置 45.3%；振幅 4.0%；buyCount 1；今日買點 A1LR；entryScore 82.1；netScore 82.1；多空訊號 3/0；估算成交金額USD 2,507,694,750</td>
+<td>上影線壓力重：54.7%</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/RGTI" rel="noopener noreferrer" target="_blank">RGTI</a><a aria-label="在 TradingView 開啟 RGTI" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/RGTI/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 RGTI"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Technology / EDP Services</td>
+<td>四策略合併進場：A1LR</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>四策略合併進場：A1LR；收盤位置 39.3%；振幅 6.3%；buyCount 1；今日買點 A1LR；entryScore 82.1；netScore 82.1；多空訊號 3/0；估算成交金額USD 1,016,249,524</td>
+<td>上影線壓力重：60.7%</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/MNST" rel="noopener noreferrer" target="_blank">MNST</a><a aria-label="在 TradingView 開啟 MNST" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/MNST/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 MNST"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> (Monster Beverage Corporation - Common Stock)</td>
+<td>Consumer Staples / Beverages (Production/Distribution)</td>
+<td>四策略合併進場：A5LR</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>四策略合併進場：A5LR；收盤位置 96.2%；振幅 2.0%；buyCount 1；今日買點 A5LR；entryScore 38.3；netScore 38.3；多空訊號 1/0；估算成交金額USD 443,970,599</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+</tbody>
+</table></div>
+<h2>重要校正與限制</h2>
+<ul>
+<li>本報告的 <code>來源主觀看法</code> 是 agent 依 K 線訊號與風險條件做出的技術面分層，不代表新聞、KOL 或基本面來源意見。</li>
+<li><code>可研究</code> 不等於無條件進場；仍需確認個人風險承受度、部位大小、隔日量價與大盤環境。</li>
+<li>對低價、低成交金額、過大振幅與重上影線標的，本報告會優先降級或排除。</li>
+<li>Futu/Moomoo OpenAPI 已列入常用來源清單；因需本機 OpenD gateway 與帳號權限，這版只列為人工複核/後續整合來源。</li>
+</ul>
+
+    <footer class="mt-9 border-t border-slate-200 pt-5 text-sm text-slate-500">
+      本頁由 K-line 決策報告產生，內容僅作一般化研究輔助，不構成個人化投資建議或下單指令。
+    </footer>
+  </article>
+</main>
+
+</body>
+</html>
