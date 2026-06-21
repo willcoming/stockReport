@@ -678,6 +678,26 @@
 </tr>
 </tbody>
 </table></div>
+<h2>重要校正與限制</h2>
+<ul>
+<li>NotebookLM 來源覆蓋狀態：本輪 notebook <code>2026-06-17-0728 投資情報</code> 共 20 個來源，20 個 ready、0 個 error；包含 19 支 YouTube 與 1 份市場新聞整合。</li>
+<li>本輪上游 investment brief 顯示候選標的 31、trade plan drafts 28；其偏多 / 偏空方向來自行情驗證與來源文字，不等同本 KOL 報告的最終研究等級。</li>
+<li>外部校正來源：
+<ul>
+<li>SpaceX IPO pricing announcement: https://content.spacex.com/cms-assets/FINAL_Documents%20and%20Updates/SpaceX_PricingAnnouncement.pdf</li>
+<li>Nasdaq SpaceX IPO report: https://www.nasdaq.com/newsroom/spacex-ipo-rocket-company-launches-historic-ipo</li>
+<li>Federal Reserve Warsh announcement: https://www.federalreserve.gov/newsevents/pressreleases/other20260522a.htm</li>
+<li>Bank of Japan 2026-06-16 decision PDF: https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260616a.pdf</li>
+<li>Reuters / Investing.com NVIDIA bond report: https://www.investing.com/news/stock-market-news/nvidia-to-raise-20-billion-source-says-in-first-corporate-bond-issuance-in-five-years-4742424</li>
+<li>Guardian / Reuters Anthropic export-control report: https://www.theguardian.com/technology/2026/jun/13/anthropic-disable-advanced-ai-models-us-government-order</li>
+</ul>
+</li>
+<li>代號校正：SpaceX 以 <code>SPCX</code> 標示；Circle Internet Group 應為 <code>CRCL</code>；CoreWeave 為 <code>CRWV</code>、CrowdStrike 為 <code>CRWD</code>；昇達科為 <code>3491.TW</code>。本輪 NotebookLM 錯誤檢查另指出 <code>STM</code> 應改為 <code>VSH</code>，故觀察名單使用 TXN / VSH / Infineon，不再列 STM。</li>
+<li>台股常用代號補正：台積電 <code>2330.TW</code>、群創 <code>3481.TW</code>、南亞科 <code>2408.TW</code>、華邦電 <code>2344.TW</code>、群聯 <code>8299.TW</code>、臻鼎-KY <code>4958.TW</code>、日月光投控 <code>3711.TW</code>、力成 <code>6239.TW</code>、欣興 <code>3037.TW</code>、南電 <code>8046.TW</code>、景碩 <code>3189.TW</code>、聯發科 <code>2454.TW</code>、鴻海 <code>2317.TW</code>、廣達 <code>2382.TW</code>、台達電 <code>2308.TW</code>、潤泰全 <code>2915.TW</code>、潤泰新 <code>9945.TW</code>。</li>
+<li>來源中的口語價格、逐字稿價格或支撐壓力點位未逐一回查；若涉及交易點位，全部標記為 <code>待查證</code>，不得直接作為下單依據。</li>
+<li><code>現在可以買名單</code> 保留來源主觀語氣，但本報告已改寫為「可優先研究 / 小量分批研究 / 等條件確認」；後續 SOP 仍會再以 A/B/C/Reject 研究優先級重評。</li>
+<li>ETF、指數、商品與族群題材只作 tracker 或觀察，不與單一公司 alpha thesis 同級；GLD、USO、XLE、TLT 等若進入下游 public-equity workflow，應以 Reject / tracker 處理。</li>
+</ul>
 <h2>題材、未來發展與稀缺性觀察名單</h2>
 <div class="table-scroll"><table class="research-table"><colgroup><col style="width: 110px"><col style="width: 160px"><col style="width: 180px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"></colgroup>
 <thead>
@@ -850,26 +870,6 @@
 </tr>
 </tbody>
 </table></div>
-<h2>重要校正與限制</h2>
-<ul>
-<li>NotebookLM 來源覆蓋狀態：本輪 notebook <code>2026-06-17-0728 投資情報</code> 共 20 個來源，20 個 ready、0 個 error；包含 19 支 YouTube 與 1 份市場新聞整合。</li>
-<li>本輪上游 investment brief 顯示候選標的 31、trade plan drafts 28；其偏多 / 偏空方向來自行情驗證與來源文字，不等同本 KOL 報告的最終研究等級。</li>
-<li>外部校正來源：
-<ul>
-<li>SpaceX IPO pricing announcement: https://content.spacex.com/cms-assets/FINAL_Documents%20and%20Updates/SpaceX_PricingAnnouncement.pdf</li>
-<li>Nasdaq SpaceX IPO report: https://www.nasdaq.com/newsroom/spacex-ipo-rocket-company-launches-historic-ipo</li>
-<li>Federal Reserve Warsh announcement: https://www.federalreserve.gov/newsevents/pressreleases/other20260522a.htm</li>
-<li>Bank of Japan 2026-06-16 decision PDF: https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260616a.pdf</li>
-<li>Reuters / Investing.com NVIDIA bond report: https://www.investing.com/news/stock-market-news/nvidia-to-raise-20-billion-source-says-in-first-corporate-bond-issuance-in-five-years-4742424</li>
-<li>Guardian / Reuters Anthropic export-control report: https://www.theguardian.com/technology/2026/jun/13/anthropic-disable-advanced-ai-models-us-government-order</li>
-</ul>
-</li>
-<li>代號校正：SpaceX 以 <code>SPCX</code> 標示；Circle Internet Group 應為 <code>CRCL</code>；CoreWeave 為 <code>CRWV</code>、CrowdStrike 為 <code>CRWD</code>；昇達科為 <code>3491.TW</code>。本輪 NotebookLM 錯誤檢查另指出 <code>STM</code> 應改為 <code>VSH</code>，故觀察名單使用 TXN / VSH / Infineon，不再列 STM。</li>
-<li>台股常用代號補正：台積電 <code>2330.TW</code>、群創 <code>3481.TW</code>、南亞科 <code>2408.TW</code>、華邦電 <code>2344.TW</code>、群聯 <code>8299.TW</code>、臻鼎-KY <code>4958.TW</code>、日月光投控 <code>3711.TW</code>、力成 <code>6239.TW</code>、欣興 <code>3037.TW</code>、南電 <code>8046.TW</code>、景碩 <code>3189.TW</code>、聯發科 <code>2454.TW</code>、鴻海 <code>2317.TW</code>、廣達 <code>2382.TW</code>、台達電 <code>2308.TW</code>、潤泰全 <code>2915.TW</code>、潤泰新 <code>9945.TW</code>。</li>
-<li>來源中的口語價格、逐字稿價格或支撐壓力點位未逐一回查；若涉及交易點位，全部標記為 <code>待查證</code>，不得直接作為下單依據。</li>
-<li><code>現在可以買名單</code> 保留來源主觀語氣，但本報告已改寫為「可優先研究 / 小量分批研究 / 等條件確認」；後續 SOP 仍會再以 A/B/C/Reject 研究優先級重評。</li>
-<li>ETF、指數、商品與族群題材只作 tracker 或觀察，不與單一公司 alpha thesis 同級；GLD、USO、XLE、TLT 等若進入下游 public-equity workflow，應以 Reject / tracker 處理。</li>
-</ul>
 
     <footer class="mt-9 border-t border-slate-200 pt-5 text-sm text-slate-500">
       本頁由 KOL / 新聞決策報告產生，內容僅作一般化研究輔助，不構成個人化投資建議或下單指令。

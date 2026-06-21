@@ -27,13 +27,6 @@
 </header>
 
     <p>本報告以已產出的 K 線警報掃描日報為來源，由 AI agent 進行規則化整理與風險分層。內容僅作研究輔助與情境推演，不構成個人化投資建議、投顧服務或下單指令。</p>
-<h2>資料來源與限制</h2>
-<ul>
-<li>資料日：2026-06-15</li>
-<li>產生時間：2026-06-16 14:12:49</li>
-<li>決策分層僅使用日報中的 K 線策略、開高低收、成交量與成交金額欄位；未接 NotebookLM、新聞、財報或 SQLite 補充資料。</li>
-<li><code>產業</code> 欄位會嘗試用網路公開資料補強；未命中時保留 <code>資料未提供</code>。</li>
-</ul>
 <h2>補充資料搜尋來源</h2>
 <ul>
 <li>網路補強：已啟用，補到產業資料 41 檔，未命中 0 檔。</li>
@@ -50,233 +43,7 @@
 </ul>
 </li>
 </ul>
-<h2>策略訊號總覽</h2>
-<div class="table-scroll"><table>
-<thead>
-<tr>
-<th>項目</th>
-<th style="text-align:right">數值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>原始命中列</td>
-<td style="text-align:right">41</td>
-</tr>
-<tr>
-<td>合併後標的</td>
-<td style="text-align:right">41</td>
-</tr>
-<tr>
-<td>賣點觸發標的</td>
-<td style="text-align:right">35</td>
-</tr>
-<tr>
-<td>現在可以小量分批研究</td>
-<td style="text-align:right">13</td>
-</tr>
-<tr>
-<td>等買點或確認</td>
-<td style="text-align:right">21</td>
-</tr>
-<tr>
-<td>觀察</td>
-<td style="text-align:right">0</td>
-</tr>
-<tr>
-<td>暫時排除</td>
-<td style="text-align:right">7</td>
-</tr>
-</tbody>
-</table></div>
-<h2>賣點觸發清單</h2>
-<div class="table-scroll"><table class="research-table"><colgroup><col style="width: 180px"><col style="width: 220px"><col style="width: 220px"></colgroup>
-<thead>
-<tr>
-<th>代號</th>
-<th>名稱</th>
-<th style="text-align:right">觸及賣點數</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/AMT" rel="noopener noreferrer" target="_blank">AMT</a><a aria-label="在 TradingView 開啟 AMT" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/AMT/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 AMT"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
-<td>American Tower Corporation (REIT) Common Stock</td>
-<td style="text-align:right">3</td>
-</tr>
-<tr>
-<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/BTU" rel="noopener noreferrer" target="_blank">BTU</a><a aria-label="在 TradingView 開啟 BTU" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/BTU/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 BTU"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
-<td>Peabody Energy Corporation Common Stock</td>
-<td style="text-align:right">3</td>
-</tr>
-<tr>
-<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/CNM" rel="noopener noreferrer" target="_blank">CNM</a><a aria-label="在 TradingView 開啟 CNM" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/CNM/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 CNM"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
-<td>Core &amp; Main, Inc. Class A Common Stock</td>
-<td style="text-align:right">3</td>
-</tr>
-<tr>
-<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/PRCT" rel="noopener noreferrer" target="_blank">PRCT</a><a aria-label="在 TradingView 開啟 PRCT" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/PRCT/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 PRCT"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
-<td>PROCEPT BioRobotics Corporation - Common Stock</td>
-<td style="text-align:right">3</td>
-</tr>
-<tr>
-<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/RXO" rel="noopener noreferrer" target="_blank">RXO</a><a aria-label="在 TradingView 開啟 RXO" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/RXO/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 RXO"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
-<td>RXO, Inc. Common Stock</td>
-<td style="text-align:right">3</td>
-</tr>
-<tr>
-<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/AMH" rel="noopener noreferrer" target="_blank">AMH</a><a aria-label="在 TradingView 開啟 AMH" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/AMH/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 AMH"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
-<td>American Homes 4 Rent Common Shares of Beneficial Interest</td>
-<td style="text-align:right">2</td>
-</tr>
-<tr>
-<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/CWAN" rel="noopener noreferrer" target="_blank">CWAN</a><a aria-label="在 TradingView 開啟 CWAN" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/CWAN/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 CWAN"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
-<td>Clearwater Analytics Holdings, Inc. Class A Common Stock</td>
-<td style="text-align:right">2</td>
-</tr>
-<tr>
-<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/FOX" rel="noopener noreferrer" target="_blank">FOX</a><a aria-label="在 TradingView 開啟 FOX" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/FOX/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 FOX"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
-<td>Fox Corporation - Class B Common Stock</td>
-<td style="text-align:right">2</td>
-</tr>
-<tr>
-<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/FOXA" rel="noopener noreferrer" target="_blank">FOXA</a><a aria-label="在 TradingView 開啟 FOXA" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/FOXA/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 FOXA"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
-<td>Fox Corporation - Class A Common Stock</td>
-<td style="text-align:right">2</td>
-</tr>
-<tr>
-<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/MNTS" rel="noopener noreferrer" target="_blank">MNTS</a><a aria-label="在 TradingView 開啟 MNTS" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/MNTS/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 MNTS"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
-<td>Momentus Inc. - Class A Common Stock</td>
-<td style="text-align:right">2</td>
-</tr>
-<tr>
-<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/NN" rel="noopener noreferrer" target="_blank">NN</a><a aria-label="在 TradingView 開啟 NN" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/NN/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 NN"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
-<td>NextNav Inc. - Common stock</td>
-<td style="text-align:right">2</td>
-</tr>
-<tr>
-<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/NOV" rel="noopener noreferrer" target="_blank">NOV</a><a aria-label="在 TradingView 開啟 NOV" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/NOV/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 NOV"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
-<td>NOV Inc. Common Stock</td>
-<td style="text-align:right">2</td>
-</tr>
-<tr>
-<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/PBF" rel="noopener noreferrer" target="_blank">PBF</a><a aria-label="在 TradingView 開啟 PBF" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/PBF/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 PBF"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
-<td>PBF Energy Inc. Class A Common Stock</td>
-<td style="text-align:right">2</td>
-</tr>
-<tr>
-<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/PLAY" rel="noopener noreferrer" target="_blank">PLAY</a><a aria-label="在 TradingView 開啟 PLAY" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/PLAY/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 PLAY"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
-<td>Dave &amp; Buster's Entertainment, Inc. - Common Stock</td>
-<td style="text-align:right">2</td>
-</tr>
-<tr>
-<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/SHEL" rel="noopener noreferrer" target="_blank">SHEL</a><a aria-label="在 TradingView 開啟 SHEL" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/SHEL/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 SHEL"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
-<td>Shell PLC American Depositary Shares (each representing two (2) Ordinary Shares)</td>
-<td style="text-align:right">2</td>
-</tr>
-<tr>
-<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/SPCE" rel="noopener noreferrer" target="_blank">SPCE</a><a aria-label="在 TradingView 開啟 SPCE" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/SPCE/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 SPCE"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
-<td>Virgin Galactic Holdings, Inc. Common Stock</td>
-<td style="text-align:right">2</td>
-</tr>
-<tr>
-<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/YPF" rel="noopener noreferrer" target="_blank">YPF</a><a aria-label="在 TradingView 開啟 YPF" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/YPF/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 YPF"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
-<td>YPF Sociedad Anonima Common Stock</td>
-<td style="text-align:right">2</td>
-</tr>
-<tr>
-<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/AA" rel="noopener noreferrer" target="_blank">AA</a><a aria-label="在 TradingView 開啟 AA" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/AA/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 AA"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
-<td>Alcoa Corporation Common Stock</td>
-<td style="text-align:right">1</td>
-</tr>
-<tr>
-<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/AMPG" rel="noopener noreferrer" target="_blank">AMPG</a><a aria-label="在 TradingView 開啟 AMPG" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/AMPG/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 AMPG"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
-<td>Amplitech Group, Inc. - Common Stock</td>
-<td style="text-align:right">1</td>
-</tr>
-<tr>
-<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/APG" rel="noopener noreferrer" target="_blank">APG</a><a aria-label="在 TradingView 開啟 APG" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/APG/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 APG"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
-<td>APi Group Corporation Common Stock</td>
-<td style="text-align:right">1</td>
-</tr>
-<tr>
-<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/ASTS" rel="noopener noreferrer" target="_blank">ASTS</a><a aria-label="在 TradingView 開啟 ASTS" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/ASTS/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 ASTS"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
-<td>AST SpaceMobile, Inc. - Class A Common Stock</td>
-<td style="text-align:right">1</td>
-</tr>
-<tr>
-<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/BEKE" rel="noopener noreferrer" target="_blank">BEKE</a><a aria-label="在 TradingView 開啟 BEKE" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/BEKE/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 BEKE"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
-<td>KE Holdings Inc American Depositary Shares (each representing three Class A Ordinary Shares)</td>
-<td style="text-align:right">1</td>
-</tr>
-<tr>
-<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/DKNG" rel="noopener noreferrer" target="_blank">DKNG</a><a aria-label="在 TradingView 開啟 DKNG" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/DKNG/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 DKNG"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
-<td>DraftKings Inc. - Class A Common Stock</td>
-<td style="text-align:right">1</td>
-</tr>
-<tr>
-<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/ELVN" rel="noopener noreferrer" target="_blank">ELVN</a><a aria-label="在 TradingView 開啟 ELVN" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/ELVN/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 ELVN"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
-<td>Enliven Therapeutics, Inc.  - Common Stock</td>
-<td style="text-align:right">1</td>
-</tr>
-<tr>
-<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/GTX" rel="noopener noreferrer" target="_blank">GTX</a><a aria-label="在 TradingView 開啟 GTX" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/GTX/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 GTX"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
-<td>Garrett Motion Inc. - Common Stock</td>
-<td style="text-align:right">1</td>
-</tr>
-<tr>
-<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/KHC" rel="noopener noreferrer" target="_blank">KHC</a><a aria-label="在 TradingView 開啟 KHC" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/KHC/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 KHC"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
-<td>The Kraft Heinz Company - Common Stock</td>
-<td style="text-align:right">1</td>
-</tr>
-<tr>
-<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/ONDS" rel="noopener noreferrer" target="_blank">ONDS</a><a aria-label="在 TradingView 開啟 ONDS" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/ONDS/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 ONDS"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
-<td>Ondas Inc - Common Stock</td>
-<td style="text-align:right">1</td>
-</tr>
-<tr>
-<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/PINS" rel="noopener noreferrer" target="_blank">PINS</a><a aria-label="在 TradingView 開啟 PINS" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/PINS/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 PINS"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
-<td>Pinterest, Inc. Class A Common Stock</td>
-<td style="text-align:right">1</td>
-</tr>
-<tr>
-<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/PR" rel="noopener noreferrer" target="_blank">PR</a><a aria-label="在 TradingView 開啟 PR" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/PR/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 PR"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
-<td>Permian Resources Corporation Class A Common Stock</td>
-<td style="text-align:right">1</td>
-</tr>
-<tr>
-<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/PSX" rel="noopener noreferrer" target="_blank">PSX</a><a aria-label="在 TradingView 開啟 PSX" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/PSX/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 PSX"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
-<td>Phillips 66 Common Stock</td>
-<td style="text-align:right">1</td>
-</tr>
-<tr>
-<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/RDW" rel="noopener noreferrer" target="_blank">RDW</a><a aria-label="在 TradingView 開啟 RDW" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/RDW/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 RDW"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
-<td>Redwire Corporation Common Stock</td>
-<td style="text-align:right">1</td>
-</tr>
-<tr>
-<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/SIDU" rel="noopener noreferrer" target="_blank">SIDU</a><a aria-label="在 TradingView 開啟 SIDU" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/SIDU/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 SIDU"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
-<td>Sidus Space, Inc. - Class A Common Stock</td>
-<td style="text-align:right">1</td>
-</tr>
-<tr>
-<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/UPST" rel="noopener noreferrer" target="_blank">UPST</a><a aria-label="在 TradingView 開啟 UPST" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/UPST/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 UPST"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
-<td>Upstart Holdings, Inc. - Common stock</td>
-<td style="text-align:right">1</td>
-</tr>
-<tr>
-<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/VICI" rel="noopener noreferrer" target="_blank">VICI</a><a aria-label="在 TradingView 開啟 VICI" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/VICI/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 VICI"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
-<td>VICI Properties Inc. Common Stock</td>
-<td style="text-align:right">1</td>
-</tr>
-<tr>
-<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/VTR" rel="noopener noreferrer" target="_blank">VTR</a><a aria-label="在 TradingView 開啟 VTR" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/VTR/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 VTR"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
-<td>Ventas, Inc. Common Stock</td>
-<td style="text-align:right">1</td>
-</tr>
-</tbody>
-</table></div>
-<h2>現在可以小量分批研究名單</h2>
+<h2>現在可以買名單</h2>
 <div class="table-scroll"><table class="research-table"><colgroup><col style="width: 110px"><col style="width: 160px"><col style="width: 180px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"></colgroup>
 <thead>
 <tr>
@@ -783,7 +550,7 @@
 </tr>
 </tbody>
 </table></div>
-<h2>最終精選名單</h2>
+<h2>題材、未來發展與稀缺性觀察名單</h2>
 <div class="table-scroll"><table class="research-table"><colgroup><col style="width: 110px"><col style="width: 160px"><col style="width: 180px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"></colgroup>
 <thead>
 <tr>
@@ -1028,6 +795,8 @@
 <li>對低價、低成交金額、過大振幅與重上影線標的，本報告會優先降級或排除。</li>
 <li>Futu/Moomoo OpenAPI 已列入常用來源清單；因需本機 OpenD gateway 與帳號權限，這版只列為人工複核/後續整合來源。</li>
 </ul>
+<h2>賣點觸發清單</h2>
+<p>無符合名單。</p>
 
     <footer class="mt-9 border-t border-slate-200 pt-5 text-sm text-slate-500">
       本頁由 K-line 決策報告產生，內容僅作一般化研究輔助，不構成個人化投資建議或下單指令。

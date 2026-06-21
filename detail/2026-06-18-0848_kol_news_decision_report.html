@@ -341,7 +341,7 @@
 </tr>
 <tr>
 <td style="text-align:left">美股</td>
-<td style="text-align:left"><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/SPCX" rel="noopener noreferrer" target="_blank">SPCX</a><a aria-label="在 TradingView 開啟 SPCX" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/SPCX/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 SPCX"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> (Space Exploration Technologies Corp (SpaceX))</td>
+<td style="text-align:left"><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/SPCX" rel="noopener noreferrer" target="_blank">SPCX</a><a aria-label="在 TradingView 開啟 SPCX" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/SPCX/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 SPCX"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> (SpaceX))</td>
 <td style="text-align:left">航太(推論)</td>
 <td style="text-align:left">中</td>
 <td style="text-align:left">不建議追高</td>
@@ -451,6 +451,17 @@
 </tr>
 </tbody>
 </table></div>
+<h2>重要校正與限制</h2>
+<ul>
+<li>NotebookLM 覆蓋狀態：<code>2026-06-18-0848</code> notebook 目前 6 筆來源全為 ready，其中 1 筆為 <code>2026-06-17-2233</code> 合併 Markdown source。原始匯入紀錄顯示 <code>2026-06-18-0848</code> 匯入 4 筆 YouTube、失敗 4 筆；<code>2026-06-17-2233</code> 匯入 18 筆 YouTube、失敗 2 筆。兩個 run 的新聞整合皆為 ready=4、errors=0、empty=1。</li>
+<li>外部校正：美國聯準會官網確認 Kevin Warsh 於 2026-05-22 宣誓為 Fed Chair，並由 FOMC 選為主席；因此報告中 Warsh 相關內容可視為「來源主線與官方身分一致」，但利率路徑與市場反應仍以來源說法為主。來源：<a href="https://www.federalreserve.gov/newsevents/pressreleases/other20260522a.htm">Federal Reserve</a>。</li>
+<li>外部校正：<code>SPCX</code> 對應 Space Exploration Technologies Corp (SpaceX) 的 Nasdaq ticker；但此標的屬新上市、高波動與高估值討論，仍列為暫時排除 / 不追高。來源：<a href="https://www.tradingview.com/symbols/NASDAQ-SPCX/">TradingView SPCX</a>。</li>
+<li>外部校正：<code>佳凌</code> 代號校正為 <code>4976</code>，不是 NotebookLM 初稿推論的 <code>4915</code>。來源：<a href="https://www.cnyes.com/twstock/4976">鉅亨網 佳凌 4976</a>。</li>
+<li>外部校正：<code>台灣虎航</code> 代號為 <code>6757</code>，產業為航運 / 民用航空運輸；報告已將 NotebookLM 的「虎航」補正為台灣虎航。來源：<a href="https://www.twse.com.tw/pdf/ch/6757_ch.pdf">TWSE 6757 個股資訊 PDF</a>。</li>
+<li>代號補正：部分台股由 YouTube 逐字稿音譯或口語名稱推回正式公司名與代號，包括華邦電 2344、南亞科 2408、鴻海 2317、豐泰 9910、寶成 9904、百和 9938、富邦媒 8454、威盛 2388、台達電 2308、翔名 8091、金山電 8042、景碩 3189、立隆電 2472、欣興 3037、臻鼎-KY 4958、星宇航空 2646。這些補正是 agent 校正，不代表來源逐字稿均有明確講出代號。</li>
+<li>未完全查證：FOMC 利率細節、CPI / 零售銷售數字、DeepSeek 企業市占、鴻海法國合作對象細節、個股支撐壓力價位與日內交易點位，仍以 NotebookLM 來源摘要與 KOL 主觀看法呈現；若要進入交易或正式研究，需回查原影片、公司公告、交易所資料與最新行情。</li>
+<li>分類限制：<code>現在可以買名單</code> 表示來源與 agent 初篩認為可列為研究優先觀察，不是下單建議；高波動題材、資料不足或需等待觸發條件者已盡量放入 B 類等待、觀察或排除。</li>
+</ul>
 <h2>題材、未來發展與稀缺性觀察名單</h2>
 <div class="table-scroll"><table class="research-table"><colgroup><col style="width: 110px"><col style="width: 160px"><col style="width: 180px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"></colgroup>
 <thead>
@@ -689,17 +700,6 @@
 </tr>
 </tbody>
 </table></div>
-<h2>重要校正與限制</h2>
-<ul>
-<li>NotebookLM 覆蓋狀態：<code>2026-06-18-0848</code> notebook 目前 6 筆來源全為 ready，其中 1 筆為 <code>2026-06-17-2233</code> 合併 Markdown source。原始匯入紀錄顯示 <code>2026-06-18-0848</code> 匯入 4 筆 YouTube、失敗 4 筆；<code>2026-06-17-2233</code> 匯入 18 筆 YouTube、失敗 2 筆。兩個 run 的新聞整合皆為 ready=4、errors=0、empty=1。</li>
-<li>外部校正：美國聯準會官網確認 Kevin Warsh 於 2026-05-22 宣誓為 Fed Chair，並由 FOMC 選為主席；因此報告中 Warsh 相關內容可視為「來源主線與官方身分一致」，但利率路徑與市場反應仍以來源說法為主。來源：<a href="https://www.federalreserve.gov/newsevents/pressreleases/other20260522a.htm">Federal Reserve</a>。</li>
-<li>外部校正：<code>SPCX</code> 對應 Space Exploration Technologies Corp (SpaceX) 的 Nasdaq ticker；但此標的屬新上市、高波動與高估值討論，仍列為暫時排除 / 不追高。來源：<a href="https://www.tradingview.com/symbols/NASDAQ-SPCX/">TradingView SPCX</a>。</li>
-<li>外部校正：<code>佳凌</code> 代號校正為 <code>4976</code>，不是 NotebookLM 初稿推論的 <code>4915</code>。來源：<a href="https://www.cnyes.com/twstock/4976">鉅亨網 佳凌 4976</a>。</li>
-<li>外部校正：<code>台灣虎航</code> 代號為 <code>6757</code>，產業為航運 / 民用航空運輸；報告已將 NotebookLM 的「虎航」補正為台灣虎航。來源：<a href="https://www.twse.com.tw/pdf/ch/6757_ch.pdf">TWSE 6757 個股資訊 PDF</a>。</li>
-<li>代號補正：部分台股由 YouTube 逐字稿音譯或口語名稱推回正式公司名與代號，包括華邦電 2344、南亞科 2408、鴻海 2317、豐泰 9910、寶成 9904、百和 9938、富邦媒 8454、威盛 2388、台達電 2308、翔名 8091、金山電 8042、景碩 3189、立隆電 2472、欣興 3037、臻鼎-KY 4958、星宇航空 2646。這些補正是 agent 校正，不代表來源逐字稿均有明確講出代號。</li>
-<li>未完全查證：FOMC 利率細節、CPI / 零售銷售數字、DeepSeek 企業市占、鴻海法國合作對象細節、個股支撐壓力價位與日內交易點位，仍以 NotebookLM 來源摘要與 KOL 主觀看法呈現；若要進入交易或正式研究，需回查原影片、公司公告、交易所資料與最新行情。</li>
-<li>分類限制：<code>現在可以買名單</code> 表示來源與 agent 初篩認為可列為研究優先觀察，不是下單建議；高波動題材、資料不足或需等待觸發條件者已盡量放入 B 類等待、觀察或排除。</li>
-</ul>
 
     <footer class="mt-9 border-t border-slate-200 pt-5 text-sm text-slate-500">
       本頁由 KOL / 新聞決策報告產生，內容僅作一般化研究輔助，不構成個人化投資建議或下單指令。
