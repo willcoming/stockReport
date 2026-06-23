@@ -1,0 +1,726 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-06-23-1312 KOL 觀點、新聞重點與投資決策報告</title>
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="stylesheet" href="../assets/report-center.css">
+</head>
+<body class="bg-slate-50 text-neutral-950 antialiased">
+
+<main class="w-full px-4 py-6 md:px-6 xl:px-8">
+  <nav class="mb-6 flex items-center justify-between text-sm text-slate-600">
+    <a class="font-bold tracking-normal text-neutral-950 underline decoration-emerald-700/30 underline-offset-4 hover:text-emerald-800" href="../index.html">← 報告中心</a>
+  </nav>
+  <article class="article-body w-full bg-white p-4 md:p-6 xl:p-8">
+    
+<header class="mb-7 border-b border-slate-200 pb-6">
+  <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+    <div class="min-w-0">
+      <span class="inline-flex w-fit items-center rounded-full border border-slate-300 px-2.5 py-1 text-xs text-slate-600">KOL · KOL / 新聞研究行動</span>
+      <h1 class="mt-3 text-3xl font-black leading-tight tracking-normal md:text-4xl">2026-06-23-1312 KOL 觀點、新聞重點與投資決策報告</h1>
+    </div>
+    <div class="shrink-0 rounded-md border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-600">
+      產出時間：<strong class="font-semibold text-neutral-950">2026-06-23 13:25:16</strong>
+    </div>
+  </div>
+</header>
+
+    <p>本報告以 NotebookLM <code>2026-06-23-1312 投資情報</code> 來源為主，並由 AI agent 進行結構化整理與關鍵事實查證。內容僅作研究輔助與情境推演，不構成個人化投資建議、投顧服務或下單指令。本報告的「現在可以買 / 等待買點 / 暫時排除」是 NotebookLM 來源覆蓋與 agent 分類校正結果，不是 PEI 的 DCF 估值或模型投組結論。</p>
+<h2>重要校正與限制</h2>
+<ul>
+<li>NotebookLM notebook 內部共有 6 個 ready 來源、0 個 error 來源；原始匯入階段另有 3 個 YouTube 來源失敗，新聞來源 5 個設定中 4 個 ready、1 個 empty。</li>
+<li>台股代號以 TWSE / TPEx 公開公司基本資料核對；來源未明確給代號但可由交易所資料校正者，於表格中保留代號並在風險欄標示 <code>agent 校正</code>。</li>
+<li>NotebookLM 錯誤檢查指出，前一輪回覆曾把部分 KOL 主觀語句寫成客觀事實；本版已改為 <code>來源主觀看法</code> 或 <code>推論</code>，例如 Meta 開源模型投資回收、記憶體「博傻階段」、GETY 暴漲後回吐風險。</li>
+<li>韓股 SK 海力士、三星電子，以及來源只作背景提及的 Apple、Uber 等，未納入 PEI 等待買點 universe；若需研究，應另開支援市場或人工補來源。</li>
+<li>SEC enrich 因 <code>SEC_USER_AGENT</code> 未設定而跳過；多檔 GDELT 新聞補強遇到 429 或連線錯誤，因此本報告對美股新聞熱度採保守解讀。</li>
+</ul>
+<h2>KOL 觀點總覽</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>KOL / 來源</th>
+<th>主要市場</th>
+<th>核心主線</th>
+<th>看多標的或族群</th>
+<th>看空 / 避免標的或族群</th>
+<th>進場策略</th>
+<th>風險提醒</th>
+<th>觀點性質</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>投資TALK君</td>
+<td>美股</td>
+<td>大科技估值回調、AI CapEx 報酬率與開源/閉源模型定價權</td>
+<td>Intel、低成本開源模型應用</td>
+<td>Tesla、短期估值壓力下的 Microsoft、Meta 利潤率壓力、昂貴閉源模型代理</td>
+<td>Microsoft 若續跌至原規劃權重下緣才觀察加碼；Meta 要看 1-2 季利潤率能否維持</td>
+<td>折舊與資本支出上升可能壓縮 FCF 與估值倍數</td>
+<td>偏基本面</td>
+</tr>
+<tr>
+<td>辣個分析師 Vic</td>
+<td>台股</td>
+<td>AI 伺服器高壓化帶動二極體、MOSFET、IGBT、繼電器與成熟製程報價</td>
+<td>分離式元件、矽晶圓、成熟製程、繼電器、散熱</td>
+<td>連續漲停或低流動性新掛牌標的</td>
+<td>強勢股不追高，拉回 5 日或 10 日線再評估；低量股先小量觀察</td>
+<td>題材熱度高，若量能退潮或支撐失守，回檔速度可能很快</td>
+<td>偏技術籌碼</td>
+</tr>
+<tr>
+<td>NaNa 說美股</td>
+<td>美股</td>
+<td>季末再平衡、流動性邊際收緊與資金從 M7 轉向底層硬體</td>
+<td>記憶體、底層晶片、部分量子題材</td>
+<td>雲端大廠、AI 資料中心基建、航空航太概念、Netflix</td>
+<td>不建議散戶在擁擠題材上追高</td>
+<td>季末賣股買債、日圓套利交易風險、VIX 可能升高</td>
+<td>偏總經</td>
+</tr>
+<tr>
+<td>矽谷 101 / RSI 訪談</td>
+<td>一級市場與 AI 題材</td>
+<td>AI 投資焦點可能由 coding 轉向 AI 自主科研與 AI for science</td>
+<td>AI 自主科研、新藥/新材料/自我改進工具</td>
+<td>容易被通用大模型取代的垂直應用</td>
+<td>資料不足，偏長期題材觀察</td>
+<td>垂直應用護城河可能被通用模型進步侵蝕</td>
+<td>偏題材</td>
+</tr>
+</tbody>
+</table></div>
+<h2>近期新聞重點</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>主題</th>
+<th>客觀事實</th>
+<th>影響市場 / 產業</th>
+<th>受影響股票或族群</th>
+<th>多空解讀</th>
+<th>需要追蹤的後續指標</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>總體與流動性</td>
+<td>來源提到季末大型退休金再平衡、避險基金淨賣出全球股票、日圓急跌與美伊談判變化</td>
+<td>股債配置與套息交易可能造成短線波動</td>
+<td>美股大盤、美債、原油</td>
+<td>短線偏空，風險資產可能承受流動性壓力；原油地緣溢價下降</td>
+<td>VIX、日圓走勢、退休金再平衡、油價與談判落實</td>
+</tr>
+<tr>
+<td>科技巨頭資本支出</td>
+<td>來源提到 Google FCF 下滑、NVIDIA 發債、Meta 折舊增速與資料中心建設放緩</td>
+<td>大科技重資產化，折舊與利息壓力提高</td>
+<td>Microsoft、Google、Amazon、Meta、NVIDIA、資料中心鏈</td>
+<td>對雲端巨頭估值偏壓抑，需證明 CapEx 可轉化為利潤</td>
+<td>Q2/Q3 利潤率、折舊、FCF、資料中心開工率</td>
+</tr>
+<tr>
+<td>半導體供應鏈</td>
+<td>成熟製程減產、矽晶圓漲價預期、AI 伺服器高壓化、記憶體技術突破</td>
+<td>成熟製程、分離式元件、矽晶圓、記憶體受惠</td>
+<td>聯電、世界先進、環球晶、台勝科、分離式元件、MU、SNDK</td>
+<td>題材偏多，但短線籌碼可能過熱</td>
+<td>報價、月營收、毛利率、出貨與實際產能利用率</td>
+</tr>
+<tr>
+<td>AI 模型商品化</td>
+<td>來源提到模型人才流動、閉源 API 成本、開源模型追趕、AI 內容授權</td>
+<td>閉源模型定價權受挑戰，應用與授權端可能受惠</td>
+<td>Google、Microsoft、Anthropic、OpenAI、GETY、Netflix</td>
+<td>閉源大廠偏壓抑，應用/版權端偏題材</td>
+<td>API 定價、企業端採用、授權收入、內容製作成本</td>
+</tr>
+<tr>
+<td>量子與航太政策</td>
+<td>來源提到美國量子相關行政命令、航太概念股合約與債務疑慮</td>
+<td>政策題材支撐量子，航太高槓桿題材風險升高</td>
+<td>IBM、量子小型股、SPXC 類航太概念</td>
+<td>量子偏多但需確認採購，航太偏空</td>
+<td>政府預算、採購時程、公司現金流與債務</td>
+</tr>
+</tbody>
+</table></div>
+<h2>現在可以買名單</h2>
+<div class="table-scroll"><table class="research-table"><colgroup><col style="width: 110px"><col style="width: 160px"><col style="width: 180px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"></colgroup>
+<thead>
+<tr>
+<th>市場</th>
+<th>代號 / 公司</th>
+<th>產業</th>
+<th>來源提及程度</th>
+<th>來源主觀看法</th>
+<th>布局建議</th>
+<th>持倉建議</th>
+<th>追蹤指標</th>
+<th>風險</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>美股</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/INTC" rel="noopener noreferrer" target="_blank">INTC</a><a aria-label="在 TradingView 開啟 INTC" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/INTC/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 INTC"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>半導體</td>
+<td>高</td>
+<td>偏多</td>
+<td>僅限小量分批研究觀察；後續交由 PEI 驗證估值</td>
+<td>研究觀察</td>
+<td>晶圓代工合作案、政府政策支持、CapEx 報酬率</td>
+<td>推論：技術落地、良率與台積電競爭仍是主要不確定性</td>
+</tr>
+<tr>
+<td>台股</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2303" rel="noopener noreferrer" target="_blank">2303(聯電)</a><a aria-label="在 TradingView 開啟 2303" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=TWSE%3A2303" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2303"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>晶圓代工</td>
+<td>中</td>
+<td>偏多</td>
+<td>可納入成熟製程循環回升的 PEI 研究池</td>
+<td>研究觀察</td>
+<td>與 Intel 合作進度、成熟製程報價、產能利用率</td>
+<td>推論：資金輪動太快可能造成短線波動</td>
+</tr>
+<tr>
+<td>美股</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/UMC" rel="noopener noreferrer" target="_blank">UMC</a><a aria-label="在 TradingView 開啟 UMC" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/UMC/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 UMC"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>晶圓代工</td>
+<td>中</td>
+<td>偏多</td>
+<td>可納入成熟製程循環回升的 PEI 研究池</td>
+<td>研究觀察</td>
+<td>與 Intel 合作進度、成熟製程報價、ADR 與台股價差</td>
+<td>推論：ADR 匯率與流動性造成短線波動</td>
+</tr>
+<tr>
+<td>台股</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/5347" rel="noopener noreferrer" target="_blank">5347(世界先進)</a><a aria-label="在 TradingView 開啟 5347" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=TPEX%3A5347" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 5347"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>晶圓代工</td>
+<td>中</td>
+<td>偏多</td>
+<td>可納入成熟製程報價回升研究池</td>
+<td>研究觀察</td>
+<td>PMIC 需求、成熟製程報價、月營收</td>
+<td>推論：大盤流動性收緊可能拖累估值</td>
+</tr>
+<tr>
+<td>台股</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6488" rel="noopener noreferrer" target="_blank">6488(環球晶)</a><a aria-label="在 TradingView 開啟 6488" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=TPEX%3A6488" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6488"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>矽晶圓</td>
+<td>中</td>
+<td>偏多</td>
+<td>以報價回升作為分批研究條件</td>
+<td>研究觀察</td>
+<td>下半年矽晶圓調價、訂單能見度</td>
+<td>推論：終端消費電子復甦不如預期</td>
+</tr>
+<tr>
+<td>台股</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3532" rel="noopener noreferrer" target="_blank">3532(台勝科)</a><a aria-label="在 TradingView 開啟 3532" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=TWSE%3A3532" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3532"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>矽晶圓</td>
+<td>低</td>
+<td>偏多</td>
+<td>以 8 吋晶圓價格與月營收驗證</td>
+<td>研究觀察</td>
+<td>8 吋晶圓報價、月營收、產能利用率</td>
+<td>推論：需求復甦若未延續，題材可能降溫</td>
+</tr>
+<tr>
+<td>美股</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/IBM" rel="noopener noreferrer" target="_blank">IBM</a><a aria-label="在 TradingView 開啟 IBM" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/IBM/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 IBM"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>資訊科技 / 量子計算</td>
+<td>低</td>
+<td>偏多</td>
+<td>僅作政策題材研究池，不以短線追價</td>
+<td>研究觀察</td>
+<td>PQC 採購、量子相關政府預算與商業化進度</td>
+<td>推論：政策執行延宕或預算縮減</td>
+</tr>
+<tr>
+<td>美股</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/SNDK" rel="noopener noreferrer" target="_blank">SNDK</a><a aria-label="在 TradingView 開啟 SNDK" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/SNDK/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 SNDK"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>記憶體</td>
+<td>低</td>
+<td>偏多</td>
+<td>納入記憶體與 3D NAND 題材研究池</td>
+<td>研究觀察</td>
+<td>3D NAND 技術商轉、記憶體報價、量產時程</td>
+<td>推論：新技術良率或市場接受度不如預期</td>
+</tr>
+</tbody>
+</table></div>
+<h2>現在不能買，但值得等買點名單</h2>
+<div class="table-scroll"><table class="research-table"><colgroup><col style="width: 110px"><col style="width: 160px"><col style="width: 180px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"></colgroup>
+<thead>
+<tr>
+<th>市場</th>
+<th>代號 / 公司</th>
+<th>產業</th>
+<th>來源提及程度</th>
+<th>來源主觀看法</th>
+<th>布局建議</th>
+<th>持倉建議</th>
+<th>追蹤指標</th>
+<th>風險</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>台股</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6693" rel="noopener noreferrer" target="_blank">6693(廣閎科)</a><a aria-label="在 TradingView 開啟 6693" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=TPEX%3A6693" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6693"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>分離式元件</td>
+<td>高</td>
+<td>不建議追高</td>
+<td>等拉回 5 日或 10 日均線、量能不失控再研究</td>
+<td>空手等待</td>
+<td>短均支撐、量價結構、月營收</td>
+<td>連續漲停後追高風險高</td>
+</tr>
+<tr>
+<td>台股</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6525" rel="noopener noreferrer" target="_blank">6525(捷敏-KY)</a><a aria-label="在 TradingView 開啟 6525" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=TWSE%3A6525" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6525"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>半導體封測</td>
+<td>中</td>
+<td>偏多</td>
+<td>等拉回支撐與籌碼轉買再研究</td>
+<td>空手等待 / 續抱者嚴守風控</td>
+<td>月營收、外資與主力籌碼、封測需求</td>
+<td>推論：AI 伺服器高壓封測需求若放緩會壓抑評價</td>
+</tr>
+<tr>
+<td>台股</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/7788" rel="noopener noreferrer" target="_blank">7788(松川精密)</a><a aria-label="在 TradingView 開啟 7788" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=TWSE%3A7788" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 7788"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>繼電器</td>
+<td>中</td>
+<td>偏多</td>
+<td>等 10 日線附近支撐確認</td>
+<td>空手等待 / 續抱者觀察</td>
+<td>併購後產能、AI 伺服器電源規格、月營收</td>
+<td>推論：規格變更或同業替代</td>
+</tr>
+<tr>
+<td>台股</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/7768" rel="noopener noreferrer" target="_blank">7768(頌勝科技)</a><a aria-label="在 TradingView 開啟 7768" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=TWSE%3A7768" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 7768"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>半導體研磨墊</td>
+<td>中</td>
+<td>中性觀察</td>
+<td>agent 校正代號；先等成交量與產能驗證</td>
+<td>少量研究觀察</td>
+<td>產能滿載、擴產、成交量</td>
+<td>流動性較低，估值與成交量需另外驗證</td>
+</tr>
+<tr>
+<td>台股</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3338" rel="noopener noreferrer" target="_blank">3338(泰碩)</a><a aria-label="在 TradingView 開啟 3338" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=TWSE%3A3338" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3338"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>散熱</td>
+<td>中</td>
+<td>中性觀察</td>
+<td>等實質營收年增率上升</td>
+<td>空手等待</td>
+<td>GB300、中國 GPU 出貨、月營收年增率</td>
+<td>題材先行但營收驗證不足</td>
+</tr>
+<tr>
+<td>台股</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3016" rel="noopener noreferrer" target="_blank">3016(嘉晶)</a><a aria-label="在 TradingView 開啟 3016" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=TWSE%3A3016" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3016"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6182" rel="noopener noreferrer" target="_blank">6182(合晶)</a><a aria-label="在 TradingView 開啟 6182" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=TPEX%3A6182" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6182"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>矽晶圓 / 化合物半導體</td>
+<td>低</td>
+<td>不建議追高</td>
+<td>等拉回支撐並設定停損</td>
+<td>空手等待</td>
+<td>第三代半導體題材、矽晶圓開發進度</td>
+<td>短線噴出過多，追價風險高</td>
+</tr>
+<tr>
+<td>美股</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/MU" rel="noopener noreferrer" target="_blank">MU</a><a aria-label="在 TradingView 開啟 MU" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/MU/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 MU"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>記憶體</td>
+<td>中</td>
+<td>中性觀察</td>
+<td>等市場擁擠度降溫與財報驗證</td>
+<td>空手等待</td>
+<td>記憶體報價、AI 伺服器需求、估值擁擠度</td>
+<td>來源主觀判斷：記憶體題材可能已過度擁擠</td>
+</tr>
+<tr>
+<td>美股</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/GETY" rel="noopener noreferrer" target="_blank">GETY</a><a aria-label="在 TradingView 開啟 GETY" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/GETY/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 GETY"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>影像內容 / 版權</td>
+<td>低</td>
+<td>不建議追高</td>
+<td>等 OpenAI 授權題材激情消退</td>
+<td>空手等待</td>
+<td>授權收入、合作條款、股價回穩</td>
+<td>推論：盤前暴漲後可能出現獲利回吐</td>
+</tr>
+<tr>
+<td>美股</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/MSFT" rel="noopener noreferrer" target="_blank">MSFT</a><a aria-label="在 TradingView 開啟 MSFT" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/MSFT/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 MSFT"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>雲端 / 軟體</td>
+<td>高</td>
+<td>中性觀察</td>
+<td>等估值消化與折舊壓力明朗</td>
+<td>觀望</td>
+<td>折舊增速、AI CapEx、FCF、Copilot 成本</td>
+<td>AI 資本支出拖累短期估值</td>
+</tr>
+<tr>
+<td>美股</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/META" rel="noopener noreferrer" target="_blank">META</a><a aria-label="在 TradingView 開啟 META" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/META/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 META"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>社群 / AI</td>
+<td>高</td>
+<td>中性觀察</td>
+<td>等 1-2 季利潤率驗證</td>
+<td>觀望</td>
+<td>營運利潤率是否維持 40% 以上、折舊增速</td>
+<td>來源主觀看法：開源模型投資回收仍待證明</td>
+</tr>
+<tr>
+<td>美股</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/NVDA" rel="noopener noreferrer" target="_blank">NVDA</a><a aria-label="在 TradingView 開啟 NVDA" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/NVDA/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 NVDA"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>半導體設計</td>
+<td>中</td>
+<td>中性觀察</td>
+<td>等總體流動性與發債用途明朗</td>
+<td>觀望</td>
+<td>發債資金用途、AI 需求、流動性變化</td>
+<td>巨頭發債潮可能反映市場流動性壓力</td>
+</tr>
+<tr>
+<td>台股</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2302" rel="noopener noreferrer" target="_blank">2302(麗正)</a><a aria-label="在 TradingView 開啟 2302" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=TWSE%3A2302" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2302"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>分離式元件</td>
+<td>中</td>
+<td>偏多</td>
+<td>不追高，等族群整理後再研究</td>
+<td>空手等待</td>
+<td>月營收、量能、短均支撐</td>
+<td>agent 校正代號；來源屬族群提及，個股證據不足</td>
+</tr>
+<tr>
+<td>台股</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6573" rel="noopener noreferrer" target="_blank">6573(虹揚-KY)</a><a aria-label="在 TradingView 開啟 6573" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=TWSE%3A6573" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6573"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>分離式元件</td>
+<td>中</td>
+<td>偏多</td>
+<td>不追高，等族群整理後再研究</td>
+<td>空手等待</td>
+<td>月營收、量能、短均支撐</td>
+<td>agent 校正代號；來源屬族群提及，個股證據不足</td>
+</tr>
+<tr>
+<td>台股</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6651" rel="noopener noreferrer" target="_blank">6651(全宇昕)</a><a aria-label="在 TradingView 開啟 6651" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=TPEX%3A6651" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6651"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>分離式元件</td>
+<td>中</td>
+<td>偏多</td>
+<td>不追高，等族群整理後再研究</td>
+<td>空手等待</td>
+<td>月營收、量能、短均支撐</td>
+<td>agent 校正代號；來源屬族群提及，個股證據不足</td>
+</tr>
+<tr>
+<td>台股</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/4923" rel="noopener noreferrer" target="_blank">4923(力士)</a><a aria-label="在 TradingView 開啟 4923" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=TPEX%3A4923" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 4923"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>分離式元件</td>
+<td>中</td>
+<td>偏多</td>
+<td>不追高，等族群整理後再研究</td>
+<td>空手等待</td>
+<td>月營收、量能、短均支撐</td>
+<td>agent 校正代號；來源屬族群提及，個股證據不足</td>
+</tr>
+<tr>
+<td>台股</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/5299" rel="noopener noreferrer" target="_blank">5299(杰力)</a><a aria-label="在 TradingView 開啟 5299" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=TPEX%3A5299" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 5299"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>分離式元件</td>
+<td>中</td>
+<td>偏多</td>
+<td>不追高，等族群整理後再研究</td>
+<td>空手等待</td>
+<td>月營收、量能、短均支撐</td>
+<td>agent 校正代號；來源屬族群提及，個股證據不足</td>
+</tr>
+<tr>
+<td>台股</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/7712" rel="noopener noreferrer" target="_blank">7712(博盛半導體)</a><a aria-label="在 TradingView 開啟 7712" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=TPEX%3A7712" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 7712"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>分離式元件</td>
+<td>中</td>
+<td>偏多</td>
+<td>不追高，等族群整理後再研究</td>
+<td>空手等待</td>
+<td>月營收、量能、短均支撐</td>
+<td>agent 校正代號；來源屬族群提及，個股證據不足</td>
+</tr>
+<tr>
+<td>台股</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3257" rel="noopener noreferrer" target="_blank">3257(虹冠電)</a><a aria-label="在 TradingView 開啟 3257" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=TWSE%3A3257" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3257"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>分離式元件</td>
+<td>中</td>
+<td>偏多</td>
+<td>不追高，等族群整理後再研究</td>
+<td>空手等待</td>
+<td>月營收、量能、短均支撐</td>
+<td>agent 校正代號；來源屬族群提及，個股證據不足</td>
+</tr>
+<tr>
+<td>台股</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2481" rel="noopener noreferrer" target="_blank">2481(強茂)</a><a aria-label="在 TradingView 開啟 2481" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=TWSE%3A2481" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2481"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>分離式元件</td>
+<td>中</td>
+<td>偏多</td>
+<td>不追高，等族群整理後再研究</td>
+<td>空手等待</td>
+<td>月營收、量能、短均支撐</td>
+<td>族群過熱，需等支撐與基本面驗證</td>
+</tr>
+<tr>
+<td>台股</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/5425" rel="noopener noreferrer" target="_blank">5425(台半)</a><a aria-label="在 TradingView 開啟 5425" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=TPEX%3A5425" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 5425"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>分離式元件</td>
+<td>中</td>
+<td>偏多</td>
+<td>不追高，等族群整理後再研究</td>
+<td>空手等待</td>
+<td>月營收、量能、短均支撐</td>
+<td>族群過熱，需等支撐與基本面驗證</td>
+</tr>
+<tr>
+<td>台股</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/8255" rel="noopener noreferrer" target="_blank">8255(朋程)</a><a aria-label="在 TradingView 開啟 8255" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=TPEX%3A8255" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 8255"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>車用 / 功率元件</td>
+<td>中</td>
+<td>偏多</td>
+<td>不追高，等族群整理後再研究</td>
+<td>空手等待</td>
+<td>月營收、量能、短均支撐</td>
+<td>agent 校正代號；來源屬族群提及，個股證據不足</td>
+</tr>
+<tr>
+<td>台股</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/8261" rel="noopener noreferrer" target="_blank">8261(富鼎)</a><a aria-label="在 TradingView 開啟 8261" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=TWSE%3A8261" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 8261"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>分離式元件</td>
+<td>中</td>
+<td>偏多</td>
+<td>不追高，等族群整理後再研究</td>
+<td>空手等待</td>
+<td>月營收、量能、短均支撐</td>
+<td>族群過熱，需等支撐與基本面驗證</td>
+</tr>
+<tr>
+<td>台股</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6435" rel="noopener noreferrer" target="_blank">6435(大中)</a><a aria-label="在 TradingView 開啟 6435" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=TPEX%3A6435" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6435"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>MOSFET</td>
+<td>中</td>
+<td>偏多</td>
+<td>不追高，等族群整理後再研究</td>
+<td>空手等待</td>
+<td>月營收、量能、短均支撐</td>
+<td>agent 校正代號；來源屬族群提及，個股證據不足</td>
+</tr>
+<tr>
+<td>台股</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3675" rel="noopener noreferrer" target="_blank">3675(德微)</a><a aria-label="在 TradingView 開啟 3675" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=TPEX%3A3675" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3675"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>分離式元件</td>
+<td>中</td>
+<td>偏多</td>
+<td>不追高，等族群整理後再研究</td>
+<td>空手等待</td>
+<td>月營收、量能、短均支撐</td>
+<td>族群過熱，需等支撐與基本面驗證</td>
+</tr>
+<tr>
+<td>台股</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/8162" rel="noopener noreferrer" target="_blank">8162(微矽電子-創)</a><a aria-label="在 TradingView 開啟 8162" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=TWSE%3A8162" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 8162"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>分離式元件</td>
+<td>中</td>
+<td>偏多</td>
+<td>不追高，等族群整理後再研究</td>
+<td>空手等待</td>
+<td>月營收、量能、短均支撐</td>
+<td>agent 校正代號；來源屬族群提及，個股證據不足</td>
+</tr>
+<tr>
+<td>台股</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2351" rel="noopener noreferrer" target="_blank">2351(順德)</a><a aria-label="在 TradingView 開啟 2351" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=TWSE%3A2351" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2351"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>導線架 / 分離式元件</td>
+<td>中</td>
+<td>偏多</td>
+<td>不追高，等族群整理後再研究</td>
+<td>空手等待</td>
+<td>月營收、量能、短均支撐</td>
+<td>族群過熱，需等支撐與基本面驗證</td>
+</tr>
+<tr>
+<td>台股</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/5285" rel="noopener noreferrer" target="_blank">5285(界霖)</a><a aria-label="在 TradingView 開啟 5285" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=TWSE%3A5285" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 5285"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>導線架 / 半導體材料</td>
+<td>中</td>
+<td>偏多</td>
+<td>不追高，等族群整理後再研究</td>
+<td>空手等待</td>
+<td>月營收、量能、短均支撐</td>
+<td>族群過熱，需等支撐與基本面驗證</td>
+</tr>
+<tr>
+<td>台股</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2342" rel="noopener noreferrer" target="_blank">2342(茂矽)</a><a aria-label="在 TradingView 開啟 2342" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=TWSE%3A2342" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2342"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>半導體</td>
+<td>中</td>
+<td>偏多</td>
+<td>不追高，等族群整理後再研究</td>
+<td>空手等待</td>
+<td>月營收、量能、短均支撐</td>
+<td>族群過熱，需等支撐與基本面驗證</td>
+</tr>
+</tbody>
+</table></div>
+<h2>明確不可以買 / 暫時排除名單</h2>
+<div class="table-scroll"><table class="research-table"><colgroup><col style="width: 110px"><col style="width: 160px"><col style="width: 180px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"></colgroup>
+<thead>
+<tr>
+<th>市場</th>
+<th>代號 / 公司</th>
+<th>產業</th>
+<th>來源提及程度</th>
+<th>來源主觀看法</th>
+<th>布局建議</th>
+<th>持倉建議</th>
+<th>追蹤指標</th>
+<th>風險</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>美股</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/TSLA" rel="noopener noreferrer" target="_blank">TSLA</a><a aria-label="在 TradingView 開啟 TSLA" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/TSLA/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 TSLA"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>汽車 / AI</td>
+<td>中</td>
+<td>偏空</td>
+<td>暫時排除</td>
+<td>減持 / 空手</td>
+<td>新創投資回報、本業利潤</td>
+<td>來源主觀看法：重資本投入未成熟新創可能拖累本業</td>
+</tr>
+<tr>
+<td>美股</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/GOOGL" rel="noopener noreferrer" target="_blank">GOOGL</a><a aria-label="在 TradingView 開啟 GOOGL" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/GOOGL/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 GOOGL"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>網路 / AI</td>
+<td>高</td>
+<td>偏空</td>
+<td>暫時排除</td>
+<td>減持 / 空手</td>
+<td>FCF、AI 人才流動、模型價格戰</td>
+<td>來源提及 FCF 壓力與人才流失，需等待財報驗證</td>
+</tr>
+<tr>
+<td>美股</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/AMZN" rel="noopener noreferrer" target="_blank">AMZN</a><a aria-label="在 TradingView 開啟 AMZN" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/AMZN/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 AMZN"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>電商 / 雲端</td>
+<td>低</td>
+<td>偏空</td>
+<td>暫時排除</td>
+<td>空手</td>
+<td>AWS CapEx、年線支撐、FCF</td>
+<td>AI 基建資本支出壓力偏高</td>
+</tr>
+<tr>
+<td>美股</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/CRWV" rel="noopener noreferrer" target="_blank">CRWV</a><a aria-label="在 TradingView 開啟 CRWV" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/CRWV/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 CRWV"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>資料中心 / AI 基建</td>
+<td>低</td>
+<td>偏空</td>
+<td>暫時排除</td>
+<td>空手</td>
+<td>資料中心開工率、交付延遲、債務成本</td>
+<td>高負債與交付延遲風險需先確認</td>
+</tr>
+<tr>
+<td>美股</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/ORCL" rel="noopener noreferrer" target="_blank">ORCL</a><a aria-label="在 TradingView 開啟 ORCL" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/ORCL/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 ORCL"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>軟體 / 資料中心</td>
+<td>低</td>
+<td>偏空</td>
+<td>暫時排除</td>
+<td>空手</td>
+<td>債務、AI 基建 CapEx、雲端訂單</td>
+<td>來源主觀判斷：債務與資本支出壓力偏高</td>
+</tr>
+<tr>
+<td>美股</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/NFLX" rel="noopener noreferrer" target="_blank">NFLX</a><a aria-label="在 TradingView 開啟 NFLX" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/NFLX/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 NFLX"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>串流媒體</td>
+<td>低</td>
+<td>偏空</td>
+<td>暫時排除</td>
+<td>空手</td>
+<td>AI 影視工具滲透、訂閱流失</td>
+<td>AI 內容製作可能壓縮傳統串流優勢</td>
+</tr>
+<tr>
+<td>美股</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/AAPL" rel="noopener noreferrer" target="_blank">AAPL</a><a aria-label="在 TradingView 開啟 AAPL" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/AAPL/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 AAPL"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>消費電子</td>
+<td>低</td>
+<td>中性觀察</td>
+<td>暫時排除</td>
+<td>空手</td>
+<td>是否有明確投資建議與財報驗證</td>
+<td>來源僅背景提及，資料不足</td>
+</tr>
+<tr>
+<td>美股</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/UBER" rel="noopener noreferrer" target="_blank">UBER</a><a aria-label="在 TradingView 開啟 UBER" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/UBER/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 UBER"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>平台 / 交通</td>
+<td>低</td>
+<td>中性觀察</td>
+<td>暫時排除</td>
+<td>空手</td>
+<td>是否有明確投資建議與財務驗證</td>
+<td>來源僅背景提及，資料不足</td>
+</tr>
+<tr>
+<td>韓股</td>
+<td>資料不足 (<span class="stock-link-group"><a href="https://finance.yahoo.com/quote/SK" rel="noopener noreferrer" target="_blank">SK</a><a aria-label="在 TradingView 開啟 SK" class="stock-tradingview-link" href="https://www.tradingview.com/symbols/SK/" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 SK"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> 海力士)</td>
+<td>記憶體</td>
+<td>中</td>
+<td>中性觀察</td>
+<td>暫時排除</td>
+<td>空手</td>
+<td>HBM 市占率、記憶體景氣</td>
+<td>非本次 PEI 支援市場，且來源主觀看法偏擁擠</td>
+</tr>
+<tr>
+<td>韓股</td>
+<td>資料不足 (三星電子)</td>
+<td>記憶體 / 半導體</td>
+<td>低</td>
+<td>中性觀察</td>
+<td>暫時排除</td>
+<td>空手</td>
+<td>HBM 市占率、記憶體景氣</td>
+<td>來源僅背景提及，資料不足</td>
+</tr>
+</tbody>
+</table></div>
+<h2>重要校正與限制</h2>
+<ul>
+<li>本報告已將原始 NotebookLM 的「多檔分離式元件族群」拆成個別列，避免 PEI 後續研究漏列。</li>
+<li>股票分類仍是來源觀點與 agent 分類，不代表已完成 DCF、財報、估值或風險報酬驗證。</li>
+<li>任何升級為 PEI <code>Model portfolio candidate</code> 前，仍需完成 current price、DCF 區間、上下行、缺失輸入與模型投組風控驗證。</li>
+<li>部分題材只來自單一 KOL 或新聞來源，應以 <code>資料不足</code> 或 <code>等待觸發</code> 方式保守處理。</li>
+</ul>
+
+    <footer class="mt-9 border-t border-slate-200 pt-5 text-sm text-slate-500">
+      本頁由 KOL / 新聞決策報告產生，內容僅作一般化研究輔助，不構成個人化投資建議或下單指令。
+    </footer>
+  </article>
+</main>
+
+</body>
+</html>
