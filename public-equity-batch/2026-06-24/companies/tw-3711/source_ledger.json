@@ -1,0 +1,63 @@
+{
+  "symbol": "3711",
+  "market_key": "tw",
+  "company": "日月光投控",
+  "generated_at": "2026-06-24T07:22:34+08:00",
+  "retrieved_at": "2026-06-24T07:22:34+08:00",
+  "as_of": "2026-06-23T00:00:00+08:00",
+  "sources": [
+    {
+      "source_name": "KOL/news",
+      "source_type": "decision_report_row",
+      "path": "reports/news/2026-06-24_kol_news_decision_report.md",
+      "category": "現在不能買，但值得等買點名單",
+      "retrieved_at": "2026-06-24T07:22:34+08:00",
+      "raw_row": {
+        "市場": "台股",
+        "股票代號": "3711",
+        "公司名稱": "日月光投控",
+        "產業": "封測",
+        "來源提及程度": "中",
+        "來源主觀看法": "中性觀察",
+        "布局建議": "等待新廠建廠時程與產能開出進度明確後再加碼",
+        "持倉建議": "抱緊",
+        "追蹤指標": "台積電委外訂單佔比、大盤資金氣氛",
+        "風險": "盤勢修正引發權值股回檔(推論)"
+      },
+      "used_by": [
+        "tearsheet.html",
+        "initiation.html",
+        "risk_plan.html"
+      ]
+    }
+  ],
+  "market_data": {
+    "current_price": {
+      "value": 662.0,
+      "currency": "TWD",
+      "as_of": "2026-06-23T00:00:00+08:00",
+      "source": "Yahoo Finance via yfinance (3711.TW)"
+    }
+  },
+  "recommendation_label": "Wait for trigger",
+  "research_status": "partial",
+  "valuation_status": "not_run",
+  "missing_evidence": [
+    "未執行完整公司財報、法說、交易所公告與估值模型查核",
+    "需以交易所/公司公告/券商即時報價複核 NotebookLM 來源主張",
+    "技術觸發價與風控距離多來自來源文字，尚未以獨立圖表系統驗證",
+    "等待買點標的尚未觸發進場條件，模型投組預設 0%"
+  ],
+  "portfolio_risk": {
+    "model_portfolio_size": "0%",
+    "risk_budget": 0.0,
+    "downside_or_stop_distance": "not independently verified",
+    "liquidity_cap": "not independently verified",
+    "hedge_posture": "No hedge; model portfolio remains cash for this name until evidence clears",
+    "add_rule": "Reassess only after source triggers and independent evidence are verified",
+    "trim_rule": "No model position opened in this batch artifact",
+    "exit_rule": "If source thesis or price trigger fails, remain watch-only/not decision-ready",
+    "max_loss_posture": "0 units at risk because model size is 0%",
+    "monitoring_cadence": "Daily source/price check while in KOL/news candidate set"
+  }
+}

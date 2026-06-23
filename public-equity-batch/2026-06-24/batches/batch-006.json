@@ -1,0 +1,158 @@
+{
+  "batch_id": "batch-006",
+  "batch_index": 6,
+  "batch_size": 3,
+  "generated_at": "2026-06-24 07:21:23",
+  "output_root": "reports/public-equity-batch/2026-06-24",
+  "source_reports": [
+    "reports/news/2026-06-24_kol_news_decision_report.md"
+  ],
+  "workflow": [
+    "company-tearsheet",
+    "initiating-coverage",
+    "portfolio-risk-management"
+  ],
+  "items": [
+    {
+      "market_key": "us",
+      "market": "美股",
+      "symbol": "IBM",
+      "company": "IBM",
+      "industry": "資訊科技",
+      "canonical_category": "buy_now",
+      "canonical_category_label": "現在可以買名單",
+      "source_priority": 0,
+      "instrument_type": "common_equity",
+      "output_subdir": "us-IBM",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0075,
+        "risk_budget_post_trigger": 0.0075,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "kol",
+          "lane_label": "KOL/news",
+          "category": "buy_now",
+          "category_label": "現在可以買名單",
+          "report_path": "reports/news/2026-06-24_kol_news_decision_report.md",
+          "row_index": 16,
+          "expanded_index": 0,
+          "raw_market": "美股",
+          "raw_symbol_cell": "IBM",
+          "raw_company_cell": "IBM",
+          "raw_row": {
+            "市場": "美股",
+            "股票代號": "IBM",
+            "公司名稱": "IBM",
+            "產業": "資訊科技",
+            "來源提及程度": "低",
+            "來源主觀看法": "偏多",
+            "布局建議": "短線操作",
+            "持倉建議": "短線持有",
+            "追蹤指標": "川普選情與政策題材效應",
+            "風險": "流動性收緊時熱錢跑走風險"
+          }
+        }
+      ]
+    },
+    {
+      "market_key": "us",
+      "market": "美股",
+      "symbol": "INFQ",
+      "company": "INFQ",
+      "industry": "量子計算",
+      "canonical_category": "buy_now",
+      "canonical_category_label": "現在可以買名單",
+      "source_priority": 0,
+      "instrument_type": "common_equity",
+      "output_subdir": "us-INFQ",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0075,
+        "risk_budget_post_trigger": 0.0075,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "kol",
+          "lane_label": "KOL/news",
+          "category": "buy_now",
+          "category_label": "現在可以買名單",
+          "report_path": "reports/news/2026-06-24_kol_news_decision_report.md",
+          "row_index": 17,
+          "expanded_index": 0,
+          "raw_market": "美股",
+          "raw_symbol_cell": "INFQ",
+          "raw_company_cell": "INFQ",
+          "raw_row": {
+            "市場": "美股",
+            "股票代號": "INFQ",
+            "公司名稱": "INFQ",
+            "產業": "量子計算",
+            "來源提及程度": "低",
+            "來源主觀看法": "偏多",
+            "布局建議": "短線操作",
+            "持倉建議": "短線持有",
+            "追蹤指標": "川普選情與政策題材效應",
+            "風險": "流動性收緊時熱錢跑走風險"
+          }
+        }
+      ]
+    },
+    {
+      "market_key": "tw",
+      "market": "台股",
+      "symbol": "00631L",
+      "company": "元大台灣50正2",
+      "industry": "ETF",
+      "canonical_category": "wait_entry",
+      "canonical_category_label": "現在不能買，但值得等買點名單",
+      "source_priority": 3,
+      "instrument_type": "fund_or_etf",
+      "output_subdir": "tw-00631L",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "risk_budget_post_trigger": 0.005,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "kol",
+          "lane_label": "KOL/news",
+          "category": "wait_entry",
+          "category_label": "現在不能買，但值得等買點名單",
+          "report_path": "reports/news/2026-06-24_kol_news_decision_report.md",
+          "row_index": 1,
+          "expanded_index": 0,
+          "raw_market": "台股",
+          "raw_symbol_cell": "00631L",
+          "raw_company_cell": "元大台灣50正2",
+          "raw_row": {
+            "市場": "台股",
+            "股票代號": "00631L",
+            "公司名稱": "元大台灣50正2",
+            "產業": "ETF",
+            "來源提及程度": "高",
+            "來源主觀看法": "中性觀察",
+            "布局建議": "等待原型指數跌破年線，利用新資金分批轉入買進",
+            "持倉建議": "長線多頭持有",
+            "追蹤指標": "大盤年線位置、高檔回撤(MDD)幅度",
+            "風險": "空頭暴跌時跌幅為原型1.6倍，有斷頭與耗損風險"
+          }
+        }
+      ]
+    }
+  ]
+}
