@@ -1,0 +1,118 @@
+{
+  "symbol": "3010",
+  "company": "華立",
+  "market_key": "tw",
+  "market": "TWSE",
+  "instrument_type": "common_equity",
+  "canonical_category": "wait_entry",
+  "recommendation_label": "Wait for trigger",
+  "generated_at": "2026-06-23 07:51:58",
+  "as_of": "2026-06-22",
+  "retrieved_at": "2026-06-23 07:51:58",
+  "sources": [
+    {
+      "source_id": "S1",
+      "source_name": "StockLoop K-line decision report",
+      "source_type": "user_workspace_report",
+      "file_path": "reports/twStock/2026-06-22_tw_kline_decision_report.md",
+      "as_of": "2026-06-22",
+      "retrieved_at": "2026-06-23 07:51:58",
+      "row_index": 37,
+      "used_by": [
+        "tearsheet",
+        "initiation",
+        "risk_plan"
+      ],
+      "evidence": "technical_screen_source_row",
+      "confidence": "medium"
+    },
+    {
+      "source_id": "S2",
+      "source_name": "Yahoo Finance historical quote for 3010.TW",
+      "source_type": "public_market_data_web_fallback",
+      "url": "https://finance.yahoo.com/quote/3010.TW",
+      "as_of": "2026-06-22 00:00:00+08:00",
+      "retrieved_at": "2026-06-23 07:51:58",
+      "used_by": [
+        "tearsheet",
+        "initiation",
+        "risk_plan",
+        "dcf_workbook"
+      ],
+      "evidence": "fact_provider_standardized",
+      "confidence": "medium"
+    }
+  ],
+  "market_data": {
+    "current_price": {
+      "value": 131.5,
+      "currency": "TWD",
+      "as_of": "2026-06-22 00:00:00+08:00",
+      "source": "Yahoo Finance historical OHLC via yfinance ticker 3010.TW"
+    },
+    "volume": {
+      "value": 3383664.0,
+      "as_of": "2026-06-22 00:00:00+08:00",
+      "source": "Yahoo Finance historical OHLC via yfinance ticker 3010.TW"
+    },
+    "source_report_turnover": {
+      "value": "450533015",
+      "currency": "TWD",
+      "as_of": "2026-06-22",
+      "source": "StockLoop K-line decision report source row"
+    }
+  },
+  "technical_screen": {
+    "source_view": "中性觀察",
+    "setup_source": "三均線買點",
+    "layout_guidance": "先等回測支撐、突破續強或量縮沉澱後再評估",
+    "holding_guidance": "若已有持倉，維持小部位觀察，不在確認前放大風險",
+    "close_position_pct": "37.5%",
+    "intraday_range_pct": "3.0%",
+    "volume_ratio": "2.31",
+    "range_ratio": "not_sourced_in_report",
+    "upper_shadow_pressure": "not_sourced_in_report",
+    "distance_from_signal_low": "not_sourced_in_report",
+    "reported_turnover": "450533015",
+    "tracking_text": "三均線趨勢策略：3MA；收盤位置 37.5%；振幅 3.0%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=空方趨勢結束；buyCount 1；今日買點 3MA；爆量 volumeRatio 2.31；成交金額 450,533,015",
+    "risk_text": "未見硬性排除條件，仍需追蹤隔日量價與大盤風險"
+  },
+  "dcf_valuation": {
+    "status": "not-decision-ready",
+    "workbook_path": "reports/public-equity-batch/2026-06-22/companies/tw-3010/dcf/banker_formula_workbook.xlsx",
+    "base_case_value_per_share": "not_computed_due_missing_inputs",
+    "bear_case_value_per_share": "not_computed_due_missing_inputs",
+    "bull_case_value_per_share": "not_computed_due_missing_inputs",
+    "upside_downside_pct": "not_computed_due_missing_inputs",
+    "as_of": "2026-06-23 07:51:58",
+    "key_missing_inputs": [
+      "latest filed income statement, balance sheet, and cash-flow statement not ingested for this batch run",
+      "normalized revenue, EBIT, tax, D&A, capex, working-capital, and FCF history not sourced",
+      "management guidance or consensus forecast path not sourced",
+      "filing-based diluted share count and net debt bridge not sourced",
+      "WACC build, terminal growth, and exit multiple assumptions not source-backed"
+    ],
+    "valuation_note": "DCF was not computed because the batch run did not ingest filing-based operating history, capital structure, forecasts, or WACC inputs. The workbook is a screen-grade evidence gap register, not a price target."
+  },
+  "portfolio_risk": {
+    "model_portfolio_size": "0% pre-trigger; reassess after trigger and valuation evidence",
+    "risk_budget": "0.50% post-trigger risk budget; 0% before trigger confirmation",
+    "downside_or_stop_distance": "numeric downside not source-backed; source report references signal-day low or short moving average where applicable",
+    "liquidity_cap": "requires ADV/participation analysis before sizing; source-report turnover and Yahoo volume are included as preliminary liquidity context",
+    "hedge_posture": "no hedge recommended at screen stage; use size-down/no-position until valuation and trigger evidence improve",
+    "add_rule": "add only after source-backed valuation, fundamentals, and technical confirmation are all upgraded",
+    "trim_rule": "trim or keep at zero if price extends without volume/valuation support or DCF remains not-decision-ready",
+    "exit_rule": "remove from active candidate list if technical trigger fails or missing valuation evidence cannot be resolved",
+    "max_loss_posture": "no model capital at risk before decision-ready valuation; conditional risk budget follows StockLoop batch defaults",
+    "monitoring_cadence": "daily price/volume review until trigger resolves; refresh valuation evidence before any model allocation",
+    "model_rules": {
+      "portfolio_units": 100,
+      "long_only": true,
+      "leverage_allowed": false,
+      "single_name_cap": 0.05,
+      "risk_budget_initial": 0.0,
+      "risk_budget_post_trigger": 0.005,
+      "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+    }
+  }
+}

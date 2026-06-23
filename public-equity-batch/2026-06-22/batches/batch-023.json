@@ -1,0 +1,163 @@
+{
+  "batch_id": "batch-023",
+  "batch_index": 23,
+  "batch_size": 3,
+  "generated_at": "2026-06-23 07:47:21",
+  "output_root": "reports/public-equity-batch/2026-06-22",
+  "source_reports": [
+    "reports/twStock/2026-06-22_tw_kline_decision_report.md",
+    "reports/usStock/2026-06-22_us_kline_decision_report.md"
+  ],
+  "workflow": [
+    "company-tearsheet",
+    "initiating-coverage",
+    "dcf-model-builder",
+    "portfolio-risk-management"
+  ],
+  "items": [
+    {
+      "market_key": "tw",
+      "market": "TWSE",
+      "symbol": "6206",
+      "company": "飛捷",
+      "industry": "電腦及週邊設備業",
+      "canonical_category": "wait_entry",
+      "canonical_category_label": "現在不能買，但值得等買點名單",
+      "source_priority": 4,
+      "instrument_type": "common_equity",
+      "dcf_applicability": "required",
+      "output_subdir": "tw-6206",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "risk_budget_post_trigger": 0.005,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "tw_kline",
+          "lane_label": "台股 K-line",
+          "category": "wait_entry",
+          "category_label": "現在不能買，但值得等買點名單",
+          "report_path": "reports/twStock/2026-06-22_tw_kline_decision_report.md",
+          "row_index": 20,
+          "expanded_index": 0,
+          "raw_market": "TWSE",
+          "raw_symbol_cell": "6206",
+          "raw_company_cell": "飛捷",
+          "raw_row": {
+            "市場": "TWSE",
+            "股票代號": "6206",
+            "公司名稱": "飛捷",
+            "產業": "電腦及週邊設備業",
+            "來源提及程度": "Legacy 買點 / 三均線買點",
+            "來源主觀看法": "中性觀察",
+            "布局建議": "先等回測支撐、突破續強或量縮沉澱後再評估",
+            "持倉建議": "若已有持倉，維持小部位觀察，不在確認前放大風險",
+            "追蹤指標": "雙策略整合：LZEMA20/3MA；收盤位置 66.7%；振幅 2.2%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；成交金額 153,591,229",
+            "風險": "未見硬性排除條件，仍需追蹤隔日量價與大盤風險"
+          }
+        }
+      ]
+    },
+    {
+      "market_key": "tw",
+      "market": "TWSE",
+      "symbol": "6282",
+      "company": "康舒",
+      "industry": "電子零組件業",
+      "canonical_category": "wait_entry",
+      "canonical_category_label": "現在不能買，但值得等買點名單",
+      "source_priority": 4,
+      "instrument_type": "common_equity",
+      "dcf_applicability": "required",
+      "output_subdir": "tw-6282",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "risk_budget_post_trigger": 0.005,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "tw_kline",
+          "lane_label": "台股 K-line",
+          "category": "wait_entry",
+          "category_label": "現在不能買，但值得等買點名單",
+          "report_path": "reports/twStock/2026-06-22_tw_kline_decision_report.md",
+          "row_index": 8,
+          "expanded_index": 0,
+          "raw_market": "TWSE",
+          "raw_symbol_cell": "6282",
+          "raw_company_cell": "康舒",
+          "raw_row": {
+            "市場": "TWSE",
+            "股票代號": "6282",
+            "公司名稱": "康舒",
+            "產業": "電子零組件業",
+            "來源提及程度": "三均線買點",
+            "來源主觀看法": "中性觀察",
+            "布局建議": "先等回測支撐、突破續強或量縮沉澱後再評估",
+            "持倉建議": "若已有持倉，維持小部位觀察，不在確認前放大風險",
+            "追蹤指標": "三均線趨勢策略：3MA；收盤位置 100.0%；振幅 9.2%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=多方趨勢開始；buyCount 1；今日買點 3MA；波幅放大 rangeRatio 1.37；成交金額 3,527,346,887",
+            "風險": "未見硬性排除條件，仍需追蹤隔日量價與大盤風險"
+          }
+        }
+      ]
+    },
+    {
+      "market_key": "tw",
+      "market": "TWSE",
+      "symbol": "6412",
+      "company": "群電",
+      "industry": "電子零組件業",
+      "canonical_category": "wait_entry",
+      "canonical_category_label": "現在不能買，但值得等買點名單",
+      "source_priority": 4,
+      "instrument_type": "common_equity",
+      "dcf_applicability": "required",
+      "output_subdir": "tw-6412",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "risk_budget_post_trigger": 0.005,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "tw_kline",
+          "lane_label": "台股 K-line",
+          "category": "wait_entry",
+          "category_label": "現在不能買，但值得等買點名單",
+          "report_path": "reports/twStock/2026-06-22_tw_kline_decision_report.md",
+          "row_index": 18,
+          "expanded_index": 0,
+          "raw_market": "TWSE",
+          "raw_symbol_cell": "6412",
+          "raw_company_cell": "群電",
+          "raw_row": {
+            "市場": "TWSE",
+            "股票代號": "6412",
+            "公司名稱": "群電",
+            "產業": "電子零組件業",
+            "來源提及程度": "Legacy 買點",
+            "來源主觀看法": "中性觀察",
+            "布局建議": "先等回測支撐、突破續強或量縮沉澱後再評估",
+            "持倉建議": "若已有持倉，維持小部位觀察，不在確認前放大風險",
+            "追蹤指標": "Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 87.1%；振幅 3.3%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 1；今日買點 LZEMA20；成交金額 463,146,842",
+            "風險": "未見硬性排除條件，仍需追蹤隔日量價與大盤風險"
+          }
+        }
+      ]
+    }
+  ]
+}

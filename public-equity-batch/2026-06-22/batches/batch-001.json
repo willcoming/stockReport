@@ -1,0 +1,163 @@
+{
+  "batch_id": "batch-001",
+  "batch_index": 1,
+  "batch_size": 3,
+  "generated_at": "2026-06-23 07:47:21",
+  "output_root": "reports/public-equity-batch/2026-06-22",
+  "source_reports": [
+    "reports/twStock/2026-06-22_tw_kline_decision_report.md",
+    "reports/usStock/2026-06-22_us_kline_decision_report.md"
+  ],
+  "workflow": [
+    "company-tearsheet",
+    "initiating-coverage",
+    "dcf-model-builder",
+    "portfolio-risk-management"
+  ],
+  "items": [
+    {
+      "market_key": "tw",
+      "market": "TWSE",
+      "symbol": "1717",
+      "company": "長興",
+      "industry": "化學工業",
+      "canonical_category": "buy_now",
+      "canonical_category_label": "現在可以買名單",
+      "source_priority": 1,
+      "instrument_type": "common_equity",
+      "dcf_applicability": "required",
+      "output_subdir": "tw-1717",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0075,
+        "risk_budget_post_trigger": 0.0075,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "tw_kline",
+          "lane_label": "台股 K-line",
+          "category": "buy_now",
+          "category_label": "現在可以買名單",
+          "report_path": "reports/twStock/2026-06-22_tw_kline_decision_report.md",
+          "row_index": 10,
+          "expanded_index": 0,
+          "raw_market": "TWSE",
+          "raw_symbol_cell": "1717",
+          "raw_company_cell": "長興",
+          "raw_row": {
+            "市場": "TWSE",
+            "股票代號": "1717",
+            "公司名稱": "長興",
+            "產業": "化學工業",
+            "來源提及程度": "Legacy 買點 / 三均線買點",
+            "來源主觀看法": "偏多",
+            "布局建議": "可研究小量分批，仍需等量價續強或回測不破再提高信心",
+            "持倉建議": "若已有持倉，可用訊號日低點或短均線作為失效觀察",
+            "追蹤指標": "雙策略整合：LZEMA20/3MA；收盤位置 79.2%；振幅 3.2%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；成交金額 1,131,379,635",
+            "風險": "未見硬性排除條件，仍需追蹤隔日量價與大盤風險"
+          }
+        }
+      ]
+    },
+    {
+      "market_key": "tw",
+      "market": "TWSE",
+      "symbol": "2301",
+      "company": "光寶科",
+      "industry": "電腦及週邊設備業",
+      "canonical_category": "buy_now",
+      "canonical_category_label": "現在可以買名單",
+      "source_priority": 1,
+      "instrument_type": "common_equity",
+      "dcf_applicability": "required",
+      "output_subdir": "tw-2301",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0075,
+        "risk_budget_post_trigger": 0.0075,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "tw_kline",
+          "lane_label": "台股 K-line",
+          "category": "buy_now",
+          "category_label": "現在可以買名單",
+          "report_path": "reports/twStock/2026-06-22_tw_kline_decision_report.md",
+          "row_index": 1,
+          "expanded_index": 0,
+          "raw_market": "TWSE",
+          "raw_symbol_cell": "2301",
+          "raw_company_cell": "光寶科",
+          "raw_row": {
+            "市場": "TWSE",
+            "股票代號": "2301",
+            "公司名稱": "光寶科",
+            "產業": "電腦及週邊設備業",
+            "來源提及程度": "Legacy 買點 / 三均線買點",
+            "來源主觀看法": "偏多",
+            "布局建議": "可研究小量分批，仍需等量價續強或回測不破再提高信心",
+            "持倉建議": "若已有持倉，可用訊號日低點或短均線作為失效觀察",
+            "追蹤指標": "雙策略整合：LZEMA20/3MA；收盤位置 100.0%；振幅 7.1%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 1.33；成交量高於均量 volumeRatio 1.20；成交金額 10,314,867,983",
+            "風險": "未見硬性排除條件，仍需追蹤隔日量價與大盤風險"
+          }
+        }
+      ]
+    },
+    {
+      "market_key": "tw",
+      "market": "TWSE",
+      "symbol": "2345",
+      "company": "智邦",
+      "industry": "通信網路業",
+      "canonical_category": "buy_now",
+      "canonical_category_label": "現在可以買名單",
+      "source_priority": 1,
+      "instrument_type": "common_equity",
+      "dcf_applicability": "required",
+      "output_subdir": "tw-2345",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0075,
+        "risk_budget_post_trigger": 0.0075,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "tw_kline",
+          "lane_label": "台股 K-line",
+          "category": "buy_now",
+          "category_label": "現在可以買名單",
+          "report_path": "reports/twStock/2026-06-22_tw_kline_decision_report.md",
+          "row_index": 2,
+          "expanded_index": 0,
+          "raw_market": "TWSE",
+          "raw_symbol_cell": "2345",
+          "raw_company_cell": "智邦",
+          "raw_row": {
+            "市場": "TWSE",
+            "股票代號": "2345",
+            "公司名稱": "智邦",
+            "產業": "通信網路業",
+            "來源提及程度": "Legacy 買點 / 三均線買點",
+            "來源主觀看法": "偏多",
+            "布局建議": "可研究小量分批，仍需等量價續強或回測不破再提高信心",
+            "持倉建議": "若已有持倉，可用訊號日低點或短均線作為失效觀察",
+            "追蹤指標": "雙策略整合：LZEMA20/3MA；收盤位置 91.7%；振幅 4.6%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；成交金額 8,738,747,610",
+            "風險": "未見硬性排除條件，仍需追蹤隔日量價與大盤風險"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "batch_id": "batch-027",
+  "batch_index": 27,
+  "batch_size": 3,
+  "generated_at": "2026-06-23 07:47:21",
+  "output_root": "reports/public-equity-batch/2026-06-22",
+  "source_reports": [
+    "reports/twStock/2026-06-22_tw_kline_decision_report.md",
+    "reports/usStock/2026-06-22_us_kline_decision_report.md"
+  ],
+  "workflow": [
+    "company-tearsheet",
+    "initiating-coverage",
+    "dcf-model-builder",
+    "portfolio-risk-management"
+  ],
+  "items": [
+    {
+      "market_key": "us",
+      "market": "NASDAQ",
+      "symbol": "ACGL",
+      "company": "Arch Capital Group Ltd. - Common Stock",
+      "industry": "Finance / Property-Casualty Insurers",
+      "canonical_category": "wait_entry",
+      "canonical_category_label": "現在不能買，但值得等買點名單",
+      "source_priority": 5,
+      "instrument_type": "common_equity",
+      "dcf_applicability": "required",
+      "output_subdir": "us-ACGL",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "risk_budget_post_trigger": 0.005,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "us_kline",
+          "lane_label": "美股 K-line",
+          "category": "wait_entry",
+          "category_label": "現在不能買，但值得等買點名單",
+          "report_path": "reports/usStock/2026-06-22_us_kline_decision_report.md",
+          "row_index": 40,
+          "expanded_index": 0,
+          "raw_market": "NASDAQ",
+          "raw_symbol_cell": "ACGL",
+          "raw_company_cell": "Arch Capital Group Ltd. - Common Stock",
+          "raw_row": {
+            "市場": "NASDAQ",
+            "股票代號": "ACGL",
+            "公司名稱": "Arch Capital Group Ltd. - Common Stock",
+            "產業": "Finance / Property-Casualty Insurers",
+            "來源提及程度": "Legacy 買點 / 三均線買點",
+            "來源主觀看法": "不建議追高",
+            "布局建議": "先等回測支撐或隔日收復上影線後再評估",
+            "持倉建議": "若已有持倉，避免在上影線壓力未化解前放大部位",
+            "追蹤指標": "雙策略整合：LZEMA20/3MA；收盤位置 37.1%；振幅 1.3%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 197,616,509",
+            "風險": "上影線壓力重：62.9%"
+          }
+        }
+      ]
+    },
+    {
+      "market_key": "us",
+      "market": "NYSE",
+      "symbol": "ADM",
+      "company": "Archer-Daniels-Midland Company Common Stock",
+      "industry": "Consumer Staples / Packaged Foods",
+      "canonical_category": "wait_entry",
+      "canonical_category_label": "現在不能買，但值得等買點名單",
+      "source_priority": 5,
+      "instrument_type": "common_equity",
+      "dcf_applicability": "required",
+      "output_subdir": "us-ADM",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "risk_budget_post_trigger": 0.005,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "us_kline",
+          "lane_label": "美股 K-line",
+          "category": "wait_entry",
+          "category_label": "現在不能買，但值得等買點名單",
+          "report_path": "reports/usStock/2026-06-22_us_kline_decision_report.md",
+          "row_index": 23,
+          "expanded_index": 0,
+          "raw_market": "NYSE",
+          "raw_symbol_cell": "ADM",
+          "raw_company_cell": "Archer-Daniels-Midland Company Common Stock",
+          "raw_row": {
+            "市場": "NYSE",
+            "股票代號": "ADM",
+            "公司名稱": "Archer-Daniels-Midland Company Common Stock",
+            "產業": "Consumer Staples / Packaged Foods",
+            "來源提及程度": "三均線買點",
+            "來源主觀看法": "中性觀察",
+            "布局建議": "先等回測支撐、突破續強或量縮沉澱後再評估",
+            "持倉建議": "若已有持倉，維持小部位觀察，不在確認前放大風險",
+            "追蹤指標": "三均線趨勢策略：3MA；收盤位置 88.5%；振幅 2.6%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=空方趨勢結束；buyCount 1；今日買點 3MA；估算成交金額USD 169,280,264",
+            "風險": "未見硬性排除條件，仍需追蹤隔日量價與大盤風險"
+          }
+        }
+      ]
+    },
+    {
+      "market_key": "us",
+      "market": "NYSE",
+      "symbol": "AES",
+      "company": "The AES Corporation Common Stock",
+      "industry": "Utilities / Electric Utilities: Central",
+      "canonical_category": "wait_entry",
+      "canonical_category_label": "現在不能買，但值得等買點名單",
+      "source_priority": 5,
+      "instrument_type": "common_equity",
+      "dcf_applicability": "required",
+      "output_subdir": "us-AES",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "risk_budget_post_trigger": 0.005,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "us_kline",
+          "lane_label": "美股 K-line",
+          "category": "wait_entry",
+          "category_label": "現在不能買，但值得等買點名單",
+          "report_path": "reports/usStock/2026-06-22_us_kline_decision_report.md",
+          "row_index": 18,
+          "expanded_index": 0,
+          "raw_market": "NYSE",
+          "raw_symbol_cell": "AES",
+          "raw_company_cell": "The AES Corporation Common Stock",
+          "raw_row": {
+            "市場": "NYSE",
+            "股票代號": "AES",
+            "公司名稱": "The AES Corporation Common Stock",
+            "產業": "Utilities / Electric Utilities: Central",
+            "來源提及程度": "Legacy 買點 / 三均線買點",
+            "來源主觀看法": "中性觀察",
+            "布局建議": "先等回測支撐、突破續強或量縮沉澱後再評估",
+            "持倉建議": "若已有持倉，維持小部位觀察，不在確認前放大風險",
+            "追蹤指標": "雙策略整合：LZEMA20/3MA；收盤位置 75.0%；振幅 0.3%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 61,530,965",
+            "風險": "未見硬性排除條件，仍需追蹤隔日量價與大盤風險"
+          }
+        }
+      ]
+    }
+  ]
+}

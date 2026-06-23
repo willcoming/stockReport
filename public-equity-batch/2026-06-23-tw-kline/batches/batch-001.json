@@ -1,0 +1,158 @@
+{
+  "batch_id": "batch-001",
+  "batch_index": 1,
+  "batch_size": 3,
+  "generated_at": "2026-06-23 15:58:34",
+  "output_root": "reports/public-equity-batch/2026-06-23-tw-kline",
+  "source_reports": [
+    "reports/twStock/2026-06-23_tw_kline_decision_report.md"
+  ],
+  "workflow": [
+    "company-tearsheet",
+    "initiating-coverage",
+    "portfolio-risk-management"
+  ],
+  "items": [
+    {
+      "market_key": "tw",
+      "market": "TWSE",
+      "symbol": "2374",
+      "company": "佳能",
+      "industry": "光電業",
+      "canonical_category": "buy_now",
+      "canonical_category_label": "現在可以買名單",
+      "source_priority": 1,
+      "instrument_type": "common_equity",
+      "output_subdir": "tw-2374",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0075,
+        "risk_budget_post_trigger": 0.0075,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "tw_kline",
+          "lane_label": "台股 K-line",
+          "category": "buy_now",
+          "category_label": "現在可以買名單",
+          "report_path": "reports/twStock/2026-06-23_tw_kline_decision_report.md",
+          "row_index": 2,
+          "expanded_index": 0,
+          "raw_market": "TWSE",
+          "raw_symbol_cell": "2374",
+          "raw_company_cell": "佳能",
+          "raw_row": {
+            "市場": "TWSE",
+            "股票代號": "2374",
+            "公司名稱": "佳能",
+            "產業": "光電業",
+            "來源提及程度": "Legacy 買點 / 三均線買點",
+            "來源主觀看法": "偏多",
+            "布局建議": "可研究小量分批，仍需等量價續強或回測不破再提高信心",
+            "持倉建議": "若已有持倉，可用訊號日低點或短均線作為失效觀察",
+            "追蹤指標": "雙策略整合：LZEMA20/3MA；收盤位置 78.8%；振幅 4.3%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；成交金額 647,772,514",
+            "風險": "未見硬性排除條件，仍需追蹤隔日量價與大盤風險"
+          }
+        }
+      ]
+    },
+    {
+      "market_key": "tw",
+      "market": "TWSE",
+      "symbol": "2912",
+      "company": "統一超",
+      "industry": "貿易百貨業",
+      "canonical_category": "buy_now",
+      "canonical_category_label": "現在可以買名單",
+      "source_priority": 1,
+      "instrument_type": "common_equity",
+      "output_subdir": "tw-2912",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0075,
+        "risk_budget_post_trigger": 0.0075,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "tw_kline",
+          "lane_label": "台股 K-line",
+          "category": "buy_now",
+          "category_label": "現在可以買名單",
+          "report_path": "reports/twStock/2026-06-23_tw_kline_decision_report.md",
+          "row_index": 1,
+          "expanded_index": 0,
+          "raw_market": "TWSE",
+          "raw_symbol_cell": "2912",
+          "raw_company_cell": "統一超",
+          "raw_row": {
+            "市場": "TWSE",
+            "股票代號": "2912",
+            "公司名稱": "統一超",
+            "產業": "貿易百貨業",
+            "來源提及程度": "Legacy 買點 / 三均線買點",
+            "來源主觀看法": "偏多",
+            "布局建議": "可研究小量分批，仍需等量價續強或回測不破再提高信心",
+            "持倉建議": "若已有持倉，可用訊號日低點或短均線作為失效觀察",
+            "追蹤指標": "雙策略整合：LZEMA20/3MA；收盤位置 85.7%；振幅 3.1%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；成交金額 1,005,285,399",
+            "風險": "未見硬性排除條件，仍需追蹤隔日量價與大盤風險"
+          }
+        }
+      ]
+    },
+    {
+      "market_key": "tw",
+      "market": "TWSE",
+      "symbol": "1229",
+      "company": "聯華",
+      "industry": "食品工業",
+      "canonical_category": "wait_entry",
+      "canonical_category_label": "現在不能買，但值得等買點名單",
+      "source_priority": 4,
+      "instrument_type": "common_equity",
+      "output_subdir": "tw-1229",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "risk_budget_post_trigger": 0.005,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "tw_kline",
+          "lane_label": "台股 K-line",
+          "category": "wait_entry",
+          "category_label": "現在不能買，但值得等買點名單",
+          "report_path": "reports/twStock/2026-06-23_tw_kline_decision_report.md",
+          "row_index": 3,
+          "expanded_index": 0,
+          "raw_market": "TWSE",
+          "raw_symbol_cell": "1229",
+          "raw_company_cell": "聯華",
+          "raw_row": {
+            "市場": "TWSE",
+            "股票代號": "1229",
+            "公司名稱": "聯華",
+            "產業": "食品工業",
+            "來源提及程度": "Legacy 買點 / 三均線買點",
+            "來源主觀看法": "中性觀察",
+            "布局建議": "先等回測支撐、突破續強或量縮沉澱後再評估",
+            "持倉建議": "若已有持倉，維持小部位觀察，不在確認前放大風險",
+            "追蹤指標": "雙策略整合：LZEMA20/3MA；收盤位置 66.7%；振幅 2.2%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；成交金額 157,880,178",
+            "風險": "未見硬性排除條件，仍需追蹤隔日量價與大盤風險"
+          }
+        }
+      ]
+    }
+  ]
+}

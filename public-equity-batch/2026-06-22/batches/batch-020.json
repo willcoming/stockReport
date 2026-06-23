@@ -1,0 +1,163 @@
+{
+  "batch_id": "batch-020",
+  "batch_index": 20,
+  "batch_size": 3,
+  "generated_at": "2026-06-23 07:47:21",
+  "output_root": "reports/public-equity-batch/2026-06-22",
+  "source_reports": [
+    "reports/twStock/2026-06-22_tw_kline_decision_report.md",
+    "reports/usStock/2026-06-22_us_kline_decision_report.md"
+  ],
+  "workflow": [
+    "company-tearsheet",
+    "initiating-coverage",
+    "dcf-model-builder",
+    "portfolio-risk-management"
+  ],
+  "items": [
+    {
+      "market_key": "tw",
+      "market": "TWSE",
+      "symbol": "3518",
+      "company": "柏騰",
+      "industry": "其他電子業",
+      "canonical_category": "wait_entry",
+      "canonical_category_label": "現在不能買，但值得等買點名單",
+      "source_priority": 4,
+      "instrument_type": "common_equity",
+      "dcf_applicability": "required",
+      "output_subdir": "tw-3518",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "risk_budget_post_trigger": 0.005,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "tw_kline",
+          "lane_label": "台股 K-line",
+          "category": "wait_entry",
+          "category_label": "現在不能買，但值得等買點名單",
+          "report_path": "reports/twStock/2026-06-22_tw_kline_decision_report.md",
+          "row_index": 7,
+          "expanded_index": 0,
+          "raw_market": "TWSE",
+          "raw_symbol_cell": "3518",
+          "raw_company_cell": "柏騰",
+          "raw_row": {
+            "市場": "TWSE",
+            "股票代號": "3518",
+            "公司名稱": "柏騰",
+            "產業": "其他電子業",
+            "來源提及程度": "Legacy 買點 / 三均線買點",
+            "來源主觀看法": "中性觀察",
+            "布局建議": "先等回測支撐、突破續強或量縮沉澱後再評估",
+            "持倉建議": "若已有持倉，維持小部位觀察，不在確認前放大風險",
+            "追蹤指標": "雙策略整合：LZEMA20/3MA；收盤位置 88.4%；振幅 7.0%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；成交量高於均量 volumeRatio 1.28；成交金額 50,433,112",
+            "風險": "未見硬性排除條件，仍需追蹤隔日量價與大盤風險"
+          }
+        }
+      ]
+    },
+    {
+      "market_key": "tw",
+      "market": "TWSE",
+      "symbol": "3645",
+      "company": "達邁",
+      "industry": "電子零組件業",
+      "canonical_category": "wait_entry",
+      "canonical_category_label": "現在不能買，但值得等買點名單",
+      "source_priority": 4,
+      "instrument_type": "common_equity",
+      "dcf_applicability": "required",
+      "output_subdir": "tw-3645",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "risk_budget_post_trigger": 0.005,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "tw_kline",
+          "lane_label": "台股 K-line",
+          "category": "wait_entry",
+          "category_label": "現在不能買，但值得等買點名單",
+          "report_path": "reports/twStock/2026-06-22_tw_kline_decision_report.md",
+          "row_index": 32,
+          "expanded_index": 0,
+          "raw_market": "TWSE",
+          "raw_symbol_cell": "3645",
+          "raw_company_cell": "達邁",
+          "raw_row": {
+            "市場": "TWSE",
+            "股票代號": "3645",
+            "公司名稱": "達邁",
+            "產業": "電子零組件業",
+            "來源提及程度": "三均線買點",
+            "來源主觀看法": "中性觀察",
+            "布局建議": "先等回測支撐、突破續強或量縮沉澱後再評估",
+            "持倉建議": "若已有持倉，維持小部位觀察，不在確認前放大風險",
+            "追蹤指標": "三均線趨勢策略：3MA；收盤位置 66.7%；振幅 2.2%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=空方趨勢結束；buyCount 1；今日買點 3MA；成交金額 217,984,416",
+            "風險": "未見硬性排除條件，仍需追蹤隔日量價與大盤風險"
+          }
+        }
+      ]
+    },
+    {
+      "market_key": "tw",
+      "market": "TWSE",
+      "symbol": "4540",
+      "company": "全球傳動",
+      "industry": "電機機械",
+      "canonical_category": "wait_entry",
+      "canonical_category_label": "現在不能買，但值得等買點名單",
+      "source_priority": 4,
+      "instrument_type": "common_equity",
+      "dcf_applicability": "required",
+      "output_subdir": "tw-4540",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "risk_budget_post_trigger": 0.005,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "tw_kline",
+          "lane_label": "台股 K-line",
+          "category": "wait_entry",
+          "category_label": "現在不能買，但值得等買點名單",
+          "report_path": "reports/twStock/2026-06-22_tw_kline_decision_report.md",
+          "row_index": 33,
+          "expanded_index": 0,
+          "raw_market": "TWSE",
+          "raw_symbol_cell": "4540",
+          "raw_company_cell": "全球傳動",
+          "raw_row": {
+            "市場": "TWSE",
+            "股票代號": "4540",
+            "公司名稱": "全球傳動",
+            "產業": "電機機械",
+            "來源提及程度": "三均線買點",
+            "來源主觀看法": "中性觀察",
+            "布局建議": "先等回測支撐、突破續強或量縮沉澱後再評估",
+            "持倉建議": "若已有持倉，維持小部位觀察，不在確認前放大風險",
+            "追蹤指標": "三均線趨勢策略：3MA；收盤位置 64.7%；振幅 2.7%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=空方趨勢結束；buyCount 1；今日買點 3MA；成交金額 134,314,738",
+            "風險": "未見硬性排除條件，仍需追蹤隔日量價與大盤風險"
+          }
+        }
+      ]
+    }
+  ]
+}

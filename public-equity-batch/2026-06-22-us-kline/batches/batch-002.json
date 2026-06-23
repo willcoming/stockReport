@@ -1,0 +1,158 @@
+{
+  "batch_id": "batch-002",
+  "batch_index": 2,
+  "batch_size": 3,
+  "generated_at": "2026-06-23 16:01:20",
+  "output_root": "reports/public-equity-batch/2026-06-22-us-kline",
+  "source_reports": [
+    "reports/usStock/2026-06-22_us_kline_decision_report.md"
+  ],
+  "workflow": [
+    "company-tearsheet",
+    "initiating-coverage",
+    "portfolio-risk-management"
+  ],
+  "items": [
+    {
+      "market_key": "us",
+      "market": "NYSE",
+      "symbol": "CNC",
+      "company": "Centene Corporation Common Stock",
+      "industry": "Health Care / Medical Specialities",
+      "canonical_category": "buy_now",
+      "canonical_category_label": "現在可以買名單",
+      "source_priority": 2,
+      "instrument_type": "common_equity",
+      "output_subdir": "us-CNC",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0075,
+        "risk_budget_post_trigger": 0.0075,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "us_kline",
+          "lane_label": "美股 K-line",
+          "category": "buy_now",
+          "category_label": "現在可以買名單",
+          "report_path": "reports/usStock/2026-06-22_us_kline_decision_report.md",
+          "row_index": 9,
+          "expanded_index": 0,
+          "raw_market": "NYSE",
+          "raw_symbol_cell": "CNC",
+          "raw_company_cell": "Centene Corporation Common Stock",
+          "raw_row": {
+            "市場": "NYSE",
+            "股票代號": "CNC",
+            "公司名稱": "Centene Corporation Common Stock",
+            "產業": "Health Care / Medical Specialities",
+            "來源提及程度": "Legacy 買點 / 三均線買點",
+            "來源主觀看法": "偏多",
+            "布局建議": "可研究小量分批，仍需等量價續強或回測不破再提高信心",
+            "持倉建議": "若已有持倉，可用訊號日低點或短均線作為失效觀察",
+            "追蹤指標": "雙策略整合：LZEMA20/3MA；收盤位置 80.2%；振幅 3.3%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 309,382,913",
+            "風險": "未見硬性排除條件，仍需追蹤隔日量價與大盤風險"
+          }
+        }
+      ]
+    },
+    {
+      "market_key": "us",
+      "market": "NYSE",
+      "symbol": "CWAN",
+      "company": "Clearwater Analytics Holdings",
+      "industry": "Technology / Computer Software: Prepackaged Software",
+      "canonical_category": "buy_now",
+      "canonical_category_label": "現在可以買名單",
+      "source_priority": 2,
+      "instrument_type": "common_equity",
+      "output_subdir": "us-CWAN",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0075,
+        "risk_budget_post_trigger": 0.0075,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "us_kline",
+          "lane_label": "美股 K-line",
+          "category": "buy_now",
+          "category_label": "現在可以買名單",
+          "report_path": "reports/usStock/2026-06-22_us_kline_decision_report.md",
+          "row_index": 13,
+          "expanded_index": 0,
+          "raw_market": "NYSE",
+          "raw_symbol_cell": "CWAN",
+          "raw_company_cell": "Clearwater Analytics Holdings, Inc. Class A Common Stock",
+          "raw_row": {
+            "市場": "NYSE",
+            "股票代號": "CWAN",
+            "公司名稱": "Clearwater Analytics Holdings, Inc. Class A Common Stock",
+            "產業": "Technology / Computer Software: Prepackaged Software",
+            "來源提及程度": "Legacy 買點 / 三均線買點",
+            "來源主觀看法": "偏多",
+            "布局建議": "可研究小量分批，仍需等量價續強或回測不破再提高信心",
+            "持倉建議": "若已有持倉，可用訊號日低點或短均線作為失效觀察",
+            "追蹤指標": "雙策略整合：LZEMA20/3MA；收盤位置 66.7%；振幅 0.1%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；爆量 volumeRatio 10.64；估算成交金額USD 895,587,872",
+            "風險": "未見硬性排除條件，仍需追蹤隔日量價與大盤風險"
+          }
+        }
+      ]
+    },
+    {
+      "market_key": "us",
+      "market": "NASDAQ",
+      "symbol": "EA",
+      "company": "Electronic Arts Inc. - Common Stock",
+      "industry": "Consumer Discretionary / Services-Misc. Amusement & Recreation",
+      "canonical_category": "buy_now",
+      "canonical_category_label": "現在可以買名單",
+      "source_priority": 2,
+      "instrument_type": "common_equity",
+      "output_subdir": "us-EA",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0075,
+        "risk_budget_post_trigger": 0.0075,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "us_kline",
+          "lane_label": "美股 K-line",
+          "category": "buy_now",
+          "category_label": "現在可以買名單",
+          "report_path": "reports/usStock/2026-06-22_us_kline_decision_report.md",
+          "row_index": 7,
+          "expanded_index": 0,
+          "raw_market": "NASDAQ",
+          "raw_symbol_cell": "EA",
+          "raw_company_cell": "Electronic Arts Inc. - Common Stock",
+          "raw_row": {
+            "市場": "NASDAQ",
+            "股票代號": "EA",
+            "公司名稱": "Electronic Arts Inc. - Common Stock",
+            "產業": "Consumer Discretionary / Services-Misc. Amusement & Recreation",
+            "來源提及程度": "Legacy 買點 / 三均線買點",
+            "來源主觀看法": "偏多",
+            "布局建議": "可研究小量分批，仍需等量價續強或回測不破再提高信心",
+            "持倉建議": "若已有持倉，可用訊號日低點或短均線作為失效觀察",
+            "追蹤指標": "雙策略整合：LZEMA20/3MA；收盤位置 96.0%；振幅 0.4%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 430,093,433",
+            "風險": "未見硬性排除條件，仍需追蹤隔日量價與大盤風險"
+          }
+        }
+      ]
+    }
+  ]
+}

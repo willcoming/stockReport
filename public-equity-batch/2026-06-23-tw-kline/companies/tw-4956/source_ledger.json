@@ -1,0 +1,68 @@
+{
+  "symbol": "4956",
+  "market_key": "tw",
+  "company": "光鋐",
+  "generated_at": "2026-06-23T16:00:27+08:00",
+  "as_of": "2026-06-23 market close Asia/Taipei",
+  "recommendation_label": "Wait for trigger",
+  "research_status": "partial",
+  "valuation_status": "not_run",
+  "missing_evidence": [
+    "latest revenue / quarterly financials not reviewed in this scoped K-line PEI pass",
+    "valuation and peer multiple support not run",
+    "filings / IR presentation / transcript evidence not reviewed",
+    "positioning, ownership, and consensus estimate context missing",
+    "wait-entry trigger still requires follow-through or support retest confirmation"
+  ],
+  "market_data": {
+    "current_price": {
+      "value": 42.75,
+      "currency": "TWD",
+      "as_of": "2026-06-23 market close Asia/Taipei",
+      "source": "twStock/reports/2026-06-23.md close price"
+    }
+  },
+  "source_category": "wait_entry",
+  "source_category_label": "現在不能買，但值得等買點名單",
+  "technical_trigger": "三均線趨勢策略：3MA；收盤位置 79.3%；振幅 9.6%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 1；今日買點 3MA；波幅放大 rangeRatio 1.56；爆量 volumeRatio 3.12；成交金額 452,716,097",
+  "key_risks": "未見硬性排除條件，仍需追蹤隔日量價與大盤風險",
+  "portfolio_risk": {
+    "model_portfolio_size": "0% pre-trigger; reassess after trigger and evidence review",
+    "risk_budget": "0.50% post-trigger; 0% pre-trigger",
+    "downside_or_stop_distance": "7.60% trigger-day low distance; requires fundamental stop review",
+    "liquidity_cap": "2.0% screen cap until liquidity review",
+    "hedge_posture": "No hedge proposed in scoped K-line screen; size remains 0% until PEI evidence improves",
+    "add_rule": "Re-underwrite only after follow-through/retest plus filings, revenue, valuation, and liquidity evidence",
+    "trim_rule": "If already held in a separate portfolio context, trim discipline requires separate holdings review",
+    "exit_rule": "Exit/watchlist removal if K-line trigger fails, liquidity deteriorates, or fundamentals contradict the setup",
+    "max_loss_posture": "No model loss budget deployed in this screen-grade artifact",
+    "monitoring_cadence": "Daily price follow-through; refresh fundamentals before any model allocation"
+  },
+  "sources": [
+    {
+      "name": "2026-06-23 Taiwan K-line decision report",
+      "type": "local_decision_report",
+      "path": "reports/twStock/2026-06-23_tw_kline_decision_report.md",
+      "as_of": "2026-06-23",
+      "retrieved_at": "2026-06-23T16:00:27+08:00",
+      "used_by": [
+        "tearsheet",
+        "initiation",
+        "risk_plan"
+      ]
+    },
+    {
+      "name": "2026-06-23 Taiwan K-line scan report",
+      "type": "local_market_scan",
+      "path": "twStock/reports/2026-06-23.md",
+      "as_of": "2026-06-23",
+      "retrieved_at": "2026-06-23T16:00:27+08:00",
+      "used_by": [
+        "source_ledger",
+        "tearsheet",
+        "initiation",
+        "risk_plan"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "batch_id": "batch-012",
+  "batch_index": 12,
+  "batch_size": 3,
+  "generated_at": "2026-06-23 07:47:21",
+  "output_root": "reports/public-equity-batch/2026-06-22",
+  "source_reports": [
+    "reports/twStock/2026-06-22_tw_kline_decision_report.md",
+    "reports/usStock/2026-06-22_us_kline_decision_report.md"
+  ],
+  "workflow": [
+    "company-tearsheet",
+    "initiating-coverage",
+    "dcf-model-builder",
+    "portfolio-risk-management"
+  ],
+  "items": [
+    {
+      "market_key": "tw",
+      "market": "TWSE",
+      "symbol": "2049",
+      "company": "上銀",
+      "industry": "電機機械",
+      "canonical_category": "wait_entry",
+      "canonical_category_label": "現在不能買，但值得等買點名單",
+      "source_priority": 4,
+      "instrument_type": "common_equity",
+      "dcf_applicability": "required",
+      "output_subdir": "tw-2049",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "risk_budget_post_trigger": 0.005,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "tw_kline",
+          "lane_label": "台股 K-line",
+          "category": "wait_entry",
+          "category_label": "現在不能買，但值得等買點名單",
+          "report_path": "reports/twStock/2026-06-22_tw_kline_decision_report.md",
+          "row_index": 47,
+          "expanded_index": 0,
+          "raw_market": "TWSE",
+          "raw_symbol_cell": "2049",
+          "raw_company_cell": "上銀",
+          "raw_row": {
+            "市場": "TWSE",
+            "股票代號": "2049",
+            "公司名稱": "上銀",
+            "產業": "電機機械",
+            "來源提及程度": "Legacy 買點",
+            "來源主觀看法": "不建議追高",
+            "布局建議": "先等回測支撐或隔日收復上影線後再評估",
+            "持倉建議": "若已有持倉，避免在上影線壓力未化解前放大部位",
+            "追蹤指標": "Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 42.9%；振幅 4.1%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=空方趨勢結束；buyCount 1；今日買點 LZEMA20；成交金額 1,131,847,341",
+            "風險": "上影線壓力重：57.1%"
+          }
+        }
+      ]
+    },
+    {
+      "market_key": "tw",
+      "market": "TWSE",
+      "symbol": "2208",
+      "company": "台船",
+      "industry": "航運業",
+      "canonical_category": "wait_entry",
+      "canonical_category_label": "現在不能買，但值得等買點名單",
+      "source_priority": 4,
+      "instrument_type": "common_equity",
+      "dcf_applicability": "required",
+      "output_subdir": "tw-2208",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "risk_budget_post_trigger": 0.005,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "tw_kline",
+          "lane_label": "台股 K-line",
+          "category": "wait_entry",
+          "category_label": "現在不能買，但值得等買點名單",
+          "report_path": "reports/twStock/2026-06-22_tw_kline_decision_report.md",
+          "row_index": 52,
+          "expanded_index": 0,
+          "raw_market": "TWSE",
+          "raw_symbol_cell": "2208",
+          "raw_company_cell": "台船",
+          "raw_row": {
+            "市場": "TWSE",
+            "股票代號": "2208",
+            "公司名稱": "台船",
+            "產業": "航運業",
+            "來源提及程度": "Legacy 買點",
+            "來源主觀看法": "不建議追高",
+            "布局建議": "先等回測支撐或隔日收復上影線後再評估",
+            "持倉建議": "若已有持倉，避免在上影線壓力未化解前放大部位",
+            "追蹤指標": "Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 30.0%；振幅 2.8%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=空方趨勢結束；buyCount 1；今日買點 LZEMA20；成交金額 80,181,596",
+            "風險": "上影線壓力重：70.0%"
+          }
+        }
+      ]
+    },
+    {
+      "market_key": "tw",
+      "market": "TWSE",
+      "symbol": "2233",
+      "company": "宇隆",
+      "industry": "汽車工業",
+      "canonical_category": "wait_entry",
+      "canonical_category_label": "現在不能買，但值得等買點名單",
+      "source_priority": 4,
+      "instrument_type": "common_equity",
+      "dcf_applicability": "required",
+      "output_subdir": "tw-2233",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "risk_budget_post_trigger": 0.005,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "tw_kline",
+          "lane_label": "台股 K-line",
+          "category": "wait_entry",
+          "category_label": "現在不能買，但值得等買點名單",
+          "report_path": "reports/twStock/2026-06-22_tw_kline_decision_report.md",
+          "row_index": 17,
+          "expanded_index": 0,
+          "raw_market": "TWSE",
+          "raw_symbol_cell": "2233",
+          "raw_company_cell": "宇隆",
+          "raw_row": {
+            "市場": "TWSE",
+            "股票代號": "2233",
+            "公司名稱": "宇隆",
+            "產業": "汽車工業",
+            "來源提及程度": "Legacy 買點 / 三均線買點",
+            "來源主觀看法": "中性觀察",
+            "布局建議": "先等回測支撐、突破續強或量縮沉澱後再評估",
+            "持倉建議": "若已有持倉，維持小部位觀察，不在確認前放大風險",
+            "追蹤指標": "雙策略整合：LZEMA20/3MA；收盤位置 66.7%；振幅 4.8%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；成交金額 378,590,488",
+            "風險": "未見硬性排除條件，仍需追蹤隔日量價與大盤風險"
+          }
+        }
+      ]
+    }
+  ]
+}

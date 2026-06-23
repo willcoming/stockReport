@@ -1,0 +1,86 @@
+{
+  "symbol": "AMGN",
+  "market_key": "us",
+  "market": "NASDAQ",
+  "company": "Amgen Inc. - Common Stock",
+  "industry": "Health Care / Biotechnology: Biological Products (No Diagnostic Substances)",
+  "generated_at": "2026-06-23T16:03:47+08:00",
+  "as_of": "2026-06-22 market close America/New_York",
+  "recommendation_label": "Watch only",
+  "research_status": "partial",
+  "valuation_status": "not_run",
+  "missing_evidence": [
+    "latest SEC filings / 10-K / 10-Q and earnings call evidence not reviewed in this scoped K-line PEI pass",
+    "valuation and peer multiple support not run",
+    "sell-side consensus, ownership, short interest, and positioning context missing",
+    "business quality, balance sheet, segment, and catalyst underwriting not complete"
+  ],
+  "market_data": {
+    "current_price": {
+      "value": 344.7200012207031,
+      "currency": "USD",
+      "as_of": "2026-06-22 market close America/New_York",
+      "source": "usStock/reports/2026-06-22.md close price"
+    },
+    "ohlc": {
+      "open": 337.6499938964844,
+      "high": 345.1099853515625,
+      "low": 337.6000061035156,
+      "close": 344.7200012207031,
+      "volume": 2520000.0,
+      "estimated_amount_usd": 868694403.0,
+      "source": "usStock/reports/2026-06-22.md"
+    }
+  },
+  "source_category": "buy_now",
+  "source_category_label": "現在可以買名單",
+  "technical_trigger": "雙策略整合：LZEMA20/3MA；收盤位置 94.8%；振幅 2.2%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 868,694,403",
+  "technical_metrics": {
+    "range_ratio": "",
+    "volume_ratio": "",
+    "alerts": [
+      "策略:Legacy ZLSMA EMA20 買點",
+      "策略:三均線買點"
+    ]
+  },
+  "key_risks": "未見硬性排除條件，仍需追蹤隔日量價與大盤風險",
+  "portfolio_risk": {
+    "model_portfolio_size": "0% until fundamental evidence is decision-ready; 5% single-name cap after clearance",
+    "risk_budget": "0.75%",
+    "downside_or_stop_distance": "2.07% trigger-day low distance; requires fundamental stop review",
+    "liquidity_cap": "5.0% screen cap before full ADV and ownership review",
+    "hedge_posture": "No hedge proposed in scoped K-line screen; size remains 0% until PEI evidence improves",
+    "add_rule": "Re-underwrite only after follow-through/retest plus filings, earnings, valuation, and liquidity evidence",
+    "trim_rule": "If already held in a separate portfolio context, trim discipline requires separate holdings review",
+    "exit_rule": "Exit/watchlist removal if K-line trigger fails, liquidity deteriorates, or fundamentals contradict the setup",
+    "max_loss_posture": "No model loss budget deployed in this screen-grade artifact",
+    "monitoring_cadence": "Daily price follow-through; refresh SEC filings, earnings, valuation, and liquidity before any model allocation"
+  },
+  "sources": [
+    {
+      "name": "2026-06-22 US K-line decision report",
+      "type": "local_decision_report",
+      "path": "reports/usStock/2026-06-22_us_kline_decision_report.md",
+      "as_of": "2026-06-22",
+      "retrieved_at": "2026-06-23T16:03:47+08:00",
+      "used_by": [
+        "tearsheet",
+        "initiation",
+        "risk_plan"
+      ]
+    },
+    {
+      "name": "2026-06-22 US K-line scan report",
+      "type": "local_market_scan",
+      "path": "usStock/reports/2026-06-22.md",
+      "as_of": "2026-06-22",
+      "retrieved_at": "2026-06-23T16:03:47+08:00",
+      "used_by": [
+        "source_ledger",
+        "tearsheet",
+        "initiation",
+        "risk_plan"
+      ]
+    }
+  ]
+}

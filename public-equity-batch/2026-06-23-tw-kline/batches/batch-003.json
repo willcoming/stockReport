@@ -1,0 +1,158 @@
+{
+  "batch_id": "batch-003",
+  "batch_index": 3,
+  "batch_size": 3,
+  "generated_at": "2026-06-23 15:58:34",
+  "output_root": "reports/public-equity-batch/2026-06-23-tw-kline",
+  "source_reports": [
+    "reports/twStock/2026-06-23_tw_kline_decision_report.md"
+  ],
+  "workflow": [
+    "company-tearsheet",
+    "initiating-coverage",
+    "portfolio-risk-management"
+  ],
+  "items": [
+    {
+      "market_key": "tw",
+      "market": "TWSE",
+      "symbol": "6658",
+      "company": "聯策",
+      "industry": "其他電子業",
+      "canonical_category": "wait_entry",
+      "canonical_category_label": "現在不能買，但值得等買點名單",
+      "source_priority": 4,
+      "instrument_type": "common_equity",
+      "output_subdir": "tw-6658",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "risk_budget_post_trigger": 0.005,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "tw_kline",
+          "lane_label": "台股 K-line",
+          "category": "wait_entry",
+          "category_label": "現在不能買，但值得等買點名單",
+          "report_path": "reports/twStock/2026-06-23_tw_kline_decision_report.md",
+          "row_index": 1,
+          "expanded_index": 0,
+          "raw_market": "TWSE",
+          "raw_symbol_cell": "6658",
+          "raw_company_cell": "聯策",
+          "raw_row": {
+            "市場": "TWSE",
+            "股票代號": "6658",
+            "公司名稱": "聯策",
+            "產業": "其他電子業",
+            "來源提及程度": "Legacy 買點 / 三均線買點",
+            "來源主觀看法": "中性觀察",
+            "布局建議": "先等回測支撐、突破續強或量縮沉澱後再評估",
+            "持倉建議": "若已有持倉，維持小部位觀察，不在確認前放大風險",
+            "追蹤指標": "雙策略整合：LZEMA20/3MA；收盤位置 84.2%；振幅 5.1%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；成交金額 154,009,324",
+            "風險": "未見硬性排除條件，仍需追蹤隔日量價與大盤風險"
+          }
+        }
+      ]
+    },
+    {
+      "market_key": "tw",
+      "market": "TWSE",
+      "symbol": "8046",
+      "company": "南電",
+      "industry": "電子零組件業",
+      "canonical_category": "wait_entry",
+      "canonical_category_label": "現在不能買，但值得等買點名單",
+      "source_priority": 4,
+      "instrument_type": "common_equity",
+      "output_subdir": "tw-8046",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "risk_budget_post_trigger": 0.005,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "tw_kline",
+          "lane_label": "台股 K-line",
+          "category": "wait_entry",
+          "category_label": "現在不能買，但值得等買點名單",
+          "report_path": "reports/twStock/2026-06-23_tw_kline_decision_report.md",
+          "row_index": 8,
+          "expanded_index": 0,
+          "raw_market": "TWSE",
+          "raw_symbol_cell": "8046",
+          "raw_company_cell": "南電",
+          "raw_row": {
+            "市場": "TWSE",
+            "股票代號": "8046",
+            "公司名稱": "南電",
+            "產業": "電子零組件業",
+            "來源提及程度": "Legacy 買點 / 三均線買點",
+            "來源主觀看法": "不建議追高",
+            "布局建議": "先等回測支撐或隔日收復上影線後再評估",
+            "持倉建議": "若已有持倉，避免在上影線壓力未化解前放大部位",
+            "追蹤指標": "雙策略整合：LZEMA20/3MA；收盤位置 53.8%；振幅 8.6%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；爆量 volumeRatio 1.94；成交金額 32,059,820,433",
+            "風險": "上影線壓力重：46.2%"
+          }
+        }
+      ]
+    },
+    {
+      "market_key": "tw",
+      "market": "TWSE",
+      "symbol": "9904",
+      "company": "寶成",
+      "industry": "運動休閒",
+      "canonical_category": "wait_entry",
+      "canonical_category_label": "現在不能買，但值得等買點名單",
+      "source_priority": 4,
+      "instrument_type": "common_equity",
+      "output_subdir": "tw-9904",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "risk_budget_post_trigger": 0.005,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "tw_kline",
+          "lane_label": "台股 K-line",
+          "category": "wait_entry",
+          "category_label": "現在不能買，但值得等買點名單",
+          "report_path": "reports/twStock/2026-06-23_tw_kline_decision_report.md",
+          "row_index": 7,
+          "expanded_index": 0,
+          "raw_market": "TWSE",
+          "raw_symbol_cell": "9904",
+          "raw_company_cell": "寶成",
+          "raw_row": {
+            "市場": "TWSE",
+            "股票代號": "9904",
+            "公司名稱": "寶成",
+            "產業": "運動休閒",
+            "來源提及程度": "Legacy 買點",
+            "來源主觀看法": "中性觀察",
+            "布局建議": "先等回測支撐、突破續強或量縮沉澱後再評估",
+            "持倉建議": "若已有持倉，維持小部位觀察，不在確認前放大風險",
+            "追蹤指標": "Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 0.0%；振幅 1.0%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=空方趨勢結束；buyCount 1；今日買點 LZEMA20；成交金額 548,493,477",
+            "風險": "未見硬性排除條件，仍需追蹤隔日量價與大盤風險"
+          }
+        }
+      ]
+    }
+  ]
+}

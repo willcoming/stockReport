@@ -1,0 +1,64 @@
+{
+  "batch_id": "batch-004",
+  "batch_index": 4,
+  "batch_size": 1,
+  "generated_at": "2026-06-23 15:58:34",
+  "output_root": "reports/public-equity-batch/2026-06-23-tw-kline",
+  "source_reports": [
+    "reports/twStock/2026-06-23_tw_kline_decision_report.md"
+  ],
+  "workflow": [
+    "company-tearsheet",
+    "initiating-coverage",
+    "portfolio-risk-management"
+  ],
+  "items": [
+    {
+      "market_key": "tw",
+      "market": "TWSE",
+      "symbol": "9910",
+      "company": "豐泰",
+      "industry": "運動休閒",
+      "canonical_category": "wait_entry",
+      "canonical_category_label": "現在不能買，但值得等買點名單",
+      "source_priority": 4,
+      "instrument_type": "common_equity",
+      "output_subdir": "tw-9910",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "risk_budget_post_trigger": 0.005,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "tw_kline",
+          "lane_label": "台股 K-line",
+          "category": "wait_entry",
+          "category_label": "現在不能買，但值得等買點名單",
+          "report_path": "reports/twStock/2026-06-23_tw_kline_decision_report.md",
+          "row_index": 6,
+          "expanded_index": 0,
+          "raw_market": "TWSE",
+          "raw_symbol_cell": "9910",
+          "raw_company_cell": "豐泰",
+          "raw_row": {
+            "市場": "TWSE",
+            "股票代號": "9910",
+            "公司名稱": "豐泰",
+            "產業": "運動休閒",
+            "來源提及程度": "Legacy 買點",
+            "來源主觀看法": "中性觀察",
+            "布局建議": "先等回測支撐、突破續強或量縮沉澱後再評估",
+            "持倉建議": "若已有持倉，維持小部位觀察，不在確認前放大風險",
+            "追蹤指標": "Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 66.7%；振幅 4.2%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=空方趨勢結束；buyCount 1；今日買點 LZEMA20；成交金額 186,632,232",
+            "風險": "未見硬性排除條件，仍需追蹤隔日量價與大盤風險"
+          }
+        }
+      ]
+    }
+  ]
+}
