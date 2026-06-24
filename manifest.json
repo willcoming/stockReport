@@ -1,43 +1,39 @@
 {
-  "generated_at": "2026-06-24 09:49:36",
+  "generated_at": "2026-06-24 11:19:57",
   "market_signal_cards": [
     {
       "id": "us-equity-five-signals",
       "title": "美股 5 信號",
-      "badge": "medium",
+      "badge": "low to medium",
       "tone": "yellow",
-      "status": "正常回調；美元走強 / 波動升高觀察",
-      "as_of": "2026-06-24 08:00 Asia/Taipei；美股資料截至 2026-06-23",
-      "summary": "正常回調 / no panic。VIX 19.49；Fear & Greed：CNN 最新值 unavailable/stale，第三方 FinHacker 28（fear）；信用市場 stable。",
+      "status": "Normal pullback / low-volatility fear",
+      "as_of": "2026-06-24 11:18:22 CST",
+      "summary": "Normal pullback / low-volatility fear；normal DCA / no panic。VIX 19.49，Fear & Greed 34.74，信用市場目前判讀為 stable。",
       "metrics": [
         {
           "label": "波動 / 情緒",
-          "value": "VIX 19.49；F&G CNN unavailable / FinHacker 28",
-          "note": "watch / fear；CNN 官方最新值 stale，信心中等"
+          "value": "VIX 19.49；Fear & Greed 34.74",
+          "note": "watch / fear"
         },
         {
           "label": "廣度",
-          "value": "SPY -1.45%；RSP -0.34%；IWM -0.96%",
-          "note": "RSP/SPY +1.13%，IWM/SPY +0.50%；廣度相對有支撐"
+          "value": "SPY -1.45%，RSP -0.34%，IWM -0.96%",
+          "note": "觀察 RSP、IWM 是否跟上 SPY。"
         },
         {
           "label": "信用 / 跨資產",
-          "value": "HY OAS 2.65%；HYG -0.09%；JNK -0.05%",
-          "note": "10Y 4.493%；DXY +0.36%；GLD -1.89%"
+          "value": "HY OAS unavailable%；HYG -0.09%，JNK -0.05%",
+          "note": "10Y 4.49%；DXY +0.09%；GLD -1.89%"
         }
       ],
       "sources": [
         {
-          "label": "Yahoo ^VIX / SPY",
-          "url": "https://finance.yahoo.com/quote/%5EVIX"
+          "label": "Yahoo Finance chart",
+          "url": "https://finance.yahoo.com/quote/SPY"
         },
         {
           "label": "CNN Fear & Greed",
           "url": "https://www.cnn.com/markets/fear-and-greed"
-        },
-        {
-          "label": "FinHacker F&G fallback",
-          "url": "https://www.finhacker.cz/en/fear-and-greed-index-historical-data-and-chart/"
         },
         {
           "label": "FRED HY OAS",
@@ -52,21 +48,21 @@
     {
       "id": "tw-market-light",
       "title": "台股市場燈號",
-      "badge": "黃燈",
-      "tone": "yellow",
-      "status": "可以看，但不要重壓。",
-      "as_of": "官方資料日 2026-06-22；目標日 2026-06-23",
-      "summary": "總分 1；可以看，但不要重壓。",
+      "badge": "綠燈",
+      "tone": "green",
+      "status": "盤勢偏建設性，可維持正常研究節奏，但仍以分批與條件確認為主。",
+      "as_of": "官方資料日 2026-06-24；目標日 2026-06-24",
+      "summary": "總分 3；盤勢偏建設性，可維持正常研究節奏，但仍以分批與條件確認為主。",
       "metrics": [
         {
           "label": "總分",
-          "value": "1",
+          "value": "3",
           "note": ">= 3 綠燈；-2 以下紅燈；其餘黃燈。"
         },
         {
           "label": "資料日期",
-          "value": "2026-06-22",
-          "note": "官方最新可用資料日為 2026-06-22，早於今天 2026-06-23。"
+          "value": "2026-06-24",
+          "note": "使用 TWSE MIS 盤中指數資料補入最新開盤日 2026-06-24；盤中 close 代表目前指數，不等於最終收盤。"
         },
         {
           "label": "條件數",
@@ -148,26 +144,6 @@
       "funnel": "未標示"
     },
     {
-      "lane": "us_kline",
-      "title": "2026-06-22 美股 K 線警報掃描投資決策報告",
-      "run_id": "2026-06-22-us-kline",
-      "data_date": "2026-06-22",
-      "generated_at": "2026-06-23 18:11:57",
-      "source_path": "reports/usStock/2026-06-22_us_kline_decision_report.md",
-      "detail_path": "detail/2026-06-22_us_kline_decision_report.html",
-      "funnel": "未標示"
-    },
-    {
-      "lane": "kol",
-      "title": "2026-06-23 KOL 觀點、新聞重點與投資決策合併報告",
-      "run_id": "2026-06-23",
-      "data_date": "2026-06-23",
-      "generated_at": "2026-06-23 14:12:14",
-      "source_path": "reports/news/2026-06-23_kol_news_decision_report.md",
-      "detail_path": "detail/2026-06-23_kol_news_decision_report.html",
-      "funnel": "未標示"
-    },
-    {
       "lane": "tw_kline",
       "title": "2026-06-23 台股 K 線警報掃描投資決策報告",
       "run_id": "2026-06-23-tw-kline",
@@ -175,26 +151,6 @@
       "generated_at": "2026-06-23 18:11:57",
       "source_path": "reports/twStock/2026-06-23_tw_kline_decision_report.md",
       "detail_path": "detail/2026-06-23_tw_kline_decision_report.html",
-      "funnel": "未標示"
-    },
-    {
-      "lane": "tw_kline",
-      "title": "2026-06-22 台股 K 線警報掃描投資決策報告",
-      "run_id": "2026-06-22-tw-kline",
-      "data_date": "2026-06-22",
-      "generated_at": "2026-06-22 17:45:03",
-      "source_path": "reports/twStock/2026-06-22_tw_kline_decision_report.md",
-      "detail_path": "detail/2026-06-22_tw_kline_decision_report.html",
-      "funnel": "未標示"
-    },
-    {
-      "lane": "kol",
-      "title": "2026-06-21-2345 KOL 觀點、新聞重點與投資決策報告",
-      "run_id": "2026-06-21-2345",
-      "data_date": "2026-06-21",
-      "generated_at": "2026-06-22 00:02:39",
-      "source_path": "reports/news/2026-06-21-2345_kol_news_decision_report.md",
-      "detail_path": "detail/2026-06-21-2345_kol_news_decision_report.html",
       "funnel": "未標示"
     }
   ]
