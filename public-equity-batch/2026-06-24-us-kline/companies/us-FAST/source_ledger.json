@@ -1,0 +1,82 @@
+{
+  "symbol": "FAST",
+  "market_key": "us",
+  "company": "Fastenal Company - Common Stock",
+  "generated_at": "2026-06-25T06:46:05",
+  "retrieved_at": "2026-06-25T06:46:05",
+  "as_of": "2026-06-24",
+  "sources": [
+    {
+      "source_name": "StockLoop US K-line decision report",
+      "source_type": "decision_report",
+      "path": "reports/usStock/2026-06-24_us_kline_decision_report.md",
+      "as_of": "2026-06-24",
+      "retrieved_at": "2026-06-25T06:46:05",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "source_ledger.json",
+        "tearsheet.html",
+        "initiation.html",
+        "risk_plan.html"
+      ]
+    },
+    {
+      "source_name": "StockLoop US K-line daily scan",
+      "source_type": "local_signal_report",
+      "path": "usStock/reports/2026-06-24.md",
+      "as_of": "2026-06-24",
+      "retrieved_at": "2026-06-25T06:46:05",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "source_ledger.json",
+        "initiation.html",
+        "risk_plan.html"
+      ]
+    }
+  ],
+  "market_data": {
+    "current_price": {
+      "value": "46.2599983215332",
+      "currency": "USD",
+      "as_of": "2026-06-24",
+      "source": "StockLoop US K-line daily scan yfinance close"
+    }
+  },
+  "recommendation_label": "Wait for trigger",
+  "research_status": "partial",
+  "valuation_status": "not_run",
+  "missing_evidence": [
+    "本批次使用 StockLoop K-line report 與本機訊號作為來源，未完成完整 SEC filings、法說、consensus、估值模型與流動性模型查核",
+    "需以 Public Equity Investing specialist 的完整公司級研究補強後，才可升級為 decision-ready"
+  ],
+  "industry_thesis_context": {
+    "gate": null,
+    "gate_label": null,
+    "hype_risk": null,
+    "hype_risk_label": null,
+    "summary": "",
+    "missing_evidence": [],
+    "source": ""
+  },
+  "kline_context": {
+    "category": "wait_entry",
+    "category_label": "現在不能買，但值得等買點名單",
+    "signal_message": "雙策略整合：LZEMA20/3MA；收盤位置 52.5%；振幅 2.6%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 323,052,119",
+    "layout_suggestion": "先等回測支撐或隔日收復上影線後再評估",
+    "holding_suggestion": "若已有持倉，避免在上影線壓力未化解前放大部位"
+  },
+  "portfolio_risk": {
+    "model_portfolio_size": "0% pre-trigger; reassess after trigger and evidence review",
+    "risk_budget": 0.0,
+    "downside_or_stop_distance": "not independently verified in scoped K-line PEI batch",
+    "liquidity_cap": "not independently verified",
+    "hedge_posture": "No hedge; model portfolio remains cash until evidence clears",
+    "add_rule": "Open/add only after full PEI specialist workflow confirms thesis, trigger, price context, liquidity, and risk/reward",
+    "trim_rule": "Trim if K-line trigger fails or official evidence weakens",
+    "exit_rule": "Exit/watch-only if thesis evidence, price trigger, or risk/reward fails",
+    "max_loss_posture": "0 units at risk while research_status is partial",
+    "monitoring_cadence": "Daily K-line and weekly fundamentals while in watch universe"
+  }
+}
