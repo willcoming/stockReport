@@ -4,9 +4,9 @@
 
 - 研究姿態：Watch only
 - 研究狀態：partial
-- 目前價格：373.94 USD
-- 價格時間：2026-06-23T00:00:00-04:00
-- 來源：Yahoo Finance via yfinance (MSFT)
+- 目前價格：375.21 USD
+- 價格時間：2026-06-24
+- 來源：Stock inventory health-check current-price column (MSFT)
 
 ## PEI 做了什麼
 
@@ -21,7 +21,14 @@
 - 健檢理由：權重小且未破價格風控，PEI 缺證據但未達 trim/exit，續抱不加。
 - 近一週觸發：近一週未觸發買進/賣出
 - 短線情境：APEX 震盪：多/空/震盪 35/25/40；warn 373.28；break 372
-- 失效條件：PEI：Azure/Copilot 成長或 margin 無法支撐估值。；APEX：跌破 372，或回落至 373.28 下方且無法收復。
+- 失效條件：PEI：Azure/Copilot 成長或 margin 無法支撐估值。；APEX：收盤跌破 372；373.28 下方先進入價格風險觀察。
+
+## 產業前景與炒作風險
+
+- 產業 Gate：目前偏題材，缺公司級落地證據
+- 炒作風險：低
+- 摘要：Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=庫存回補 / 週期復甦；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。
+- 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定；近 7 日公開新聞熱度未命中或未抓取；缺少明確後續產業 KPI；缺少公司級官方營收、訂單、財報或法說支撐
 
 ## 模型投組風險計畫
 
@@ -32,7 +39,7 @@
 - 避險姿態：No hedge; model portfolio remains cash for this name until evidence clears
 - 加碼規則：Open or add only after full PEI specialist workflow confirms thesis, trigger, price context, liquidity, and risk/reward
 - 減碼規則：權重小且未破價格風控，PEI 缺證據但未達 trim/exit，續抱不加。
-- 退出規則：PEI：Azure/Copilot 成長或 margin 無法支撐估值。；APEX：跌破 372，或回落至 373.28 下方且無法收復。
+- 退出規則：PEI：Azure/Copilot 成長或 margin 無法支撐估值。；APEX：收盤跌破 372；373.28 下方先進入價格風險觀察。
 - 最大損失姿態：0 units at risk because inventory-scope model size is 0%
 - 追蹤頻率：Daily price and weekly fundamentals while held in inventory watch universe
 
@@ -41,6 +48,11 @@
 - 本 inventory-scope PEI 批次未逐檔執行完整官方 filings、法說、consensus、估值模型與流動性模型查核
 - 個人庫存僅用於定義研究宇宙；模型投組 sizing 未使用券商、股數或成本
 - 需以公司公告、交易所/SEC 文件與正式 PEI specialist workflow 補強後，才可升級為 decision-ready
+- 產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低
+- 產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定
+- 產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取
+- 產業 thesis 缺失證據：缺少明確後續產業 KPI
+- 產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐
 
 ## 原始檔案
 

@@ -7,7 +7,7 @@ Use @public-equity-investing for the research work.
 
 - Batch JSON: `/Volumes/T7/stockLoop/reports/public-equity-batch/2026-06-24-inventory/batches/batch-006.json`
 - Output root: `/Volumes/T7/stockLoop/reports/public-equity-batch/2026-06-24-inventory`
-- Source reports: `["myStock/tw_stock_inventory.csv", "myStock/us_stock_inventory_cathay.csv", "myStock/us_stock_inventory_yuanta.csv", "/tmp/stockloop_inventory_merged.json", "reports/stock-inventory/2026-06-24-1107_inventory_health_check.md"]`
+- Source reports: `["myStock/tw_stock_inventory.csv", "myStock/us_stock_inventory_cathay.csv", "myStock/us_stock_inventory_yuanta.csv", "/tmp/stockloop_inventory_merged_us.json", "reports/stock-inventory/2026-06-24-2151_inventory_health_check.md"]`
 - Do not edit source reports or unrelated files.
 - Write artifacts only under the output root.
 - Do not use personal holdings, `myStock/`, or brokerage data.
@@ -52,34 +52,68 @@ Every `source_ledger.json` must include:
 - If critical facts are missing, mark the item `Not decision-ready`.
 - Do not use blank placeholders such as empty strings, `N/A`, `待查`, or `資料不足` to pass validation. If evidence is unavailable, list it in `missing_evidence`.
 - Wait-entry symbols default to `Wait for trigger` and pre-trigger model size 0%. Upgrade only when fundamentals, technical trigger, current price context, and risk/reward are all source-supported.
+- Use `industry_thesis_gate` and `hype_risk` as company-level industry evidence. `theme_only`, `hype_or_crowded`, `insufficient_data`, or `high` hype risk must remain `Watch only` or `Not decision-ready` until official filings/revenue/orders close the missing-evidence gap.
 
 ## Symbols
 
 ```json
 [
   {
-    "market_key": "tw",
-    "symbol": "8926",
-    "company": "台汽電",
+    "market_key": "us",
+    "symbol": "TSM",
+    "company": "Taiwan Semiconductor",
     "canonical_category": "inventory_holding",
-    "output_subdir": "tw-8926",
-    "instrument_type": "common_equity"
+    "output_subdir": "us-TSM",
+    "instrument_type": "common_equity",
+    "industry_thesis_gate": "theme_only",
+    "industry_thesis_gate_label": "目前偏題材，缺公司級落地證據",
+    "hype_risk": "low",
+    "hype_risk_label": "低",
+    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=AI / 資料中心、庫存回補 / 週期復甦；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
+    "industry_thesis_missing_evidence": [
+      "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+      "近 7 日公開新聞熱度未命中或未抓取",
+      "缺少明確後續產業 KPI",
+      "缺少公司級官方營收、訂單、財報或法說支撐"
+    ]
   },
   {
     "market_key": "us",
-    "symbol": "AAPL",
-    "company": "Apple Inc",
+    "symbol": "UBER",
+    "company": "Uber Technologies",
     "canonical_category": "inventory_holding",
-    "output_subdir": "us-AAPL",
-    "instrument_type": "common_equity"
+    "output_subdir": "us-UBER",
+    "instrument_type": "common_equity",
+    "industry_thesis_gate": "theme_only",
+    "industry_thesis_gate_label": "目前偏題材，缺公司級落地證據",
+    "hype_risk": "low",
+    "hype_risk_label": "低",
+    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=庫存回補 / 週期復甦；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
+    "industry_thesis_missing_evidence": [
+      "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+      "近 7 日公開新聞熱度未命中或未抓取",
+      "缺少明確後續產業 KPI",
+      "缺少公司級官方營收、訂單、財報或法說支撐"
+    ]
   },
   {
     "market_key": "us",
-    "symbol": "BRK.B",
-    "company": "Berkshire Hathaway I",
+    "symbol": "VST",
+    "company": "Vistra Energy Corp",
     "canonical_category": "inventory_holding",
-    "output_subdir": "us-BRK.B",
-    "instrument_type": "common_equity"
+    "output_subdir": "us-VST",
+    "instrument_type": "common_equity",
+    "industry_thesis_gate": "theme_only",
+    "industry_thesis_gate_label": "目前偏題材，缺公司級落地證據",
+    "hype_risk": "low",
+    "hype_risk_label": "低",
+    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=庫存回補 / 週期復甦；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
+    "industry_thesis_missing_evidence": [
+      "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+      "近 7 日公開新聞熱度未命中或未抓取",
+      "缺少明確後續產業 KPI",
+      "缺少公司級官方營收、訂單、財報或法說支撐"
+    ]
   }
 ]
 ```
@@ -91,48 +125,54 @@ Every `source_ledger.json` must include:
   "batch_id": "batch-006",
   "items": [
     {
-      "market_key": "tw",
-      "symbol": "8926",
-      "output_subdir": "tw-8926",
+      "market_key": "us",
+      "symbol": "TSM",
+      "output_subdir": "us-TSM",
       "status": "complete|partial|blocked",
       "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
       "artifacts": {
-        "source_ledger": "reports/public-equity-batch/2026-06-24-inventory/companies/tw-8926/source_ledger.json",
-        "tearsheet": "reports/public-equity-batch/2026-06-24-inventory/companies/tw-8926/tearsheet.html",
-        "initiation": "reports/public-equity-batch/2026-06-24-inventory/companies/tw-8926/initiation.html",
-        "risk_plan": "reports/public-equity-batch/2026-06-24-inventory/companies/tw-8926/risk_plan.html"
+        "source_ledger": "reports/public-equity-batch/2026-06-24-inventory/companies/us-TSM/source_ledger.json",
+        "tearsheet": "reports/public-equity-batch/2026-06-24-inventory/companies/us-TSM/tearsheet.html",
+        "initiation": "reports/public-equity-batch/2026-06-24-inventory/companies/us-TSM/initiation.html",
+        "risk_plan": "reports/public-equity-batch/2026-06-24-inventory/companies/us-TSM/risk_plan.html"
       },
       "missing_evidence": [],
+      "industry_thesis_gate": "theme_only",
+      "hype_risk": "low",
       "notes": ""
     },
     {
       "market_key": "us",
-      "symbol": "AAPL",
-      "output_subdir": "us-AAPL",
+      "symbol": "UBER",
+      "output_subdir": "us-UBER",
       "status": "complete|partial|blocked",
       "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
       "artifacts": {
-        "source_ledger": "reports/public-equity-batch/2026-06-24-inventory/companies/us-AAPL/source_ledger.json",
-        "tearsheet": "reports/public-equity-batch/2026-06-24-inventory/companies/us-AAPL/tearsheet.html",
-        "initiation": "reports/public-equity-batch/2026-06-24-inventory/companies/us-AAPL/initiation.html",
-        "risk_plan": "reports/public-equity-batch/2026-06-24-inventory/companies/us-AAPL/risk_plan.html"
+        "source_ledger": "reports/public-equity-batch/2026-06-24-inventory/companies/us-UBER/source_ledger.json",
+        "tearsheet": "reports/public-equity-batch/2026-06-24-inventory/companies/us-UBER/tearsheet.html",
+        "initiation": "reports/public-equity-batch/2026-06-24-inventory/companies/us-UBER/initiation.html",
+        "risk_plan": "reports/public-equity-batch/2026-06-24-inventory/companies/us-UBER/risk_plan.html"
       },
       "missing_evidence": [],
+      "industry_thesis_gate": "theme_only",
+      "hype_risk": "low",
       "notes": ""
     },
     {
       "market_key": "us",
-      "symbol": "BRK.B",
-      "output_subdir": "us-BRK.B",
+      "symbol": "VST",
+      "output_subdir": "us-VST",
       "status": "complete|partial|blocked",
       "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
       "artifacts": {
-        "source_ledger": "reports/public-equity-batch/2026-06-24-inventory/companies/us-BRK.B/source_ledger.json",
-        "tearsheet": "reports/public-equity-batch/2026-06-24-inventory/companies/us-BRK.B/tearsheet.html",
-        "initiation": "reports/public-equity-batch/2026-06-24-inventory/companies/us-BRK.B/initiation.html",
-        "risk_plan": "reports/public-equity-batch/2026-06-24-inventory/companies/us-BRK.B/risk_plan.html"
+        "source_ledger": "reports/public-equity-batch/2026-06-24-inventory/companies/us-VST/source_ledger.json",
+        "tearsheet": "reports/public-equity-batch/2026-06-24-inventory/companies/us-VST/tearsheet.html",
+        "initiation": "reports/public-equity-batch/2026-06-24-inventory/companies/us-VST/initiation.html",
+        "risk_plan": "reports/public-equity-batch/2026-06-24-inventory/companies/us-VST/risk_plan.html"
       },
       "missing_evidence": [],
+      "industry_thesis_gate": "theme_only",
+      "hype_risk": "low",
       "notes": ""
     }
   ],

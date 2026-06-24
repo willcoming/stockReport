@@ -2,15 +2,15 @@
   "symbol": "GLW",
   "market_key": "us",
   "company": "康寧公司",
-  "generated_at": "2026-06-24T12:22:04",
-  "retrieved_at": "2026-06-24T12:22:04",
-  "as_of": "2026-06-23T00:00:00-04:00",
+  "generated_at": "2026-06-24T21:55:01",
+  "retrieved_at": "2026-06-24T21:55:01",
+  "as_of": "2026-06-24",
   "sources": [
     {
       "source_name": "merged inventory universe",
       "source_type": "inventory_scope",
-      "path": "/tmp/stockloop_inventory_merged.json",
-      "retrieved_at": "2026-06-24T12:22:04",
+      "path": "/tmp/stockloop_inventory_merged_us.json",
+      "retrieved_at": "2026-06-24T21:55:01",
       "used_by": [
         "summary.html",
         "summary.md",
@@ -23,8 +23,8 @@
     {
       "source_name": "stock inventory health check report",
       "source_type": "local_report",
-      "path": "reports/stock-inventory/2026-06-24-1107_inventory_health_check.md",
-      "retrieved_at": "2026-06-24T12:22:04",
+      "path": "reports/stock-inventory/2026-06-24-2151_inventory_health_check.md",
+      "retrieved_at": "2026-06-24T21:55:01",
       "used_by": [
         "summary.html",
         "summary.md",
@@ -33,11 +33,11 @@
       ]
     },
     {
-      "source_name": "Yahoo Finance via yfinance",
+      "source_name": "Stock inventory health-check current-price column",
       "source_type": "market_data",
       "symbol": "GLW",
-      "as_of": "2026-06-23T00:00:00-04:00",
-      "retrieved_at": "2026-06-24T12:22:04",
+      "as_of": "2026-06-24",
+      "retrieved_at": "2026-06-24T21:55:01",
       "used_by": [
         "summary.html",
         "summary.md",
@@ -49,7 +49,7 @@
     {
       "source_name": "recent K-line trigger scan",
       "source_type": "local_signal_log",
-      "retrieved_at": "2026-06-24T12:22:04",
+      "retrieved_at": "2026-06-24T21:55:01",
       "summary": "近一週未觸發買進/賣出",
       "used_by": [
         "summary.html",
@@ -57,14 +57,29 @@
         "initiation.html",
         "risk_plan.html"
       ]
+    },
+    {
+      "source_name": "company-level industry thesis",
+      "source_type": "industry_thesis",
+      "path": "reports/industry-thesis/2026-06-24_industry_thesis.json",
+      "retrieved_at": "2026-06-24T21:55:01",
+      "industry_thesis_gate": "theme_only",
+      "hype_risk": "low",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "source_ledger.json",
+        "initiation.html",
+        "risk_plan.html"
+      ]
     }
   ],
   "market_data": {
     "current_price": {
-      "value": 194.07000732421875,
+      "value": 199.47,
       "currency": "USD",
-      "as_of": "2026-06-23T00:00:00-04:00",
-      "source": "Yahoo Finance via yfinance (GLW)"
+      "as_of": "2026-06-24",
+      "source": "Stock inventory health-check current-price column (GLW)"
     }
   },
   "recommendation_label": "Watch only",
@@ -73,8 +88,27 @@
   "missing_evidence": [
     "本 inventory-scope PEI 批次未逐檔執行完整官方 filings、法說、consensus、估值模型與流動性模型查核",
     "個人庫存僅用於定義研究宇宙；模型投組 sizing 未使用券商、股數或成本",
-    "需以公司公告、交易所/SEC 文件與正式 PEI specialist workflow 補強後，才可升級為 decision-ready"
+    "需以公司公告、交易所/SEC 文件與正式 PEI specialist workflow 補強後，才可升級為 decision-ready",
+    "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+    "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+    "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+    "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+    "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐"
   ],
+  "industry_thesis_context": {
+    "gate": "theme_only",
+    "gate_label": "目前偏題材，缺公司級落地證據",
+    "hype_risk": "low",
+    "hype_risk_label": "低",
+    "summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=庫存回補 / 週期復甦；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
+    "missing_evidence": [
+      "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+      "近 7 日公開新聞熱度未命中或未抓取",
+      "缺少明確後續產業 KPI",
+      "缺少公司級官方營收、訂單、財報或法說支撐"
+    ],
+    "source": "reports/industry-thesis/2026-06-24_industry_thesis.json"
+  },
   "stock_inventory_context": {
     "action": "續抱",
     "risk_priority": "",
@@ -82,7 +116,9 @@
     "recent_trigger_summary": "近一週未觸發買進/賣出",
     "short_term_scenario": "APEX 震盪：多/空/震盪 35/25/40；warn 181.2；break 175.4",
     "invalidation_condition": "PEI：良率、認證或客戶導入無法支持題材估值。；APEX：收盤跌破 175.4；181.2 下方先進入價格風險觀察。",
-    "data_limitations": "報價：Yahoo Finance via yfinance 2026-06-23；K線窗 2026-06-17~2026-06-23（目前目錄僅有 2026-06-23 K線報告）；PEI 需追蹤 / confidence 低；官方財報/法說/估值多數未完整查核"
+    "data_limitations": "報價：yfinance / finance snapshot 2026-06-24 21:51 Asia/Taipei（開盤後早段，非純 20:45 盤前）；K線窗 2026-06-17~2026-06-23（目前只有 2026-06-23 美股K線報告）；PEI conditional risk screen，官方 filings/法說/consensus/估值/流動性模型未逐檔補齊；產業thesis離線模式，SEC/GDELT未網路補強。",
+    "industry_thesis_gate": "theme_only",
+    "hype_risk": "low"
   },
   "portfolio_risk": {
     "model_portfolio_size": "0%; inventory-holding context only, no model position opened",

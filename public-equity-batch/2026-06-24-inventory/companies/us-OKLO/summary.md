@@ -4,9 +4,9 @@
 
 - 研究姿態：Wait for trigger
 - 研究狀態：partial
-- 目前價格：57.19 USD
-- 價格時間：2026-06-23T00:00:00-04:00
-- 來源：Yahoo Finance via yfinance (OKLO)
+- 目前價格：55.1 USD
+- 價格時間：2026-06-24
+- 來源：Stock inventory health-check current-price column (OKLO)
 
 ## PEI 做了什麼
 
@@ -22,6 +22,13 @@
 - 近一週觸發：2026-06-23 買進：LZEMA20
 - 短線情境：APEX 震盪：多/空/震盪 30/30/40；warn 58.56；break 55
 - 失效條件：PEI：官方監管/合約進度無法驗證，且價格買點失敗。；APEX：收盤跌破 55；58.56 下方先進入預警。
+
+## 產業前景與炒作風險
+
+- 產業 Gate：目前偏題材，缺公司級落地證據
+- 炒作風險：低
+- 摘要：Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=庫存回補 / 週期復甦；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。
+- 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定；近 7 日公開新聞熱度未命中或未抓取；缺少明確後續產業 KPI；缺少公司級官方營收、訂單、財報或法說支撐
 
 ## 模型投組風險計畫
 
@@ -41,6 +48,11 @@
 - 本 inventory-scope PEI 批次未逐檔執行完整官方 filings、法說、consensus、估值模型與流動性模型查核
 - 個人庫存僅用於定義研究宇宙；模型投組 sizing 未使用券商、股數或成本
 - 需以公司公告、交易所/SEC 文件與正式 PEI specialist workflow 補強後，才可升級為 decision-ready
+- 產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低
+- 產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定
+- 產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取
+- 產業 thesis 缺失證據：缺少明確後續產業 KPI
+- 產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐
 
 ## 原始檔案
 

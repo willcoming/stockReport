@@ -7,7 +7,7 @@ Use @public-equity-investing for the research work.
 
 - Batch JSON: `/Volumes/T7/stockLoop/reports/public-equity-batch/2026-06-24-inventory/batches/batch-005.json`
 - Output root: `/Volumes/T7/stockLoop/reports/public-equity-batch/2026-06-24-inventory`
-- Source reports: `["myStock/tw_stock_inventory.csv", "myStock/us_stock_inventory_cathay.csv", "myStock/us_stock_inventory_yuanta.csv", "/tmp/stockloop_inventory_merged.json", "reports/stock-inventory/2026-06-24-1107_inventory_health_check.md"]`
+- Source reports: `["myStock/tw_stock_inventory.csv", "myStock/us_stock_inventory_cathay.csv", "myStock/us_stock_inventory_yuanta.csv", "/tmp/stockloop_inventory_merged_us.json", "reports/stock-inventory/2026-06-24-2151_inventory_health_check.md"]`
 - Do not edit source reports or unrelated files.
 - Write artifacts only under the output root.
 - Do not use personal holdings, `myStock/`, or brokerage data.
@@ -52,34 +52,68 @@ Every `source_ledger.json` must include:
 - If critical facts are missing, mark the item `Not decision-ready`.
 - Do not use blank placeholders such as empty strings, `N/A`, `待查`, or `資料不足` to pass validation. If evidence is unavailable, list it in `missing_evidence`.
 - Wait-entry symbols default to `Wait for trigger` and pre-trigger model size 0%. Upgrade only when fundamentals, technical trigger, current price context, and risk/reward are all source-supported.
+- Use `industry_thesis_gate` and `hype_risk` as company-level industry evidence. `theme_only`, `hype_or_crowded`, `insufficient_data`, or `high` hype risk must remain `Watch only` or `Not decision-ready` until official filings/revenue/orders close the missing-evidence gap.
 
 ## Symbols
 
 ```json
 [
   {
-    "market_key": "tw",
-    "symbol": "6285",
-    "company": "啟碁",
+    "market_key": "us",
+    "symbol": "SOFI",
+    "company": "SoFi Technologies Inc",
     "canonical_category": "inventory_holding",
-    "output_subdir": "tw-6285",
-    "instrument_type": "common_equity"
+    "output_subdir": "us-SOFI",
+    "instrument_type": "common_equity",
+    "industry_thesis_gate": "theme_only",
+    "industry_thesis_gate_label": "目前偏題材，缺公司級落地證據",
+    "hype_risk": "low",
+    "hype_risk_label": "低",
+    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=庫存回補 / 週期復甦；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
+    "industry_thesis_missing_evidence": [
+      "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+      "近 7 日公開新聞熱度未命中或未抓取",
+      "缺少明確後續產業 KPI",
+      "缺少公司級官方營收、訂單、財報或法說支撐"
+    ]
   },
   {
-    "market_key": "tw",
-    "symbol": "6669",
-    "company": "緯穎",
+    "market_key": "us",
+    "symbol": "SPCX",
+    "company": "太空探索科技公司",
     "canonical_category": "inventory_holding",
-    "output_subdir": "tw-6669",
-    "instrument_type": "common_equity"
+    "output_subdir": "us-SPCX",
+    "instrument_type": "common_equity",
+    "industry_thesis_gate": "theme_only",
+    "industry_thesis_gate_label": "目前偏題材，缺公司級落地證據",
+    "hype_risk": "low",
+    "hype_risk_label": "低",
+    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=AI / 資料中心、庫存回補 / 週期復甦；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
+    "industry_thesis_missing_evidence": [
+      "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+      "近 7 日公開新聞熱度未命中或未抓取",
+      "缺少明確後續產業 KPI",
+      "缺少公司級官方營收、訂單、財報或法說支撐"
+    ]
   },
   {
-    "market_key": "tw",
-    "symbol": "8016",
-    "company": "矽創",
+    "market_key": "us",
+    "symbol": "TSLA",
+    "company": "特斯拉 / Tesla",
     "canonical_category": "inventory_holding",
-    "output_subdir": "tw-8016",
-    "instrument_type": "common_equity"
+    "output_subdir": "us-TSLA",
+    "instrument_type": "common_equity",
+    "industry_thesis_gate": "theme_only",
+    "industry_thesis_gate_label": "目前偏題材，缺公司級落地證據",
+    "hype_risk": "low",
+    "hype_risk_label": "低",
+    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=庫存回補 / 週期復甦；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
+    "industry_thesis_missing_evidence": [
+      "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+      "近 7 日公開新聞熱度未命中或未抓取",
+      "缺少明確後續產業 KPI",
+      "缺少公司級官方營收、訂單、財報或法說支撐"
+    ]
   }
 ]
 ```
@@ -91,48 +125,54 @@ Every `source_ledger.json` must include:
   "batch_id": "batch-005",
   "items": [
     {
-      "market_key": "tw",
-      "symbol": "6285",
-      "output_subdir": "tw-6285",
+      "market_key": "us",
+      "symbol": "SOFI",
+      "output_subdir": "us-SOFI",
       "status": "complete|partial|blocked",
       "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
       "artifacts": {
-        "source_ledger": "reports/public-equity-batch/2026-06-24-inventory/companies/tw-6285/source_ledger.json",
-        "tearsheet": "reports/public-equity-batch/2026-06-24-inventory/companies/tw-6285/tearsheet.html",
-        "initiation": "reports/public-equity-batch/2026-06-24-inventory/companies/tw-6285/initiation.html",
-        "risk_plan": "reports/public-equity-batch/2026-06-24-inventory/companies/tw-6285/risk_plan.html"
+        "source_ledger": "reports/public-equity-batch/2026-06-24-inventory/companies/us-SOFI/source_ledger.json",
+        "tearsheet": "reports/public-equity-batch/2026-06-24-inventory/companies/us-SOFI/tearsheet.html",
+        "initiation": "reports/public-equity-batch/2026-06-24-inventory/companies/us-SOFI/initiation.html",
+        "risk_plan": "reports/public-equity-batch/2026-06-24-inventory/companies/us-SOFI/risk_plan.html"
       },
       "missing_evidence": [],
+      "industry_thesis_gate": "theme_only",
+      "hype_risk": "low",
       "notes": ""
     },
     {
-      "market_key": "tw",
-      "symbol": "6669",
-      "output_subdir": "tw-6669",
+      "market_key": "us",
+      "symbol": "SPCX",
+      "output_subdir": "us-SPCX",
       "status": "complete|partial|blocked",
       "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
       "artifacts": {
-        "source_ledger": "reports/public-equity-batch/2026-06-24-inventory/companies/tw-6669/source_ledger.json",
-        "tearsheet": "reports/public-equity-batch/2026-06-24-inventory/companies/tw-6669/tearsheet.html",
-        "initiation": "reports/public-equity-batch/2026-06-24-inventory/companies/tw-6669/initiation.html",
-        "risk_plan": "reports/public-equity-batch/2026-06-24-inventory/companies/tw-6669/risk_plan.html"
+        "source_ledger": "reports/public-equity-batch/2026-06-24-inventory/companies/us-SPCX/source_ledger.json",
+        "tearsheet": "reports/public-equity-batch/2026-06-24-inventory/companies/us-SPCX/tearsheet.html",
+        "initiation": "reports/public-equity-batch/2026-06-24-inventory/companies/us-SPCX/initiation.html",
+        "risk_plan": "reports/public-equity-batch/2026-06-24-inventory/companies/us-SPCX/risk_plan.html"
       },
       "missing_evidence": [],
+      "industry_thesis_gate": "theme_only",
+      "hype_risk": "low",
       "notes": ""
     },
     {
-      "market_key": "tw",
-      "symbol": "8016",
-      "output_subdir": "tw-8016",
+      "market_key": "us",
+      "symbol": "TSLA",
+      "output_subdir": "us-TSLA",
       "status": "complete|partial|blocked",
       "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
       "artifacts": {
-        "source_ledger": "reports/public-equity-batch/2026-06-24-inventory/companies/tw-8016/source_ledger.json",
-        "tearsheet": "reports/public-equity-batch/2026-06-24-inventory/companies/tw-8016/tearsheet.html",
-        "initiation": "reports/public-equity-batch/2026-06-24-inventory/companies/tw-8016/initiation.html",
-        "risk_plan": "reports/public-equity-batch/2026-06-24-inventory/companies/tw-8016/risk_plan.html"
+        "source_ledger": "reports/public-equity-batch/2026-06-24-inventory/companies/us-TSLA/source_ledger.json",
+        "tearsheet": "reports/public-equity-batch/2026-06-24-inventory/companies/us-TSLA/tearsheet.html",
+        "initiation": "reports/public-equity-batch/2026-06-24-inventory/companies/us-TSLA/initiation.html",
+        "risk_plan": "reports/public-equity-batch/2026-06-24-inventory/companies/us-TSLA/risk_plan.html"
       },
       "missing_evidence": [],
+      "industry_thesis_gate": "theme_only",
+      "hype_risk": "low",
       "notes": ""
     }
   ],
