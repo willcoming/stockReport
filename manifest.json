@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-06-24 13:02:59",
+  "generated_at": "2026-06-24 13:25:36",
   "market_signal_cards": [
     {
       "id": "risk-preference-indicator",
       "title": "風險偏好性指標",
-      "badge": "Risk On / Off",
-      "tone": "blue",
-      "status": "台股電金比；美股 XLY/XLP",
-      "as_of": "2026-06-24 13:01 Asia/Taipei",
-      "summary": "用攻擊型 / 防守型資產比率觀察市場資金偏好。未接即時報價時只發布觀測口徑，不填造最新比率。",
+      "badge": "待接報價",
+      "tone": "neutral",
+      "status": "尚未判定 Risk On / Off",
+      "as_of": "2026-06-24 13:23 Asia/Taipei",
+      "summary": "目前沒有可驗證的即時比率；先保留台股電金比與美股 XLY/XLP 的判讀規則，不填造最新訊號。",
       "metrics": [
         {
-          "label": "台股",
-          "value": "TSE23 / TSE28",
-          "note": "電子相對金融轉強偏 Risk On；金融相對電子轉強偏防守。"
+          "label": "目前結論",
+          "value": "資料不足",
+          "note": "未接即時比率前，不判定 Risk On 或 Risk Off。"
         },
         {
-          "label": "美股",
+          "label": "台股規則",
+          "value": "TSE23 / TSE28",
+          "note": "電子相對金融轉強偏攻擊；金融相對電子轉強偏防守。"
+        },
+        {
+          "label": "美股規則",
           "value": "XLY / XLP",
           "note": "非必需消費相對必需消費轉強偏 Risk On；反向偏 Risk Off。"
-        },
-        {
-          "label": "判讀",
-          "value": "20 日均線；上下緩衝 2%",
-          "note": "穿越緩衝是市場情緒狀態標記，不是進出場訊號。"
         }
       ],
       "sources": [
@@ -44,11 +44,11 @@
     {
       "id": "us-equity-five-signals",
       "title": "美股 5 信號",
-      "badge": "low to medium",
+      "badge": "低到中風險",
       "tone": "yellow",
-      "status": "Normal pullback / low-volatility fear",
-      "as_of": "2026-06-24 13:01:15 CST",
-      "summary": "Normal pullback / low-volatility fear；normal DCA / no panic。VIX 19.49，Fear & Greed 34.74，信用市場目前判讀為 stable。",
+      "status": "正常拉回 / 低波動恐懼",
+      "as_of": "2026-06-24 13:23:47 CST",
+      "summary": "正常拉回 / 低波動恐懼；正常分批，不需恐慌。VIX 19.49，Fear & Greed 34.74，信用市場目前判讀為 stable。",
       "metrics": [
         {
           "label": "波動 / 情緒",
@@ -63,7 +63,7 @@
         {
           "label": "信用 / 跨資產",
           "value": "HY OAS unavailable%；HYG -0.09%，JNK -0.05%",
-          "note": "10Y 4.49%；DXY +0.07%；GLD -1.89%"
+          "note": "10Y 4.49%；DXY +0.05%；GLD -1.89%"
         }
       ],
       "sources": [
