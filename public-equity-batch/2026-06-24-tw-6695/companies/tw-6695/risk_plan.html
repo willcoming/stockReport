@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>6695 芯鼎 - Model Portfolio Risk Plan</title><style>body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,"Noto Sans TC",sans-serif;line-height:1.52;color:#172026;margin:0;background:#ffffff}
+main{max-width:1080px;margin:0 auto;padding:30px 28px 54px}.kicker{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#1b5f73;font-weight:760}h1{font-size:30px;line-height:1.15;margin:7px 0 10px}h2{font-size:19px;border-top:1px solid #d8dee4;padding-top:16px;margin-top:26px}.sub{color:#5d6872;max-width:860px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:18px 0}.card{border:1px solid #d8dee4;border-radius:8px;padding:14px;background:#fff}.metric{font-size:23px;font-weight:780;margin:3px 0}.label{font-size:12px;color:#5d6872;text-transform:uppercase;letter-spacing:.04em}.callout{border-left:4px solid #1b5f73;background:#f4f7f9;padding:13px 15px;margin:14px 0}.warn{border-left-color:#a86d00;background:#fff8e6}table{border-collapse:collapse;width:100%;font-size:14px;margin:12px 0 20px}th,td{border-bottom:1px solid #d8dee4;padding:8px;text-align:left;vertical-align:top}th{background:#f4f7f9;color:#33444f;font-size:12px;text-transform:uppercase;letter-spacing:.04em}ul{padding-left:22px}.tag{display:inline-block;border:1px solid #b9c6cf;border-radius:999px;padding:2px 8px;font-size:12px;color:#33444f;background:#fff}.source{font-size:12px;color:#62717d}a{color:#1b5f73}@media(max-width:860px){main{padding:24px 16px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:560px){.grid{grid-template-columns:1fr}h1{font-size:25px}}</style></head>
+<body><main><header><div class="kicker">Portfolio Risk Management</div><h1>6695 芯鼎 - Model Portfolio Risk Plan</h1><p class="sub">Integrated PEI model-portfolio risk posture, sizing math, liquidity read, and action rules.</p></header>
+<section class="callout warn"><strong>Risk decision:</strong> 0% model-portfolio size now. The binding constraint is evidence quality, not the 5% single-name cap or normal ADV.</section>
+<section class="grid">
+<div class="card"><div class="label">Mode</div><div class="metric">Integrated risk plan</div><div>position sizing + no-hedge decision</div></div>
+<div class="card"><div class="label">Current quote</div><div class="metric">66.25 TWD (bid/ask midpoint)</div><div>2026-06-24T12:41:30+08:00</div></div>
+<div class="card"><div class="label">Binding constraint</div><div class="metric">Evidence quality</div><div>loss-making, no valuation tie-out</div></div>
+<div class="card"><div class="label">Max model loss now</div><div class="metric">0 units</div><div>no position opened</div></div>
+</section>
+<h2>Constraint Interpretation</h2>
+<table>
+<tr><th>Portfolio baseline</th><td>100 units cash, long-only, no leverage.</td></tr>
+<tr><th>Current action</th><td>Wait for trigger; no model capital committed.</td></tr>
+<tr><th>Risk budget</th><td>0% pre-trigger. If evidence and trigger clear, wait-entry post-trigger risk budget is 0.50% NAV.</td></tr>
+<tr><th>Illustrative stop</th><td>6.7% to 61.8 TWD tactical invalidation level; this is a tactical invalidation reference, not a guarantee of executable exit.</td></tr>
+<tr><th>Illustrative size</th><td>After trigger only, the formula min(5% cap, 0.50% / downside distance, liquidity cap) would allow up to 0.0% before liquidity/stress adjustments. Because thesis evidence is incomplete, actual model size remains 0%.</td></tr>
+</table>
+<h2>Exposure Map</h2>
+<table>
+<tr><th>Intended alpha</th><td>Idiosyncratic AI imaging SoC / automotive vision revenue inflection.</td></tr>
+<tr><th>Unwanted risk</th><td>Momentum reversal, semiconductor cycle, small-cap liquidity, narrative multiple expansion without EPS conversion, customer timing uncertainty.</td></tr>
+<tr><th>Retained exposure</th><td>None in model portfolio while at 0% size. Watchlist exposure only.</td></tr>
+<tr><th>Hedge decision</th><td>No hedge; size-down/no-position is cleaner than an index hedge because the intended exposure is idiosyncratic small-cap AI imaging SoC momentum.</td></tr>
+</table>
+<h2>Liquidity And Drawdown</h2>
+<table>
+<tr><th>20D average traded value</th><td>TWD 165.6mn; official daily data through 2026-06-23. <span class="source">Source: S2</span></td></tr>
+<tr><th>Normal exit capacity</th><td>A 5% model position would be economically tiny versus 20D traded value, but live depth/crowding still matters because the stock is moving on momentum.</td></tr>
+<tr><th>Stress case</th><td>Break below 61.8 TWD plus unchanged negative revenue/EPS path; do not rely on stop execution during a gap or liquidity air pocket.</td></tr>
+</table>
+<h2>Action Rules</h2>
+<table>
+<tr><th>Add/Open</th><td>Do not open model position until either (1) price consolidates above 62.7/61.8 TWD with volume normalization and revenue/EPS evidence improves, or (2) a close above 68.9 TWD is followed by company-supported order/revenue confirmation, not only narrative momentum.</td></tr>
+<tr><th>Trim/Re-underwrite</th><td>If a post-trigger starter exists, trim/re-underwrite on a close back below 62.7 TWD or if monthly revenue remains negative YoY without offsetting customer/order proof.</td></tr>
+<tr><th>Exit/Pass</th><td>Exit/watch-only if price breaks 61.8 TWD, May/June momentum fails, or official revenue/EPS path does not validate AI/automotive SoC thesis.</td></tr>
+<tr><th>Monitoring cadence</th><td>Daily price/volume until momentum cools; monthly revenue after TWSE release; quarterly EPS and margin after next reported quarter.</td></tr>
+</table>
+<h2>Readiness Gaps</h2><ul><li>尚未取得完整法說會逐字稿、法人共識、訂單/backlog、客戶導入收入時程與毛利率橋接</li><li>尚未建立 DCF/comps 或正式目標價；TWSE P/E 因虧損為空白，P/B 只能作歷史估值快照</li><li>尚未取得即時完整委買委賣、逐筆成交、法人/主力籌碼、融資融券與短線擁擠度資料</li><li>未使用個人庫存、券商股數、成本或持倉比重；本報告僅採模型投組 100 units 現金基準</li></ul>
+</main></body></html>

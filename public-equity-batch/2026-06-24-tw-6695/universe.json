@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "generated_at": "2026-06-24 12:41:43",
+    "root": "/Volumes/T7/stockLoop",
+    "target_date": "2026-06-24",
+    "report_scope_label": "TW single-name 6695",
+    "default_output_dir": "reports/public-equity-batch/2026-06-24-tw-6695",
+    "source_reports": [
+      "ad_hoc_user_request:6695"
+    ],
+    "expanded_rows": 1,
+    "unique_symbols": 1,
+    "category_counts": {
+      "wait_entry": 1
+    },
+    "lane_category_counts": {
+      "ad_hoc:wait_entry": 1
+    },
+    "model_portfolio": {
+      "portfolio_units": 100,
+      "long_only": true,
+      "leverage_allowed": false,
+      "single_name_cap": 0.05,
+      "buy_now_initial_risk_budget": 0.0075,
+      "wait_entry_pre_trigger_size": 0.0,
+      "wait_entry_post_trigger_risk_budget": 0.005
+    }
+  },
+  "items": [
+    {
+      "market_key": "tw",
+      "market": "台股",
+      "symbol": "6695",
+      "company": "芯鼎",
+      "industry": "半導體 / AI 影像 SoC",
+      "canonical_category": "wait_entry",
+      "canonical_category_label": "現在不能買，但值得等買點名單",
+      "source_priority": 3,
+      "instrument_type": "common_equity",
+      "output_subdir": "tw-6695",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "risk_budget_post_trigger": 0.005,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "ad_hoc",
+          "lane_label": "Ad hoc user request",
+          "category": "wait_entry",
+          "category_label": "現在不能買，但值得等買點名單",
+          "report_path": "user_message: stockloop-pei-batch-research 6695",
+          "row_index": 1,
+          "expanded_index": 0,
+          "raw_market": "台股",
+          "raw_symbol_cell": "6695",
+          "raw_company_cell": "芯鼎",
+          "raw_row": {
+            "ticker": "6695",
+            "request": "single-name PEI batch research"
+          }
+        }
+      ]
+    }
+  ]
+}

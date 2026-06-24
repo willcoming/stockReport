@@ -1,0 +1,254 @@
+{
+  "symbol": "6695",
+  "market_key": "tw",
+  "company": "芯鼎",
+  "generated_at": "2026-06-24T12:41:43+08:00",
+  "retrieved_at": "2026-06-24T12:41:43+08:00",
+  "as_of": "2026-06-24T12:41:30+08:00",
+  "sources": [
+    {
+      "source_id": "S1",
+      "source_name": "TWSE MIS real-time quote",
+      "source_type": "exchange_market_data",
+      "url": "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_6695.tw&json=1&delay=0",
+      "as_of": "2026-06-24T12:41:30+08:00",
+      "retrieved_at": "2026-06-24T12:41:43+08:00",
+      "evidence_label": "fact",
+      "confidence": "high",
+      "notes": "TWSE MIS last-sale z field was blank at retrieval; current reference uses best bid/ask midpoint from the same official quote payload.",
+      "used_by": [
+        "summary.html",
+        "tearsheet.html",
+        "initiation.html",
+        "risk_plan.html"
+      ]
+    },
+    {
+      "source_id": "S2",
+      "source_name": "TWSE STOCK_DAY monthly trading data",
+      "source_type": "exchange_historical_price_volume",
+      "url": "https://www.twse.com.tw/rwd/zh/afterTrading/STOCK_DAY?date=20260601&stockNo=6695&response=json",
+      "as_of": "2026-06-23",
+      "retrieved_at": "2026-06-24T12:41:43+08:00",
+      "evidence_label": "fact",
+      "confidence": "high",
+      "notes": "Official daily OHLC/volume through latest completed trading day available in endpoint.",
+      "used_by": [
+        "tearsheet.html",
+        "initiation.html",
+        "risk_plan.html"
+      ]
+    },
+    {
+      "source_id": "S3",
+      "source_name": "TWSE listed-company profile OpenAPI",
+      "source_type": "exchange_company_profile",
+      "url": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+      "as_of": "2026-06-23",
+      "retrieved_at": "2026-06-24T12:41:43+08:00",
+      "evidence_label": "fact",
+      "confidence": "high",
+      "notes": "Company identity, listing date, capital, shares, executives and website.",
+      "used_by": [
+        "tearsheet.html",
+        "initiation.html"
+      ]
+    },
+    {
+      "source_id": "S4",
+      "source_name": "TWSE monthly operating income OpenAPI",
+      "source_type": "reported_financials_monthly_revenue",
+      "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+      "as_of": "2026-06-17",
+      "period": "11505",
+      "retrieved_at": "2026-06-24T12:41:43+08:00",
+      "evidence_label": "fact",
+      "confidence": "high",
+      "notes": "Latest monthly and cumulative revenue.",
+      "used_by": [
+        "tearsheet.html",
+        "initiation.html"
+      ]
+    },
+    {
+      "source_id": "S5",
+      "source_name": "TWSE EPS statistics OpenAPI",
+      "source_type": "reported_financials_quarterly_eps",
+      "url": "https://openapi.twse.com.tw/v1/opendata/t187ap14_L",
+      "as_of": "2026-06-24",
+      "period": "2026Q1",
+      "retrieved_at": "2026-06-24T12:41:43+08:00",
+      "evidence_label": "fact",
+      "confidence": "high",
+      "notes": "Q1 EPS, revenue, operating income, non-operating income and net income in thousands of TWD.",
+      "used_by": [
+        "tearsheet.html",
+        "initiation.html"
+      ]
+    },
+    {
+      "source_id": "S6",
+      "source_name": "TWSE daily PE/PB/dividend-yield OpenAPI",
+      "source_type": "exchange_valuation_snapshot",
+      "url": "https://openapi.twse.com.tw/v1/exchangeReport/BWIBBU_ALL",
+      "as_of": "2026-06-23",
+      "retrieved_at": "2026-06-24T12:41:43+08:00",
+      "evidence_label": "fact",
+      "confidence": "high",
+      "notes": "Official P/B snapshot; PE and dividend yield blank because losses/no dividend.",
+      "used_by": [
+        "tearsheet.html",
+        "initiation.html"
+      ]
+    },
+    {
+      "source_id": "S7",
+      "source_name": "TWSE dividend distribution OpenAPI",
+      "source_type": "company_distribution_record",
+      "url": "https://openapi.twse.com.tw/v1/opendata/t187ap45_L",
+      "as_of": "2026-06-23",
+      "period": "1140101~1141231",
+      "retrieved_at": "2026-06-24T12:41:43+08:00",
+      "evidence_label": "fact",
+      "confidence": "high",
+      "notes": "2025 net loss and zero cash/stock dividend distribution.",
+      "used_by": [
+        "tearsheet.html",
+        "initiation.html"
+      ]
+    },
+    {
+      "source_id": "S8",
+      "source_name": "iCatch Technology company website",
+      "source_type": "company_website",
+      "url": "https://www.icatchtek.com/",
+      "retrieved_at": "2026-06-24T12:41:43+08:00",
+      "evidence_label": "company_claim",
+      "confidence": "medium",
+      "notes": "Company product and news context including AI imaging SoC platform and customer/project claims.",
+      "used_by": [
+        "tearsheet.html",
+        "initiation.html"
+      ]
+    },
+    {
+      "source_id": "S9",
+      "source_name": "iCatch CR5 product page",
+      "source_type": "company_product_page",
+      "url": "https://www.icatchtek.com/ProductContent/3d177ff11e044da4aff591badc797f2b",
+      "retrieved_at": "2026-06-24T12:41:43+08:00",
+      "evidence_label": "company_claim",
+      "confidence": "medium",
+      "notes": "Automotive computer-vision SoC features and target applications including DVR, DMS, BSD, CMS and OMS.",
+      "used_by": [
+        "tearsheet.html",
+        "initiation.html"
+      ]
+    }
+  ],
+  "market_data": {
+    "current_price": {
+      "value": 66.25,
+      "currency": "TWD",
+      "as_of": "2026-06-24T12:41:30+08:00",
+      "source": "TWSE MIS best bid/ask midpoint (last-sale z field unavailable at retrieval; bid 66.0 / ask 66.5)",
+      "price_type": "bid_ask_midpoint",
+      "bid": 66.0,
+      "ask": 66.5
+    },
+    "previous_close": {
+      "value": 62.7,
+      "currency": "TWD",
+      "as_of": "2026-06-24",
+      "source": "TWSE MIS"
+    },
+    "open": {
+      "value": 62.5,
+      "currency": "TWD",
+      "as_of": "2026-06-24",
+      "source": "TWSE MIS"
+    },
+    "day_high": {
+      "value": 68.9,
+      "currency": "TWD",
+      "as_of": "2026-06-24",
+      "source": "TWSE MIS"
+    },
+    "day_low": {
+      "value": 62.2,
+      "currency": "TWD",
+      "as_of": "2026-06-24",
+      "source": "TWSE MIS"
+    },
+    "price_limit_up": {
+      "value": 68.9,
+      "currency": "TWD",
+      "as_of": "2026-06-24",
+      "source": "TWSE MIS"
+    },
+    "price_limit_down": {
+      "value": 56.5,
+      "currency": "TWD",
+      "as_of": "2026-06-24",
+      "source": "TWSE MIS"
+    },
+    "intraday_volume_lots": {
+      "value": 10527.0,
+      "as_of": "2026-06-24T12:41:30+08:00",
+      "source": "TWSE MIS"
+    },
+    "latest_completed_session": {
+      "date": "2026-06-23",
+      "volume": 7031992,
+      "trade_value": 447074888,
+      "open": 63.5,
+      "high": 66.2,
+      "low": 61.8,
+      "close": 62.7,
+      "change": -1.5,
+      "transactions": 5852
+    },
+    "technical_snapshot": {
+      "ma5_close_through_latest_completed_day": 58.48,
+      "ma20_close_through_latest_completed_day": 55.832499999999996,
+      "ma60_close_through_latest_completed_day": 48.766666666666666,
+      "current_vs_ma20_pct": 18.65848744011105,
+      "current_vs_previous_close_pct": 5.661881977671457,
+      "current_vs_recent_20d_low_pct": 39.03462749213011,
+      "recent_20d_low": 47.65,
+      "recent_20d_high": 68.4,
+      "avg_20d_volume_shares": 2764125.75,
+      "avg_20d_trade_value_twd": 165644859.7
+    },
+    "market_cap_estimate": {
+      "value": 7054144312.5,
+      "currency": "TWD",
+      "as_of": "2026-06-24T12:41:30+08:00",
+      "source": "Derived from TWSE MIS midpoint and TWSE listed-company share count"
+    }
+  },
+  "recommendation_label": "Wait for trigger",
+  "research_status": "partial",
+  "valuation_status": "not_run",
+  "missing_evidence": [
+    "尚未取得完整法說會逐字稿、法人共識、訂單/backlog、客戶導入收入時程與毛利率橋接",
+    "尚未建立 DCF/comps 或正式目標價；TWSE P/E 因虧損為空白，P/B 只能作歷史估值快照",
+    "尚未取得即時完整委買委賣、逐筆成交、法人/主力籌碼、融資融券與短線擁擠度資料",
+    "未使用個人庫存、券商股數、成本或持倉比重；本報告僅採模型投組 100 units 現金基準"
+  ],
+  "portfolio_risk": {
+    "model_portfolio_size": "0% pre-trigger; conditional <=5% only after evidence and trigger clearance",
+    "risk_budget": 0.0,
+    "post_trigger_risk_budget": 0.005,
+    "downside_or_stop_distance": "6.7% to 61.8 TWD tactical invalidation level, based on TWSE MIS midpoint reference",
+    "liquidity_cap": "5% single-name cap binds before ADV in model-portfolio units; exit capacity still requires live depth check",
+    "hedge_posture": "No hedge; size-down/no-position is cleaner than an index hedge because the intended exposure is idiosyncratic small-cap AI imaging SoC momentum.",
+    "add_rule": "Do not open model position until either (1) price consolidates above 62.7/61.8 TWD with volume normalization and revenue/EPS evidence improves, or (2) a close above 68.9 TWD is followed by company-supported order/revenue confirmation, not only narrative momentum.",
+    "trim_rule": "If a post-trigger starter exists, trim/re-underwrite on a close back below 62.7 TWD or if monthly revenue remains negative YoY without offsetting customer/order proof.",
+    "exit_rule": "Exit/watch-only if price breaks 61.8 TWD, May/June momentum fails, or official revenue/EPS path does not validate AI/automotive SoC thesis.",
+    "max_loss_posture": "0 units at risk now; illustrative post-trigger 5% model position with a 6.7% stop would risk roughly 0.34% of model NAV, below the 0.50% wait-entry risk budget.",
+    "monitoring_cadence": "Daily price/volume until momentum cools; monthly revenue after TWSE release; quarterly EPS and margin after next reported quarter."
+  },
+  "evidence_confidence": "medium: issuer identity, price, revenue and EPS are primary-sourced; thesis conversion, consensus and valuation remain incomplete",
+  "underwriting_status": "Preliminary watchlist initiation; not decision-ready for model portfolio ownership"
+}
