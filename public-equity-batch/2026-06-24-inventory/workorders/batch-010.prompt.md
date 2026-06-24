@@ -97,10 +97,10 @@ Every `source_ledger.json` must include:
       "status": "complete|partial|blocked",
       "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
       "artifacts": {
-        "source_ledger": "/Volumes/T7/stockLoop/reports/public-equity-batch/2026-06-24-inventory/companies/us-SATS/source_ledger.json",
-        "tearsheet": "/Volumes/T7/stockLoop/reports/public-equity-batch/2026-06-24-inventory/companies/us-SATS/tearsheet.html",
-        "initiation": "/Volumes/T7/stockLoop/reports/public-equity-batch/2026-06-24-inventory/companies/us-SATS/initiation.html",
-        "risk_plan": "/Volumes/T7/stockLoop/reports/public-equity-batch/2026-06-24-inventory/companies/us-SATS/risk_plan.html"
+        "source_ledger": "reports/public-equity-batch/2026-06-24-inventory/companies/us-SATS/source_ledger.json",
+        "tearsheet": "reports/public-equity-batch/2026-06-24-inventory/companies/us-SATS/tearsheet.html",
+        "initiation": "reports/public-equity-batch/2026-06-24-inventory/companies/us-SATS/initiation.html",
+        "risk_plan": "reports/public-equity-batch/2026-06-24-inventory/companies/us-SATS/risk_plan.html"
       },
       "missing_evidence": [],
       "notes": ""
@@ -112,10 +112,10 @@ Every `source_ledger.json` must include:
       "status": "complete|partial|blocked",
       "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
       "artifacts": {
-        "source_ledger": "/Volumes/T7/stockLoop/reports/public-equity-batch/2026-06-24-inventory/companies/us-SOFI/source_ledger.json",
-        "tearsheet": "/Volumes/T7/stockLoop/reports/public-equity-batch/2026-06-24-inventory/companies/us-SOFI/tearsheet.html",
-        "initiation": "/Volumes/T7/stockLoop/reports/public-equity-batch/2026-06-24-inventory/companies/us-SOFI/initiation.html",
-        "risk_plan": "/Volumes/T7/stockLoop/reports/public-equity-batch/2026-06-24-inventory/companies/us-SOFI/risk_plan.html"
+        "source_ledger": "reports/public-equity-batch/2026-06-24-inventory/companies/us-SOFI/source_ledger.json",
+        "tearsheet": "reports/public-equity-batch/2026-06-24-inventory/companies/us-SOFI/tearsheet.html",
+        "initiation": "reports/public-equity-batch/2026-06-24-inventory/companies/us-SOFI/initiation.html",
+        "risk_plan": "reports/public-equity-batch/2026-06-24-inventory/companies/us-SOFI/risk_plan.html"
       },
       "missing_evidence": [],
       "notes": ""
@@ -127,10 +127,10 @@ Every `source_ledger.json` must include:
       "status": "complete|partial|blocked",
       "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
       "artifacts": {
-        "source_ledger": "/Volumes/T7/stockLoop/reports/public-equity-batch/2026-06-24-inventory/companies/us-SPCX/source_ledger.json",
-        "tearsheet": "/Volumes/T7/stockLoop/reports/public-equity-batch/2026-06-24-inventory/companies/us-SPCX/tearsheet.html",
-        "initiation": "/Volumes/T7/stockLoop/reports/public-equity-batch/2026-06-24-inventory/companies/us-SPCX/initiation.html",
-        "risk_plan": "/Volumes/T7/stockLoop/reports/public-equity-batch/2026-06-24-inventory/companies/us-SPCX/risk_plan.html"
+        "source_ledger": "reports/public-equity-batch/2026-06-24-inventory/companies/us-SPCX/source_ledger.json",
+        "tearsheet": "reports/public-equity-batch/2026-06-24-inventory/companies/us-SPCX/tearsheet.html",
+        "initiation": "reports/public-equity-batch/2026-06-24-inventory/companies/us-SPCX/initiation.html",
+        "risk_plan": "reports/public-equity-batch/2026-06-24-inventory/companies/us-SPCX/risk_plan.html"
       },
       "missing_evidence": [],
       "notes": ""

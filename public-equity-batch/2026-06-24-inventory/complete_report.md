@@ -1,6 +1,6 @@
 # StockLoop PEI 完整批次報告 2026-06-24 - Inventory holdings
 
-- 產出時間：2026-06-24 11:27:49
+- 產出時間：2026-06-24 12:22:08
 - 標的池檔數：34
 - 已具備目前價格與研究狀態的列數：34
 - 來源報告：myStock/tw_stock_inventory.csv, myStock/us_stock_inventory_cathay.csv, myStock/us_stock_inventory_yuanta.csv, /tmp/stockloop_inventory_merged.json, reports/stock-inventory/2026-06-24-1107_inventory_health_check.md

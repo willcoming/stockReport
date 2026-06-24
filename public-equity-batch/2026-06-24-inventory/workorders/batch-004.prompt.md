@@ -97,10 +97,10 @@ Every `source_ledger.json` must include:
       "status": "complete|partial|blocked",
       "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
       "artifacts": {
-        "source_ledger": "/Volumes/T7/stockLoop/reports/public-equity-batch/2026-06-24-inventory/companies/tw-3019/source_ledger.json",
-        "tearsheet": "/Volumes/T7/stockLoop/reports/public-equity-batch/2026-06-24-inventory/companies/tw-3019/tearsheet.html",
-        "initiation": "/Volumes/T7/stockLoop/reports/public-equity-batch/2026-06-24-inventory/companies/tw-3019/initiation.html",
-        "risk_plan": "/Volumes/T7/stockLoop/reports/public-equity-batch/2026-06-24-inventory/companies/tw-3019/risk_plan.html"
+        "source_ledger": "reports/public-equity-batch/2026-06-24-inventory/companies/tw-3019/source_ledger.json",
+        "tearsheet": "reports/public-equity-batch/2026-06-24-inventory/companies/tw-3019/tearsheet.html",
+        "initiation": "reports/public-equity-batch/2026-06-24-inventory/companies/tw-3019/initiation.html",
+        "risk_plan": "reports/public-equity-batch/2026-06-24-inventory/companies/tw-3019/risk_plan.html"
       },
       "missing_evidence": [],
       "notes": ""
@@ -112,10 +112,10 @@ Every `source_ledger.json` must include:
       "status": "complete|partial|blocked",
       "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
       "artifacts": {
-        "source_ledger": "/Volumes/T7/stockLoop/reports/public-equity-batch/2026-06-24-inventory/companies/tw-3231/source_ledger.json",
-        "tearsheet": "/Volumes/T7/stockLoop/reports/public-equity-batch/2026-06-24-inventory/companies/tw-3231/tearsheet.html",
-        "initiation": "/Volumes/T7/stockLoop/reports/public-equity-batch/2026-06-24-inventory/companies/tw-3231/initiation.html",
-        "risk_plan": "/Volumes/T7/stockLoop/reports/public-equity-batch/2026-06-24-inventory/companies/tw-3231/risk_plan.html"
+        "source_ledger": "reports/public-equity-batch/2026-06-24-inventory/companies/tw-3231/source_ledger.json",
+        "tearsheet": "reports/public-equity-batch/2026-06-24-inventory/companies/tw-3231/tearsheet.html",
+        "initiation": "reports/public-equity-batch/2026-06-24-inventory/companies/tw-3231/initiation.html",
+        "risk_plan": "reports/public-equity-batch/2026-06-24-inventory/companies/tw-3231/risk_plan.html"
       },
       "missing_evidence": [],
       "notes": ""
@@ -127,10 +127,10 @@ Every `source_ledger.json` must include:
       "status": "complete|partial|blocked",
       "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
       "artifacts": {
-        "source_ledger": "/Volumes/T7/stockLoop/reports/public-equity-batch/2026-06-24-inventory/companies/tw-3443/source_ledger.json",
-        "tearsheet": "/Volumes/T7/stockLoop/reports/public-equity-batch/2026-06-24-inventory/companies/tw-3443/tearsheet.html",
-        "initiation": "/Volumes/T7/stockLoop/reports/public-equity-batch/2026-06-24-inventory/companies/tw-3443/initiation.html",
-        "risk_plan": "/Volumes/T7/stockLoop/reports/public-equity-batch/2026-06-24-inventory/companies/tw-3443/risk_plan.html"
+        "source_ledger": "reports/public-equity-batch/2026-06-24-inventory/companies/tw-3443/source_ledger.json",
+        "tearsheet": "reports/public-equity-batch/2026-06-24-inventory/companies/tw-3443/tearsheet.html",
+        "initiation": "reports/public-equity-batch/2026-06-24-inventory/companies/tw-3443/initiation.html",
+        "risk_plan": "reports/public-equity-batch/2026-06-24-inventory/companies/tw-3443/risk_plan.html"
       },
       "missing_evidence": [],
       "notes": ""

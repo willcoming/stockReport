@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-24 12:17:38",
+  "generated_at": "2026-06-24 12:40:37",
   "market_signal_cards": [
     {
       "id": "risk-preference-indicator",
@@ -7,7 +7,7 @@
       "badge": "Risk On / Off",
       "tone": "blue",
       "status": "台股電金比；美股 XLY/XLP",
-      "as_of": "2026-06-24 12:16 Asia/Taipei",
+      "as_of": "2026-06-24 12:38 Asia/Taipei",
       "summary": "用攻擊型 / 防守型資產比率觀察市場資金偏好。未接即時報價時只發布觀測口徑，不填造最新比率。",
       "metrics": [
         {
@@ -47,7 +47,7 @@
       "badge": "low to medium",
       "tone": "yellow",
       "status": "Normal pullback / low-volatility fear",
-      "as_of": "2026-06-24 11:18:22 CST",
+      "as_of": "2026-06-24 12:38:53 CST",
       "summary": "Normal pullback / low-volatility fear；normal DCA / no panic。VIX 19.49，Fear & Greed 34.74，信用市場目前判讀為 stable。",
       "metrics": [
         {
@@ -63,7 +63,7 @@
         {
           "label": "信用 / 跨資產",
           "value": "HY OAS unavailable%；HYG -0.09%，JNK -0.05%",
-          "note": "10Y 4.49%；DXY +0.09%；GLD -1.89%"
+          "note": "10Y 4.49%；DXY +0.05%；GLD -1.89%"
         }
       ],
       "sources": [
@@ -92,11 +92,11 @@
       "tone": "green",
       "status": "盤勢偏建設性，可維持正常研究節奏，但仍以分批與條件確認為主。",
       "as_of": "官方資料日 2026-06-24；目標日 2026-06-24",
-      "summary": "總分 3；盤勢偏建設性，可維持正常研究節奏，但仍以分批與條件確認為主。",
+      "summary": "總分 4；盤勢偏建設性，可維持正常研究節奏，但仍以分批與條件確認為主。",
       "metrics": [
         {
           "label": "總分",
-          "value": "3",
+          "value": "4",
           "note": ">= 3 綠燈；-2 以下紅燈；其餘黃燈。"
         },
         {
@@ -122,6 +122,42 @@
         {
           "label": "TAIFEX futures",
           "url": "https://openapi.taifex.com.tw/v1/DailyMarketReportFut"
+        }
+      ]
+    },
+    {
+      "id": "tw-business-cycle-light",
+      "title": "台灣景氣循環燈號",
+      "badge": "紅燈 39分",
+      "tone": "red",
+      "status": "穩健擴張 / 過熱觀察",
+      "as_of": "2026-04 資料；查詢 2026-06-17",
+      "summary": "總經動能偏強，但紅燈代表景氣熱絡與過熱觀察，不應轉成機械買賣訊號。",
+      "metrics": [
+        {
+          "label": "官方信號",
+          "value": "紅燈 39 分",
+          "note": "較前月 0"
+        },
+        {
+          "label": "領先 / 同時",
+          "value": "103.63 / 107.57",
+          "note": "上升 / 上升"
+        },
+        {
+          "label": "構成項目",
+          "value": "2 項主要變化",
+          "note": "使用官方頁或公開新聞稿 fallback 時需標註來源。"
+        }
+      ],
+      "sources": [
+        {
+          "label": "NDC 景氣對策信號",
+          "url": "https://index.ndc.gov.tw/n/zh_tw/lightscore"
+        },
+        {
+          "label": "NDC 景氣指標查詢系統",
+          "url": "https://index.ndc.gov.tw/n/zh_tw"
         }
       ]
     }
