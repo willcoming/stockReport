@@ -1,6 +1,6 @@
 # StockLoop PEI 完整批次報告 2026-06-24
 
-- 產出時間：2026-06-24 07:22:55
+- 產出時間：2026-06-24 12:45:07
 - 標的池檔數：43
 - 已具備目前價格與研究狀態的列數：43
 - 來源報告：reports/news/2026-06-24_kol_news_decision_report.md
@@ -11,6 +11,24 @@
 ## 執行摘要
 
 本報告將 StockLoop PEI 批次輸出整合為單一可閱讀報告。報告明確區分「研究包檔案完整」與「投資決策已就緒」：每檔標的需具備公司摘要、啟動覆蓋報告、風險計畫、來源台帳與投組摘要列；研究標籤仍需依來源證據、技術觸發與風險報酬覆核。
+
+## 這次 PEI 到底做了什麼
+
+這次是 decision-report PEI：來源報告中的候選名單定義研究宇宙，模型投組仍以 100 units cash、long-only、no leverage 為基準。
+
+PEI 在本批次實際完成的是「研究包與模型投組風險姿態整理」，不是完整逐檔基本面盡調，也不是下單建議：
+
+- 建立研究宇宙：納入 43 檔標的；來源為 reports/news/2026-06-24_kol_news_decision_report.md。
+- 讀入本機證據：庫存健檢動作、最新可得報價、近一週 K 線觸發、APEX 價格風控與既有 StockLoop 訊號。
+- 逐檔產生 PEI artifact：每檔都有 `summary.html`、`summary.md`、`source_ledger.json`、`tearsheet.html`、`initiation.html`、`risk_plan.html`。
+- 轉成模型投組語言：輸出 `recommendation_matrix.csv` 與 `model_portfolio_risk_plan.csv`，用 `Model portfolio candidate / Wait for trigger / Watch only / Not decision-ready` 表示研究姿態。
+- 控制模型部位：43 檔模型部位為 0%，因為本批次沒有完成官方 filings、法說、consensus、估值模型、流動性與風險報酬 tie-out。
+- 回寫庫存健檢：將 PEI 統計與逐檔摘要整合回庫存健檢報告，但最終庫存動作仍由庫存健檢整合 PEI、技術、分類與 APEX 後決定。
+
+本批次統計：
+- Wait for trigger（等待觸發）：26 檔。等待觸發：題材或持倉仍值得追蹤，但技術觸發、基本面證據或風險報酬尚未同時到位，模型投組觸發前維持 0%。
+- Watch only（僅觀察）：17 檔。僅觀察：可保留在研究宇宙中追蹤，但目前不開模型部位；通常代表持倉健檢為續抱/減碼/需證據補強。
+- 研究狀態 partial（證據仍不足）：43 檔。
 
 ## 批次統計
 
@@ -43,99 +61,99 @@
 
 ## 投組行動摘要
 
-| 代號 | 公司 | 分類 | 研究標籤 | 目前價格 | 價格時間 | 研究狀態 | 模型部位 | 風險計畫 | 啟動報告 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1303 | 南亞 | 現在可以買名單 | Watch only（僅觀察） | 154.5 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [風險](companies/tw-1303/risk_plan.html) | [啟動報告](companies/tw-1303/initiation.html) |
-| 2002 | 中鋼 | 現在可以買名單 | Watch only（僅觀察） | 19.2 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [風險](companies/tw-2002/risk_plan.html) | [啟動報告](companies/tw-2002/initiation.html) |
-| 2108 | 南帝 | 現在可以買名單 | Watch only（僅觀察） | 28.3 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [風險](companies/tw-2108/risk_plan.html) | [啟動報告](companies/tw-2108/initiation.html) |
-| 2330 | 台積電 | 現在可以買名單 | Watch only（僅觀察） | 2490.0 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [風險](companies/tw-2330/risk_plan.html) | [啟動報告](companies/tw-2330/initiation.html) |
-| 2436 | 偉詮電 | 現在可以買名單 | Watch only（僅觀察） | 77.5 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [風險](companies/tw-2436/risk_plan.html) | [啟動報告](companies/tw-2436/initiation.html) |
-| 2454 | 聯發科 | 現在可以買名單 | Watch only（僅觀察） | 4535.0 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [風險](companies/tw-2454/risk_plan.html) | [啟動報告](companies/tw-2454/initiation.html) |
-| 2603 | 長榮 | 現在可以買名單 | Watch only（僅觀察） | 189.0 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [風險](companies/tw-2603/risk_plan.html) | [啟動報告](companies/tw-2603/initiation.html) |
-| 3034 | 聯詠 | 現在可以買名單 | Watch only（僅觀察） | 544.0 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [風險](companies/tw-3034/risk_plan.html) | [啟動報告](companies/tw-3034/initiation.html) |
-| 3105 | 穩懋 | 現在可以買名單 | Watch only（僅觀察） | 522.0 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [風險](companies/tw-3105/risk_plan.html) | [啟動報告](companies/tw-3105/initiation.html) |
-| 3665 | 貿聯-KY | 現在可以買名單 | Watch only（僅觀察） | 2000.0 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [風險](companies/tw-3665/risk_plan.html) | [啟動報告](companies/tw-3665/initiation.html) |
-| 4991 | 環宇-KY | 現在可以買名單 | Watch only（僅觀察） | 536.0 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [風險](companies/tw-4991/risk_plan.html) | [啟動報告](companies/tw-4991/initiation.html) |
-| 5471 | 松翰 | 現在可以買名單 | Watch only（僅觀察） | 62.4 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [風險](companies/tw-5471/risk_plan.html) | [啟動報告](companies/tw-5471/initiation.html) |
-| 6451 | 訊芯-KY | 現在可以買名單 | Watch only（僅觀察） | 596.0 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [風險](companies/tw-6451/risk_plan.html) | [啟動報告](companies/tw-6451/initiation.html) |
-| 6829 | 千附精密 | 現在可以買名單 | Watch only（僅觀察） | 206.0 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [風險](companies/tw-6829/risk_plan.html) | [啟動報告](companies/tw-6829/initiation.html) |
-| AXTI | AXTI | 現在可以買名單 | Watch only（僅觀察） | 77.91 USD | 2026-06-23T00:00:00-04:00 | partial（證據仍不足） | 0% | [風險](companies/us-AXTI/risk_plan.html) | [啟動報告](companies/us-AXTI/initiation.html) |
-| IBM | IBM | 現在可以買名單 | Watch only（僅觀察） | 264.94 USD | 2026-06-23T00:00:00-04:00 | partial（證據仍不足） | 0% | [風險](companies/us-IBM/risk_plan.html) | [啟動報告](companies/us-IBM/initiation.html) |
-| INFQ | INFQ | 現在可以買名單 | Watch only（僅觀察） | 15.96 USD | 2026-06-23T00:00:00-04:00 | partial（證據仍不足） | 0% | [風險](companies/us-INFQ/risk_plan.html) | [啟動報告](companies/us-INFQ/initiation.html) |
-| 00631L | 元大台灣50正2 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 41.32 TWD | 2026-06-22T00:00:00+08:00 | partial（證據仍不足） | 0% | [風險](companies/tw-00631L/risk_plan.html) | [啟動報告](companies/tw-00631L/initiation.html) |
-| 2303 | 聯電 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 170.0 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [風險](companies/tw-2303/risk_plan.html) | [啟動報告](companies/tw-2303/initiation.html) |
-| 2344 | 華邦電 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 211.5 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [風險](companies/tw-2344/risk_plan.html) | [啟動報告](companies/tw-2344/initiation.html) |
-| 2408 | 南亞科 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 454.5 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [風險](companies/tw-2408/risk_plan.html) | [啟動報告](companies/tw-2408/initiation.html) |
-| 2409 | 友達 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 29.05 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [風險](companies/tw-2409/risk_plan.html) | [啟動報告](companies/tw-2409/initiation.html) |
-| 3016 | 嘉晶 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 152.5 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [風險](companies/tw-3016/risk_plan.html) | [啟動報告](companies/tw-3016/initiation.html) |
-| 3037 | 欣興 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 974.0 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [風險](companies/tw-3037/risk_plan.html) | [啟動報告](companies/tw-3037/initiation.html) |
-| 3189 | 景碩 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 727.0 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [風險](companies/tw-3189/risk_plan.html) | [啟動報告](companies/tw-3189/initiation.html) |
-| 3374 | 精材 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 303.5 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [風險](companies/tw-3374/risk_plan.html) | [啟動報告](companies/tw-3374/initiation.html) |
-| 3406 | 玉晶光 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 741.0 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [風險](companies/tw-3406/risk_plan.html) | [啟動報告](companies/tw-3406/initiation.html) |
-| 3443 | 創意 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 4725.0 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [風險](companies/tw-3443/risk_plan.html) | [啟動報告](companies/tw-3443/initiation.html) |
-| 3481 | 群創 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 66.0 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [風險](companies/tw-3481/risk_plan.html) | [啟動報告](companies/tw-3481/initiation.html) |
-| 3707 | 漢磊 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 100.5 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [風險](companies/tw-3707/risk_plan.html) | [啟動報告](companies/tw-3707/initiation.html) |
-| 3711 | 日月光投控 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 662.0 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [風險](companies/tw-3711/risk_plan.html) | [啟動報告](companies/tw-3711/initiation.html) |
-| 3715 | 定穎投控 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 180.0 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [風險](companies/tw-3715/risk_plan.html) | [啟動報告](companies/tw-3715/initiation.html) |
-| 6116 | 彩晶 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 19.0 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [風險](companies/tw-6116/risk_plan.html) | [啟動報告](companies/tw-6116/initiation.html) |
-| 6147 | 頎邦 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 258.0 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [風險](companies/tw-6147/risk_plan.html) | [啟動報告](companies/tw-6147/initiation.html) |
-| 6213 | 聯茂 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 281.0 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [風險](companies/tw-6213/risk_plan.html) | [啟動報告](companies/tw-6213/initiation.html) |
-| 8046 | 南電 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 909.0 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [風險](companies/tw-8046/risk_plan.html) | [啟動報告](companies/tw-8046/initiation.html) |
-| 8299 | 群聯 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 2430.0 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [風險](companies/tw-8299/risk_plan.html) | [啟動報告](companies/tw-8299/initiation.html) |
-| AAPL | 蘋果 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 294.3 USD | 2026-06-23T00:00:00-04:00 | partial（證據仍不足） | 0% | [風險](companies/us-AAPL/risk_plan.html) | [啟動報告](companies/us-AAPL/initiation.html) |
-| GOOG | Google | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 346.08 USD | 2026-06-23T00:00:00-04:00 | partial（證據仍不足） | 0% | [風險](companies/us-GOOG/risk_plan.html) | [啟動報告](companies/us-GOOG/initiation.html) |
-| MRVL | 美滿電子 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 279.04 USD | 2026-06-23T00:00:00-04:00 | partial（證據仍不足） | 0% | [風險](companies/us-MRVL/risk_plan.html) | [啟動報告](companies/us-MRVL/initiation.html) |
-| MU | 美光 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 1051.77 USD | 2026-06-23T00:00:00-04:00 | partial（證據仍不足） | 0% | [風險](companies/us-MU/risk_plan.html) | [啟動報告](companies/us-MU/initiation.html) |
-| SNDK | Sandisk | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 1963.6 USD | 2026-06-23T00:00:00-04:00 | partial（證據仍不足） | 0% | [風險](companies/us-SNDK/risk_plan.html) | [啟動報告](companies/us-SNDK/initiation.html) |
-| SPCX | SpaceX | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 156.11 USD | 2026-06-23T00:00:00-04:00 | partial（證據仍不足） | 0% | [風險](companies/us-SPCX/risk_plan.html) | [啟動報告](companies/us-SPCX/initiation.html) |
+| 代號 | 公司 | 分類 | 研究標籤 | 目前價格 | 價格時間 | 研究狀態 | 模型部位 | PEI摘要 | 風險計畫 | 啟動報告 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1303 | 南亞 | 現在可以買名單 | Watch only（僅觀察） | 154.5 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [摘要](companies/tw-1303/summary.html) | [風險](companies/tw-1303/risk_plan.html) | [啟動報告](companies/tw-1303/initiation.html) |
+| 2002 | 中鋼 | 現在可以買名單 | Watch only（僅觀察） | 19.2 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [摘要](companies/tw-2002/summary.html) | [風險](companies/tw-2002/risk_plan.html) | [啟動報告](companies/tw-2002/initiation.html) |
+| 2108 | 南帝 | 現在可以買名單 | Watch only（僅觀察） | 28.3 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [摘要](companies/tw-2108/summary.html) | [風險](companies/tw-2108/risk_plan.html) | [啟動報告](companies/tw-2108/initiation.html) |
+| 2330 | 台積電 | 現在可以買名單 | Watch only（僅觀察） | 2,490 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [摘要](companies/tw-2330/summary.html) | [風險](companies/tw-2330/risk_plan.html) | [啟動報告](companies/tw-2330/initiation.html) |
+| 2436 | 偉詮電 | 現在可以買名單 | Watch only（僅觀察） | 77.5 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [摘要](companies/tw-2436/summary.html) | [風險](companies/tw-2436/risk_plan.html) | [啟動報告](companies/tw-2436/initiation.html) |
+| 2454 | 聯發科 | 現在可以買名單 | Watch only（僅觀察） | 4,535 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [摘要](companies/tw-2454/summary.html) | [風險](companies/tw-2454/risk_plan.html) | [啟動報告](companies/tw-2454/initiation.html) |
+| 2603 | 長榮 | 現在可以買名單 | Watch only（僅觀察） | 189 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [摘要](companies/tw-2603/summary.html) | [風險](companies/tw-2603/risk_plan.html) | [啟動報告](companies/tw-2603/initiation.html) |
+| 3034 | 聯詠 | 現在可以買名單 | Watch only（僅觀察） | 544 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [摘要](companies/tw-3034/summary.html) | [風險](companies/tw-3034/risk_plan.html) | [啟動報告](companies/tw-3034/initiation.html) |
+| 3105 | 穩懋 | 現在可以買名單 | Watch only（僅觀察） | 522 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [摘要](companies/tw-3105/summary.html) | [風險](companies/tw-3105/risk_plan.html) | [啟動報告](companies/tw-3105/initiation.html) |
+| 3665 | 貿聯-KY | 現在可以買名單 | Watch only（僅觀察） | 2,000 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [摘要](companies/tw-3665/summary.html) | [風險](companies/tw-3665/risk_plan.html) | [啟動報告](companies/tw-3665/initiation.html) |
+| 4991 | 環宇-KY | 現在可以買名單 | Watch only（僅觀察） | 536 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [摘要](companies/tw-4991/summary.html) | [風險](companies/tw-4991/risk_plan.html) | [啟動報告](companies/tw-4991/initiation.html) |
+| 5471 | 松翰 | 現在可以買名單 | Watch only（僅觀察） | 62.4 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [摘要](companies/tw-5471/summary.html) | [風險](companies/tw-5471/risk_plan.html) | [啟動報告](companies/tw-5471/initiation.html) |
+| 6451 | 訊芯-KY | 現在可以買名單 | Watch only（僅觀察） | 596 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [摘要](companies/tw-6451/summary.html) | [風險](companies/tw-6451/risk_plan.html) | [啟動報告](companies/tw-6451/initiation.html) |
+| 6829 | 千附精密 | 現在可以買名單 | Watch only（僅觀察） | 206 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [摘要](companies/tw-6829/summary.html) | [風險](companies/tw-6829/risk_plan.html) | [啟動報告](companies/tw-6829/initiation.html) |
+| AXTI | AXTI | 現在可以買名單 | Watch only（僅觀察） | 77.91 USD | 2026-06-23T00:00:00-04:00 | partial（證據仍不足） | 0% | [摘要](companies/us-AXTI/summary.html) | [風險](companies/us-AXTI/risk_plan.html) | [啟動報告](companies/us-AXTI/initiation.html) |
+| IBM | IBM | 現在可以買名單 | Watch only（僅觀察） | 264.94 USD | 2026-06-23T00:00:00-04:00 | partial（證據仍不足） | 0% | [摘要](companies/us-IBM/summary.html) | [風險](companies/us-IBM/risk_plan.html) | [啟動報告](companies/us-IBM/initiation.html) |
+| INFQ | INFQ | 現在可以買名單 | Watch only（僅觀察） | 15.96 USD | 2026-06-23T00:00:00-04:00 | partial（證據仍不足） | 0% | [摘要](companies/us-INFQ/summary.html) | [風險](companies/us-INFQ/risk_plan.html) | [啟動報告](companies/us-INFQ/initiation.html) |
+| 00631L | 元大台灣50正2 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 41.32 TWD | 2026-06-22T00:00:00+08:00 | partial（證據仍不足） | 0% | [摘要](companies/tw-00631L/summary.html) | [風險](companies/tw-00631L/risk_plan.html) | [啟動報告](companies/tw-00631L/initiation.html) |
+| 2303 | 聯電 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 170 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [摘要](companies/tw-2303/summary.html) | [風險](companies/tw-2303/risk_plan.html) | [啟動報告](companies/tw-2303/initiation.html) |
+| 2344 | 華邦電 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 211.5 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [摘要](companies/tw-2344/summary.html) | [風險](companies/tw-2344/risk_plan.html) | [啟動報告](companies/tw-2344/initiation.html) |
+| 2408 | 南亞科 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 454.5 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [摘要](companies/tw-2408/summary.html) | [風險](companies/tw-2408/risk_plan.html) | [啟動報告](companies/tw-2408/initiation.html) |
+| 2409 | 友達 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 29.05 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [摘要](companies/tw-2409/summary.html) | [風險](companies/tw-2409/risk_plan.html) | [啟動報告](companies/tw-2409/initiation.html) |
+| 3016 | 嘉晶 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 152.5 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [摘要](companies/tw-3016/summary.html) | [風險](companies/tw-3016/risk_plan.html) | [啟動報告](companies/tw-3016/initiation.html) |
+| 3037 | 欣興 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 974 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [摘要](companies/tw-3037/summary.html) | [風險](companies/tw-3037/risk_plan.html) | [啟動報告](companies/tw-3037/initiation.html) |
+| 3189 | 景碩 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 727 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [摘要](companies/tw-3189/summary.html) | [風險](companies/tw-3189/risk_plan.html) | [啟動報告](companies/tw-3189/initiation.html) |
+| 3374 | 精材 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 303.5 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [摘要](companies/tw-3374/summary.html) | [風險](companies/tw-3374/risk_plan.html) | [啟動報告](companies/tw-3374/initiation.html) |
+| 3406 | 玉晶光 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 741 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [摘要](companies/tw-3406/summary.html) | [風險](companies/tw-3406/risk_plan.html) | [啟動報告](companies/tw-3406/initiation.html) |
+| 3443 | 創意 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 4,725 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [摘要](companies/tw-3443/summary.html) | [風險](companies/tw-3443/risk_plan.html) | [啟動報告](companies/tw-3443/initiation.html) |
+| 3481 | 群創 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 66 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [摘要](companies/tw-3481/summary.html) | [風險](companies/tw-3481/risk_plan.html) | [啟動報告](companies/tw-3481/initiation.html) |
+| 3707 | 漢磊 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 100.5 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [摘要](companies/tw-3707/summary.html) | [風險](companies/tw-3707/risk_plan.html) | [啟動報告](companies/tw-3707/initiation.html) |
+| 3711 | 日月光投控 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 662 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [摘要](companies/tw-3711/summary.html) | [風險](companies/tw-3711/risk_plan.html) | [啟動報告](companies/tw-3711/initiation.html) |
+| 3715 | 定穎投控 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 180 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [摘要](companies/tw-3715/summary.html) | [風險](companies/tw-3715/risk_plan.html) | [啟動報告](companies/tw-3715/initiation.html) |
+| 6116 | 彩晶 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 19 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [摘要](companies/tw-6116/summary.html) | [風險](companies/tw-6116/risk_plan.html) | [啟動報告](companies/tw-6116/initiation.html) |
+| 6147 | 頎邦 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 258 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [摘要](companies/tw-6147/summary.html) | [風險](companies/tw-6147/risk_plan.html) | [啟動報告](companies/tw-6147/initiation.html) |
+| 6213 | 聯茂 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 281 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [摘要](companies/tw-6213/summary.html) | [風險](companies/tw-6213/risk_plan.html) | [啟動報告](companies/tw-6213/initiation.html) |
+| 8046 | 南電 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 909 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [摘要](companies/tw-8046/summary.html) | [風險](companies/tw-8046/risk_plan.html) | [啟動報告](companies/tw-8046/initiation.html) |
+| 8299 | 群聯 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 2,430 TWD | 2026-06-23T00:00:00+08:00 | partial（證據仍不足） | 0% | [摘要](companies/tw-8299/summary.html) | [風險](companies/tw-8299/risk_plan.html) | [啟動報告](companies/tw-8299/initiation.html) |
+| AAPL | 蘋果 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 294.3 USD | 2026-06-23T00:00:00-04:00 | partial（證據仍不足） | 0% | [摘要](companies/us-AAPL/summary.html) | [風險](companies/us-AAPL/risk_plan.html) | [啟動報告](companies/us-AAPL/initiation.html) |
+| GOOG | Google | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 346.08 USD | 2026-06-23T00:00:00-04:00 | partial（證據仍不足） | 0% | [摘要](companies/us-GOOG/summary.html) | [風險](companies/us-GOOG/risk_plan.html) | [啟動報告](companies/us-GOOG/initiation.html) |
+| MRVL | 美滿電子 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 279.04 USD | 2026-06-23T00:00:00-04:00 | partial（證據仍不足） | 0% | [摘要](companies/us-MRVL/summary.html) | [風險](companies/us-MRVL/risk_plan.html) | [啟動報告](companies/us-MRVL/initiation.html) |
+| MU | 美光 | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 1,051.77 USD | 2026-06-23T00:00:00-04:00 | partial（證據仍不足） | 0% | [摘要](companies/us-MU/summary.html) | [風險](companies/us-MU/risk_plan.html) | [啟動報告](companies/us-MU/initiation.html) |
+| SNDK | Sandisk | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 1,963.6 USD | 2026-06-23T00:00:00-04:00 | partial（證據仍不足） | 0% | [摘要](companies/us-SNDK/summary.html) | [風險](companies/us-SNDK/risk_plan.html) | [啟動報告](companies/us-SNDK/initiation.html) |
+| SPCX | SpaceX | 現在不能買，但值得等買點名單 | Wait for trigger（等待觸發） | 156.11 USD | 2026-06-23T00:00:00-04:00 | partial（證據仍不足） | 0% | [摘要](companies/us-SPCX/summary.html) | [風險](companies/us-SPCX/risk_plan.html) | [啟動報告](companies/us-SPCX/initiation.html) |
 
 ## 研究檔案索引
 
-| 代號 | 公司摘要 | 啟動報告 | 風險計畫 |
-| --- | --- | --- | --- |
-| 1303 | [公司摘要](companies/tw-1303/tearsheet.html) | [啟動報告](companies/tw-1303/initiation.html) | [風險](companies/tw-1303/risk_plan.html) |
-| 2002 | [公司摘要](companies/tw-2002/tearsheet.html) | [啟動報告](companies/tw-2002/initiation.html) | [風險](companies/tw-2002/risk_plan.html) |
-| 2108 | [公司摘要](companies/tw-2108/tearsheet.html) | [啟動報告](companies/tw-2108/initiation.html) | [風險](companies/tw-2108/risk_plan.html) |
-| 2330 | [公司摘要](companies/tw-2330/tearsheet.html) | [啟動報告](companies/tw-2330/initiation.html) | [風險](companies/tw-2330/risk_plan.html) |
-| 2436 | [公司摘要](companies/tw-2436/tearsheet.html) | [啟動報告](companies/tw-2436/initiation.html) | [風險](companies/tw-2436/risk_plan.html) |
-| 2454 | [公司摘要](companies/tw-2454/tearsheet.html) | [啟動報告](companies/tw-2454/initiation.html) | [風險](companies/tw-2454/risk_plan.html) |
-| 2603 | [公司摘要](companies/tw-2603/tearsheet.html) | [啟動報告](companies/tw-2603/initiation.html) | [風險](companies/tw-2603/risk_plan.html) |
-| 3034 | [公司摘要](companies/tw-3034/tearsheet.html) | [啟動報告](companies/tw-3034/initiation.html) | [風險](companies/tw-3034/risk_plan.html) |
-| 3105 | [公司摘要](companies/tw-3105/tearsheet.html) | [啟動報告](companies/tw-3105/initiation.html) | [風險](companies/tw-3105/risk_plan.html) |
-| 3665 | [公司摘要](companies/tw-3665/tearsheet.html) | [啟動報告](companies/tw-3665/initiation.html) | [風險](companies/tw-3665/risk_plan.html) |
-| 4991 | [公司摘要](companies/tw-4991/tearsheet.html) | [啟動報告](companies/tw-4991/initiation.html) | [風險](companies/tw-4991/risk_plan.html) |
-| 5471 | [公司摘要](companies/tw-5471/tearsheet.html) | [啟動報告](companies/tw-5471/initiation.html) | [風險](companies/tw-5471/risk_plan.html) |
-| 6451 | [公司摘要](companies/tw-6451/tearsheet.html) | [啟動報告](companies/tw-6451/initiation.html) | [風險](companies/tw-6451/risk_plan.html) |
-| 6829 | [公司摘要](companies/tw-6829/tearsheet.html) | [啟動報告](companies/tw-6829/initiation.html) | [風險](companies/tw-6829/risk_plan.html) |
-| AXTI | [公司摘要](companies/us-AXTI/tearsheet.html) | [啟動報告](companies/us-AXTI/initiation.html) | [風險](companies/us-AXTI/risk_plan.html) |
-| IBM | [公司摘要](companies/us-IBM/tearsheet.html) | [啟動報告](companies/us-IBM/initiation.html) | [風險](companies/us-IBM/risk_plan.html) |
-| INFQ | [公司摘要](companies/us-INFQ/tearsheet.html) | [啟動報告](companies/us-INFQ/initiation.html) | [風險](companies/us-INFQ/risk_plan.html) |
-| 00631L | [公司摘要](companies/tw-00631L/tearsheet.html) | [啟動報告](companies/tw-00631L/initiation.html) | [風險](companies/tw-00631L/risk_plan.html) |
-| 2303 | [公司摘要](companies/tw-2303/tearsheet.html) | [啟動報告](companies/tw-2303/initiation.html) | [風險](companies/tw-2303/risk_plan.html) |
-| 2344 | [公司摘要](companies/tw-2344/tearsheet.html) | [啟動報告](companies/tw-2344/initiation.html) | [風險](companies/tw-2344/risk_plan.html) |
-| 2408 | [公司摘要](companies/tw-2408/tearsheet.html) | [啟動報告](companies/tw-2408/initiation.html) | [風險](companies/tw-2408/risk_plan.html) |
-| 2409 | [公司摘要](companies/tw-2409/tearsheet.html) | [啟動報告](companies/tw-2409/initiation.html) | [風險](companies/tw-2409/risk_plan.html) |
-| 3016 | [公司摘要](companies/tw-3016/tearsheet.html) | [啟動報告](companies/tw-3016/initiation.html) | [風險](companies/tw-3016/risk_plan.html) |
-| 3037 | [公司摘要](companies/tw-3037/tearsheet.html) | [啟動報告](companies/tw-3037/initiation.html) | [風險](companies/tw-3037/risk_plan.html) |
-| 3189 | [公司摘要](companies/tw-3189/tearsheet.html) | [啟動報告](companies/tw-3189/initiation.html) | [風險](companies/tw-3189/risk_plan.html) |
-| 3374 | [公司摘要](companies/tw-3374/tearsheet.html) | [啟動報告](companies/tw-3374/initiation.html) | [風險](companies/tw-3374/risk_plan.html) |
-| 3406 | [公司摘要](companies/tw-3406/tearsheet.html) | [啟動報告](companies/tw-3406/initiation.html) | [風險](companies/tw-3406/risk_plan.html) |
-| 3443 | [公司摘要](companies/tw-3443/tearsheet.html) | [啟動報告](companies/tw-3443/initiation.html) | [風險](companies/tw-3443/risk_plan.html) |
-| 3481 | [公司摘要](companies/tw-3481/tearsheet.html) | [啟動報告](companies/tw-3481/initiation.html) | [風險](companies/tw-3481/risk_plan.html) |
-| 3707 | [公司摘要](companies/tw-3707/tearsheet.html) | [啟動報告](companies/tw-3707/initiation.html) | [風險](companies/tw-3707/risk_plan.html) |
-| 3711 | [公司摘要](companies/tw-3711/tearsheet.html) | [啟動報告](companies/tw-3711/initiation.html) | [風險](companies/tw-3711/risk_plan.html) |
-| 3715 | [公司摘要](companies/tw-3715/tearsheet.html) | [啟動報告](companies/tw-3715/initiation.html) | [風險](companies/tw-3715/risk_plan.html) |
-| 6116 | [公司摘要](companies/tw-6116/tearsheet.html) | [啟動報告](companies/tw-6116/initiation.html) | [風險](companies/tw-6116/risk_plan.html) |
-| 6147 | [公司摘要](companies/tw-6147/tearsheet.html) | [啟動報告](companies/tw-6147/initiation.html) | [風險](companies/tw-6147/risk_plan.html) |
-| 6213 | [公司摘要](companies/tw-6213/tearsheet.html) | [啟動報告](companies/tw-6213/initiation.html) | [風險](companies/tw-6213/risk_plan.html) |
-| 8046 | [公司摘要](companies/tw-8046/tearsheet.html) | [啟動報告](companies/tw-8046/initiation.html) | [風險](companies/tw-8046/risk_plan.html) |
-| 8299 | [公司摘要](companies/tw-8299/tearsheet.html) | [啟動報告](companies/tw-8299/initiation.html) | [風險](companies/tw-8299/risk_plan.html) |
-| AAPL | [公司摘要](companies/us-AAPL/tearsheet.html) | [啟動報告](companies/us-AAPL/initiation.html) | [風險](companies/us-AAPL/risk_plan.html) |
-| GOOG | [公司摘要](companies/us-GOOG/tearsheet.html) | [啟動報告](companies/us-GOOG/initiation.html) | [風險](companies/us-GOOG/risk_plan.html) |
-| MRVL | [公司摘要](companies/us-MRVL/tearsheet.html) | [啟動報告](companies/us-MRVL/initiation.html) | [風險](companies/us-MRVL/risk_plan.html) |
-| MU | [公司摘要](companies/us-MU/tearsheet.html) | [啟動報告](companies/us-MU/initiation.html) | [風險](companies/us-MU/risk_plan.html) |
-| SNDK | [公司摘要](companies/us-SNDK/tearsheet.html) | [啟動報告](companies/us-SNDK/initiation.html) | [風險](companies/us-SNDK/risk_plan.html) |
-| SPCX | [公司摘要](companies/us-SPCX/tearsheet.html) | [啟動報告](companies/us-SPCX/initiation.html) | [風險](companies/us-SPCX/risk_plan.html) |
+| 代號 | Markdown摘要 | 公司摘要 | 啟動報告 | 風險計畫 |
+| --- | --- | --- | --- | --- |
+| 1303 | [摘要](companies/tw-1303/summary.html) | [公司摘要](companies/tw-1303/tearsheet.html) | [啟動報告](companies/tw-1303/initiation.html) | [風險](companies/tw-1303/risk_plan.html) |
+| 2002 | [摘要](companies/tw-2002/summary.html) | [公司摘要](companies/tw-2002/tearsheet.html) | [啟動報告](companies/tw-2002/initiation.html) | [風險](companies/tw-2002/risk_plan.html) |
+| 2108 | [摘要](companies/tw-2108/summary.html) | [公司摘要](companies/tw-2108/tearsheet.html) | [啟動報告](companies/tw-2108/initiation.html) | [風險](companies/tw-2108/risk_plan.html) |
+| 2330 | [摘要](companies/tw-2330/summary.html) | [公司摘要](companies/tw-2330/tearsheet.html) | [啟動報告](companies/tw-2330/initiation.html) | [風險](companies/tw-2330/risk_plan.html) |
+| 2436 | [摘要](companies/tw-2436/summary.html) | [公司摘要](companies/tw-2436/tearsheet.html) | [啟動報告](companies/tw-2436/initiation.html) | [風險](companies/tw-2436/risk_plan.html) |
+| 2454 | [摘要](companies/tw-2454/summary.html) | [公司摘要](companies/tw-2454/tearsheet.html) | [啟動報告](companies/tw-2454/initiation.html) | [風險](companies/tw-2454/risk_plan.html) |
+| 2603 | [摘要](companies/tw-2603/summary.html) | [公司摘要](companies/tw-2603/tearsheet.html) | [啟動報告](companies/tw-2603/initiation.html) | [風險](companies/tw-2603/risk_plan.html) |
+| 3034 | [摘要](companies/tw-3034/summary.html) | [公司摘要](companies/tw-3034/tearsheet.html) | [啟動報告](companies/tw-3034/initiation.html) | [風險](companies/tw-3034/risk_plan.html) |
+| 3105 | [摘要](companies/tw-3105/summary.html) | [公司摘要](companies/tw-3105/tearsheet.html) | [啟動報告](companies/tw-3105/initiation.html) | [風險](companies/tw-3105/risk_plan.html) |
+| 3665 | [摘要](companies/tw-3665/summary.html) | [公司摘要](companies/tw-3665/tearsheet.html) | [啟動報告](companies/tw-3665/initiation.html) | [風險](companies/tw-3665/risk_plan.html) |
+| 4991 | [摘要](companies/tw-4991/summary.html) | [公司摘要](companies/tw-4991/tearsheet.html) | [啟動報告](companies/tw-4991/initiation.html) | [風險](companies/tw-4991/risk_plan.html) |
+| 5471 | [摘要](companies/tw-5471/summary.html) | [公司摘要](companies/tw-5471/tearsheet.html) | [啟動報告](companies/tw-5471/initiation.html) | [風險](companies/tw-5471/risk_plan.html) |
+| 6451 | [摘要](companies/tw-6451/summary.html) | [公司摘要](companies/tw-6451/tearsheet.html) | [啟動報告](companies/tw-6451/initiation.html) | [風險](companies/tw-6451/risk_plan.html) |
+| 6829 | [摘要](companies/tw-6829/summary.html) | [公司摘要](companies/tw-6829/tearsheet.html) | [啟動報告](companies/tw-6829/initiation.html) | [風險](companies/tw-6829/risk_plan.html) |
+| AXTI | [摘要](companies/us-AXTI/summary.html) | [公司摘要](companies/us-AXTI/tearsheet.html) | [啟動報告](companies/us-AXTI/initiation.html) | [風險](companies/us-AXTI/risk_plan.html) |
+| IBM | [摘要](companies/us-IBM/summary.html) | [公司摘要](companies/us-IBM/tearsheet.html) | [啟動報告](companies/us-IBM/initiation.html) | [風險](companies/us-IBM/risk_plan.html) |
+| INFQ | [摘要](companies/us-INFQ/summary.html) | [公司摘要](companies/us-INFQ/tearsheet.html) | [啟動報告](companies/us-INFQ/initiation.html) | [風險](companies/us-INFQ/risk_plan.html) |
+| 00631L | [摘要](companies/tw-00631L/summary.html) | [公司摘要](companies/tw-00631L/tearsheet.html) | [啟動報告](companies/tw-00631L/initiation.html) | [風險](companies/tw-00631L/risk_plan.html) |
+| 2303 | [摘要](companies/tw-2303/summary.html) | [公司摘要](companies/tw-2303/tearsheet.html) | [啟動報告](companies/tw-2303/initiation.html) | [風險](companies/tw-2303/risk_plan.html) |
+| 2344 | [摘要](companies/tw-2344/summary.html) | [公司摘要](companies/tw-2344/tearsheet.html) | [啟動報告](companies/tw-2344/initiation.html) | [風險](companies/tw-2344/risk_plan.html) |
+| 2408 | [摘要](companies/tw-2408/summary.html) | [公司摘要](companies/tw-2408/tearsheet.html) | [啟動報告](companies/tw-2408/initiation.html) | [風險](companies/tw-2408/risk_plan.html) |
+| 2409 | [摘要](companies/tw-2409/summary.html) | [公司摘要](companies/tw-2409/tearsheet.html) | [啟動報告](companies/tw-2409/initiation.html) | [風險](companies/tw-2409/risk_plan.html) |
+| 3016 | [摘要](companies/tw-3016/summary.html) | [公司摘要](companies/tw-3016/tearsheet.html) | [啟動報告](companies/tw-3016/initiation.html) | [風險](companies/tw-3016/risk_plan.html) |
+| 3037 | [摘要](companies/tw-3037/summary.html) | [公司摘要](companies/tw-3037/tearsheet.html) | [啟動報告](companies/tw-3037/initiation.html) | [風險](companies/tw-3037/risk_plan.html) |
+| 3189 | [摘要](companies/tw-3189/summary.html) | [公司摘要](companies/tw-3189/tearsheet.html) | [啟動報告](companies/tw-3189/initiation.html) | [風險](companies/tw-3189/risk_plan.html) |
+| 3374 | [摘要](companies/tw-3374/summary.html) | [公司摘要](companies/tw-3374/tearsheet.html) | [啟動報告](companies/tw-3374/initiation.html) | [風險](companies/tw-3374/risk_plan.html) |
+| 3406 | [摘要](companies/tw-3406/summary.html) | [公司摘要](companies/tw-3406/tearsheet.html) | [啟動報告](companies/tw-3406/initiation.html) | [風險](companies/tw-3406/risk_plan.html) |
+| 3443 | [摘要](companies/tw-3443/summary.html) | [公司摘要](companies/tw-3443/tearsheet.html) | [啟動報告](companies/tw-3443/initiation.html) | [風險](companies/tw-3443/risk_plan.html) |
+| 3481 | [摘要](companies/tw-3481/summary.html) | [公司摘要](companies/tw-3481/tearsheet.html) | [啟動報告](companies/tw-3481/initiation.html) | [風險](companies/tw-3481/risk_plan.html) |
+| 3707 | [摘要](companies/tw-3707/summary.html) | [公司摘要](companies/tw-3707/tearsheet.html) | [啟動報告](companies/tw-3707/initiation.html) | [風險](companies/tw-3707/risk_plan.html) |
+| 3711 | [摘要](companies/tw-3711/summary.html) | [公司摘要](companies/tw-3711/tearsheet.html) | [啟動報告](companies/tw-3711/initiation.html) | [風險](companies/tw-3711/risk_plan.html) |
+| 3715 | [摘要](companies/tw-3715/summary.html) | [公司摘要](companies/tw-3715/tearsheet.html) | [啟動報告](companies/tw-3715/initiation.html) | [風險](companies/tw-3715/risk_plan.html) |
+| 6116 | [摘要](companies/tw-6116/summary.html) | [公司摘要](companies/tw-6116/tearsheet.html) | [啟動報告](companies/tw-6116/initiation.html) | [風險](companies/tw-6116/risk_plan.html) |
+| 6147 | [摘要](companies/tw-6147/summary.html) | [公司摘要](companies/tw-6147/tearsheet.html) | [啟動報告](companies/tw-6147/initiation.html) | [風險](companies/tw-6147/risk_plan.html) |
+| 6213 | [摘要](companies/tw-6213/summary.html) | [公司摘要](companies/tw-6213/tearsheet.html) | [啟動報告](companies/tw-6213/initiation.html) | [風險](companies/tw-6213/risk_plan.html) |
+| 8046 | [摘要](companies/tw-8046/summary.html) | [公司摘要](companies/tw-8046/tearsheet.html) | [啟動報告](companies/tw-8046/initiation.html) | [風險](companies/tw-8046/risk_plan.html) |
+| 8299 | [摘要](companies/tw-8299/summary.html) | [公司摘要](companies/tw-8299/tearsheet.html) | [啟動報告](companies/tw-8299/initiation.html) | [風險](companies/tw-8299/risk_plan.html) |
+| AAPL | [摘要](companies/us-AAPL/summary.html) | [公司摘要](companies/us-AAPL/tearsheet.html) | [啟動報告](companies/us-AAPL/initiation.html) | [風險](companies/us-AAPL/risk_plan.html) |
+| GOOG | [摘要](companies/us-GOOG/summary.html) | [公司摘要](companies/us-GOOG/tearsheet.html) | [啟動報告](companies/us-GOOG/initiation.html) | [風險](companies/us-GOOG/risk_plan.html) |
+| MRVL | [摘要](companies/us-MRVL/summary.html) | [公司摘要](companies/us-MRVL/tearsheet.html) | [啟動報告](companies/us-MRVL/initiation.html) | [風險](companies/us-MRVL/risk_plan.html) |
+| MU | [摘要](companies/us-MU/summary.html) | [公司摘要](companies/us-MU/tearsheet.html) | [啟動報告](companies/us-MU/initiation.html) | [風險](companies/us-MU/risk_plan.html) |
+| SNDK | [摘要](companies/us-SNDK/summary.html) | [公司摘要](companies/us-SNDK/tearsheet.html) | [啟動報告](companies/us-SNDK/initiation.html) | [風險](companies/us-SNDK/risk_plan.html) |
+| SPCX | [摘要](companies/us-SPCX/summary.html) | [公司摘要](companies/us-SPCX/tearsheet.html) | [啟動報告](companies/us-SPCX/initiation.html) | [風險](companies/us-SPCX/risk_plan.html) |
 
 ## 完整性解讀
 
