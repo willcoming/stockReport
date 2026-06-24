@@ -1,43 +1,47 @@
 {
-  "generated_at": "2026-06-24 13:25:36",
+  "generated_at": "2026-06-24 14:15:52",
   "market_signal_cards": [
     {
       "id": "risk-preference-indicator",
       "title": "風險偏好性指標",
-      "badge": "待接報價",
-      "tone": "neutral",
-      "status": "尚未判定 Risk On / Off",
-      "as_of": "2026-06-24 13:23 Asia/Taipei",
-      "summary": "目前沒有可驗證的即時比率；先保留台股電金比與美股 XLY/XLP 的判讀規則，不填造最新訊號。",
+      "badge": "Risk Off",
+      "tone": "red",
+      "status": "台股與美股資金風向都偏防守。",
+      "as_of": "2026-06-24 14:14 Asia/Taipei",
+      "summary": "用台股電子 / 金融與美股 XLY / XLP 的相對強弱判斷資金偏攻擊或防守；20 日均線上下 2% 作為 Risk On / Off 緩衝。",
       "metrics": [
         {
-          "label": "目前結論",
-          "value": "資料不足",
-          "note": "未接即時比率前，不判定 Risk On 或 Risk Off。"
+          "label": "台股",
+          "value": "Risk Off（0.9388 / MA20 0.9943）",
+          "note": "電子類 / 金融保險；距 MA20 -5.57%；資料日 2026-06-24。"
         },
         {
-          "label": "台股規則",
-          "value": "TSE23 / TSE28",
-          "note": "電子相對金融轉強偏攻擊；金融相對電子轉強偏防守。"
+          "label": "美股",
+          "value": "Risk Off（1.3588 / MA20 1.4003）",
+          "note": "XLY / XLP；距 MA20 -2.96%；資料日 2026-06-23。"
         },
         {
-          "label": "美股規則",
-          "value": "XLY / XLP",
-          "note": "非必需消費相對必需消費轉強偏 Risk On；反向偏 Risk Off。"
+          "label": "判讀規則",
+          "value": "20 日均線 ±2%",
+          "note": "比率高於上緩衝為 Risk On；低於下緩衝為 Risk Off；區間內為 Neutral。"
         }
       ],
       "sources": [
         {
+          "label": "TWSE 電子 / 金融指數",
+          "url": "https://www.twse.com.tw/zh/indices/taiex/eftri-hist.html"
+        },
+        {
+          "label": "Yahoo Finance XLY",
+          "url": "https://finance.yahoo.com/quote/XLY"
+        },
+        {
+          "label": "Yahoo Finance XLP",
+          "url": "https://finance.yahoo.com/quote/XLP"
+        },
+        {
           "label": "MOFI_XQ 風險偏好性",
           "url": "https://github.com/mophyfei/MOFI_XQ/tree/main/01.%20%E7%B8%BD%E9%AB%94%E7%92%B0%E5%A2%83%E8%A7%80%E6%B8%AC/%E9%A2%A8%E9%9A%AA%E5%81%8F%E5%A5%BD%E6%80%A7"
-        },
-        {
-          "label": "XQ 指標下載",
-          "url": "https://github.com/mophyfei/MOFI_XQ/raw/main/01.%20%E7%B8%BD%E9%AB%94%E7%92%B0%E5%A2%83%E8%A7%80%E6%B8%AC/%E9%A2%A8%E9%9A%AA%E5%81%8F%E5%A5%BD%E6%80%A7/01.%20%E7%92%B0%E5%A2%83%E9%9D%A2%20-%20%E9%A2%A8%E9%9A%AA%E5%81%8F%E5%A5%BD%E6%80%A7%20%28%E8%80%81%E5%A2%A8%E5%84%AA%E6%83%A0%E7%A2%BC%EF%BC%9A%40MOFI%29.xsb"
-        },
-        {
-          "label": "XQ 看盤頁下載",
-          "url": "https://github.com/mophyfei/MOFI_XQ/raw/main/01.%20%E7%B8%BD%E9%AB%94%E7%92%B0%E5%A2%83%E8%A7%80%E6%B8%AC/%E9%A2%A8%E9%9A%AA%E5%81%8F%E5%A5%BD%E6%80%A7/01.%20%E7%92%B0%E5%A2%83%E9%9D%A2%20-%20%E8%B3%87%E9%87%91%E9%A2%A8%E9%9A%AA%E5%81%8F%E5%A5%BD%E7%9C%8B%E7%9B%A4%E9%A0%81%E9%9D%A2%20%28%E8%80%81%E5%A2%A8%E5%84%AA%E6%83%A0%E7%A2%BC%EF%BC%9A%40MOFI%29.daox"
         }
       ]
     },
@@ -47,7 +51,7 @@
       "badge": "低到中風險",
       "tone": "yellow",
       "status": "正常拉回 / 低波動恐懼",
-      "as_of": "2026-06-24 13:23:47 CST",
+      "as_of": "2026-06-24 14:14:23 CST",
       "summary": "正常拉回 / 低波動恐懼；正常分批，不需恐慌。VIX 19.49，Fear & Greed 34.74，信用市場目前判讀為 stable。",
       "metrics": [
         {
