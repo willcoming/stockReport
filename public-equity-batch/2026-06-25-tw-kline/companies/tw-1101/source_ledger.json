@@ -1,0 +1,86 @@
+{
+  "symbol": "1101",
+  "market_key": "tw",
+  "company": "台泥",
+  "generated_at": "2026-06-25T16:20:34",
+  "retrieved_at": "2026-06-25T16:20:34",
+  "as_of": "2026-06-25",
+  "sources": [
+    {
+      "source_name": "merged inventory universe",
+      "source_type": "inventory_scope",
+      "path": "reports/twStock/2026-06-25_tw_kline_decision_report.md",
+      "retrieved_at": "2026-06-25T16:20:34",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "tearsheet.html",
+        "initiation.html",
+        "risk_plan.html"
+      ],
+      "note": "Inventory defines research universe only; broker position size is excluded from PEI model sizing."
+    },
+    {
+      "source_name": "StockLoop Taiwan K-line daily report close",
+      "source_type": "market_data",
+      "symbol": "1101",
+      "as_of": "2026-06-25",
+      "retrieved_at": "2026-06-25T16:20:34",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "source_ledger.json",
+        "initiation.html",
+        "risk_plan.html"
+      ]
+    }
+  ],
+  "market_data": {
+    "current_price": {
+      "value": 24.6,
+      "currency": "TWD",
+      "as_of": "2026-06-25",
+      "source": "StockLoop Taiwan K-line daily report close (1101)"
+    }
+  },
+  "recommendation_label": "Wait for trigger",
+  "research_status": "partial",
+  "valuation_status": "not_run",
+  "missing_evidence": [
+    "本 inventory-scope PEI 批次未逐檔執行完整官方 filings、法說、consensus、估值模型與流動性模型查核",
+    "個人庫存僅用於定義研究宇宙；模型投組 sizing 未使用券商、股數或成本",
+    "需以公司公告、交易所/SEC 文件與正式 PEI specialist workflow 補強後，才可升級為 decision-ready"
+  ],
+  "industry_thesis_context": {
+    "gate": null,
+    "gate_label": null,
+    "hype_risk": null,
+    "hype_risk_label": null,
+    "summary": "",
+    "missing_evidence": [],
+    "source": ""
+  },
+  "stock_inventory_context": {
+    "action": "觀察",
+    "risk_priority": "",
+    "health_check_reason": "",
+    "recent_trigger_summary": "近一週觸發資料未提供",
+    "short_term_scenario": "",
+    "invalidation_condition": "",
+    "data_limitations": "",
+    "industry_thesis_gate": null,
+    "hype_risk": null
+  },
+  "portfolio_risk": {
+    "model_portfolio_size": "0% pre-trigger; reassess after trigger and evidence review",
+    "risk_budget": 0.0,
+    "downside_or_stop_distance": "not independently verified in inventory-scope batch",
+    "liquidity_cap": "not independently verified",
+    "hedge_posture": "No hedge; model portfolio remains cash for this name until evidence clears",
+    "add_rule": "Open or add only after full PEI specialist workflow confirms thesis, trigger, price context, liquidity, and risk/reward",
+    "trim_rule": "Trim only if independent evidence confirms deterioration",
+    "exit_rule": "Exit/watch-only if thesis evidence or price trigger fails",
+    "max_loss_posture": "0 units at risk because inventory-scope model size is 0%",
+    "monitoring_cadence": "Daily price and weekly fundamentals while held in inventory watch universe"
+  }
+}
