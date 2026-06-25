@@ -1,0 +1,116 @@
+{
+  "symbol": "STM",
+  "company": "STMicroelectronics N.V. Common Stock",
+  "market_key": "us",
+  "exchange": "US",
+  "currency": "USD",
+  "provider_symbol": "STM",
+  "instrument_type": "common_equity",
+  "official_validation_status": "not_checked",
+  "instrument": {
+    "symbol": "STM",
+    "market_key": "us",
+    "market": "NYSE",
+    "exchange": "US",
+    "currency": "USD",
+    "provider_symbol": "STM",
+    "instrument_type": "common_equity",
+    "status": "ok",
+    "official_validation_status": "not_checked",
+    "equity_model_supported": true,
+    "warnings": [],
+    "output_subdir": "us-STM"
+  },
+  "generated_at": "2026-06-26 06:44:45",
+  "as_of": "2026-06-25 16:00:00 America/New_York",
+  "retrieved_at": "2026-06-26 06:44:45",
+  "sources": [
+    {
+      "source_name": "StockLoop US K-line decision report",
+      "source_type": "local_report",
+      "path": "reports/usStock/2026-06-25_us_kline_decision_report.md",
+      "as_of": "2026-06-25",
+      "retrieved_at": "2026-06-26 06:44:45",
+      "used_by": [
+        "source_ledger.json",
+        "tearsheet.html",
+        "initiation.html",
+        "risk_plan.html"
+      ]
+    },
+    {
+      "source_name": "StockLoop US K-line daily scan",
+      "source_type": "local_report/yfinance",
+      "path": "usStock/reports/2026-06-25.md",
+      "as_of": "2026-06-25 16:00:00 America/New_York",
+      "retrieved_at": "2026-06-26 06:44:45",
+      "used_by": [
+        "source_ledger.json",
+        "tearsheet.html",
+        "initiation.html",
+        "risk_plan.html"
+      ]
+    },
+    {
+      "source_name": "StockLoop company-level industry thesis",
+      "source_type": "local_json",
+      "path": "reports/industry-thesis/2026-06-25_industry_thesis.json",
+      "as_of": "2026-06-25",
+      "retrieved_at": "2026-06-26 06:44:45",
+      "used_by": [
+        "source_ledger.json",
+        "initiation.html"
+      ]
+    }
+  ],
+  "market_data": {
+    "current_price": {
+      "value": 74.87999725341797,
+      "currency": "USD",
+      "as_of": "2026-06-25 16:00:00 America/New_York",
+      "source": "StockLoop yfinance daily scan close (2026-06-25)"
+    }
+  },
+  "recommendation_label": "Watch only",
+  "research_status": "complete",
+  "valuation_status": "not_run",
+  "missing_evidence": [
+    "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+    "未完成 SEC/公司 IR 一手 filings 驗證",
+    "未完成共識預估、估值模型與目標價敏感度",
+    "未完成最新法說會或管理層逐字稿查核",
+    "未完成流動性容量、部位上限與下檔風險量化",
+    "缺少公司級官方營收、訂單、財報或法說支撐",
+    "近 7 日公開新聞熱度未命中或未抓取"
+  ],
+  "industry_thesis_context": {
+    "gate": "theme_only",
+    "hype_risk": "低",
+    "summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=雙策略整合：LZEMA20/3MA；收盤位置 78.3%；振幅 6.0%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 742,389,646；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
+    "missing_evidence": [
+      "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+      "近 7 日公開新聞熱度未命中或未抓取",
+      "缺少公司級官方營收、訂單、財報或法說支撐"
+    ]
+  },
+  "technical_context": {
+    "category": "buy_now",
+    "section": "現在可以買名單",
+    "metrics": "雙策略整合：LZEMA20/3MA；收盤位置 78.3%；振幅 6.0%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 742,389,646",
+    "risk": "未見硬性排除條件，仍需追蹤隔日量價與大盤風險",
+    "layout": "可研究小量分批，仍需等量價續強或回測不破再提高信心",
+    "holding": "若已有持倉，可用訊號日低點或短均線作為失效觀察"
+  },
+  "portfolio_risk": {
+    "model_portfolio_size": "0% until PEI evidence gate closes",
+    "risk_budget": "0.75% research budget only after evidence gate closes",
+    "downside_or_stop_distance": "not quantified; requires support/stop and valuation tie-out",
+    "liquidity_cap": "not quantified; requires ADV and exit-days check",
+    "hedge_posture": "No hedge proposed; research queue only",
+    "add_rule": "Only re-underwrite after official evidence, valuation, and technical confirmation",
+    "trim_rule": "Not applicable before model position exists",
+    "exit_rule": "Remove from queue if trigger fails or evidence gap widens",
+    "max_loss_posture": "No model capital allocated in this preliminary PEI screen",
+    "monitoring_cadence": "Next market close and evidence refresh"
+  }
+}

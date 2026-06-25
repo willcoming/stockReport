@@ -1,0 +1,135 @@
+{
+  "symbol": "OKLO",
+  "market_key": "us",
+  "company": "Oklo Inc",
+  "generated_at": "2026-06-25T20:57:14",
+  "retrieved_at": "2026-06-25T20:57:14",
+  "as_of": "2026-06-25",
+  "sources": [
+    {
+      "source_name": "merged inventory universe",
+      "source_type": "inventory_scope",
+      "path": "/tmp/stockloop_inventory_merged_us.json",
+      "retrieved_at": "2026-06-25T20:57:14",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "tearsheet.html",
+        "initiation.html",
+        "risk_plan.html"
+      ],
+      "note": "Inventory defines research universe only; broker position size is excluded from PEI model sizing."
+    },
+    {
+      "source_name": "stock inventory health check report",
+      "source_type": "local_report",
+      "path": "reports/stock-inventory/2026-06-25-2056_inventory_health_check.md",
+      "retrieved_at": "2026-06-25T20:57:14",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "initiation.html",
+        "risk_plan.html"
+      ]
+    },
+    {
+      "source_name": "Stock inventory health-check current-price column",
+      "source_type": "market_data",
+      "symbol": "OKLO",
+      "as_of": "2026-06-25",
+      "retrieved_at": "2026-06-25T20:57:14",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "source_ledger.json",
+        "initiation.html",
+        "risk_plan.html"
+      ]
+    },
+    {
+      "source_name": "recent K-line trigger scan",
+      "source_type": "local_signal_log",
+      "retrieved_at": "2026-06-25T20:57:14",
+      "summary": "2026-06-23 買進：LZEMA20",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "initiation.html",
+        "risk_plan.html"
+      ]
+    },
+    {
+      "source_name": "company-level industry thesis",
+      "source_type": "industry_thesis",
+      "path": "reports/industry-thesis/2026-06-25_industry_thesis.json",
+      "retrieved_at": "2026-06-25T20:57:14",
+      "industry_thesis_gate": "theme_only",
+      "hype_risk": "low",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "source_ledger.json",
+        "initiation.html",
+        "risk_plan.html"
+      ]
+    }
+  ],
+  "market_data": {
+    "current_price": {
+      "value": 55.05,
+      "currency": "USD",
+      "as_of": "2026-06-25",
+      "source": "Stock inventory health-check current-price column (OKLO)"
+    }
+  },
+  "recommendation_label": "Wait for trigger",
+  "research_status": "partial",
+  "valuation_status": "not_run",
+  "missing_evidence": [
+    "本 inventory-scope PEI 批次未逐檔執行完整官方 filings、法說、consensus、估值模型與流動性模型查核",
+    "個人庫存僅用於定義研究宇宙；模型投組 sizing 未使用券商、股數或成本",
+    "需以公司公告、交易所/SEC 文件與正式 PEI specialist workflow 補強後，才可升級為 decision-ready",
+    "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+    "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+    "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+    "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+    "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐"
+  ],
+  "industry_thesis_context": {
+    "gate": "theme_only",
+    "gate_label": "目前偏題材，缺公司級落地證據",
+    "hype_risk": "low",
+    "hype_risk_label": "低",
+    "summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=庫存回補 / 週期復甦；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
+    "missing_evidence": [
+      "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+      "近 7 日公開新聞熱度未命中或未抓取",
+      "缺少明確後續產業 KPI",
+      "缺少公司級官方營收、訂單、財報或法說支撐"
+    ],
+    "source": "reports/industry-thesis/2026-06-25_industry_thesis.json"
+  },
+  "stock_inventory_context": {
+    "action": "觀察",
+    "risk_priority": "",
+    "health_check_reason": "買點不足以加碼，盤前貼近 break 且缺官方里程碑，先觀察。",
+    "recent_trigger_summary": "2026-06-23 買進：LZEMA20",
+    "short_term_scenario": "APEX 震盪：多/空/震盪 30/30/40；warn 58.56；break 55",
+    "invalidation_condition": "PEI：官方監管/合約進度無法驗證，且價格買點失敗。；APEX：收盤跌破 55；低於 58.56 後無法收復則提高風控。",
+    "data_limitations": "報價：yfinance pre/post-market price OKLO，2026-06-25 20:51 Asia/Taipei；K線窗 美股 2026-06-18~2026-06-24；PEI conditional risk screen，官方 filings/法說/consensus/估值/流動性模型未逐檔補齊；產業Gate=theme_only、hype=low；缺口：SEC company tickers 未命中或 SEC_USER_AGENT 未設定; 近 7 日公開新聞熱度未命中或未抓取；產業 thesis 20:45 重跑因 GDELT 連線卡住中止，採 2026-06-25 16:18 既有檔；",
+    "industry_thesis_gate": "theme_only",
+    "hype_risk": "low"
+  },
+  "portfolio_risk": {
+    "model_portfolio_size": "0% pre-trigger; reassess after trigger and evidence review",
+    "risk_budget": 0.0,
+    "downside_or_stop_distance": "not independently verified in inventory-scope batch",
+    "liquidity_cap": "not independently verified",
+    "hedge_posture": "No hedge; model portfolio remains cash for this name until evidence clears",
+    "add_rule": "Open or add only after full PEI specialist workflow confirms thesis, trigger, price context, liquidity, and risk/reward",
+    "trim_rule": "買點不足以加碼，盤前貼近 break 且缺官方里程碑，先觀察。",
+    "exit_rule": "PEI：官方監管/合約進度無法驗證，且價格買點失敗。；APEX：收盤跌破 55；低於 58.56 後無法收復則提高風控。",
+    "max_loss_posture": "0 units at risk because inventory-scope model size is 0%",
+    "monitoring_cadence": "Daily price and weekly fundamentals while held in inventory watch universe"
+  }
+}
