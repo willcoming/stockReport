@@ -1,0 +1,71 @@
+{
+  "batch_id": "batch-016",
+  "batch_index": 16,
+  "batch_size": 1,
+  "generated_at": "2026-06-25 08:01:55",
+  "output_root": "reports/public-equity-batch/2026-06-25",
+  "source_reports": [
+    "reports/news/2026-06-25_kol_news_decision_report.md"
+  ],
+  "workflow": [
+    "company-tearsheet",
+    "initiating-coverage",
+    "portfolio-risk-management"
+  ],
+  "items": [
+    {
+      "market_key": "us",
+      "market": "美股",
+      "symbol": "UAL",
+      "company": "美聯航",
+      "industry": "觀光/航空郵輪",
+      "canonical_category": "wait_entry",
+      "canonical_category_label": "現在不能買，但值得等買點名單",
+      "source_priority": 3,
+      "instrument_type": "common_equity",
+      "output_subdir": "us-UAL",
+      "industry_thesis_gate": null,
+      "industry_thesis_gate_label": null,
+      "hype_risk": null,
+      "hype_risk_label": null,
+      "industry_thesis_summary": "",
+      "industry_thesis_missing_evidence": [],
+      "industry_thesis_source": "",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "risk_budget_post_trigger": 0.005,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "kol",
+          "lane_label": "KOL/news",
+          "category": "wait_entry",
+          "category_label": "現在不能買，但值得等買點名單",
+          "report_path": "reports/news/2026-06-25_kol_news_decision_report.md",
+          "row_index": 20,
+          "expanded_index": 0,
+          "raw_market": "美股",
+          "raw_symbol_cell": "UAL",
+          "raw_company_cell": "美聯航",
+          "raw_row": {
+            "市場": "美股",
+            "股票代號": "UAL",
+            "公司名稱": "美聯航",
+            "產業": "觀光/航空郵輪",
+            "來源提及程度": "中",
+            "來源主觀看法": "中性觀察",
+            "布局建議": "（推論）停火協議 60 天冷靜期之地緣政治緊繃局勢有高度不確定性。建議暫不持倉，避開主力配置，需等待 60 天冷靜期有明確進展、油價確實在 80 美元以下持穩時再行評估 [70, 71]。",
+            "持倉建議": "暫不持倉。",
+            "追蹤指標": "航空燃油價格變動；中東和平協議與 60 天冷靜期演變 [70, 71]。",
+            "風險": "停戰協定 60 天冷靜期之高度不確定性，油價隨時反彈 [71]。"
+          }
+        }
+      ]
+    }
+  ]
+}

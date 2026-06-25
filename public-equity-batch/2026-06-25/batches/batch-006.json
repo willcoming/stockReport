@@ -1,0 +1,189 @@
+{
+  "batch_id": "batch-006",
+  "batch_index": 6,
+  "batch_size": 3,
+  "generated_at": "2026-06-25 08:01:55",
+  "output_root": "reports/public-equity-batch/2026-06-25",
+  "source_reports": [
+    "reports/news/2026-06-25_kol_news_decision_report.md"
+  ],
+  "workflow": [
+    "company-tearsheet",
+    "initiating-coverage",
+    "portfolio-risk-management"
+  ],
+  "items": [
+    {
+      "market_key": "tw",
+      "market": "台股",
+      "symbol": "3481",
+      "company": "群創光電",
+      "industry": "面板、先進封裝/玻璃基板",
+      "canonical_category": "buy_now",
+      "canonical_category_label": "現在可以買名單",
+      "source_priority": 0,
+      "instrument_type": "common_equity",
+      "output_subdir": "tw-3481",
+      "industry_thesis_gate": "hype_or_crowded",
+      "industry_thesis_gate_label": "炒作或擁擠交易風險偏高",
+      "hype_risk": "high",
+      "hype_risk_label": "高",
+      "industry_thesis_summary": "Gate=炒作或擁擠交易風險偏高；炒作風險=高；成長驅動=AI / 資料中心；題材/價格/新聞熱度偏熱，但缺少公司級官方營收、訂單或財報證據支撐。",
+      "industry_thesis_missing_evidence": [
+        "台股官方公司基本資料未命中",
+        "月營收資料未命中或未接到此市場",
+        "近 7 日公開新聞熱度未命中或未抓取",
+        "缺少公司級官方營收、訂單、財報或法說支撐"
+      ],
+      "industry_thesis_source": "reports/industry-thesis/2026-06-25_industry_thesis.json",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0075,
+        "risk_budget_post_trigger": 0.0075,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "kol",
+          "lane_label": "KOL/news",
+          "category": "buy_now",
+          "category_label": "現在可以買名單",
+          "report_path": "reports/news/2026-06-25_kol_news_decision_report.md",
+          "row_index": 16,
+          "expanded_index": 0,
+          "raw_market": "台股",
+          "raw_symbol_cell": "3481",
+          "raw_company_cell": "群創光電",
+          "raw_row": {
+            "市場": "台股",
+            "股票代號": "3481",
+            "公司名稱": "群創光電",
+            "產業": "面板、先進封裝/玻璃基板",
+            "來源提及程度": "高",
+            "來源主觀看法": "強烈看多",
+            "布局建議": "（推論）短線隔日衝大咖停損，明後天尚有數萬張賣壓待消化，建議在震盪消化賣壓、股價 30 元以下低檔時提早分批布局 [1]。",
+            "持倉建議": "一張不賣，波段抱牢 [1]。",
+            "追蹤指標": "2028 年玻璃基板 CoWoS 量產與驗證進度；單月 EPS（5月已達 0.27 元）；大摩主力籌碼進出 [1, 2]。",
+            "風險": "短線隔日衝賣壓震盪；2028 年量產時程仍遠 [1, 2]。"
+          }
+        }
+      ]
+    },
+    {
+      "market_key": "tw",
+      "market": "台股",
+      "symbol": "3556",
+      "company": "禾瑞亞",
+      "industry": "觸控晶片/工控安全控制",
+      "canonical_category": "buy_now",
+      "canonical_category_label": "現在可以買名單",
+      "source_priority": 0,
+      "instrument_type": "common_equity",
+      "output_subdir": "tw-3556",
+      "industry_thesis_gate": null,
+      "industry_thesis_gate_label": null,
+      "hype_risk": null,
+      "hype_risk_label": null,
+      "industry_thesis_summary": "",
+      "industry_thesis_missing_evidence": [],
+      "industry_thesis_source": "",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0075,
+        "risk_budget_post_trigger": 0.0075,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "kol",
+          "lane_label": "KOL/news",
+          "category": "buy_now",
+          "category_label": "現在可以買名單",
+          "report_path": "reports/news/2026-06-25_kol_news_decision_report.md",
+          "row_index": 17,
+          "expanded_index": 0,
+          "raw_market": "台股",
+          "raw_symbol_cell": "3556",
+          "raw_company_cell": "禾瑞亞",
+          "raw_row": {
+            "市場": "台股",
+            "股票代號": "3556",
+            "公司名稱": "禾瑞亞",
+            "產業": "觸控晶片/工控安全控制",
+            "來源提及程度": "低",
+            "來源主觀看法": "偏多",
+            "布局建議": "（註：NotebookLM 初稿曾誤標為 3507，已校正為禾瑞亞 3556）（推論）4 月單月賺 0.66 元獲利能力強，處置股關禁閉後籌碼洗淨，建議在 70 元左右震盪打底時以現股布局 [42, 51]。",
+            "持倉建議": "籌碼洗淨後波段持有 [42]。",
+            "追蹤指標": "工業安控及視覺語言模型結合進度；4 月份單月獲利持續度 [51]。",
+            "風險": "關禁閉出來後短期籌碼混亂 [42, 51]。"
+          }
+        }
+      ]
+    },
+    {
+      "market_key": "tw",
+      "market": "台股",
+      "symbol": "5285",
+      "company": "界霖",
+      "industry": "功率半導體導線架",
+      "canonical_category": "buy_now",
+      "canonical_category_label": "現在可以買名單",
+      "source_priority": 0,
+      "instrument_type": "common_equity",
+      "output_subdir": "tw-5285",
+      "industry_thesis_gate": "hype_or_crowded",
+      "industry_thesis_gate_label": "炒作或擁擠交易風險偏高",
+      "hype_risk": "high",
+      "hype_risk_label": "高",
+      "industry_thesis_summary": "Gate=炒作或擁擠交易風險偏高；炒作風險=高；成長驅動=800V 高壓直流電產品出貨進度 [23]。；題材/價格/新聞熱度偏熱，但缺少公司級官方營收、訂單或財報證據支撐。",
+      "industry_thesis_missing_evidence": [
+        "台股官方公司基本資料未命中",
+        "月營收資料未命中或未接到此市場",
+        "近 7 日公開新聞熱度未命中或未抓取",
+        "缺少公司級官方營收、訂單、財報或法說支撐"
+      ],
+      "industry_thesis_source": "reports/industry-thesis/2026-06-25_industry_thesis.json",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0075,
+        "risk_budget_post_trigger": 0.0075,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "kol",
+          "lane_label": "KOL/news",
+          "category": "buy_now",
+          "category_label": "現在可以買名單",
+          "report_path": "reports/news/2026-06-25_kol_news_decision_report.md",
+          "row_index": 18,
+          "expanded_index": 0,
+          "raw_market": "台股",
+          "raw_symbol_cell": "5285",
+          "raw_company_cell": "界霖",
+          "raw_row": {
+            "市場": "台股",
+            "股票代號": "5285",
+            "公司名稱": "界霖",
+            "產業": "功率半導體導線架",
+            "來源提及程度": "低",
+            "來源主觀看法": "偏多",
+            "布局建議": "（推論）受惠 800V 高壓直流電材料升級紅利，建議在拉回整理時以現股布局 [22, 23]。",
+            "持倉建議": "波段持有。",
+            "追蹤指標": "800V 高壓直流電產品出貨進度 [23]。",
+            "風險": "短期情緒波動 [22]。"
+          }
+        }
+      ]
+    }
+  ]
+}

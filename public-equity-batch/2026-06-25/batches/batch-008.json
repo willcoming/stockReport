@@ -1,0 +1,194 @@
+{
+  "batch_id": "batch-008",
+  "batch_index": 8,
+  "batch_size": 3,
+  "generated_at": "2026-06-25 08:01:55",
+  "output_root": "reports/public-equity-batch/2026-06-25",
+  "source_reports": [
+    "reports/news/2026-06-25_kol_news_decision_report.md"
+  ],
+  "workflow": [
+    "company-tearsheet",
+    "initiating-coverage",
+    "portfolio-risk-management"
+  ],
+  "items": [
+    {
+      "market_key": "tw",
+      "market": "台股",
+      "symbol": "8046",
+      "company": "南電",
+      "industry": "ABF 載板、半導體封測",
+      "canonical_category": "buy_now",
+      "canonical_category_label": "現在可以買名單",
+      "source_priority": 0,
+      "instrument_type": "common_equity",
+      "output_subdir": "tw-8046",
+      "industry_thesis_gate": "theme_only",
+      "industry_thesis_gate_label": "目前偏題材，缺公司級落地證據",
+      "hype_risk": "low",
+      "hype_risk_label": "低",
+      "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=前高壓力點 103.5 元；資金相對強弱指標（RS）轉強 [3, 4]。；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
+      "industry_thesis_missing_evidence": [
+        "台股官方公司基本資料未命中",
+        "月營收資料未命中或未接到此市場",
+        "近 7 日公開新聞熱度未命中或未抓取",
+        "缺少公司級官方營收、訂單、財報或法說支撐"
+      ],
+      "industry_thesis_source": "reports/industry-thesis/2026-06-25_industry_thesis.json",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0075,
+        "risk_budget_post_trigger": 0.0075,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "kol",
+          "lane_label": "KOL/news",
+          "category": "buy_now",
+          "category_label": "現在可以買名單",
+          "report_path": "reports/news/2026-06-25_kol_news_decision_report.md",
+          "row_index": 22,
+          "expanded_index": 0,
+          "raw_market": "台股",
+          "raw_symbol_cell": "8046",
+          "raw_company_cell": "南電",
+          "raw_row": {
+            "市場": "台股",
+            "股票代號": "8046",
+            "公司名稱": "南電",
+            "產業": "ABF 載板、半導體封測",
+            "來源提及程度": "中",
+            "來源主觀看法": "偏多",
+            "布局建議": "（推論）相對低基期沒漲到，建議逢開低、跌幅預期收縮時，或在尾盤大盤拉抬時利用現股低接 [3]。",
+            "持倉建議": "（推論）技術指標冒出苗頭，突破壓力前波段持有 [3]。",
+            "追蹤指標": "前高壓力點 103.5 元；資金相對強弱指標（RS）轉強 [3, 4]。",
+            "風險": "資金輪動極快 [5, 6]。"
+          }
+        }
+      ]
+    },
+    {
+      "market_key": "tw",
+      "market": "台股",
+      "symbol": "TSM",
+      "company": "台積電",
+      "industry": "半導體晶圓代工",
+      "canonical_category": "buy_now",
+      "canonical_category_label": "現在可以買名單",
+      "source_priority": 0,
+      "instrument_type": "common_equity",
+      "output_subdir": "tw-TSM",
+      "industry_thesis_gate": "hype_or_crowded",
+      "industry_thesis_gate_label": "炒作或擁擠交易風險偏高",
+      "hype_risk": "high",
+      "hype_risk_label": "高",
+      "industry_thesis_summary": "Gate=炒作或擁擠交易風險偏高；炒作風險=高；成長驅動=漲價 / 價格循環、訂單 / 客戶導入；題材/價格/新聞熱度偏熱，但缺少公司級官方營收、訂單或財報證據支撐。",
+      "industry_thesis_missing_evidence": [
+        "台股官方公司基本資料未命中",
+        "月營收資料未命中或未接到此市場",
+        "OHLCV 價格脈絡未命中",
+        "近 7 日公開新聞熱度未命中或未抓取",
+        "缺少公司級官方營收、訂單、財報或法說支撐"
+      ],
+      "industry_thesis_source": "reports/industry-thesis/2026-06-25_industry_thesis.json",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0075,
+        "risk_budget_post_trigger": 0.0075,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "kol",
+          "lane_label": "KOL/news",
+          "category": "buy_now",
+          "category_label": "現在可以買名單",
+          "report_path": "reports/news/2026-06-25_kol_news_decision_report.md",
+          "row_index": 23,
+          "expanded_index": 0,
+          "raw_market": "台股",
+          "raw_symbol_cell": "TSM",
+          "raw_company_cell": "台積電",
+          "raw_row": {
+            "市場": "台股",
+            "股票代號": "TSM",
+            "公司名稱": "台積電",
+            "產業": "半導體晶圓代工",
+            "來源提及程度": "高",
+            "來源主觀看法": "強烈看多",
+            "布局建議": "（推論）台積電永遠是買點。建議在股價靠近 2355 元關鍵大量區，或碰到月線/季線支撐時分批布局現股，嚴禁開槓桿 [15-17]。",
+            "持倉建議": "報到退休，長線持有 [18]。",
+            "追蹤指標": "先進製程漲價 5%-10% 的客戶接受度；2355 元大量區防守狀況 [16]。",
+            "風險": "融資槓桿過高在外部衝擊時面臨非理性下殺 [17]。"
+          }
+        }
+      ]
+    },
+    {
+      "market_key": "us",
+      "market": "美股",
+      "symbol": "MSFT",
+      "company": "微軟",
+      "industry": "雲端運算、AI 軟體、大科技",
+      "canonical_category": "buy_now",
+      "canonical_category_label": "現在可以買名單",
+      "source_priority": 0,
+      "instrument_type": "common_equity",
+      "output_subdir": "us-MSFT",
+      "industry_thesis_gate": "hype_or_crowded",
+      "industry_thesis_gate_label": "炒作或擁擠交易風險偏高",
+      "hype_risk": "high",
+      "hype_risk_label": "高",
+      "industry_thesis_summary": "Gate=炒作或擁擠交易風險偏高；炒作風險=高；成長驅動=AI / 資料中心、庫存回補 / 週期復甦；題材/價格/新聞熱度偏熱，但缺少公司級官方營收、訂單或財報證據支撐。",
+      "industry_thesis_missing_evidence": [
+        "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+        "近 7 日公開新聞熱度未命中或未抓取",
+        "缺少公司級官方營收、訂單、財報或法說支撐"
+      ],
+      "industry_thesis_source": "reports/industry-thesis/2026-06-25_industry_thesis.json",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0075,
+        "risk_budget_post_trigger": 0.0075,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "kol",
+          "lane_label": "KOL/news",
+          "category": "buy_now",
+          "category_label": "現在可以買名單",
+          "report_path": "reports/news/2026-06-25_kol_news_decision_report.md",
+          "row_index": 24,
+          "expanded_index": 0,
+          "raw_market": "美股",
+          "raw_symbol_cell": "MSFT",
+          "raw_company_cell": "微軟",
+          "raw_row": {
+            "市場": "美股",
+            "股票代號": "MSFT",
+            "公司名稱": "微軟",
+            "產業": "雲端運算、AI 軟體、大科技",
+            "來源提及程度": "高",
+            "來源主觀看法": "強烈看多",
+            "布局建議": "（推論）估值在 18.9 倍已破五年新低，若因情緒大跌導致倉位降至 8% 以下，應分批加倉至 10% [11]。",
+            "持倉建議": "10年期長期主義持有 [12]。",
+            "追蹤指標": "AI 業務年化收入增長（目前 370 億美元）；折舊率增速 [11, 13]。",
+            "風險": "大規模 AI 資本支出但產品收入增速低於預期 [14]。"
+          }
+        }
+      ]
+    }
+  ]
+}
