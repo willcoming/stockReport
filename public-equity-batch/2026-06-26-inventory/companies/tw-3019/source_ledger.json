@@ -1,0 +1,111 @@
+{
+  "symbol": "3019",
+  "market_key": "tw",
+  "company": "亞光",
+  "generated_at": "2026-06-26T13:00:36",
+  "retrieved_at": "2026-06-26T13:00:36",
+  "as_of": "2026-06-26",
+  "sources": [
+    {
+      "source_name": "merged inventory universe",
+      "source_type": "inventory_scope",
+      "path": "/tmp/stockloop_inventory_merged_tw.json",
+      "retrieved_at": "2026-06-26T13:00:36",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "tearsheet.html",
+        "initiation.html",
+        "risk_plan.html"
+      ],
+      "note": "Inventory defines research universe only; broker position size is excluded from PEI model sizing."
+    },
+    {
+      "source_name": "stock inventory health check report",
+      "source_type": "local_report",
+      "path": "reports/stock-inventory/2026-06-26-1259_inventory_health_check.md",
+      "retrieved_at": "2026-06-26T13:00:36",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "initiation.html",
+        "risk_plan.html"
+      ]
+    },
+    {
+      "source_name": "Stock inventory health-check current-price column",
+      "source_type": "market_data",
+      "symbol": "3019",
+      "as_of": "2026-06-26",
+      "retrieved_at": "2026-06-26T13:00:36",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "source_ledger.json",
+        "initiation.html",
+        "risk_plan.html"
+      ]
+    },
+    {
+      "source_name": "recent K-line trigger scan",
+      "source_type": "local_signal_log",
+      "retrieved_at": "2026-06-26T13:00:36",
+      "summary": "2026-06-25 賣出：觸及賣點數 1；2026-06-24 賣出：觸及賣點數 1",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "initiation.html",
+        "risk_plan.html"
+      ]
+    }
+  ],
+  "market_data": {
+    "current_price": {
+      "value": 142.5,
+      "currency": "TWD",
+      "as_of": "2026-06-26",
+      "source": "Stock inventory health-check current-price column (3019)"
+    }
+  },
+  "recommendation_label": "Watch only",
+  "research_status": "partial",
+  "valuation_status": "not_run",
+  "missing_evidence": [
+    "本 inventory-scope PEI 批次未逐檔執行完整官方 filings、法說、consensus、估值模型與流動性模型查核",
+    "個人庫存僅用於定義研究宇宙；模型投組 sizing 未使用券商、股數或成本",
+    "需以公司公告、交易所/SEC 文件與正式 PEI specialist workflow 補強後，才可升級為 decision-ready",
+    "健康檢查已標示風險控管動作，模型投組維持 0%"
+  ],
+  "industry_thesis_context": {
+    "gate": null,
+    "gate_label": null,
+    "hype_risk": null,
+    "hype_risk_label": null,
+    "summary": "",
+    "missing_evidence": [],
+    "source": ""
+  },
+  "stock_inventory_context": {
+    "action": "減碼",
+    "risk_priority": "",
+    "health_check_reason": "價格跌破 APEX break，且 PEI 官方證據未補齊；先降低價格破位與回撤風險。",
+    "recent_trigger_summary": "2026-06-25 賣出：觸及賣點數 1；2026-06-24 賣出：觸及賣點數 1",
+    "short_term_scenario": "APEX 破位警戒；多/空/震盪 30/30/40%；warn 158；break 148",
+    "invalidation_condition": "PEI：官方營收、毛利、估值或 thesis 證據轉弱需重估；APEX：warn 158；break 148；跌破 break 或低於 warn 後無法收復則提高風控。",
+    "data_limitations": "庫存合併 2026-06-26；K線窗 台股 2026-06-19~2026-06-25；報價來源 yfinance fast_info 2026-06-26T11:53:41+08:00；APEX 門檻來源 2026-06-26T11:53:41+08:00；PEI 為 partial/conditional；產業 thesis 採 2026-06-26 既有檔案與本次限制，缺公司級證據者採來源未提供/需後續查證。",
+    "industry_thesis_gate": null,
+    "hype_risk": null
+  },
+  "portfolio_risk": {
+    "model_portfolio_size": "0%; watch only until thesis and risk evidence improve",
+    "risk_budget": 0.0,
+    "downside_or_stop_distance": "not independently verified in inventory-scope batch",
+    "liquidity_cap": "not independently verified",
+    "hedge_posture": "No hedge; model portfolio remains cash for this name until evidence clears",
+    "add_rule": "Open or add only after full PEI specialist workflow confirms thesis, trigger, price context, liquidity, and risk/reward",
+    "trim_rule": "價格跌破 APEX break，且 PEI 官方證據未補齊；先降低價格破位與回撤風險。",
+    "exit_rule": "PEI：官方營收、毛利、估值或 thesis 證據轉弱需重估；APEX：warn 158；break 148；跌破 break 或低於 warn 後無法收復則提高風控。",
+    "max_loss_posture": "0 units at risk because inventory-scope model size is 0%",
+    "monitoring_cadence": "Daily price and weekly fundamentals while held in inventory watch universe"
+  }
+}

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2330 PEI summary</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,"Noto Sans TC",sans-serif;line-height:1.5;color:#172026;margin:0;background:#fff}
+main{max-width:920px;margin:0 auto;padding:28px}
+h1{font-size:28px;margin:0 0 10px}h2{font-size:18px;border-top:1px solid #d7dde2;padding-top:16px;margin-top:24px}
+.meta{color:#5e6a72}.callout{border-left:4px solid #195a7a;background:#f4f7f9;padding:12px 14px;margin:14px 0}
+table{border-collapse:collapse;width:100%;font-size:14px}th,td{border-bottom:1px solid #d7dde2;padding:8px;text-align:left;vertical-align:top}th{background:#f4f7f9}
+ul{padding-left:22px}
+</style>
+</head>
+<body><main>
+<h1>2330 台積電 - PEI 摘要</h1>
+<p class="meta">Inventory-scope PEI artifact. Research status: partial.</p>
+<section class="callout">這是 inventory-scope PEI 摘要：庫存只定義研究宇宙；模型投組基準為 100 units cash、long-only、no leverage，未使用券商、股數、成本或個人持股比例。</section>
+<h2>Research Snapshot / 研究快照</h2>
+<table>
+<tr><th>Research posture</th><td>Watch only</td></tr>
+<tr><th>Current price / 目前價格</th><td>2,335 TWD</td></tr>
+<tr><th>Price as of</th><td>2026-06-26</td></tr>
+<tr><th>Source</th><td>Stock inventory health-check current-price column (2330)</td></tr>
+</table>
+<h2>PEI 做了什麼</h2>
+<ul>
+<li>讀入庫存健檢動作、最新可得報價、近一週 K 線觸發與 StockLoop 本機證據。</li>
+<li>轉成模型投組研究語言與風險姿態。</li>
+<li>本檔尚未完成完整 official filings、法說、consensus、估值模型、流動性與風險報酬 tie-out。</li>
+</ul>
+<h2>庫存健檢脈絡</h2>
+<table>
+<tr><th>Action</th><td>減碼</td></tr>
+<tr><th>Reason</th><td>價格跌破 APEX break，且 PEI 官方證據未補齊；先降低價格破位與回撤風險。</td></tr>
+<tr><th>Recent trigger</th><td>近一週未觸發買進/賣出</td></tr>
+<tr><th>Scenario</th><td>APEX 破位警戒；多/空/震盪 30/30/40%；warn 2,385；break 2,345</td></tr>
+<tr><th>Invalidation</th><td>PEI：官方營收、毛利、估值或 thesis 證據轉弱需重估；APEX：warn 2,385；break 2,345；跌破 break 或低於 warn 後無法收復則提高風控。</td></tr>
+</table>
+<h2>產業前景與炒作風險</h2>
+<table>
+<tr><th>Industry thesis gate</th><td>尚未接入</td></tr>
+<tr><th>Hype risk</th><td>未知</td></tr>
+<tr><th>Summary</th><td>尚未產出公司級產業 thesis</td></tr>
+<tr><th>Missing evidence</th><td>無</td></tr>
+</table>
+<h2>模型投組風險計畫</h2>
+<table>
+<tr><th>Model size</th><td>0%; watch only until thesis and risk evidence improve</td></tr>
+<tr><th>Risk budget</th><td>0.0</td></tr>
+<tr><th>Downside / stop</th><td>not independently verified in inventory-scope batch</td></tr>
+<tr><th>Liquidity cap</th><td>not independently verified</td></tr>
+<tr><th>Add rule</th><td>Open or add only after full PEI specialist workflow confirms thesis, trigger, price context, liquidity, and risk/reward</td></tr>
+<tr><th>Trim rule</th><td>價格跌破 APEX break，且 PEI 官方證據未補齊；先降低價格破位與回撤風險。</td></tr>
+<tr><th>Exit rule</th><td>PEI：官方營收、毛利、估值或 thesis 證據轉弱需重估；APEX：warn 2,385；break 2,345；跌破 break 或低於 warn 後無法收復則提高風控。</td></tr>
+</table>
+<h2>缺失證據</h2>
+<ul><li>本 inventory-scope PEI 批次未逐檔執行完整官方 filings、法說、consensus、估值模型與流動性模型查核</li><li>個人庫存僅用於定義研究宇宙；模型投組 sizing 未使用券商、股數或成本</li><li>需以公司公告、交易所/SEC 文件與正式 PEI specialist workflow 補強後，才可升級為 decision-ready</li><li>健康檢查已標示風險控管動作，模型投組維持 0%</li></ul>
+<h2>原始檔案</h2>
+<ul>
+<li><a href="summary.md">summary.md</a></li>
+<li><a href="source_ledger.json">source_ledger.json</a></li>
+<li><a href="tearsheet.html">tearsheet.html</a></li>
+<li><a href="initiation.html">initiation.html</a></li>
+<li><a href="risk_plan.html">risk_plan.html</a></li>
+</ul>
+</main></body></html>
