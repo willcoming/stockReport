@@ -1,0 +1,100 @@
+{
+  "symbol": "SE",
+  "company": "Sea Limited American Depositary Shares",
+  "market_key": "us",
+  "generated_at": "2026-06-27 06:48:47",
+  "as_of": "2026-06-26",
+  "retrieved_at": "2026-06-27 06:48:47",
+  "instrument": {
+    "symbol": "SE",
+    "market_key": "us",
+    "market": "NYSE",
+    "exchange": "US",
+    "currency": "USD",
+    "provider_symbol": "SE",
+    "instrument_type": "common_equity",
+    "status": "ok",
+    "official_validation_status": "not_checked",
+    "equity_model_supported": true,
+    "warnings": [],
+    "output_subdir": "us-SE"
+  },
+  "official_validation_status": "not_checked",
+  "sources": [
+    {
+      "source_name": "StockLoop US K-line decision report",
+      "source_type": "decision_report",
+      "report_path": "reports/usStock/2026-06-26_us_kline_decision_report.md",
+      "as_of": "2026-06-26",
+      "lane_label": "美股 K-line",
+      "category": "wait_entry",
+      "artifact_used": [
+        "source_ledger",
+        "tearsheet",
+        "initiation",
+        "risk_plan"
+      ]
+    },
+    {
+      "source_name": "StockLoop US K-line daily report",
+      "source_type": "daily_kline_report",
+      "report_path": "usStock/reports/2026-06-26.md",
+      "as_of": "2026-06-26",
+      "artifact_used": [
+        "market_data.current_price",
+        "tearsheet"
+      ]
+    }
+  ],
+  "market_data": {
+    "current_price": {
+      "value": 0.01,
+      "currency": "USD",
+      "as_of": "2026-06-26 market close",
+      "source": "StockLoop source report; price numeric fallback for incomplete upstream quote"
+    },
+    "daily_snapshot": {}
+  },
+  "recommendation_label": "Wait for trigger",
+  "research_status": "partial",
+  "valuation_status": "not_run",
+  "missing_evidence": [
+    "未執行完整 Public Equity Investing specialist 官方 filings 與財報逐項查核",
+    "未執行 consensus / valuation model tie-out，本流程 valuation_status=not_run",
+    "尚未取得公司級官方營收、訂單、法說或管理層證據來驗證題材",
+    "尚未完成流動性上限、停損距離與風險報酬的完整外部資料交叉驗證"
+  ],
+  "industry_thesis_context": {
+    "gate": null,
+    "gate_label": null,
+    "hype_risk": null,
+    "summary": "",
+    "missing_evidence": []
+  },
+  "portfolio_risk": {
+    "model_portfolio_size": "0% pre-trigger; reassess after trigger and evidence review",
+    "risk_budget": "0.50% post-trigger risk budget only after evidence review",
+    "downside_or_stop_distance": "未完成停損/下檔距離 tie-out，暫不計入可執行 sizing",
+    "liquidity_cap": "未完成平均成交額與滑價上限 tie-out，暫不計入可執行 sizing",
+    "hedge_posture": "long-only model portfolio; no leverage",
+    "add_rule": "只有在官方證據、技術續強與風險報酬同時通過後才重新評估",
+    "trim_rule": "若後續量價失效、題材證據未補齊或大盤風險升高，維持 0% 或移出候選",
+    "exit_rule": "本批次未建立模型部位；若已在其他流程持有，需另以持倉規則處理",
+    "max_loss_posture": "本批次模型部位 0%，不設定個人化停損",
+    "monitoring_cadence": "下一個完整 K-line scan 後覆核"
+  },
+  "raw_source_rows": [
+    {
+      "市場": "NYSE",
+      "股票代號": "SE",
+      "公司名稱": "Sea Limited American Depositary Shares, each representing one Class A Ordinary Share",
+      "產業": "Consumer Discretionary / Other Consumer Services",
+      "來源提及程度": "三均線買點",
+      "來源主觀看法": "中性觀察",
+      "布局建議": "先等回測支撐、突破續強或量縮沉澱後再評估",
+      "持倉建議": "若已有持倉，維持小部位觀察，不在確認前放大風險",
+      "追蹤指標": "三均線趨勢策略：3MA；收盤位置 99.1%；振幅 6.3%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=多方趨勢開始；buyCount 1；今日買點 3MA；波幅放大 rangeRatio 1.42；估算成交金額USD 247,825,239",
+      "風險": "未見硬性排除條件，仍需追蹤隔日量價與大盤風險"
+    }
+  ]
+}
