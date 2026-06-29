@@ -7,7 +7,8 @@ Use @public-equity-investing for the research work.
 
 - Batch JSON: `/Users/willcoming/code/stockLoop/reports/public-equity-batch/2026-06-29-inventory/batches/batch-004.json`
 - Output root: `/Users/willcoming/code/stockLoop/reports/public-equity-batch/2026-06-29-inventory`
-- Source reports: `["myStock/tw_stock_inventory.csv", "myStock/us_stock_inventory_cathay.csv", "myStock/us_stock_inventory_yuanta.csv", "/tmp/stockloop_inventory_merged.json", "reports/stock-inventory/2026-06-29-0809_inventory_health_check.md"]`
+- Quote ledger: `/Users/willcoming/code/stockLoop/reports/public-equity-batch/2026-06-29-inventory/quotes.json` if present
+- Source reports: `["myStock/tw_stock_inventory.csv", "myStock/us_stock_inventory_cathay.csv", "myStock/us_stock_inventory_yuanta.csv", "/tmp/stockloop_inventory_merged_tw.json", "reports/stock-inventory/2026-06-29-1302_inventory_health_check.md"]`
 - Do not edit source reports or unrelated files.
 - Write artifacts only under the output root.
 - Do not use personal holdings, `myStock/`, or brokerage data.
@@ -48,6 +49,8 @@ Every `source_ledger.json` must include:
 
 - Do not create valuation model workbooks in this workflow.
 - Fetch current primary/public sources for price, filings, thesis facts, risk inputs, and market data.
+- If `quotes.json` is present in the output root, use it as the first price handoff and preserve its `source`, `as_of`, `retrieved_at`, and `warnings` in `source_ledger.json`.
+- If a `quotes.json` price uses stale/local fallback evidence, keep the item `Watch only` or `Not decision-ready` until a specialist source confirms current market data.
 - Put source and as-of or retrieved-at timestamp in each `source_ledger.json`.
 - If critical facts are missing, mark the item `Not decision-ready`.
 - Do not use blank placeholders such as empty strings, `N/A`, `待查`, or `資料不足` to pass validation. If evidence is unavailable, list it in `missing_evidence`.
