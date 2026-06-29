@@ -1,0 +1,114 @@
+{
+  "symbol": "4958",
+  "market_key": "tw",
+  "company": "臻鼎-KY",
+  "instrument": {
+    "symbol": "4958",
+    "market_key": "tw",
+    "market": "台股",
+    "exchange": "TWSE",
+    "currency": "TWD",
+    "provider_symbol": "4958.TW",
+    "instrument_type": "common_equity",
+    "status": "ok",
+    "official_validation_status": "not_checked",
+    "equity_model_supported": true,
+    "warnings": [],
+    "output_subdir": "tw-4958"
+  },
+  "official_validation_status": "not_checked",
+  "generated_at": "2026-06-29T08:47:39",
+  "retrieved_at": "2026-06-29T00:38:07Z",
+  "as_of": "2026-06-26",
+  "sources": [
+    {
+      "source_name": "twse_official_latest_close",
+      "source_type": "market_data",
+      "symbol": "4958",
+      "as_of": "2026-06-26",
+      "retrieved_at": "2026-06-29T00:38:07Z",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "source_ledger.json",
+        "initiation.html",
+        "risk_plan.html"
+      ]
+    },
+    {
+      "source_name": "KOL/news",
+      "source_type": "stockloop_decision_report",
+      "report_path": "reports/news/2026-06-29_kol_news_decision_report.md",
+      "category": "wait_entry",
+      "source_view": "中性觀察",
+      "layout_suggestion": "等回落均線或量價轉強；不死扛",
+      "holding_suggestion": "反彈可短線調節，避免把補漲題材當長期確定性",
+      "tracking_indicator": "五日線、成交量、族群輪動",
+      "risk": "代號由音譯推論；大盤反彈時資金可能快速切換",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "source_ledger.json",
+        "initiation.html",
+        "risk_plan.html"
+      ]
+    }
+  ],
+  "market_data": {
+    "current_price": {
+      "value": 580.0,
+      "currency": "TWD",
+      "as_of": "2026-06-26",
+      "source": "twse_official_latest_close",
+      "retrieved_at": "2026-06-29T00:38:07Z",
+      "warnings": []
+    }
+  },
+  "recommendation_label": "Wait for trigger",
+  "research_status": "partial",
+  "valuation_status": "not_run",
+  "missing_evidence": [
+    "本 report-scope PEI artifact 由 StockLoop 本地 KOL/news、industry thesis 與 quote ledger 生成；尚未逐檔執行完整 Public Equity Investing specialist research",
+    "尚缺官方 filings / 年報 / 法說 transcript / IR presentation 查核",
+    "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
+    "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
+    "官方公司/證券身分驗證未完成"
+  ],
+  "industry_thesis_context": {
+    "gate": null,
+    "gate_label": null,
+    "hype_risk": null,
+    "hype_risk_label": null,
+    "summary": "",
+    "missing_evidence": [],
+    "source": ""
+  },
+  "report_scope_context": {
+    "canonical_category": "wait_entry",
+    "source_row": {
+      "市場": "台股",
+      "股票代號": "4958",
+      "公司名稱": "臻鼎-KY",
+      "產業": "PCB / 載板",
+      "來源提及程度": "低",
+      "來源主觀看法": "中性觀察",
+      "布局建議": "等回落均線或量價轉強；不死扛",
+      "持倉建議": "反彈可短線調節，避免把補漲題材當長期確定性",
+      "追蹤指標": "五日線、成交量、族群輪動",
+      "風險": "代號由音譯推論；大盤反彈時資金可能快速切換"
+    },
+    "output_root": "reports/public-equity-batch/2026-06-29"
+  },
+  "portfolio_risk": {
+    "model_portfolio_size": "0% pre-trigger; reassess only after trigger and full PEI evidence",
+    "risk_budget": 0.0,
+    "downside_or_stop_distance": "not independently verified in report-scope PEI artifact",
+    "liquidity_cap": "not independently verified",
+    "hedge_posture": "No hedge; model portfolio remains cash for this name until evidence clears",
+    "add_rule": "Open or add only after full PEI specialist workflow confirms thesis, trigger, current price context, liquidity, and risk/reward",
+    "trim_rule": "Trim or keep watch-only if source thesis, price trigger, or company-level evidence weakens",
+    "exit_rule": "Exit/watch-only if thesis evidence fails, price trigger fails, or official evidence contradicts KOL/news setup",
+    "max_loss_posture": "0 units at risk because model size is 0% in this partial artifact",
+    "monitoring_cadence": "Daily price and weekly fundamentals while in report-scope watch universe"
+  }
+}
