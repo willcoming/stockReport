@@ -1,0 +1,338 @@
+{
+  "generated_at": "2026-06-30 06:52:20",
+  "output_root": "reports/public-equity-batch/2026-06-29-us-kline",
+  "symbol": "TSLA",
+  "company": "Tesla",
+  "output_subdir": "us-TSLA",
+  "state": "awaiting_result",
+  "prompt_path": "reports/public-equity-batch/2026-06-29-us-kline/specialist_workorders/us-TSLA.specialist.prompt.md",
+  "expected_result_path": "reports/public-equity-batch/2026-06-29-us-kline/specialist_workorders/us-TSLA.result.json",
+  "next_required_workflows": [
+    "official-evidence review",
+    "company-tearsheet + initiating-coverage",
+    "comps-valuation",
+    "portfolio-risk-management"
+  ],
+  "specialist_skills": [
+    "company-tearsheet",
+    "comps-valuation",
+    "initiating-coverage",
+    "portfolio-risk-management"
+  ],
+  "required_source_ledger_objects": [
+    "official_validation",
+    "research_underwrite",
+    "investment_horizon",
+    "valuation",
+    "risk_assessment"
+  ],
+  "incomplete_objects": [
+    "official_validation",
+    "research_underwrite",
+    "investment_horizon",
+    "valuation",
+    "risk_assessment"
+  ],
+  "handoff_statuses": {
+    "quote": "resolved",
+    "official_evidence": "missing",
+    "valuation": "input_partial",
+    "risk": "input_ready"
+  },
+  "horizon_rule": "PEI horizon is 3 months to 3 years: 3M timing/catalyst, 12M base underwrite, and 3Y ownership thesis all require sourced specialist evidence.",
+  "completion_rule": "This packet is input only. It must not mark research_status, valuation_status, risk_status, investment_horizon, or decision-ready gates complete by itself.",
+  "universe_item": {
+    "market_key": "us",
+    "market": "NASDAQ",
+    "symbol": "TSLA",
+    "company": "Tesla",
+    "industry": "Industrials / Auto Manufacturing",
+    "canonical_category": "buy_now",
+    "canonical_category_label": "現在可以買名單",
+    "source_priority": 2,
+    "instrument_type": "common_equity",
+    "output_subdir": "us-TSLA",
+    "instrument": {
+      "symbol": "TSLA",
+      "market_key": "us",
+      "market": "NASDAQ",
+      "exchange": "US",
+      "currency": "USD",
+      "provider_symbol": "TSLA",
+      "instrument_type": "common_equity",
+      "status": "ok",
+      "official_validation_status": "not_checked",
+      "equity_model_supported": true,
+      "warnings": [],
+      "output_subdir": "us-TSLA"
+    },
+    "exchange": "US",
+    "currency": "USD",
+    "provider_symbol": "TSLA",
+    "identity_status": "ok",
+    "official_validation_status": "not_checked",
+    "equity_model_supported": true,
+    "instrument_warnings": [],
+    "industry_thesis_gate": "theme_only",
+    "industry_thesis_gate_label": "目前偏題材，缺公司級落地證據",
+    "hype_risk": "low",
+    "hype_risk_label": "低",
+    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=庫存回補 / 週期復甦；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
+    "industry_thesis_missing_evidence": [
+      "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+      "近 7 日公開新聞熱度未命中或未抓取",
+      "缺少公司級官方營收、訂單、財報或法說支撐"
+    ],
+    "industry_thesis_source": "reports/industry-thesis/2026-06-29_industry_thesis.json",
+    "model_portfolio": {
+      "portfolio_units": 100,
+      "long_only": true,
+      "leverage_allowed": false,
+      "single_name_cap": 0.05,
+      "risk_budget_initial": 0.0075,
+      "risk_budget_post_trigger": 0.0075,
+      "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+    },
+    "sources": [
+      {
+        "lane": "us_kline",
+        "lane_label": "美股 K-line",
+        "category": "buy_now",
+        "category_label": "現在可以買名單",
+        "report_path": "reports/usStock/2026-06-29_us_kline_decision_report.md",
+        "row_index": 1,
+        "expanded_index": 0,
+        "raw_market": "NASDAQ",
+        "raw_symbol_cell": "TSLA",
+        "raw_company_cell": "Tesla, Inc. - Common Stock",
+        "raw_row": {
+          "市場": "NASDAQ",
+          "股票代號": "TSLA",
+          "公司名稱": "Tesla, Inc. - Common Stock",
+          "產業": "Industrials / Auto Manufacturing",
+          "來源提及程度": "Legacy 買點 / 三均線買點",
+          "來源主觀看法": "偏多",
+          "布局建議": "可研究小量分批，仍需等量價續強或回測不破再提高信心",
+          "持倉建議": "若已有持倉，可用訊號日低點或短均線作為失效觀察",
+          "追蹤指標": "雙策略整合：LZEMA20/3MA；收盤位置 95.8%；振幅 8.2%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 2.04；成交量高於均量 volumeRatio 1.21；估算成交金額USD 23,550,057,888",
+          "風險": "未見硬性排除條件，仍需追蹤隔日量價與大盤風險"
+        }
+      }
+    ]
+  },
+  "existing_source_ledger": {
+    "path": "reports/public-equity-batch/2026-06-29-us-kline/companies/us-TSLA/source_ledger.json",
+    "exists": true,
+    "recommendation_label": "Watch only",
+    "research_status": "partial",
+    "valuation_status": "not_run",
+    "risk_status": "not_run",
+    "horizon_status": "partial",
+    "missing_evidence": [
+      "本 report-scope PEI artifact 由 StockLoop 本地 KOL/news、industry thesis 與 quote ledger 生成；尚未逐檔執行完整 Public Equity Investing specialist research",
+      "尚缺官方 filings / 年報 / 法說 transcript / IR presentation 查核",
+      "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
+      "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
+      "價格來源限制：Yahoo/Stooq PEI quote fetch was unavailable; using local StockLoop K-line report close. Not exchange-verified for PEI decision readiness.",
+      "官方公司/證券身分驗證未完成",
+      "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+      "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+      "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+      "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
+      "估值 handoff 缺失：valuation multiples missing",
+      "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+      "官方證據 handoff 缺失：缺少公司級官方營收、訂單、財報或法說支撐"
+    ],
+    "market_data": {
+      "current_price": {
+        "value": 411.8399963378906,
+        "currency": "USD",
+        "as_of": "2026-06-29",
+        "source": "stockloop_kline_report_close_fallback",
+        "retrieved_at": "2026-06-29T22:51:25Z",
+        "warnings": [
+          "Yahoo/Stooq PEI quote fetch was unavailable; using local StockLoop K-line report close. Not exchange-verified for PEI decision readiness."
+        ]
+      }
+    }
+  },
+  "quote": {
+    "symbol": "TSLA",
+    "provider_symbol": "TSLA",
+    "close": 411.8399963378906,
+    "currency": "USD",
+    "as_of": "2026-06-29",
+    "source": "stockloop_kline_report_close_fallback",
+    "retrieved_at": "2026-06-29T22:51:25Z",
+    "fallback_rank": 5,
+    "market_state": "CLOSE",
+    "warnings": [
+      "Yahoo/Stooq PEI quote fetch was unavailable; using local StockLoop K-line report close. Not exchange-verified for PEI decision readiness."
+    ]
+  },
+  "official_evidence": {
+    "symbol": "TSLA",
+    "market_key": "us",
+    "company": "Tesla",
+    "generated_at": "2026-06-29T22:52:11Z",
+    "official_evidence_handoff_status": "missing",
+    "official_validation": {
+      "status": "missing",
+      "sources": []
+    },
+    "fundamental_signals": [],
+    "missing_inputs": [
+      "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+      "缺少公司級官方營收、訂單、財報或法說支撐"
+    ],
+    "sources": [
+      {
+        "source_name": "StockLoop industry thesis company exposure evidence",
+        "source_type": "local_industry_thesis_evidence",
+        "path": "/Users/willcoming/code/stockLoop/reports/industry-thesis/2026-06-29_industry_thesis.json",
+        "retrieved_at": "2026-06-29T22:52:11Z",
+        "used_by": [
+          "official_evidence_handoff.json"
+        ]
+      },
+      {
+        "source_name": "industry thesis source",
+        "source_type": "us_kline_buy_now",
+        "path": "",
+        "used_by": [
+          "official_evidence_handoff.json"
+        ]
+      },
+      {
+        "source_name": "industry thesis source",
+        "source_type": "inventory_holding",
+        "path": "",
+        "used_by": [
+          "official_evidence_handoff.json"
+        ]
+      },
+      {
+        "source_name": "industry thesis source",
+        "source_type": "inventory_holding",
+        "path": "",
+        "used_by": [
+          "official_evidence_handoff.json"
+        ]
+      }
+    ],
+    "next_step": "Use official filings, monthly revenue, SEC companyfacts, earnings-call or management-commentary evidence in PEI specialist research before setting research_status=complete."
+  },
+  "valuation_input": {
+    "symbol": "TSLA",
+    "market_key": "us",
+    "company": "Tesla",
+    "provider_symbol": "TSLA",
+    "generated_at": "2026-06-29T22:52:11Z",
+    "valuation_handoff_status": "input_partial",
+    "valuation_status": "not_run",
+    "current_price": {
+      "value": 411.8399963378906,
+      "currency": "USD",
+      "as_of": "2026-06-29",
+      "source": "stockloop_kline_report_close_fallback"
+    },
+    "metrics": {},
+    "methods": [],
+    "sources": [
+      {
+        "source_name": "stockloop_kline_report_close_fallback",
+        "source_type": "market_price",
+        "symbol": "TSLA",
+        "as_of": "2026-06-29",
+        "retrieved_at": "2026-06-29T22:51:25Z",
+        "used_by": [
+          "valuation_handoff.json"
+        ]
+      }
+    ],
+    "missing_inputs": [
+      "valuation multiples missing"
+    ],
+    "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+  },
+  "risk_input": {
+    "symbol": "TSLA",
+    "market_key": "us",
+    "company": "Tesla",
+    "generated_at": "2026-06-29T22:52:15Z",
+    "risk_handoff_status": "input_ready",
+    "current_price": {
+      "value": 411.8399963378906,
+      "currency": "USD",
+      "as_of": "2026-06-29",
+      "source": "stockloop_kline_report_close_fallback"
+    },
+    "risk_inputs": {
+      "low_20d": 368.6000061035156,
+      "high_60d": 453.3999938964844,
+      "downside_reference": "20d_low",
+      "downside_distance_pct": 10.4992,
+      "drawdown_from_60d_high_pct": 9.1663,
+      "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+    },
+    "liquidity_inputs": {
+      "history_days": 60,
+      "latest_history_date": "2026-06-29",
+      "latest_volume": 57182542.0,
+      "latest_trade_value": 23550057888.0,
+      "average_volume_20d": 47918892.1,
+      "average_trade_value_20d": 19180899160.45,
+      "source": "local_daily_bars"
+    },
+    "model_portfolio_inputs": {
+      "portfolio_units": 100,
+      "single_name_cap": 0.05,
+      "risk_budget_initial": 0.0075,
+      "screen_size_by_downside": 0.05,
+      "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+      "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+    },
+    "sources": [
+      {
+        "source_name": "stockloop_kline_report_close_fallback",
+        "source_type": "market_price",
+        "symbol": "TSLA",
+        "as_of": "2026-06-29",
+        "retrieved_at": "2026-06-29T22:51:25Z",
+        "used_by": [
+          "risk_handoff.json"
+        ]
+      },
+      {
+        "source_name": "StockLoop local daily_bars",
+        "source_type": "local_ohlcv_history",
+        "path": "/Users/willcoming/code/stockLoop/usStock/data/usstock.sqlite3",
+        "latest_history_date": "2026-06-29",
+        "history_days": 60,
+        "retrieved_at": "2026-06-29T22:52:15Z",
+        "used_by": [
+          "risk_handoff.json"
+        ]
+      }
+    ],
+    "missing_inputs": [],
+    "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+  },
+  "expected_result_contract": {
+    "status": "complete|partial|blocked",
+    "updated_source_ledger": "reports/public-equity-batch/2026-06-29-us-kline/companies/us-TSLA/source_ledger.json",
+    "source_ledger_patch_fields": [
+      "official_validation_status",
+      "official_validation",
+      "research_status",
+      "research_underwrite",
+      "investment_horizon",
+      "valuation_status",
+      "valuation",
+      "risk_status",
+      "risk_assessment",
+      "missing_evidence",
+      "sources"
+    ]
+  }
+}
