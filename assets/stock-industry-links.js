@@ -13,6 +13,8 @@
   const DEFAULT_REGISTRY_SCRIPT_URL =
     "https://willcoming.github.io/stockIndustryReport/data/stocks.js";
   const READY_EVENT = "stock-industry-reports:ready";
+  const REGISTRY_RETRY_COUNT = 40;
+  const REGISTRY_RETRY_DELAY_MS = 250;
   const REPORT_LINK_CLASS = "stock-industry-report-link";
   const REPORT_LINK_TITLE = "開啟 Deep Research 報告";
   const REPORT_ICON_SVG =
@@ -264,15 +266,25 @@
     const registryScriptUrl = options?.registryScriptUrl || DEFAULT_REGISTRY_SCRIPT_URL;
     const decorateWhenReady = function () {
       if (!root.STOCK_INDUSTRY_REPORTS) {
-        return;
+        return false;
       }
       decorateStockLinkGroups(doc, normalizeRegistry(root.STOCK_INDUSTRY_REPORTS));
+      return true;
+    };
+    const retryWhenRegistryArrives = function (attempt) {
+      if (decorateWhenReady() || attempt >= REGISTRY_RETRY_COUNT || typeof root.setTimeout !== "function") {
+        return;
+      }
+      root.setTimeout(function () {
+        retryWhenRegistryArrives(attempt + 1);
+      }, REGISTRY_RETRY_DELAY_MS);
     };
 
     onDomReady(doc, decorateWhenReady);
     root.addEventListener?.(READY_EVENT, decorateWhenReady);
     if (!root.STOCK_INDUSTRY_REPORTS) {
       loadRegistryScript(doc, registryScriptUrl);
+      retryWhenRegistryArrives(1);
     }
   }
 
