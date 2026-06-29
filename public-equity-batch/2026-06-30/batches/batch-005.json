@@ -1,0 +1,251 @@
+{
+  "batch_id": "batch-005",
+  "batch_index": 5,
+  "batch_size": 3,
+  "generated_at": "2026-06-30 07:52:49",
+  "output_root": "reports/public-equity-batch/2026-06-30",
+  "source_reports": [
+    "reports/news/2026-06-30_kol_news_decision_report.md"
+  ],
+  "workflow": [
+    "company-tearsheet",
+    "comps-valuation",
+    "initiating-coverage",
+    "portfolio-risk-management"
+  ],
+  "items": [
+    {
+      "market_key": "us",
+      "market": "美股",
+      "symbol": "NVDA",
+      "company": "NVIDIA",
+      "industry": "AI 晶片",
+      "canonical_category": "buy_now",
+      "canonical_category_label": "現在可以買名單",
+      "source_priority": 0,
+      "instrument_type": "common_equity",
+      "output_subdir": "us-NVDA",
+      "instrument": {
+        "symbol": "NVDA",
+        "market_key": "us",
+        "market": "美股",
+        "exchange": "US",
+        "currency": "USD",
+        "provider_symbol": "NVDA",
+        "instrument_type": "common_equity",
+        "status": "ok",
+        "official_validation_status": "not_checked",
+        "equity_model_supported": true,
+        "warnings": [],
+        "output_subdir": "us-NVDA"
+      },
+      "exchange": "US",
+      "currency": "USD",
+      "provider_symbol": "NVDA",
+      "identity_status": "ok",
+      "official_validation_status": "not_checked",
+      "equity_model_supported": true,
+      "instrument_warnings": [],
+      "industry_thesis_gate": "hype_or_crowded",
+      "industry_thesis_gate_label": "炒作或擁擠交易風險偏高",
+      "hype_risk": "high",
+      "hype_risk_label": "高",
+      "industry_thesis_summary": "Gate=炒作或擁擠交易風險偏高；炒作風險=高；成長驅動=AI / 資料中心；題材/價格/新聞熱度偏熱，但缺少公司級官方營收、訂單或財報證據支撐。",
+      "industry_thesis_missing_evidence": [
+        "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+        "近 7 日公開新聞熱度未命中或未抓取",
+        "缺少公司級官方營收、訂單、財報或法說支撐"
+      ],
+      "industry_thesis_source": "reports/industry-thesis/2026-06-30_industry_thesis.json",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0075,
+        "risk_budget_post_trigger": 0.0075,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "kol",
+          "lane_label": "KOL/news",
+          "category": "buy_now",
+          "category_label": "現在可以買名單",
+          "report_path": "reports/news/2026-06-30_kol_news_decision_report.md",
+          "row_index": 13,
+          "expanded_index": 0,
+          "raw_market": "美股",
+          "raw_symbol_cell": "NVDA",
+          "raw_company_cell": "NVIDIA",
+          "raw_row": {
+            "市場": "美股",
+            "股票代號": "NVDA",
+            "公司名稱": "NVIDIA",
+            "產業": "AI 晶片",
+            "來源提及程度": "高",
+            "來源主觀看法": "強烈看多",
+            "布局建議": "來源主張長線分批配置；agent 推論僅限小量研究部位",
+            "持倉建議": "續抱、分批",
+            "追蹤指標": "資料中心資本支出、CUDA 護城河、CSP 現金流",
+            "風險": "CSP ROI 若不佳，AI 資本支出可能下修"
+          }
+        }
+      ]
+    },
+    {
+      "market_key": "us",
+      "market": "美股",
+      "symbol": "RKLB",
+      "company": "Rocket Lab",
+      "industry": "航太 / 低軌衛星",
+      "canonical_category": "buy_now",
+      "canonical_category_label": "現在可以買名單",
+      "source_priority": 0,
+      "instrument_type": "common_equity",
+      "output_subdir": "us-RKLB",
+      "instrument": {
+        "symbol": "RKLB",
+        "market_key": "us",
+        "market": "美股",
+        "exchange": "US",
+        "currency": "USD",
+        "provider_symbol": "RKLB",
+        "instrument_type": "common_equity",
+        "status": "ok",
+        "official_validation_status": "not_checked",
+        "equity_model_supported": true,
+        "warnings": [],
+        "output_subdir": "us-RKLB"
+      },
+      "exchange": "US",
+      "currency": "USD",
+      "provider_symbol": "RKLB",
+      "identity_status": "ok",
+      "official_validation_status": "not_checked",
+      "equity_model_supported": true,
+      "instrument_warnings": [],
+      "industry_thesis_gate": "hype_or_crowded",
+      "industry_thesis_gate_label": "炒作或擁擠交易風險偏高",
+      "hype_risk": "high",
+      "hype_risk_label": "高",
+      "industry_thesis_summary": "Gate=炒作或擁擠交易風險偏高；炒作風險=高；成長驅動=庫存回補 / 週期復甦、訂單 / 客戶導入；題材/價格/新聞熱度偏熱，但缺少公司級官方營收、訂單或財報證據支撐。",
+      "industry_thesis_missing_evidence": [
+        "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+        "近 7 日公開新聞熱度未命中或未抓取",
+        "缺少公司級官方營收、訂單、財報或法說支撐"
+      ],
+      "industry_thesis_source": "reports/industry-thesis/2026-06-30_industry_thesis.json",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0075,
+        "risk_budget_post_trigger": 0.0075,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "kol",
+          "lane_label": "KOL/news",
+          "category": "buy_now",
+          "category_label": "現在可以買名單",
+          "report_path": "reports/news/2026-06-30_kol_news_decision_report.md",
+          "row_index": 14,
+          "expanded_index": 0,
+          "raw_market": "美股",
+          "raw_symbol_cell": "RKLB",
+          "raw_company_cell": "Rocket Lab",
+          "raw_row": {
+            "市場": "美股",
+            "股票代號": "RKLB",
+            "公司名稱": "Rocket Lab",
+            "產業": "航太 / 低軌衛星",
+            "來源提及程度": "中",
+            "來源主觀看法": "偏多",
+            "布局建議": "併購題材小量研究部位",
+            "持倉建議": "續抱觀察",
+            "追蹤指標": "IRDM 收購進度、Space economy 訂單",
+            "風險": "併購審查與估值波動"
+          }
+        }
+      ]
+    },
+    {
+      "market_key": "tw",
+      "market": "台股",
+      "symbol": "2303",
+      "company": "聯電",
+      "industry": "晶圓代工",
+      "canonical_category": "wait_entry",
+      "canonical_category_label": "現在不能買，但值得等買點名單",
+      "source_priority": 3,
+      "instrument_type": "common_equity",
+      "output_subdir": "tw-2303",
+      "instrument": {
+        "symbol": "2303",
+        "market_key": "tw",
+        "market": "台股",
+        "exchange": "TWSE",
+        "currency": "TWD",
+        "provider_symbol": "2303.TW",
+        "instrument_type": "common_equity",
+        "status": "ok",
+        "official_validation_status": "not_checked",
+        "equity_model_supported": true,
+        "warnings": [],
+        "output_subdir": "tw-2303"
+      },
+      "exchange": "TWSE",
+      "currency": "TWD",
+      "provider_symbol": "2303.TW",
+      "identity_status": "ok",
+      "official_validation_status": "not_checked",
+      "equity_model_supported": true,
+      "instrument_warnings": [],
+      "industry_thesis_gate": null,
+      "industry_thesis_gate_label": null,
+      "hype_risk": null,
+      "hype_risk_label": null,
+      "industry_thesis_summary": "",
+      "industry_thesis_missing_evidence": [],
+      "industry_thesis_source": "",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "risk_budget_post_trigger": 0.005,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "kol",
+          "lane_label": "KOL/news",
+          "category": "wait_entry",
+          "category_label": "現在不能買，但值得等買點名單",
+          "report_path": "reports/news/2026-06-30_kol_news_decision_report.md",
+          "row_index": 1,
+          "expanded_index": 0,
+          "raw_market": "台股",
+          "raw_symbol_cell": "2303",
+          "raw_company_cell": "聯電",
+          "raw_row": {
+            "市場": "台股",
+            "股票代號": "2303",
+            "公司名稱": "聯電",
+            "產業": "晶圓代工",
+            "來源提及程度": "中",
+            "來源主觀看法": "中性觀察",
+            "布局建議": "等 ETF 賣壓與籌碼穩定",
+            "持倉建議": "觀望",
+            "追蹤指標": "報價調漲、成熟製程需求",
+            "風險": "ETF 換股賣壓"
+          }
+        }
+      ]
+    }
+  ]
+}
