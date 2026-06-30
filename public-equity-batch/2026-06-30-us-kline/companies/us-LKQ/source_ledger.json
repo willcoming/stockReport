@@ -1,0 +1,234 @@
+{
+  "symbol": "LKQ",
+  "market_key": "us",
+  "company": "LKQ Corporation - Common Stock",
+  "instrument": {
+    "symbol": "LKQ",
+    "market_key": "us",
+    "market": "NASDAQ",
+    "exchange": "US",
+    "currency": "USD",
+    "provider_symbol": "LKQ",
+    "instrument_type": "common_equity",
+    "status": "ok",
+    "official_validation_status": "not_checked",
+    "equity_model_supported": true,
+    "warnings": [],
+    "output_subdir": "us-LKQ"
+  },
+  "official_validation_status": "not_checked",
+  "official_validation": {
+    "status": "not_checked",
+    "scope": "not_completed",
+    "source": "",
+    "note": "No official exchange quote or issuer/security validation was attached to this partial PEI artifact."
+  },
+  "generated_at": "2026-07-01T06:58:44",
+  "retrieved_at": "2026-06-30 22:38:49",
+  "as_of": "2026-06-30",
+  "sources": [
+    {
+      "source_name": "StockLoop local daily_bars yfinance close",
+      "source_type": "market_data",
+      "symbol": "LKQ",
+      "as_of": "2026-06-30",
+      "retrieved_at": "2026-06-30 22:38:49",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "source_ledger.json",
+        "initiation.html",
+        "risk_plan.html"
+      ],
+      "note": ""
+    },
+    {
+      "source_name": "美股 K-line",
+      "source_type": "stockloop_decision_report",
+      "report_path": "reports/usStock/2026-06-30_us_kline_decision_report.md",
+      "category": "wait_entry",
+      "source_view": "中性觀察",
+      "layout_suggestion": "先等回測支撐、突破續強或量縮沉澱後再評估",
+      "holding_suggestion": "若已有持倉，維持小部位觀察，不在確認前放大風險",
+      "tracking_indicator": "雙策略整合：LZEMA20/3MA；收盤位置 71.6%；振幅 1.9%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 73,220,439",
+      "risk": "未見硬性排除條件，仍需追蹤隔日量價與大盤風險",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "source_ledger.json",
+        "initiation.html",
+        "risk_plan.html"
+      ]
+    },
+    {
+      "source_name": "PEI valuation handoff",
+      "source_type": "valuation_input_handoff",
+      "valuation_handoff_status": "input_partial",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "source_ledger.json",
+        "initiation.html",
+        "risk_plan.html"
+      ],
+      "note": "Valuation handoff is input only; it does not make valuation_status complete."
+    },
+    {
+      "source_name": "PEI official evidence handoff",
+      "source_type": "official_evidence_handoff",
+      "official_evidence_handoff_status": "missing",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "source_ledger.json",
+        "initiation.html",
+        "risk_plan.html"
+      ],
+      "note": "Official evidence handoff is input only; it does not make research_status complete."
+    },
+    {
+      "source_name": "PEI risk handoff",
+      "source_type": "risk_input_handoff",
+      "risk_handoff_status": "input_ready",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "source_ledger.json",
+        "initiation.html",
+        "risk_plan.html"
+      ],
+      "note": "Risk handoff is input only; portfolio-risk-management must verify downside, liquidity, and sizing before implementation."
+    }
+  ],
+  "market_data": {
+    "current_price": {
+      "value": 26.329999923706055,
+      "currency": "USD",
+      "as_of": "2026-06-30",
+      "source": "StockLoop local daily_bars yfinance close",
+      "retrieved_at": "2026-06-30 22:38:49",
+      "warnings": [
+        "External quote fetch timed out; using StockLoop local daily bar close for the scan date."
+      ]
+    }
+  },
+  "recommendation_label": "Wait for trigger",
+  "research_status": "partial",
+  "valuation_status": "not_run",
+  "risk_status": "not_run",
+  "valuation_context": {
+    "valuation_handoff_status": "input_partial",
+    "methods": [],
+    "metrics": {},
+    "missing_inputs": [
+      "valuation multiples missing"
+    ],
+    "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+  },
+  "official_evidence_context": {
+    "official_evidence_handoff_status": "missing",
+    "official_validation": {
+      "status": "missing",
+      "sources": []
+    },
+    "fundamental_signals": [],
+    "missing_inputs": [
+      "SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
+    ],
+    "next_step": "Use official filings, monthly revenue, SEC companyfacts, earnings-call or management-commentary evidence in PEI specialist research before setting research_status=complete."
+  },
+  "risk_context": {
+    "risk_handoff_status": "input_ready",
+    "current_price": {
+      "value": 26.329999923706055,
+      "currency": "USD",
+      "as_of": "2026-06-30",
+      "source": "StockLoop local daily_bars yfinance close"
+    },
+    "risk_inputs": {
+      "low_20d": 24.719999313354492,
+      "high_60d": 32.52000045776367,
+      "downside_reference": "20d_low",
+      "downside_distance_pct": 6.1147,
+      "drawdown_from_60d_high_pct": 19.0344,
+      "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+    },
+    "liquidity_inputs": {
+      "history_days": 60,
+      "latest_history_date": "2026-06-30",
+      "latest_volume": 2780875.0,
+      "latest_trade_value": 73220439.0,
+      "average_volume_20d": 2862913.75,
+      "average_trade_value_20d": 73884300.15,
+      "source": "local_daily_bars"
+    },
+    "model_portfolio_inputs": {
+      "portfolio_units": 100,
+      "single_name_cap": 0.05,
+      "risk_budget_initial": 0.0,
+      "screen_size_by_downside": null,
+      "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+      "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+    },
+    "missing_inputs": [],
+    "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+  },
+  "investment_horizon": {
+    "status": "partial",
+    "near_term_3m": "Report-scope artifact uses source-report setup, current quote handoff, and local StockLoop evidence as a timing/risk screen only; 3-month catalyst path is not fully underwritten.",
+    "base_12m": "Requires official filings, earnings-call commentary, consensus/estimate context, and valuation work before a 12-month PEI view can be decision-ready.",
+    "long_term_3y": "Requires full PEI specialist research or source-backed company/industry underwrite before a 3-year ownership thesis can be decision-ready.",
+    "falsifiers": [
+      "Official revenue, margin, EPS, cash-flow, order, or management commentary contradicts the source-report setup.",
+      "Current valuation already prices the optimistic case without margin of safety.",
+      "Liquidity, downside distance, or risk budget cannot support model-portfolio sizing."
+    ]
+  },
+  "missing_evidence": [
+    "本 report-scope PEI artifact 由 StockLoop 本地 KOL/news、industry thesis 與 quote ledger 生成；尚未逐檔執行完整 Public Equity Investing specialist research",
+    "尚缺官方 filings / 年報 / 法說 transcript / IR presentation 查核",
+    "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
+    "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
+    "價格來源限制：External quote fetch timed out; using StockLoop local daily bar close for the scan date.",
+    "官方公司/證券身分驗證未完成",
+    "估值 handoff 缺失：valuation multiples missing",
+    "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
+  ],
+  "industry_thesis_context": {
+    "gate": null,
+    "gate_label": null,
+    "hype_risk": null,
+    "hype_risk_label": null,
+    "summary": "",
+    "missing_evidence": [],
+    "source": ""
+  },
+  "report_scope_context": {
+    "canonical_category": "wait_entry",
+    "source_row": {
+      "市場": "NASDAQ",
+      "股票代號": "LKQ",
+      "公司名稱": "LKQ Corporation - Common Stock",
+      "產業": "Consumer Discretionary / Motor Vehicles",
+      "來源提及程度": "Legacy 買點 / 三均線買點",
+      "來源主觀看法": "中性觀察",
+      "布局建議": "先等回測支撐、突破續強或量縮沉澱後再評估",
+      "持倉建議": "若已有持倉，維持小部位觀察，不在確認前放大風險",
+      "追蹤指標": "雙策略整合：LZEMA20/3MA；收盤位置 71.6%；振幅 1.9%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 73,220,439",
+      "風險": "未見硬性排除條件，仍需追蹤隔日量價與大盤風險"
+    },
+    "output_root": "reports/public-equity-batch/2026-06-30-us-kline"
+  },
+  "portfolio_risk": {
+    "model_portfolio_size": "0% pre-trigger; reassess only after trigger and full PEI evidence",
+    "risk_budget": 0.0,
+    "downside_or_stop_distance": "20d_low distance 6.11%; 20D low 24.72 (input only; PM must verify)",
+    "liquidity_cap": "20D avg trade value 73,884,300.15; PM must define liquidity cap",
+    "hedge_posture": "No hedge; model portfolio remains cash for this name until evidence clears",
+    "add_rule": "Open or add only after full PEI specialist workflow confirms thesis, trigger, current price context, liquidity, and risk/reward",
+    "trim_rule": "Trim or keep watch-only if source thesis, price trigger, or company-level evidence weakens",
+    "exit_rule": "Exit/watch-only if thesis evidence fails, price trigger fails, or official evidence contradicts KOL/news setup",
+    "max_loss_posture": "0 units at risk because model size is 0% in this partial artifact",
+    "monitoring_cadence": "Daily price and weekly fundamentals while in report-scope watch universe"
+  }
+}
