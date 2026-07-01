@@ -1,0 +1,93 @@
+{
+  "batch_id": "batch-008",
+  "batch_index": 8,
+  "batch_size": 1,
+  "generated_at": "2026-07-01 12:46:04",
+  "output_root": "reports/public-equity-batch/2026-07-01",
+  "source_reports": [
+    "reports/news/2026-07-01_kol_news_decision_report.md"
+  ],
+  "workflow": [
+    "company-tearsheet",
+    "comps-valuation",
+    "initiating-coverage",
+    "portfolio-risk-management"
+  ],
+  "items": [
+    {
+      "market_key": "us",
+      "market": "美股",
+      "symbol": "TR",
+      "company": "設備股",
+      "industry": "半導體設備",
+      "canonical_category": "wait_entry",
+      "canonical_category_label": "現在不能買，但值得等買點名單",
+      "source_priority": 3,
+      "instrument_type": "common_equity",
+      "output_subdir": "us-TR",
+      "instrument": {
+        "symbol": "TR",
+        "market_key": "us",
+        "market": "美股",
+        "exchange": "US",
+        "currency": "USD",
+        "provider_symbol": "TR",
+        "instrument_type": "common_equity",
+        "status": "ok",
+        "official_validation_status": "not_checked",
+        "equity_model_supported": true,
+        "warnings": [],
+        "output_subdir": "us-TR"
+      },
+      "exchange": "US",
+      "currency": "USD",
+      "provider_symbol": "TR",
+      "identity_status": "ok",
+      "official_validation_status": "not_checked",
+      "equity_model_supported": true,
+      "instrument_warnings": [],
+      "industry_thesis_gate": null,
+      "industry_thesis_gate_label": null,
+      "hype_risk": null,
+      "hype_risk_label": null,
+      "industry_thesis_summary": "",
+      "industry_thesis_missing_evidence": [],
+      "industry_thesis_source": "",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "risk_budget_post_trigger": 0.005,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "kol",
+          "lane_label": "KOL/news",
+          "category": "wait_entry",
+          "category_label": "現在不能買，但值得等買點名單",
+          "report_path": "reports/news/2026-07-01_kol_news_decision_report.md",
+          "row_index": 19,
+          "expanded_index": 0,
+          "raw_market": "美股",
+          "raw_symbol_cell": "TR (推估為KLAC)",
+          "raw_company_cell": "設備股",
+          "raw_row": {
+            "市場": "美股",
+            "股票代號": "TR (推估為KLAC)",
+            "公司名稱": "設備股",
+            "產業": "半導體設備",
+            "來源提及程度": "中",
+            "來源主觀看法": "不建議追高",
+            "布局建議": "設備股漲幅過大(如AMAT等700多美元)，等下一波大回調",
+            "持倉建議": "觀望等待",
+            "追蹤指標": "追蹤韓國記憶體擴產實際下單進度與反壟斷訴訟",
+            "風險": "波動極大，推論：無底線暴漲暴跌易使追高者面臨10-16%急殺"
+          }
+        }
+      ]
+    }
+  ]
+}
