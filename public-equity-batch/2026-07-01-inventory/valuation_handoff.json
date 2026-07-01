@@ -1,0 +1,1354 @@
+{
+  "_metadata": {
+    "generated_at": "2026-07-01T04:59:24Z",
+    "item_count": 18,
+    "status_counts": {
+      "input_ready": 18
+    },
+    "enable_yfinance": false,
+    "enable_official_tw_valuation": true,
+    "official_tw_valuation_coverage": {
+      "ready_sources": [
+        "TWSE BWIBBU valuation",
+        "TPEx PE/PB valuation"
+      ],
+      "warnings": [],
+      "network_enabled": true
+    },
+    "note": "This is a valuation input handoff only. It must not change per-symbol source_ledger valuation_status to complete by itself."
+  },
+  "items": [
+    {
+      "symbol": "1215",
+      "market_key": "tw",
+      "company": "卜蜂",
+      "provider_symbol": "1215.TW",
+      "generated_at": "2026-07-01T04:59:24Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 113.5,
+        "currency": "TWD",
+        "as_of": "2026-06-30",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 12.23,
+        "price_to_book": 3.16,
+        "dividend_yield": 6.17,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-06-30",
+        "retrieved_at": "2026-07-01T04:59:24Z",
+        "fiscal_period": "2026Q1"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 12.23,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 3.16,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 6.17,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "1215",
+          "as_of": "2026-06-30",
+          "retrieved_at": "2026-07-01T04:59:23Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "1215.TW",
+          "as_of": "2026-06-30",
+          "retrieved_at": "2026-07-01T04:59:24Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "1216",
+      "market_key": "tw",
+      "company": "統一",
+      "provider_symbol": "1216.TW",
+      "generated_at": "2026-07-01T04:59:24Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 74.5,
+        "currency": "TWD",
+        "as_of": "2026-06-30",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 20.14,
+        "price_to_book": 2.93,
+        "dividend_yield": 4.03,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-06-30",
+        "retrieved_at": "2026-07-01T04:59:24Z",
+        "fiscal_period": "2026Q1"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 20.14,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 2.93,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 4.03,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "1216",
+          "as_of": "2026-06-30",
+          "retrieved_at": "2026-07-01T04:59:23Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "1216.TW",
+          "as_of": "2026-06-30",
+          "retrieved_at": "2026-07-01T04:59:24Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "1477",
+      "market_key": "tw",
+      "company": "聚陽",
+      "provider_symbol": "1477.TW",
+      "generated_at": "2026-07-01T04:59:24Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 219.0,
+        "currency": "TWD",
+        "as_of": "2026-06-30",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 15.81,
+        "price_to_book": 4.16,
+        "dividend_yield": 6.85,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-06-30",
+        "retrieved_at": "2026-07-01T04:59:24Z",
+        "fiscal_period": "2026Q1"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 15.81,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 4.16,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 6.85,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "1477",
+          "as_of": "2026-06-30",
+          "retrieved_at": "2026-07-01T04:59:23Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "1477.TW",
+          "as_of": "2026-06-30",
+          "retrieved_at": "2026-07-01T04:59:24Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "1560",
+      "market_key": "tw",
+      "company": "中砂",
+      "provider_symbol": "1560.TW",
+      "generated_at": "2026-07-01T04:59:24Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 762.0,
+        "currency": "TWD",
+        "as_of": "2026-06-30",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 75.15,
+        "price_to_book": 13.78,
+        "dividend_yield": 0.66,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-06-30",
+        "retrieved_at": "2026-07-01T04:59:24Z",
+        "fiscal_period": "2026Q1"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 75.15,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 13.78,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 0.66,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "1560",
+          "as_of": "2026-06-30",
+          "retrieved_at": "2026-07-01T04:59:23Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "1560.TW",
+          "as_of": "2026-06-30",
+          "retrieved_at": "2026-07-01T04:59:24Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "2317",
+      "market_key": "tw",
+      "company": "鴻海",
+      "provider_symbol": "2317.TW",
+      "generated_at": "2026-07-01T04:59:24Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 251.0,
+        "currency": "TWD",
+        "as_of": "2026-06-30",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 17.83,
+        "price_to_book": 1.97,
+        "dividend_yield": 2.86,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-06-30",
+        "retrieved_at": "2026-07-01T04:59:24Z",
+        "fiscal_period": "2026Q1"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 17.83,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 1.97,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 2.86,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "2317",
+          "as_of": "2026-06-30",
+          "retrieved_at": "2026-07-01T04:59:23Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "2317.TW",
+          "as_of": "2026-06-30",
+          "retrieved_at": "2026-07-01T04:59:24Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "2324",
+      "market_key": "tw",
+      "company": "仁寶",
+      "provider_symbol": "2324.TW",
+      "generated_at": "2026-07-01T04:59:24Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 35.3,
+        "currency": "TWD",
+        "as_of": "2026-06-30",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 26.54,
+        "price_to_book": 1.18,
+        "dividend_yield": 3.12,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-06-30",
+        "retrieved_at": "2026-07-01T04:59:24Z",
+        "fiscal_period": "2026Q1"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 26.54,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 1.18,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 3.12,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "2324",
+          "as_of": "2026-06-30",
+          "retrieved_at": "2026-07-01T04:59:23Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "2324.TW",
+          "as_of": "2026-06-30",
+          "retrieved_at": "2026-07-01T04:59:24Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "2330",
+      "market_key": "tw",
+      "company": "台積電",
+      "provider_symbol": "2330.TW",
+      "generated_at": "2026-07-01T04:59:24Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 2410.0,
+        "currency": "TWD",
+        "as_of": "2026-06-30",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 32.4,
+        "price_to_book": 10.61,
+        "dividend_yield": 0.91,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-06-30",
+        "retrieved_at": "2026-07-01T04:59:24Z",
+        "fiscal_period": "2026Q1"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 32.4,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 10.61,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 0.91,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "2330",
+          "as_of": "2026-06-30",
+          "retrieved_at": "2026-07-01T04:59:23Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "2330.TW",
+          "as_of": "2026-06-30",
+          "retrieved_at": "2026-07-01T04:59:24Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "2337",
+      "market_key": "tw",
+      "company": "旺宏",
+      "provider_symbol": "2337.TW",
+      "generated_at": "2026-07-01T04:59:24Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 155.5,
+        "currency": "TWD",
+        "as_of": "2026-06-30",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "price_to_book": 6.08,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-06-30",
+        "retrieved_at": "2026-07-01T04:59:24Z",
+        "fiscal_period": "2026Q1"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 6.08,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "2337",
+          "as_of": "2026-06-30",
+          "retrieved_at": "2026-07-01T04:59:23Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "2337.TW",
+          "as_of": "2026-06-30",
+          "retrieved_at": "2026-07-01T04:59:24Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "2344",
+      "market_key": "tw",
+      "company": "華邦電",
+      "provider_symbol": "2344.TW",
+      "generated_at": "2026-07-01T04:59:24Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 207.5,
+        "currency": "TWD",
+        "as_of": "2026-06-30",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 61.57,
+        "price_to_book": 8.01,
+        "dividend_yield": 0.24,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-06-30",
+        "retrieved_at": "2026-07-01T04:59:24Z",
+        "fiscal_period": "2026Q1"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 61.57,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 8.01,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 0.24,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "2344",
+          "as_of": "2026-06-30",
+          "retrieved_at": "2026-07-01T04:59:23Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "2344.TW",
+          "as_of": "2026-06-30",
+          "retrieved_at": "2026-07-01T04:59:24Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "2408",
+      "market_key": "tw",
+      "company": "南亞科",
+      "provider_symbol": "2408.TW",
+      "generated_at": "2026-07-01T04:59:24Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 452.5,
+        "currency": "TWD",
+        "as_of": "2026-06-30",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 40.51,
+        "price_to_book": 7.27,
+        "dividend_yield": 0.3,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-06-30",
+        "retrieved_at": "2026-07-01T04:59:24Z",
+        "fiscal_period": "2026Q1"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 40.51,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 7.27,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 0.3,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "2408",
+          "as_of": "2026-06-30",
+          "retrieved_at": "2026-07-01T04:59:23Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "2408.TW",
+          "as_of": "2026-06-30",
+          "retrieved_at": "2026-07-01T04:59:24Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "2454",
+      "market_key": "tw",
+      "company": "聯發科",
+      "provider_symbol": "2454.TW",
+      "generated_at": "2026-07-01T04:59:24Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 4245.0,
+        "currency": "TWD",
+        "as_of": "2026-06-30",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 67.65,
+        "price_to_book": 17.36,
+        "dividend_yield": 1.26,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-06-30",
+        "retrieved_at": "2026-07-01T04:59:24Z",
+        "fiscal_period": "2026Q1"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 67.65,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 17.36,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 1.26,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "2454",
+          "as_of": "2026-06-30",
+          "retrieved_at": "2026-07-01T04:59:23Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "2454.TW",
+          "as_of": "2026-06-30",
+          "retrieved_at": "2026-07-01T04:59:24Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "2618",
+      "market_key": "tw",
+      "company": "長榮航",
+      "provider_symbol": "2618.TW",
+      "generated_at": "2026-07-01T04:59:24Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 44.9,
+        "currency": "TWD",
+        "as_of": "2026-06-30",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 8.52,
+        "price_to_book": 1.79,
+        "dividend_yield": 4.45,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-06-30",
+        "retrieved_at": "2026-07-01T04:59:24Z",
+        "fiscal_period": "2026Q1"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 8.52,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 1.79,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 4.45,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "2618",
+          "as_of": "2026-06-30",
+          "retrieved_at": "2026-07-01T04:59:23Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "2618.TW",
+          "as_of": "2026-06-30",
+          "retrieved_at": "2026-07-01T04:59:24Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "3019",
+      "market_key": "tw",
+      "company": "亞光",
+      "provider_symbol": "3019.TW",
+      "generated_at": "2026-07-01T04:59:24Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 142.5,
+        "currency": "TWD",
+        "as_of": "2026-06-30",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 20.77,
+        "price_to_book": 2.79,
+        "dividend_yield": 3.23,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-06-30",
+        "retrieved_at": "2026-07-01T04:59:24Z",
+        "fiscal_period": "2026Q1"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 20.77,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 2.79,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 3.23,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "3019",
+          "as_of": "2026-06-30",
+          "retrieved_at": "2026-07-01T04:59:23Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "3019.TW",
+          "as_of": "2026-06-30",
+          "retrieved_at": "2026-07-01T04:59:24Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "3231",
+      "market_key": "tw",
+      "company": "緯創",
+      "provider_symbol": "3231.TW",
+      "generated_at": "2026-07-01T04:59:24Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 158.5,
+        "currency": "TWD",
+        "as_of": "2026-06-30",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 15.9,
+        "price_to_book": 2.65,
+        "dividend_yield": 3.47,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-06-30",
+        "retrieved_at": "2026-07-01T04:59:24Z",
+        "fiscal_period": "2026Q1"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 15.9,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 2.65,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 3.47,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "3231",
+          "as_of": "2026-06-30",
+          "retrieved_at": "2026-07-01T04:59:23Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "3231.TW",
+          "as_of": "2026-06-30",
+          "retrieved_at": "2026-07-01T04:59:24Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "3443",
+      "market_key": "tw",
+      "company": "創意",
+      "provider_symbol": "3443.TW",
+      "generated_at": "2026-07-01T04:59:24Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 4845.0,
+        "currency": "TWD",
+        "as_of": "2026-06-30",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 145.76,
+        "price_to_book": 44.52,
+        "dividend_yield": 0.41,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-06-30",
+        "retrieved_at": "2026-07-01T04:59:24Z",
+        "fiscal_period": "2026Q1"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 145.76,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 44.52,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 0.41,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "3443",
+          "as_of": "2026-06-30",
+          "retrieved_at": "2026-07-01T04:59:23Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "3443.TW",
+          "as_of": "2026-06-30",
+          "retrieved_at": "2026-07-01T04:59:24Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "6285",
+      "market_key": "tw",
+      "company": "啟碁",
+      "provider_symbol": "6285.TW",
+      "generated_at": "2026-07-01T04:59:24Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 259.5,
+        "currency": "TWD",
+        "as_of": "2026-06-30",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 38.27,
+        "price_to_book": 3.59,
+        "dividend_yield": 1.66,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-06-30",
+        "retrieved_at": "2026-07-01T04:59:24Z",
+        "fiscal_period": "2026Q1"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 38.27,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 3.59,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 1.66,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "6285",
+          "as_of": "2026-06-30",
+          "retrieved_at": "2026-07-01T04:59:23Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "6285.TW",
+          "as_of": "2026-06-30",
+          "retrieved_at": "2026-07-01T04:59:24Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "8016",
+      "market_key": "tw",
+      "company": "矽創",
+      "provider_symbol": "8016.TW",
+      "generated_at": "2026-07-01T04:59:24Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 332.0,
+        "currency": "TWD",
+        "as_of": "2026-06-30",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 20.85,
+        "price_to_book": 3.41,
+        "dividend_yield": 3.46,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-06-30",
+        "retrieved_at": "2026-07-01T04:59:24Z",
+        "fiscal_period": "2026Q1"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 20.85,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 3.41,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 3.46,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "8016",
+          "as_of": "2026-06-30",
+          "retrieved_at": "2026-07-01T04:59:23Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "8016.TW",
+          "as_of": "2026-06-30",
+          "retrieved_at": "2026-07-01T04:59:24Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "8926",
+      "market_key": "tw",
+      "company": "台汽電",
+      "provider_symbol": "8926.TW",
+      "generated_at": "2026-07-01T04:59:24Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 76.3,
+        "currency": "TWD",
+        "as_of": "2026-06-30",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 18.7,
+        "price_to_book": 3.2,
+        "dividend_yield": 2.78,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-06-30",
+        "retrieved_at": "2026-07-01T04:59:24Z",
+        "fiscal_period": "2026Q1"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 18.7,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 3.2,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 2.78,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-06-30",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "8926",
+          "as_of": "2026-06-30",
+          "retrieved_at": "2026-07-01T04:59:23Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "8926.TW",
+          "as_of": "2026-06-30",
+          "retrieved_at": "2026-07-01T04:59:24Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    }
+  ]
+}

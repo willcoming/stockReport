@@ -1,0 +1,273 @@
+{
+  "symbol": "2363",
+  "market_key": "tw",
+  "company": "矽統",
+  "instrument": {
+    "symbol": "2363",
+    "market_key": "tw",
+    "market": "TWSE",
+    "exchange": "TWSE",
+    "currency": "TWD",
+    "provider_symbol": "2363.TW",
+    "instrument_type": "common_equity",
+    "status": "ok",
+    "official_validation_status": "not_checked",
+    "equity_model_supported": true,
+    "warnings": [],
+    "output_subdir": "tw-2363"
+  },
+  "official_validation_status": "validated",
+  "official_validation": {
+    "status": "validated",
+    "source": "TWSE company",
+    "url": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+    "industry": "半導體業",
+    "company": "矽統科技股份有限公司",
+    "scope": "company_or_security_official_evidence",
+    "note": "Official evidence handoff supplied company/security validation; full PEI research still requires filings, valuation, liquidity, and risk/reward tie-out."
+  },
+  "generated_at": "2026-07-01T16:13:25",
+  "retrieved_at": "2026-07-01T08:12:55Z",
+  "as_of": "2026-06-30",
+  "sources": [
+    {
+      "source_name": "twse_official_latest_close",
+      "source_type": "official_exchange_market_data",
+      "symbol": "2363",
+      "as_of": "2026-06-30",
+      "retrieved_at": "2026-07-01T08:12:55Z",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "source_ledger.json",
+        "initiation.html",
+        "risk_plan.html"
+      ],
+      "note": "Official exchange quote verifies the security and market-data source; it does not complete filings, earnings-call, valuation, or liquidity underwriting."
+    },
+    {
+      "source_name": "台股 K-line",
+      "source_type": "stockloop_decision_report",
+      "report_path": "reports/twStock/2026-07-01_tw_kline_decision_report.md",
+      "category": "wait_entry",
+      "source_view": "不建議追高",
+      "layout_suggestion": "先等回測支撐或隔日收復上影線後再評估",
+      "holding_suggestion": "若已有持倉，避免在上影線壓力未化解前放大部位",
+      "tracking_indicator": "Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 48.9%；振幅 6.4%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=多方趨勢開始；buyCount 1；今日買點 LZEMA20；波幅放大 rangeRatio 1.35；爆量 volumeRatio 4.27；成交金額 6,191,761,966",
+      "risk": "上影線壓力重：51.1%",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "source_ledger.json",
+        "initiation.html",
+        "risk_plan.html"
+      ]
+    },
+    {
+      "source_name": "PEI valuation handoff",
+      "source_type": "valuation_input_handoff",
+      "valuation_handoff_status": "input_ready",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "source_ledger.json",
+        "initiation.html",
+        "risk_plan.html"
+      ],
+      "note": "Valuation handoff is input only; it does not make valuation_status complete."
+    },
+    {
+      "source_name": "PEI official evidence handoff",
+      "source_type": "official_evidence_handoff",
+      "official_evidence_handoff_status": "input_ready",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "source_ledger.json",
+        "initiation.html",
+        "risk_plan.html"
+      ],
+      "note": "Official evidence handoff is input only; it does not make research_status complete."
+    },
+    {
+      "source_name": "PEI risk handoff",
+      "source_type": "risk_input_handoff",
+      "risk_handoff_status": "input_ready",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "source_ledger.json",
+        "initiation.html",
+        "risk_plan.html"
+      ],
+      "note": "Risk handoff is input only; portfolio-risk-management must verify downside, liquidity, and sizing before implementation."
+    }
+  ],
+  "market_data": {
+    "current_price": {
+      "value": 69.0,
+      "currency": "TWD",
+      "as_of": "2026-06-30",
+      "source": "twse_official_latest_close",
+      "retrieved_at": "2026-07-01T08:12:55Z",
+      "warnings": []
+    }
+  },
+  "recommendation_label": "Wait for trigger",
+  "research_status": "partial",
+  "valuation_status": "not_run",
+  "risk_status": "not_run",
+  "valuation_context": {
+    "valuation_handoff_status": "input_ready",
+    "methods": [
+      {
+        "method": "market_multiple_input",
+        "metric": "trailing_pe",
+        "value": 40.59,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-06-30",
+        "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+      },
+      {
+        "method": "market_multiple_input",
+        "metric": "price_to_book",
+        "value": 1.75,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-06-30",
+        "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+      },
+      {
+        "method": "market_multiple_input",
+        "metric": "dividend_yield",
+        "value": 0.87,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-06-30",
+        "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+      }
+    ],
+    "metrics": {
+      "trailing_pe": 40.59,
+      "price_to_book": 1.75,
+      "dividend_yield": 0.87,
+      "source": "TWSE BWIBBU valuation",
+      "as_of": "2026-06-30",
+      "retrieved_at": "2026-07-01T08:12:58Z",
+      "fiscal_period": "2026Q1"
+    },
+    "missing_inputs": [],
+    "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+  },
+  "official_evidence_context": {
+    "official_evidence_handoff_status": "input_ready",
+    "official_validation": {
+      "status": "validated",
+      "source": "TWSE company",
+      "url": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+      "industry": "半導體業",
+      "company": "矽統科技股份有限公司"
+    },
+    "fundamental_signals": [
+      {
+        "type": "monthly_revenue",
+        "period": "11505",
+        "current_month_revenue": 349345.0,
+        "mom_growth_pct": 1.2230386759541498,
+        "yoy_growth_pct": 88.80451818624007,
+        "source": "TWSE monthly revenue",
+        "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L"
+      }
+    ],
+    "missing_inputs": [],
+    "next_step": "Use official filings, monthly revenue, SEC companyfacts, earnings-call or management-commentary evidence in PEI specialist research before setting research_status=complete."
+  },
+  "risk_context": {
+    "risk_handoff_status": "input_ready",
+    "current_price": {
+      "value": 69.0,
+      "currency": "TWD",
+      "as_of": "2026-06-30",
+      "source": "twse_official_latest_close"
+    },
+    "risk_inputs": {
+      "low_20d": 53.6,
+      "high_60d": 76.1,
+      "downside_reference": "20d_low",
+      "downside_distance_pct": 22.3188,
+      "drawdown_from_60d_high_pct": 9.3298,
+      "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+    },
+    "liquidity_inputs": {
+      "history_days": 60,
+      "latest_history_date": "2026-07-01",
+      "latest_volume": 82848711.0,
+      "latest_trade_value": 6191761966.0,
+      "average_volume_20d": 22657616.25,
+      "average_trade_value_20d": 1568775394.5,
+      "source": "local_daily_bars"
+    },
+    "model_portfolio_inputs": {
+      "portfolio_units": 100,
+      "single_name_cap": 0.05,
+      "risk_budget_initial": 0.0,
+      "screen_size_by_downside": null,
+      "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+      "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+    },
+    "missing_inputs": [],
+    "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+  },
+  "investment_horizon": {
+    "status": "partial",
+    "near_term_3m": "Report-scope artifact uses source-report setup, current quote handoff, and local StockLoop evidence as a timing/risk screen only; 3-month catalyst path is not fully underwritten.",
+    "base_12m": "Requires official filings, earnings-call commentary, consensus/estimate context, and valuation work before a 12-month PEI view can be decision-ready.",
+    "long_term_3y": "Requires full PEI specialist research or source-backed company/industry underwrite before a 3-year ownership thesis can be decision-ready.",
+    "falsifiers": [
+      "Official revenue, margin, EPS, cash-flow, order, or management commentary contradicts the source-report setup.",
+      "Current valuation already prices the optimistic case without margin of safety.",
+      "Liquidity, downside distance, or risk budget cannot support model-portfolio sizing."
+    ]
+  },
+  "missing_evidence": [
+    "本 report-scope PEI artifact 由 StockLoop 本地 KOL/news、industry thesis 與 quote ledger 生成；尚未逐檔執行完整 Public Equity Investing specialist research",
+    "尚缺官方 filings / 年報 / 法說 transcript / IR presentation 查核",
+    "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
+    "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議"
+  ],
+  "industry_thesis_context": {
+    "gate": null,
+    "gate_label": null,
+    "hype_risk": null,
+    "hype_risk_label": null,
+    "summary": "",
+    "missing_evidence": [],
+    "source": ""
+  },
+  "report_scope_context": {
+    "canonical_category": "wait_entry",
+    "source_row": {
+      "市場": "TWSE",
+      "股票代號": "2363",
+      "公司名稱": "矽統",
+      "產業": "半導體業",
+      "來源提及程度": "Legacy 買點",
+      "來源主觀看法": "不建議追高",
+      "布局建議": "先等回測支撐或隔日收復上影線後再評估",
+      "持倉建議": "若已有持倉，避免在上影線壓力未化解前放大部位",
+      "追蹤指標": "Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 48.9%；振幅 6.4%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=多方趨勢開始；buyCount 1；今日買點 LZEMA20；波幅放大 rangeRatio 1.35；爆量 volumeRatio 4.27；成交金額 6,191,761,966",
+      "風險": "上影線壓力重：51.1%"
+    },
+    "output_root": "reports/public-equity-batch/2026-07-01-tw-kline"
+  },
+  "portfolio_risk": {
+    "model_portfolio_size": "0% pre-trigger; reassess only after trigger and full PEI evidence",
+    "risk_budget": 0.0,
+    "downside_or_stop_distance": "20d_low distance 22.32%; 20D low 53.6 (input only; PM must verify)",
+    "liquidity_cap": "20D avg trade value 1,568,775,394.5; PM must define liquidity cap",
+    "hedge_posture": "No hedge; model portfolio remains cash for this name until evidence clears",
+    "add_rule": "Open or add only after full PEI specialist workflow confirms thesis, trigger, current price context, liquidity, and risk/reward",
+    "trim_rule": "Trim or keep watch-only if source thesis, price trigger, or company-level evidence weakens",
+    "exit_rule": "Exit/watch-only if thesis evidence fails, price trigger fails, or official evidence contradicts KOL/news setup",
+    "max_loss_posture": "0 units at risk because model size is 0% in this partial artifact",
+    "monitoring_cadence": "Daily price and weekly fundamentals while in report-scope watch universe"
+  }
+}
