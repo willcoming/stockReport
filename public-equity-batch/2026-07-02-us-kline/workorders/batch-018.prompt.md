@@ -77,45 +77,60 @@ Every `source_ledger.json` must include:
 [
   {
     "market_key": "us",
-    "symbol": "FR",
-    "company": "First Industrial Realty Trust",
+    "symbol": "EXE",
+    "company": "Expand Energy Corporation - Common Stock",
     "canonical_category": "wait_entry",
-    "output_subdir": "us-FR",
+    "output_subdir": "us-EXE",
     "instrument_type": "common_equity",
-    "industry_thesis_gate": null,
-    "industry_thesis_gate_label": null,
-    "hype_risk": null,
-    "hype_risk_label": null,
-    "industry_thesis_summary": "",
-    "industry_thesis_missing_evidence": []
+    "industry_thesis_gate": "theme_only",
+    "industry_thesis_gate_label": "目前偏題材，缺公司級落地證據",
+    "hype_risk": "low",
+    "hype_risk_label": "低",
+    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=資料不足；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
+    "industry_thesis_missing_evidence": [
+      "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+      "近 7 日公開新聞熱度未命中或未抓取",
+      "缺少明確後續產業 KPI",
+      "缺少公司級官方營收、訂單、財報或法說支撐"
+    ]
   },
   {
     "market_key": "us",
-    "symbol": "FRO",
-    "company": "Frontline Plc Ordinary Shares",
+    "symbol": "FE",
+    "company": "FirstEnergy Corp. Common Stock",
     "canonical_category": "wait_entry",
-    "output_subdir": "us-FRO",
+    "output_subdir": "us-FE",
     "instrument_type": "common_equity",
-    "industry_thesis_gate": null,
-    "industry_thesis_gate_label": null,
-    "hype_risk": null,
-    "hype_risk_label": null,
-    "industry_thesis_summary": "",
-    "industry_thesis_missing_evidence": []
+    "industry_thesis_gate": "theme_only",
+    "industry_thesis_gate_label": "目前偏題材，缺公司級落地證據",
+    "hype_risk": "low",
+    "hype_risk_label": "低",
+    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=資料不足；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
+    "industry_thesis_missing_evidence": [
+      "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+      "近 7 日公開新聞熱度未命中或未抓取",
+      "缺少明確後續產業 KPI",
+      "缺少公司級官方營收、訂單、財報或法說支撐"
+    ]
   },
   {
     "market_key": "us",
-    "symbol": "GSK",
-    "company": "GSK plc American Depositary Shares",
+    "symbol": "FOX",
+    "company": "Fox Corporation - Class B Common Stock",
     "canonical_category": "wait_entry",
-    "output_subdir": "us-GSK",
+    "output_subdir": "us-FOX",
     "instrument_type": "common_equity",
-    "industry_thesis_gate": null,
-    "industry_thesis_gate_label": null,
-    "hype_risk": null,
-    "hype_risk_label": null,
-    "industry_thesis_summary": "",
-    "industry_thesis_missing_evidence": []
+    "industry_thesis_gate": "theme_only",
+    "industry_thesis_gate_label": "目前偏題材，缺公司級落地證據",
+    "hype_risk": "low",
+    "hype_risk_label": "低",
+    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=資料不足；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
+    "industry_thesis_missing_evidence": [
+      "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+      "近 7 日公開新聞熱度未命中或未抓取",
+      "缺少明確後續產業 KPI",
+      "缺少公司級官方營收、訂單、財報或法說支撐"
+    ]
   }
 ]
 ```
@@ -128,53 +143,53 @@ Every `source_ledger.json` must include:
   "items": [
     {
       "market_key": "us",
-      "symbol": "FR",
-      "output_subdir": "us-FR",
+      "symbol": "EXE",
+      "output_subdir": "us-EXE",
       "status": "complete|partial|blocked",
       "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
       "artifacts": {
-        "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-FR/source_ledger.json",
-        "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-FR/tearsheet.html",
-        "initiation": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-FR/initiation.html",
-        "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-FR/risk_plan.html"
+        "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-EXE/source_ledger.json",
+        "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-EXE/tearsheet.html",
+        "initiation": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-EXE/initiation.html",
+        "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-EXE/risk_plan.html"
       },
       "missing_evidence": [],
-      "industry_thesis_gate": null,
-      "hype_risk": null,
+      "industry_thesis_gate": "theme_only",
+      "hype_risk": "low",
       "notes": ""
     },
     {
       "market_key": "us",
-      "symbol": "FRO",
-      "output_subdir": "us-FRO",
+      "symbol": "FE",
+      "output_subdir": "us-FE",
       "status": "complete|partial|blocked",
       "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
       "artifacts": {
-        "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-FRO/source_ledger.json",
-        "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-FRO/tearsheet.html",
-        "initiation": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-FRO/initiation.html",
-        "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-FRO/risk_plan.html"
+        "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-FE/source_ledger.json",
+        "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-FE/tearsheet.html",
+        "initiation": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-FE/initiation.html",
+        "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-FE/risk_plan.html"
       },
       "missing_evidence": [],
-      "industry_thesis_gate": null,
-      "hype_risk": null,
+      "industry_thesis_gate": "theme_only",
+      "hype_risk": "low",
       "notes": ""
     },
     {
       "market_key": "us",
-      "symbol": "GSK",
-      "output_subdir": "us-GSK",
+      "symbol": "FOX",
+      "output_subdir": "us-FOX",
       "status": "complete|partial|blocked",
       "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
       "artifacts": {
-        "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-GSK/source_ledger.json",
-        "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-GSK/tearsheet.html",
-        "initiation": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-GSK/initiation.html",
-        "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-GSK/risk_plan.html"
+        "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-FOX/source_ledger.json",
+        "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-FOX/tearsheet.html",
+        "initiation": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-FOX/initiation.html",
+        "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-FOX/risk_plan.html"
       },
       "missing_evidence": [],
-      "industry_thesis_gate": null,
-      "hype_risk": null,
+      "industry_thesis_gate": "theme_only",
+      "hype_risk": "low",
       "notes": ""
     }
   ],

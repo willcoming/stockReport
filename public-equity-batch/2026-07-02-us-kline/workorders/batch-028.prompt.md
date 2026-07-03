@@ -77,30 +77,16 @@ Every `source_ledger.json` must include:
 [
   {
     "market_key": "us",
-    "symbol": "REXR",
-    "company": "Rexford Industrial Realty",
+    "symbol": "PCOR",
+    "company": "Procore Technologies",
     "canonical_category": "wait_entry",
-    "output_subdir": "us-REXR",
-    "instrument_type": "common_equity",
-    "industry_thesis_gate": null,
-    "industry_thesis_gate_label": null,
-    "hype_risk": null,
-    "hype_risk_label": null,
-    "industry_thesis_summary": "",
-    "industry_thesis_missing_evidence": []
-  },
-  {
-    "market_key": "us",
-    "symbol": "RKLB",
-    "company": "Rocket Lab Corporation - Common Stock",
-    "canonical_category": "wait_entry",
-    "output_subdir": "us-RKLB",
+    "output_subdir": "us-PCOR",
     "instrument_type": "common_equity",
     "industry_thesis_gate": "theme_only",
     "industry_thesis_gate_label": "目前偏題材，缺公司級落地證據",
-    "hype_risk": "medium",
-    "hype_risk_label": "中",
-    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=中；成長驅動=庫存回補 / 週期復甦；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
+    "hype_risk": "low",
+    "hype_risk_label": "低",
+    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=資料不足；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
     "industry_thesis_missing_evidence": [
       "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
       "近 7 日公開新聞熱度未命中或未抓取",
@@ -110,17 +96,41 @@ Every `source_ledger.json` must include:
   },
   {
     "market_key": "us",
-    "symbol": "RRC",
-    "company": "Range Resources Corporation Common Stock",
+    "symbol": "PG",
+    "company": "Procter & Gamble Company  Common Stock",
     "canonical_category": "wait_entry",
-    "output_subdir": "us-RRC",
+    "output_subdir": "us-PG",
     "instrument_type": "common_equity",
-    "industry_thesis_gate": null,
-    "industry_thesis_gate_label": null,
-    "hype_risk": null,
-    "hype_risk_label": null,
-    "industry_thesis_summary": "",
-    "industry_thesis_missing_evidence": []
+    "industry_thesis_gate": "theme_only",
+    "industry_thesis_gate_label": "目前偏題材，缺公司級落地證據",
+    "hype_risk": "low",
+    "hype_risk_label": "低",
+    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=資料不足；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
+    "industry_thesis_missing_evidence": [
+      "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+      "近 7 日公開新聞熱度未命中或未抓取",
+      "缺少明確後續產業 KPI",
+      "缺少公司級官方營收、訂單、財報或法說支撐"
+    ]
+  },
+  {
+    "market_key": "us",
+    "symbol": "PM",
+    "company": "Philip Morris International Inc Common Stock",
+    "canonical_category": "wait_entry",
+    "output_subdir": "us-PM",
+    "instrument_type": "common_equity",
+    "industry_thesis_gate": "theme_only",
+    "industry_thesis_gate_label": "目前偏題材，缺公司級落地證據",
+    "hype_risk": "low",
+    "hype_risk_label": "低",
+    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=資料不足；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
+    "industry_thesis_missing_evidence": [
+      "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+      "近 7 日公開新聞熱度未命中或未抓取",
+      "缺少明確後續產業 KPI",
+      "缺少公司級官方營收、訂單、財報或法說支撐"
+    ]
   }
 ]
 ```
@@ -133,53 +143,53 @@ Every `source_ledger.json` must include:
   "items": [
     {
       "market_key": "us",
-      "symbol": "REXR",
-      "output_subdir": "us-REXR",
+      "symbol": "PCOR",
+      "output_subdir": "us-PCOR",
       "status": "complete|partial|blocked",
       "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
       "artifacts": {
-        "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-REXR/source_ledger.json",
-        "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-REXR/tearsheet.html",
-        "initiation": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-REXR/initiation.html",
-        "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-REXR/risk_plan.html"
-      },
-      "missing_evidence": [],
-      "industry_thesis_gate": null,
-      "hype_risk": null,
-      "notes": ""
-    },
-    {
-      "market_key": "us",
-      "symbol": "RKLB",
-      "output_subdir": "us-RKLB",
-      "status": "complete|partial|blocked",
-      "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
-      "artifacts": {
-        "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-RKLB/source_ledger.json",
-        "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-RKLB/tearsheet.html",
-        "initiation": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-RKLB/initiation.html",
-        "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-RKLB/risk_plan.html"
+        "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-PCOR/source_ledger.json",
+        "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-PCOR/tearsheet.html",
+        "initiation": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-PCOR/initiation.html",
+        "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-PCOR/risk_plan.html"
       },
       "missing_evidence": [],
       "industry_thesis_gate": "theme_only",
-      "hype_risk": "medium",
+      "hype_risk": "low",
       "notes": ""
     },
     {
       "market_key": "us",
-      "symbol": "RRC",
-      "output_subdir": "us-RRC",
+      "symbol": "PG",
+      "output_subdir": "us-PG",
       "status": "complete|partial|blocked",
       "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
       "artifacts": {
-        "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-RRC/source_ledger.json",
-        "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-RRC/tearsheet.html",
-        "initiation": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-RRC/initiation.html",
-        "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-RRC/risk_plan.html"
+        "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-PG/source_ledger.json",
+        "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-PG/tearsheet.html",
+        "initiation": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-PG/initiation.html",
+        "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-PG/risk_plan.html"
       },
       "missing_evidence": [],
-      "industry_thesis_gate": null,
-      "hype_risk": null,
+      "industry_thesis_gate": "theme_only",
+      "hype_risk": "low",
+      "notes": ""
+    },
+    {
+      "market_key": "us",
+      "symbol": "PM",
+      "output_subdir": "us-PM",
+      "status": "complete|partial|blocked",
+      "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
+      "artifacts": {
+        "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-PM/source_ledger.json",
+        "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-PM/tearsheet.html",
+        "initiation": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-PM/initiation.html",
+        "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-PM/risk_plan.html"
+      },
+      "missing_evidence": [],
+      "industry_thesis_gate": "theme_only",
+      "hype_risk": "low",
       "notes": ""
     }
   ],

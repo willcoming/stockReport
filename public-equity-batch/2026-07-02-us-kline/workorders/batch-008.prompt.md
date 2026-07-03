@@ -77,6 +77,24 @@ Every `source_ledger.json` must include:
 [
   {
     "market_key": "us",
+    "symbol": "PPL",
+    "company": "PPL Corporation Common Stock",
+    "canonical_category": "buy_now",
+    "output_subdir": "us-PPL",
+    "instrument_type": "common_equity",
+    "industry_thesis_gate": "theme_only",
+    "industry_thesis_gate_label": "目前偏題材，缺公司級落地證據",
+    "hype_risk": "low",
+    "hype_risk_label": "低",
+    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=雙策略整合：LZEMA20/3MA；收盤位置 99.2%；振幅 3.3%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 1.70；估算成交金額USD 387,297,037；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
+    "industry_thesis_missing_evidence": [
+      "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+      "近 7 日公開新聞熱度未命中或未抓取",
+      "缺少公司級官方營收、訂單、財報或法說支撐"
+    ]
+  },
+  {
+    "market_key": "us",
     "symbol": "PTC",
     "company": "PTC Inc. - Common Stock",
     "canonical_category": "buy_now",
@@ -86,7 +104,7 @@ Every `source_ledger.json` must include:
     "industry_thesis_gate_label": "目前偏題材，缺公司級落地證據",
     "hype_risk": "low",
     "hype_risk_label": "低",
-    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=雙策略整合：LZEMA20/3MA；收盤位置 84.1%；振幅 4.5%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 285,775,249；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
+    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=雙策略整合：LZEMA20/3MA；收盤位置 84.0%；振幅 4.6%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 285,842,257；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
     "industry_thesis_missing_evidence": [
       "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
       "近 7 日公開新聞熱度未命中或未抓取",
@@ -104,25 +122,7 @@ Every `source_ledger.json` must include:
     "industry_thesis_gate_label": "目前偏題材，缺公司級落地證據",
     "hype_risk": "low",
     "hype_risk_label": "低",
-    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=雙策略整合：LZEMA20/3MA；收盤位置 93.0%；振幅 3.8%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 1.67；成交量高於均量 volumeRatio 1.22；估算成交金額USD 331,421,643；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
-    "industry_thesis_missing_evidence": [
-      "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
-      "近 7 日公開新聞熱度未命中或未抓取",
-      "缺少公司級官方營收、訂單、財報或法說支撐"
-    ]
-  },
-  {
-    "market_key": "us",
-    "symbol": "SAP",
-    "company": "SAP SE ADS",
-    "canonical_category": "buy_now",
-    "output_subdir": "us-SAP",
-    "instrument_type": "common_equity",
-    "industry_thesis_gate": "theme_only",
-    "industry_thesis_gate_label": "目前偏題材，缺公司級落地證據",
-    "hype_risk": "low",
-    "hype_risk_label": "低",
-    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=雙策略整合：LZEMA20/3MA；收盤位置 87.2%；振幅 2.1%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 385,472,103；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
+    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=雙策略整合：LZEMA20/3MA；收盤位置 93.3%；振幅 4.0%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 1.73；成交量高於均量 volumeRatio 1.23；估算成交金額USD 335,440,633；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
     "industry_thesis_missing_evidence": [
       "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
       "近 7 日公開新聞熱度未命中或未抓取",
@@ -138,6 +138,23 @@ Every `source_ledger.json` must include:
 {
   "batch_id": "batch-008",
   "items": [
+    {
+      "market_key": "us",
+      "symbol": "PPL",
+      "output_subdir": "us-PPL",
+      "status": "complete|partial|blocked",
+      "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
+      "artifacts": {
+        "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-PPL/source_ledger.json",
+        "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-PPL/tearsheet.html",
+        "initiation": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-PPL/initiation.html",
+        "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-PPL/risk_plan.html"
+      },
+      "missing_evidence": [],
+      "industry_thesis_gate": "theme_only",
+      "hype_risk": "low",
+      "notes": ""
+    },
     {
       "market_key": "us",
       "symbol": "PTC",
@@ -166,23 +183,6 @@ Every `source_ledger.json` must include:
         "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-QSR/tearsheet.html",
         "initiation": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-QSR/initiation.html",
         "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-QSR/risk_plan.html"
-      },
-      "missing_evidence": [],
-      "industry_thesis_gate": "theme_only",
-      "hype_risk": "low",
-      "notes": ""
-    },
-    {
-      "market_key": "us",
-      "symbol": "SAP",
-      "output_subdir": "us-SAP",
-      "status": "complete|partial|blocked",
-      "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
-      "artifacts": {
-        "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-SAP/source_ledger.json",
-        "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-SAP/tearsheet.html",
-        "initiation": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-SAP/initiation.html",
-        "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-SAP/risk_plan.html"
       },
       "missing_evidence": [],
       "industry_thesis_gate": "theme_only",

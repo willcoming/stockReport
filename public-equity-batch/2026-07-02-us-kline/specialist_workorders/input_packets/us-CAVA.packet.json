@@ -1,0 +1,271 @@
+{
+  "generated_at": "2026-07-04 06:50:08",
+  "output_root": "reports/public-equity-batch/2026-07-02-us-kline",
+  "symbol": "CAVA",
+  "company": "CAVA Group",
+  "output_subdir": "us-CAVA",
+  "state": "awaiting_result",
+  "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/specialist_workorders/us-CAVA.specialist.prompt.md",
+  "expected_result_path": "reports/public-equity-batch/2026-07-02-us-kline/specialist_workorders/us-CAVA.result.json",
+  "next_required_workflows": [
+    "official-evidence review",
+    "company-tearsheet + initiating-coverage",
+    "comps-valuation",
+    "portfolio-risk-management"
+  ],
+  "specialist_skills": [
+    "company-tearsheet",
+    "comps-valuation",
+    "initiating-coverage",
+    "portfolio-risk-management"
+  ],
+  "required_source_ledger_objects": [
+    "official_validation",
+    "research_underwrite",
+    "investment_horizon",
+    "valuation",
+    "risk_assessment"
+  ],
+  "incomplete_objects": [],
+  "handoff_statuses": {
+    "quote": "resolved",
+    "official_evidence": "item_missing",
+    "valuation": "input_partial",
+    "risk": "input_ready"
+  },
+  "horizon_rule": "PEI horizon is 3 months to 3 years: 3M timing/catalyst, 12M base underwrite, and 3Y ownership thesis all require sourced specialist evidence.",
+  "completion_rule": "This packet is input only. It must not mark research_status, valuation_status, risk_status, investment_horizon, or decision-ready gates complete by itself.",
+  "universe_item": {
+    "market_key": "us",
+    "market": "NYSE",
+    "symbol": "CAVA",
+    "company": "CAVA Group",
+    "industry": "Consumer Discretionary / Restaurants",
+    "canonical_category": "wait_entry",
+    "canonical_category_label": "現在不能買，但值得等買點名單",
+    "source_priority": 5,
+    "instrument_type": "common_equity",
+    "output_subdir": "us-CAVA",
+    "instrument": {
+      "symbol": "CAVA",
+      "market_key": "us",
+      "market": "NYSE",
+      "exchange": "US",
+      "currency": "USD",
+      "provider_symbol": "CAVA",
+      "instrument_type": "common_equity",
+      "status": "ok",
+      "official_validation_status": "not_checked",
+      "equity_model_supported": true,
+      "warnings": [],
+      "output_subdir": "us-CAVA"
+    },
+    "exchange": "US",
+    "currency": "USD",
+    "provider_symbol": "CAVA",
+    "identity_status": "ok",
+    "official_validation_status": "not_checked",
+    "equity_model_supported": true,
+    "instrument_warnings": [],
+    "industry_thesis_gate": null,
+    "industry_thesis_gate_label": null,
+    "hype_risk": null,
+    "hype_risk_label": null,
+    "industry_thesis_summary": "",
+    "industry_thesis_missing_evidence": [],
+    "industry_thesis_source": "",
+    "model_portfolio": {
+      "portfolio_units": 100,
+      "long_only": true,
+      "leverage_allowed": false,
+      "single_name_cap": 0.05,
+      "risk_budget_initial": 0.0,
+      "risk_budget_post_trigger": 0.005,
+      "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+    },
+    "sources": [
+      {
+        "lane": "us_kline",
+        "lane_label": "美股 K-line",
+        "category": "wait_entry",
+        "category_label": "現在不能買，但值得等買點名單",
+        "report_path": "reports/usStock/2026-07-02_us_kline_decision_report.md",
+        "row_index": 57,
+        "expanded_index": 0,
+        "raw_market": "NYSE",
+        "raw_symbol_cell": "CAVA",
+        "raw_company_cell": "CAVA Group, Inc. Common Stock",
+        "raw_row": {
+          "市場": "NYSE",
+          "股票代號": "CAVA",
+          "公司名稱": "CAVA Group, Inc. Common Stock",
+          "產業": "Consumer Discretionary / Restaurants",
+          "來源提及程度": "Legacy 買點",
+          "來源主觀看法": "中性觀察",
+          "布局建議": "先等回測支撐、突破續強或量縮沉澱後再評估",
+          "持倉建議": "若已有持倉，維持小部位觀察，不在確認前放大風險",
+          "追蹤指標": "Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 28.4%；振幅 5.2%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=空方趨勢結束；buyCount 1；今日買點 LZEMA20；估算成交金額USD 177,638,922",
+          "風險": "未見硬性排除條件，仍需追蹤隔日量價與大盤風險"
+        }
+      }
+    ]
+  },
+  "existing_source_ledger": {
+    "path": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-CAVA/source_ledger.json",
+    "exists": true,
+    "recommendation_label": "Wait for trigger",
+    "research_status": "partial",
+    "valuation_status": "not_run",
+    "risk_status": "not_run",
+    "horizon_status": "partial",
+    "missing_evidence": [
+      "本 report-scope PEI artifact 由 StockLoop 本地 KOL/news、industry thesis 與 quote ledger 生成；尚未逐檔執行完整 Public Equity Investing specialist research",
+      "尚缺官方 filings / 年報 / 法說 transcript / IR presentation 查核",
+      "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
+      "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
+      "價格來源限制：Yahoo quote resolver timed out during PEI fetch; value copied from local usStock/reports/2026-07-02.md close column. Not a live or official quote.",
+      "官方公司/證券身分驗證未完成",
+      "估值 handoff 缺失：valuation multiples missing"
+    ],
+    "market_data": {
+      "current_price": {
+        "value": 76.87999725341797,
+        "currency": "USD",
+        "as_of": "2026-07-02",
+        "source": "stockLoop_us_kline_report:yfinance_close_fallback",
+        "retrieved_at": "2026-07-04T06:50:00+08:00",
+        "warnings": [
+          "Yahoo quote resolver timed out during PEI fetch; value copied from local usStock/reports/2026-07-02.md close column. Not a live or official quote."
+        ]
+      }
+    }
+  },
+  "quote": {
+    "symbol": "CAVA",
+    "provider_symbol": "CAVA",
+    "close": 76.87999725341797,
+    "currency": "USD",
+    "as_of": "2026-07-02",
+    "source": "stockLoop_us_kline_report:yfinance_close_fallback",
+    "retrieved_at": "2026-07-04T06:50:00+08:00",
+    "fallback_rank": 99,
+    "market_state": "historical_close",
+    "warnings": [
+      "Yahoo quote resolver timed out during PEI fetch; value copied from local usStock/reports/2026-07-02.md close column. Not a live or official quote."
+    ]
+  },
+  "official_evidence": {},
+  "valuation_input": {
+    "symbol": "CAVA",
+    "market_key": "us",
+    "company": "CAVA Group",
+    "provider_symbol": "CAVA",
+    "generated_at": "2026-07-03T22:49:32Z",
+    "valuation_handoff_status": "input_partial",
+    "valuation_status": "not_run",
+    "current_price": {
+      "value": 76.87999725341797,
+      "currency": "USD",
+      "as_of": "2026-07-02",
+      "source": "stockLoop_us_kline_report:yfinance_close_fallback"
+    },
+    "metrics": {},
+    "methods": [],
+    "sources": [
+      {
+        "source_name": "stockLoop_us_kline_report:yfinance_close_fallback",
+        "source_type": "market_price",
+        "symbol": "CAVA",
+        "as_of": "2026-07-02",
+        "retrieved_at": "2026-07-04T06:50:00+08:00",
+        "used_by": [
+          "valuation_handoff.json"
+        ]
+      }
+    ],
+    "missing_inputs": [
+      "valuation multiples missing"
+    ],
+    "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+  },
+  "risk_input": {
+    "symbol": "CAVA",
+    "market_key": "us",
+    "company": "CAVA Group",
+    "generated_at": "2026-07-03T22:49:42Z",
+    "risk_handoff_status": "input_ready",
+    "current_price": {
+      "value": 76.87999725341797,
+      "currency": "USD",
+      "as_of": "2026-07-02",
+      "source": "stockLoop_us_kline_report:yfinance_close_fallback"
+    },
+    "risk_inputs": {
+      "low_20d": 70.87999725341797,
+      "high_60d": 98.79000091552734,
+      "downside_reference": "20d_low",
+      "downside_distance_pct": 7.8044,
+      "drawdown_from_60d_high_pct": 22.1784,
+      "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+    },
+    "liquidity_inputs": {
+      "history_days": 60,
+      "latest_history_date": "2026-07-02",
+      "latest_volume": 2310600.0,
+      "latest_trade_value": 177638922.0,
+      "average_volume_20d": 2999380.0,
+      "average_trade_value_20d": 246604314.7,
+      "source": "local_daily_bars"
+    },
+    "model_portfolio_inputs": {
+      "portfolio_units": 100,
+      "single_name_cap": 0.05,
+      "risk_budget_initial": 0.0,
+      "screen_size_by_downside": null,
+      "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+      "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+    },
+    "sources": [
+      {
+        "source_name": "stockLoop_us_kline_report:yfinance_close_fallback",
+        "source_type": "market_price",
+        "symbol": "CAVA",
+        "as_of": "2026-07-02",
+        "retrieved_at": "2026-07-04T06:50:00+08:00",
+        "used_by": [
+          "risk_handoff.json"
+        ]
+      },
+      {
+        "source_name": "StockLoop local daily_bars",
+        "source_type": "local_ohlcv_history",
+        "path": "/Users/willcoming/code/stockLoop/usStock/data/usstock.sqlite3",
+        "latest_history_date": "2026-07-02",
+        "history_days": 60,
+        "retrieved_at": "2026-07-03T22:49:42Z",
+        "used_by": [
+          "risk_handoff.json"
+        ]
+      }
+    ],
+    "missing_inputs": [],
+    "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+  },
+  "expected_result_contract": {
+    "status": "complete|partial|blocked",
+    "updated_source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-CAVA/source_ledger.json",
+    "source_ledger_patch_fields": [
+      "official_validation_status",
+      "official_validation",
+      "research_status",
+      "research_underwrite",
+      "investment_horizon",
+      "valuation_status",
+      "valuation",
+      "risk_status",
+      "risk_assessment",
+      "missing_evidence",
+      "sources"
+    ]
+  }
+}

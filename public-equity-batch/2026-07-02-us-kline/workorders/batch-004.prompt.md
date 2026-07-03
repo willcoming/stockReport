@@ -86,7 +86,7 @@ Every `source_ledger.json` must include:
     "industry_thesis_gate_label": "目前偏題材，缺公司級落地證據",
     "hype_risk": "low",
     "hype_risk_label": "低",
-    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=雙策略整合：LZEMA20/3MA；收盤位置 93.9%；振幅 3.9%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 1.52；估算成交金額USD 1,004,086,888；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
+    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=雙策略整合：LZEMA20/3MA；收盤位置 93.9%；振幅 3.9%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 1.52；估算成交金額USD 1,061,764,303；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
     "industry_thesis_missing_evidence": [
       "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
       "近 7 日公開新聞熱度未命中或未抓取",
@@ -104,7 +104,7 @@ Every `source_ledger.json` must include:
     "industry_thesis_gate_label": "目前偏題材，缺公司級落地證據",
     "hype_risk": "low",
     "hype_risk_label": "低",
-    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=雙策略整合：LZEMA20/3MA；收盤位置 97.3%；振幅 4.3%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 1,099,847,003；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
+    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=雙策略整合：LZEMA20/3MA；收盤位置 97.3%；振幅 4.3%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 1,300,984,617；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
     "industry_thesis_missing_evidence": [
       "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
       "近 7 日公開新聞熱度未命中或未抓取",
@@ -122,7 +122,7 @@ Every `source_ledger.json` must include:
     "industry_thesis_gate_label": "目前偏題材，缺公司級落地證據",
     "hype_risk": "low",
     "hype_risk_label": "低",
-    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=雙策略整合：LZEMA20/3MA；收盤位置 100.0%；振幅 3.8%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 2.01；成交量高於均量 volumeRatio 1.41；估算成交金額USD 1,901,040,692；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
+    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=雙策略整合：LZEMA20/3MA；收盤位置 100.0%；振幅 3.8%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 2.01；成交量高於均量 volumeRatio 1.43；估算成交金額USD 1,929,583,851；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
     "industry_thesis_missing_evidence": [
       "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
       "近 7 日公開新聞熱度未命中或未抓取",

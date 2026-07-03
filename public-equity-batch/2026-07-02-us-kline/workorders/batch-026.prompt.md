@@ -77,45 +77,60 @@ Every `source_ledger.json` must include:
 [
   {
     "market_key": "us",
-    "symbol": "O",
-    "company": "Realty Income Corporation Common Stock",
+    "symbol": "MT",
+    "company": "Arcelor Mittal NY Registry Shares NEW",
     "canonical_category": "wait_entry",
-    "output_subdir": "us-O",
+    "output_subdir": "us-MT",
     "instrument_type": "common_equity",
-    "industry_thesis_gate": null,
-    "industry_thesis_gate_label": null,
-    "hype_risk": null,
-    "hype_risk_label": null,
-    "industry_thesis_summary": "",
-    "industry_thesis_missing_evidence": []
+    "industry_thesis_gate": "hype_or_crowded",
+    "industry_thesis_gate_label": "炒作或擁擠交易風險偏高",
+    "hype_risk": "high",
+    "hype_risk_label": "高",
+    "industry_thesis_summary": "Gate=炒作或擁擠交易風險偏高；炒作風險=高；成長驅動=資料不足；題材/價格/新聞熱度偏熱，但缺少公司級官方營收、訂單或財報證據支撐。",
+    "industry_thesis_missing_evidence": [
+      "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+      "近 7 日公開新聞熱度未命中或未抓取",
+      "缺少明確後續產業 KPI",
+      "缺少公司級官方營收、訂單、財報或法說支撐"
+    ]
   },
   {
     "market_key": "us",
-    "symbol": "OTIS",
-    "company": "Otis Worldwide Corporation Common Stock",
+    "symbol": "NLY",
+    "company": "Annaly Capital Management Inc. Common Stock",
     "canonical_category": "wait_entry",
-    "output_subdir": "us-OTIS",
+    "output_subdir": "us-NLY",
     "instrument_type": "common_equity",
-    "industry_thesis_gate": null,
-    "industry_thesis_gate_label": null,
-    "hype_risk": null,
-    "hype_risk_label": null,
-    "industry_thesis_summary": "",
-    "industry_thesis_missing_evidence": []
+    "industry_thesis_gate": "theme_only",
+    "industry_thesis_gate_label": "目前偏題材，缺公司級落地證據",
+    "hype_risk": "low",
+    "hype_risk_label": "低",
+    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=資料不足；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
+    "industry_thesis_missing_evidence": [
+      "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+      "近 7 日公開新聞熱度未命中或未抓取",
+      "缺少明確後續產業 KPI",
+      "缺少公司級官方營收、訂單、財報或法說支撐"
+    ]
   },
   {
     "market_key": "us",
-    "symbol": "PCG",
-    "company": "Pacific Gas & Electric Co. Common Stock",
+    "symbol": "NTR",
+    "company": "Nutrien Ltd. Common Shares",
     "canonical_category": "wait_entry",
-    "output_subdir": "us-PCG",
+    "output_subdir": "us-NTR",
     "instrument_type": "common_equity",
-    "industry_thesis_gate": null,
-    "industry_thesis_gate_label": null,
-    "hype_risk": null,
-    "hype_risk_label": null,
-    "industry_thesis_summary": "",
-    "industry_thesis_missing_evidence": []
+    "industry_thesis_gate": "theme_only",
+    "industry_thesis_gate_label": "目前偏題材，缺公司級落地證據",
+    "hype_risk": "low",
+    "hype_risk_label": "低",
+    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=資料不足；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
+    "industry_thesis_missing_evidence": [
+      "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+      "近 7 日公開新聞熱度未命中或未抓取",
+      "缺少明確後續產業 KPI",
+      "缺少公司級官方營收、訂單、財報或法說支撐"
+    ]
   }
 ]
 ```
@@ -128,53 +143,53 @@ Every `source_ledger.json` must include:
   "items": [
     {
       "market_key": "us",
-      "symbol": "O",
-      "output_subdir": "us-O",
+      "symbol": "MT",
+      "output_subdir": "us-MT",
       "status": "complete|partial|blocked",
       "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
       "artifacts": {
-        "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-O/source_ledger.json",
-        "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-O/tearsheet.html",
-        "initiation": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-O/initiation.html",
-        "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-O/risk_plan.html"
+        "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-MT/source_ledger.json",
+        "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-MT/tearsheet.html",
+        "initiation": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-MT/initiation.html",
+        "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-MT/risk_plan.html"
       },
       "missing_evidence": [],
-      "industry_thesis_gate": null,
-      "hype_risk": null,
+      "industry_thesis_gate": "hype_or_crowded",
+      "hype_risk": "high",
       "notes": ""
     },
     {
       "market_key": "us",
-      "symbol": "OTIS",
-      "output_subdir": "us-OTIS",
+      "symbol": "NLY",
+      "output_subdir": "us-NLY",
       "status": "complete|partial|blocked",
       "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
       "artifacts": {
-        "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-OTIS/source_ledger.json",
-        "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-OTIS/tearsheet.html",
-        "initiation": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-OTIS/initiation.html",
-        "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-OTIS/risk_plan.html"
+        "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-NLY/source_ledger.json",
+        "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-NLY/tearsheet.html",
+        "initiation": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-NLY/initiation.html",
+        "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-NLY/risk_plan.html"
       },
       "missing_evidence": [],
-      "industry_thesis_gate": null,
-      "hype_risk": null,
+      "industry_thesis_gate": "theme_only",
+      "hype_risk": "low",
       "notes": ""
     },
     {
       "market_key": "us",
-      "symbol": "PCG",
-      "output_subdir": "us-PCG",
+      "symbol": "NTR",
+      "output_subdir": "us-NTR",
       "status": "complete|partial|blocked",
       "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
       "artifacts": {
-        "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-PCG/source_ledger.json",
-        "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-PCG/tearsheet.html",
-        "initiation": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-PCG/initiation.html",
-        "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-PCG/risk_plan.html"
+        "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-NTR/source_ledger.json",
+        "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-NTR/tearsheet.html",
+        "initiation": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-NTR/initiation.html",
+        "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-NTR/risk_plan.html"
       },
       "missing_evidence": [],
-      "industry_thesis_gate": null,
-      "hype_risk": null,
+      "industry_thesis_gate": "theme_only",
+      "hype_risk": "low",
       "notes": ""
     }
   ],

@@ -17,14 +17,14 @@
 - 來源主觀看法：偏多
 - 布局建議：可研究小量分批，仍需等量價續強或回測不破再提高信心
 - 持倉建議：若已有持倉，可用訊號日低點或短均線作為失效觀察
-- 追蹤指標：雙策略整合：LZEMA20/3MA；收盤位置 99.2%；振幅 3.3%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 1.70；估算成交金額USD 385,317,667
+- 追蹤指標：雙策略整合：LZEMA20/3MA；收盤位置 99.2%；振幅 3.3%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 1.70；估算成交金額USD 387,297,037
 - 風險：未見硬性排除條件，仍需追蹤隔日量價與大盤風險
 
 ## 產業前景與炒作風險
 
 - 產業 Gate：目前偏題材，缺公司級落地證據
 - 炒作風險：低
-- 摘要：Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=雙策略整合：LZEMA20/3MA；收盤位置 99.2%；振幅 3.3%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 1.70；估算成交金額USD 385,317,667；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。
+- 摘要：Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=雙策略整合：LZEMA20/3MA；收盤位置 99.2%；振幅 3.3%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 1.70；估算成交金額USD 387,297,037；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。
 - 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定；近 7 日公開新聞熱度未命中或未抓取；缺少公司級官方營收、訂單、財報或法說支撐
 
 ## 3 個月到 3 年投資視角
@@ -39,7 +39,7 @@
 - 模型部位：0%; watch-only until full PEI specialist workflow clears evidence gates
 - 風險預算：0.0075
 - 下檔/停損距離：20d_low distance 6.18%; 20D low 34.61 (input only; PM must verify)
-- 流動性上限：20D avg trade value 421,435,718.7; PM must define liquidity cap
+- 流動性上限：20D avg trade value 421,534,687.2; PM must define liquidity cap
 - 避險姿態：No hedge; model portfolio remains cash for this name until evidence clears
 - 加碼規則：Open or add only after full PEI specialist workflow confirms thesis, trigger, current price context, liquidity, and risk/reward
 - 減碼規則：Trim or keep watch-only if source thesis, price trigger, or company-level evidence weakens

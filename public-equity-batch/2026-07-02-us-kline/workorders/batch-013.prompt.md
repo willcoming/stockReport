@@ -77,45 +77,55 @@ Every `source_ledger.json` must include:
 [
   {
     "market_key": "us",
+    "symbol": "BTI",
+    "company": "British American Tobacco Industries",
+    "canonical_category": "wait_entry",
+    "output_subdir": "us-BTI",
+    "instrument_type": "common_equity",
+    "industry_thesis_gate": "theme_only",
+    "industry_thesis_gate_label": "目前偏題材，缺公司級落地證據",
+    "hype_risk": "low",
+    "hype_risk_label": "低",
+    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=資料不足；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
+    "industry_thesis_missing_evidence": [
+      "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+      "近 7 日公開新聞熱度未命中或未抓取",
+      "缺少明確後續產業 KPI",
+      "缺少公司級官方營收、訂單、財報或法說支撐"
+    ]
+  },
+  {
+    "market_key": "us",
+    "symbol": "CAVA",
+    "company": "CAVA Group",
+    "canonical_category": "wait_entry",
+    "output_subdir": "us-CAVA",
+    "instrument_type": "common_equity",
+    "industry_thesis_gate": null,
+    "industry_thesis_gate_label": null,
+    "hype_risk": null,
+    "hype_risk_label": null,
+    "industry_thesis_summary": "",
+    "industry_thesis_missing_evidence": []
+  },
+  {
+    "market_key": "us",
     "symbol": "CDE",
     "company": "Coeur Mining",
     "canonical_category": "wait_entry",
     "output_subdir": "us-CDE",
     "instrument_type": "common_equity",
-    "industry_thesis_gate": null,
-    "industry_thesis_gate_label": null,
-    "hype_risk": null,
-    "hype_risk_label": null,
-    "industry_thesis_summary": "",
-    "industry_thesis_missing_evidence": []
-  },
-  {
-    "market_key": "us",
-    "symbol": "COIN",
-    "company": "Coinbase Global",
-    "canonical_category": "wait_entry",
-    "output_subdir": "us-COIN",
-    "instrument_type": "common_equity",
-    "industry_thesis_gate": null,
-    "industry_thesis_gate_label": null,
-    "hype_risk": null,
-    "hype_risk_label": null,
-    "industry_thesis_summary": "",
-    "industry_thesis_missing_evidence": []
-  },
-  {
-    "market_key": "us",
-    "symbol": "CP",
-    "company": "Canadian Pacific Kansas City Limited Common Shares",
-    "canonical_category": "wait_entry",
-    "output_subdir": "us-CP",
-    "instrument_type": "common_equity",
-    "industry_thesis_gate": null,
-    "industry_thesis_gate_label": null,
-    "hype_risk": null,
-    "hype_risk_label": null,
-    "industry_thesis_summary": "",
-    "industry_thesis_missing_evidence": []
+    "industry_thesis_gate": "theme_only",
+    "industry_thesis_gate_label": "目前偏題材，缺公司級落地證據",
+    "hype_risk": "low",
+    "hype_risk_label": "低",
+    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=AI / 資料中心；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
+    "industry_thesis_missing_evidence": [
+      "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+      "近 7 日公開新聞熱度未命中或未抓取",
+      "缺少明確後續產業 KPI",
+      "缺少公司級官方營收、訂單、財報或法說支撐"
+    ]
   }
 ]
 ```
@@ -126,6 +136,40 @@ Every `source_ledger.json` must include:
 {
   "batch_id": "batch-013",
   "items": [
+    {
+      "market_key": "us",
+      "symbol": "BTI",
+      "output_subdir": "us-BTI",
+      "status": "complete|partial|blocked",
+      "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
+      "artifacts": {
+        "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-BTI/source_ledger.json",
+        "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-BTI/tearsheet.html",
+        "initiation": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-BTI/initiation.html",
+        "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-BTI/risk_plan.html"
+      },
+      "missing_evidence": [],
+      "industry_thesis_gate": "theme_only",
+      "hype_risk": "low",
+      "notes": ""
+    },
+    {
+      "market_key": "us",
+      "symbol": "CAVA",
+      "output_subdir": "us-CAVA",
+      "status": "complete|partial|blocked",
+      "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
+      "artifacts": {
+        "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-CAVA/source_ledger.json",
+        "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-CAVA/tearsheet.html",
+        "initiation": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-CAVA/initiation.html",
+        "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-CAVA/risk_plan.html"
+      },
+      "missing_evidence": [],
+      "industry_thesis_gate": null,
+      "hype_risk": null,
+      "notes": ""
+    },
     {
       "market_key": "us",
       "symbol": "CDE",
@@ -139,42 +183,8 @@ Every `source_ledger.json` must include:
         "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-CDE/risk_plan.html"
       },
       "missing_evidence": [],
-      "industry_thesis_gate": null,
-      "hype_risk": null,
-      "notes": ""
-    },
-    {
-      "market_key": "us",
-      "symbol": "COIN",
-      "output_subdir": "us-COIN",
-      "status": "complete|partial|blocked",
-      "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
-      "artifacts": {
-        "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-COIN/source_ledger.json",
-        "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-COIN/tearsheet.html",
-        "initiation": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-COIN/initiation.html",
-        "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-COIN/risk_plan.html"
-      },
-      "missing_evidence": [],
-      "industry_thesis_gate": null,
-      "hype_risk": null,
-      "notes": ""
-    },
-    {
-      "market_key": "us",
-      "symbol": "CP",
-      "output_subdir": "us-CP",
-      "status": "complete|partial|blocked",
-      "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
-      "artifacts": {
-        "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-CP/source_ledger.json",
-        "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-CP/tearsheet.html",
-        "initiation": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-CP/initiation.html",
-        "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-CP/risk_plan.html"
-      },
-      "missing_evidence": [],
-      "industry_thesis_gate": null,
-      "hype_risk": null,
+      "industry_thesis_gate": "theme_only",
+      "hype_risk": "low",
       "notes": ""
     }
   ],

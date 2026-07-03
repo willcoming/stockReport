@@ -86,7 +86,7 @@ Every `source_ledger.json` must include:
     "industry_thesis_gate_label": "目前偏題材，缺公司級落地證據",
     "hype_risk": "low",
     "hype_risk_label": "低",
-    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=雙策略整合：LZEMA20/3MA；收盤位置 82.8%；振幅 1.4%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 369,263,739；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
+    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=雙策略整合：LZEMA20/3MA；收盤位置 82.8%；振幅 1.4%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 384,610,397；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
     "industry_thesis_missing_evidence": [
       "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
       "近 7 日公開新聞熱度未命中或未抓取",
@@ -104,7 +104,7 @@ Every `source_ledger.json` must include:
     "industry_thesis_gate_label": "目前偏題材，缺公司級落地證據",
     "hype_risk": "low",
     "hype_risk_label": "低",
-    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=雙策略整合：LZEMA20/3MA；收盤位置 98.5%；振幅 2.3%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 1.33；估算成交金額USD 1,009,122,354；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
+    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=雙策略整合：LZEMA20/3MA；收盤位置 98.5%；振幅 2.3%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 1.33；成交量高於均量 volumeRatio 1.21；估算成交金額USD 1,261,813,172；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
     "industry_thesis_missing_evidence": [
       "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
       "近 7 日公開新聞熱度未命中或未抓取",
@@ -113,16 +113,16 @@ Every `source_ledger.json` must include:
   },
   {
     "market_key": "us",
-    "symbol": "OKE",
-    "company": "ONEOK",
+    "symbol": "NI",
+    "company": "NiSource Inc Common Stock",
     "canonical_category": "buy_now",
-    "output_subdir": "us-OKE",
+    "output_subdir": "us-NI",
     "instrument_type": "common_equity",
     "industry_thesis_gate": "theme_only",
     "industry_thesis_gate_label": "目前偏題材，缺公司級落地證據",
     "hype_risk": "low",
     "hype_risk_label": "低",
-    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=雙策略整合：LZEMA20/3MA；收盤位置 90.0%；振幅 2.3%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 268,347,971；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
+    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=雙策略整合：LZEMA20/3MA；收盤位置 100.0%；振幅 1.8%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；成交量高於均量 volumeRatio 1.25；估算成交金額USD 270,249,946；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
     "industry_thesis_missing_evidence": [
       "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
       "近 7 日公開新聞熱度未命中或未抓取",
@@ -174,15 +174,15 @@ Every `source_ledger.json` must include:
     },
     {
       "market_key": "us",
-      "symbol": "OKE",
-      "output_subdir": "us-OKE",
+      "symbol": "NI",
+      "output_subdir": "us-NI",
       "status": "complete|partial|blocked",
       "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
       "artifacts": {
-        "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-OKE/source_ledger.json",
-        "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-OKE/tearsheet.html",
-        "initiation": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-OKE/initiation.html",
-        "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-OKE/risk_plan.html"
+        "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-NI/source_ledger.json",
+        "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-NI/tearsheet.html",
+        "initiation": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-NI/initiation.html",
+        "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-NI/risk_plan.html"
       },
       "missing_evidence": [],
       "industry_thesis_gate": "theme_only",

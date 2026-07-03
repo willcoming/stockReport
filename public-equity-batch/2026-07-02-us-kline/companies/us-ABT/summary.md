@@ -17,7 +17,7 @@
 - 來源主觀看法：中性觀察
 - 布局建議：先等回測支撐、突破續強或量縮沉澱後再評估
 - 持倉建議：若已有持倉，維持小部位觀察，不在確認前放大風險
-- 追蹤指標：三均線趨勢策略：3MA；收盤位置 91.1%；振幅 4.0%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=多方趨勢開始；buyCount 1；今日買點 3MA；波幅放大 rangeRatio 1.73；估算成交金額USD 838,664,371
+- 追蹤指標：三均線趨勢策略：3MA；收盤位置 91.1%；振幅 4.0%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=多方趨勢開始；buyCount 1；今日買點 3MA；波幅放大 rangeRatio 1.73；估算成交金額USD 1,015,494,856
 - 風險：未見硬性排除條件，仍需追蹤隔日量價與大盤風險
 
 ## 產業前景與炒作風險
@@ -39,7 +39,7 @@
 - 模型部位：0% pre-trigger; reassess only after trigger and full PEI evidence
 - 風險預算：0.0
 - 下檔/停損距離：20d_low distance 8.73%; 20D low 87.07 (input only; PM must verify)
-- 流動性上限：20D avg trade value 1,293,959,379.6; PM must define liquidity cap
+- 流動性上限：20D avg trade value 1,302,800,903.85; PM must define liquidity cap
 - 避險姿態：No hedge; model portfolio remains cash for this name until evidence clears
 - 加碼規則：Open or add only after full PEI specialist workflow confirms thesis, trigger, current price context, liquidity, and risk/reward
 - 減碼規則：Trim or keep watch-only if source thesis, price trigger, or company-level evidence weakens

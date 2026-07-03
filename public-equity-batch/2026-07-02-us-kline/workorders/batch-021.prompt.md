@@ -77,24 +77,10 @@ Every `source_ledger.json` must include:
 [
   {
     "market_key": "us",
-    "symbol": "ING",
-    "company": "ING Group",
+    "symbol": "HOG",
+    "company": "Harley-Davidson",
     "canonical_category": "wait_entry",
-    "output_subdir": "us-ING",
-    "instrument_type": "common_equity",
-    "industry_thesis_gate": null,
-    "industry_thesis_gate_label": null,
-    "hype_risk": null,
-    "hype_risk_label": null,
-    "industry_thesis_summary": "",
-    "industry_thesis_missing_evidence": []
-  },
-  {
-    "market_key": "us",
-    "symbol": "ISRG",
-    "company": "Intuitive Surgical",
-    "canonical_category": "wait_entry",
-    "output_subdir": "us-ISRG",
+    "output_subdir": "us-HOG",
     "instrument_type": "common_equity",
     "industry_thesis_gate": "theme_only",
     "industry_thesis_gate_label": "目前偏題材，缺公司級落地證據",
@@ -110,10 +96,10 @@ Every `source_ledger.json` must include:
   },
   {
     "market_key": "us",
-    "symbol": "KKR",
-    "company": "KKR & Co. Inc. Common Stock",
+    "symbol": "HSY",
+    "company": "The Hershey Company Common Stock",
     "canonical_category": "wait_entry",
-    "output_subdir": "us-KKR",
+    "output_subdir": "us-HSY",
     "instrument_type": "common_equity",
     "industry_thesis_gate": null,
     "industry_thesis_gate_label": null,
@@ -121,6 +107,25 @@ Every `source_ledger.json` must include:
     "hype_risk_label": null,
     "industry_thesis_summary": "",
     "industry_thesis_missing_evidence": []
+  },
+  {
+    "market_key": "us",
+    "symbol": "HWM",
+    "company": "Howmet Aerospace Inc. Common Stock",
+    "canonical_category": "wait_entry",
+    "output_subdir": "us-HWM",
+    "instrument_type": "common_equity",
+    "industry_thesis_gate": "theme_only",
+    "industry_thesis_gate_label": "目前偏題材，缺公司級落地證據",
+    "hype_risk": "low",
+    "hype_risk_label": "低",
+    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=資料不足；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
+    "industry_thesis_missing_evidence": [
+      "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+      "近 7 日公開新聞熱度未命中或未抓取",
+      "缺少明確後續產業 KPI",
+      "缺少公司級官方營收、訂單、財報或法說支撐"
+    ]
   }
 ]
 ```
@@ -133,32 +138,15 @@ Every `source_ledger.json` must include:
   "items": [
     {
       "market_key": "us",
-      "symbol": "ING",
-      "output_subdir": "us-ING",
+      "symbol": "HOG",
+      "output_subdir": "us-HOG",
       "status": "complete|partial|blocked",
       "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
       "artifacts": {
-        "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-ING/source_ledger.json",
-        "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-ING/tearsheet.html",
-        "initiation": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-ING/initiation.html",
-        "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-ING/risk_plan.html"
-      },
-      "missing_evidence": [],
-      "industry_thesis_gate": null,
-      "hype_risk": null,
-      "notes": ""
-    },
-    {
-      "market_key": "us",
-      "symbol": "ISRG",
-      "output_subdir": "us-ISRG",
-      "status": "complete|partial|blocked",
-      "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
-      "artifacts": {
-        "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-ISRG/source_ledger.json",
-        "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-ISRG/tearsheet.html",
-        "initiation": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-ISRG/initiation.html",
-        "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-ISRG/risk_plan.html"
+        "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-HOG/source_ledger.json",
+        "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-HOG/tearsheet.html",
+        "initiation": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-HOG/initiation.html",
+        "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-HOG/risk_plan.html"
       },
       "missing_evidence": [],
       "industry_thesis_gate": "theme_only",
@@ -167,19 +155,36 @@ Every `source_ledger.json` must include:
     },
     {
       "market_key": "us",
-      "symbol": "KKR",
-      "output_subdir": "us-KKR",
+      "symbol": "HSY",
+      "output_subdir": "us-HSY",
       "status": "complete|partial|blocked",
       "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
       "artifacts": {
-        "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-KKR/source_ledger.json",
-        "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-KKR/tearsheet.html",
-        "initiation": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-KKR/initiation.html",
-        "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-KKR/risk_plan.html"
+        "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-HSY/source_ledger.json",
+        "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-HSY/tearsheet.html",
+        "initiation": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-HSY/initiation.html",
+        "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-HSY/risk_plan.html"
       },
       "missing_evidence": [],
       "industry_thesis_gate": null,
       "hype_risk": null,
+      "notes": ""
+    },
+    {
+      "market_key": "us",
+      "symbol": "HWM",
+      "output_subdir": "us-HWM",
+      "status": "complete|partial|blocked",
+      "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
+      "artifacts": {
+        "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-HWM/source_ledger.json",
+        "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-HWM/tearsheet.html",
+        "initiation": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-HWM/initiation.html",
+        "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-HWM/risk_plan.html"
+      },
+      "missing_evidence": [],
+      "industry_thesis_gate": "theme_only",
+      "hype_risk": "low",
       "notes": ""
     }
   ],

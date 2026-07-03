@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-03 06:42:53",
+  "generated_at": "2026-07-04 06:44:50",
   "output_root": "reports/public-equity-batch/2026-07-02-us-kline",
   "workorders_dir": "reports/public-equity-batch/2026-07-02-us-kline/workorders",
   "status_values": [
@@ -21,8 +21,8 @@
     "initiating-coverage",
     "portfolio-risk-management"
   ],
-  "batch_count": 32,
-  "item_count": 96,
+  "batch_count": 33,
+  "item_count": 99,
   "batches": [
     {
       "batch_id": "batch-001",
@@ -565,6 +565,42 @@
         },
         {
           "market_key": "us",
+          "symbol": "NI",
+          "output_subdir": "us-NI",
+          "status": "partial",
+          "recommendation_label": "Watch only",
+          "artifacts": {
+            "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-NI/source_ledger.json",
+            "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-NI/tearsheet.html",
+            "initiation": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-NI/initiation.html",
+            "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-NI/risk_plan.html"
+          },
+          "missing_evidence": [
+            "本 report-scope PEI artifact 由 StockLoop 本地 KOL/news、industry thesis 與 quote ledger 生成；尚未逐檔執行完整 Public Equity Investing specialist research",
+            "尚缺官方 filings / 年報 / 法說 transcript / IR presentation 查核",
+            "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
+            "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
+            "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
+            "估值 handoff 缺失：valuation multiples missing",
+            "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
+          ],
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
+        }
+      ]
+    },
+    {
+      "batch_id": "batch-007",
+      "status": "partial",
+      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-007.json",
+      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-007.prompt.md",
+      "items": [
+        {
+          "market_key": "us",
           "symbol": "OKE",
           "output_subdir": "us-OKE",
           "status": "partial",
@@ -591,21 +627,13 @@
           ],
           "industry_thesis_gate": "theme_only",
           "hype_risk": "low"
-        }
-      ]
-    },
-    {
-      "batch_id": "batch-007",
-      "status": "partial",
-      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-007.json",
-      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-007.prompt.md",
-      "items": [
+        },
         {
           "market_key": "us",
           "symbol": "PEG",
           "output_subdir": "us-PEG",
           "status": "partial",
-          "recommendation_label": "Watch only",
+          "recommendation_label": "Not decision-ready",
           "artifacts": {
             "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-PEG/source_ledger.json",
             "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-PEG/tearsheet.html",
@@ -618,7 +646,7 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
-            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis Gate=炒作或擁擠交易風險偏高；炒作風險=高",
             "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
             "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
             "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
@@ -626,8 +654,8 @@
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
             "官方證據 handoff 缺失：缺少公司級官方營收、訂單、財報或法說支撐"
           ],
-          "industry_thesis_gate": "theme_only",
-          "hype_risk": "low"
+          "industry_thesis_gate": "hype_or_crowded",
+          "hype_risk": "high"
         },
         {
           "market_key": "us",
@@ -657,7 +685,15 @@
           ],
           "industry_thesis_gate": "theme_only",
           "hype_risk": "low"
-        },
+        }
+      ]
+    },
+    {
+      "batch_id": "batch-008",
+      "status": "partial",
+      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-008.json",
+      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-008.prompt.md",
+      "items": [
         {
           "market_key": "us",
           "symbol": "PPL",
@@ -686,15 +722,7 @@
           ],
           "industry_thesis_gate": "theme_only",
           "hype_risk": "low"
-        }
-      ]
-    },
-    {
-      "batch_id": "batch-008",
-      "status": "partial",
-      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-008.json",
-      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-008.prompt.md",
-      "items": [
+        },
         {
           "market_key": "us",
           "symbol": "PTC",
@@ -752,7 +780,15 @@
           ],
           "industry_thesis_gate": "theme_only",
           "hype_risk": "low"
-        },
+        }
+      ]
+    },
+    {
+      "batch_id": "batch-009",
+      "status": "partial",
+      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-009.json",
+      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-009.prompt.md",
+      "items": [
         {
           "market_key": "us",
           "symbol": "SAP",
@@ -781,15 +817,7 @@
           ],
           "industry_thesis_gate": "theme_only",
           "hype_risk": "low"
-        }
-      ]
-    },
-    {
-      "batch_id": "batch-009",
-      "status": "partial",
-      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-009.json",
-      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-009.prompt.md",
-      "items": [
+        },
         {
           "market_key": "us",
           "symbol": "VICI",
@@ -847,7 +875,15 @@
           ],
           "industry_thesis_gate": "theme_only",
           "hype_risk": "low"
-        },
+        }
+      ]
+    },
+    {
+      "batch_id": "batch-010",
+      "status": "partial",
+      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-010.json",
+      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-010.prompt.md",
+      "items": [
         {
           "market_key": "us",
           "symbol": "ABT",
@@ -877,15 +913,7 @@
           ],
           "industry_thesis_gate": "theme_only",
           "hype_risk": "low"
-        }
-      ]
-    },
-    {
-      "batch_id": "batch-010",
-      "status": "partial",
-      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-010.json",
-      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-010.prompt.md",
-      "items": [
+        },
         {
           "market_key": "us",
           "symbol": "AG",
@@ -904,11 +932,16 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         },
         {
           "market_key": "us",
@@ -928,12 +961,25 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
-        },
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
+        }
+      ]
+    },
+    {
+      "batch_id": "batch-011",
+      "status": "partial",
+      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-011.json",
+      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-011.prompt.md",
+      "items": [
         {
           "market_key": "us",
           "symbol": "AR",
@@ -952,20 +998,17 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
-        }
-      ]
-    },
-    {
-      "batch_id": "batch-011",
-      "status": "partial",
-      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-011.json",
-      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-011.prompt.md",
-      "items": [
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
+        },
         {
           "market_key": "us",
           "symbol": "AS",
@@ -984,11 +1027,16 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         },
         {
           "market_key": "us",
@@ -1008,12 +1056,25 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
-        },
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
+        }
+      ]
+    },
+    {
+      "batch_id": "batch-012",
+      "status": "partial",
+      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-012.json",
+      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-012.prompt.md",
+      "items": [
         {
           "market_key": "us",
           "symbol": "BF.B",
@@ -1032,20 +1093,17 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
-        }
-      ]
-    },
-    {
-      "batch_id": "batch-012",
-      "status": "partial",
-      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-012.json",
-      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-012.prompt.md",
-      "items": [
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
+        },
         {
           "market_key": "us",
           "symbol": "BHP",
@@ -1064,11 +1122,16 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         },
         {
           "market_key": "us",
@@ -1088,12 +1151,25 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
-        },
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
+        }
+      ]
+    },
+    {
+      "batch_id": "batch-013",
+      "status": "partial",
+      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-013.json",
+      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-013.prompt.md",
+      "items": [
         {
           "market_key": "us",
           "symbol": "BTI",
@@ -1112,20 +1188,41 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
+        },
+        {
+          "market_key": "us",
+          "symbol": "CAVA",
+          "output_subdir": "us-CAVA",
+          "status": "partial",
+          "recommendation_label": "Wait for trigger",
+          "artifacts": {
+            "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-CAVA/source_ledger.json",
+            "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-CAVA/tearsheet.html",
+            "initiation": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-CAVA/initiation.html",
+            "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-CAVA/risk_plan.html"
+          },
+          "missing_evidence": [
+            "本 report-scope PEI artifact 由 StockLoop 本地 KOL/news、industry thesis 與 quote ledger 生成；尚未逐檔執行完整 Public Equity Investing specialist research",
+            "尚缺官方 filings / 年報 / 法說 transcript / IR presentation 查核",
+            "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
+            "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
+            "價格來源限制：Yahoo quote resolver timed out during PEI fetch; value copied from local usStock/reports/2026-07-02.md close column. Not a live or official quote.",
+            "官方公司/證券身分驗證未完成",
+            "估值 handoff 缺失：valuation multiples missing"
+          ],
           "industry_thesis_gate": null,
           "hype_risk": null
-        }
-      ]
-    },
-    {
-      "batch_id": "batch-013",
-      "status": "partial",
-      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-013.json",
-      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-013.prompt.md",
-      "items": [
+        },
         {
           "market_key": "us",
           "symbol": "CDE",
@@ -1144,8 +1241,45 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
+          ],
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
+        }
+      ]
+    },
+    {
+      "batch_id": "batch-014",
+      "status": "partial",
+      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-014.json",
+      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-014.prompt.md",
+      "items": [
+        {
+          "market_key": "us",
+          "symbol": "CNX",
+          "output_subdir": "us-CNX",
+          "status": "partial",
+          "recommendation_label": "Wait for trigger",
+          "artifacts": {
+            "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-CNX/source_ledger.json",
+            "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-CNX/tearsheet.html",
+            "initiation": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-CNX/initiation.html",
+            "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-CNX/risk_plan.html"
+          },
+          "missing_evidence": [
+            "本 report-scope PEI artifact 由 StockLoop 本地 KOL/news、industry thesis 與 quote ledger 生成；尚未逐檔執行完整 Public Equity Investing specialist research",
+            "尚缺官方 filings / 年報 / 法說 transcript / IR presentation 查核",
+            "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
+            "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
+            "價格來源限制：Yahoo quote resolver timed out during PEI fetch; value copied from local usStock/reports/2026-07-02.md close column. Not a live or official quote.",
+            "官方公司/證券身分驗證未完成",
+            "估值 handoff 缺失：valuation multiples missing"
           ],
           "industry_thesis_gate": null,
           "hype_risk": null
@@ -1168,11 +1302,16 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=中",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "medium"
         },
         {
           "market_key": "us",
@@ -1192,19 +1331,24 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         }
       ]
     },
     {
-      "batch_id": "batch-014",
+      "batch_id": "batch-015",
       "status": "partial",
-      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-014.json",
-      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-014.prompt.md",
+      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-015.json",
+      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-015.prompt.md",
       "items": [
         {
           "market_key": "us",
@@ -1224,11 +1368,16 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         },
         {
           "market_key": "us",
@@ -1248,11 +1397,16 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         },
         {
           "market_key": "us",
@@ -1272,19 +1426,24 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         }
       ]
     },
     {
-      "batch_id": "batch-015",
+      "batch_id": "batch-016",
       "status": "partial",
-      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-015.json",
-      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-015.prompt.md",
+      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-016.json",
+      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-016.prompt.md",
       "items": [
         {
           "market_key": "us",
@@ -1304,11 +1463,16 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         },
         {
           "market_key": "us",
@@ -1328,11 +1492,16 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         },
         {
           "market_key": "us",
@@ -1352,19 +1521,24 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         }
       ]
     },
     {
-      "batch_id": "batch-016",
+      "batch_id": "batch-017",
       "status": "partial",
-      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-016.json",
-      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-016.prompt.md",
+      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-017.json",
+      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-017.prompt.md",
       "items": [
         {
           "market_key": "us",
@@ -1384,11 +1558,16 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         },
         {
           "market_key": "us",
@@ -1408,11 +1587,16 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         },
         {
           "market_key": "us",
@@ -1432,19 +1616,24 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         }
       ]
     },
     {
-      "batch_id": "batch-017",
+      "batch_id": "batch-018",
       "status": "partial",
-      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-017.json",
-      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-017.prompt.md",
+      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-018.json",
+      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-018.prompt.md",
       "items": [
         {
           "market_key": "us",
@@ -1464,11 +1653,16 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         },
         {
           "market_key": "us",
@@ -1488,11 +1682,16 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         },
         {
           "market_key": "us",
@@ -1512,26 +1711,31 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         }
       ]
     },
     {
-      "batch_id": "batch-018",
+      "batch_id": "batch-019",
       "status": "partial",
-      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-018.json",
-      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-018.prompt.md",
+      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-019.json",
+      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-019.prompt.md",
       "items": [
         {
           "market_key": "us",
           "symbol": "FR",
           "output_subdir": "us-FR",
           "status": "partial",
-          "recommendation_label": "Wait for trigger",
+          "recommendation_label": "Not decision-ready",
           "artifacts": {
             "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-FR/source_ledger.json",
             "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-FR/tearsheet.html",
@@ -1544,11 +1748,16 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=炒作或擁擠交易風險偏高；炒作風險=高",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "hype_or_crowded",
+          "hype_risk": "high"
         },
         {
           "market_key": "us",
@@ -1568,11 +1777,16 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         },
         {
           "market_key": "us",
@@ -1592,26 +1806,31 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         }
       ]
     },
     {
-      "batch_id": "batch-019",
+      "batch_id": "batch-020",
       "status": "partial",
-      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-019.json",
-      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-019.prompt.md",
+      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-020.json",
+      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-020.prompt.md",
       "items": [
         {
           "market_key": "us",
           "symbol": "GT",
           "output_subdir": "us-GT",
           "status": "partial",
-          "recommendation_label": "Wait for trigger",
+          "recommendation_label": "Not decision-ready",
           "artifacts": {
             "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-GT/source_ledger.json",
             "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-GT/tearsheet.html",
@@ -1624,11 +1843,16 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=炒作或擁擠交易風險偏高；炒作風險=高",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "hype_or_crowded",
+          "hype_risk": "high"
         },
         {
           "market_key": "us",
@@ -1648,11 +1872,16 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         },
         {
           "market_key": "us",
@@ -1672,19 +1901,24 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         }
       ]
     },
     {
-      "batch_id": "batch-020",
+      "batch_id": "batch-021",
       "status": "partial",
-      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-020.json",
-      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-020.prompt.md",
+      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-021.json",
+      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-021.prompt.md",
       "items": [
         {
           "market_key": "us",
@@ -1704,8 +1938,37 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
+          ],
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
+        },
+        {
+          "market_key": "us",
+          "symbol": "HSY",
+          "output_subdir": "us-HSY",
+          "status": "partial",
+          "recommendation_label": "Wait for trigger",
+          "artifacts": {
+            "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-HSY/source_ledger.json",
+            "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-HSY/tearsheet.html",
+            "initiation": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-HSY/initiation.html",
+            "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-HSY/risk_plan.html"
+          },
+          "missing_evidence": [
+            "本 report-scope PEI artifact 由 StockLoop 本地 KOL/news、industry thesis 與 quote ledger 生成；尚未逐檔執行完整 Public Equity Investing specialist research",
+            "尚缺官方 filings / 年報 / 法說 transcript / IR presentation 查核",
+            "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
+            "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
+            "價格來源限制：Yahoo quote resolver timed out during PEI fetch; value copied from local usStock/reports/2026-07-02.md close column. Not a live or official quote.",
+            "官方公司/證券身分驗證未完成",
+            "估值 handoff 缺失：valuation multiples missing"
           ],
           "industry_thesis_gate": null,
           "hype_risk": null
@@ -1728,12 +1991,25 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
-        },
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
+        }
+      ]
+    },
+    {
+      "batch_id": "batch-022",
+      "status": "partial",
+      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-022.json",
+      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-022.prompt.md",
+      "items": [
         {
           "market_key": "us",
           "symbol": "IAG",
@@ -1752,20 +2028,17 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
-        }
-      ]
-    },
-    {
-      "batch_id": "batch-021",
-      "status": "partial",
-      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-021.json",
-      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-021.prompt.md",
-      "items": [
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
+        },
         {
           "market_key": "us",
           "symbol": "ING",
@@ -1784,11 +2057,16 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         },
         {
           "market_key": "us",
@@ -1819,7 +2097,15 @@
           ],
           "industry_thesis_gate": "theme_only",
           "hype_risk": "low"
-        },
+        }
+      ]
+    },
+    {
+      "batch_id": "batch-023",
+      "status": "partial",
+      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-023.json",
+      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-023.prompt.md",
+      "items": [
         {
           "market_key": "us",
           "symbol": "KKR",
@@ -1838,20 +2124,17 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
-        }
-      ]
-    },
-    {
-      "batch_id": "batch-022",
-      "status": "partial",
-      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-022.json",
-      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-022.prompt.md",
-      "items": [
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
+        },
         {
           "market_key": "us",
           "symbol": "KMI",
@@ -1870,11 +2153,16 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         },
         {
           "market_key": "us",
@@ -1894,12 +2182,25 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
-        },
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
+        }
+      ]
+    },
+    {
+      "batch_id": "batch-024",
+      "status": "partial",
+      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-024.json",
+      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-024.prompt.md",
+      "items": [
         {
           "market_key": "us",
           "symbol": "KTOS",
@@ -1918,20 +2219,17 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=中",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
-        }
-      ]
-    },
-    {
-      "batch_id": "batch-023",
-      "status": "partial",
-      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-023.json",
-      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-023.prompt.md",
-      "items": [
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "medium"
+        },
         {
           "market_key": "us",
           "symbol": "LKQ",
@@ -1950,11 +2248,16 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         },
         {
           "market_key": "us",
@@ -1974,12 +2277,25 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
-        },
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
+        }
+      ]
+    },
+    {
+      "batch_id": "batch-025",
+      "status": "partial",
+      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-025.json",
+      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-025.prompt.md",
+      "items": [
         {
           "market_key": "us",
           "symbol": "MIAX",
@@ -1998,20 +2314,17 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
-        }
-      ]
-    },
-    {
-      "batch_id": "batch-024",
-      "status": "partial",
-      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-024.json",
-      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-024.prompt.md",
-      "items": [
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
+        },
         {
           "market_key": "us",
           "symbol": "MO",
@@ -2030,11 +2343,16 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         },
         {
           "market_key": "us",
@@ -2054,18 +2372,31 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
-        },
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
+        }
+      ]
+    },
+    {
+      "batch_id": "batch-026",
+      "status": "partial",
+      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-026.json",
+      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-026.prompt.md",
+      "items": [
         {
           "market_key": "us",
           "symbol": "MT",
           "output_subdir": "us-MT",
           "status": "partial",
-          "recommendation_label": "Wait for trigger",
+          "recommendation_label": "Not decision-ready",
           "artifacts": {
             "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-MT/source_ledger.json",
             "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-MT/tearsheet.html",
@@ -2078,43 +2409,16 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=炒作或擁擠交易風險偏高；炒作風險=高",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
-        }
-      ]
-    },
-    {
-      "batch_id": "batch-025",
-      "status": "partial",
-      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-025.json",
-      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-025.prompt.md",
-      "items": [
-        {
-          "market_key": "us",
-          "symbol": "NI",
-          "output_subdir": "us-NI",
-          "status": "partial",
-          "recommendation_label": "Wait for trigger",
-          "artifacts": {
-            "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-NI/source_ledger.json",
-            "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-NI/tearsheet.html",
-            "initiation": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-NI/initiation.html",
-            "risk_plan": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-NI/risk_plan.html"
-          },
-          "missing_evidence": [
-            "本 report-scope PEI artifact 由 StockLoop 本地 KOL/news、industry thesis 與 quote ledger 生成；尚未逐檔執行完整 Public Equity Investing specialist research",
-            "尚缺官方 filings / 年報 / 法說 transcript / IR presentation 查核",
-            "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
-            "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
-            "官方公司/證券身分驗證未完成",
-            "估值 handoff 缺失：valuation multiples missing",
-            "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
-          ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "hype_or_crowded",
+          "hype_risk": "high"
         },
         {
           "market_key": "us",
@@ -2134,11 +2438,16 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         },
         {
           "market_key": "us",
@@ -2158,19 +2467,24 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         }
       ]
     },
     {
-      "batch_id": "batch-026",
+      "batch_id": "batch-027",
       "status": "partial",
-      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-026.json",
-      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-026.prompt.md",
+      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-027.json",
+      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-027.prompt.md",
       "items": [
         {
           "market_key": "us",
@@ -2190,11 +2504,16 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         },
         {
           "market_key": "us",
@@ -2214,11 +2533,16 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         },
         {
           "market_key": "us",
@@ -2238,19 +2562,24 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         }
       ]
     },
     {
-      "batch_id": "batch-027",
+      "batch_id": "batch-028",
       "status": "partial",
-      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-027.json",
-      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-027.prompt.md",
+      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-028.json",
+      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-028.prompt.md",
       "items": [
         {
           "market_key": "us",
@@ -2270,11 +2599,16 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         },
         {
           "market_key": "us",
@@ -2294,11 +2628,16 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         },
         {
           "market_key": "us",
@@ -2318,19 +2657,24 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         }
       ]
     },
     {
-      "batch_id": "batch-028",
+      "batch_id": "batch-029",
       "status": "partial",
-      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-028.json",
-      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-028.prompt.md",
+      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-029.json",
+      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-029.prompt.md",
       "items": [
         {
           "market_key": "us",
@@ -2350,11 +2694,16 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         },
         {
           "market_key": "us",
@@ -2404,26 +2753,31 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         }
       ]
     },
     {
-      "batch_id": "batch-029",
+      "batch_id": "batch-030",
       "status": "partial",
-      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-029.json",
-      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-029.prompt.md",
+      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-030.json",
+      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-030.prompt.md",
       "items": [
         {
           "market_key": "us",
           "symbol": "SBET",
           "output_subdir": "us-SBET",
           "status": "partial",
-          "recommendation_label": "Wait for trigger",
+          "recommendation_label": "Not decision-ready",
           "artifacts": {
             "source_ledger": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-SBET/source_ledger.json",
             "tearsheet": "reports/public-equity-batch/2026-07-02-us-kline/companies/us-SBET/tearsheet.html",
@@ -2436,11 +2790,16 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=炒作或擁擠交易風險偏高；炒作風險=高",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "hype_or_crowded",
+          "hype_risk": "high"
         },
         {
           "market_key": "us",
@@ -2460,11 +2819,16 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         },
         {
           "market_key": "us",
@@ -2484,19 +2848,24 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         }
       ]
     },
     {
-      "batch_id": "batch-030",
+      "batch_id": "batch-031",
       "status": "partial",
-      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-030.json",
-      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-030.prompt.md",
+      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-031.json",
+      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-031.prompt.md",
       "items": [
         {
           "market_key": "us",
@@ -2516,11 +2885,16 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         },
         {
           "market_key": "us",
@@ -2540,11 +2914,16 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         },
         {
           "market_key": "us",
@@ -2564,19 +2943,24 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         }
       ]
     },
     {
-      "batch_id": "batch-031",
+      "batch_id": "batch-032",
       "status": "partial",
-      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-031.json",
-      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-031.prompt.md",
+      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-032.json",
+      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-032.prompt.md",
       "items": [
         {
           "market_key": "us",
@@ -2596,11 +2980,16 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         },
         {
           "market_key": "us",
@@ -2620,11 +3009,16 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         },
         {
           "market_key": "us",
@@ -2644,19 +3038,24 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         }
       ]
     },
     {
-      "batch_id": "batch-032",
+      "batch_id": "batch-033",
       "status": "partial",
-      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-032.json",
-      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-032.prompt.md",
+      "batch_json": "reports/public-equity-batch/2026-07-02-us-kline/batches/batch-033.json",
+      "prompt_path": "reports/public-equity-batch/2026-07-02-us-kline/workorders/batch-033.prompt.md",
       "items": [
         {
           "market_key": "us",
@@ -2676,11 +3075,16 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=中",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "medium"
         },
         {
           "market_key": "us",
@@ -2700,11 +3104,16 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         },
         {
           "market_key": "us",
@@ -2724,15 +3133,20 @@
             "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
             "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
             "官方公司/證券身分驗證未完成",
+            "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+            "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+            "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+            "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+            "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
             "估值 handoff 缺失：valuation multiples missing",
             "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
           ],
-          "industry_thesis_gate": null,
-          "hype_risk": null
+          "industry_thesis_gate": "theme_only",
+          "hype_risk": "low"
         }
       ]
     }
   ],
   "status": "partial",
-  "completed_at": "2026-07-03T06:46:06"
+  "completed_at": "2026-07-04T06:49:53"
 }

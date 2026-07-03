@@ -17,8 +17,8 @@
 - 來源主觀看法：不建議追高
 - 布局建議：先等回測支撐或隔日收復上影線後再評估
 - 持倉建議：若已有持倉，避免在上影線壓力未化解前放大部位
-- 追蹤指標：三均線趨勢策略：3MA；收盤位置 28.0%；振幅 9.0%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=空方趨勢結束；buyCount 1；今日買點 3MA；估算成交金額USD 2,197,180,029
-- 風險：上影線壓力重：64.6%
+- 追蹤指標：三均線趨勢策略：3MA；收盤位置 28.1%；振幅 9.0%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=空方趨勢結束；buyCount 1；今日買點 3MA；估算成交金額USD 2,233,587,436
+- 風險：上影線壓力重：66.1%
 
 ## 產業前景與炒作風險
 
@@ -39,7 +39,7 @@
 - 模型部位：0% pre-trigger; reassess only after trigger and full PEI evidence
 - 風險預算：0.0
 - 下檔/停損距離：20d_low distance 20.37%; 20D low 80 (input only; PM must verify)
-- 流動性上限：20D avg trade value 3,057,498,552.35; PM must define liquidity cap
+- 流動性上限：20D avg trade value 3,059,318,922.7; PM must define liquidity cap
 - 避險姿態：No hedge; model portfolio remains cash for this name until evidence clears
 - 加碼規則：Open or add only after full PEI specialist workflow confirms thesis, trigger, current price context, liquidity, and risk/reward
 - 減碼規則：Trim or keep watch-only if source thesis, price trigger, or company-level evidence weakens

@@ -17,15 +17,15 @@
 - 來源主觀看法：中性觀察
 - 布局建議：先等回測支撐、突破續強或量縮沉澱後再評估
 - 持倉建議：若已有持倉，維持小部位觀察，不在確認前放大風險
-- 追蹤指標：Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 39.8%；振幅 2.7%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=多方趨勢開始；buyCount 1；今日買點 LZEMA20；波幅放大 rangeRatio 1.63；估算成交金額USD 116,920,492
+- 追蹤指標：Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 39.6%；振幅 2.7%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=多方趨勢開始；buyCount 1；今日買點 LZEMA20；波幅放大 rangeRatio 1.64；成交量高於均量 volumeRatio 1.20；估算成交金額USD 125,488,486
 - 風險：未見硬性排除條件，仍需追蹤隔日量價與大盤風險
 
 ## 產業前景與炒作風險
 
-- 產業 Gate：尚未接入
-- 炒作風險：未知
-- 摘要：尚未產出公司級產業 thesis
-- 缺失證據：無
+- 產業 Gate：目前偏題材，缺公司級落地證據
+- 炒作風險：低
+- 摘要：Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=資料不足；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。
+- 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定；近 7 日公開新聞熱度未命中或未抓取；缺少明確後續產業 KPI；缺少公司級官方營收、訂單、財報或法說支撐
 
 ## 3 個月到 3 年投資視角
 
@@ -39,7 +39,7 @@
 - 模型部位：0% pre-trigger; reassess only after trigger and full PEI evidence
 - 風險預算：0.0
 - 下檔/停損距離：20d_low distance 13.72%; 20D low 30.94 (input only; PM must verify)
-- 流動性上限：20D avg trade value 99,207,821.3; PM must define liquidity cap
+- 流動性上限：20D avg trade value 99,636,221; PM must define liquidity cap
 - 避險姿態：No hedge; model portfolio remains cash for this name until evidence clears
 - 加碼規則：Open or add only after full PEI specialist workflow confirms thesis, trigger, current price context, liquidity, and risk/reward
 - 減碼規則：Trim or keep watch-only if source thesis, price trigger, or company-level evidence weakens
@@ -54,6 +54,11 @@
 - 尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out
 - valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議
 - 官方公司/證券身分驗證未完成
+- 產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低
+- 產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定
+- 產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取
+- 產業 thesis 缺失證據：缺少明確後續產業 KPI
+- 產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐
 - 估值 handoff 缺失：valuation multiples missing
 - 官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定
 
