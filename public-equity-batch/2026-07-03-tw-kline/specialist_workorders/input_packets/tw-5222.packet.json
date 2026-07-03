@@ -1,0 +1,360 @@
+{
+  "generated_at": "2026-07-03 16:14:26",
+  "output_root": "reports/public-equity-batch/2026-07-03-tw-kline",
+  "symbol": "5222",
+  "company": "全訊",
+  "output_subdir": "tw-5222",
+  "state": "awaiting_result",
+  "prompt_path": "reports/public-equity-batch/2026-07-03-tw-kline/specialist_workorders/tw-5222.specialist.prompt.md",
+  "expected_result_path": "reports/public-equity-batch/2026-07-03-tw-kline/specialist_workorders/tw-5222.result.json",
+  "next_required_workflows": [
+    "company-tearsheet + initiating-coverage",
+    "comps-valuation",
+    "portfolio-risk-management"
+  ],
+  "specialist_skills": [
+    "company-tearsheet",
+    "comps-valuation",
+    "initiating-coverage",
+    "portfolio-risk-management"
+  ],
+  "required_source_ledger_objects": [
+    "research_underwrite",
+    "investment_horizon",
+    "valuation",
+    "risk_assessment"
+  ],
+  "incomplete_objects": [],
+  "handoff_statuses": {
+    "quote": "resolved",
+    "official_evidence": "input_ready",
+    "valuation": "input_ready",
+    "risk": "input_ready"
+  },
+  "horizon_rule": "PEI horizon is 3 months to 3 years: 3M timing/catalyst, 12M base underwrite, and 3Y ownership thesis all require sourced specialist evidence.",
+  "completion_rule": "This packet is input only. It must not mark research_status, valuation_status, risk_status, investment_horizon, or decision-ready gates complete by itself.",
+  "universe_item": {
+    "market_key": "tw",
+    "market": "TWSE",
+    "symbol": "5222",
+    "company": "全訊",
+    "industry": "資料未提供",
+    "canonical_category": "wait_entry",
+    "canonical_category_label": "現在不能買，但值得等買點名單",
+    "source_priority": 4,
+    "instrument_type": "common_equity",
+    "output_subdir": "tw-5222",
+    "instrument": {
+      "symbol": "5222",
+      "market_key": "tw",
+      "market": "TWSE",
+      "exchange": "TWSE",
+      "currency": "TWD",
+      "provider_symbol": "5222.TW",
+      "instrument_type": "common_equity",
+      "status": "ok",
+      "official_validation_status": "not_checked",
+      "equity_model_supported": true,
+      "warnings": [],
+      "output_subdir": "tw-5222"
+    },
+    "exchange": "TWSE",
+    "currency": "TWD",
+    "provider_symbol": "5222.TW",
+    "identity_status": "ok",
+    "official_validation_status": "not_checked",
+    "equity_model_supported": true,
+    "instrument_warnings": [],
+    "industry_thesis_gate": null,
+    "industry_thesis_gate_label": null,
+    "hype_risk": null,
+    "hype_risk_label": null,
+    "industry_thesis_summary": "",
+    "industry_thesis_missing_evidence": [],
+    "industry_thesis_source": "",
+    "model_portfolio": {
+      "portfolio_units": 100,
+      "long_only": true,
+      "leverage_allowed": false,
+      "single_name_cap": 0.05,
+      "risk_budget_initial": 0.0,
+      "risk_budget_post_trigger": 0.005,
+      "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+    },
+    "sources": [
+      {
+        "lane": "tw_kline",
+        "lane_label": "台股 K-line",
+        "category": "wait_entry",
+        "category_label": "現在不能買，但值得等買點名單",
+        "report_path": "reports/twStock/2026-07-03_tw_kline_decision_report.md",
+        "row_index": 50,
+        "expanded_index": 0,
+        "raw_market": "TWSE",
+        "raw_symbol_cell": "5222",
+        "raw_company_cell": "全訊",
+        "raw_row": {
+          "市場": "TWSE",
+          "股票代號": "5222",
+          "公司名稱": "全訊",
+          "產業": "資料未提供",
+          "來源提及程度": "三均線買點",
+          "來源主觀看法": "不建議追高",
+          "布局建議": "先等回測支撐或隔日收復上影線後再評估",
+          "持倉建議": "若已有持倉，避免在上影線壓力未化解前放大部位",
+          "追蹤指標": "三均線趨勢策略：3MA；收盤位置 50.0%；振幅 6.3%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=多方趨勢開始；buyCount 1；今日買點 3MA；波幅放大 rangeRatio 1.88；爆量 volumeRatio 2.36；成交金額 164,037,511",
+          "風險": "上影線壓力重：50.0%"
+        }
+      }
+    ]
+  },
+  "existing_source_ledger": {
+    "path": "reports/public-equity-batch/2026-07-03-tw-kline/companies/tw-5222/source_ledger.json",
+    "exists": true,
+    "recommendation_label": "Wait for trigger",
+    "research_status": "partial",
+    "valuation_status": "not_run",
+    "risk_status": "not_run",
+    "horizon_status": "partial",
+    "missing_evidence": [
+      "本 report-scope PEI artifact 由 StockLoop 本地 KOL/news、industry thesis 與 quote ledger 生成；尚未逐檔執行完整 Public Equity Investing specialist research",
+      "尚缺官方 filings / 年報 / 法說 transcript / IR presentation 查核",
+      "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
+      "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議"
+    ],
+    "market_data": {
+      "current_price": {
+        "value": 123.0,
+        "currency": "TWD",
+        "as_of": "2026-07-02",
+        "source": "twse_official_latest_close",
+        "retrieved_at": "2026-07-03T08:13:17Z",
+        "warnings": []
+      }
+    }
+  },
+  "quote": {
+    "symbol": "5222",
+    "provider_symbol": "5222.TW",
+    "close": 123.0,
+    "currency": "TWD",
+    "as_of": "2026-07-02",
+    "source": "twse_official_latest_close",
+    "retrieved_at": "2026-07-03T08:13:17Z",
+    "fallback_rank": 1,
+    "market_state": "CLOSE",
+    "warnings": []
+  },
+  "official_evidence": {
+    "symbol": "5222",
+    "market_key": "tw",
+    "company": "全訊",
+    "generated_at": "2026-07-03T08:13:33Z",
+    "official_evidence_handoff_status": "input_ready",
+    "official_validation": {
+      "status": "validated",
+      "source": "TWSE company",
+      "url": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+      "industry": "半導體業",
+      "company": "全訊科技股份有限公司"
+    },
+    "fundamental_signals": [
+      {
+        "type": "monthly_revenue",
+        "period": "11505",
+        "current_month_revenue": 59688.0,
+        "mom_growth_pct": -34.278069566940836,
+        "yoy_growth_pct": -12.441138934119614,
+        "source": "TWSE monthly revenue",
+        "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L"
+      }
+    ],
+    "missing_inputs": [],
+    "sources": [
+      {
+        "source_name": "StockLoop industry thesis company exposure evidence",
+        "source_type": "local_industry_thesis_evidence",
+        "path": "/Users/willcoming/code/stockLoop/reports/industry-thesis/2026-07-03_industry_thesis.json",
+        "retrieved_at": "2026-07-03T08:13:33Z",
+        "used_by": [
+          "official_evidence_handoff.json"
+        ]
+      },
+      {
+        "source_name": "TWSE company",
+        "source_type": "direct_official_company_profile",
+        "url": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+        "retrieved_at": "2026-07-03T08:13:33Z",
+        "used_by": [
+          "official_evidence_handoff.json"
+        ]
+      },
+      {
+        "source_name": "TWSE monthly revenue",
+        "source_type": "direct_official_monthly_revenue",
+        "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+        "as_of": "11505",
+        "retrieved_at": "2026-07-03T08:13:33Z",
+        "used_by": [
+          "official_evidence_handoff.json"
+        ]
+      }
+    ],
+    "next_step": "Use official filings, monthly revenue, SEC companyfacts, earnings-call or management-commentary evidence in PEI specialist research before setting research_status=complete."
+  },
+  "valuation_input": {
+    "symbol": "5222",
+    "market_key": "tw",
+    "company": "全訊",
+    "provider_symbol": "5222.TW",
+    "generated_at": "2026-07-03T08:13:19Z",
+    "valuation_handoff_status": "input_ready",
+    "valuation_status": "not_run",
+    "current_price": {
+      "value": 123.0,
+      "currency": "TWD",
+      "as_of": "2026-07-02",
+      "source": "twse_official_latest_close"
+    },
+    "metrics": {
+      "trailing_pe": 65.78,
+      "price_to_book": 4.66,
+      "dividend_yield": 2.03,
+      "source": "TWSE BWIBBU valuation",
+      "as_of": "2026-07-02",
+      "retrieved_at": "2026-07-03T08:13:19Z",
+      "fiscal_period": "2026Q1"
+    },
+    "methods": [
+      {
+        "method": "market_multiple_input",
+        "metric": "trailing_pe",
+        "value": 65.78,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-07-02",
+        "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+      },
+      {
+        "method": "market_multiple_input",
+        "metric": "price_to_book",
+        "value": 4.66,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-07-02",
+        "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+      },
+      {
+        "method": "market_multiple_input",
+        "metric": "dividend_yield",
+        "value": 2.03,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-07-02",
+        "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+      }
+    ],
+    "sources": [
+      {
+        "source_name": "twse_official_latest_close",
+        "source_type": "market_price",
+        "symbol": "5222",
+        "as_of": "2026-07-02",
+        "retrieved_at": "2026-07-03T08:13:17Z",
+        "used_by": [
+          "valuation_handoff.json"
+        ]
+      },
+      {
+        "source_name": "TWSE BWIBBU valuation",
+        "source_type": "valuation_metrics",
+        "symbol": "5222.TW",
+        "as_of": "2026-07-02",
+        "retrieved_at": "2026-07-03T08:13:19Z",
+        "warning": "",
+        "used_by": [
+          "valuation_handoff.json"
+        ]
+      }
+    ],
+    "missing_inputs": [],
+    "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+  },
+  "risk_input": {
+    "symbol": "5222",
+    "market_key": "tw",
+    "company": "全訊",
+    "generated_at": "2026-07-03T08:13:38Z",
+    "risk_handoff_status": "input_ready",
+    "current_price": {
+      "value": 123.0,
+      "currency": "TWD",
+      "as_of": "2026-07-02",
+      "source": "twse_official_latest_close"
+    },
+    "risk_inputs": {
+      "low_20d": 110.5,
+      "high_60d": 153.0,
+      "downside_reference": "20d_low",
+      "downside_distance_pct": 10.1626,
+      "drawdown_from_60d_high_pct": 19.6078,
+      "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+    },
+    "liquidity_inputs": {
+      "history_days": 60,
+      "latest_history_date": "2026-07-03",
+      "latest_volume": 1275626.0,
+      "latest_trade_value": 164037511.0,
+      "average_volume_20d": 586387.9,
+      "average_trade_value_20d": 70998474.0,
+      "source": "local_daily_bars"
+    },
+    "model_portfolio_inputs": {
+      "portfolio_units": 100,
+      "single_name_cap": 0.05,
+      "risk_budget_initial": 0.0,
+      "screen_size_by_downside": null,
+      "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+      "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+    },
+    "sources": [
+      {
+        "source_name": "twse_official_latest_close",
+        "source_type": "market_price",
+        "symbol": "5222",
+        "as_of": "2026-07-02",
+        "retrieved_at": "2026-07-03T08:13:17Z",
+        "used_by": [
+          "risk_handoff.json"
+        ]
+      },
+      {
+        "source_name": "StockLoop local daily_bars",
+        "source_type": "local_ohlcv_history",
+        "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+        "latest_history_date": "2026-07-03",
+        "history_days": 60,
+        "retrieved_at": "2026-07-03T08:13:38Z",
+        "used_by": [
+          "risk_handoff.json"
+        ]
+      }
+    ],
+    "missing_inputs": [],
+    "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+  },
+  "expected_result_contract": {
+    "status": "complete|partial|blocked",
+    "updated_source_ledger": "reports/public-equity-batch/2026-07-03-tw-kline/companies/tw-5222/source_ledger.json",
+    "source_ledger_patch_fields": [
+      "official_validation_status",
+      "official_validation",
+      "research_status",
+      "research_underwrite",
+      "investment_horizon",
+      "valuation_status",
+      "valuation",
+      "risk_status",
+      "risk_assessment",
+      "missing_evidence",
+      "sources"
+    ]
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "template_only": true,
+  "do_not_apply": "This file intentionally uses source_ledger_patch_template, not source_ledger_patch. Fill it, rename/copy to expected_result_path, and replace source_ledger_patch_template with source_ledger_patch only after PEI specialist work is complete.",
+  "symbol": "2009",
+  "company": "第一銅",
+  "output_subdir": "tw-2009",
+  "status": "complete|partial|blocked",
+  "completed_specialist_skills": [
+    "company-tearsheet",
+    "comps-valuation",
+    "initiating-coverage",
+    "portfolio-risk-management"
+  ],
+  "updated_source_ledger": "reports/public-equity-batch/2026-07-03-tw-kline/companies/tw-2009/source_ledger.json",
+  "updated_objects": [
+    "research_underwrite",
+    "investment_horizon",
+    "valuation",
+    "risk_assessment"
+  ],
+  "source_ledger_patch_template": {
+    "research_status": "__complete|partial|blocked__",
+    "research_underwrite": {
+      "summary": "",
+      "underwriting_status": "",
+      "thesis": "",
+      "key_debates": "",
+      "catalysts": "",
+      "risks": "",
+      "disconfirming_evidence": "",
+      "monitoring_items": "",
+      "as_of": "",
+      "source_register": [
+        {
+          "source": "",
+          "as_of": "",
+          "notes": ""
+        }
+      ]
+    },
+    "investment_horizon": {
+      "status": "__complete|partial__",
+      "near_term_3m": "",
+      "base_12m": "",
+      "long_term_3y": "",
+      "falsifiers": [],
+      "as_of": "",
+      "source_register": [
+        {
+          "source": "",
+          "as_of": "",
+          "horizon_fields": [
+            "near_term_3m",
+            "base_12m",
+            "long_term_3y"
+          ],
+          "notes": ""
+        }
+      ]
+    },
+    "valuation_status": "__not_run|complete__",
+    "valuation": {
+      "summary": "",
+      "as_of": "",
+      "posture": "",
+      "methods": [
+        {
+          "method": "",
+          "source": "",
+          "as_of": "",
+          "inputs": {},
+          "gaps": []
+        }
+      ]
+    },
+    "risk_status": "__not_run|complete__",
+    "risk_assessment": {
+      "summary": "",
+      "implementation_readiness": "",
+      "binding_constraint": "",
+      "downside_or_stop_distance": "",
+      "liquidity_cap": "",
+      "recommended_size": "",
+      "max_loss_posture": "",
+      "monitoring_rules": "",
+      "as_of": "",
+      "evidence": [
+        {
+          "source": "",
+          "as_of": "",
+          "notes": ""
+        }
+      ]
+    },
+    "missing_evidence": [],
+    "resolved_missing_evidence": [],
+    "sources": []
+  },
+  "missing_evidence": [],
+  "notes": "",
+  "expected_result_path": "reports/public-equity-batch/2026-07-03-tw-kline/specialist_workorders/tw-2009.result.json",
+  "packet_json": "reports/public-equity-batch/2026-07-03-tw-kline/specialist_workorders/input_packets/tw-2009.packet.json",
+  "gate_checklists": {
+    "research_underwrite": [
+      "research_status=complete only if sourced initiating coverage is complete",
+      "research_underwrite.summary",
+      "research_underwrite.underwriting_status",
+      "research_underwrite.thesis",
+      "research_underwrite.key_debates",
+      "research_underwrite.catalysts",
+      "research_underwrite.risks",
+      "research_underwrite.disconfirming_evidence",
+      "research_underwrite.monitoring_items",
+      "research_underwrite.as_of or retrieved_at",
+      "research_underwrite.source_register non-empty",
+      "each research_underwrite.source_register record has source/source_name/url/file_path and as_of or retrieved_at"
+    ],
+    "investment_horizon": [
+      "investment_horizon.status=complete",
+      "investment_horizon.near_term_3m",
+      "investment_horizon.base_12m",
+      "investment_horizon.long_term_3y",
+      "investment_horizon.falsifiers non-empty",
+      "investment_horizon.as_of or retrieved_at",
+      "investment_horizon.source_register non-empty",
+      "investment_horizon.source_register covers near_term_3m, base_12m, and long_term_3y"
+    ],
+    "valuation": [
+      "valuation_status=complete only after sourced valuation work",
+      "valuation.summary",
+      "valuation.as_of or retrieved_at",
+      "valuation.posture",
+      "valuation.methods non-empty with peer/sector method, inputs, source dates, and gaps",
+      "each valuation.methods record has method, source/source_name/url/file_path, and as_of or retrieved_at"
+    ],
+    "risk_assessment": [
+      "risk_status=complete only after sourced portfolio-risk-management work",
+      "risk_assessment.summary",
+      "risk_assessment.implementation_readiness",
+      "risk_assessment.binding_constraint",
+      "risk_assessment.downside_or_stop_distance",
+      "risk_assessment.liquidity_cap",
+      "risk_assessment.recommended_size",
+      "risk_assessment.max_loss_posture",
+      "risk_assessment.monitoring_rules",
+      "risk_assessment.as_of or retrieved_at",
+      "risk_assessment.evidence non-empty",
+      "each risk_assessment.evidence record has source/source_name/url/file_path and as_of or retrieved_at"
+    ]
+  }
+}
