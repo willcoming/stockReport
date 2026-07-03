@@ -1,0 +1,105 @@
+# StockLoop PEI 批次摘要 2026-07-03
+
+- 產出時間：2026-07-03 08:00:43
+- 標的池檔數：35
+- 已具備目前價格與研究狀態的列數：35
+- Decision-ready 檔數：0
+- 完整報告：[complete_report.md](complete_report.md) / [complete_report.html](complete_report.html)
+- 驗證報告：[validation_report.json](validation_report.json)
+- 標的池資料：[universe.json](universe.json)
+- 批次：[batches/](batches/)
+
+## 這次 PEI 到底做了什麼
+
+這次是 decision-report PEI：來源報告中的候選名單定義研究宇宙，模型投組仍以 100 units cash、long-only、no leverage 為基準。
+
+PEI 在本批次實際完成的是「研究包與模型投組風險姿態整理」，不是完整逐檔基本面盡調，也不是下單建議：
+
+- 建立研究宇宙：納入 35 檔標的；來源為 reports/news/2026-07-03_kol_news_decision_report.md。
+- 讀入本機證據：庫存健檢動作、最新可得報價、近一週 K 線觸發、APEX 價格風控與既有 StockLoop 訊號。
+- 逐檔產生 PEI artifact：每檔都有 `summary.html`、`summary.md`、`source_ledger.json`、`tearsheet.html`、`initiation.html`、`risk_plan.html`。
+- 轉成模型投組語言：輸出 `recommendation_matrix.csv` 與 `model_portfolio_risk_plan.csv`，用 `Model portfolio candidate / Wait for trigger / Watch only / Not decision-ready` 表示研究姿態。
+- 分開四個 decision-ready gate：`research_status`、`valuation_status`、`risk_status`、`investment_horizon.status`。四者未同時 complete 時，不得解讀為「現在可買」。
+- 控制模型部位：35 檔模型部位為 0%，因為本批次沒有完成官方 filings、法說、consensus、估值模型、流動性與風險報酬 tie-out。
+- 回寫庫存健檢：將 PEI 統計與逐檔摘要整合回庫存健檢報告，但最終庫存動作仍由庫存健檢整合 PEI、技術、分類與 APEX 後決定。
+
+本批次統計：
+- Not decision-ready（尚未達決策等級）：2 檔。尚未達決策等級：證據缺口或風險太高，不適合放入模型投組候選；在庫存健檢中通常對應賣出/排除風控。
+- Wait for trigger（等待觸發）：24 檔。等待觸發：題材或持倉仍值得追蹤，但技術觸發、基本面證據或風險報酬尚未同時到位，模型投組觸發前維持 0%。
+- Watch only（僅觀察）：9 檔。僅觀察：可保留在研究宇宙中追蹤，但目前不開模型部位；通常代表持倉健檢為續抱/減碼/需證據補強。
+- 研究狀態 partial（證據仍不足）：35 檔。
+- 期限 underwrite partial（3M/12M/3Y underwrite 未完整）：35 檔。
+
+## 怎麼讀這份 PEI 輸出
+
+- `recommendation_matrix.csv`：逐檔研究姿態與缺失證據摘要。
+- `model_portfolio_risk_plan.csv`：逐檔模型投組部位、風險預算、加碼/減碼/退出規則。
+- `companies/<market-symbol>/summary.html`：逐檔可點擊 HTML 摘要；這是最適合從本索引點進去看的版本。
+- `companies/<market-symbol>/summary.md`：逐檔 Markdown 原始摘要。
+- `companies/<market-symbol>/source_ledger.json`：逐檔來源台帳，記錄用了哪些本機證據與價格資料。
+- `companies/<market-symbol>/initiation.html`：逐檔研究快照，包含目前價格、研究姿態、主要觸發、主要風險與缺失證據。
+- `companies/<market-symbol>/risk_plan.html`：逐檔模型投組風險計畫。本批次多數為 0% 模型部位，代表還不能升級成 PEI decision-ready 候選。
+
+## 研究狀態
+
+- partial（證據仍不足）: 35
+
+## 風控狀態
+
+- not_run（尚未完成 PM 風控/流動性/sizing gate）: 35
+
+## 期限 underwrite
+
+- partial（3M/12M/3Y underwrite 未完整）: 35
+
+## Decision-ready gate
+
+- 否: 35
+
+## 下一步 PEI workflow
+
+- investment_horizon_not_complete: 35
+- official_validation_not_complete: 13
+- research_status_not_complete: 35
+- risk_status_not_complete: 35
+- valuation_status_not_complete: 35
+
+## 建議矩陣
+
+| 代號 | 公司 | 分類 | 目前價格 | 價格時間 | Decision-ready | 下一步 workflow | 研究狀態 | 風控狀態 | 期限 underwrite | 研究標籤 | PEI摘要 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1514 | 亞力 | 現在可以買名單 | 121.5 TWD | 2026-07-02 | 否 | company-tearsheet + initiating-coverage; comps-valuation; portfolio-risk-management | partial（證據仍不足） | not_run（尚未完成 PM 風控/流動性/sizing gate） | partial（3M/12M/3Y underwrite 未完整） | Watch only（僅觀察） | [摘要](companies/tw-1514/summary.html) |
+| 2454 | 聯發科 | 現在可以買名單 | 4,345 TWD | 2026-07-02 | 否 | company-tearsheet + initiating-coverage; comps-valuation; portfolio-risk-management | partial（證據仍不足） | not_run（尚未完成 PM 風控/流動性/sizing gate） | partial（3M/12M/3Y underwrite 未完整） | Watch only（僅觀察） | [摘要](companies/tw-2454/summary.html) |
+| 2464 | 盟立 | 現在可以買名單 | 183.5 TWD | 2026-07-02 | 否 | company-tearsheet + initiating-coverage; comps-valuation; portfolio-risk-management | partial（證據仍不足） | not_run（尚未完成 PM 風控/流動性/sizing gate） | partial（3M/12M/3Y underwrite 未完整） | Watch only（僅觀察） | [摘要](companies/tw-2464/summary.html) |
+| 3042 | 晶技 | 現在可以買名單 | 226.5 TWD | 2026-07-02 | 否 | company-tearsheet + initiating-coverage; comps-valuation; portfolio-risk-management | partial（證據仍不足） | not_run（尚未完成 PM 風控/流動性/sizing gate） | partial（3M/12M/3Y underwrite 未完整） | Watch only（僅觀察） | [摘要](companies/tw-3042/summary.html) |
+| 3675 | 德微 | 現在可以買名單 | 407 TWD | 2026-07-02 | 否 | company-tearsheet + initiating-coverage; comps-valuation; portfolio-risk-management | partial（證據仍不足） | not_run（尚未完成 PM 風控/流動性/sizing gate） | partial（3M/12M/3Y underwrite 未完整） | Watch only（僅觀察） | [摘要](companies/tw-3675/summary.html) |
+| 6139 | 亞翔 | 現在可以買名單 | 939 TWD | 2026-07-02 | 否 | company-tearsheet + initiating-coverage; comps-valuation; portfolio-risk-management | partial（證據仍不足） | not_run（尚未完成 PM 風控/流動性/sizing gate） | partial（3M/12M/3Y underwrite 未完整） | Watch only（僅觀察） | [摘要](companies/tw-6139/summary.html) |
+| 6196 | 帆宣 | 現在可以買名單 | 588 TWD | 2026-07-02 | 否 | company-tearsheet + initiating-coverage; comps-valuation; portfolio-risk-management | partial（證據仍不足） | not_run（尚未完成 PM 風控/流動性/sizing gate） | partial（3M/12M/3Y underwrite 未完整） | Watch only（僅觀察） | [摘要](companies/tw-6196/summary.html) |
+| 6409 | 旭隼 | 現在可以買名單 | 1,185 TWD | 2026-07-02 | 否 | company-tearsheet + initiating-coverage; comps-valuation; portfolio-risk-management | partial（證據仍不足） | not_run（尚未完成 PM 風控/流動性/sizing gate） | partial（3M/12M/3Y underwrite 未完整） | Watch only（僅觀察） | [摘要](companies/tw-6409/summary.html) |
+| 6669 | 緯穎 | 現在可以買名單 | 5,200 TWD | 2026-07-02 | 否 | company-tearsheet + initiating-coverage; comps-valuation; portfolio-risk-management | partial（證據仍不足） | not_run（尚未完成 PM 風控/流動性/sizing gate） | partial（3M/12M/3Y underwrite 未完整） | Watch only（僅觀察） | [摘要](companies/tw-6669/summary.html) |
+| UBER | Uber | 現在可以買名單 | 74.43 USD | 2026-07-02T20:00:03Z | 否 | official-evidence review; company-tearsheet + initiating-coverage; comps-valuation; portfolio-risk-management | partial（證據仍不足） | not_run（尚未完成 PM 風控/流動性/sizing gate） | partial（3M/12M/3Y underwrite 未完整） | Not decision-ready（尚未達決策等級） | [摘要](companies/us-UBER/summary.html) |
+| XBI | SPDR 生技 ETF | 現在可以買名單 | 160.46 USD | 2026-07-02T20:00:00Z | 否 | official-evidence review; company-tearsheet + initiating-coverage; comps-valuation; portfolio-risk-management | partial（證據仍不足） | not_run（尚未完成 PM 風控/流動性/sizing gate） | partial（3M/12M/3Y underwrite 未完整） | Not decision-ready（尚未達決策等級） | [摘要](companies/us-XBI/summary.html) |
+| 2329 | 華泰 | 現在不能買，但值得等買點名單 | 53.1 TWD | 2026-07-02 | 否 | company-tearsheet + initiating-coverage; comps-valuation; portfolio-risk-management | partial（證據仍不足） | not_run（尚未完成 PM 風控/流動性/sizing gate） | partial（3M/12M/3Y underwrite 未完整） | Wait for trigger（等待觸發） | [摘要](companies/tw-2329/summary.html) |
+| 2330 | 台積電 | 現在不能買，但值得等買點名單 | 2,465 TWD | 2026-07-02 | 否 | company-tearsheet + initiating-coverage; comps-valuation; portfolio-risk-management | partial（證據仍不足） | not_run（尚未完成 PM 風控/流動性/sizing gate） | partial（3M/12M/3Y underwrite 未完整） | Wait for trigger（等待觸發） | [摘要](companies/tw-2330/summary.html) |
+| 2409 | 友達 | 現在不能買，但值得等買點名單 | 30.5 TWD | 2026-07-02 | 否 | company-tearsheet + initiating-coverage; comps-valuation; portfolio-risk-management | partial（證據仍不足） | not_run（尚未完成 PM 風控/流動性/sizing gate） | partial（3M/12M/3Y underwrite 未完整） | Wait for trigger（等待觸發） | [摘要](companies/tw-2409/summary.html) |
+| 3008 | 大立光 | 現在不能買，但值得等買點名單 | 4,295 TWD | 2026-07-02 | 否 | company-tearsheet + initiating-coverage; comps-valuation; portfolio-risk-management | partial（證據仍不足） | not_run（尚未完成 PM 風控/流動性/sizing gate） | partial（3M/12M/3Y underwrite 未完整） | Wait for trigger（等待觸發） | [摘要](companies/tw-3008/summary.html) |
+| 3221 | 台嘉碩 | 現在不能買，但值得等買點名單 | 64 TWD | 2026-07-02 | 否 | company-tearsheet + initiating-coverage; comps-valuation; portfolio-risk-management | partial（證據仍不足） | not_run（尚未完成 PM 風控/流動性/sizing gate） | partial（3M/12M/3Y underwrite 未完整） | Wait for trigger（等待觸發） | [摘要](companies/tw-3221/summary.html) |
+| 3443 | 創意 | 現在不能買，但值得等買點名單 | 5,330 TWD | 2026-07-02 | 否 | company-tearsheet + initiating-coverage; comps-valuation; portfolio-risk-management | partial（證據仍不足） | not_run（尚未完成 PM 風控/流動性/sizing gate） | partial（3M/12M/3Y underwrite 未完整） | Wait for trigger（等待觸發） | [摘要](companies/tw-3443/summary.html) |
+| 3481 | 群創 | 現在不能買，但值得等買點名單 | 67.6 TWD | 2026-07-02 | 否 | company-tearsheet + initiating-coverage; comps-valuation; portfolio-risk-management | partial（證據仍不足） | not_run（尚未完成 PM 風控/流動性/sizing gate） | partial（3M/12M/3Y underwrite 未完整） | Wait for trigger（等待觸發） | [摘要](companies/tw-3481/summary.html) |
+| 3661 | 世芯-KY | 現在不能買，但值得等買點名單 | 4,895 TWD | 2026-07-02 | 否 | company-tearsheet + initiating-coverage; comps-valuation; portfolio-risk-management | partial（證據仍不足） | not_run（尚未完成 PM 風控/流動性/sizing gate） | partial（3M/12M/3Y underwrite 未完整） | Wait for trigger（等待觸發） | [摘要](companies/tw-3661/summary.html) |
+| 6127 | 九豪 | 現在不能買，但值得等買點名單 | 90.6 TWD | 2026-07-02 | 否 | company-tearsheet + initiating-coverage; comps-valuation; portfolio-risk-management | partial（證據仍不足） | not_run（尚未完成 PM 風控/流動性/sizing gate） | partial（3M/12M/3Y underwrite 未完整） | Wait for trigger（等待觸發） | [摘要](companies/tw-6127/summary.html) |
+| 6174 | 安碁 | 現在不能買，但值得等買點名單 | 56.2 TWD | 2026-07-02 | 否 | company-tearsheet + initiating-coverage; comps-valuation; portfolio-risk-management | partial（證據仍不足） | not_run（尚未完成 PM 風控/流動性/sizing gate） | partial（3M/12M/3Y underwrite 未完整） | Wait for trigger（等待觸發） | [摘要](companies/tw-6174/summary.html) |
+| 7795 | 長廣 | 現在不能買，但值得等買點名單 | 611 TWD | 2026-07-02 | 否 | company-tearsheet + initiating-coverage; comps-valuation; portfolio-risk-management | partial（證據仍不足） | not_run（尚未完成 PM 風控/流動性/sizing gate） | partial（3M/12M/3Y underwrite 未完整） | Wait for trigger（等待觸發） | [摘要](companies/tw-7795/summary.html) |
+| 8033 | 雷虎 | 現在不能買，但值得等買點名單 | 186 TWD | 2026-07-02 | 否 | company-tearsheet + initiating-coverage; comps-valuation; portfolio-risk-management | partial（證據仍不足） | not_run（尚未完成 PM 風控/流動性/sizing gate） | partial（3M/12M/3Y underwrite 未完整） | Wait for trigger（等待觸發） | [摘要](companies/tw-8033/summary.html) |
+| 8182 | 加高 | 現在不能買，但值得等買點名單 | 55.3 TWD | 2026-07-02 | 否 | company-tearsheet + initiating-coverage; comps-valuation; portfolio-risk-management | partial（證據仍不足） | not_run（尚未完成 PM 風控/流動性/sizing gate） | partial（3M/12M/3Y underwrite 未完整） | Wait for trigger（等待觸發） | [摘要](companies/tw-8182/summary.html) |
+| AAPL | Apple | 現在不能買，但值得等買點名單 | 308.63 USD | 2026-07-02T20:00:01Z | 否 | official-evidence review; company-tearsheet + initiating-coverage; comps-valuation; portfolio-risk-management | partial（證據仍不足） | not_run（尚未完成 PM 風控/流動性/sizing gate） | partial（3M/12M/3Y underwrite 未完整） | Wait for trigger（等待觸發） | [摘要](companies/us-AAPL/summary.html) |
+| AMD | AMD | 現在不能買，但值得等買點名單 | 517.82 USD | 2026-07-02T20:00:01Z | 否 | official-evidence review; company-tearsheet + initiating-coverage; comps-valuation; portfolio-risk-management | partial（證據仍不足） | not_run（尚未完成 PM 風控/流動性/sizing gate） | partial（3M/12M/3Y underwrite 未完整） | Wait for trigger（等待觸發） | [摘要](companies/us-AMD/summary.html) |
+| AVGO | Broadcom | 現在不能買，但值得等買點名單 | 360.45 USD | 2026-07-02T20:00:00Z | 否 | official-evidence review; company-tearsheet + initiating-coverage; comps-valuation; portfolio-risk-management | partial（證據仍不足） | not_run（尚未完成 PM 風控/流動性/sizing gate） | partial（3M/12M/3Y underwrite 未完整） | Wait for trigger（等待觸發） | [摘要](companies/us-AVGO/summary.html) |
+| BIIB | Biogen | 現在不能買，但值得等買點名單 | 216.12 USD | 2026-07-02T20:00:01Z | 否 | official-evidence review; company-tearsheet + initiating-coverage; comps-valuation; portfolio-risk-management | partial（證據仍不足） | not_run（尚未完成 PM 風控/流動性/sizing gate） | partial（3M/12M/3Y underwrite 未完整） | Wait for trigger（等待觸發） | [摘要](companies/us-BIIB/summary.html) |
+| GLW | 康寧 | 現在不能買，但值得等買點名單 | 196.79 USD | 2026-07-02T20:04:14Z | 否 | official-evidence review; company-tearsheet + initiating-coverage; comps-valuation; portfolio-risk-management | partial（證據仍不足） | not_run（尚未完成 PM 風控/流動性/sizing gate） | partial（3M/12M/3Y underwrite 未完整） | Wait for trigger（等待觸發） | [摘要](companies/us-GLW/summary.html) |
+| LLY | Eli Lilly | 現在不能買，但值得等買點名單 | 1,213.91 USD | 2026-07-02T20:03:34Z | 否 | official-evidence review; company-tearsheet + initiating-coverage; comps-valuation; portfolio-risk-management | partial（證據仍不足） | not_run（尚未完成 PM 風控/流動性/sizing gate） | partial（3M/12M/3Y underwrite 未完整） | Wait for trigger（等待觸發） | [摘要](companies/us-LLY/summary.html) |
+| META | Meta | 現在不能買，但值得等買點名單 | 582.9 USD | 2026-07-02T20:00:00Z | 否 | official-evidence review; company-tearsheet + initiating-coverage; comps-valuation; portfolio-risk-management | partial（證據仍不足） | not_run（尚未完成 PM 風控/流動性/sizing gate） | partial（3M/12M/3Y underwrite 未完整） | Wait for trigger（等待觸發） | [摘要](companies/us-META/summary.html) |
+| MSFT | Microsoft | 現在不能買，但值得等買點名單 | 390.49 USD | 2026-07-02T20:00:01Z | 否 | official-evidence review; company-tearsheet + initiating-coverage; comps-valuation; portfolio-risk-management | partial（證據仍不足） | not_run（尚未完成 PM 風控/流動性/sizing gate） | partial（3M/12M/3Y underwrite 未完整） | Wait for trigger（等待觸發） | [摘要](companies/us-MSFT/summary.html) |
+| NVDA | NVIDIA | 現在不能買，但值得等買點名單 | 194.83 USD | 2026-07-02T20:00:01Z | 否 | official-evidence review; company-tearsheet + initiating-coverage; comps-valuation; portfolio-risk-management | partial（證據仍不足） | not_run（尚未完成 PM 風控/流動性/sizing gate） | partial（3M/12M/3Y underwrite 未完整） | Wait for trigger（等待觸發） | [摘要](companies/us-NVDA/summary.html) |
+| ORCL | Oracle | 現在不能買，但值得等買點名單 | 140.27 USD | 2026-07-02T20:05:02Z | 否 | official-evidence review; company-tearsheet + initiating-coverage; comps-valuation; portfolio-risk-management | partial（證據仍不足） | not_run（尚未完成 PM 風控/流動性/sizing gate） | partial（3M/12M/3Y underwrite 未完整） | Wait for trigger（等待觸發） | [摘要](companies/us-ORCL/summary.html) |
+| PLTR | Palantir | 現在不能買，但值得等買點名單 | 129.3 USD | 2026-07-02T20:00:00Z | 否 | official-evidence review; company-tearsheet + initiating-coverage; comps-valuation; portfolio-risk-management | partial（證據仍不足） | not_run（尚未完成 PM 風控/流動性/sizing gate） | partial（3M/12M/3Y underwrite 未完整） | Wait for trigger（等待觸發） | [摘要](companies/us-PLTR/summary.html) |
