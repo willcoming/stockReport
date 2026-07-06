@@ -1,0 +1,93 @@
+{
+  "batch_id": "batch-015",
+  "batch_index": 15,
+  "batch_size": 1,
+  "generated_at": "2026-07-07 07:57:25",
+  "output_root": "reports/public-equity-batch/2026-07-07",
+  "source_reports": [
+    "reports/news/2026-07-07_kol_news_decision_report.md"
+  ],
+  "workflow": [
+    "company-tearsheet",
+    "comps-valuation",
+    "initiating-coverage",
+    "portfolio-risk-management"
+  ],
+  "items": [
+    {
+      "market_key": "us",
+      "market": "美股",
+      "symbol": "SPY",
+      "company": "標普500",
+      "industry": "大盤ETF",
+      "canonical_category": "wait_entry",
+      "canonical_category_label": "現在不能買，但值得等買點名單",
+      "source_priority": 3,
+      "instrument_type": "fund_or_etf",
+      "output_subdir": "us-SPY",
+      "instrument": {
+        "symbol": "SPY",
+        "market_key": "us",
+        "market": "美股",
+        "exchange": "NYSEARCA",
+        "currency": "USD",
+        "provider_symbol": "SPY",
+        "instrument_type": "fund_or_etf",
+        "status": "unsupported_equity_model",
+        "official_validation_status": "not_checked",
+        "equity_model_supported": false,
+        "warnings": [],
+        "output_subdir": "us-SPY"
+      },
+      "exchange": "NYSEARCA",
+      "currency": "USD",
+      "provider_symbol": "SPY",
+      "identity_status": "unsupported_equity_model",
+      "official_validation_status": "not_checked",
+      "equity_model_supported": false,
+      "instrument_warnings": [],
+      "industry_thesis_gate": null,
+      "industry_thesis_gate_label": null,
+      "hype_risk": null,
+      "hype_risk_label": null,
+      "industry_thesis_summary": "",
+      "industry_thesis_missing_evidence": [],
+      "industry_thesis_source": "",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "risk_budget_post_trigger": 0.005,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+      },
+      "sources": [
+        {
+          "lane": "kol",
+          "lane_label": "KOL/news",
+          "category": "wait_entry",
+          "category_label": "現在不能買，但值得等買點名單",
+          "report_path": "reports/news/2026-07-07_kol_news_decision_report.md",
+          "row_index": 25,
+          "expanded_index": 0,
+          "raw_market": "美股",
+          "raw_symbol_cell": "SPY",
+          "raw_company_cell": "標普500 (推論)",
+          "raw_row": {
+            "市場": "美股",
+            "股票代號": "SPY",
+            "公司名稱": "標普500 (推論)",
+            "產業": "大盤ETF",
+            "來源提及程度": "游庭皓/TALK君",
+            "來源主觀看法": "偏多",
+            "布局建議": "高位震盪，等待7-10%回調後佈局",
+            "持倉建議": "長期持有",
+            "追蹤指標": "CPI通膨數據",
+            "風險": "科技巨頭估值過高拖累大盤"
+          }
+        }
+      ]
+    }
+  ]
+}
