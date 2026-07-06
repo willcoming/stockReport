@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TSLA PEI summary</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,"Noto Sans TC",sans-serif;line-height:1.5;color:#172026;margin:0;background:#fff}
+main{max-width:920px;margin:0 auto;padding:28px}
+h1{font-size:28px;margin:0 0 10px}h2{font-size:18px;border-top:1px solid #d7dde2;padding-top:16px;margin-top:24px}
+.meta{color:#5e6a72}.callout{border-left:4px solid #195a7a;background:#f4f7f9;padding:12px 14px;margin:14px 0}
+table{border-collapse:collapse;width:100%;font-size:14px}th,td{border-bottom:1px solid #d7dde2;padding:8px;text-align:left;vertical-align:top}th{background:#f4f7f9}
+ul{padding-left:22px}
+</style>
+</head>
+<body><main>
+<h1>TSLA 特斯拉 / Tesla - PEI 摘要</h1>
+<p class="meta">Inventory-scope PEI artifact. Research status: partial.</p>
+<section class="callout">這是 inventory-scope PEI 摘要：庫存只定義研究宇宙；模型投組基準為 100 units cash、long-only、no leverage，未使用券商、股數、成本或個人持股比例。</section>
+<h2>Research Snapshot / 研究快照</h2>
+<table>
+<tr><th>Research posture</th><td>Watch only</td></tr>
+<tr><th>Research status</th><td>partial</td></tr>
+<tr><th>Valuation status</th><td>not_run</td></tr>
+<tr><th>Risk status</th><td>not_run</td></tr>
+<tr><th>Current price / 目前價格</th><td>393.45 USD</td></tr>
+<tr><th>Price as of</th><td>2026-07-02T20:00:00Z</td></tr>
+<tr><th>Source</th><td>yahoo_finance_chart_api:query2.finance.yahoo.com (TSLA)</td></tr>
+<tr><th>3M/12M/3Y status</th><td>partial</td></tr>
+</table>
+<h2>PEI 做了什麼</h2>
+<ul>
+<li>讀入庫存健檢動作、最新可得報價、近一週 K 線觸發與 StockLoop 本機證據。</li>
+<li>轉成模型投組研究語言與風險姿態。</li>
+<li>本檔尚未完成完整 official filings、法說、consensus、估值模型、流動性與風險報酬 tie-out。</li>
+</ul>
+<h2>庫存健檢脈絡</h2>
+<table>
+<tr><th>Action</th><td>減碼</td></tr>
+<tr><th>Reason</th><td>近一週出現 K-line 賣點、權重集中或特殊題材波動，且 PEI 仍為 partial / not decision-ready，盤前先降低風險曝險。</td></tr>
+<tr><th>Recent trigger</th><td>2026-07-02 賣出：觸及賣點數 2；2026-06-29 買進：LZEMA20/3MA</td></tr>
+<tr><th>Scenario</th><td>APEX 本輪未取得可靠逐檔數值停損門檻；只作價格風險監控，不覆蓋 PEI/技術風控。</td></tr>
+<tr><th>Invalidation</th><td>PEI：官方營收、毛利、估值或 thesis 證據轉弱需重估；APEX：需後續補可靠數值支撐/失效價。</td></tr>
+</table>
+<h2>產業前景與炒作風險</h2>
+<table>
+<tr><th>Industry thesis gate</th><td>目前偏題材，缺公司級落地證據</td></tr>
+<tr><th>Hype risk</th><td>低</td></tr>
+<tr><th>Summary</th><td>Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=庫存回補 / 週期復甦；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。</td></tr>
+<tr><th>Missing evidence</th><td>SEC company tickers 未命中或 SEC_USER_AGENT 未設定; 近 7 日公開新聞熱度未命中或未抓取; 缺少明確後續產業 KPI; 缺少公司級官方營收、訂單、財報或法說支撐</td></tr>
+</table>
+<h2>3 個月到 3 年投資視角</h2>
+<table>
+<tr><th>3 months</th><td>Inventory-scope artifact uses health-check, K-line, and APEX context as a timing/risk screen only; 3-month thesis is not fully underwritten.</td></tr>
+<tr><th>12 months</th><td>Requires official filings, earnings-call commentary, consensus/estimate context, and valuation work before a 12-month PEI view can be decision-ready.</td></tr>
+<tr><th>3 years</th><td>Requires full PEI specialist research or source-backed industry/company underwrite before a 3-year ownership thesis can be decision-ready.</td></tr>
+<tr><th>Falsifiers</th><td>Official revenue, margin, EPS, cash-flow, order, or management commentary weakens the thesis.; Current valuation already prices the optimistic case without margin of safety.; Liquidity, downside distance, or risk budget cannot support model-portfolio sizing.</td></tr>
+</table>
+<h2>模型投組風險計畫</h2>
+<table>
+<tr><th>Model size</th><td>0%; watch only until thesis and risk evidence improve</td></tr>
+<tr><th>Risk budget</th><td>0.0</td></tr>
+<tr><th>Downside / stop</th><td>20d_low distance 6.32%; 20D low 368.6 (input only; PM must verify)</td></tr>
+<tr><th>Liquidity cap</th><td>20D avg trade value 19,737,961,355.65; PM must define liquidity cap</td></tr>
+<tr><th>Add rule</th><td>Open or add only after full PEI specialist workflow confirms thesis, trigger, price context, liquidity, and risk/reward</td></tr>
+<tr><th>Trim rule</th><td>近一週出現 K-line 賣點、權重集中或特殊題材波動，且 PEI 仍為 partial / not decision-ready，盤前先降低風險曝險。</td></tr>
+<tr><th>Exit rule</th><td>PEI：官方營收、毛利、估值或 thesis 證據轉弱需重估；APEX：需後續補可靠數值支撐/失效價。</td></tr>
+</table>
+<h2>缺失證據</h2>
+<ul><li>本 inventory-scope PEI 批次未逐檔執行完整官方 filings、法說、consensus、估值模型與流動性模型查核</li><li>個人庫存僅用於定義研究宇宙；模型投組 sizing 未使用券商、股數或成本</li><li>需以公司公告、交易所/SEC 文件與正式 PEI specialist workflow 補強後，才可升級為 decision-ready</li><li>官方公司/證券身分驗證未完成</li><li>健康檢查已標示風險控管動作，模型投組維持 0%</li><li>產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低</li><li>產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定</li><li>產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取</li><li>產業 thesis 缺失證據：缺少明確後續產業 KPI</li><li>產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐</li><li>估值 handoff 缺失：valuation multiples missing</li><li>官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定</li><li>官方證據 handoff 缺失：缺少公司級官方營收、訂單、財報或法說支撐</li></ul>
+<h2>原始檔案</h2>
+<ul>
+<li><a href="summary.md">summary.md</a></li>
+<li><a href="source_ledger.json">source_ledger.json</a></li>
+<li><a href="tearsheet.html">tearsheet.html</a></li>
+<li><a href="initiation.html">initiation.html</a></li>
+<li><a href="risk_plan.html">risk_plan.html</a></li>
+</ul>
+</main></body></html>
