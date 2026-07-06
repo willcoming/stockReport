@@ -1,0 +1,293 @@
+{
+  "generated_at": "2026-07-07 06:45:12",
+  "output_root": "reports/public-equity-batch/2026-07-06-us-kline",
+  "symbol": "EPD",
+  "company": "Enterprise Products Partners L.P. Common Stock",
+  "output_subdir": "us-EPD",
+  "state": "awaiting_result",
+  "prompt_path": "reports/public-equity-batch/2026-07-06-us-kline/specialist_workorders/us-EPD.specialist.prompt.md",
+  "expected_result_path": "reports/public-equity-batch/2026-07-06-us-kline/specialist_workorders/us-EPD.result.json",
+  "next_required_workflows": [
+    "official-evidence review",
+    "company-tearsheet + initiating-coverage",
+    "comps-valuation",
+    "portfolio-risk-management"
+  ],
+  "specialist_skills": [
+    "company-tearsheet",
+    "comps-valuation",
+    "initiating-coverage",
+    "portfolio-risk-management"
+  ],
+  "required_source_ledger_objects": [
+    "official_validation",
+    "research_underwrite",
+    "investment_horizon",
+    "valuation",
+    "risk_assessment"
+  ],
+  "incomplete_objects": [],
+  "handoff_statuses": {
+    "quote": "resolved",
+    "official_evidence": "missing",
+    "valuation": "input_partial",
+    "risk": "input_ready"
+  },
+  "horizon_rule": "PEI horizon is 3 months to 3 years: 3M timing/catalyst, 12M base underwrite, and 3Y ownership thesis all require sourced specialist evidence.",
+  "completion_rule": "This packet is input only. It must not mark research_status, valuation_status, risk_status, investment_horizon, or decision-ready gates complete by itself.",
+  "universe_item": {
+    "market_key": "us",
+    "market": "NYSE",
+    "symbol": "EPD",
+    "company": "Enterprise Products Partners L.P. Common Stock",
+    "industry": "Utilities / Natural Gas Distribution",
+    "canonical_category": "wait_entry",
+    "canonical_category_label": "現在不能買，但值得等買點名單",
+    "source_priority": 5,
+    "instrument_type": "common_equity",
+    "output_subdir": "us-EPD",
+    "instrument": {
+      "symbol": "EPD",
+      "market_key": "us",
+      "market": "NYSE",
+      "exchange": "US",
+      "currency": "USD",
+      "provider_symbol": "EPD",
+      "instrument_type": "common_equity",
+      "status": "ok",
+      "official_validation_status": "not_checked",
+      "equity_model_supported": true,
+      "warnings": [],
+      "output_subdir": "us-EPD"
+    },
+    "exchange": "US",
+    "currency": "USD",
+    "provider_symbol": "EPD",
+    "identity_status": "ok",
+    "official_validation_status": "not_checked",
+    "equity_model_supported": true,
+    "instrument_warnings": [],
+    "industry_thesis_gate": null,
+    "industry_thesis_gate_label": null,
+    "hype_risk": null,
+    "hype_risk_label": null,
+    "industry_thesis_summary": "",
+    "industry_thesis_missing_evidence": [],
+    "industry_thesis_source": "",
+    "model_portfolio": {
+      "portfolio_units": 100,
+      "long_only": true,
+      "leverage_allowed": false,
+      "single_name_cap": 0.05,
+      "risk_budget_initial": 0.0,
+      "risk_budget_post_trigger": 0.005,
+      "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+    },
+    "sources": [
+      {
+        "lane": "us_kline",
+        "lane_label": "美股 K-line",
+        "category": "wait_entry",
+        "category_label": "現在不能買，但值得等買點名單",
+        "report_path": "reports/usStock/2026-07-06_us_kline_decision_report.md",
+        "row_index": 32,
+        "expanded_index": 0,
+        "raw_market": "NYSE",
+        "raw_symbol_cell": "EPD",
+        "raw_company_cell": "Enterprise Products Partners L.P. Common Stock",
+        "raw_row": {
+          "市場": "NYSE",
+          "股票代號": "EPD",
+          "公司名稱": "Enterprise Products Partners L.P. Common Stock",
+          "產業": "Utilities / Natural Gas Distribution",
+          "來源提及程度": "Legacy 買點",
+          "來源主觀看法": "中性觀察",
+          "布局建議": "先等回測支撐、突破續強或量縮沉澱後再評估",
+          "持倉建議": "若已有持倉，維持小部位觀察，不在確認前放大風險",
+          "追蹤指標": "Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 8.5%；振幅 1.6%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=空方趨勢結束；buyCount 1；今日買點 LZEMA20；估算成交金額USD 79,539,395",
+          "風險": "未見硬性排除條件，仍需追蹤隔日量價與大盤風險"
+        }
+      }
+    ]
+  },
+  "existing_source_ledger": {
+    "path": "reports/public-equity-batch/2026-07-06-us-kline/companies/us-EPD/source_ledger.json",
+    "exists": true,
+    "recommendation_label": "Wait for trigger",
+    "research_status": "partial",
+    "valuation_status": "not_run",
+    "risk_status": "not_run",
+    "horizon_status": "partial",
+    "missing_evidence": [
+      "本 report-scope PEI artifact 由 StockLoop 本地 KOL/news、industry thesis 與 quote ledger 生成；尚未逐檔執行完整 Public Equity Investing specialist research",
+      "尚缺官方 filings / 年報 / 法說 transcript / IR presentation 查核",
+      "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
+      "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
+      "官方公司/證券身分驗證未完成",
+      "估值 handoff 缺失：valuation multiples missing",
+      "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
+    ],
+    "market_data": {
+      "current_price": {
+        "value": 36.47,
+        "currency": "USD",
+        "as_of": "2026-07-06T20:00:02Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+        "retrieved_at": "2026-07-06T22:42:49Z",
+        "warnings": []
+      }
+    }
+  },
+  "quote": {
+    "symbol": "EPD",
+    "provider_symbol": "EPD",
+    "close": 36.47,
+    "currency": "USD",
+    "as_of": "2026-07-06T20:00:02Z",
+    "source": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+    "retrieved_at": "2026-07-06T22:42:49Z",
+    "fallback_rank": 3,
+    "market_state": "",
+    "warnings": []
+  },
+  "official_evidence": {
+    "symbol": "EPD",
+    "market_key": "us",
+    "company": "Enterprise Products Partners L.P. Common Stock",
+    "generated_at": "2026-07-06T22:42:55Z",
+    "official_evidence_handoff_status": "missing",
+    "official_validation": {
+      "status": "missing",
+      "sources": []
+    },
+    "fundamental_signals": [],
+    "missing_inputs": [
+      "SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
+    ],
+    "sources": [
+      {
+        "source_name": "StockLoop industry thesis company exposure evidence",
+        "source_type": "local_industry_thesis_evidence",
+        "path": "/Users/willcoming/code/stockLoop/reports/industry-thesis/2026-07-06_industry_thesis.json",
+        "retrieved_at": "2026-07-06T22:42:55Z",
+        "used_by": [
+          "official_evidence_handoff.json"
+        ]
+      }
+    ],
+    "next_step": "Use official filings, monthly revenue, SEC companyfacts, earnings-call or management-commentary evidence in PEI specialist research before setting research_status=complete."
+  },
+  "valuation_input": {
+    "symbol": "EPD",
+    "market_key": "us",
+    "company": "Enterprise Products Partners L.P. Common Stock",
+    "provider_symbol": "EPD",
+    "generated_at": "2026-07-06T22:42:55Z",
+    "valuation_handoff_status": "input_partial",
+    "valuation_status": "not_run",
+    "current_price": {
+      "value": 36.47,
+      "currency": "USD",
+      "as_of": "2026-07-06T20:00:02Z",
+      "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+    },
+    "metrics": {},
+    "methods": [],
+    "sources": [
+      {
+        "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+        "source_type": "market_price",
+        "symbol": "EPD",
+        "as_of": "2026-07-06T20:00:02Z",
+        "retrieved_at": "2026-07-06T22:42:49Z",
+        "used_by": [
+          "valuation_handoff.json"
+        ]
+      }
+    ],
+    "missing_inputs": [
+      "valuation multiples missing"
+    ],
+    "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+  },
+  "risk_input": {
+    "symbol": "EPD",
+    "market_key": "us",
+    "company": "Enterprise Products Partners L.P. Common Stock",
+    "generated_at": "2026-07-06T22:43:33Z",
+    "risk_handoff_status": "input_ready",
+    "current_price": {
+      "value": 36.47,
+      "currency": "USD",
+      "as_of": "2026-07-06T20:00:02Z",
+      "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+    },
+    "risk_inputs": {
+      "low_20d": 35.97999954223633,
+      "high_60d": 40.16999816894531,
+      "downside_reference": "20d_low",
+      "downside_distance_pct": 1.3436,
+      "drawdown_from_60d_high_pct": 9.2108,
+      "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+    },
+    "liquidity_inputs": {
+      "history_days": 60,
+      "latest_history_date": "2026-07-06",
+      "latest_volume": 2180954.0,
+      "latest_trade_value": 79539395.0,
+      "average_volume_20d": 2733142.7,
+      "average_trade_value_20d": 100563807.6,
+      "source": "local_daily_bars"
+    },
+    "model_portfolio_inputs": {
+      "portfolio_units": 100,
+      "single_name_cap": 0.05,
+      "risk_budget_initial": 0.0,
+      "screen_size_by_downside": null,
+      "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+      "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+    },
+    "sources": [
+      {
+        "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+        "source_type": "market_price",
+        "symbol": "EPD",
+        "as_of": "2026-07-06T20:00:02Z",
+        "retrieved_at": "2026-07-06T22:42:49Z",
+        "used_by": [
+          "risk_handoff.json"
+        ]
+      },
+      {
+        "source_name": "StockLoop local daily_bars",
+        "source_type": "local_ohlcv_history",
+        "path": "/Users/willcoming/code/stockLoop/usStock/data/usstock.sqlite3",
+        "latest_history_date": "2026-07-06",
+        "history_days": 60,
+        "retrieved_at": "2026-07-06T22:43:33Z",
+        "used_by": [
+          "risk_handoff.json"
+        ]
+      }
+    ],
+    "missing_inputs": [],
+    "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+  },
+  "expected_result_contract": {
+    "status": "complete|partial|blocked",
+    "updated_source_ledger": "reports/public-equity-batch/2026-07-06-us-kline/companies/us-EPD/source_ledger.json",
+    "source_ledger_patch_fields": [
+      "official_validation_status",
+      "official_validation",
+      "research_status",
+      "research_underwrite",
+      "investment_horizon",
+      "valuation_status",
+      "valuation",
+      "risk_status",
+      "risk_assessment",
+      "missing_evidence",
+      "sources"
+    ]
+  }
+}
