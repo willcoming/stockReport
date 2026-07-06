@@ -1,0 +1,294 @@
+{
+  "generated_at": "2026-07-06 21:13:06",
+  "output_root": "reports/public-equity-batch/2026-07-06-tw-kline",
+  "symbol": "3257",
+  "company": "虹冠電",
+  "output_subdir": "tw-3257",
+  "state": "awaiting_result",
+  "prompt_path": "reports/public-equity-batch/2026-07-06-tw-kline/specialist_workorders/tw-3257.specialist.prompt.md",
+  "expected_result_path": "reports/public-equity-batch/2026-07-06-tw-kline/specialist_workorders/tw-3257.result.json",
+  "next_required_workflows": [
+    "company-tearsheet + initiating-coverage",
+    "comps-valuation",
+    "portfolio-risk-management"
+  ],
+  "specialist_skills": [
+    "company-tearsheet",
+    "comps-valuation",
+    "initiating-coverage",
+    "portfolio-risk-management"
+  ],
+  "required_source_ledger_objects": [
+    "research_underwrite",
+    "investment_horizon",
+    "valuation",
+    "risk_assessment"
+  ],
+  "incomplete_objects": [
+    "research_underwrite",
+    "investment_horizon",
+    "valuation",
+    "risk_assessment"
+  ],
+  "handoff_statuses": {
+    "quote": "resolved",
+    "official_evidence": "missing",
+    "valuation": "input_partial",
+    "risk": "input_ready"
+  },
+  "horizon_rule": "PEI horizon is 3 months to 3 years: 3M timing/catalyst, 12M base underwrite, and 3Y ownership thesis all require sourced specialist evidence.",
+  "completion_rule": "This packet is input only. It must not mark research_status, valuation_status, risk_status, investment_horizon, or decision-ready gates complete by itself.",
+  "universe_item": {
+    "market_key": "tw",
+    "market": "TWSE",
+    "symbol": "3257",
+    "company": "虹冠電",
+    "industry": "半導體業",
+    "canonical_category": "wait_entry",
+    "canonical_category_label": "現在不能買，但值得等買點名單",
+    "source_priority": 4,
+    "instrument_type": "common_equity",
+    "output_subdir": "tw-3257",
+    "instrument": {
+      "symbol": "3257",
+      "market_key": "tw",
+      "market": "TWSE",
+      "exchange": "TWSE",
+      "currency": "TWD",
+      "provider_symbol": "3257.TW",
+      "instrument_type": "common_equity",
+      "status": "ok",
+      "official_validation_status": "not_checked",
+      "equity_model_supported": true,
+      "warnings": [],
+      "output_subdir": "tw-3257"
+    },
+    "exchange": "TWSE",
+    "currency": "TWD",
+    "provider_symbol": "3257.TW",
+    "identity_status": "ok",
+    "official_validation_status": "not_checked",
+    "equity_model_supported": true,
+    "instrument_warnings": [],
+    "industry_thesis_gate": null,
+    "industry_thesis_gate_label": null,
+    "hype_risk": null,
+    "hype_risk_label": null,
+    "industry_thesis_summary": "",
+    "industry_thesis_missing_evidence": [],
+    "industry_thesis_source": "",
+    "model_portfolio": {
+      "portfolio_units": 100,
+      "long_only": true,
+      "leverage_allowed": false,
+      "single_name_cap": 0.05,
+      "risk_budget_initial": 0.0,
+      "risk_budget_post_trigger": 0.005,
+      "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+    },
+    "sources": [
+      {
+        "lane": "tw_kline",
+        "lane_label": "台股 K-line",
+        "category": "wait_entry",
+        "category_label": "現在不能買，但值得等買點名單",
+        "report_path": "reports/twStock/2026-07-06_tw_kline_decision_report.md",
+        "row_index": 38,
+        "expanded_index": 0,
+        "raw_market": "TWSE",
+        "raw_symbol_cell": "3257",
+        "raw_company_cell": "虹冠電",
+        "raw_row": {
+          "市場": "TWSE",
+          "股票代號": "3257",
+          "公司名稱": "虹冠電",
+          "產業": "半導體業",
+          "來源提及程度": "Legacy 買點",
+          "來源主觀看法": "不建議追高",
+          "布局建議": "先等回測支撐或隔日收復上影線後再評估",
+          "持倉建議": "若已有持倉，避免在上影線壓力未化解前放大部位",
+          "追蹤指標": "Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 16.7%；振幅 10.0%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=多方趨勢開始；buyCount 1；今日買點 LZEMA20；波幅放大 rangeRatio 2.23；爆量 volumeRatio 5.42；成交金額 790,875,694",
+          "風險": "上影線壓力重：83.3%"
+        }
+      }
+    ]
+  },
+  "existing_source_ledger": {
+    "path": "reports/public-equity-batch/2026-07-06-tw-kline/companies/tw-3257/source_ledger.json",
+    "exists": true,
+    "recommendation_label": "Wait for trigger",
+    "research_status": "partial",
+    "valuation_status": "not_run",
+    "risk_status": "not_run",
+    "horizon_status": "partial",
+    "missing_evidence": [
+      "本 report-scope PEI artifact 由 StockLoop 本地 KOL/news、industry thesis 與 quote ledger 生成；尚未逐檔執行完整 Public Equity Investing specialist research",
+      "尚缺官方 filings / 年報 / 法說 transcript / IR presentation 查核",
+      "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
+      "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議"
+    ],
+    "market_data": {
+      "current_price": {
+        "value": 71.2,
+        "currency": "TWD",
+        "as_of": "2026-07-03",
+        "source": "twse_official_latest_close",
+        "retrieved_at": "2026-07-06T13:12:39Z",
+        "warnings": []
+      }
+    }
+  },
+  "quote": {
+    "symbol": "3257",
+    "provider_symbol": "3257.TW",
+    "close": 71.2,
+    "currency": "TWD",
+    "as_of": "2026-07-03",
+    "source": "twse_official_latest_close",
+    "retrieved_at": "2026-07-06T13:12:39Z",
+    "fallback_rank": 1,
+    "market_state": "CLOSE",
+    "warnings": []
+  },
+  "official_evidence": {
+    "symbol": "3257",
+    "market_key": "tw",
+    "company": "虹冠電",
+    "generated_at": "2026-07-06T13:13:03Z",
+    "official_evidence_handoff_status": "missing",
+    "official_validation": {
+      "status": "missing",
+      "sources": []
+    },
+    "fundamental_signals": [],
+    "missing_inputs": [
+      "台股官方公司基本資料未命中",
+      "月營收資料未命中或未接到此市場"
+    ],
+    "sources": [
+      {
+        "source_name": "StockLoop industry thesis company exposure evidence",
+        "source_type": "local_industry_thesis_evidence",
+        "path": "/Users/willcoming/code/stockLoop/reports/industry-thesis/2026-07-06_industry_thesis.json",
+        "retrieved_at": "2026-07-06T13:13:03Z",
+        "used_by": [
+          "official_evidence_handoff.json"
+        ]
+      }
+    ],
+    "next_step": "Use official filings, monthly revenue, SEC companyfacts, earnings-call or management-commentary evidence in PEI specialist research before setting research_status=complete."
+  },
+  "valuation_input": {
+    "symbol": "3257",
+    "market_key": "tw",
+    "company": "虹冠電",
+    "provider_symbol": "3257.TW",
+    "generated_at": "2026-07-06T13:13:03Z",
+    "valuation_handoff_status": "input_partial",
+    "valuation_status": "not_run",
+    "current_price": {
+      "value": 71.2,
+      "currency": "TWD",
+      "as_of": "2026-07-03",
+      "source": "twse_official_latest_close"
+    },
+    "metrics": {},
+    "methods": [],
+    "sources": [
+      {
+        "source_name": "twse_official_latest_close",
+        "source_type": "market_price",
+        "symbol": "3257",
+        "as_of": "2026-07-03",
+        "retrieved_at": "2026-07-06T13:12:39Z",
+        "used_by": [
+          "valuation_handoff.json"
+        ]
+      }
+    ],
+    "missing_inputs": [
+      "valuation multiples missing"
+    ],
+    "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+  },
+  "risk_input": {
+    "symbol": "3257",
+    "market_key": "tw",
+    "company": "虹冠電",
+    "generated_at": "2026-07-06T13:13:05Z",
+    "risk_handoff_status": "input_ready",
+    "current_price": {
+      "value": 71.2,
+      "currency": "TWD",
+      "as_of": "2026-07-03",
+      "source": "twse_official_latest_close"
+    },
+    "risk_inputs": {
+      "low_20d": 52.2,
+      "high_60d": 78.2,
+      "downside_reference": "20d_low",
+      "downside_distance_pct": 26.6854,
+      "drawdown_from_60d_high_pct": 8.9514,
+      "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+    },
+    "liquidity_inputs": {
+      "history_days": 60,
+      "latest_history_date": "2026-07-06",
+      "latest_volume": 10549833.0,
+      "latest_trade_value": 790875694.0,
+      "average_volume_20d": 2444948.35,
+      "average_trade_value_20d": 169354778.6,
+      "source": "local_daily_bars"
+    },
+    "model_portfolio_inputs": {
+      "portfolio_units": 100,
+      "single_name_cap": 0.05,
+      "risk_budget_initial": 0.0,
+      "screen_size_by_downside": null,
+      "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+      "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+    },
+    "sources": [
+      {
+        "source_name": "twse_official_latest_close",
+        "source_type": "market_price",
+        "symbol": "3257",
+        "as_of": "2026-07-03",
+        "retrieved_at": "2026-07-06T13:12:39Z",
+        "used_by": [
+          "risk_handoff.json"
+        ]
+      },
+      {
+        "source_name": "StockLoop local daily_bars",
+        "source_type": "local_ohlcv_history",
+        "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+        "latest_history_date": "2026-07-06",
+        "history_days": 60,
+        "retrieved_at": "2026-07-06T13:13:05Z",
+        "used_by": [
+          "risk_handoff.json"
+        ]
+      }
+    ],
+    "missing_inputs": [],
+    "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+  },
+  "expected_result_contract": {
+    "status": "complete|partial|blocked",
+    "updated_source_ledger": "reports/public-equity-batch/2026-07-06-tw-kline/companies/tw-3257/source_ledger.json",
+    "source_ledger_patch_fields": [
+      "official_validation_status",
+      "official_validation",
+      "research_status",
+      "research_underwrite",
+      "investment_horizon",
+      "valuation_status",
+      "valuation",
+      "risk_status",
+      "risk_assessment",
+      "missing_evidence",
+      "sources"
+    ]
+  }
+}
