@@ -1,0 +1,306 @@
+{
+  "generated_at": "2026-07-09 06:49:20",
+  "output_root": "reports/public-equity-batch/2026-07-08-us-kline",
+  "symbol": "UCTT",
+  "company": "Ultra Clean Holdings",
+  "output_subdir": "us-UCTT",
+  "state": "awaiting_result",
+  "prompt_path": "reports/public-equity-batch/2026-07-08-us-kline/specialist_workorders/us-UCTT.specialist.prompt.md",
+  "expected_result_path": "reports/public-equity-batch/2026-07-08-us-kline/specialist_workorders/us-UCTT.result.json",
+  "next_required_workflows": [
+    "official-evidence review",
+    "company-tearsheet + initiating-coverage",
+    "comps-valuation",
+    "portfolio-risk-management"
+  ],
+  "specialist_skills": [
+    "company-tearsheet",
+    "comps-valuation",
+    "initiating-coverage",
+    "portfolio-risk-management"
+  ],
+  "required_source_ledger_objects": [
+    "official_validation",
+    "research_underwrite",
+    "investment_horizon",
+    "valuation",
+    "risk_assessment"
+  ],
+  "incomplete_objects": [
+    "official_validation",
+    "research_underwrite",
+    "investment_horizon",
+    "valuation",
+    "risk_assessment"
+  ],
+  "handoff_statuses": {
+    "quote": "resolved",
+    "official_evidence": "missing",
+    "valuation": "input_partial",
+    "risk": "input_ready"
+  },
+  "horizon_rule": "PEI horizon is 3 months to 3 years: 3M timing/catalyst, 12M base underwrite, and 3Y ownership thesis all require sourced specialist evidence.",
+  "completion_rule": "This packet is input only. It must not mark research_status, valuation_status, risk_status, investment_horizon, or decision-ready gates complete by itself.",
+  "universe_item": {
+    "market_key": "us",
+    "market": "NASDAQ",
+    "symbol": "UCTT",
+    "company": "Ultra Clean Holdings",
+    "industry": "Technology / Semiconductors",
+    "canonical_category": "wait_entry",
+    "canonical_category_label": "現在不能買，但值得等買點名單",
+    "source_priority": 5,
+    "instrument_type": "common_equity",
+    "output_subdir": "us-UCTT",
+    "instrument": {
+      "symbol": "UCTT",
+      "market_key": "us",
+      "market": "NASDAQ",
+      "exchange": "US",
+      "currency": "USD",
+      "provider_symbol": "UCTT",
+      "instrument_type": "common_equity",
+      "status": "ok",
+      "official_validation_status": "not_checked",
+      "equity_model_supported": true,
+      "warnings": [],
+      "output_subdir": "us-UCTT"
+    },
+    "exchange": "US",
+    "currency": "USD",
+    "provider_symbol": "UCTT",
+    "identity_status": "ok",
+    "official_validation_status": "not_checked",
+    "equity_model_supported": true,
+    "instrument_warnings": [],
+    "industry_thesis_gate": null,
+    "industry_thesis_gate_label": null,
+    "hype_risk": null,
+    "hype_risk_label": null,
+    "industry_thesis_summary": "",
+    "industry_thesis_missing_evidence": [],
+    "industry_thesis_source": "",
+    "model_portfolio": {
+      "portfolio_units": 100,
+      "long_only": true,
+      "leverage_allowed": false,
+      "single_name_cap": 0.05,
+      "risk_budget_initial": 0.0,
+      "risk_budget_post_trigger": 0.005,
+      "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)"
+    },
+    "sources": [
+      {
+        "lane": "us_kline",
+        "lane_label": "美股 K-line",
+        "category": "wait_entry",
+        "category_label": "現在不能買，但值得等買點名單",
+        "report_path": "reports/usStock/2026-07-08_us_kline_decision_report.md",
+        "row_index": 21,
+        "expanded_index": 0,
+        "raw_market": "NASDAQ",
+        "raw_symbol_cell": "UCTT",
+        "raw_company_cell": "Ultra Clean Holdings, Inc. - Common Stock",
+        "raw_row": {
+          "市場": "NASDAQ",
+          "股票代號": "UCTT",
+          "公司名稱": "Ultra Clean Holdings, Inc. - Common Stock",
+          "產業": "Technology / Semiconductors",
+          "來源提及程度": "三均線買點",
+          "來源主觀看法": "中性觀察",
+          "布局建議": "先等回測支撐、突破續強或量縮沉澱後再評估",
+          "持倉建議": "若已有持倉，維持小部位觀察，不在確認前放大風險",
+          "追蹤指標": "三均線趨勢策略：3MA；收盤位置 99.1%；振幅 12.4%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=空方趨勢結束；buyCount 1；今日買點 3MA；成交量高於均量 volumeRatio 1.35；估算成交金額USD 215,005,514",
+          "風險": "距訊號日低點較遠：12.2%"
+        }
+      }
+    ]
+  },
+  "existing_source_ledger": {
+    "path": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-UCTT/source_ledger.json",
+    "exists": true,
+    "recommendation_label": "Wait for trigger",
+    "research_status": "partial",
+    "valuation_status": "not_run",
+    "risk_status": "not_run",
+    "horizon_status": "partial",
+    "missing_evidence": [
+      "本 report-scope PEI artifact 由 StockLoop 本地 KOL/news、industry thesis 與 quote ledger 生成；尚未逐檔執行完整 Public Equity Investing specialist research",
+      "尚缺官方 filings / 年報 / 法說 transcript / IR presentation 查核",
+      "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
+      "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
+      "價格來源限制：External Yahoo/Stooq quote fetch blocked; local K-line close used as stale fallback, not decision-ready market data.",
+      "官方公司/證券身分驗證未完成",
+      "估值 handoff 缺失：valuation multiples missing",
+      "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
+    ],
+    "market_data": {
+      "current_price": {
+        "value": 100.91000366210938,
+        "currency": "USD",
+        "as_of": "2026-07-08",
+        "source": "stockloop_us_kline_daily_report_close",
+        "retrieved_at": "2026-07-08T22:47:56Z",
+        "warnings": [
+          "External Yahoo/Stooq quote fetch blocked; local K-line close used as stale fallback, not decision-ready market data."
+        ]
+      }
+    }
+  },
+  "quote": {
+    "symbol": "UCTT",
+    "provider_symbol": "UCTT",
+    "close": 100.91000366210938,
+    "currency": "USD",
+    "as_of": "2026-07-08",
+    "source": "stockloop_us_kline_daily_report_close",
+    "retrieved_at": "2026-07-08T22:47:56Z",
+    "fallback_rank": 99,
+    "market_state": "CLOSE",
+    "warnings": [
+      "External Yahoo/Stooq quote fetch blocked; local K-line close used as stale fallback, not decision-ready market data."
+    ],
+    "volume": 2130666,
+    "amount": 215005514.0
+  },
+  "official_evidence": {
+    "symbol": "UCTT",
+    "market_key": "us",
+    "company": "Ultra Clean Holdings",
+    "generated_at": "2026-07-08T22:49:10Z",
+    "official_evidence_handoff_status": "missing",
+    "official_validation": {
+      "status": "missing",
+      "sources": []
+    },
+    "fundamental_signals": [],
+    "missing_inputs": [
+      "SEC company tickers 未命中或 SEC_USER_AGENT 未設定"
+    ],
+    "sources": [
+      {
+        "source_name": "StockLoop industry thesis company exposure evidence",
+        "source_type": "local_industry_thesis_evidence",
+        "path": "reports/industry-thesis/2026-07-08_industry_thesis.json",
+        "retrieved_at": "2026-07-08T22:49:10Z",
+        "used_by": [
+          "official_evidence_handoff.json"
+        ]
+      }
+    ],
+    "next_step": "Use official filings, monthly revenue, SEC companyfacts, earnings-call or management-commentary evidence in PEI specialist research before setting research_status=complete."
+  },
+  "valuation_input": {
+    "symbol": "UCTT",
+    "market_key": "us",
+    "company": "Ultra Clean Holdings",
+    "provider_symbol": "UCTT",
+    "generated_at": "2026-07-08T22:49:10Z",
+    "valuation_handoff_status": "input_partial",
+    "valuation_status": "not_run",
+    "current_price": {
+      "value": 100.91000366210938,
+      "currency": "USD",
+      "as_of": "2026-07-08",
+      "source": "stockloop_us_kline_daily_report_close"
+    },
+    "metrics": {},
+    "methods": [],
+    "sources": [
+      {
+        "source_name": "stockloop_us_kline_daily_report_close",
+        "source_type": "market_price",
+        "symbol": "UCTT",
+        "as_of": "2026-07-08",
+        "retrieved_at": "2026-07-08T22:47:56Z",
+        "used_by": [
+          "valuation_handoff.json"
+        ]
+      }
+    ],
+    "missing_inputs": [
+      "valuation multiples missing"
+    ],
+    "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+  },
+  "risk_input": {
+    "symbol": "UCTT",
+    "market_key": "us",
+    "company": "Ultra Clean Holdings",
+    "generated_at": "2026-07-08T22:49:20Z",
+    "risk_handoff_status": "input_ready",
+    "current_price": {
+      "value": 100.91000366210938,
+      "currency": "USD",
+      "as_of": "2026-07-08",
+      "source": "stockloop_us_kline_daily_report_close"
+    },
+    "risk_inputs": {
+      "low_20d": 84.13999938964844,
+      "high_60d": 144.22000122070312,
+      "downside_reference": "20d_low",
+      "downside_distance_pct": 16.6188,
+      "drawdown_from_60d_high_pct": 30.0305,
+      "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+    },
+    "liquidity_inputs": {
+      "history_days": 60,
+      "latest_history_date": "2026-07-08",
+      "latest_volume": 2130666.0,
+      "latest_trade_value": 215005514.0,
+      "average_volume_20d": 1645668.3,
+      "average_trade_value_20d": 183959277.95,
+      "source": "local_daily_bars"
+    },
+    "model_portfolio_inputs": {
+      "portfolio_units": 100,
+      "single_name_cap": 0.05,
+      "risk_budget_initial": 0.0,
+      "screen_size_by_downside": null,
+      "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+      "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+    },
+    "sources": [
+      {
+        "source_name": "stockloop_us_kline_daily_report_close",
+        "source_type": "market_price",
+        "symbol": "UCTT",
+        "as_of": "2026-07-08",
+        "retrieved_at": "2026-07-08T22:47:56Z",
+        "used_by": [
+          "risk_handoff.json"
+        ]
+      },
+      {
+        "source_name": "StockLoop local daily_bars",
+        "source_type": "local_ohlcv_history",
+        "path": "/Users/willcoming/code/stockLoop/usStock/data/usstock.sqlite3",
+        "latest_history_date": "2026-07-08",
+        "history_days": 60,
+        "retrieved_at": "2026-07-08T22:49:20Z",
+        "used_by": [
+          "risk_handoff.json"
+        ]
+      }
+    ],
+    "missing_inputs": [],
+    "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+  },
+  "expected_result_contract": {
+    "status": "complete|partial|blocked",
+    "updated_source_ledger": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-UCTT/source_ledger.json",
+    "source_ledger_patch_fields": [
+      "official_validation_status",
+      "official_validation",
+      "research_status",
+      "research_underwrite",
+      "investment_horizon",
+      "valuation_status",
+      "valuation",
+      "risk_status",
+      "risk_assessment",
+      "missing_evidence",
+      "sources"
+    ]
+  }
+}
