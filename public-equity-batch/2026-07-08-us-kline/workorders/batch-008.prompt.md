@@ -77,38 +77,38 @@ Every `source_ledger.json` must include:
 [
   {
     "market_key": "us",
+    "symbol": "CVE",
+    "company": "Cenovus Energy Inc Common Stock",
+    "canonical_category": "wait_entry",
+    "output_subdir": "us-CVE",
+    "instrument_type": "common_equity",
+    "industry_thesis_gate": null,
+    "industry_thesis_gate_label": null,
+    "hype_risk": null,
+    "hype_risk_label": null,
+    "industry_thesis_summary": "",
+    "industry_thesis_missing_evidence": []
+  },
+  {
+    "market_key": "us",
+    "symbol": "CVX",
+    "company": "Chevron Corporation Common Stock",
+    "canonical_category": "wait_entry",
+    "output_subdir": "us-CVX",
+    "instrument_type": "common_equity",
+    "industry_thesis_gate": null,
+    "industry_thesis_gate_label": null,
+    "hype_risk": null,
+    "hype_risk_label": null,
+    "industry_thesis_summary": "",
+    "industry_thesis_missing_evidence": []
+  },
+  {
+    "market_key": "us",
     "symbol": "DBX",
     "company": "Dropbox",
     "canonical_category": "wait_entry",
     "output_subdir": "us-DBX",
-    "instrument_type": "common_equity",
-    "industry_thesis_gate": null,
-    "industry_thesis_gate_label": null,
-    "hype_risk": null,
-    "hype_risk_label": null,
-    "industry_thesis_summary": "",
-    "industry_thesis_missing_evidence": []
-  },
-  {
-    "market_key": "us",
-    "symbol": "DKNG",
-    "company": "DraftKings Inc. - Class A Common Stock",
-    "canonical_category": "wait_entry",
-    "output_subdir": "us-DKNG",
-    "instrument_type": "common_equity",
-    "industry_thesis_gate": null,
-    "industry_thesis_gate_label": null,
-    "hype_risk": null,
-    "hype_risk_label": null,
-    "industry_thesis_summary": "",
-    "industry_thesis_missing_evidence": []
-  },
-  {
-    "market_key": "us",
-    "symbol": "DOCN",
-    "company": "DigitalOcean Holdings",
-    "canonical_category": "wait_entry",
-    "output_subdir": "us-DOCN",
     "instrument_type": "common_equity",
     "industry_thesis_gate": null,
     "industry_thesis_gate_label": null,
@@ -128,6 +128,40 @@ Every `source_ledger.json` must include:
   "items": [
     {
       "market_key": "us",
+      "symbol": "CVE",
+      "output_subdir": "us-CVE",
+      "status": "complete|partial|blocked",
+      "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
+      "artifacts": {
+        "source_ledger": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-CVE/source_ledger.json",
+        "tearsheet": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-CVE/tearsheet.html",
+        "initiation": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-CVE/initiation.html",
+        "risk_plan": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-CVE/risk_plan.html"
+      },
+      "missing_evidence": [],
+      "industry_thesis_gate": null,
+      "hype_risk": null,
+      "notes": ""
+    },
+    {
+      "market_key": "us",
+      "symbol": "CVX",
+      "output_subdir": "us-CVX",
+      "status": "complete|partial|blocked",
+      "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
+      "artifacts": {
+        "source_ledger": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-CVX/source_ledger.json",
+        "tearsheet": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-CVX/tearsheet.html",
+        "initiation": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-CVX/initiation.html",
+        "risk_plan": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-CVX/risk_plan.html"
+      },
+      "missing_evidence": [],
+      "industry_thesis_gate": null,
+      "hype_risk": null,
+      "notes": ""
+    },
+    {
+      "market_key": "us",
       "symbol": "DBX",
       "output_subdir": "us-DBX",
       "status": "complete|partial|blocked",
@@ -137,40 +171,6 @@ Every `source_ledger.json` must include:
         "tearsheet": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-DBX/tearsheet.html",
         "initiation": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-DBX/initiation.html",
         "risk_plan": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-DBX/risk_plan.html"
-      },
-      "missing_evidence": [],
-      "industry_thesis_gate": null,
-      "hype_risk": null,
-      "notes": ""
-    },
-    {
-      "market_key": "us",
-      "symbol": "DKNG",
-      "output_subdir": "us-DKNG",
-      "status": "complete|partial|blocked",
-      "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
-      "artifacts": {
-        "source_ledger": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-DKNG/source_ledger.json",
-        "tearsheet": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-DKNG/tearsheet.html",
-        "initiation": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-DKNG/initiation.html",
-        "risk_plan": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-DKNG/risk_plan.html"
-      },
-      "missing_evidence": [],
-      "industry_thesis_gate": null,
-      "hype_risk": null,
-      "notes": ""
-    },
-    {
-      "market_key": "us",
-      "symbol": "DOCN",
-      "output_subdir": "us-DOCN",
-      "status": "complete|partial|blocked",
-      "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
-      "artifacts": {
-        "source_ledger": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-DOCN/source_ledger.json",
-        "tearsheet": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-DOCN/tearsheet.html",
-        "initiation": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-DOCN/initiation.html",
-        "risk_plan": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-DOCN/risk_plan.html"
       },
       "missing_evidence": [],
       "industry_thesis_gate": null,

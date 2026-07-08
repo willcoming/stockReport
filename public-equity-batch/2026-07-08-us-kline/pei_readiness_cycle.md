@@ -1,21 +1,21 @@
 # PEI Readiness Cycle
 
-- 產出時間：2026-07-09 06:49:20
+- 產出時間：2026-07-09 07:37:08
 - Output root：reports/public-equity-batch/2026-07-08-us-kline
 - Universe：reports/public-equity-batch/2026-07-08-us-kline/universe.json
 
 ## Current Status
 
-- Artifact complete：40 / 40
-- Decision-ready：0 / 40
-- Specialist ready for revalidation：0 / 40
+- Artifact complete：46 / 46
+- Decision-ready：0 / 46
+- Specialist ready for revalidation：0 / 46
 
 ## Required Workflows
 
-- company-tearsheet + initiating-coverage: 40
-- comps-valuation: 40
-- official-evidence review: 40
-- portfolio-risk-management: 40
+- company-tearsheet + initiating-coverage: 46
+- comps-valuation: 46
+- official-evidence review: 46
+- portfolio-risk-management: 46
 
 ## Files
 

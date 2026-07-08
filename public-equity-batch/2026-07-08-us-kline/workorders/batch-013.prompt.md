@@ -77,10 +77,10 @@ Every `source_ledger.json` must include:
 [
   {
     "market_key": "us",
-    "symbol": "SM",
-    "company": "SM Energy Company Common Stock",
+    "symbol": "OXY",
+    "company": "Occidental Petroleum Corporation Common Stock",
     "canonical_category": "wait_entry",
-    "output_subdir": "us-SM",
+    "output_subdir": "us-OXY",
     "instrument_type": "common_equity",
     "industry_thesis_gate": null,
     "industry_thesis_gate_label": null,
@@ -91,10 +91,10 @@ Every `source_ledger.json` must include:
   },
   {
     "market_key": "us",
-    "symbol": "TSCO",
-    "company": "Tractor Supply Company - Common Stock",
+    "symbol": "PSX",
+    "company": "Phillips 66 Common Stock",
     "canonical_category": "wait_entry",
-    "output_subdir": "us-TSCO",
+    "output_subdir": "us-PSX",
     "instrument_type": "common_equity",
     "industry_thesis_gate": null,
     "industry_thesis_gate_label": null,
@@ -105,10 +105,10 @@ Every `source_ledger.json` must include:
   },
   {
     "market_key": "us",
-    "symbol": "UCTT",
-    "company": "Ultra Clean Holdings",
+    "symbol": "ROL",
+    "company": "Rollins",
     "canonical_category": "wait_entry",
-    "output_subdir": "us-UCTT",
+    "output_subdir": "us-ROL",
     "instrument_type": "common_equity",
     "industry_thesis_gate": null,
     "industry_thesis_gate_label": null,
@@ -128,15 +128,15 @@ Every `source_ledger.json` must include:
   "items": [
     {
       "market_key": "us",
-      "symbol": "SM",
-      "output_subdir": "us-SM",
+      "symbol": "OXY",
+      "output_subdir": "us-OXY",
       "status": "complete|partial|blocked",
       "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
       "artifacts": {
-        "source_ledger": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-SM/source_ledger.json",
-        "tearsheet": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-SM/tearsheet.html",
-        "initiation": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-SM/initiation.html",
-        "risk_plan": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-SM/risk_plan.html"
+        "source_ledger": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-OXY/source_ledger.json",
+        "tearsheet": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-OXY/tearsheet.html",
+        "initiation": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-OXY/initiation.html",
+        "risk_plan": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-OXY/risk_plan.html"
       },
       "missing_evidence": [],
       "industry_thesis_gate": null,
@@ -145,15 +145,15 @@ Every `source_ledger.json` must include:
     },
     {
       "market_key": "us",
-      "symbol": "TSCO",
-      "output_subdir": "us-TSCO",
+      "symbol": "PSX",
+      "output_subdir": "us-PSX",
       "status": "complete|partial|blocked",
       "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
       "artifacts": {
-        "source_ledger": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-TSCO/source_ledger.json",
-        "tearsheet": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-TSCO/tearsheet.html",
-        "initiation": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-TSCO/initiation.html",
-        "risk_plan": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-TSCO/risk_plan.html"
+        "source_ledger": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-PSX/source_ledger.json",
+        "tearsheet": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-PSX/tearsheet.html",
+        "initiation": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-PSX/initiation.html",
+        "risk_plan": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-PSX/risk_plan.html"
       },
       "missing_evidence": [],
       "industry_thesis_gate": null,
@@ -162,15 +162,15 @@ Every `source_ledger.json` must include:
     },
     {
       "market_key": "us",
-      "symbol": "UCTT",
-      "output_subdir": "us-UCTT",
+      "symbol": "ROL",
+      "output_subdir": "us-ROL",
       "status": "complete|partial|blocked",
       "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
       "artifacts": {
-        "source_ledger": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-UCTT/source_ledger.json",
-        "tearsheet": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-UCTT/tearsheet.html",
-        "initiation": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-UCTT/initiation.html",
-        "risk_plan": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-UCTT/risk_plan.html"
+        "source_ledger": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-ROL/source_ledger.json",
+        "tearsheet": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-ROL/tearsheet.html",
+        "initiation": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-ROL/initiation.html",
+        "risk_plan": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-ROL/risk_plan.html"
       },
       "missing_evidence": [],
       "industry_thesis_gate": null,

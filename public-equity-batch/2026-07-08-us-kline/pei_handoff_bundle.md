@@ -1,6 +1,6 @@
 # PEI Handoff Bundle
 
-- Generated at: 2026-07-09 06:49:20
+- Generated at: 2026-07-09 07:37:08
 - Output root: reports/public-equity-batch/2026-07-08-us-kline
 - Universe: reports/public-equity-batch/2026-07-08-us-kline/universe.json
 - Readiness cycle refreshed: True
@@ -20,22 +20,22 @@
 
 ## Counts
 
-- quotes: {'item_count': 40, 'resolved_count': 40, 'missing_count': 0}
-- official_evidence: {'item_count': 40, 'status_counts': {'missing': 40}}
-- valuation: {'item_count': 40, 'status_counts': {'input_partial': 40}}
-- risk: {'item_count': 40, 'status_counts': {'input_ready': 40}}
+- quotes: {'item_count': 46, 'resolved_count': 46, 'missing_count': 0}
+- official_evidence: {'item_count': 46, 'status_counts': {'missing': 46}}
+- valuation: {'item_count': 46, 'status_counts': {'input_partial': 46}}
+- risk: {'item_count': 46, 'status_counts': {'input_ready': 46}}
 
 ## Execution Queue
 
-- item_count: 40
-- state_counts: {'awaiting_result': 40}
-- workflow_counts: {'company-tearsheet + initiating-coverage': 40, 'comps-valuation': 40, 'official-evidence review': 40, 'portfolio-risk-management': 40}
-- handoff_status_counts: {'quote': {'resolved': 40}, 'official_evidence': {'missing': 40}, 'valuation': {'input_partial': 40}, 'risk': {'input_ready': 40}}
+- item_count: 46
+- state_counts: {'awaiting_result': 46}
+- workflow_counts: {'company-tearsheet + initiating-coverage': 46, 'comps-valuation': 46, 'official-evidence review': 46, 'portfolio-risk-management': 46}
+- handoff_status_counts: {'quote': {'resolved': 46}, 'official_evidence': {'missing': 46}, 'valuation': {'input_partial': 46}, 'risk': {'input_ready': 46}}
 
 ## Specialist Input Packets
 
-- packet_count: 40
-- state_counts: {'awaiting_result': 40}
+- packet_count: 46
+- state_counts: {'awaiting_result': 46}
 - manifest: reports/public-equity-batch/2026-07-08-us-kline/specialist_workorders/input_packets/manifest.json
 
 ## Completion Rule

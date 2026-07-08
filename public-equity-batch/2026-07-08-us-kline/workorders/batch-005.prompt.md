@@ -77,6 +77,38 @@ Every `source_ledger.json` must include:
 [
   {
     "market_key": "us",
+    "symbol": "VRT",
+    "company": "Vertiv Holdings",
+    "canonical_category": "buy_now",
+    "output_subdir": "us-VRT",
+    "instrument_type": "common_equity",
+    "industry_thesis_gate": "theme_only",
+    "industry_thesis_gate_label": "目前偏題材，缺公司級落地證據",
+    "hype_risk": "low",
+    "hype_risk_label": "低",
+    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=雙策略整合：LZEMA20/3MA；收盤位置 90.1%；振幅 5.9%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 1,232,050,522；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
+    "industry_thesis_missing_evidence": [
+      "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+      "近 7 日公開新聞熱度未命中或未抓取",
+      "缺少公司級官方營收、訂單、財報或法說支撐"
+    ]
+  },
+  {
+    "market_key": "us",
+    "symbol": "AES",
+    "company": "The AES Corporation Common Stock",
+    "canonical_category": "wait_entry",
+    "output_subdir": "us-AES",
+    "instrument_type": "common_equity",
+    "industry_thesis_gate": null,
+    "industry_thesis_gate_label": null,
+    "hype_risk": null,
+    "hype_risk_label": null,
+    "industry_thesis_summary": "",
+    "industry_thesis_missing_evidence": []
+  },
+  {
+    "market_key": "us",
     "symbol": "ANET",
     "company": "Arista Networks",
     "canonical_category": "wait_entry",
@@ -88,39 +120,6 @@ Every `source_ledger.json` must include:
     "hype_risk_label": null,
     "industry_thesis_summary": "",
     "industry_thesis_missing_evidence": []
-  },
-  {
-    "market_key": "us",
-    "symbol": "APA",
-    "company": "APA Corporation - Common Stock",
-    "canonical_category": "wait_entry",
-    "output_subdir": "us-APA",
-    "instrument_type": "common_equity",
-    "industry_thesis_gate": null,
-    "industry_thesis_gate_label": null,
-    "hype_risk": null,
-    "hype_risk_label": null,
-    "industry_thesis_summary": "",
-    "industry_thesis_missing_evidence": []
-  },
-  {
-    "market_key": "us",
-    "symbol": "AVGO",
-    "company": "Broadcom Inc. - Common Stock",
-    "canonical_category": "wait_entry",
-    "output_subdir": "us-AVGO",
-    "instrument_type": "common_equity",
-    "industry_thesis_gate": "theme_only",
-    "industry_thesis_gate_label": "目前偏題材，缺公司級落地證據",
-    "hype_risk": "low",
-    "hype_risk_label": "低",
-    "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=AI / 資料中心；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
-    "industry_thesis_missing_evidence": [
-      "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
-      "近 7 日公開新聞熱度未命中或未抓取",
-      "缺少明確後續產業 KPI",
-      "缺少公司級官方營收、訂單、財報或法說支撐"
-    ]
   }
 ]
 ```
@@ -131,6 +130,40 @@ Every `source_ledger.json` must include:
 {
   "batch_id": "batch-005",
   "items": [
+    {
+      "market_key": "us",
+      "symbol": "VRT",
+      "output_subdir": "us-VRT",
+      "status": "complete|partial|blocked",
+      "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
+      "artifacts": {
+        "source_ledger": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-VRT/source_ledger.json",
+        "tearsheet": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-VRT/tearsheet.html",
+        "initiation": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-VRT/initiation.html",
+        "risk_plan": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-VRT/risk_plan.html"
+      },
+      "missing_evidence": [],
+      "industry_thesis_gate": "theme_only",
+      "hype_risk": "low",
+      "notes": ""
+    },
+    {
+      "market_key": "us",
+      "symbol": "AES",
+      "output_subdir": "us-AES",
+      "status": "complete|partial|blocked",
+      "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
+      "artifacts": {
+        "source_ledger": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-AES/source_ledger.json",
+        "tearsheet": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-AES/tearsheet.html",
+        "initiation": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-AES/initiation.html",
+        "risk_plan": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-AES/risk_plan.html"
+      },
+      "missing_evidence": [],
+      "industry_thesis_gate": null,
+      "hype_risk": null,
+      "notes": ""
+    },
     {
       "market_key": "us",
       "symbol": "ANET",
@@ -146,40 +179,6 @@ Every `source_ledger.json` must include:
       "missing_evidence": [],
       "industry_thesis_gate": null,
       "hype_risk": null,
-      "notes": ""
-    },
-    {
-      "market_key": "us",
-      "symbol": "APA",
-      "output_subdir": "us-APA",
-      "status": "complete|partial|blocked",
-      "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
-      "artifacts": {
-        "source_ledger": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-APA/source_ledger.json",
-        "tearsheet": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-APA/tearsheet.html",
-        "initiation": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-APA/initiation.html",
-        "risk_plan": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-APA/risk_plan.html"
-      },
-      "missing_evidence": [],
-      "industry_thesis_gate": null,
-      "hype_risk": null,
-      "notes": ""
-    },
-    {
-      "market_key": "us",
-      "symbol": "AVGO",
-      "output_subdir": "us-AVGO",
-      "status": "complete|partial|blocked",
-      "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
-      "artifacts": {
-        "source_ledger": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-AVGO/source_ledger.json",
-        "tearsheet": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-AVGO/tearsheet.html",
-        "initiation": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-AVGO/initiation.html",
-        "risk_plan": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-AVGO/risk_plan.html"
-      },
-      "missing_evidence": [],
-      "industry_thesis_gate": "theme_only",
-      "hype_risk": "low",
       "notes": ""
     }
   ],

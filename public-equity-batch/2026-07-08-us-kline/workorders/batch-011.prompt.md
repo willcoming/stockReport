@@ -77,38 +77,38 @@ Every `source_ledger.json` must include:
 [
   {
     "market_key": "us",
+    "symbol": "JD",
+    "company": "JD.com",
+    "canonical_category": "wait_entry",
+    "output_subdir": "us-JD",
+    "instrument_type": "common_equity",
+    "industry_thesis_gate": null,
+    "industry_thesis_gate_label": null,
+    "hype_risk": null,
+    "hype_risk_label": null,
+    "industry_thesis_summary": "",
+    "industry_thesis_missing_evidence": []
+  },
+  {
+    "market_key": "us",
+    "symbol": "KLAC",
+    "company": "KLA Corporation - Common Stock",
+    "canonical_category": "wait_entry",
+    "output_subdir": "us-KLAC",
+    "instrument_type": "common_equity",
+    "industry_thesis_gate": null,
+    "industry_thesis_gate_label": null,
+    "hype_risk": null,
+    "hype_risk_label": null,
+    "industry_thesis_summary": "",
+    "industry_thesis_missing_evidence": []
+  },
+  {
+    "market_key": "us",
     "symbol": "KVYO",
     "company": "Klaviyo",
     "canonical_category": "wait_entry",
     "output_subdir": "us-KVYO",
-    "instrument_type": "common_equity",
-    "industry_thesis_gate": null,
-    "industry_thesis_gate_label": null,
-    "hype_risk": null,
-    "hype_risk_label": null,
-    "industry_thesis_summary": "",
-    "industry_thesis_missing_evidence": []
-  },
-  {
-    "market_key": "us",
-    "symbol": "NBIS",
-    "company": "Nebius Group N.V. - Class A Ordinary Shares",
-    "canonical_category": "wait_entry",
-    "output_subdir": "us-NBIS",
-    "instrument_type": "common_equity",
-    "industry_thesis_gate": null,
-    "industry_thesis_gate_label": null,
-    "hype_risk": null,
-    "hype_risk_label": null,
-    "industry_thesis_summary": "",
-    "industry_thesis_missing_evidence": []
-  },
-  {
-    "market_key": "us",
-    "symbol": "NTSK",
-    "company": "Netskope",
-    "canonical_category": "wait_entry",
-    "output_subdir": "us-NTSK",
     "instrument_type": "common_equity",
     "industry_thesis_gate": null,
     "industry_thesis_gate_label": null,
@@ -128,6 +128,40 @@ Every `source_ledger.json` must include:
   "items": [
     {
       "market_key": "us",
+      "symbol": "JD",
+      "output_subdir": "us-JD",
+      "status": "complete|partial|blocked",
+      "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
+      "artifacts": {
+        "source_ledger": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-JD/source_ledger.json",
+        "tearsheet": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-JD/tearsheet.html",
+        "initiation": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-JD/initiation.html",
+        "risk_plan": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-JD/risk_plan.html"
+      },
+      "missing_evidence": [],
+      "industry_thesis_gate": null,
+      "hype_risk": null,
+      "notes": ""
+    },
+    {
+      "market_key": "us",
+      "symbol": "KLAC",
+      "output_subdir": "us-KLAC",
+      "status": "complete|partial|blocked",
+      "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
+      "artifacts": {
+        "source_ledger": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-KLAC/source_ledger.json",
+        "tearsheet": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-KLAC/tearsheet.html",
+        "initiation": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-KLAC/initiation.html",
+        "risk_plan": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-KLAC/risk_plan.html"
+      },
+      "missing_evidence": [],
+      "industry_thesis_gate": null,
+      "hype_risk": null,
+      "notes": ""
+    },
+    {
+      "market_key": "us",
       "symbol": "KVYO",
       "output_subdir": "us-KVYO",
       "status": "complete|partial|blocked",
@@ -137,40 +171,6 @@ Every `source_ledger.json` must include:
         "tearsheet": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-KVYO/tearsheet.html",
         "initiation": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-KVYO/initiation.html",
         "risk_plan": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-KVYO/risk_plan.html"
-      },
-      "missing_evidence": [],
-      "industry_thesis_gate": null,
-      "hype_risk": null,
-      "notes": ""
-    },
-    {
-      "market_key": "us",
-      "symbol": "NBIS",
-      "output_subdir": "us-NBIS",
-      "status": "complete|partial|blocked",
-      "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
-      "artifacts": {
-        "source_ledger": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-NBIS/source_ledger.json",
-        "tearsheet": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-NBIS/tearsheet.html",
-        "initiation": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-NBIS/initiation.html",
-        "risk_plan": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-NBIS/risk_plan.html"
-      },
-      "missing_evidence": [],
-      "industry_thesis_gate": null,
-      "hype_risk": null,
-      "notes": ""
-    },
-    {
-      "market_key": "us",
-      "symbol": "NTSK",
-      "output_subdir": "us-NTSK",
-      "status": "complete|partial|blocked",
-      "recommendation_label": "Model portfolio candidate|Wait for trigger|Watch only|Not decision-ready",
-      "artifacts": {
-        "source_ledger": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-NTSK/source_ledger.json",
-        "tearsheet": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-NTSK/tearsheet.html",
-        "initiation": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-NTSK/initiation.html",
-        "risk_plan": "reports/public-equity-batch/2026-07-08-us-kline/companies/us-NTSK/risk_plan.html"
       },
       "missing_evidence": [],
       "industry_thesis_gate": null,

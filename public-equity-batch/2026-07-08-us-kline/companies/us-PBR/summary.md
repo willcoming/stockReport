@@ -53,7 +53,7 @@
 - 尚缺官方 filings / 年報 / 法說 transcript / IR presentation 查核
 - 尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out
 - valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議
-- 價格來源限制：External Yahoo/Stooq quote fetch blocked; local K-line close used as stale fallback, not decision-ready market data.
+- 價格來源限制：External quote fetch skipped/blocked; local K-line close used as stale fallback, not decision-ready market data.
 - 官方公司/證券身分驗證未完成
 - 產業 thesis Gate=炒作或擁擠交易風險偏高；炒作風險=高
 - 產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定
