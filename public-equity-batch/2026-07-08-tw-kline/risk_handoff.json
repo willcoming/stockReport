@@ -1,0 +1,2473 @@
+{
+  "_metadata": {
+    "generated_at": "2026-07-08T08:13:17Z",
+    "item_count": 39,
+    "status_counts": {
+      "input_ready": 38,
+      "input_partial": 1
+    },
+    "target_date": "2026-07-08",
+    "note": "This is a risk input handoff only. It must not make PEI sizing or research implementation-ready by itself."
+  },
+  "items": [
+    {
+      "symbol": "2303",
+      "market_key": "tw",
+      "company": "聯電",
+      "generated_at": "2026-07-08T08:13:14Z",
+      "risk_handoff_status": "input_ready",
+      "current_price": {
+        "value": 155.0,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 116.5,
+        "high_60d": 185.5,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": 24.8387,
+        "drawdown_from_60d_high_pct": 16.442,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 83083303.0,
+        "latest_trade_value": 13032404490.0,
+        "average_volume_20d": 264274085.4,
+        "average_trade_value_20d": 41092323142.3,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0075,
+        "screen_size_by_downside": 0.030194816959019592,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "2303",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:14Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    },
+    {
+      "symbol": "2354",
+      "market_key": "tw",
+      "company": "鴻準",
+      "generated_at": "2026-07-08T08:13:14Z",
+      "risk_handoff_status": "input_ready",
+      "current_price": {
+        "value": 56.9,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 53.9,
+        "high_60d": 66.4,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": 5.2724,
+        "drawdown_from_60d_high_pct": 14.3072,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 5389820.0,
+        "latest_trade_value": 306657496.0,
+        "average_volume_20d": 7187883.55,
+        "average_trade_value_20d": 410708061.15,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0075,
+        "screen_size_by_downside": 0.05,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "2354",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:14Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    },
+    {
+      "symbol": "2363",
+      "market_key": "tw",
+      "company": "矽統",
+      "generated_at": "2026-07-08T08:13:14Z",
+      "risk_handoff_status": "input_ready",
+      "current_price": {
+        "value": 65.7,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 53.6,
+        "high_60d": 76.1,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": 18.417,
+        "drawdown_from_60d_high_pct": 13.6662,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 11967719.0,
+        "latest_trade_value": 789974685.0,
+        "average_volume_20d": 24830295.85,
+        "average_trade_value_20d": 1736912349.85,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0075,
+        "screen_size_by_downside": 0.040723244828147896,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "2363",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:14Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    },
+    {
+      "symbol": "2388",
+      "market_key": "tw",
+      "company": "威盛",
+      "generated_at": "2026-07-08T08:13:14Z",
+      "risk_handoff_status": "input_ready",
+      "current_price": {
+        "value": 69.5,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 63.7,
+        "high_60d": 91.3,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": 8.3453,
+        "drawdown_from_60d_high_pct": 23.8773,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 5274582.0,
+        "latest_trade_value": 375811803.0,
+        "average_volume_20d": 8219987.45,
+        "average_trade_value_20d": 634652425.0,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0075,
+        "screen_size_by_downside": 0.05,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "2388",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:14Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    },
+    {
+      "symbol": "2441",
+      "market_key": "tw",
+      "company": "超豐",
+      "generated_at": "2026-07-08T08:13:14Z",
+      "risk_handoff_status": "input_ready",
+      "current_price": {
+        "value": 133.5,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 116.0,
+        "high_60d": 156.0,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": 13.1086,
+        "drawdown_from_60d_high_pct": 14.4231,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 7255521.0,
+        "latest_trade_value": 985986455.0,
+        "average_volume_20d": 11256826.25,
+        "average_trade_value_20d": 1550106918.1,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0075,
+        "screen_size_by_downside": 0.05,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "2441",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:14Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    },
+    {
+      "symbol": "2609",
+      "market_key": "tw",
+      "company": "陽明",
+      "generated_at": "2026-07-08T08:13:14Z",
+      "risk_handoff_status": "input_ready",
+      "current_price": {
+        "value": 51.1,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 50.0,
+        "high_60d": 55.7,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": 2.1526,
+        "drawdown_from_60d_high_pct": 8.2585,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 14771426.0,
+        "latest_trade_value": 766908310.0,
+        "average_volume_20d": 27477721.3,
+        "average_trade_value_20d": 1417458046.7,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0075,
+        "screen_size_by_downside": 0.05,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "2609",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:14Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    },
+    {
+      "symbol": "2881",
+      "market_key": "tw",
+      "company": "富邦金",
+      "generated_at": "2026-07-08T08:13:14Z",
+      "risk_handoff_status": "input_ready",
+      "current_price": {
+        "value": 123.0,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 118.0,
+        "high_60d": 141.0,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": 4.065,
+        "drawdown_from_60d_high_pct": 12.766,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 26060066.0,
+        "latest_trade_value": 3245854930.0,
+        "average_volume_20d": 39000772.7,
+        "average_trade_value_20d": 4999184044.6,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0075,
+        "screen_size_by_downside": 0.05,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "2881",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:14Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    },
+    {
+      "symbol": "3035",
+      "market_key": "tw",
+      "company": "智原",
+      "generated_at": "2026-07-08T08:13:14Z",
+      "risk_handoff_status": "input_ready",
+      "current_price": {
+        "value": 199.0,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 172.5,
+        "high_60d": 245.0,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": 13.3166,
+        "drawdown_from_60d_high_pct": 18.7755,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 11637498.0,
+        "latest_trade_value": 2502399264.0,
+        "average_volume_20d": 10639948.05,
+        "average_trade_value_20d": 2299236745.25,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0075,
+        "screen_size_by_downside": 0.05,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "3035",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:14Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    },
+    {
+      "symbol": "3189",
+      "market_key": "tw",
+      "company": "景碩",
+      "generated_at": "2026-07-08T08:13:14Z",
+      "risk_handoff_status": "input_ready",
+      "current_price": {
+        "value": 687.0,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 594.0,
+        "high_60d": 939.0,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": 13.5371,
+        "drawdown_from_60d_high_pct": 26.8371,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 4336069.0,
+        "latest_trade_value": 3220098378.0,
+        "average_volume_20d": 25602148.0,
+        "average_trade_value_20d": 19577742435.75,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0075,
+        "screen_size_by_downside": 0.05,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "3189",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:14Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    },
+    {
+      "symbol": "6202",
+      "market_key": "tw",
+      "company": "盛群",
+      "generated_at": "2026-07-08T08:13:15Z",
+      "risk_handoff_status": "input_ready",
+      "current_price": {
+        "value": 64.8,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 50.0,
+        "high_60d": 81.0,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": 22.8395,
+        "drawdown_from_60d_high_pct": 20.0,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 5179391.0,
+        "latest_trade_value": 348048815.0,
+        "average_volume_20d": 9603844.1,
+        "average_trade_value_20d": 643760785.95,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0075,
+        "screen_size_by_downside": 0.032837846712931544,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "6202",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:15Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    },
+    {
+      "symbol": "6271",
+      "market_key": "tw",
+      "company": "同欣電",
+      "generated_at": "2026-07-08T08:13:15Z",
+      "risk_handoff_status": "input_ready",
+      "current_price": {
+        "value": 247.0,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 206.5,
+        "high_60d": 302.0,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": 16.3968,
+        "drawdown_from_60d_high_pct": 18.2119,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 12795261.0,
+        "latest_trade_value": 3177037413.0,
+        "average_volume_20d": 17491142.75,
+        "average_trade_value_20d": 4588395997.6,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0075,
+        "screen_size_by_downside": 0.045740632318501166,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "6271",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:15Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    },
+    {
+      "symbol": "6282",
+      "market_key": "tw",
+      "company": "康舒",
+      "generated_at": "2026-07-08T08:13:15Z",
+      "risk_handoff_status": "input_ready",
+      "current_price": {
+        "value": 56.2,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 53.7,
+        "high_60d": 70.8,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": 4.4484,
+        "drawdown_from_60d_high_pct": 20.6215,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 26744158.0,
+        "latest_trade_value": 1551006469.0,
+        "average_volume_20d": 33582842.05,
+        "average_trade_value_20d": 2008661225.65,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0075,
+        "screen_size_by_downside": 0.05,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "6282",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:15Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    },
+    {
+      "symbol": "6456",
+      "market_key": "tw",
+      "company": "GIS-KY",
+      "generated_at": "2026-07-08T08:13:15Z",
+      "risk_handoff_status": "input_ready",
+      "current_price": {
+        "value": 66.6,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 63.0,
+        "high_60d": 95.1,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": 5.4054,
+        "drawdown_from_60d_high_pct": 29.9685,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 4860670.0,
+        "latest_trade_value": 338330281.0,
+        "average_volume_20d": 6015781.2,
+        "average_trade_value_20d": 429284131.45,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0075,
+        "screen_size_by_downside": 0.05,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "6456",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:15Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    },
+    {
+      "symbol": "6831",
+      "market_key": "tw",
+      "company": "邁科",
+      "generated_at": "2026-07-08T08:13:15Z",
+      "risk_handoff_status": "input_ready",
+      "current_price": {
+        "value": 775.0,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 670.0,
+        "high_60d": 970.0,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": 13.5484,
+        "drawdown_from_60d_high_pct": 20.1031,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 1049704.0,
+        "latest_trade_value": 847437857.0,
+        "average_volume_20d": 1403290.95,
+        "average_trade_value_20d": 1171974455.85,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0075,
+        "screen_size_by_downside": 0.05,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "6831",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:15Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    },
+    {
+      "symbol": "2353",
+      "market_key": "tw",
+      "company": "宏碁",
+      "generated_at": "2026-07-08T08:13:15Z",
+      "risk_handoff_status": "input_ready",
+      "current_price": {
+        "value": 32.0,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 31.65,
+        "high_60d": 44.2,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": 1.0938,
+        "drawdown_from_60d_high_pct": 27.6018,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 49274454.0,
+        "latest_trade_value": 1601611467.0,
+        "average_volume_20d": 43169566.25,
+        "average_trade_value_20d": 1496840714.95,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "screen_size_by_downside": null,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "2353",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:15Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    },
+    {
+      "symbol": "2377",
+      "market_key": "tw",
+      "company": "微星",
+      "generated_at": "2026-07-08T08:13:15Z",
+      "risk_handoff_status": "input_ready",
+      "current_price": {
+        "value": 137.0,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 129.5,
+        "high_60d": 152.5,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": 5.4745,
+        "drawdown_from_60d_high_pct": 10.1639,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 23384279.0,
+        "latest_trade_value": 3362353950.0,
+        "average_volume_20d": 17159966.6,
+        "average_trade_value_20d": 2389860958.9,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "screen_size_by_downside": null,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "2377",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:15Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    },
+    {
+      "symbol": "2395",
+      "market_key": "tw",
+      "company": "研華",
+      "generated_at": "2026-07-08T08:13:15Z",
+      "risk_handoff_status": "input_ready",
+      "current_price": {
+        "value": 496.5,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 449.0,
+        "high_60d": 546.0,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": 9.567,
+        "drawdown_from_60d_high_pct": 9.0659,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 8005111.0,
+        "latest_trade_value": 4367525614.0,
+        "average_volume_20d": 2800668.1,
+        "average_trade_value_20d": 1382944807.5,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "screen_size_by_downside": null,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "2395",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:15Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    },
+    {
+      "symbol": "2401",
+      "market_key": "tw",
+      "company": "凌陽",
+      "generated_at": "2026-07-08T08:13:15Z",
+      "risk_handoff_status": "input_ready",
+      "current_price": {
+        "value": 31.25,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 25.3,
+        "high_60d": 35.65,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": 19.04,
+        "drawdown_from_60d_high_pct": 12.3422,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 5325720.0,
+        "latest_trade_value": 168078827.0,
+        "average_volume_20d": 16866019.4,
+        "average_trade_value_20d": 546925941.55,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "screen_size_by_downside": null,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "2401",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:15Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    },
+    {
+      "symbol": "2427",
+      "market_key": "tw",
+      "company": "三商電",
+      "generated_at": "2026-07-08T08:13:15Z",
+      "risk_handoff_status": "input_ready",
+      "current_price": {
+        "value": 24.9,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 21.75,
+        "high_60d": 27.1,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": 12.6506,
+        "drawdown_from_60d_high_pct": 8.1181,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 3747128.0,
+        "latest_trade_value": 95384808.0,
+        "average_volume_20d": 2615704.05,
+        "average_trade_value_20d": 65020283.35,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "screen_size_by_downside": null,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "2427",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:15Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    },
+    {
+      "symbol": "2465",
+      "market_key": "tw",
+      "company": "麗臺",
+      "generated_at": "2026-07-08T08:13:15Z",
+      "risk_handoff_status": "input_ready",
+      "current_price": {
+        "value": 74.0,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 69.7,
+        "high_60d": 93.8,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": 5.8108,
+        "drawdown_from_60d_high_pct": 21.1087,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 2538224.0,
+        "latest_trade_value": 200674325.0,
+        "average_volume_20d": 1165692.3,
+        "average_trade_value_20d": 90725504.8,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "screen_size_by_downside": null,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "2465",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:15Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    },
+    {
+      "symbol": "2498",
+      "market_key": "tw",
+      "company": "宏達電",
+      "generated_at": "2026-07-08T08:13:15Z",
+      "risk_handoff_status": "input_ready",
+      "current_price": {
+        "value": 44.25,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 41.3,
+        "high_60d": 52.4,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": 6.6667,
+        "drawdown_from_60d_high_pct": 15.5534,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 4652098.0,
+        "latest_trade_value": 206755856.0,
+        "average_volume_20d": 8797392.75,
+        "average_trade_value_20d": 405497916.25,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "screen_size_by_downside": null,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "2498",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:15Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    },
+    {
+      "symbol": "2605",
+      "market_key": "tw",
+      "company": "新興",
+      "generated_at": "2026-07-08T08:13:15Z",
+      "risk_handoff_status": "input_ready",
+      "current_price": {
+        "value": 29.85,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 28.65,
+        "high_60d": 39.9,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": 4.0201,
+        "drawdown_from_60d_high_pct": 25.188,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 5326949.0,
+        "latest_trade_value": 161916944.0,
+        "average_volume_20d": 6426380.2,
+        "average_trade_value_20d": 198512920.65,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "screen_size_by_downside": null,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "2605",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:15Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    },
+    {
+      "symbol": "2606",
+      "market_key": "tw",
+      "company": "裕民",
+      "generated_at": "2026-07-08T08:13:15Z",
+      "risk_handoff_status": "input_ready",
+      "current_price": {
+        "value": 62.2,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 59.1,
+        "high_60d": 73.0,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": 4.9839,
+        "drawdown_from_60d_high_pct": 14.7945,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 3561359.0,
+        "latest_trade_value": 223230873.0,
+        "average_volume_20d": 6051091.9,
+        "average_trade_value_20d": 379622721.5,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "screen_size_by_downside": null,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "2606",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:15Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    },
+    {
+      "symbol": "3016",
+      "market_key": "tw",
+      "company": "嘉晶",
+      "generated_at": "2026-07-08T08:13:15Z",
+      "risk_handoff_status": "input_ready",
+      "current_price": {
+        "value": 118.0,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 98.3,
+        "high_60d": 153.0,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": 16.6949,
+        "drawdown_from_60d_high_pct": 22.8758,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 8576271.0,
+        "latest_trade_value": 1014811147.0,
+        "average_volume_20d": 14922126.15,
+        "average_trade_value_20d": 1927305298.55,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "screen_size_by_downside": null,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "3016",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:15Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    },
+    {
+      "symbol": "3033",
+      "market_key": "tw",
+      "company": "威健",
+      "generated_at": "2026-07-08T08:13:16Z",
+      "risk_handoff_status": "input_ready",
+      "current_price": {
+        "value": 49.4,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 47.8,
+        "high_60d": 55.3,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": 3.2389,
+        "drawdown_from_60d_high_pct": 10.6691,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 2526868.0,
+        "latest_trade_value": 124567700.0,
+        "average_volume_20d": 7316118.7,
+        "average_trade_value_20d": 367162882.15,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "screen_size_by_downside": null,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "3033",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:16Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    },
+    {
+      "symbol": "3257",
+      "market_key": "tw",
+      "company": "虹冠電",
+      "generated_at": "2026-07-08T08:13:16Z",
+      "risk_handoff_status": "input_ready",
+      "current_price": {
+        "value": 65.9,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 52.2,
+        "high_60d": 78.2,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": 20.7891,
+        "drawdown_from_60d_high_pct": 15.7289,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 841533.0,
+        "latest_trade_value": 55229840.0,
+        "average_volume_20d": 2569733.15,
+        "average_trade_value_20d": 178981251.35,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "screen_size_by_downside": null,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "3257",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:16Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    },
+    {
+      "symbol": "3406",
+      "market_key": "tw",
+      "company": "玉晶光",
+      "generated_at": "2026-07-08T08:13:16Z",
+      "risk_handoff_status": "input_ready",
+      "current_price": {
+        "value": 609.0,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 598.0,
+        "high_60d": 796.0,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": 1.8062,
+        "drawdown_from_60d_high_pct": 23.4925,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 2239496.0,
+        "latest_trade_value": 1365549102.0,
+        "average_volume_20d": 4460918.05,
+        "average_trade_value_20d": 3187086687.15,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "screen_size_by_downside": null,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "3406",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:16Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    },
+    {
+      "symbol": "3416",
+      "market_key": "tw",
+      "company": "融程電",
+      "generated_at": "2026-07-08T08:13:16Z",
+      "risk_handoff_status": "input_ready",
+      "current_price": {
+        "value": 182.0,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 161.5,
+        "high_60d": 196.0,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": 11.2637,
+        "drawdown_from_60d_high_pct": 7.1429,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 805841.0,
+        "latest_trade_value": 152199631.0,
+        "average_volume_20d": 494725.65,
+        "average_trade_value_20d": 88495977.6,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "screen_size_by_downside": null,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "3416",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:16Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    },
+    {
+      "symbol": "3596",
+      "market_key": "tw",
+      "company": "智易",
+      "generated_at": "2026-07-08T08:13:16Z",
+      "risk_handoff_status": "input_ready",
+      "current_price": {
+        "value": 193.5,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 177.5,
+        "high_60d": 202.5,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": 8.2687,
+        "drawdown_from_60d_high_pct": 4.4444,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 1097032.0,
+        "latest_trade_value": 214107210.0,
+        "average_volume_20d": 2430679.9,
+        "average_trade_value_20d": 461368305.35,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "screen_size_by_downside": null,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "3596",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:16Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    },
+    {
+      "symbol": "3706",
+      "market_key": "tw",
+      "company": "神達",
+      "generated_at": "2026-07-08T08:13:16Z",
+      "risk_handoff_status": "input_ready",
+      "current_price": {
+        "value": 88.0,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 83.5,
+        "high_60d": 103.5,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": 5.1136,
+        "drawdown_from_60d_high_pct": 14.9758,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 10230663.0,
+        "latest_trade_value": 896718513.0,
+        "average_volume_20d": 21224276.0,
+        "average_trade_value_20d": 1884220943.95,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "screen_size_by_downside": null,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "3706",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:16Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    },
+    {
+      "symbol": "4938",
+      "market_key": "tw",
+      "company": "和碩",
+      "generated_at": "2026-07-08T08:13:16Z",
+      "risk_handoff_status": "input_ready",
+      "current_price": {
+        "value": 82.3,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 80.1,
+        "high_60d": 102.5,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": 2.6731,
+        "drawdown_from_60d_high_pct": 19.7073,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 8457923.0,
+        "latest_trade_value": 704287757.0,
+        "average_volume_20d": 23225722.35,
+        "average_trade_value_20d": 2000533248.05,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "screen_size_by_downside": null,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "4938",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:16Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    },
+    {
+      "symbol": "4952",
+      "market_key": "tw",
+      "company": "凌通",
+      "generated_at": "2026-07-08T08:13:16Z",
+      "risk_handoff_status": "input_ready",
+      "current_price": {
+        "value": 56.0,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 47.0,
+        "high_60d": 61.7,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": 16.0714,
+        "drawdown_from_60d_high_pct": 9.2382,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 935221.0,
+        "latest_trade_value": 53540590.0,
+        "average_volume_20d": 2204333.65,
+        "average_trade_value_20d": 127285783.5,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "screen_size_by_downside": null,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "4952",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:16Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    },
+    {
+      "symbol": "5871",
+      "market_key": "tw",
+      "company": "中租-KY",
+      "generated_at": "2026-07-08T08:13:16Z",
+      "risk_handoff_status": "input_ready",
+      "current_price": {
+        "value": 114.0,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 113.0,
+        "high_60d": 123.0,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": 0.8772,
+        "drawdown_from_60d_high_pct": 7.3171,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 4271244.0,
+        "latest_trade_value": 490832882.0,
+        "average_volume_20d": 9846318.95,
+        "average_trade_value_20d": 1149739463.85,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "screen_size_by_downside": null,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "5871",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:16Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    },
+    {
+      "symbol": "6168",
+      "market_key": "tw",
+      "company": "宏齊",
+      "generated_at": "2026-07-08T08:13:16Z",
+      "risk_handoff_status": "input_ready",
+      "current_price": {
+        "value": 28.4,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 23.25,
+        "high_60d": 36.65,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": 18.1338,
+        "drawdown_from_60d_high_pct": 22.5102,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 3513460.0,
+        "latest_trade_value": 102920296.0,
+        "average_volume_20d": 9217205.3,
+        "average_trade_value_20d": 291278648.6,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "screen_size_by_downside": null,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "6168",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:16Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    },
+    {
+      "symbol": "6209",
+      "market_key": "tw",
+      "company": "今國光",
+      "generated_at": "2026-07-08T08:13:16Z",
+      "risk_handoff_status": "input_partial",
+      "current_price": {
+        "value": 75.1,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 75.1,
+        "high_60d": 104.5,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": null,
+        "drawdown_from_60d_high_pct": 28.134,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 3978037.0,
+        "latest_trade_value": 305451994.0,
+        "average_volume_20d": 20362634.1,
+        "average_trade_value_20d": 1856824576.6,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "screen_size_by_downside": null,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "6209",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:16Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [
+        "downside distance input missing"
+      ],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    },
+    {
+      "symbol": "6214",
+      "market_key": "tw",
+      "company": "精誠",
+      "generated_at": "2026-07-08T08:13:16Z",
+      "risk_handoff_status": "input_ready",
+      "current_price": {
+        "value": 133.0,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 127.5,
+        "high_60d": 162.0,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": 4.1353,
+        "drawdown_from_60d_high_pct": 17.9012,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 1058851.0,
+        "latest_trade_value": 143044808.0,
+        "average_volume_20d": 2013656.05,
+        "average_trade_value_20d": 276640676.6,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "screen_size_by_downside": null,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "6214",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:16Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    },
+    {
+      "symbol": "6451",
+      "market_key": "tw",
+      "company": "訊芯-KY",
+      "generated_at": "2026-07-08T08:13:16Z",
+      "risk_handoff_status": "input_ready",
+      "current_price": {
+        "value": 496.5,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 481.0,
+        "high_60d": 756.0,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": 3.1219,
+        "drawdown_from_60d_high_pct": 34.3254,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 5618368.0,
+        "latest_trade_value": 2869206926.0,
+        "average_volume_20d": 5988812.5,
+        "average_trade_value_20d": 3425062070.3,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "screen_size_by_downside": null,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "6451",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:16Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    },
+    {
+      "symbol": "6531",
+      "market_key": "tw",
+      "company": "愛普*",
+      "generated_at": "2026-07-08T08:13:16Z",
+      "risk_handoff_status": "input_ready",
+      "current_price": {
+        "value": 895.0,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 846.0,
+        "high_60d": 1305.0,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": 5.4749,
+        "drawdown_from_60d_high_pct": 31.4176,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 2916923.0,
+        "latest_trade_value": 2687556626.0,
+        "average_volume_20d": 4481510.35,
+        "average_trade_value_20d": 4470027758.2,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "screen_size_by_downside": null,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "6531",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:16Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    },
+    {
+      "symbol": "9938",
+      "market_key": "tw",
+      "company": "百和",
+      "generated_at": "2026-07-08T08:13:17Z",
+      "risk_handoff_status": "input_ready",
+      "current_price": {
+        "value": 45.05,
+        "currency": "TWD",
+        "as_of": "2026-07-07",
+        "source": "twse_official_latest_close"
+      },
+      "risk_inputs": {
+        "low_20d": 43.2,
+        "high_60d": 48.0,
+        "downside_reference": "20d_low",
+        "downside_distance_pct": 4.1065,
+        "drawdown_from_60d_high_pct": 6.1458,
+        "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+      },
+      "liquidity_inputs": {
+        "history_days": 60,
+        "latest_history_date": "2026-07-08",
+        "latest_volume": 1452742.0,
+        "latest_trade_value": 66528846.0,
+        "average_volume_20d": 1565203.95,
+        "average_trade_value_20d": 70440952.6,
+        "source": "local_daily_bars"
+      },
+      "model_portfolio_inputs": {
+        "portfolio_units": 100,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "screen_size_by_downside": null,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+      },
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "9938",
+          "as_of": "2026-07-07",
+          "retrieved_at": "2026-07-08T08:12:40Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        },
+        {
+          "source_name": "StockLoop local daily_bars",
+          "source_type": "local_ohlcv_history",
+          "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+          "latest_history_date": "2026-07-08",
+          "history_days": 60,
+          "retrieved_at": "2026-07-08T08:13:17Z",
+          "used_by": [
+            "risk_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+    }
+  ]
+}
