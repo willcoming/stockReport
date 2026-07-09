@@ -1,0 +1,247 @@
+{
+  "symbol": "4958",
+  "market_key": "tw",
+  "company": "臻鼎-KY",
+  "instrument": {
+    "symbol": "4958",
+    "market_key": "tw",
+    "market": "台股",
+    "exchange": "TWSE",
+    "currency": "TWD",
+    "provider_symbol": "4958.TW",
+    "instrument_type": "common_equity",
+    "status": "ok",
+    "official_validation_status": "not_checked",
+    "equity_model_supported": true,
+    "warnings": [],
+    "output_subdir": "tw-4958"
+  },
+  "official_validation_status": "exchange_quote_verified",
+  "official_validation": {
+    "status": "exchange_quote_verified",
+    "scope": "security_quote",
+    "source": "twse_official_latest_close",
+    "symbol": "4958",
+    "as_of": "2026-07-08",
+    "retrieved_at": "2026-07-08T23:58:17Z",
+    "note": "Official exchange quote verifies the security and market-data source; it does not complete filings, earnings-call, valuation, or liquidity underwriting."
+  },
+  "generated_at": "2026-07-09T07:59:49",
+  "retrieved_at": "2026-07-08T23:58:17Z",
+  "as_of": "2026-07-08",
+  "sources": [
+    {
+      "source_name": "twse_official_latest_close",
+      "source_type": "official_exchange_market_data",
+      "symbol": "4958",
+      "as_of": "2026-07-08",
+      "retrieved_at": "2026-07-08T23:58:17Z",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "source_ledger.json",
+        "initiation.html",
+        "risk_plan.html"
+      ],
+      "note": "Official exchange quote verifies the security and market-data source; it does not complete filings, earnings-call, valuation, or liquidity underwriting."
+    },
+    {
+      "source_name": "KOL/news",
+      "source_type": "stockloop_decision_report",
+      "report_path": "reports/news/2026-07-09_kol_news_decision_report.md",
+      "category": "buy_now",
+      "source_view": "偏多",
+      "layout_suggestion": "資本支出大幅上修，可分批佈局",
+      "holding_suggestion": "續抱",
+      "tracking_indicator": "載板良率、ABF產能擴充進度",
+      "risk": "擴產期過長之不確定性",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "source_ledger.json",
+        "initiation.html",
+        "risk_plan.html"
+      ]
+    },
+    {
+      "source_name": "PEI valuation handoff",
+      "source_type": "valuation_input_handoff",
+      "valuation_handoff_status": "input_partial",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "source_ledger.json",
+        "initiation.html",
+        "risk_plan.html"
+      ],
+      "note": "Valuation handoff is input only; it does not make valuation_status complete."
+    },
+    {
+      "source_name": "PEI official evidence handoff",
+      "source_type": "official_evidence_handoff",
+      "official_evidence_handoff_status": "missing",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "source_ledger.json",
+        "initiation.html",
+        "risk_plan.html"
+      ],
+      "note": "Official evidence handoff is input only; it does not make research_status complete."
+    },
+    {
+      "source_name": "PEI risk handoff",
+      "source_type": "risk_input_handoff",
+      "risk_handoff_status": "input_ready",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "source_ledger.json",
+        "initiation.html",
+        "risk_plan.html"
+      ],
+      "note": "Risk handoff is input only; portfolio-risk-management must verify downside, liquidity, and sizing before implementation."
+    }
+  ],
+  "market_data": {
+    "current_price": {
+      "value": 565.0,
+      "currency": "TWD",
+      "as_of": "2026-07-08",
+      "source": "twse_official_latest_close",
+      "retrieved_at": "2026-07-08T23:58:17Z",
+      "warnings": []
+    }
+  },
+  "recommendation_label": "Watch only",
+  "research_status": "partial",
+  "valuation_status": "not_run",
+  "risk_status": "not_run",
+  "valuation_context": {
+    "valuation_handoff_status": "input_partial",
+    "methods": [],
+    "metrics": {},
+    "missing_inputs": [
+      "valuation multiples missing"
+    ],
+    "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+  },
+  "official_evidence_context": {
+    "official_evidence_handoff_status": "missing",
+    "official_validation": {
+      "status": "missing",
+      "sources": []
+    },
+    "fundamental_signals": [],
+    "missing_inputs": [
+      "台股官方公司基本資料未命中",
+      "月營收資料未命中或未接到此市場",
+      "缺少公司級官方營收、訂單、財報或法說支撐"
+    ],
+    "next_step": "Use official filings, monthly revenue, SEC companyfacts, earnings-call or management-commentary evidence in PEI specialist research before setting research_status=complete."
+  },
+  "risk_context": {
+    "risk_handoff_status": "input_ready",
+    "current_price": {
+      "value": 565.0,
+      "currency": "TWD",
+      "as_of": "2026-07-08",
+      "source": "twse_official_latest_close"
+    },
+    "risk_inputs": {
+      "low_20d": 495.5,
+      "high_60d": 659.0,
+      "downside_reference": "20d_low",
+      "downside_distance_pct": 12.3009,
+      "drawdown_from_60d_high_pct": 14.264,
+      "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+    },
+    "liquidity_inputs": {
+      "history_days": 60,
+      "latest_history_date": "2026-07-08",
+      "latest_volume": 31313350.0,
+      "latest_trade_value": 17670616502.0,
+      "average_volume_20d": 37764896.6,
+      "average_trade_value_20d": 22499820846.7,
+      "source": "local_daily_bars"
+    },
+    "model_portfolio_inputs": {
+      "portfolio_units": 100,
+      "single_name_cap": 0.05,
+      "risk_budget_initial": 0.0075,
+      "screen_size_by_downside": 0.05,
+      "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+      "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+    },
+    "missing_inputs": [],
+    "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+  },
+  "investment_horizon": {
+    "status": "partial",
+    "near_term_3m": "Report-scope artifact uses source-report setup, current quote handoff, and local StockLoop evidence as a timing/risk screen only; 3-month catalyst path is not fully underwritten.",
+    "base_12m": "Requires official filings, earnings-call commentary, consensus/estimate context, and valuation work before a 12-month PEI view can be decision-ready.",
+    "long_term_3y": "Requires full PEI specialist research or source-backed company/industry underwrite before a 3-year ownership thesis can be decision-ready.",
+    "falsifiers": [
+      "Official revenue, margin, EPS, cash-flow, order, or management commentary contradicts the source-report setup.",
+      "Current valuation already prices the optimistic case without margin of safety.",
+      "Liquidity, downside distance, or risk budget cannot support model-portfolio sizing."
+    ]
+  },
+  "missing_evidence": [
+    "本 report-scope PEI artifact 由 StockLoop 本地 KOL/news、industry thesis 與 quote ledger 生成；尚未逐檔執行完整 Public Equity Investing specialist research",
+    "尚缺官方 filings / 年報 / 法說 transcript / IR presentation 查核",
+    "尚缺 consensus、估值模型、流動性模型、downside/stop distance 與完整風險報酬 tie-out",
+    "valuation_status=not_run；不得解讀為 decision-ready 或個人化投資建議",
+    "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+    "產業 thesis 缺失證據：台股官方公司基本資料未命中",
+    "產業 thesis 缺失證據：月營收資料未命中或未接到此市場",
+    "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+    "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
+    "估值 handoff 缺失：valuation multiples missing",
+    "官方證據 handoff 缺失：台股官方公司基本資料未命中",
+    "官方證據 handoff 缺失：月營收資料未命中或未接到此市場",
+    "官方證據 handoff 缺失：缺少公司級官方營收、訂單、財報或法說支撐"
+  ],
+  "industry_thesis_context": {
+    "gate": "theme_only",
+    "gate_label": "目前偏題材，缺公司級落地證據",
+    "hype_risk": "low",
+    "hype_risk_label": "低",
+    "summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=載板良率、ABF產能擴充進度；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
+    "missing_evidence": [
+      "台股官方公司基本資料未命中",
+      "月營收資料未命中或未接到此市場",
+      "近 7 日公開新聞熱度未命中或未抓取",
+      "缺少公司級官方營收、訂單、財報或法說支撐"
+    ],
+    "source": "reports/industry-thesis/2026-07-09_industry_thesis.json"
+  },
+  "report_scope_context": {
+    "canonical_category": "buy_now",
+    "source_row": {
+      "市場": "台股",
+      "股票代號": "4958",
+      "公司名稱": "臻鼎-KY",
+      "產業": "PCB載板",
+      "來源提及程度": "中",
+      "來源主觀看法": "偏多",
+      "布局建議": "資本支出大幅上修，可分批佈局",
+      "持倉建議": "續抱",
+      "追蹤指標": "載板良率、ABF產能擴充進度",
+      "風險": "擴產期過長之不確定性"
+    },
+    "output_root": "reports/public-equity-batch/2026-07-09"
+  },
+  "portfolio_risk": {
+    "model_portfolio_size": "0%; watch-only until full PEI specialist workflow clears evidence gates",
+    "risk_budget": 0.0075,
+    "downside_or_stop_distance": "20d_low distance 12.3%; 20D low 495.5 (input only; PM must verify)",
+    "liquidity_cap": "20D avg trade value 22,499,820,846.7; PM must define liquidity cap",
+    "hedge_posture": "No hedge; model portfolio remains cash for this name until evidence clears",
+    "add_rule": "Open or add only after full PEI specialist workflow confirms thesis, trigger, current price context, liquidity, and risk/reward",
+    "trim_rule": "Trim or keep watch-only if source thesis, price trigger, or company-level evidence weakens",
+    "exit_rule": "Exit/watch-only if thesis evidence fails, price trigger fails, or official evidence contradicts KOL/news setup",
+    "max_loss_posture": "0 units at risk because model size is 0% in this partial artifact",
+    "monitoring_cadence": "Daily price and weekly fundamentals while in report-scope watch universe"
+  }
+}
