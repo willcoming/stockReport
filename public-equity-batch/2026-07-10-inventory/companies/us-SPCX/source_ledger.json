@@ -1,0 +1,263 @@
+{
+  "symbol": "SPCX",
+  "market_key": "us",
+  "company": "太空探索科技公司",
+  "instrument": null,
+  "official_validation_status": "not_checked",
+  "official_validation": {
+    "status": "not_checked",
+    "scope": "not_completed",
+    "source": "",
+    "note": "No official exchange quote or issuer/security validation was attached to this partial PEI artifact."
+  },
+  "generated_at": "2026-07-10T08:14:42",
+  "retrieved_at": "2026-07-10T08:14:42",
+  "as_of": "2026-07-10",
+  "sources": [
+    {
+      "source_name": "merged inventory universe",
+      "source_type": "inventory_scope",
+      "path": "/tmp/stockloop_inventory_merged.json",
+      "retrieved_at": "2026-07-10T08:14:42",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "tearsheet.html",
+        "initiation.html",
+        "risk_plan.html"
+      ],
+      "note": "Inventory defines research universe only; broker position size is excluded from PEI model sizing."
+    },
+    {
+      "source_name": "stock inventory health check report",
+      "source_type": "local_report",
+      "path": "reports/stock-inventory/2026-07-10-0813_inventory_health_check.md",
+      "retrieved_at": "2026-07-10T08:14:42",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "initiation.html",
+        "risk_plan.html"
+      ]
+    },
+    {
+      "source_name": "Stock inventory health-check current-price column",
+      "source_type": "market_data",
+      "symbol": "SPCX",
+      "as_of": "2026-07-10",
+      "retrieved_at": "2026-07-10T08:14:42",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "source_ledger.json",
+        "initiation.html",
+        "risk_plan.html"
+      ],
+      "note": ""
+    },
+    {
+      "source_name": "recent K-line trigger scan",
+      "source_type": "local_signal_log",
+      "retrieved_at": "2026-07-10T08:14:42",
+      "summary": "近一週未觸發買進/賣出",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "initiation.html",
+        "risk_plan.html"
+      ]
+    },
+    {
+      "source_name": "company-level industry thesis",
+      "source_type": "industry_thesis",
+      "path": "reports/industry-thesis/2026-07-10_industry_thesis.json",
+      "retrieved_at": "2026-07-10T08:14:42",
+      "industry_thesis_gate": "theme_only",
+      "hype_risk": "low",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "source_ledger.json",
+        "initiation.html",
+        "risk_plan.html"
+      ]
+    },
+    {
+      "source_name": "PEI valuation handoff",
+      "source_type": "valuation_input_handoff",
+      "retrieved_at": "2026-07-10T08:14:42",
+      "valuation_handoff_status": "input_partial",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "source_ledger.json",
+        "initiation.html",
+        "risk_plan.html"
+      ],
+      "note": "Valuation handoff is input only; it does not make valuation_status complete."
+    },
+    {
+      "source_name": "PEI official evidence handoff",
+      "source_type": "official_evidence_handoff",
+      "retrieved_at": "2026-07-10T08:14:42",
+      "official_evidence_handoff_status": "missing",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "source_ledger.json",
+        "initiation.html",
+        "risk_plan.html"
+      ],
+      "note": "Official evidence handoff is input only; it does not make research_status complete."
+    },
+    {
+      "source_name": "PEI risk handoff",
+      "source_type": "risk_input_handoff",
+      "retrieved_at": "2026-07-10T08:14:42",
+      "risk_handoff_status": "input_ready",
+      "used_by": [
+        "summary.html",
+        "summary.md",
+        "source_ledger.json",
+        "initiation.html",
+        "risk_plan.html"
+      ],
+      "note": "Risk handoff is input only; portfolio-risk-management must verify downside, liquidity, and sizing before implementation."
+    }
+  ],
+  "market_data": {
+    "current_price": {
+      "value": 152.16,
+      "currency": "USD",
+      "as_of": "2026-07-10",
+      "source": "Stock inventory health-check current-price column (SPCX)"
+    }
+  },
+  "recommendation_label": "Not decision-ready",
+  "research_status": "partial",
+  "valuation_status": "not_run",
+  "risk_status": "not_run",
+  "valuation_context": {
+    "valuation_handoff_status": "input_partial",
+    "methods": [],
+    "metrics": {},
+    "missing_inputs": [
+      "current price missing",
+      "valuation multiples missing"
+    ],
+    "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+  },
+  "official_evidence_context": {
+    "official_evidence_handoff_status": "missing",
+    "official_validation": {
+      "status": "missing",
+      "sources": []
+    },
+    "fundamental_signals": [],
+    "missing_inputs": [
+      "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+      "缺少公司級官方營收、訂單、財報或法說支撐"
+    ],
+    "next_step": "Use official filings, monthly revenue, SEC companyfacts, earnings-call or management-commentary evidence in PEI specialist research before setting research_status=complete."
+  },
+  "risk_context": {
+    "risk_handoff_status": "input_ready",
+    "current_price": {
+      "value": 152.16000366210938,
+      "currency": "",
+      "as_of": "",
+      "source": "local_daily_bars"
+    },
+    "risk_inputs": {
+      "low_20d": 145.1999969482422,
+      "high_60d": 225.63999938964844,
+      "downside_reference": "20d_low",
+      "downside_distance_pct": 4.5741,
+      "drawdown_from_60d_high_pct": 32.5651,
+      "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+    },
+    "liquidity_inputs": {
+      "history_days": 18,
+      "latest_history_date": "2026-07-09",
+      "latest_volume": 45094119.0,
+      "latest_trade_value": 6861521312.0,
+      "average_volume_20d": 152650434.3888889,
+      "average_trade_value_20d": 25983534489.27778,
+      "source": "local_daily_bars"
+    },
+    "model_portfolio_inputs": {
+      "portfolio_units": 100,
+      "single_name_cap": 0.05,
+      "risk_budget_initial": 0.0,
+      "screen_size_by_downside": null,
+      "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+      "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+    },
+    "missing_inputs": [],
+    "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+  },
+  "investment_horizon": {
+    "status": "partial",
+    "near_term_3m": "Inventory-scope artifact uses health-check, K-line, and APEX context as a timing/risk screen only; 3-month thesis is not fully underwritten.",
+    "base_12m": "Requires official filings, earnings-call commentary, consensus/estimate context, and valuation work before a 12-month PEI view can be decision-ready.",
+    "long_term_3y": "Requires full PEI specialist research or source-backed industry/company underwrite before a 3-year ownership thesis can be decision-ready.",
+    "falsifiers": [
+      "Official revenue, margin, EPS, cash-flow, order, or management commentary weakens the thesis.",
+      "Current valuation already prices the optimistic case without margin of safety.",
+      "Liquidity, downside distance, or risk budget cannot support model-portfolio sizing."
+    ]
+  },
+  "missing_evidence": [
+    "本 inventory-scope PEI 批次未逐檔執行完整官方 filings、法說、consensus、估值模型與流動性模型查核",
+    "個人庫存僅用於定義研究宇宙；模型投組 sizing 未使用券商、股數或成本",
+    "需以公司公告、交易所/SEC 文件與正式 PEI specialist workflow 補強後，才可升級為 decision-ready",
+    "官方公司/證券身分驗證未完成",
+    "健康檢查已標示風險控管動作，模型投組維持 0%",
+    "產業 thesis Gate=目前偏題材，缺公司級落地證據；炒作風險=低",
+    "產業 thesis 缺失證據：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+    "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+    "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+    "產業 thesis 缺失證據：缺少公司級官方營收、訂單、財報或法說支撐",
+    "估值 handoff 缺失：current price missing",
+    "估值 handoff 缺失：valuation multiples missing",
+    "官方證據 handoff 缺失：SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+    "官方證據 handoff 缺失：缺少公司級官方營收、訂單、財報或法說支撐"
+  ],
+  "industry_thesis_context": {
+    "gate": "theme_only",
+    "gate_label": "目前偏題材，缺公司級落地證據",
+    "hype_risk": "low",
+    "hype_risk_label": "低",
+    "summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=庫存回補 / 週期復甦；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
+    "missing_evidence": [
+      "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+      "近 7 日公開新聞熱度未命中或未抓取",
+      "缺少明確後續產業 KPI",
+      "缺少公司級官方營收、訂單、財報或法說支撐"
+    ],
+    "source": "reports/industry-thesis/2026-07-10_industry_thesis.json"
+  },
+  "stock_inventory_context": {
+    "action": "賣出",
+    "risk_priority": "",
+    "health_check_reason": "非上市/特殊標的，不支援 Stock Industry template，先列最高風控。",
+    "recent_trigger_summary": "近一週未觸發買進/賣出",
+    "short_term_scenario": "APEX 未取得可靠 numeric stop threshold；只列價格風險監控，不覆蓋 Stock Industry/技術風控。",
+    "invalidation_condition": "若 Stock Industry thesis 下修、估值/財報證據轉弱，或後續 APEX 補出明確失效價跌破，需重估。",
+    "data_limitations": "庫存合併 2026-07-10；K線來源 2026-07-09_us_kline_decision_report.md；K線窗 2026-07-03~2026-07-09；industry thesis 2026-07-10 no-network；Stock Industry cache valid。",
+    "industry_thesis_gate": "theme_only",
+    "hype_risk": "low"
+  },
+  "portfolio_risk": {
+    "model_portfolio_size": "0%; not decision-ready for model portfolio",
+    "risk_budget": 0.0,
+    "downside_or_stop_distance": "20d_low distance 4.57%; 20D low 145.2 (input only; PM must verify)",
+    "liquidity_cap": "20D avg trade value 25,983,534,489.28; PM must define liquidity cap",
+    "hedge_posture": "No hedge; model portfolio remains cash for this name until evidence clears",
+    "add_rule": "Open or add only after full PEI specialist workflow confirms thesis, trigger, price context, liquidity, and risk/reward",
+    "trim_rule": "非上市/特殊標的，不支援 Stock Industry template，先列最高風控。",
+    "exit_rule": "若 Stock Industry thesis 下修、估值/財報證據轉弱，或後續 APEX 補出明確失效價跌破，需重估。",
+    "max_loss_posture": "0 units at risk because inventory-scope model size is 0%",
+    "monitoring_cadence": "Daily price and weekly fundamentals while held in inventory watch universe"
+  }
+}
