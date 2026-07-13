@@ -1,0 +1,140 @@
+{
+  "schema_version": "professional-research-dossier-v1",
+  "generated_at": "2026-07-14T06:49:03",
+  "instrument": {
+    "raw_symbol": "NOG",
+    "symbol": "NOG",
+    "market_key": "us",
+    "market": "NYSE",
+    "exchange": "US",
+    "currency": "USD",
+    "provider_symbol": "NOG",
+    "instrument_type": "common_equity",
+    "company": "Northern Oil and Gas",
+    "official_validation_status": "not_checked",
+    "equity_model_supported": true,
+    "status": "ok",
+    "source": "inferred",
+    "warnings": [],
+    "note": "",
+    "output_subdir": "us-NOG"
+  },
+  "company": "Northern Oil and Gas",
+  "source_category": "wait_entry",
+  "source_category_label": "現在不能買，但值得等買點名單",
+  "source_ledger": [
+    {
+      "source_name": "StockLoop decision report",
+      "source_type": "decision_report",
+      "path": "reports/usStock/2026-07-13_us_kline_decision_report.md",
+      "category": "wait_entry",
+      "category_label": "現在不能買，但值得等買點名單",
+      "row_index": 6,
+      "raw_market": "NYSE",
+      "raw_symbol_cell": "NOG",
+      "retrieved_at": "2026-07-14T06:49:03",
+      "used_by": [
+        "dossier.json",
+        "report.md",
+        "report.html",
+        "data_quality_report"
+      ]
+    }
+  ],
+  "market_data": {
+    "current_price": {
+      "value": "",
+      "currency": "USD",
+      "as_of": "",
+      "source": ""
+    }
+  },
+  "technical": {
+    "status": "partial",
+    "summary": "未在本專業研究骨架中重新計算技術面；沿用原 decision report / K-line 報告作為來源。"
+  },
+  "fundamentals": {
+    "status": "partial",
+    "summary": "尚未完成完整三表、月營收、SEC companyfacts 或法說資料接入。",
+    "missing_evidence": [
+      "官方財報 / 月營收 / SEC companyfacts 尚未完整接入本 dossier。"
+    ]
+  },
+  "valuation": {
+    "status": "not_run",
+    "summary": "估值模型尚未執行；不得輸出 Buy/Hold/Sell 或 decision-ready 結論。",
+    "methods": []
+  },
+  "sentiment": {
+    "status": "partial",
+    "summary": "來源為既有 KOL/news 或 K-line decision report；尚未新增社群情緒或法人籌碼交叉驗證。"
+  },
+  "industry": {
+    "status": "partial",
+    "summary": "若同日 industry thesis 已存在，後續版本可接入 Gate 與 hype risk；本版先保留來源分類。"
+  },
+  "risk": {
+    "status": "partial",
+    "primary_risks": [
+      "Official company/security validation is missing.",
+      "Current price is missing.",
+      "Price as-of timestamp is missing.",
+      "Valuation status is not_run.",
+      "Risk status is not_run.",
+      "Research status is partial."
+    ],
+    "contradiction_check": "Official company/security validation is missing.；Current price is missing."
+  },
+  "gates": {
+    "status": "partial",
+    "decision_ready": false,
+    "model_candidate_allowed": false,
+    "issues": [
+      {
+        "severity": "P1",
+        "code": "official_validation_missing",
+        "message": "Official company/security validation is missing."
+      },
+      {
+        "severity": "P1",
+        "code": "current_price_missing",
+        "message": "Current price is missing."
+      },
+      {
+        "severity": "P1",
+        "code": "price_as_of_missing",
+        "message": "Price as-of timestamp is missing."
+      },
+      {
+        "severity": "P1",
+        "code": "valuation_not_complete",
+        "message": "Valuation status is not_run."
+      },
+      {
+        "severity": "P1",
+        "code": "risk_not_complete",
+        "message": "Risk status is not_run."
+      },
+      {
+        "severity": "P1",
+        "code": "research_partial",
+        "message": "Research status is partial."
+      }
+    ]
+  },
+  "final_posture": {
+    "label": "Wait for trigger",
+    "evidence_level": "partial",
+    "data_quality_status": "partial",
+    "model_candidate_allowed": false,
+    "rationale": "資料驗證、估值與基本面 gate 未完整通過前，維持研究輔助語言。"
+  },
+  "missing_evidence": [
+    "Official company/security validation is missing.",
+    "Current price is missing.",
+    "Price as-of timestamp is missing.",
+    "Valuation status is not_run.",
+    "Risk status is not_run.",
+    "Research status is partial."
+  ]
+}
