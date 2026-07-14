@@ -1,0 +1,76 @@
+{
+  "batch_id": "batch-015",
+  "batch_index": 15,
+  "batch_size": 1,
+  "generated_at": "2026-07-14 08:08:15",
+  "output_root": "reports/public-equity-batch/2026-07-14-inventory",
+  "source_reports": [
+    "myStock/tw_stock_inventory.csv",
+    "myStock/us_stock_inventory_cathay.csv",
+    "myStock/us_stock_inventory_yuanta.csv",
+    "/tmp/stockloop_inventory_merged.json",
+    "reports/stock-inventory/2026-07-14-0807_inventory_health_check.md"
+  ],
+  "workflow": [
+    "company-tearsheet",
+    "comps-valuation",
+    "initiating-coverage",
+    "portfolio-risk-management"
+  ],
+  "items": [
+    {
+      "market_key": "us",
+      "market": "美股",
+      "symbol": "VZ",
+      "company": "Verizon Communications",
+      "industry": "inventory-scope",
+      "canonical_category": "inventory_holding",
+      "canonical_category_label": "庫存持倉",
+      "source_priority": 6,
+      "instrument_type": "common_equity",
+      "output_subdir": "us-VZ",
+      "industry_thesis_gate": "theme_only",
+      "industry_thesis_gate_label": "目前偏題材，缺公司級落地證據",
+      "hype_risk": "low",
+      "hype_risk_label": "低",
+      "industry_thesis_summary": "Gate=目前偏題材，缺公司級落地證據；炒作風險=低；成長驅動=庫存回補 / 週期復甦；目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。",
+      "industry_thesis_missing_evidence": [
+        "SEC company tickers 未命中或 SEC_USER_AGENT 未設定",
+        "近 7 日公開新聞熱度未命中或未抓取",
+        "缺少明確後續產業 KPI",
+        "缺少公司級官方營收、訂單、財報或法說支撐"
+      ],
+      "industry_thesis_source": "reports/industry-thesis/2026-07-14_industry_thesis.json",
+      "model_portfolio": {
+        "portfolio_units": 100,
+        "long_only": true,
+        "leverage_allowed": false,
+        "single_name_cap": 0.05,
+        "risk_budget_initial": 0.0,
+        "risk_budget_post_trigger": 0.005,
+        "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+        "inventory_scope_note": "Ticker comes from merged inventory; model sizing does not use personal broker position size."
+      },
+      "sources": [
+        {
+          "lane": "inventory",
+          "lane_label": "庫存持倉",
+          "category": "inventory_holding",
+          "category_label": "庫存持倉",
+          "report_path": "/tmp/stockloop_inventory_merged.json",
+          "row_index": 43,
+          "expanded_index": 0,
+          "raw_market": "美股",
+          "raw_symbol_cell": "VZ",
+          "raw_company_cell": "Verizon Communications",
+          "raw_row": {
+            "market": "美股",
+            "ticker": "VZ",
+            "company_name": "Verizon Communications",
+            "currency": "USD"
+          }
+        }
+      ]
+    }
+  ]
+}
