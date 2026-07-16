@@ -1,0 +1,1222 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-07-15 美股 K 線警報掃描投資決策報告</title>
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="stylesheet" href="../assets/report-center.css">
+</head>
+<body class="bg-slate-50 text-neutral-950 antialiased">
+
+<main class="w-full px-4 py-6 md:px-6 xl:px-8">
+  <nav class="mb-6 flex items-center justify-between text-sm text-slate-600">
+    <a class="font-bold tracking-normal text-neutral-950 underline decoration-emerald-700/30 underline-offset-4 hover:text-emerald-800" href="../index.html">← 報告中心</a>
+  </nav>
+  <article class="article-body w-full bg-white p-4 md:p-6 xl:p-8">
+    
+<header class="mb-7 border-b border-slate-200 pb-6">
+  <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+    <div class="min-w-0">
+      <span class="inline-flex w-fit items-center rounded-full border border-slate-300 px-2.5 py-1 text-xs text-slate-600">US · 美股 K-line 研究行動</span>
+      <h1 class="mt-3 text-3xl font-black leading-tight tracking-normal md:text-4xl">2026-07-15 美股 K 線警報掃描投資決策報告</h1>
+    </div>
+    <div class="shrink-0 rounded-md border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-600">
+      產出時間：<strong class="font-semibold text-neutral-950">2026-07-16 06:50:36</strong>
+    </div>
+  </div>
+</header>
+
+    <p>本報告以已產出的 K 線警報掃描日報為來源，由 AI agent 進行規則化整理與風險分層。內容僅作研究輔助與情境推演，不構成個人化投資建議、投顧服務或下單指令。</p>
+<h2>補充資料搜尋來源</h2>
+<ul>
+<li>網路補強：已啟用，補到產業資料 89 檔，未命中 1 檔。</li>
+<li>實際命中來源：Nasdaq screener stocks API 89 檔、未命中 1 檔</li>
+<li>優先搜尋列表：
+<ul>
+<li>Futu/Moomoo OpenAPI: https://openapi.futunn.com/futu-api-doc/intro/intro.html</li>
+<li>Nasdaq screener stocks API: https://api.nasdaq.com/api/screener/stocks?tableonly=true&amp;limit=25&amp;download=true</li>
+<li>Nasdaq company profile API: https://api.nasdaq.com/api/company/{symbol}/company-profile</li>
+<li>Nasdaq quote summary API: https://api.nasdaq.com/api/quote/{symbol}/summary?assetclass=stocks</li>
+<li>Morningstar profile: https://www.morningstar.com/stocks/xnys/{symbol}/quote</li>
+<li>Yahoo Finance profile: https://finance.yahoo.com/quote/{symbol}/profile/</li>
+<li>Yahoo Finance 個股頁: https://finance.yahoo.com/quote/{symbol}</li>
+</ul>
+</li>
+<li>仍為 <code>資料未提供</code> 的標的：ELVA</li>
+</ul>
+<h2>產業前景與題材查核摘要</h2>
+<p>此段只做公司級產業前景與炒作風險查核，不改動原 K 線買賣分類。</p>
+<div class="table-scroll"><table class="research-table"><colgroup><col style="width: 220px"><col style="width: 160px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"></colgroup>
+<thead>
+<tr>
+<th>K 線分類</th>
+<th>代號 / 公司</th>
+<th>產業 Gate</th>
+<th>炒作風險</th>
+<th>成長驅動</th>
+<th>核心判斷</th>
+<th>缺失證據</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>現在可買</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/ASML" rel="noopener noreferrer" target="_blank">ASML</a><a aria-label="在 TradingView 開啟 ASML" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AASML" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 ASML"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>炒作或擁擠交易風險偏高</td>
+<td>高</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 84.4%；振幅 5.2%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 1.43；爆量 volumeRatio 1.99；估算成交金額USD 7,539,068,714</td>
+<td>題材/價格/新聞熱度偏熱，但缺少公司級官方營收、訂單或財報證據支撐。</td>
+<td>SEC company tickers 未命中或 SEC_USER_AGENT 未設定；近 7 日公開新聞熱度未命中或未抓取</td>
+</tr>
+<tr>
+<td>現在可買</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/BKNG" rel="noopener noreferrer" target="_blank">BKNG</a><a aria-label="在 TradingView 開啟 BKNG" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3ABKNG" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 BKNG"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>目前偏題材，缺公司級落地證據</td>
+<td>低</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 95.7%；振幅 4.3%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 1,199,982,211</td>
+<td>目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。</td>
+<td>SEC company tickers 未命中或 SEC_USER_AGENT 未設定；近 7 日公開新聞熱度未命中或未抓取</td>
+</tr>
+<tr>
+<td>現在可買</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/FOXA" rel="noopener noreferrer" target="_blank">FOXA</a><a aria-label="在 TradingView 開啟 FOXA" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AFOXA" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 FOXA"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>目前偏題材，缺公司級落地證據</td>
+<td>低</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 82.2%；振幅 2.5%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 285,150,808</td>
+<td>目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。</td>
+<td>SEC company tickers 未命中或 SEC_USER_AGENT 未設定；近 7 日公開新聞熱度未命中或未抓取</td>
+</tr>
+<tr>
+<td>現在可買</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/MSFT" rel="noopener noreferrer" target="_blank">MSFT</a><a aria-label="在 TradingView 開啟 MSFT" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AMSFT" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 MSFT"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>目前偏題材，缺公司級落地證據</td>
+<td>低</td>
+<td>庫存回補 / 週期復甦</td>
+<td>目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。</td>
+<td>SEC company tickers 未命中或 SEC_USER_AGENT 未設定；近 7 日公開新聞熱度未命中或未抓取</td>
+</tr>
+<tr>
+<td>現在可買</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/PFE" rel="noopener noreferrer" target="_blank">PFE</a><a aria-label="在 TradingView 開啟 PFE" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3APFE" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 PFE"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>目前偏題材，缺公司級落地證據</td>
+<td>低</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 100.0%；振幅 2.1%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 796,317,573</td>
+<td>目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。</td>
+<td>SEC company tickers 未命中或 SEC_USER_AGENT 未設定；近 7 日公開新聞熱度未命中或未抓取</td>
+</tr>
+<tr>
+<td>現在可買</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/PM" rel="noopener noreferrer" target="_blank">PM</a><a aria-label="在 TradingView 開啟 PM" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3APM" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 PM"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>目前偏題材，缺公司級落地證據</td>
+<td>低</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 95.5%；振幅 2.9%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 753,671,993</td>
+<td>目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。</td>
+<td>SEC company tickers 未命中或 SEC_USER_AGENT 未設定；近 7 日公開新聞熱度未命中或未抓取</td>
+</tr>
+<tr>
+<td>等買點</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/CRCL" rel="noopener noreferrer" target="_blank">CRCL</a><a aria-label="在 TradingView 開啟 CRCL" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3ACRCL" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 CRCL"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>目前偏題材，缺公司級落地證據</td>
+<td>低</td>
+<td>庫存回補 / 週期復甦</td>
+<td>目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。</td>
+<td>SEC company tickers 未命中或 SEC_USER_AGENT 未設定；近 7 日公開新聞熱度未命中或未抓取</td>
+</tr>
+<tr>
+<td>等買點</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/TSLA" rel="noopener noreferrer" target="_blank">TSLA</a><a aria-label="在 TradingView 開啟 TSLA" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3ATSLA" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 TSLA"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>目前偏題材，缺公司級落地證據</td>
+<td>低</td>
+<td>庫存回補 / 週期復甦</td>
+<td>目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。</td>
+<td>SEC company tickers 未命中或 SEC_USER_AGENT 未設定；近 7 日公開新聞熱度未命中或未抓取</td>
+</tr>
+</tbody>
+</table></div>
+<h2>現在可以買名單</h2>
+<div class="table-scroll"><table class="research-table"><colgroup><col style="width: 110px"><col style="width: 160px"><col style="width: 180px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"></colgroup>
+<thead>
+<tr>
+<th>市場</th>
+<th>代號 / 公司</th>
+<th>產業</th>
+<th>來源提及程度</th>
+<th>來源主觀看法</th>
+<th>布局建議</th>
+<th>持倉建議</th>
+<th>追蹤指標</th>
+<th>風險</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/ASML" rel="noopener noreferrer" target="_blank">ASML</a><a aria-label="在 TradingView 開啟 ASML" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AASML" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 ASML"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Technology / Industrial Machinery/Components</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 84.4%；振幅 5.2%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 1.43；爆量 volumeRatio 1.99；估算成交金額USD 7,539,068,714</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/BKNG" rel="noopener noreferrer" target="_blank">BKNG</a><a aria-label="在 TradingView 開啟 BKNG" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3ABKNG" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 BKNG"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Consumer Discretionary / Transportation Services</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 95.7%；振幅 4.3%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 1,199,982,211</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/PFE" rel="noopener noreferrer" target="_blank">PFE</a><a aria-label="在 TradingView 開啟 PFE" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3APFE" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 PFE"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Health Care / Biotechnology: Pharmaceutical Preparations</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 100.0%；振幅 2.1%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 796,317,573</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/PM" rel="noopener noreferrer" target="_blank">PM</a><a aria-label="在 TradingView 開啟 PM" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3APM" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 PM"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Health Care / Medicinal Chemicals and Botanical Products</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 95.5%；振幅 2.9%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 753,671,993</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/FOXA" rel="noopener noreferrer" target="_blank">FOXA</a><a aria-label="在 TradingView 開啟 FOXA" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AFOXA" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 FOXA"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Industrials / Broadcasting</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 82.2%；振幅 2.5%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 285,150,808</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/MSFT" rel="noopener noreferrer" target="_blank">MSFT</a><a aria-label="在 TradingView 開啟 MSFT" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AMSFT" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 MSFT"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Technology / Computer Software: Prepackaged Software</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 73.5%；振幅 3.2%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 12,922,631,783</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+</tbody>
+</table></div>
+<h2>現在不能買，但值得等買點名單</h2>
+<div class="table-scroll"><table class="research-table"><colgroup><col style="width: 110px"><col style="width: 160px"><col style="width: 180px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"></colgroup>
+<thead>
+<tr>
+<th>市場</th>
+<th>代號 / 公司</th>
+<th>產業</th>
+<th>來源提及程度</th>
+<th>來源主觀看法</th>
+<th>布局建議</th>
+<th>持倉建議</th>
+<th>追蹤指標</th>
+<th>風險</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/LUV" rel="noopener noreferrer" target="_blank">LUV</a><a aria-label="在 TradingView 開啟 LUV" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3ALUV" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 LUV"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Consumer Discretionary / Air Freight/Delivery Services</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 86.5%；振幅 3.5%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 247,068,732</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/RPRX" rel="noopener noreferrer" target="_blank">RPRX</a><a aria-label="在 TradingView 開啟 RPRX" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3ARPRX" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 RPRX"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Health Care / Biotechnology: Pharmaceutical Preparations</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 99.3%；振幅 2.4%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 154,810,665</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/Z" rel="noopener noreferrer" target="_blank">Z</a><a aria-label="在 TradingView 開啟 Z" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AZ" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 Z"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Consumer Discretionary / Business Services</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 81.1%；振幅 4.4%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 129,484,713</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/OI" rel="noopener noreferrer" target="_blank">OI</a><a aria-label="在 TradingView 開啟 OI" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AOI" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 OI"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Consumer Discretionary / Containers/Packaging</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 97.0%；振幅 10.6%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 2.33；爆量 volumeRatio 3.43；估算成交金額USD 102,095,887</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/AEO" rel="noopener noreferrer" target="_blank">AEO</a><a aria-label="在 TradingView 開啟 AEO" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AAEO" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 AEO"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Consumer Discretionary / Clothing/Shoe/Accessory Stores</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 92.3%；振幅 7.5%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 1.76；估算成交金額USD 96,494,454</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/FIGR" rel="noopener noreferrer" target="_blank">FIGR</a><a aria-label="在 TradingView 開啟 FIGR" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AFIGR" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 FIGR"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Finance / Finance: Consumer Services</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 84.7%；振幅 7.2%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 76,678,564</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/OPCH" rel="noopener noreferrer" target="_blank">OPCH</a><a aria-label="在 TradingView 開啟 OPCH" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AOPCH" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 OPCH"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Health Care / Medical/Nursing Services</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 94.1%；振幅 4.6%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 1.51；估算成交金額USD 62,936,465</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/PENN" rel="noopener noreferrer" target="_blank">PENN</a><a aria-label="在 TradingView 開啟 PENN" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3APENN" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 PENN"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Consumer Discretionary / Hotels/Resorts</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 96.7%；振幅 3.6%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 62,873,883</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/GE" rel="noopener noreferrer" target="_blank">GE</a><a aria-label="在 TradingView 開啟 GE" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AGE" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 GE"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Technology / Consumer Electronics/Appliances</td>
+<td>三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>三均線趨勢策略：3MA；收盤位置 96.3%；振幅 2.0%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=多方趨勢開始；buyCount 1；今日買點 3MA；估算成交金額USD 1,943,653,701</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/XOM" rel="noopener noreferrer" target="_blank">XOM</a><a aria-label="在 TradingView 開啟 XOM" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AXOM" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 XOM"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Energy / Integrated oil Companies</td>
+<td>Legacy 買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 81.0%；振幅 2.1%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=多方趨勢開始；buyCount 1；今日買點 LZEMA20；估算成交金額USD 1,430,833,340</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/PG" rel="noopener noreferrer" target="_blank">PG</a><a aria-label="在 TradingView 開啟 PG" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3APG" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 PG"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Consumer Discretionary / Package Goods/Cosmetics</td>
+<td>三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>三均線趨勢策略：3MA；收盤位置 86.0%；振幅 2.6%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=空方趨勢結束；buyCount 1；今日買點 3MA；波幅放大 rangeRatio 1.37；估算成交金額USD 907,447,029</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/BMY" rel="noopener noreferrer" target="_blank">BMY</a><a aria-label="在 TradingView 開啟 BMY" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3ABMY" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 BMY"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Health Care / Biotechnology: Pharmaceutical Preparations</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 78.2%；振幅 3.6%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 1.51；估算成交金額USD 458,892,288</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/ASX" rel="noopener noreferrer" target="_blank">ASX</a><a aria-label="在 TradingView 開啟 ASX" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AASX" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 ASX"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/ASE" rel="noopener noreferrer" target="_blank">ASE</a><a aria-label="在 TradingView 開啟 ASE" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AASE" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 ASE"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Technology / Semiconductors</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 57.2%；振幅 7.2%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 1.44；估算成交金額USD 386,602,614</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/CLX" rel="noopener noreferrer" target="_blank">CLX</a><a aria-label="在 TradingView 開啟 CLX" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3ACLX" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 CLX"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Consumer Discretionary / Specialty Chemicals</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 74.9%；振幅 4.9%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 1.73；成交量高於均量 volumeRatio 1.48；估算成交金額USD 353,155,973</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/MRK" rel="noopener noreferrer" target="_blank">MRK</a><a aria-label="在 TradingView 開啟 MRK" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AMRK" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 MRK"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Health Care / Biotechnology: Pharmaceutical Preparations</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 40.0%；振幅 1.7%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 1,082,412,478</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/BIIB" rel="noopener noreferrer" target="_blank">BIIB</a><a aria-label="在 TradingView 開啟 BIIB" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3ABIIB" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 BIIB"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Health Care / Biotechnology: Biological Products (No Diagnostic Substances)</td>
+<td>三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>三均線趨勢策略：3MA；收盤位置 89.3%；振幅 6.4%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=空方趨勢結束；buyCount 1；今日買點 3MA；波幅放大 rangeRatio 1.73；成交量高於均量 volumeRatio 1.32；估算成交金額USD 397,108,629</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/HST" rel="noopener noreferrer" target="_blank">HST</a><a aria-label="在 TradingView 開啟 HST" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AHST" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 HST"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Real Estate / Real Estate Investment Trusts</td>
+<td>Legacy 買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 93.0%；振幅 2.4%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=空方趨勢結束；buyCount 1；今日買點 LZEMA20；成交量高於均量 volumeRatio 1.26；估算成交金額USD 305,576,711</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/TW" rel="noopener noreferrer" target="_blank">TW</a><a aria-label="在 TradingView 開啟 TW" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3ATW" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 TW"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Finance / Investment Bankers/Brokers/Service</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 57.7%；振幅 4.4%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 1.52；成交量高於均量 volumeRatio 1.26；估算成交金額USD 211,039,879</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/AS" rel="noopener noreferrer" target="_blank">AS</a><a aria-label="在 TradingView 開啟 AS" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AAS" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 AS"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Consumer Discretionary / Apparel</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 59.1%；振幅 3.7%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 130,814,975</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/M" rel="noopener noreferrer" target="_blank">M</a><a aria-label="在 TradingView 開啟 M" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AM" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 M"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Consumer Discretionary / Department/Specialty Retail Stores</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 71.9%；振幅 5.9%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 1.62；估算成交金額USD 101,606,814</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/VFC" rel="noopener noreferrer" target="_blank">VFC</a><a aria-label="在 TradingView 開啟 VFC" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AVFC" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 VFC"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Industrials / Garments and Clothing</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 63.7%；振幅 5.2%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 1.31；估算成交金額USD 91,994,690</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/CNX" rel="noopener noreferrer" target="_blank">CNX</a><a aria-label="在 TradingView 開啟 CNX" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3ACNX" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 CNX"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Energy / Oil &amp; Gas Production</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 65.7%；振幅 3.1%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；成交量高於均量 volumeRatio 1.23；估算成交金額USD 91,066,995</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/GDS" rel="noopener noreferrer" target="_blank">GDS</a><a aria-label="在 TradingView 開啟 GDS" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AGDS" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 GDS"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Technology / Computer Software: Programming Data Processing</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 73.5%；振幅 3.7%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 79,073,295</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/RDN" rel="noopener noreferrer" target="_blank">RDN</a><a aria-label="在 TradingView 開啟 RDN" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3ARDN" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 RDN"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Finance / Property-Casualty Insurers</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 76.5%；振幅 4.9%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 1.96；成交量高於均量 volumeRatio 1.35；估算成交金額USD 78,274,849</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/SNN" rel="noopener noreferrer" target="_blank">SNN</a><a aria-label="在 TradingView 開啟 SNN" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3ASNN" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 SNN"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Health Care / Industrial Specialties</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 62.3%；振幅 3.0%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 1.74；爆量 volumeRatio 1.62；估算成交金額USD 74,039,163</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/NWG" rel="noopener noreferrer" target="_blank">NWG</a><a aria-label="在 TradingView 開啟 NWG" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3ANWG" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 NWG"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Finance / Commercial Banks</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 78.6%；振幅 2.3%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 1.46；估算成交金額USD 63,528,318</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/CNH" rel="noopener noreferrer" target="_blank">CNH</a><a aria-label="在 TradingView 開啟 CNH" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3ACNH" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 CNH"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Industrials / Construction/Ag Equipment/Trucks</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 77.8%；振幅 2.6%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 58,463,651</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/REAL" rel="noopener noreferrer" target="_blank">REAL</a><a aria-label="在 TradingView 開啟 REAL" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AREAL" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 REAL"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Consumer Discretionary / Other Specialty Stores</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 65.2%；振幅 6.1%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；成交量高於均量 volumeRatio 1.33；估算成交金額USD 51,275,845</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/CVX" rel="noopener noreferrer" target="_blank">CVX</a><a aria-label="在 TradingView 開啟 CVX" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3ACVX" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 CVX"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Energy / Integrated oil Companies</td>
+<td>Legacy 買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 79.1%；振幅 2.1%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=多方趨勢開始；buyCount 1；今日買點 LZEMA20；估算成交金額USD 969,980,294</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/DIS" rel="noopener noreferrer" target="_blank">DIS</a><a aria-label="在 TradingView 開啟 DIS" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3ADIS" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 DIS"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Consumer Discretionary / Services-Misc. Amusement &amp; Recreation</td>
+<td>Legacy 買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 58.3%；振幅 1.9%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=空方趨勢結束；buyCount 1；今日買點 LZEMA20；估算成交金額USD 963,987,989</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/CRCL" rel="noopener noreferrer" target="_blank">CRCL</a><a aria-label="在 TradingView 開啟 CRCL" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3ACRCL" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 CRCL"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Finance / Finance: Consumer Services</td>
+<td>Legacy 買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 67.9%；振幅 5.5%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=空方趨勢結束；buyCount 1；今日買點 LZEMA20；估算成交金額USD 758,521,079</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/RCL" rel="noopener noreferrer" target="_blank">RCL</a><a aria-label="在 TradingView 開啟 RCL" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3ARCL" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 RCL"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Consumer Discretionary / Marine Transportation</td>
+<td>三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>三均線趨勢策略：3MA；收盤位置 64.4%；振幅 4.6%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=空方趨勢結束；buyCount 1；今日買點 3MA；估算成交金額USD 633,641,671</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/GILD" rel="noopener noreferrer" target="_blank">GILD</a><a aria-label="在 TradingView 開啟 GILD" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AGILD" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 GILD"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Health Care / Biotechnology: Biological Products (No Diagnostic Substances)</td>
+<td>三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>三均線趨勢策略：3MA；收盤位置 64.7%；振幅 2.7%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=多方趨勢開始；buyCount 1；今日買點 3MA；估算成交金額USD 588,200,238</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/MMM" rel="noopener noreferrer" target="_blank">MMM</a><a aria-label="在 TradingView 開啟 MMM" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AMMM" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 MMM"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Health Care / Medical/Dental Instruments</td>
+<td>Legacy 買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 58.6%；振幅 3.8%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=空方趨勢結束；buyCount 1；今日買點 LZEMA20；波幅放大 rangeRatio 1.59；估算成交金額USD 525,015,608</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/UMC" rel="noopener noreferrer" target="_blank">UMC</a><a aria-label="在 TradingView 開啟 UMC" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AUMC" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 UMC"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Technology / Semiconductors</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 45.2%；振幅 6.3%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 1.30；估算成交金額USD 391,082,520</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/ALC" rel="noopener noreferrer" target="_blank">ALC</a><a aria-label="在 TradingView 開啟 ALC" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AALC" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 ALC"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Health Care / Ophthalmic Goods</td>
+<td>三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>三均線趨勢策略：3MA；收盤位置 81.5%；振幅 2.4%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=空方趨勢結束；buyCount 1；今日買點 3MA；估算成交金額USD 171,278,633</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/SARO" rel="noopener noreferrer" target="_blank">SARO</a><a aria-label="在 TradingView 開啟 SARO" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3ASARO" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 SARO"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Industrials / Aerospace</td>
+<td>三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>三均線趨勢策略：3MA；收盤位置 85.9%；振幅 2.7%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=空方趨勢結束；buyCount 1；今日買點 3MA；估算成交金額USD 64,438,397</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/EOG" rel="noopener noreferrer" target="_blank">EOG</a><a aria-label="在 TradingView 開啟 EOG" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AEOG" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 EOG"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Energy / Oil &amp; Gas Production</td>
+<td>Legacy 買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 69.9%；振幅 2.4%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=多方趨勢開始；buyCount 1；今日買點 LZEMA20；估算成交金額USD 441,196,909</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/HUT" rel="noopener noreferrer" target="_blank">HUT</a><a aria-label="在 TradingView 開啟 HUT" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AHUT" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 HUT"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Finance / Finance: Consumer Services</td>
+<td>三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>三均線趨勢策略：3MA；收盤位置 70.3%；振幅 10.1%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=空方趨勢結束；buyCount 1；今日買點 3MA；估算成交金額USD 408,415,345</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/ANNX" rel="noopener noreferrer" target="_blank">ANNX</a><a aria-label="在 TradingView 開啟 ANNX" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AANNX" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 ANNX"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Health Care / Biotechnology: Pharmaceutical Preparations</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 99.0%；振幅 15.9%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 2.52；爆量 volumeRatio 1.72；估算成交金額USD 56,793,373</td>
+<td>距訊號日低點較遠：15.8%</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/ELVA" rel="noopener noreferrer" target="_blank">ELVA</a><a aria-label="在 TradingView 開啟 ELVA" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AELVA" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 ELVA"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>資料未提供</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 74.3%；振幅 17.9%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 3.33；爆量 volumeRatio 85.54；估算成交金額USD 350,989,837</td>
+<td>距訊號日低點較遠：13.3%</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/BP" rel="noopener noreferrer" target="_blank">BP</a><a aria-label="在 TradingView 開啟 BP" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3ABP" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 BP"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Energy / Integrated oil Companies</td>
+<td>Legacy 買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 55.9%；振幅 1.6%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=多方趨勢開始；buyCount 1；今日買點 LZEMA20；估算成交金額USD 204,267,376</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/KSS" rel="noopener noreferrer" target="_blank">KSS</a><a aria-label="在 TradingView 開啟 KSS" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AKSS" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 KSS"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Consumer Discretionary / Department/Specialty Retail Stores</td>
+<td>Legacy 買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 65.6%；振幅 7.7%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=空方趨勢結束；buyCount 1；今日買點 LZEMA20；波幅放大 rangeRatio 1.35；估算成交金額USD 58,026,662</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/NXE" rel="noopener noreferrer" target="_blank">NXE</a><a aria-label="在 TradingView 開啟 NXE" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3ANXE" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 NXE"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Basic Materials / Other Metals and Minerals</td>
+<td>Legacy 買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 44.2%；振幅 5.1%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=空方趨勢結束；buyCount 1；今日買點 LZEMA20；估算成交金額USD 50,064,830</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/MSTR" rel="noopener noreferrer" target="_blank">MSTR</a><a aria-label="在 TradingView 開啟 MSTR" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AMSTR" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 MSTR"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Technology / Computer Software: Prepackaged Software</td>
+<td>Legacy 買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 20.0%；振幅 5.7%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=空方趨勢結束；buyCount 1；今日買點 LZEMA20；估算成交金額USD 1,412,967,732</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/LION" rel="noopener noreferrer" target="_blank">LION</a><a aria-label="在 TradingView 開啟 LION" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3ALION" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 LION"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Consumer Discretionary / Movies/Entertainment</td>
+<td>三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>三均線趨勢策略：3MA；收盤位置 28.9%；振幅 5.9%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=空方趨勢結束；buyCount 1；今日買點 3MA；爆量 volumeRatio 2.08；估算成交金額USD 107,629,827</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/HD" rel="noopener noreferrer" target="_blank">HD</a><a aria-label="在 TradingView 開啟 HD" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AHD" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 HD"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Consumer Discretionary / RETAIL: Building Materials</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 46.5%；振幅 2.6%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 1,346,038,094</td>
+<td>上影線壓力重：53.5%</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/F" rel="noopener noreferrer" target="_blank">F</a><a aria-label="在 TradingView 開啟 F" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AF" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 F"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Industrials / Auto Manufacturing</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 51.9%；振幅 2.9%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 720,435,377</td>
+<td>上影線壓力重：48.1%</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/ARES" rel="noopener noreferrer" target="_blank">ARES</a><a aria-label="在 TradingView 開啟 ARES" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AARES" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 ARES"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Finance / Investment Managers</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 35.0%；振幅 3.8%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 306,840,143</td>
+<td>上影線壓力重：65.0%</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/TTD" rel="noopener noreferrer" target="_blank">TTD</a><a aria-label="在 TradingView 開啟 TTD" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3ATTD" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 TTD"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Technology / Computer Software: Programming Data Processing</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 38.6%；振幅 3.3%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 195,967,867</td>
+<td>上影線壓力重：61.4%</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/MGM" rel="noopener noreferrer" target="_blank">MGM</a><a aria-label="在 TradingView 開啟 MGM" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AMGM" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 MGM"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Consumer Discretionary / Hotels/Resorts</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 54.6%；振幅 2.1%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 113,465,170</td>
+<td>上影線壓力重：45.4%</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/WY" rel="noopener noreferrer" target="_blank">WY</a><a aria-label="在 TradingView 開啟 WY" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AWY" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 WY"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Real Estate / Real Estate Investment Trusts</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 35.2%；振幅 1.6%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 99,354,896</td>
+<td>上影線壓力重：64.8%</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/BEN" rel="noopener noreferrer" target="_blank">BEN</a><a aria-label="在 TradingView 開啟 BEN" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3ABEN" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 BEN"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Finance / Investment Managers</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 47.1%；振幅 2.3%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 90,748,708</td>
+<td>上影線壓力重：52.9%</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/CRGY" rel="noopener noreferrer" target="_blank">CRGY</a><a aria-label="在 TradingView 開啟 CRGY" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3ACRGY" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 CRGY"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Energy / Oil &amp; Gas Production</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 53.8%；振幅 2.8%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 63,802,329</td>
+<td>上影線壓力重：46.2%</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/PPC" rel="noopener noreferrer" target="_blank">PPC</a><a aria-label="在 TradingView 開啟 PPC" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3APPC" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 PPC"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Consumer Staples / Meat/Poultry/Fish</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 35.8%；振幅 3.3%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；成交量高於均量 volumeRatio 1.23；估算成交金額USD 58,497,881</td>
+<td>上影線壓力重：64.2%</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/MAT" rel="noopener noreferrer" target="_blank">MAT</a><a aria-label="在 TradingView 開啟 MAT" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AMAT" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 MAT"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Consumer Discretionary / Recreational Games/Products/Toys</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 50.7%；振幅 2.6%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 57,643,420</td>
+<td>上影線壓力重：49.3%</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/MO" rel="noopener noreferrer" target="_blank">MO</a><a aria-label="在 TradingView 開啟 MO" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AMO" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 MO"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Health Care / Medicinal Chemicals and Botanical Products</td>
+<td>三均線買點</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>三均線趨勢策略：3MA；收盤位置 41.6%；振幅 2.2%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=空方趨勢結束；buyCount 1；今日買點 3MA；估算成交金額USD 478,456,739</td>
+<td>上影線壓力重：58.4%</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/ZM" rel="noopener noreferrer" target="_blank">ZM</a><a aria-label="在 TradingView 開啟 ZM" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AZM" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 ZM"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Technology / Computer Software: Programming Data Processing</td>
+<td>三均線買點</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>三均線趨勢策略：3MA；收盤位置 41.2%；振幅 2.8%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=多方趨勢開始；buyCount 1；今日買點 3MA；估算成交金額USD 343,060,956</td>
+<td>上影線壓力重：58.8%</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/ADSK" rel="noopener noreferrer" target="_blank">ADSK</a><a aria-label="在 TradingView 開啟 ADSK" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AADSK" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 ADSK"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Technology / Computer Software: Prepackaged Software</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 31.7%；振幅 2.6%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 421,684,015</td>
+<td>上影線壓力重：68.3%</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/RKT" rel="noopener noreferrer" target="_blank">RKT</a><a aria-label="在 TradingView 開啟 RKT" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3ARKT" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 RKT"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Finance / Finance: Consumer Services</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 15.3%；振幅 4.7%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 382,645,424</td>
+<td>上影線壓力重：84.7%</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/FIS" rel="noopener noreferrer" target="_blank">FIS</a><a aria-label="在 TradingView 開啟 FIS" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AFIS" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 FIS"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Consumer Discretionary / Business Services</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 16.3%；振幅 3.6%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 250,561,332</td>
+<td>上影線壓力重：71.5%</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/BN" rel="noopener noreferrer" target="_blank">BN</a><a aria-label="在 TradingView 開啟 BN" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3ABN" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 BN"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Real Estate / Building operators</td>
+<td>三均線買點</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>三均線趨勢策略：3MA；收盤位置 47.6%；振幅 2.6%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 1；今日買點 3MA；估算成交金額USD 147,454,653</td>
+<td>上影線壓力重：52.4%</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/RELX" rel="noopener noreferrer" target="_blank">RELX</a><a aria-label="在 TradingView 開啟 RELX" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3ARELX" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 RELX"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/PLC" rel="noopener noreferrer" target="_blank">PLC</a><a aria-label="在 TradingView 開啟 PLC" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3APLC" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 PLC"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Consumer Discretionary / Business Services</td>
+<td>三均線買點</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>三均線趨勢策略：3MA；收盤位置 52.3%；振幅 2.6%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=多方趨勢開始；buyCount 1；今日買點 3MA；估算成交金額USD 74,906,072</td>
+<td>上影線壓力重：47.7%</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/NCLH" rel="noopener noreferrer" target="_blank">NCLH</a><a aria-label="在 TradingView 開啟 NCLH" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3ANCLH" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 NCLH"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Consumer Discretionary / Marine Transportation</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 23.4%；振幅 3.5%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 212,800,357</td>
+<td>上影線壓力重：73.7%</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/XPEV" rel="noopener noreferrer" target="_blank">XPEV</a><a aria-label="在 TradingView 開啟 XPEV" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AXPEV" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 XPEV"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Industrials / Auto Manufacturing</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 9.4%；振幅 3.8%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；成交量高於均量 volumeRatio 1.30；估算成交金額USD 133,493,913</td>
+<td>上影線壓力重：90.6%</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/PCOR" rel="noopener noreferrer" target="_blank">PCOR</a><a aria-label="在 TradingView 開啟 PCOR" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3APCOR" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 PCOR"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Technology / Computer Software: Prepackaged Software</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 8.2%；振幅 4.3%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 123,482,279</td>
+<td>上影線壓力重：82.2%</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/BSY" rel="noopener noreferrer" target="_blank">BSY</a><a aria-label="在 TradingView 開啟 BSY" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3ABSY" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 BSY"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Technology / Computer Software: Prepackaged Software</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 22.7%；振幅 4.8%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 83,844,898</td>
+<td>上影線壓力重：77.3%</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/EXLS" rel="noopener noreferrer" target="_blank">EXLS</a><a aria-label="在 TradingView 開啟 EXLS" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AEXLS" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 EXLS"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Consumer Discretionary / Business Services</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 13.9%；振幅 2.9%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 61,042,538</td>
+<td>上影線壓力重：86.1%</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/WRBY" rel="noopener noreferrer" target="_blank">WRBY</a><a aria-label="在 TradingView 開啟 WRBY" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AWRBY" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 WRBY"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Health Care / Ophthalmic Goods</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 18.6%；振幅 7.1%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；估算成交金額USD 60,089,671</td>
+<td>上影線壓力重：74.8%</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/TSLA" rel="noopener noreferrer" target="_blank">TSLA</a><a aria-label="在 TradingView 開啟 TSLA" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3ATSLA" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 TSLA"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Industrials / Auto Manufacturing</td>
+<td>Legacy 買點</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 23.9%；振幅 4.0%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=空方趨勢結束；buyCount 1；今日買點 LZEMA20；估算成交金額USD 12,383,544,433</td>
+<td>上影線壓力重：45.2%</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/RIVN" rel="noopener noreferrer" target="_blank">RIVN</a><a aria-label="在 TradingView 開啟 RIVN" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3ARIVN" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 RIVN"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Industrials / Auto Manufacturing</td>
+<td>Legacy 買點</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 11.3%；振幅 6.2%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=多方趨勢開始；buyCount 1；今日買點 LZEMA20；估算成交金額USD 518,630,283</td>
+<td>上影線壓力重：85.1%</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/WDAY" rel="noopener noreferrer" target="_blank">WDAY</a><a aria-label="在 TradingView 開啟 WDAY" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AWDAY" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 WDAY"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Technology / EDP Services</td>
+<td>Legacy 買點</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 8.4%；振幅 4.3%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=多方趨勢開始；buyCount 1；今日買點 LZEMA20；估算成交金額USD 501,250,336</td>
+<td>上影線壓力重：80.1%</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/TMUS" rel="noopener noreferrer" target="_blank">TMUS</a><a aria-label="在 TradingView 開啟 TMUS" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3ATMUS" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 TMUS"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Telecommunications / Telecommunications Equipment</td>
+<td>三均線買點</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>三均線趨勢策略：3MA；收盤位置 34.5%；振幅 2.0%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=多方趨勢開始；buyCount 1；今日買點 3MA；估算成交金額USD 488,192,481</td>
+<td>上影線壓力重：65.5%</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/PL" rel="noopener noreferrer" target="_blank">PL</a><a aria-label="在 TradingView 開啟 PL" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3APL" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 PL"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Technology / Radio And Television Broadcasting And Communications Equipment</td>
+<td>Legacy 買點</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 26.3%；振幅 9.2%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=空方趨勢結束；buyCount 1；今日買點 LZEMA20；估算成交金額USD 182,536,220</td>
+<td>上影線壓力重：46.1%</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/MWH" rel="noopener noreferrer" target="_blank">MWH</a><a aria-label="在 TradingView 開啟 MWH" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AMWH" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 MWH"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Industrials / Military/Government/Technical</td>
+<td>Legacy 買點</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 13.0%；振幅 5.9%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=空方趨勢結束；buyCount 1；今日買點 LZEMA20；爆量 volumeRatio 1.72；估算成交金額USD 106,277,603</td>
+<td>上影線壓力重：58.2%</td>
+</tr>
+</tbody>
+</table></div>
+<h2>值得觀察，但目前還不能買名單</h2>
+<p>無符合名單。</p>
+<h2>明確不可以買 / 暫時排除名單</h2>
+<div class="table-scroll"><table class="research-table"><colgroup><col style="width: 110px"><col style="width: 160px"><col style="width: 180px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"></colgroup>
+<thead>
+<tr>
+<th>市場</th>
+<th>代號 / 公司</th>
+<th>產業</th>
+<th>來源提及程度</th>
+<th>來源主觀看法</th>
+<th>布局建議</th>
+<th>持倉建議</th>
+<th>追蹤指標</th>
+<th>風險</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/OPEN" rel="noopener noreferrer" target="_blank">OPEN</a><a aria-label="在 TradingView 開啟 OPEN" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AOPEN" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 OPEN"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Finance / Real Estate</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 58.3%；振幅 7.6%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；爆量 volumeRatio 1.58；估算成交金額USD 547,118,167</td>
+<td>低價風險：收盤 4.75 低於門檻 5</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/LCID" rel="noopener noreferrer" target="_blank">LCID</a><a aria-label="在 TradingView 開啟 LCID" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3ALCID" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 LCID"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Industrials / Auto Manufacturing</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>不建議追高</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 95.2%；振幅 22.8%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 2.25；爆量 volumeRatio 2.72；估算成交金額USD 335,376,410</td>
+<td>單日振幅過大：22.8%；距訊號日低點較遠：21.7%</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/ERNA" rel="noopener noreferrer" target="_blank">ERNA</a><a aria-label="在 TradingView 開啟 ERNA" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AERNA" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 ERNA"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Health Care / Biotechnology: Pharmaceutical Preparations</td>
+<td>三均線買點</td>
+<td>不建議追高</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>三均線趨勢策略：3MA；收盤位置 16.4%；振幅 56.3%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=空方趨勢結束；buyCount 1；今日買點 3MA；波幅放大 rangeRatio 5.37；爆量 volumeRatio 522.88；估算成交金額USD 174,471,125</td>
+<td>單日振幅過大：56.3%</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/RXRX" rel="noopener noreferrer" target="_blank">RXRX</a><a aria-label="在 TradingView 開啟 RXRX" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3ARXRX" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 RXRX"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Health Care / Biotechnology: Biological Products (No Diagnostic Substances)</td>
+<td>Legacy 買點</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 18.7%；振幅 4.8%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=空方趨勢結束；buyCount 1；今日買點 LZEMA20；估算成交金額USD 63,761,625</td>
+<td>低價風險：收盤 3.31 低於門檻 5</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/AEHR" rel="noopener noreferrer" target="_blank">AEHR</a><a aria-label="在 TradingView 開啟 AEHR" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AAEHR" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 AEHR"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Industrials / Electrical Products</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>不建議追高</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 6.3%；振幅 27.2%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 2.74；爆量 volumeRatio 6.87；估算成交金額USD 1,132,082,964</td>
+<td>單日振幅過大：27.2%；上影線壓力重：49.5%</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/AMC" rel="noopener noreferrer" target="_blank">AMC</a><a aria-label="在 TradingView 開啟 AMC" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AAMC" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 AMC"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Consumer Discretionary / Movies/Entertainment</td>
+<td>Legacy 買點</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 50.0%；振幅 6.8%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=空方趨勢結束；buyCount 1；今日買點 LZEMA20；估算成交金額USD 81,552,793</td>
+<td>低價風險：收盤 2.07 低於門檻 5；上影線壓力重：50.0%</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/IOVA" rel="noopener noreferrer" target="_blank">IOVA</a><a aria-label="在 TradingView 開啟 IOVA" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AIOVA" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 IOVA"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Health Care / Biotechnology: Biological Products (No Diagnostic Substances)</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 94.2%；振幅 21.9%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 3.36；爆量 volumeRatio 3.08；估算成交金額USD 205,844,273</td>
+<td>低價風險：收盤 4.74 低於門檻 5；單日振幅過大：21.9%；距訊號日低點較遠：20.7%</td>
+</tr>
+<tr>
+<td>NYSE</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/ACHR" rel="noopener noreferrer" target="_blank">ACHR</a><a aria-label="在 TradingView 開啟 ACHR" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AACHR" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 ACHR"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Industrials / Aerospace</td>
+<td>Legacy 買點</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 19.7%；振幅 7.3%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=空方趨勢結束；buyCount 1；今日買點 LZEMA20；估算成交金額USD 109,987,900</td>
+<td>低價風險：收盤 4.78 低於門檻 5；上影線壓力重：45.9%</td>
+</tr>
+<tr>
+<td>NASDAQ</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/KUST" rel="noopener noreferrer" target="_blank">KUST</a><a aria-label="在 TradingView 開啟 KUST" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AKUST" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 KUST"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>Technology / Radio And Television Broadcasting And Communications Equipment</td>
+<td>三均線買點</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>三均線趨勢策略：3MA；收盤位置 31.6%；振幅 29.0%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=空方趨勢結束；buyCount 1；今日買點 3MA；波幅放大 rangeRatio 1.60；爆量 volumeRatio 9.35；估算成交金額USD 110,052,212</td>
+<td>低價風險：收盤 1.31 低於門檻 5；單日振幅過大：29.0%</td>
+</tr>
+</tbody>
+</table></div>
+<h2>重要校正與限制</h2>
+<ul>
+<li>本報告的 <code>來源主觀看法</code> 是 agent 依 K 線訊號與風險條件做出的技術面分層，不代表新聞、KOL 或基本面來源意見。</li>
+<li><code>可研究</code> 不等於無條件進場；仍需確認個人風險承受度、部位大小、隔日量價與大盤環境。</li>
+<li>對低價、低成交金額、過大振幅與重上影線標的，本報告會優先降級或排除。</li>
+<li>Futu/Moomoo OpenAPI 已列入常用來源清單；因需本機 OpenD gateway 與帳號權限，這版只列為人工複核/後續整合來源。</li>
+</ul>
+<h2>賣點觸發清單</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>觸發賣點</th>
+<th>代號名稱</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LZEMA20/3MA</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/AEP" rel="noopener noreferrer" target="_blank">AEP</a><a aria-label="在 TradingView 開啟 AEP" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AAEP" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 AEP"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/AIG" rel="noopener noreferrer" target="_blank">AIG</a><a aria-label="在 TradingView 開啟 AIG" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AAIG" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 AIG"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/AKAM" rel="noopener noreferrer" target="_blank">AKAM</a><a aria-label="在 TradingView 開啟 AKAM" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AAKAM" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 AKAM"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/ALL" rel="noopener noreferrer" target="_blank">ALL</a><a aria-label="在 TradingView 開啟 ALL" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AALL" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 ALL"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/AMAT" rel="noopener noreferrer" target="_blank">AMAT</a><a aria-label="在 TradingView 開啟 AMAT" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AAMAT" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 AMAT"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/BFLY" rel="noopener noreferrer" target="_blank">BFLY</a><a aria-label="在 TradingView 開啟 BFLY" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3ABFLY" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 BFLY"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/BKR" rel="noopener noreferrer" target="_blank">BKR</a><a aria-label="在 TradingView 開啟 BKR" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3ABKR" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 BKR"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/BTE" rel="noopener noreferrer" target="_blank">BTE</a><a aria-label="在 TradingView 開啟 BTE" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3ABTE" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 BTE"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/CELC" rel="noopener noreferrer" target="_blank">CELC</a><a aria-label="在 TradingView 開啟 CELC" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3ACELC" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 CELC"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/CNP" rel="noopener noreferrer" target="_blank">CNP</a><a aria-label="在 TradingView 開啟 CNP" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3ACNP" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 CNP"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/CTRE" rel="noopener noreferrer" target="_blank">CTRE</a><a aria-label="在 TradingView 開啟 CTRE" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3ACTRE" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 CTRE"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/DELL" rel="noopener noreferrer" target="_blank">DELL</a><a aria-label="在 TradingView 開啟 DELL" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3ADELL" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 DELL"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/DOW" rel="noopener noreferrer" target="_blank">DOW</a><a aria-label="在 TradingView 開啟 DOW" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3ADOW" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 DOW"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/DUK" rel="noopener noreferrer" target="_blank">DUK</a><a aria-label="在 TradingView 開啟 DUK" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3ADUK" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 DUK"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/ELS" rel="noopener noreferrer" target="_blank">ELS</a><a aria-label="在 TradingView 開啟 ELS" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AELS" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 ELS"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/ELV" rel="noopener noreferrer" target="_blank">ELV</a><a aria-label="在 TradingView 開啟 ELV" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AELV" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 ELV"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/EXC" rel="noopener noreferrer" target="_blank">EXC</a><a aria-label="在 TradingView 開啟 EXC" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AEXC" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 EXC"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/EXTR" rel="noopener noreferrer" target="_blank">EXTR</a><a aria-label="在 TradingView 開啟 EXTR" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AEXTR" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 EXTR"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/FHN" rel="noopener noreferrer" target="_blank">FHN</a><a aria-label="在 TradingView 開啟 FHN" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AFHN" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 FHN"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/HAL" rel="noopener noreferrer" target="_blank">HAL</a><a aria-label="在 TradingView 開啟 HAL" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AHAL" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 HAL"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/HAYW" rel="noopener noreferrer" target="_blank">HAYW</a><a aria-label="在 TradingView 開啟 HAYW" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AHAYW" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 HAYW"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/INTU" rel="noopener noreferrer" target="_blank">INTU</a><a aria-label="在 TradingView 開啟 INTU" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AINTU" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 INTU"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/JNJ" rel="noopener noreferrer" target="_blank">JNJ</a><a aria-label="在 TradingView 開啟 JNJ" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AJNJ" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 JNJ"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/KMI" rel="noopener noreferrer" target="_blank">KMI</a><a aria-label="在 TradingView 開啟 KMI" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AKMI" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 KMI"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/LITE" rel="noopener noreferrer" target="_blank">LITE</a><a aria-label="在 TradingView 開啟 LITE" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3ALITE" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 LITE"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/LNT" rel="noopener noreferrer" target="_blank">LNT</a><a aria-label="在 TradingView 開啟 LNT" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3ALNT" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 LNT"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/ONON" rel="noopener noreferrer" target="_blank">ONON</a><a aria-label="在 TradingView 開啟 ONON" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AONON" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 ONON"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/OTIS" rel="noopener noreferrer" target="_blank">OTIS</a><a aria-label="在 TradingView 開啟 OTIS" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AOTIS" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 OTIS"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/P" rel="noopener noreferrer" target="_blank">P</a><a aria-label="在 TradingView 開啟 P" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AP" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 P"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/PGR" rel="noopener noreferrer" target="_blank">PGR</a><a aria-label="在 TradingView 開啟 PGR" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3APGR" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 PGR"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/PNR" rel="noopener noreferrer" target="_blank">PNR</a><a aria-label="在 TradingView 開啟 PNR" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3APNR" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 PNR"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/PPL" rel="noopener noreferrer" target="_blank">PPL</a><a aria-label="在 TradingView 開啟 PPL" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3APPL" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 PPL"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/PRDO" rel="noopener noreferrer" target="_blank">PRDO</a><a aria-label="在 TradingView 開啟 PRDO" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3APRDO" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 PRDO"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/SBRA" rel="noopener noreferrer" target="_blank">SBRA</a><a aria-label="在 TradingView 開啟 SBRA" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3ASBRA" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 SBRA"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/SO" rel="noopener noreferrer" target="_blank">SO</a><a aria-label="在 TradingView 開啟 SO" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3ASO" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 SO"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/SOFI" rel="noopener noreferrer" target="_blank">SOFI</a><a aria-label="在 TradingView 開啟 SOFI" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3ASOFI" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 SOFI"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/SONO" rel="noopener noreferrer" target="_blank">SONO</a><a aria-label="在 TradingView 開啟 SONO" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3ASONO" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 SONO"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/TXN" rel="noopener noreferrer" target="_blank">TXN</a><a aria-label="在 TradingView 開啟 TXN" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3ATXN" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 TXN"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/UDR" rel="noopener noreferrer" target="_blank">UDR</a><a aria-label="在 TradingView 開啟 UDR" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AUDR" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 UDR"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/USFD" rel="noopener noreferrer" target="_blank">USFD</a><a aria-label="在 TradingView 開啟 USFD" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AUSFD" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 USFD"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/WMB" rel="noopener noreferrer" target="_blank">WMB</a><a aria-label="在 TradingView 開啟 WMB" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AWMB" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 WMB"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/XEL" rel="noopener noreferrer" target="_blank">XEL</a><a aria-label="在 TradingView 開啟 XEL" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AXEL" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 XEL"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+</tr>
+<tr>
+<td>LZEMA20</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/ABEV" rel="noopener noreferrer" target="_blank">ABEV</a><a aria-label="在 TradingView 開啟 ABEV" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AABEV" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 ABEV"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/ALK" rel="noopener noreferrer" target="_blank">ALK</a><a aria-label="在 TradingView 開啟 ALK" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AALK" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 ALK"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/ALM" rel="noopener noreferrer" target="_blank">ALM</a><a aria-label="在 TradingView 開啟 ALM" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AALM" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 ALM"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/APH" rel="noopener noreferrer" target="_blank">APH</a><a aria-label="在 TradingView 開啟 APH" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AAPH" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 APH"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/CAI" rel="noopener noreferrer" target="_blank">CAI</a><a aria-label="在 TradingView 開啟 CAI" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3ACAI" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 CAI"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/CNC" rel="noopener noreferrer" target="_blank">CNC</a><a aria-label="在 TradingView 開啟 CNC" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3ACNC" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 CNC"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/CRH" rel="noopener noreferrer" target="_blank">CRH</a><a aria-label="在 TradingView 開啟 CRH" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3ACRH" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 CRH"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/FRMI" rel="noopener noreferrer" target="_blank">FRMI</a><a aria-label="在 TradingView 開啟 FRMI" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AFRMI" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 FRMI"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/INVH" rel="noopener noreferrer" target="_blank">INVH</a><a aria-label="在 TradingView 開啟 INVH" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AINVH" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 INVH"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/KIM" rel="noopener noreferrer" target="_blank">KIM</a><a aria-label="在 TradingView 開啟 KIM" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AKIM" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 KIM"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/MAC" rel="noopener noreferrer" target="_blank">MAC</a><a aria-label="在 TradingView 開啟 MAC" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AMAC" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 MAC"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/OSCR" rel="noopener noreferrer" target="_blank">OSCR</a><a aria-label="在 TradingView 開啟 OSCR" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AOSCR" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 OSCR"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/PLD" rel="noopener noreferrer" target="_blank">PLD</a><a aria-label="在 TradingView 開啟 PLD" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3APLD" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 PLD"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/STWD" rel="noopener noreferrer" target="_blank">STWD</a><a aria-label="在 TradingView 開啟 STWD" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3ASTWD" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 STWD"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/UNH" rel="noopener noreferrer" target="_blank">UNH</a><a aria-label="在 TradingView 開啟 UNH" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AUNH" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 UNH"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+</tr>
+<tr>
+<td>3MA</td>
+<td><span class="stock-link-group"><a href="https://finance.yahoo.com/quote/ADI" rel="noopener noreferrer" target="_blank">ADI</a><a aria-label="在 TradingView 開啟 ADI" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AADI" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 ADI"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/CAG" rel="noopener noreferrer" target="_blank">CAG</a><a aria-label="在 TradingView 開啟 CAG" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3ACAG" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 CAG"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/FLEX" rel="noopener noreferrer" target="_blank">FLEX</a><a aria-label="在 TradingView 開啟 FLEX" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AFLEX" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 FLEX"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/GLW" rel="noopener noreferrer" target="_blank">GLW</a><a aria-label="在 TradingView 開啟 GLW" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AGLW" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 GLW"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/GME" rel="noopener noreferrer" target="_blank">GME</a><a aria-label="在 TradingView 開啟 GME" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AGME" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 GME"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/IBRX" rel="noopener noreferrer" target="_blank">IBRX</a><a aria-label="在 TradingView 開啟 IBRX" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AIBRX" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 IBRX"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/INTC" rel="noopener noreferrer" target="_blank">INTC</a><a aria-label="在 TradingView 開啟 INTC" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AINTC" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 INTC"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/MRVL" rel="noopener noreferrer" target="_blank">MRVL</a><a aria-label="在 TradingView 開啟 MRVL" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3AMRVL" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 MRVL"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/NXPI" rel="noopener noreferrer" target="_blank">NXPI</a><a aria-label="在 TradingView 開啟 NXPI" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3ANXPI" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 NXPI"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/OXY" rel="noopener noreferrer" target="_blank">OXY</a><a aria-label="在 TradingView 開啟 OXY" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3AOXY" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 OXY"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/SMTC" rel="noopener noreferrer" target="_blank">SMTC</a><a aria-label="在 TradingView 開啟 SMTC" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NASDAQ%3ASMTC" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 SMTC"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/SONY" rel="noopener noreferrer" target="_blank">SONY</a><a aria-label="在 TradingView 開啟 SONY" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3ASONY" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 SONY"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://finance.yahoo.com/quote/STUB" rel="noopener noreferrer" target="_blank">STUB</a><a aria-label="在 TradingView 開啟 STUB" class="stock-tradingview-link" href="https://www.tradingview.com/chart/zY3cYWBM/?symbol=NYSE%3ASTUB" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 STUB"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+</tr>
+</tbody>
+</table></div>
+
+    <footer class="mt-9 border-t border-slate-200 pt-5 text-sm text-slate-500">
+      本頁由 K-line 決策報告產生，內容僅作一般化研究輔助，不構成個人化投資建議或下單指令。
+    </footer>
+  </article>
+</main>
+
+<script src="../assets/stock-industry-links.js" defer></script>
+</body>
+</html>
