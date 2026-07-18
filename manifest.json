@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-07-17 08:03:12",
+  "generated_at": "2026-07-18 22:07:46",
   "market_signal_cards": [
     {
       "id": "risk-preference-indicator",
       "title": "風險偏好性指標",
-      "badge": "Neutral",
-      "tone": "yellow",
-      "status": "台股與美股資金風向未明顯偏攻擊或防守。",
-      "as_of": "2026-07-17 08:01 Asia/Taipei",
+      "badge": "Risk Off watch",
+      "tone": "red",
+      "status": "至少一個市場轉向防守，風險偏好降溫。",
+      "as_of": "2026-07-17 20:31 Asia/Taipei",
       "summary": "用台股電子 / 金融與美股 XLY / XLP 的相對強弱判斷資金偏攻擊或防守；20 日均線上下 2% 作為 Risk On / Off 緩衝。",
       "metrics": [
         {
           "label": "台股",
-          "value": "Neutral（0.9365 / MA20 0.9417）",
-          "note": "電子類 / 金融保險；距 MA20 -0.55%；資料日 2026-07-16。"
+          "value": "Risk Off（0.8746 / MA20 0.9392）",
+          "note": "電子類 / 金融保險；距 MA20 -6.88%；資料日 2026-07-17。"
         },
         {
           "label": "美股",
@@ -51,13 +51,13 @@
       "badge": "低到中風險",
       "tone": "yellow",
       "status": "正常拉回 / 低波動恐懼",
-      "as_of": "2026-07-17 08:01:48 CST",
-      "summary": "正常拉回 / 低波動恐懼；正常分批，不需恐慌。VIX 16.73，Fear & Greed unavailable，信用市場目前判讀為 stable。",
+      "as_of": "2026-07-17 20:31:19 CST",
+      "summary": "正常拉回 / 低波動恐懼；正常分批，不需恐慌。VIX 18.36，Fear & Greed unavailable，信用市場目前判讀為 stable。",
       "metrics": [
         {
           "label": "波動 / 情緒",
-          "value": "VIX 16.73；Fear & Greed unavailable",
-          "note": "calm / unavailable"
+          "value": "VIX 18.36；Fear & Greed unavailable",
+          "note": "watch / unavailable"
         },
         {
           "label": "廣度",
@@ -67,7 +67,7 @@
         {
           "label": "信用 / 跨資產",
           "value": "HY OAS unavailable%；HYG -0.01%，JNK +0.01%",
-          "note": "10Y 4.57%；DXY +0.22%；GLD -1.98%"
+          "note": "10Y 4.57%；DXY +0.08%；GLD -1.98%"
         }
       ],
       "sources": [
@@ -92,25 +92,25 @@
     {
       "id": "tw-market-light",
       "title": "台股市場燈號",
-      "badge": "黃燈",
-      "tone": "yellow",
-      "status": "可以看，但不要重壓。",
-      "as_of": "官方資料日 2026-07-16；目標日 2026-07-17",
-      "summary": "總分 2；可以看，但不要重壓。",
+      "badge": "unavailable",
+      "tone": "neutral",
+      "status": "unavailable",
+      "as_of": "官方資料日 unavailable；目標日 unavailable",
+      "summary": "總分 None；unavailable",
       "metrics": [
         {
           "label": "總分",
-          "value": "2",
+          "value": "None",
           "note": ">= 3 綠燈；-2 以下紅燈；其餘黃燈。"
         },
         {
           "label": "資料日期",
-          "value": "2026-07-16",
-          "note": "官方最新可用資料日為 2026-07-16，早於今天 2026-07-17。"
+          "value": "unavailable",
+          "note": "No TW market light snapshot available."
         },
         {
           "label": "條件數",
-          "value": "10",
+          "value": "0",
           "note": "依 TAIEX、台積電/權值股、watchlist 與期貨條件加總。"
         }
       ],
@@ -167,6 +167,46 @@
     }
   ],
   "action_reports": [
+    {
+      "lane": "us_kline",
+      "title": "2026-07-17 美股 K 線警報掃描投資決策報告",
+      "run_id": "2026-07-17-us-kline",
+      "data_date": "2026-07-17",
+      "generated_at": "2026-07-18 06:43:27",
+      "source_path": "reports/usStock/2026-07-17_us_kline_decision_report.md",
+      "detail_path": "detail/2026-07-17_us_kline_decision_report.html",
+      "funnel": "未標示"
+    },
+    {
+      "lane": "tw_kline",
+      "title": "2026-07-17 台股 K 線警報掃描投資決策報告",
+      "run_id": "2026-07-17-tw-kline",
+      "data_date": "2026-07-17",
+      "generated_at": "2026-07-17 16:12:19",
+      "source_path": "reports/twStock/2026-07-17_tw_kline_decision_report.md",
+      "detail_path": "detail/2026-07-17_tw_kline_decision_report.html",
+      "funnel": "未標示"
+    },
+    {
+      "lane": "tw_kline",
+      "title": "2026-07-17 台股最新價盤中 K-line 技術觸發",
+      "run_id": "2026-07-17-1250-tw-kline",
+      "data_date": "2026-07-17",
+      "generated_at": "2026-07-17 12:52:12",
+      "source_path": "reports/twStock/2026-07-17-1250_tw_kline_decision_report.md",
+      "detail_path": "detail/2026-07-17-1250_tw_kline_decision_report.html",
+      "funnel": "未標示"
+    },
+    {
+      "lane": "kol",
+      "title": "2026-07-17 KOL 觀點、新聞重點與投資決策合併報告",
+      "run_id": "2026-07-17",
+      "data_date": "2026-07-17",
+      "generated_at": "2026-07-17 09:45:57",
+      "source_path": "reports/news/2026-07-17_kol_news_decision_report.md",
+      "detail_path": "detail/2026-07-17_kol_news_decision_report.html",
+      "funnel": "未標示"
+    },
     {
       "lane": "kol",
       "title": "2026-07-16 KOL 觀點、新聞重點與投資決策合併報告",
