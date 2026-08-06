@@ -1,0 +1,3231 @@
+{
+  "generated_at": "2026-08-06 08:50:45",
+  "output_root": "reports/public-equity-batch/2026-08-06-inventory",
+  "item_source": "workorders_manifest",
+  "workorders_manifest_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/manifest.json",
+  "item_count": 22,
+  "workflow_counts": {
+    "company-tearsheet + initiating-coverage": 22,
+    "comps-valuation": 22,
+    "official-evidence review": 13,
+    "portfolio-risk-management": 22
+  },
+  "object_counts": {
+    "investment_horizon": 22,
+    "official_validation": 13,
+    "research_underwrite": 22,
+    "risk_assessment": 22,
+    "valuation": 22
+  },
+  "result_status_counts": {
+    "missing": 22
+  },
+  "note": "Gap ledger only. It does not mark PEI gates complete and does not modify source ledgers.",
+  "items": [
+    {
+      "symbol": "1215",
+      "company": "卜蜂",
+      "output_subdir": "tw-1215",
+      "state": "awaiting_result",
+      "result_status": "missing",
+      "result_issues": [
+        "expected_result_json_missing"
+      ],
+      "handoff_statuses": {
+        "quote": "resolved",
+        "official_evidence": "input_ready",
+        "valuation": "input_ready",
+        "risk": "input_ready"
+      },
+      "existing_gate_state": {
+        "research_status": "partial",
+        "valuation_status": "not_run",
+        "risk_status": "not_run",
+        "horizon_status": "partial",
+        "recommendation_label": "Watch only"
+      },
+      "required_source_ledger_objects": [
+        "research_underwrite",
+        "investment_horizon",
+        "valuation",
+        "risk_assessment"
+      ],
+      "next_required_workflows": [
+        "company-tearsheet + initiating-coverage",
+        "comps-valuation",
+        "portfolio-risk-management"
+      ],
+      "packet_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/tw-1215.packet.json",
+      "packet_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/tw-1215.packet.md",
+      "template_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/tw-1215.result.template.json",
+      "template_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/tw-1215.result.template.md",
+      "validate_results_report_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/validate_results_report.json",
+      "expected_result_path": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/tw-1215.result.json",
+      "object_gaps": {
+        "research_underwrite": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [
+            "official issuer identity available",
+            "fundamental_signals=1"
+          ],
+          "remaining_evidence_needs": [
+            "sourced company facts and business drivers",
+            "official filings/IR, revenue, earnings, or management commentary",
+            "key debates, catalysts, risks, disconfirming evidence, and monitoring items"
+          ],
+          "checklist": [
+            "research_status=complete only if sourced initiating coverage is complete",
+            "research_underwrite.summary",
+            "research_underwrite.underwriting_status",
+            "research_underwrite.thesis",
+            "research_underwrite.key_debates",
+            "research_underwrite.catalysts",
+            "research_underwrite.risks",
+            "research_underwrite.disconfirming_evidence",
+            "research_underwrite.monitoring_items",
+            "research_underwrite.as_of or retrieved_at",
+            "research_underwrite.source_register non-empty",
+            "each research_underwrite.source_register record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        },
+        "investment_horizon": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [
+            "monthly revenue or fundamental signals available as input"
+          ],
+          "remaining_evidence_needs": [
+            "3M timing/catalyst view",
+            "12M base underwrite",
+            "3Y ownership thesis",
+            "falsifiers",
+            "as_of/retrieved_at",
+            "source_register covering near_term_3m, base_12m, long_term_3y"
+          ],
+          "checklist": [
+            "investment_horizon.status=complete",
+            "investment_horizon.near_term_3m",
+            "investment_horizon.base_12m",
+            "investment_horizon.long_term_3y",
+            "investment_horizon.falsifiers non-empty",
+            "investment_horizon.as_of or retrieved_at",
+            "investment_horizon.source_register non-empty",
+            "investment_horizon.source_register covers near_term_3m, base_12m, and long_term_3y"
+          ]
+        },
+        "valuation": {
+          "workflow": "comps-valuation",
+          "supported_evidence": [
+            "quote 104.0 TWD as_of=2026-08-05 source=twse_official_latest_close",
+            "valuation_input_methods=3",
+            "valuation_metrics=trailing_pe, price_to_book, dividend_yield"
+          ],
+          "remaining_evidence_needs": [
+            "define peer set or sector method",
+            "convert input multiples into valuation posture",
+            "document remaining valuation gaps and source dates"
+          ],
+          "checklist": [
+            "valuation_status=complete only after sourced valuation work",
+            "valuation.summary",
+            "valuation.as_of or retrieved_at",
+            "valuation.posture",
+            "valuation.methods non-empty with peer/sector method, inputs, source dates, and gaps",
+            "each valuation.methods record has method, source/source_name/url/file_path, and as_of or retrieved_at"
+          ]
+        },
+        "risk_assessment": {
+          "workflow": "portfolio-risk-management",
+          "supported_evidence": [
+            "price input 104.0 TWD as_of=2026-08-05",
+            "downside_distance_pct=3.3654; 60d_drawdown=28.7671",
+            "average_trade_value_20d=130988765.65; history_days=60"
+          ],
+          "remaining_evidence_needs": [
+            "convert risk inputs into implementation readiness",
+            "set binding constraint, liquidity cap, recommended size, max-loss posture, and monitoring rules"
+          ],
+          "checklist": [
+            "risk_status=complete only after sourced portfolio-risk-management work",
+            "risk_assessment.summary",
+            "risk_assessment.implementation_readiness",
+            "risk_assessment.binding_constraint",
+            "risk_assessment.downside_or_stop_distance",
+            "risk_assessment.liquidity_cap",
+            "risk_assessment.recommended_size",
+            "risk_assessment.max_loss_posture",
+            "risk_assessment.monitoring_rules",
+            "risk_assessment.as_of or retrieved_at",
+            "risk_assessment.evidence non-empty",
+            "each risk_assessment.evidence record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        }
+      }
+    },
+    {
+      "symbol": "1216",
+      "company": "統一",
+      "output_subdir": "tw-1216",
+      "state": "awaiting_result",
+      "result_status": "missing",
+      "result_issues": [
+        "expected_result_json_missing"
+      ],
+      "handoff_statuses": {
+        "quote": "resolved",
+        "official_evidence": "input_ready",
+        "valuation": "input_ready",
+        "risk": "input_ready"
+      },
+      "existing_gate_state": {
+        "research_status": "partial",
+        "valuation_status": "not_run",
+        "risk_status": "not_run",
+        "horizon_status": "partial",
+        "recommendation_label": "Watch only"
+      },
+      "required_source_ledger_objects": [
+        "research_underwrite",
+        "investment_horizon",
+        "valuation",
+        "risk_assessment"
+      ],
+      "next_required_workflows": [
+        "company-tearsheet + initiating-coverage",
+        "comps-valuation",
+        "portfolio-risk-management"
+      ],
+      "packet_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/tw-1216.packet.json",
+      "packet_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/tw-1216.packet.md",
+      "template_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/tw-1216.result.template.json",
+      "template_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/tw-1216.result.template.md",
+      "validate_results_report_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/validate_results_report.json",
+      "expected_result_path": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/tw-1216.result.json",
+      "object_gaps": {
+        "research_underwrite": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [
+            "official issuer identity available",
+            "fundamental_signals=1"
+          ],
+          "remaining_evidence_needs": [
+            "sourced company facts and business drivers",
+            "official filings/IR, revenue, earnings, or management commentary",
+            "key debates, catalysts, risks, disconfirming evidence, and monitoring items"
+          ],
+          "checklist": [
+            "research_status=complete only if sourced initiating coverage is complete",
+            "research_underwrite.summary",
+            "research_underwrite.underwriting_status",
+            "research_underwrite.thesis",
+            "research_underwrite.key_debates",
+            "research_underwrite.catalysts",
+            "research_underwrite.risks",
+            "research_underwrite.disconfirming_evidence",
+            "research_underwrite.monitoring_items",
+            "research_underwrite.as_of or retrieved_at",
+            "research_underwrite.source_register non-empty",
+            "each research_underwrite.source_register record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        },
+        "investment_horizon": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [
+            "monthly revenue or fundamental signals available as input"
+          ],
+          "remaining_evidence_needs": [
+            "3M timing/catalyst view",
+            "12M base underwrite",
+            "3Y ownership thesis",
+            "falsifiers",
+            "as_of/retrieved_at",
+            "source_register covering near_term_3m, base_12m, long_term_3y"
+          ],
+          "checklist": [
+            "investment_horizon.status=complete",
+            "investment_horizon.near_term_3m",
+            "investment_horizon.base_12m",
+            "investment_horizon.long_term_3y",
+            "investment_horizon.falsifiers non-empty",
+            "investment_horizon.as_of or retrieved_at",
+            "investment_horizon.source_register non-empty",
+            "investment_horizon.source_register covers near_term_3m, base_12m, and long_term_3y"
+          ]
+        },
+        "valuation": {
+          "workflow": "comps-valuation",
+          "supported_evidence": [
+            "quote 73.2 TWD as_of=2026-08-05 source=twse_official_latest_close",
+            "valuation_input_methods=3",
+            "valuation_metrics=trailing_pe, price_to_book, dividend_yield"
+          ],
+          "remaining_evidence_needs": [
+            "define peer set or sector method",
+            "convert input multiples into valuation posture",
+            "document remaining valuation gaps and source dates"
+          ],
+          "checklist": [
+            "valuation_status=complete only after sourced valuation work",
+            "valuation.summary",
+            "valuation.as_of or retrieved_at",
+            "valuation.posture",
+            "valuation.methods non-empty with peer/sector method, inputs, source dates, and gaps",
+            "each valuation.methods record has method, source/source_name/url/file_path, and as_of or retrieved_at"
+          ]
+        },
+        "risk_assessment": {
+          "workflow": "portfolio-risk-management",
+          "supported_evidence": [
+            "price input 73.2 TWD as_of=2026-08-05",
+            "downside_distance_pct=1.0929; 60d_drawdown=9.2937",
+            "average_trade_value_20d=1770242940.75; history_days=60"
+          ],
+          "remaining_evidence_needs": [
+            "convert risk inputs into implementation readiness",
+            "set binding constraint, liquidity cap, recommended size, max-loss posture, and monitoring rules"
+          ],
+          "checklist": [
+            "risk_status=complete only after sourced portfolio-risk-management work",
+            "risk_assessment.summary",
+            "risk_assessment.implementation_readiness",
+            "risk_assessment.binding_constraint",
+            "risk_assessment.downside_or_stop_distance",
+            "risk_assessment.liquidity_cap",
+            "risk_assessment.recommended_size",
+            "risk_assessment.max_loss_posture",
+            "risk_assessment.monitoring_rules",
+            "risk_assessment.as_of or retrieved_at",
+            "risk_assessment.evidence non-empty",
+            "each risk_assessment.evidence record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        }
+      }
+    },
+    {
+      "symbol": "2330",
+      "company": "台積電",
+      "output_subdir": "tw-2330",
+      "state": "awaiting_result",
+      "result_status": "missing",
+      "result_issues": [
+        "expected_result_json_missing"
+      ],
+      "handoff_statuses": {
+        "quote": "resolved",
+        "official_evidence": "input_ready",
+        "valuation": "input_ready",
+        "risk": "input_ready"
+      },
+      "existing_gate_state": {
+        "research_status": "partial",
+        "valuation_status": "not_run",
+        "risk_status": "not_run",
+        "horizon_status": "partial",
+        "recommendation_label": "Watch only"
+      },
+      "required_source_ledger_objects": [
+        "research_underwrite",
+        "investment_horizon",
+        "valuation",
+        "risk_assessment"
+      ],
+      "next_required_workflows": [
+        "company-tearsheet + initiating-coverage",
+        "comps-valuation",
+        "portfolio-risk-management"
+      ],
+      "packet_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/tw-2330.packet.json",
+      "packet_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/tw-2330.packet.md",
+      "template_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/tw-2330.result.template.json",
+      "template_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/tw-2330.result.template.md",
+      "validate_results_report_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/validate_results_report.json",
+      "expected_result_path": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/tw-2330.result.json",
+      "object_gaps": {
+        "research_underwrite": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [
+            "official issuer identity available",
+            "fundamental_signals=1"
+          ],
+          "remaining_evidence_needs": [
+            "sourced company facts and business drivers",
+            "official filings/IR, revenue, earnings, or management commentary",
+            "key debates, catalysts, risks, disconfirming evidence, and monitoring items"
+          ],
+          "checklist": [
+            "research_status=complete only if sourced initiating coverage is complete",
+            "research_underwrite.summary",
+            "research_underwrite.underwriting_status",
+            "research_underwrite.thesis",
+            "research_underwrite.key_debates",
+            "research_underwrite.catalysts",
+            "research_underwrite.risks",
+            "research_underwrite.disconfirming_evidence",
+            "research_underwrite.monitoring_items",
+            "research_underwrite.as_of or retrieved_at",
+            "research_underwrite.source_register non-empty",
+            "each research_underwrite.source_register record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        },
+        "investment_horizon": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [
+            "monthly revenue or fundamental signals available as input"
+          ],
+          "remaining_evidence_needs": [
+            "3M timing/catalyst view",
+            "12M base underwrite",
+            "3Y ownership thesis",
+            "falsifiers",
+            "as_of/retrieved_at",
+            "source_register covering near_term_3m, base_12m, long_term_3y"
+          ],
+          "checklist": [
+            "investment_horizon.status=complete",
+            "investment_horizon.near_term_3m",
+            "investment_horizon.base_12m",
+            "investment_horizon.long_term_3y",
+            "investment_horizon.falsifiers non-empty",
+            "investment_horizon.as_of or retrieved_at",
+            "investment_horizon.source_register non-empty",
+            "investment_horizon.source_register covers near_term_3m, base_12m, and long_term_3y"
+          ]
+        },
+        "valuation": {
+          "workflow": "comps-valuation",
+          "supported_evidence": [
+            "quote 2405.0 TWD as_of=2026-08-05 source=twse_official_latest_close",
+            "valuation_input_methods=3",
+            "valuation_metrics=trailing_pe, price_to_book, dividend_yield"
+          ],
+          "remaining_evidence_needs": [
+            "define peer set or sector method",
+            "convert input multiples into valuation posture",
+            "document remaining valuation gaps and source dates"
+          ],
+          "checklist": [
+            "valuation_status=complete only after sourced valuation work",
+            "valuation.summary",
+            "valuation.as_of or retrieved_at",
+            "valuation.posture",
+            "valuation.methods non-empty with peer/sector method, inputs, source dates, and gaps",
+            "each valuation.methods record has method, source/source_name/url/file_path, and as_of or retrieved_at"
+          ]
+        },
+        "risk_assessment": {
+          "workflow": "portfolio-risk-management",
+          "supported_evidence": [
+            "price input 2405.0 TWD as_of=2026-08-05",
+            "downside_distance_pct=9.3555; 60d_drawdown=5.1282",
+            "average_trade_value_20d=97159575398.35; history_days=60"
+          ],
+          "remaining_evidence_needs": [
+            "convert risk inputs into implementation readiness",
+            "set binding constraint, liquidity cap, recommended size, max-loss posture, and monitoring rules"
+          ],
+          "checklist": [
+            "risk_status=complete only after sourced portfolio-risk-management work",
+            "risk_assessment.summary",
+            "risk_assessment.implementation_readiness",
+            "risk_assessment.binding_constraint",
+            "risk_assessment.downside_or_stop_distance",
+            "risk_assessment.liquidity_cap",
+            "risk_assessment.recommended_size",
+            "risk_assessment.max_loss_posture",
+            "risk_assessment.monitoring_rules",
+            "risk_assessment.as_of or retrieved_at",
+            "risk_assessment.evidence non-empty",
+            "each risk_assessment.evidence record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        }
+      }
+    },
+    {
+      "symbol": "2354",
+      "company": "鴻準",
+      "output_subdir": "tw-2354",
+      "state": "awaiting_result",
+      "result_status": "missing",
+      "result_issues": [
+        "expected_result_json_missing"
+      ],
+      "handoff_statuses": {
+        "quote": "resolved",
+        "official_evidence": "input_ready",
+        "valuation": "input_ready",
+        "risk": "input_ready"
+      },
+      "existing_gate_state": {
+        "research_status": "partial",
+        "valuation_status": "not_run",
+        "risk_status": "not_run",
+        "horizon_status": "partial",
+        "recommendation_label": "Wait for trigger"
+      },
+      "required_source_ledger_objects": [
+        "research_underwrite",
+        "investment_horizon",
+        "valuation",
+        "risk_assessment"
+      ],
+      "next_required_workflows": [
+        "company-tearsheet + initiating-coverage",
+        "comps-valuation",
+        "portfolio-risk-management"
+      ],
+      "packet_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/tw-2354.packet.json",
+      "packet_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/tw-2354.packet.md",
+      "template_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/tw-2354.result.template.json",
+      "template_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/tw-2354.result.template.md",
+      "validate_results_report_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/validate_results_report.json",
+      "expected_result_path": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/tw-2354.result.json",
+      "object_gaps": {
+        "research_underwrite": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [
+            "official issuer identity available",
+            "fundamental_signals=1"
+          ],
+          "remaining_evidence_needs": [
+            "sourced company facts and business drivers",
+            "official filings/IR, revenue, earnings, or management commentary",
+            "key debates, catalysts, risks, disconfirming evidence, and monitoring items"
+          ],
+          "checklist": [
+            "research_status=complete only if sourced initiating coverage is complete",
+            "research_underwrite.summary",
+            "research_underwrite.underwriting_status",
+            "research_underwrite.thesis",
+            "research_underwrite.key_debates",
+            "research_underwrite.catalysts",
+            "research_underwrite.risks",
+            "research_underwrite.disconfirming_evidence",
+            "research_underwrite.monitoring_items",
+            "research_underwrite.as_of or retrieved_at",
+            "research_underwrite.source_register non-empty",
+            "each research_underwrite.source_register record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        },
+        "investment_horizon": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [
+            "monthly revenue or fundamental signals available as input"
+          ],
+          "remaining_evidence_needs": [
+            "3M timing/catalyst view",
+            "12M base underwrite",
+            "3Y ownership thesis",
+            "falsifiers",
+            "as_of/retrieved_at",
+            "source_register covering near_term_3m, base_12m, long_term_3y"
+          ],
+          "checklist": [
+            "investment_horizon.status=complete",
+            "investment_horizon.near_term_3m",
+            "investment_horizon.base_12m",
+            "investment_horizon.long_term_3y",
+            "investment_horizon.falsifiers non-empty",
+            "investment_horizon.as_of or retrieved_at",
+            "investment_horizon.source_register non-empty",
+            "investment_horizon.source_register covers near_term_3m, base_12m, and long_term_3y"
+          ]
+        },
+        "valuation": {
+          "workflow": "comps-valuation",
+          "supported_evidence": [
+            "quote 55.5 TWD as_of=2026-08-05 source=twse_official_latest_close",
+            "valuation_input_methods=3",
+            "valuation_metrics=trailing_pe, price_to_book, dividend_yield"
+          ],
+          "remaining_evidence_needs": [
+            "define peer set or sector method",
+            "convert input multiples into valuation posture",
+            "document remaining valuation gaps and source dates"
+          ],
+          "checklist": [
+            "valuation_status=complete only after sourced valuation work",
+            "valuation.summary",
+            "valuation.as_of or retrieved_at",
+            "valuation.posture",
+            "valuation.methods non-empty with peer/sector method, inputs, source dates, and gaps",
+            "each valuation.methods record has method, source/source_name/url/file_path, and as_of or retrieved_at"
+          ]
+        },
+        "risk_assessment": {
+          "workflow": "portfolio-risk-management",
+          "supported_evidence": [
+            "price input 55.5 TWD as_of=2026-08-05",
+            "downside_distance_pct=7.7477; 60d_drawdown=16.4157",
+            "average_trade_value_20d=266687599.4; history_days=60"
+          ],
+          "remaining_evidence_needs": [
+            "convert risk inputs into implementation readiness",
+            "set binding constraint, liquidity cap, recommended size, max-loss posture, and monitoring rules"
+          ],
+          "checklist": [
+            "risk_status=complete only after sourced portfolio-risk-management work",
+            "risk_assessment.summary",
+            "risk_assessment.implementation_readiness",
+            "risk_assessment.binding_constraint",
+            "risk_assessment.downside_or_stop_distance",
+            "risk_assessment.liquidity_cap",
+            "risk_assessment.recommended_size",
+            "risk_assessment.max_loss_posture",
+            "risk_assessment.monitoring_rules",
+            "risk_assessment.as_of or retrieved_at",
+            "risk_assessment.evidence non-empty",
+            "each risk_assessment.evidence record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        }
+      }
+    },
+    {
+      "symbol": "2454",
+      "company": "聯發科",
+      "output_subdir": "tw-2454",
+      "state": "awaiting_result",
+      "result_status": "missing",
+      "result_issues": [
+        "expected_result_json_missing"
+      ],
+      "handoff_statuses": {
+        "quote": "resolved",
+        "official_evidence": "input_ready",
+        "valuation": "input_ready",
+        "risk": "input_ready"
+      },
+      "existing_gate_state": {
+        "research_status": "partial",
+        "valuation_status": "not_run",
+        "risk_status": "not_run",
+        "horizon_status": "partial",
+        "recommendation_label": "Watch only"
+      },
+      "required_source_ledger_objects": [
+        "research_underwrite",
+        "investment_horizon",
+        "valuation",
+        "risk_assessment"
+      ],
+      "next_required_workflows": [
+        "company-tearsheet + initiating-coverage",
+        "comps-valuation",
+        "portfolio-risk-management"
+      ],
+      "packet_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/tw-2454.packet.json",
+      "packet_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/tw-2454.packet.md",
+      "template_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/tw-2454.result.template.json",
+      "template_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/tw-2454.result.template.md",
+      "validate_results_report_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/validate_results_report.json",
+      "expected_result_path": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/tw-2454.result.json",
+      "object_gaps": {
+        "research_underwrite": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [
+            "official issuer identity available",
+            "fundamental_signals=1"
+          ],
+          "remaining_evidence_needs": [
+            "sourced company facts and business drivers",
+            "official filings/IR, revenue, earnings, or management commentary",
+            "key debates, catalysts, risks, disconfirming evidence, and monitoring items"
+          ],
+          "checklist": [
+            "research_status=complete only if sourced initiating coverage is complete",
+            "research_underwrite.summary",
+            "research_underwrite.underwriting_status",
+            "research_underwrite.thesis",
+            "research_underwrite.key_debates",
+            "research_underwrite.catalysts",
+            "research_underwrite.risks",
+            "research_underwrite.disconfirming_evidence",
+            "research_underwrite.monitoring_items",
+            "research_underwrite.as_of or retrieved_at",
+            "research_underwrite.source_register non-empty",
+            "each research_underwrite.source_register record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        },
+        "investment_horizon": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [
+            "monthly revenue or fundamental signals available as input"
+          ],
+          "remaining_evidence_needs": [
+            "3M timing/catalyst view",
+            "12M base underwrite",
+            "3Y ownership thesis",
+            "falsifiers",
+            "as_of/retrieved_at",
+            "source_register covering near_term_3m, base_12m, long_term_3y"
+          ],
+          "checklist": [
+            "investment_horizon.status=complete",
+            "investment_horizon.near_term_3m",
+            "investment_horizon.base_12m",
+            "investment_horizon.long_term_3y",
+            "investment_horizon.falsifiers non-empty",
+            "investment_horizon.as_of or retrieved_at",
+            "investment_horizon.source_register non-empty",
+            "investment_horizon.source_register covers near_term_3m, base_12m, and long_term_3y"
+          ]
+        },
+        "valuation": {
+          "workflow": "comps-valuation",
+          "supported_evidence": [
+            "quote 4000.0 TWD as_of=2026-08-05 source=twse_official_latest_close",
+            "valuation_input_methods=3",
+            "valuation_metrics=trailing_pe, price_to_book, dividend_yield"
+          ],
+          "remaining_evidence_needs": [
+            "define peer set or sector method",
+            "convert input multiples into valuation posture",
+            "document remaining valuation gaps and source dates"
+          ],
+          "checklist": [
+            "valuation_status=complete only after sourced valuation work",
+            "valuation.summary",
+            "valuation.as_of or retrieved_at",
+            "valuation.posture",
+            "valuation.methods non-empty with peer/sector method, inputs, source dates, and gaps",
+            "each valuation.methods record has method, source/source_name/url/file_path, and as_of or retrieved_at"
+          ]
+        },
+        "risk_assessment": {
+          "workflow": "portfolio-risk-management",
+          "supported_evidence": [
+            "price input 4000.0 TWD as_of=2026-08-05",
+            "downside_distance_pct=25.25; 60d_drawdown=19.5171",
+            "average_trade_value_20d=36265101078.15; history_days=60"
+          ],
+          "remaining_evidence_needs": [
+            "convert risk inputs into implementation readiness",
+            "set binding constraint, liquidity cap, recommended size, max-loss posture, and monitoring rules"
+          ],
+          "checklist": [
+            "risk_status=complete only after sourced portfolio-risk-management work",
+            "risk_assessment.summary",
+            "risk_assessment.implementation_readiness",
+            "risk_assessment.binding_constraint",
+            "risk_assessment.downside_or_stop_distance",
+            "risk_assessment.liquidity_cap",
+            "risk_assessment.recommended_size",
+            "risk_assessment.max_loss_posture",
+            "risk_assessment.monitoring_rules",
+            "risk_assessment.as_of or retrieved_at",
+            "risk_assessment.evidence non-empty",
+            "each risk_assessment.evidence record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        }
+      }
+    },
+    {
+      "symbol": "3605",
+      "company": "宏致",
+      "output_subdir": "tw-3605",
+      "state": "awaiting_result",
+      "result_status": "missing",
+      "result_issues": [
+        "expected_result_json_missing"
+      ],
+      "handoff_statuses": {
+        "quote": "resolved",
+        "official_evidence": "input_ready",
+        "valuation": "input_ready",
+        "risk": "input_ready"
+      },
+      "existing_gate_state": {
+        "research_status": "partial",
+        "valuation_status": "not_run",
+        "risk_status": "not_run",
+        "horizon_status": "partial",
+        "recommendation_label": "Watch only"
+      },
+      "required_source_ledger_objects": [
+        "research_underwrite",
+        "investment_horizon",
+        "valuation",
+        "risk_assessment"
+      ],
+      "next_required_workflows": [
+        "company-tearsheet + initiating-coverage",
+        "comps-valuation",
+        "portfolio-risk-management"
+      ],
+      "packet_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/tw-3605.packet.json",
+      "packet_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/tw-3605.packet.md",
+      "template_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/tw-3605.result.template.json",
+      "template_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/tw-3605.result.template.md",
+      "validate_results_report_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/validate_results_report.json",
+      "expected_result_path": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/tw-3605.result.json",
+      "object_gaps": {
+        "research_underwrite": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [
+            "official issuer identity available",
+            "fundamental_signals=1"
+          ],
+          "remaining_evidence_needs": [
+            "sourced company facts and business drivers",
+            "official filings/IR, revenue, earnings, or management commentary",
+            "key debates, catalysts, risks, disconfirming evidence, and monitoring items"
+          ],
+          "checklist": [
+            "research_status=complete only if sourced initiating coverage is complete",
+            "research_underwrite.summary",
+            "research_underwrite.underwriting_status",
+            "research_underwrite.thesis",
+            "research_underwrite.key_debates",
+            "research_underwrite.catalysts",
+            "research_underwrite.risks",
+            "research_underwrite.disconfirming_evidence",
+            "research_underwrite.monitoring_items",
+            "research_underwrite.as_of or retrieved_at",
+            "research_underwrite.source_register non-empty",
+            "each research_underwrite.source_register record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        },
+        "investment_horizon": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [
+            "monthly revenue or fundamental signals available as input"
+          ],
+          "remaining_evidence_needs": [
+            "3M timing/catalyst view",
+            "12M base underwrite",
+            "3Y ownership thesis",
+            "falsifiers",
+            "as_of/retrieved_at",
+            "source_register covering near_term_3m, base_12m, long_term_3y"
+          ],
+          "checklist": [
+            "investment_horizon.status=complete",
+            "investment_horizon.near_term_3m",
+            "investment_horizon.base_12m",
+            "investment_horizon.long_term_3y",
+            "investment_horizon.falsifiers non-empty",
+            "investment_horizon.as_of or retrieved_at",
+            "investment_horizon.source_register non-empty",
+            "investment_horizon.source_register covers near_term_3m, base_12m, and long_term_3y"
+          ]
+        },
+        "valuation": {
+          "workflow": "comps-valuation",
+          "supported_evidence": [
+            "quote 101.5 TWD as_of=2026-08-05 source=twse_official_latest_close",
+            "valuation_input_methods=3",
+            "valuation_metrics=trailing_pe, price_to_book, dividend_yield"
+          ],
+          "remaining_evidence_needs": [
+            "define peer set or sector method",
+            "convert input multiples into valuation posture",
+            "document remaining valuation gaps and source dates"
+          ],
+          "checklist": [
+            "valuation_status=complete only after sourced valuation work",
+            "valuation.summary",
+            "valuation.as_of or retrieved_at",
+            "valuation.posture",
+            "valuation.methods non-empty with peer/sector method, inputs, source dates, and gaps",
+            "each valuation.methods record has method, source/source_name/url/file_path, and as_of or retrieved_at"
+          ]
+        },
+        "risk_assessment": {
+          "workflow": "portfolio-risk-management",
+          "supported_evidence": [
+            "price input 101.5 TWD as_of=2026-08-05",
+            "downside_distance_pct=28.5714; 60d_drawdown=None",
+            "average_trade_value_20d=861319580.3; history_days=60"
+          ],
+          "remaining_evidence_needs": [
+            "convert risk inputs into implementation readiness",
+            "set binding constraint, liquidity cap, recommended size, max-loss posture, and monitoring rules"
+          ],
+          "checklist": [
+            "risk_status=complete only after sourced portfolio-risk-management work",
+            "risk_assessment.summary",
+            "risk_assessment.implementation_readiness",
+            "risk_assessment.binding_constraint",
+            "risk_assessment.downside_or_stop_distance",
+            "risk_assessment.liquidity_cap",
+            "risk_assessment.recommended_size",
+            "risk_assessment.max_loss_posture",
+            "risk_assessment.monitoring_rules",
+            "risk_assessment.as_of or retrieved_at",
+            "risk_assessment.evidence non-empty",
+            "each risk_assessment.evidence record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        }
+      }
+    },
+    {
+      "symbol": "6695",
+      "company": "芯鼎",
+      "output_subdir": "tw-6695",
+      "state": "awaiting_result",
+      "result_status": "missing",
+      "result_issues": [
+        "expected_result_json_missing"
+      ],
+      "handoff_statuses": {
+        "quote": "resolved",
+        "official_evidence": "input_ready",
+        "valuation": "input_ready",
+        "risk": "input_ready"
+      },
+      "existing_gate_state": {
+        "research_status": "partial",
+        "valuation_status": "not_run",
+        "risk_status": "not_run",
+        "horizon_status": "partial",
+        "recommendation_label": "Watch only"
+      },
+      "required_source_ledger_objects": [
+        "research_underwrite",
+        "investment_horizon",
+        "valuation",
+        "risk_assessment"
+      ],
+      "next_required_workflows": [
+        "company-tearsheet + initiating-coverage",
+        "comps-valuation",
+        "portfolio-risk-management"
+      ],
+      "packet_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/tw-6695.packet.json",
+      "packet_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/tw-6695.packet.md",
+      "template_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/tw-6695.result.template.json",
+      "template_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/tw-6695.result.template.md",
+      "validate_results_report_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/validate_results_report.json",
+      "expected_result_path": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/tw-6695.result.json",
+      "object_gaps": {
+        "research_underwrite": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [
+            "official issuer identity available",
+            "fundamental_signals=1"
+          ],
+          "remaining_evidence_needs": [
+            "sourced company facts and business drivers",
+            "official filings/IR, revenue, earnings, or management commentary",
+            "key debates, catalysts, risks, disconfirming evidence, and monitoring items"
+          ],
+          "checklist": [
+            "research_status=complete only if sourced initiating coverage is complete",
+            "research_underwrite.summary",
+            "research_underwrite.underwriting_status",
+            "research_underwrite.thesis",
+            "research_underwrite.key_debates",
+            "research_underwrite.catalysts",
+            "research_underwrite.risks",
+            "research_underwrite.disconfirming_evidence",
+            "research_underwrite.monitoring_items",
+            "research_underwrite.as_of or retrieved_at",
+            "research_underwrite.source_register non-empty",
+            "each research_underwrite.source_register record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        },
+        "investment_horizon": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [
+            "monthly revenue or fundamental signals available as input"
+          ],
+          "remaining_evidence_needs": [
+            "3M timing/catalyst view",
+            "12M base underwrite",
+            "3Y ownership thesis",
+            "falsifiers",
+            "as_of/retrieved_at",
+            "source_register covering near_term_3m, base_12m, long_term_3y"
+          ],
+          "checklist": [
+            "investment_horizon.status=complete",
+            "investment_horizon.near_term_3m",
+            "investment_horizon.base_12m",
+            "investment_horizon.long_term_3y",
+            "investment_horizon.falsifiers non-empty",
+            "investment_horizon.as_of or retrieved_at",
+            "investment_horizon.source_register non-empty",
+            "investment_horizon.source_register covers near_term_3m, base_12m, and long_term_3y"
+          ]
+        },
+        "valuation": {
+          "workflow": "comps-valuation",
+          "supported_evidence": [
+            "quote 51.1 TWD as_of=2026-08-05 source=twse_official_latest_close",
+            "valuation_input_methods=1",
+            "valuation_metrics=price_to_book"
+          ],
+          "remaining_evidence_needs": [
+            "define peer set or sector method",
+            "convert input multiples into valuation posture",
+            "document remaining valuation gaps and source dates"
+          ],
+          "checklist": [
+            "valuation_status=complete only after sourced valuation work",
+            "valuation.summary",
+            "valuation.as_of or retrieved_at",
+            "valuation.posture",
+            "valuation.methods non-empty with peer/sector method, inputs, source dates, and gaps",
+            "each valuation.methods record has method, source/source_name/url/file_path, and as_of or retrieved_at"
+          ]
+        },
+        "risk_assessment": {
+          "workflow": "portfolio-risk-management",
+          "supported_evidence": [
+            "price input 51.1 TWD as_of=2026-08-05",
+            "downside_distance_pct=11.9374; 60d_drawdown=25.942",
+            "average_trade_value_20d=58182520.75; history_days=60"
+          ],
+          "remaining_evidence_needs": [
+            "convert risk inputs into implementation readiness",
+            "set binding constraint, liquidity cap, recommended size, max-loss posture, and monitoring rules"
+          ],
+          "checklist": [
+            "risk_status=complete only after sourced portfolio-risk-management work",
+            "risk_assessment.summary",
+            "risk_assessment.implementation_readiness",
+            "risk_assessment.binding_constraint",
+            "risk_assessment.downside_or_stop_distance",
+            "risk_assessment.liquidity_cap",
+            "risk_assessment.recommended_size",
+            "risk_assessment.max_loss_posture",
+            "risk_assessment.monitoring_rules",
+            "risk_assessment.as_of or retrieved_at",
+            "risk_assessment.evidence non-empty",
+            "each risk_assessment.evidence record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        }
+      }
+    },
+    {
+      "symbol": "6770",
+      "company": "力積電",
+      "output_subdir": "tw-6770",
+      "state": "awaiting_result",
+      "result_status": "missing",
+      "result_issues": [
+        "expected_result_json_missing"
+      ],
+      "handoff_statuses": {
+        "quote": "resolved",
+        "official_evidence": "input_ready",
+        "valuation": "input_ready",
+        "risk": "input_ready"
+      },
+      "existing_gate_state": {
+        "research_status": "partial",
+        "valuation_status": "not_run",
+        "risk_status": "not_run",
+        "horizon_status": "partial",
+        "recommendation_label": "Wait for trigger"
+      },
+      "required_source_ledger_objects": [
+        "research_underwrite",
+        "investment_horizon",
+        "valuation",
+        "risk_assessment"
+      ],
+      "next_required_workflows": [
+        "company-tearsheet + initiating-coverage",
+        "comps-valuation",
+        "portfolio-risk-management"
+      ],
+      "packet_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/tw-6770.packet.json",
+      "packet_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/tw-6770.packet.md",
+      "template_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/tw-6770.result.template.json",
+      "template_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/tw-6770.result.template.md",
+      "validate_results_report_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/validate_results_report.json",
+      "expected_result_path": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/tw-6770.result.json",
+      "object_gaps": {
+        "research_underwrite": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [
+            "official issuer identity available",
+            "fundamental_signals=1"
+          ],
+          "remaining_evidence_needs": [
+            "sourced company facts and business drivers",
+            "official filings/IR, revenue, earnings, or management commentary",
+            "key debates, catalysts, risks, disconfirming evidence, and monitoring items"
+          ],
+          "checklist": [
+            "research_status=complete only if sourced initiating coverage is complete",
+            "research_underwrite.summary",
+            "research_underwrite.underwriting_status",
+            "research_underwrite.thesis",
+            "research_underwrite.key_debates",
+            "research_underwrite.catalysts",
+            "research_underwrite.risks",
+            "research_underwrite.disconfirming_evidence",
+            "research_underwrite.monitoring_items",
+            "research_underwrite.as_of or retrieved_at",
+            "research_underwrite.source_register non-empty",
+            "each research_underwrite.source_register record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        },
+        "investment_horizon": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [
+            "monthly revenue or fundamental signals available as input"
+          ],
+          "remaining_evidence_needs": [
+            "3M timing/catalyst view",
+            "12M base underwrite",
+            "3Y ownership thesis",
+            "falsifiers",
+            "as_of/retrieved_at",
+            "source_register covering near_term_3m, base_12m, long_term_3y"
+          ],
+          "checklist": [
+            "investment_horizon.status=complete",
+            "investment_horizon.near_term_3m",
+            "investment_horizon.base_12m",
+            "investment_horizon.long_term_3y",
+            "investment_horizon.falsifiers non-empty",
+            "investment_horizon.as_of or retrieved_at",
+            "investment_horizon.source_register non-empty",
+            "investment_horizon.source_register covers near_term_3m, base_12m, and long_term_3y"
+          ]
+        },
+        "valuation": {
+          "workflow": "comps-valuation",
+          "supported_evidence": [
+            "quote 66.1 TWD as_of=2026-08-05 source=twse_official_latest_close",
+            "valuation_input_methods=2",
+            "valuation_metrics=trailing_pe, price_to_book"
+          ],
+          "remaining_evidence_needs": [
+            "define peer set or sector method",
+            "convert input multiples into valuation posture",
+            "document remaining valuation gaps and source dates"
+          ],
+          "checklist": [
+            "valuation_status=complete only after sourced valuation work",
+            "valuation.summary",
+            "valuation.as_of or retrieved_at",
+            "valuation.posture",
+            "valuation.methods non-empty with peer/sector method, inputs, source dates, and gaps",
+            "each valuation.methods record has method, source/source_name/url/file_path, and as_of or retrieved_at"
+          ]
+        },
+        "risk_assessment": {
+          "workflow": "portfolio-risk-management",
+          "supported_evidence": [
+            "price input 66.1 TWD as_of=2026-08-05",
+            "downside_distance_pct=27.3828; 60d_drawdown=30.0529",
+            "average_trade_value_20d=11426308848.75; history_days=60"
+          ],
+          "remaining_evidence_needs": [
+            "convert risk inputs into implementation readiness",
+            "set binding constraint, liquidity cap, recommended size, max-loss posture, and monitoring rules"
+          ],
+          "checklist": [
+            "risk_status=complete only after sourced portfolio-risk-management work",
+            "risk_assessment.summary",
+            "risk_assessment.implementation_readiness",
+            "risk_assessment.binding_constraint",
+            "risk_assessment.downside_or_stop_distance",
+            "risk_assessment.liquidity_cap",
+            "risk_assessment.recommended_size",
+            "risk_assessment.max_loss_posture",
+            "risk_assessment.monitoring_rules",
+            "risk_assessment.as_of or retrieved_at",
+            "risk_assessment.evidence non-empty",
+            "each risk_assessment.evidence record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        }
+      }
+    },
+    {
+      "symbol": "9910",
+      "company": "豐泰",
+      "output_subdir": "tw-9910",
+      "state": "awaiting_result",
+      "result_status": "missing",
+      "result_issues": [
+        "expected_result_json_missing"
+      ],
+      "handoff_statuses": {
+        "quote": "resolved",
+        "official_evidence": "input_ready",
+        "valuation": "input_ready",
+        "risk": "input_ready"
+      },
+      "existing_gate_state": {
+        "research_status": "partial",
+        "valuation_status": "not_run",
+        "risk_status": "not_run",
+        "horizon_status": "partial",
+        "recommendation_label": "Wait for trigger"
+      },
+      "required_source_ledger_objects": [
+        "research_underwrite",
+        "investment_horizon",
+        "valuation",
+        "risk_assessment"
+      ],
+      "next_required_workflows": [
+        "company-tearsheet + initiating-coverage",
+        "comps-valuation",
+        "portfolio-risk-management"
+      ],
+      "packet_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/tw-9910.packet.json",
+      "packet_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/tw-9910.packet.md",
+      "template_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/tw-9910.result.template.json",
+      "template_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/tw-9910.result.template.md",
+      "validate_results_report_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/validate_results_report.json",
+      "expected_result_path": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/tw-9910.result.json",
+      "object_gaps": {
+        "research_underwrite": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [
+            "official issuer identity available",
+            "fundamental_signals=1"
+          ],
+          "remaining_evidence_needs": [
+            "sourced company facts and business drivers",
+            "official filings/IR, revenue, earnings, or management commentary",
+            "key debates, catalysts, risks, disconfirming evidence, and monitoring items"
+          ],
+          "checklist": [
+            "research_status=complete only if sourced initiating coverage is complete",
+            "research_underwrite.summary",
+            "research_underwrite.underwriting_status",
+            "research_underwrite.thesis",
+            "research_underwrite.key_debates",
+            "research_underwrite.catalysts",
+            "research_underwrite.risks",
+            "research_underwrite.disconfirming_evidence",
+            "research_underwrite.monitoring_items",
+            "research_underwrite.as_of or retrieved_at",
+            "research_underwrite.source_register non-empty",
+            "each research_underwrite.source_register record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        },
+        "investment_horizon": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [
+            "monthly revenue or fundamental signals available as input"
+          ],
+          "remaining_evidence_needs": [
+            "3M timing/catalyst view",
+            "12M base underwrite",
+            "3Y ownership thesis",
+            "falsifiers",
+            "as_of/retrieved_at",
+            "source_register covering near_term_3m, base_12m, long_term_3y"
+          ],
+          "checklist": [
+            "investment_horizon.status=complete",
+            "investment_horizon.near_term_3m",
+            "investment_horizon.base_12m",
+            "investment_horizon.long_term_3y",
+            "investment_horizon.falsifiers non-empty",
+            "investment_horizon.as_of or retrieved_at",
+            "investment_horizon.source_register non-empty",
+            "investment_horizon.source_register covers near_term_3m, base_12m, and long_term_3y"
+          ]
+        },
+        "valuation": {
+          "workflow": "comps-valuation",
+          "supported_evidence": [
+            "quote 67.4 TWD as_of=2026-08-05 source=twse_official_latest_close",
+            "valuation_input_methods=3",
+            "valuation_metrics=trailing_pe, price_to_book, dividend_yield"
+          ],
+          "remaining_evidence_needs": [
+            "define peer set or sector method",
+            "convert input multiples into valuation posture",
+            "document remaining valuation gaps and source dates"
+          ],
+          "checklist": [
+            "valuation_status=complete only after sourced valuation work",
+            "valuation.summary",
+            "valuation.as_of or retrieved_at",
+            "valuation.posture",
+            "valuation.methods non-empty with peer/sector method, inputs, source dates, and gaps",
+            "each valuation.methods record has method, source/source_name/url/file_path, and as_of or retrieved_at"
+          ]
+        },
+        "risk_assessment": {
+          "workflow": "portfolio-risk-management",
+          "supported_evidence": [
+            "price input 67.4 TWD as_of=2026-08-05",
+            "downside_distance_pct=1.3353; 60d_drawdown=31.9192",
+            "average_trade_value_20d=110776108.1; history_days=60"
+          ],
+          "remaining_evidence_needs": [
+            "convert risk inputs into implementation readiness",
+            "set binding constraint, liquidity cap, recommended size, max-loss posture, and monitoring rules"
+          ],
+          "checklist": [
+            "risk_status=complete only after sourced portfolio-risk-management work",
+            "risk_assessment.summary",
+            "risk_assessment.implementation_readiness",
+            "risk_assessment.binding_constraint",
+            "risk_assessment.downside_or_stop_distance",
+            "risk_assessment.liquidity_cap",
+            "risk_assessment.recommended_size",
+            "risk_assessment.max_loss_posture",
+            "risk_assessment.monitoring_rules",
+            "risk_assessment.as_of or retrieved_at",
+            "risk_assessment.evidence non-empty",
+            "each risk_assessment.evidence record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        }
+      }
+    },
+    {
+      "symbol": "AAPL",
+      "company": "Apple Inc",
+      "output_subdir": "us-AAPL",
+      "state": "awaiting_result",
+      "result_status": "missing",
+      "result_issues": [
+        "expected_result_json_missing"
+      ],
+      "handoff_statuses": {
+        "quote": "resolved",
+        "official_evidence": "missing",
+        "valuation": "input_partial",
+        "risk": "input_ready"
+      },
+      "existing_gate_state": {
+        "research_status": "partial",
+        "valuation_status": "not_run",
+        "risk_status": "not_run",
+        "horizon_status": "partial",
+        "recommendation_label": "Watch only"
+      },
+      "required_source_ledger_objects": [
+        "official_validation",
+        "research_underwrite",
+        "investment_horizon",
+        "valuation",
+        "risk_assessment"
+      ],
+      "next_required_workflows": [
+        "official-evidence review",
+        "company-tearsheet + initiating-coverage",
+        "comps-valuation",
+        "portfolio-risk-management"
+      ],
+      "packet_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/us-AAPL.packet.json",
+      "packet_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/us-AAPL.packet.md",
+      "template_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/us-AAPL.result.template.json",
+      "template_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/us-AAPL.result.template.md",
+      "validate_results_report_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/validate_results_report.json",
+      "expected_result_path": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/us-AAPL.result.json",
+      "object_gaps": {
+        "official_validation": {
+          "workflow": "official-evidence review",
+          "supported_evidence": [
+            "official_validation status=missing source="
+          ],
+          "remaining_evidence_needs": [
+            "official issuer identity and listed-security validation",
+            "official filing/IR or exchange source with as-of or retrieved-at date"
+          ],
+          "checklist": [
+            "official_validation_status is validated, exchange_quote_verified, or explicit limitation",
+            "official_validation includes source, as-of/retrieved-at, and validation scope"
+          ]
+        },
+        "research_underwrite": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [
+            "official issuer identity available"
+          ],
+          "remaining_evidence_needs": [
+            "sourced company facts and business drivers",
+            "official filings/IR, revenue, earnings, or management commentary",
+            "key debates, catalysts, risks, disconfirming evidence, and monitoring items"
+          ],
+          "checklist": [
+            "research_status=complete only if sourced initiating coverage is complete",
+            "research_underwrite.summary",
+            "research_underwrite.underwriting_status",
+            "research_underwrite.thesis",
+            "research_underwrite.key_debates",
+            "research_underwrite.catalysts",
+            "research_underwrite.risks",
+            "research_underwrite.disconfirming_evidence",
+            "research_underwrite.monitoring_items",
+            "research_underwrite.as_of or retrieved_at",
+            "research_underwrite.source_register non-empty",
+            "each research_underwrite.source_register record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        },
+        "investment_horizon": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [],
+          "remaining_evidence_needs": [
+            "3M timing/catalyst view",
+            "12M base underwrite",
+            "3Y ownership thesis",
+            "falsifiers",
+            "as_of/retrieved_at",
+            "source_register covering near_term_3m, base_12m, long_term_3y"
+          ],
+          "checklist": [
+            "investment_horizon.status=complete",
+            "investment_horizon.near_term_3m",
+            "investment_horizon.base_12m",
+            "investment_horizon.long_term_3y",
+            "investment_horizon.falsifiers non-empty",
+            "investment_horizon.as_of or retrieved_at",
+            "investment_horizon.source_register non-empty",
+            "investment_horizon.source_register covers near_term_3m, base_12m, and long_term_3y"
+          ]
+        },
+        "valuation": {
+          "workflow": "comps-valuation",
+          "supported_evidence": [
+            "quote 311.0 USD as_of=2026-08-05T20:00:01Z source=yahoo_finance_chart_api:query2.finance.yahoo.com"
+          ],
+          "remaining_evidence_needs": [
+            "current price and valuation date",
+            "peer set or relevant sector method",
+            "multiple/valuation posture and remaining gaps"
+          ],
+          "checklist": [
+            "valuation_status=complete only after sourced valuation work",
+            "valuation.summary",
+            "valuation.as_of or retrieved_at",
+            "valuation.posture",
+            "valuation.methods non-empty with peer/sector method, inputs, source dates, and gaps",
+            "each valuation.methods record has method, source/source_name/url/file_path, and as_of or retrieved_at"
+          ]
+        },
+        "risk_assessment": {
+          "workflow": "portfolio-risk-management",
+          "supported_evidence": [
+            "price input 311.0 USD as_of=2026-08-05T20:00:01Z",
+            "downside_distance_pct=3.537; 60d_drawdown=9.7426",
+            "average_trade_value_20d=18131980601.8; history_days=60"
+          ],
+          "remaining_evidence_needs": [
+            "convert risk inputs into implementation readiness",
+            "set binding constraint, liquidity cap, recommended size, max-loss posture, and monitoring rules"
+          ],
+          "checklist": [
+            "risk_status=complete only after sourced portfolio-risk-management work",
+            "risk_assessment.summary",
+            "risk_assessment.implementation_readiness",
+            "risk_assessment.binding_constraint",
+            "risk_assessment.downside_or_stop_distance",
+            "risk_assessment.liquidity_cap",
+            "risk_assessment.recommended_size",
+            "risk_assessment.max_loss_posture",
+            "risk_assessment.monitoring_rules",
+            "risk_assessment.as_of or retrieved_at",
+            "risk_assessment.evidence non-empty",
+            "each risk_assessment.evidence record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        }
+      }
+    },
+    {
+      "symbol": "BABA",
+      "company": "阿里巴巴",
+      "output_subdir": "us-BABA",
+      "state": "awaiting_result",
+      "result_status": "missing",
+      "result_issues": [
+        "expected_result_json_missing"
+      ],
+      "handoff_statuses": {
+        "quote": "resolved",
+        "official_evidence": "missing",
+        "valuation": "input_partial",
+        "risk": "input_ready"
+      },
+      "existing_gate_state": {
+        "research_status": "partial",
+        "valuation_status": "not_run",
+        "risk_status": "not_run",
+        "horizon_status": "partial",
+        "recommendation_label": "Watch only"
+      },
+      "required_source_ledger_objects": [
+        "official_validation",
+        "research_underwrite",
+        "investment_horizon",
+        "valuation",
+        "risk_assessment"
+      ],
+      "next_required_workflows": [
+        "official-evidence review",
+        "company-tearsheet + initiating-coverage",
+        "comps-valuation",
+        "portfolio-risk-management"
+      ],
+      "packet_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/us-BABA.packet.json",
+      "packet_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/us-BABA.packet.md",
+      "template_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/us-BABA.result.template.json",
+      "template_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/us-BABA.result.template.md",
+      "validate_results_report_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/validate_results_report.json",
+      "expected_result_path": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/us-BABA.result.json",
+      "object_gaps": {
+        "official_validation": {
+          "workflow": "official-evidence review",
+          "supported_evidence": [
+            "official_validation status=missing source="
+          ],
+          "remaining_evidence_needs": [
+            "official issuer identity and listed-security validation",
+            "official filing/IR or exchange source with as-of or retrieved-at date"
+          ],
+          "checklist": [
+            "official_validation_status is validated, exchange_quote_verified, or explicit limitation",
+            "official_validation includes source, as-of/retrieved-at, and validation scope"
+          ]
+        },
+        "research_underwrite": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [
+            "official issuer identity available"
+          ],
+          "remaining_evidence_needs": [
+            "sourced company facts and business drivers",
+            "official filings/IR, revenue, earnings, or management commentary",
+            "key debates, catalysts, risks, disconfirming evidence, and monitoring items"
+          ],
+          "checklist": [
+            "research_status=complete only if sourced initiating coverage is complete",
+            "research_underwrite.summary",
+            "research_underwrite.underwriting_status",
+            "research_underwrite.thesis",
+            "research_underwrite.key_debates",
+            "research_underwrite.catalysts",
+            "research_underwrite.risks",
+            "research_underwrite.disconfirming_evidence",
+            "research_underwrite.monitoring_items",
+            "research_underwrite.as_of or retrieved_at",
+            "research_underwrite.source_register non-empty",
+            "each research_underwrite.source_register record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        },
+        "investment_horizon": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [],
+          "remaining_evidence_needs": [
+            "3M timing/catalyst view",
+            "12M base underwrite",
+            "3Y ownership thesis",
+            "falsifiers",
+            "as_of/retrieved_at",
+            "source_register covering near_term_3m, base_12m, long_term_3y"
+          ],
+          "checklist": [
+            "investment_horizon.status=complete",
+            "investment_horizon.near_term_3m",
+            "investment_horizon.base_12m",
+            "investment_horizon.long_term_3y",
+            "investment_horizon.falsifiers non-empty",
+            "investment_horizon.as_of or retrieved_at",
+            "investment_horizon.source_register non-empty",
+            "investment_horizon.source_register covers near_term_3m, base_12m, and long_term_3y"
+          ]
+        },
+        "valuation": {
+          "workflow": "comps-valuation",
+          "supported_evidence": [
+            "quote 128.53 USD as_of=2026-08-05T20:02:05Z source=yahoo_finance_chart_api:query2.finance.yahoo.com"
+          ],
+          "remaining_evidence_needs": [
+            "current price and valuation date",
+            "peer set or relevant sector method",
+            "multiple/valuation posture and remaining gaps"
+          ],
+          "checklist": [
+            "valuation_status=complete only after sourced valuation work",
+            "valuation.summary",
+            "valuation.as_of or retrieved_at",
+            "valuation.posture",
+            "valuation.methods non-empty with peer/sector method, inputs, source dates, and gaps",
+            "each valuation.methods record has method, source/source_name/url/file_path, and as_of or retrieved_at"
+          ]
+        },
+        "risk_assessment": {
+          "workflow": "portfolio-risk-management",
+          "supported_evidence": [
+            "price input 128.53 USD as_of=2026-08-05T20:02:05Z",
+            "downside_distance_pct=15.3116; 60d_drawdown=12.4872",
+            "average_trade_value_20d=1297029520.35; history_days=60"
+          ],
+          "remaining_evidence_needs": [
+            "convert risk inputs into implementation readiness",
+            "set binding constraint, liquidity cap, recommended size, max-loss posture, and monitoring rules"
+          ],
+          "checklist": [
+            "risk_status=complete only after sourced portfolio-risk-management work",
+            "risk_assessment.summary",
+            "risk_assessment.implementation_readiness",
+            "risk_assessment.binding_constraint",
+            "risk_assessment.downside_or_stop_distance",
+            "risk_assessment.liquidity_cap",
+            "risk_assessment.recommended_size",
+            "risk_assessment.max_loss_posture",
+            "risk_assessment.monitoring_rules",
+            "risk_assessment.as_of or retrieved_at",
+            "risk_assessment.evidence non-empty",
+            "each risk_assessment.evidence record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        }
+      }
+    },
+    {
+      "symbol": "CPRT",
+      "company": "Copart Inc",
+      "output_subdir": "us-CPRT",
+      "state": "awaiting_result",
+      "result_status": "missing",
+      "result_issues": [
+        "expected_result_json_missing"
+      ],
+      "handoff_statuses": {
+        "quote": "resolved",
+        "official_evidence": "missing",
+        "valuation": "input_partial",
+        "risk": "input_ready"
+      },
+      "existing_gate_state": {
+        "research_status": "partial",
+        "valuation_status": "not_run",
+        "risk_status": "not_run",
+        "horizon_status": "partial",
+        "recommendation_label": "Wait for trigger"
+      },
+      "required_source_ledger_objects": [
+        "official_validation",
+        "research_underwrite",
+        "investment_horizon",
+        "valuation",
+        "risk_assessment"
+      ],
+      "next_required_workflows": [
+        "official-evidence review",
+        "company-tearsheet + initiating-coverage",
+        "comps-valuation",
+        "portfolio-risk-management"
+      ],
+      "packet_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/us-CPRT.packet.json",
+      "packet_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/us-CPRT.packet.md",
+      "template_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/us-CPRT.result.template.json",
+      "template_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/us-CPRT.result.template.md",
+      "validate_results_report_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/validate_results_report.json",
+      "expected_result_path": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/us-CPRT.result.json",
+      "object_gaps": {
+        "official_validation": {
+          "workflow": "official-evidence review",
+          "supported_evidence": [
+            "official_validation status=missing source="
+          ],
+          "remaining_evidence_needs": [
+            "official issuer identity and listed-security validation",
+            "official filing/IR or exchange source with as-of or retrieved-at date"
+          ],
+          "checklist": [
+            "official_validation_status is validated, exchange_quote_verified, or explicit limitation",
+            "official_validation includes source, as-of/retrieved-at, and validation scope"
+          ]
+        },
+        "research_underwrite": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [
+            "official issuer identity available"
+          ],
+          "remaining_evidence_needs": [
+            "sourced company facts and business drivers",
+            "official filings/IR, revenue, earnings, or management commentary",
+            "key debates, catalysts, risks, disconfirming evidence, and monitoring items"
+          ],
+          "checklist": [
+            "research_status=complete only if sourced initiating coverage is complete",
+            "research_underwrite.summary",
+            "research_underwrite.underwriting_status",
+            "research_underwrite.thesis",
+            "research_underwrite.key_debates",
+            "research_underwrite.catalysts",
+            "research_underwrite.risks",
+            "research_underwrite.disconfirming_evidence",
+            "research_underwrite.monitoring_items",
+            "research_underwrite.as_of or retrieved_at",
+            "research_underwrite.source_register non-empty",
+            "each research_underwrite.source_register record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        },
+        "investment_horizon": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [],
+          "remaining_evidence_needs": [
+            "3M timing/catalyst view",
+            "12M base underwrite",
+            "3Y ownership thesis",
+            "falsifiers",
+            "as_of/retrieved_at",
+            "source_register covering near_term_3m, base_12m, long_term_3y"
+          ],
+          "checklist": [
+            "investment_horizon.status=complete",
+            "investment_horizon.near_term_3m",
+            "investment_horizon.base_12m",
+            "investment_horizon.long_term_3y",
+            "investment_horizon.falsifiers non-empty",
+            "investment_horizon.as_of or retrieved_at",
+            "investment_horizon.source_register non-empty",
+            "investment_horizon.source_register covers near_term_3m, base_12m, and long_term_3y"
+          ]
+        },
+        "valuation": {
+          "workflow": "comps-valuation",
+          "supported_evidence": [
+            "quote 28.91 USD as_of=2026-08-05T20:00:01Z source=yahoo_finance_chart_api:query2.finance.yahoo.com"
+          ],
+          "remaining_evidence_needs": [
+            "current price and valuation date",
+            "peer set or relevant sector method",
+            "multiple/valuation posture and remaining gaps"
+          ],
+          "checklist": [
+            "valuation_status=complete only after sourced valuation work",
+            "valuation.summary",
+            "valuation.as_of or retrieved_at",
+            "valuation.posture",
+            "valuation.methods non-empty with peer/sector method, inputs, source dates, and gaps",
+            "each valuation.methods record has method, source/source_name/url/file_path, and as_of or retrieved_at"
+          ]
+        },
+        "risk_assessment": {
+          "workflow": "portfolio-risk-management",
+          "supported_evidence": [
+            "price input 28.91 USD as_of=2026-08-05T20:00:01Z",
+            "downside_distance_pct=7.2639; 60d_drawdown=18.9288",
+            "average_trade_value_20d=336011727.8; history_days=60"
+          ],
+          "remaining_evidence_needs": [
+            "convert risk inputs into implementation readiness",
+            "set binding constraint, liquidity cap, recommended size, max-loss posture, and monitoring rules"
+          ],
+          "checklist": [
+            "risk_status=complete only after sourced portfolio-risk-management work",
+            "risk_assessment.summary",
+            "risk_assessment.implementation_readiness",
+            "risk_assessment.binding_constraint",
+            "risk_assessment.downside_or_stop_distance",
+            "risk_assessment.liquidity_cap",
+            "risk_assessment.recommended_size",
+            "risk_assessment.max_loss_posture",
+            "risk_assessment.monitoring_rules",
+            "risk_assessment.as_of or retrieved_at",
+            "risk_assessment.evidence non-empty",
+            "each risk_assessment.evidence record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        }
+      }
+    },
+    {
+      "symbol": "CRCL",
+      "company": "Circle Internet Group",
+      "output_subdir": "us-CRCL",
+      "state": "awaiting_result",
+      "result_status": "missing",
+      "result_issues": [
+        "expected_result_json_missing"
+      ],
+      "handoff_statuses": {
+        "quote": "resolved",
+        "official_evidence": "missing",
+        "valuation": "input_partial",
+        "risk": "input_ready"
+      },
+      "existing_gate_state": {
+        "research_status": "partial",
+        "valuation_status": "not_run",
+        "risk_status": "not_run",
+        "horizon_status": "partial",
+        "recommendation_label": "Watch only"
+      },
+      "required_source_ledger_objects": [
+        "official_validation",
+        "research_underwrite",
+        "investment_horizon",
+        "valuation",
+        "risk_assessment"
+      ],
+      "next_required_workflows": [
+        "official-evidence review",
+        "company-tearsheet + initiating-coverage",
+        "comps-valuation",
+        "portfolio-risk-management"
+      ],
+      "packet_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/us-CRCL.packet.json",
+      "packet_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/us-CRCL.packet.md",
+      "template_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/us-CRCL.result.template.json",
+      "template_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/us-CRCL.result.template.md",
+      "validate_results_report_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/validate_results_report.json",
+      "expected_result_path": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/us-CRCL.result.json",
+      "object_gaps": {
+        "official_validation": {
+          "workflow": "official-evidence review",
+          "supported_evidence": [
+            "official_validation status=missing source="
+          ],
+          "remaining_evidence_needs": [
+            "official issuer identity and listed-security validation",
+            "official filing/IR or exchange source with as-of or retrieved-at date"
+          ],
+          "checklist": [
+            "official_validation_status is validated, exchange_quote_verified, or explicit limitation",
+            "official_validation includes source, as-of/retrieved-at, and validation scope"
+          ]
+        },
+        "research_underwrite": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [
+            "official issuer identity available"
+          ],
+          "remaining_evidence_needs": [
+            "sourced company facts and business drivers",
+            "official filings/IR, revenue, earnings, or management commentary",
+            "key debates, catalysts, risks, disconfirming evidence, and monitoring items"
+          ],
+          "checklist": [
+            "research_status=complete only if sourced initiating coverage is complete",
+            "research_underwrite.summary",
+            "research_underwrite.underwriting_status",
+            "research_underwrite.thesis",
+            "research_underwrite.key_debates",
+            "research_underwrite.catalysts",
+            "research_underwrite.risks",
+            "research_underwrite.disconfirming_evidence",
+            "research_underwrite.monitoring_items",
+            "research_underwrite.as_of or retrieved_at",
+            "research_underwrite.source_register non-empty",
+            "each research_underwrite.source_register record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        },
+        "investment_horizon": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [],
+          "remaining_evidence_needs": [
+            "3M timing/catalyst view",
+            "12M base underwrite",
+            "3Y ownership thesis",
+            "falsifiers",
+            "as_of/retrieved_at",
+            "source_register covering near_term_3m, base_12m, long_term_3y"
+          ],
+          "checklist": [
+            "investment_horizon.status=complete",
+            "investment_horizon.near_term_3m",
+            "investment_horizon.base_12m",
+            "investment_horizon.long_term_3y",
+            "investment_horizon.falsifiers non-empty",
+            "investment_horizon.as_of or retrieved_at",
+            "investment_horizon.source_register non-empty",
+            "investment_horizon.source_register covers near_term_3m, base_12m, and long_term_3y"
+          ]
+        },
+        "valuation": {
+          "workflow": "comps-valuation",
+          "supported_evidence": [
+            "quote 63.28 USD as_of=2026-08-05T20:00:02Z source=yahoo_finance_chart_api:query2.finance.yahoo.com"
+          ],
+          "remaining_evidence_needs": [
+            "current price and valuation date",
+            "peer set or relevant sector method",
+            "multiple/valuation posture and remaining gaps"
+          ],
+          "checklist": [
+            "valuation_status=complete only after sourced valuation work",
+            "valuation.summary",
+            "valuation.as_of or retrieved_at",
+            "valuation.posture",
+            "valuation.methods non-empty with peer/sector method, inputs, source dates, and gaps",
+            "each valuation.methods record has method, source/source_name/url/file_path, and as_of or retrieved_at"
+          ]
+        },
+        "risk_assessment": {
+          "workflow": "portfolio-risk-management",
+          "supported_evidence": [
+            "price input 63.28 USD as_of=2026-08-05T20:00:02Z",
+            "downside_distance_pct=8.5967; 60d_drawdown=54.8",
+            "average_trade_value_20d=840267588.6; history_days=60"
+          ],
+          "remaining_evidence_needs": [
+            "convert risk inputs into implementation readiness",
+            "set binding constraint, liquidity cap, recommended size, max-loss posture, and monitoring rules"
+          ],
+          "checklist": [
+            "risk_status=complete only after sourced portfolio-risk-management work",
+            "risk_assessment.summary",
+            "risk_assessment.implementation_readiness",
+            "risk_assessment.binding_constraint",
+            "risk_assessment.downside_or_stop_distance",
+            "risk_assessment.liquidity_cap",
+            "risk_assessment.recommended_size",
+            "risk_assessment.max_loss_posture",
+            "risk_assessment.monitoring_rules",
+            "risk_assessment.as_of or retrieved_at",
+            "risk_assessment.evidence non-empty",
+            "each risk_assessment.evidence record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        }
+      }
+    },
+    {
+      "symbol": "GOOGL",
+      "company": "Alphabet 公司",
+      "output_subdir": "us-GOOGL",
+      "state": "awaiting_result",
+      "result_status": "missing",
+      "result_issues": [
+        "expected_result_json_missing"
+      ],
+      "handoff_statuses": {
+        "quote": "resolved",
+        "official_evidence": "missing",
+        "valuation": "input_partial",
+        "risk": "input_ready"
+      },
+      "existing_gate_state": {
+        "research_status": "partial",
+        "valuation_status": "not_run",
+        "risk_status": "not_run",
+        "horizon_status": "partial",
+        "recommendation_label": "Watch only"
+      },
+      "required_source_ledger_objects": [
+        "official_validation",
+        "research_underwrite",
+        "investment_horizon",
+        "valuation",
+        "risk_assessment"
+      ],
+      "next_required_workflows": [
+        "official-evidence review",
+        "company-tearsheet + initiating-coverage",
+        "comps-valuation",
+        "portfolio-risk-management"
+      ],
+      "packet_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/us-GOOGL.packet.json",
+      "packet_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/us-GOOGL.packet.md",
+      "template_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/us-GOOGL.result.template.json",
+      "template_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/us-GOOGL.result.template.md",
+      "validate_results_report_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/validate_results_report.json",
+      "expected_result_path": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/us-GOOGL.result.json",
+      "object_gaps": {
+        "official_validation": {
+          "workflow": "official-evidence review",
+          "supported_evidence": [
+            "official_validation status=missing source="
+          ],
+          "remaining_evidence_needs": [
+            "official issuer identity and listed-security validation",
+            "official filing/IR or exchange source with as-of or retrieved-at date"
+          ],
+          "checklist": [
+            "official_validation_status is validated, exchange_quote_verified, or explicit limitation",
+            "official_validation includes source, as-of/retrieved-at, and validation scope"
+          ]
+        },
+        "research_underwrite": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [
+            "official issuer identity available"
+          ],
+          "remaining_evidence_needs": [
+            "sourced company facts and business drivers",
+            "official filings/IR, revenue, earnings, or management commentary",
+            "key debates, catalysts, risks, disconfirming evidence, and monitoring items"
+          ],
+          "checklist": [
+            "research_status=complete only if sourced initiating coverage is complete",
+            "research_underwrite.summary",
+            "research_underwrite.underwriting_status",
+            "research_underwrite.thesis",
+            "research_underwrite.key_debates",
+            "research_underwrite.catalysts",
+            "research_underwrite.risks",
+            "research_underwrite.disconfirming_evidence",
+            "research_underwrite.monitoring_items",
+            "research_underwrite.as_of or retrieved_at",
+            "research_underwrite.source_register non-empty",
+            "each research_underwrite.source_register record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        },
+        "investment_horizon": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [],
+          "remaining_evidence_needs": [
+            "3M timing/catalyst view",
+            "12M base underwrite",
+            "3Y ownership thesis",
+            "falsifiers",
+            "as_of/retrieved_at",
+            "source_register covering near_term_3m, base_12m, long_term_3y"
+          ],
+          "checklist": [
+            "investment_horizon.status=complete",
+            "investment_horizon.near_term_3m",
+            "investment_horizon.base_12m",
+            "investment_horizon.long_term_3y",
+            "investment_horizon.falsifiers non-empty",
+            "investment_horizon.as_of or retrieved_at",
+            "investment_horizon.source_register non-empty",
+            "investment_horizon.source_register covers near_term_3m, base_12m, and long_term_3y"
+          ]
+        },
+        "valuation": {
+          "workflow": "comps-valuation",
+          "supported_evidence": [
+            "quote 362.43 USD as_of=2026-08-05T20:00:01Z source=yahoo_finance_chart_api:query2.finance.yahoo.com"
+          ],
+          "remaining_evidence_needs": [
+            "current price and valuation date",
+            "peer set or relevant sector method",
+            "multiple/valuation posture and remaining gaps"
+          ],
+          "checklist": [
+            "valuation_status=complete only after sourced valuation work",
+            "valuation.summary",
+            "valuation.as_of or retrieved_at",
+            "valuation.posture",
+            "valuation.methods non-empty with peer/sector method, inputs, source dates, and gaps",
+            "each valuation.methods record has method, source/source_name/url/file_path, and as_of or retrieved_at"
+          ]
+        },
+        "risk_assessment": {
+          "workflow": "portfolio-risk-management",
+          "supported_evidence": [
+            "price input 362.43 USD as_of=2026-08-05T20:00:01Z",
+            "downside_distance_pct=13.1143; 60d_drawdown=11.3017",
+            "average_trade_value_20d=11262306983.6; history_days=60"
+          ],
+          "remaining_evidence_needs": [
+            "convert risk inputs into implementation readiness",
+            "set binding constraint, liquidity cap, recommended size, max-loss posture, and monitoring rules"
+          ],
+          "checklist": [
+            "risk_status=complete only after sourced portfolio-risk-management work",
+            "risk_assessment.summary",
+            "risk_assessment.implementation_readiness",
+            "risk_assessment.binding_constraint",
+            "risk_assessment.downside_or_stop_distance",
+            "risk_assessment.liquidity_cap",
+            "risk_assessment.recommended_size",
+            "risk_assessment.max_loss_posture",
+            "risk_assessment.monitoring_rules",
+            "risk_assessment.as_of or retrieved_at",
+            "risk_assessment.evidence non-empty",
+            "each risk_assessment.evidence record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        }
+      }
+    },
+    {
+      "symbol": "LVS",
+      "company": "Las Vegas Sands Corp",
+      "output_subdir": "us-LVS",
+      "state": "awaiting_result",
+      "result_status": "missing",
+      "result_issues": [
+        "expected_result_json_missing"
+      ],
+      "handoff_statuses": {
+        "quote": "resolved",
+        "official_evidence": "missing",
+        "valuation": "input_partial",
+        "risk": "input_ready"
+      },
+      "existing_gate_state": {
+        "research_status": "partial",
+        "valuation_status": "not_run",
+        "risk_status": "not_run",
+        "horizon_status": "partial",
+        "recommendation_label": "Watch only"
+      },
+      "required_source_ledger_objects": [
+        "official_validation",
+        "research_underwrite",
+        "investment_horizon",
+        "valuation",
+        "risk_assessment"
+      ],
+      "next_required_workflows": [
+        "official-evidence review",
+        "company-tearsheet + initiating-coverage",
+        "comps-valuation",
+        "portfolio-risk-management"
+      ],
+      "packet_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/us-LVS.packet.json",
+      "packet_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/us-LVS.packet.md",
+      "template_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/us-LVS.result.template.json",
+      "template_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/us-LVS.result.template.md",
+      "validate_results_report_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/validate_results_report.json",
+      "expected_result_path": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/us-LVS.result.json",
+      "object_gaps": {
+        "official_validation": {
+          "workflow": "official-evidence review",
+          "supported_evidence": [
+            "official_validation status=missing source="
+          ],
+          "remaining_evidence_needs": [
+            "official issuer identity and listed-security validation",
+            "official filing/IR or exchange source with as-of or retrieved-at date"
+          ],
+          "checklist": [
+            "official_validation_status is validated, exchange_quote_verified, or explicit limitation",
+            "official_validation includes source, as-of/retrieved-at, and validation scope"
+          ]
+        },
+        "research_underwrite": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [
+            "official issuer identity available"
+          ],
+          "remaining_evidence_needs": [
+            "sourced company facts and business drivers",
+            "official filings/IR, revenue, earnings, or management commentary",
+            "key debates, catalysts, risks, disconfirming evidence, and monitoring items"
+          ],
+          "checklist": [
+            "research_status=complete only if sourced initiating coverage is complete",
+            "research_underwrite.summary",
+            "research_underwrite.underwriting_status",
+            "research_underwrite.thesis",
+            "research_underwrite.key_debates",
+            "research_underwrite.catalysts",
+            "research_underwrite.risks",
+            "research_underwrite.disconfirming_evidence",
+            "research_underwrite.monitoring_items",
+            "research_underwrite.as_of or retrieved_at",
+            "research_underwrite.source_register non-empty",
+            "each research_underwrite.source_register record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        },
+        "investment_horizon": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [],
+          "remaining_evidence_needs": [
+            "3M timing/catalyst view",
+            "12M base underwrite",
+            "3Y ownership thesis",
+            "falsifiers",
+            "as_of/retrieved_at",
+            "source_register covering near_term_3m, base_12m, long_term_3y"
+          ],
+          "checklist": [
+            "investment_horizon.status=complete",
+            "investment_horizon.near_term_3m",
+            "investment_horizon.base_12m",
+            "investment_horizon.long_term_3y",
+            "investment_horizon.falsifiers non-empty",
+            "investment_horizon.as_of or retrieved_at",
+            "investment_horizon.source_register non-empty",
+            "investment_horizon.source_register covers near_term_3m, base_12m, and long_term_3y"
+          ]
+        },
+        "valuation": {
+          "workflow": "comps-valuation",
+          "supported_evidence": [
+            "quote 45.85 USD as_of=2026-08-05T20:00:02Z source=yahoo_finance_chart_api:query2.finance.yahoo.com"
+          ],
+          "remaining_evidence_needs": [
+            "current price and valuation date",
+            "peer set or relevant sector method",
+            "multiple/valuation posture and remaining gaps"
+          ],
+          "checklist": [
+            "valuation_status=complete only after sourced valuation work",
+            "valuation.summary",
+            "valuation.as_of or retrieved_at",
+            "valuation.posture",
+            "valuation.methods non-empty with peer/sector method, inputs, source dates, and gaps",
+            "each valuation.methods record has method, source/source_name/url/file_path, and as_of or retrieved_at"
+          ]
+        },
+        "risk_assessment": {
+          "workflow": "portfolio-risk-management",
+          "supported_evidence": [
+            "price input 45.85 USD as_of=2026-08-05T20:00:02Z",
+            "downside_distance_pct=3.5769; 60d_drawdown=14.3631",
+            "average_trade_value_20d=258530405.1; history_days=60"
+          ],
+          "remaining_evidence_needs": [
+            "convert risk inputs into implementation readiness",
+            "set binding constraint, liquidity cap, recommended size, max-loss posture, and monitoring rules"
+          ],
+          "checklist": [
+            "risk_status=complete only after sourced portfolio-risk-management work",
+            "risk_assessment.summary",
+            "risk_assessment.implementation_readiness",
+            "risk_assessment.binding_constraint",
+            "risk_assessment.downside_or_stop_distance",
+            "risk_assessment.liquidity_cap",
+            "risk_assessment.recommended_size",
+            "risk_assessment.max_loss_posture",
+            "risk_assessment.monitoring_rules",
+            "risk_assessment.as_of or retrieved_at",
+            "risk_assessment.evidence non-empty",
+            "each risk_assessment.evidence record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        }
+      }
+    },
+    {
+      "symbol": "MU",
+      "company": "Micron Technology",
+      "output_subdir": "us-MU",
+      "state": "awaiting_result",
+      "result_status": "missing",
+      "result_issues": [
+        "expected_result_json_missing"
+      ],
+      "handoff_statuses": {
+        "quote": "resolved",
+        "official_evidence": "missing",
+        "valuation": "input_partial",
+        "risk": "input_ready"
+      },
+      "existing_gate_state": {
+        "research_status": "partial",
+        "valuation_status": "not_run",
+        "risk_status": "not_run",
+        "horizon_status": "partial",
+        "recommendation_label": "Watch only"
+      },
+      "required_source_ledger_objects": [
+        "official_validation",
+        "research_underwrite",
+        "investment_horizon",
+        "valuation",
+        "risk_assessment"
+      ],
+      "next_required_workflows": [
+        "official-evidence review",
+        "company-tearsheet + initiating-coverage",
+        "comps-valuation",
+        "portfolio-risk-management"
+      ],
+      "packet_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/us-MU.packet.json",
+      "packet_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/us-MU.packet.md",
+      "template_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/us-MU.result.template.json",
+      "template_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/us-MU.result.template.md",
+      "validate_results_report_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/validate_results_report.json",
+      "expected_result_path": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/us-MU.result.json",
+      "object_gaps": {
+        "official_validation": {
+          "workflow": "official-evidence review",
+          "supported_evidence": [
+            "official_validation status=missing source="
+          ],
+          "remaining_evidence_needs": [
+            "official issuer identity and listed-security validation",
+            "official filing/IR or exchange source with as-of or retrieved-at date"
+          ],
+          "checklist": [
+            "official_validation_status is validated, exchange_quote_verified, or explicit limitation",
+            "official_validation includes source, as-of/retrieved-at, and validation scope"
+          ]
+        },
+        "research_underwrite": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [
+            "official issuer identity available"
+          ],
+          "remaining_evidence_needs": [
+            "sourced company facts and business drivers",
+            "official filings/IR, revenue, earnings, or management commentary",
+            "key debates, catalysts, risks, disconfirming evidence, and monitoring items"
+          ],
+          "checklist": [
+            "research_status=complete only if sourced initiating coverage is complete",
+            "research_underwrite.summary",
+            "research_underwrite.underwriting_status",
+            "research_underwrite.thesis",
+            "research_underwrite.key_debates",
+            "research_underwrite.catalysts",
+            "research_underwrite.risks",
+            "research_underwrite.disconfirming_evidence",
+            "research_underwrite.monitoring_items",
+            "research_underwrite.as_of or retrieved_at",
+            "research_underwrite.source_register non-empty",
+            "each research_underwrite.source_register record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        },
+        "investment_horizon": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [],
+          "remaining_evidence_needs": [
+            "3M timing/catalyst view",
+            "12M base underwrite",
+            "3Y ownership thesis",
+            "falsifiers",
+            "as_of/retrieved_at",
+            "source_register covering near_term_3m, base_12m, long_term_3y"
+          ],
+          "checklist": [
+            "investment_horizon.status=complete",
+            "investment_horizon.near_term_3m",
+            "investment_horizon.base_12m",
+            "investment_horizon.long_term_3y",
+            "investment_horizon.falsifiers non-empty",
+            "investment_horizon.as_of or retrieved_at",
+            "investment_horizon.source_register non-empty",
+            "investment_horizon.source_register covers near_term_3m, base_12m, and long_term_3y"
+          ]
+        },
+        "valuation": {
+          "workflow": "comps-valuation",
+          "supported_evidence": [
+            "quote 893.19 USD as_of=2026-08-05T20:00:00Z source=yahoo_finance_chart_api:query2.finance.yahoo.com"
+          ],
+          "remaining_evidence_needs": [
+            "current price and valuation date",
+            "peer set or relevant sector method",
+            "multiple/valuation posture and remaining gaps"
+          ],
+          "checklist": [
+            "valuation_status=complete only after sourced valuation work",
+            "valuation.summary",
+            "valuation.as_of or retrieved_at",
+            "valuation.posture",
+            "valuation.methods non-empty with peer/sector method, inputs, source dates, and gaps",
+            "each valuation.methods record has method, source/source_name/url/file_path, and as_of or retrieved_at"
+          ]
+        },
+        "risk_assessment": {
+          "workflow": "portfolio-risk-management",
+          "supported_evidence": [
+            "price input 893.19 USD as_of=2026-08-05T20:00:00Z",
+            "downside_distance_pct=17.3882; 60d_drawdown=28.8295",
+            "average_trade_value_20d=40522228531.35; history_days=60"
+          ],
+          "remaining_evidence_needs": [
+            "convert risk inputs into implementation readiness",
+            "set binding constraint, liquidity cap, recommended size, max-loss posture, and monitoring rules"
+          ],
+          "checklist": [
+            "risk_status=complete only after sourced portfolio-risk-management work",
+            "risk_assessment.summary",
+            "risk_assessment.implementation_readiness",
+            "risk_assessment.binding_constraint",
+            "risk_assessment.downside_or_stop_distance",
+            "risk_assessment.liquidity_cap",
+            "risk_assessment.recommended_size",
+            "risk_assessment.max_loss_posture",
+            "risk_assessment.monitoring_rules",
+            "risk_assessment.as_of or retrieved_at",
+            "risk_assessment.evidence non-empty",
+            "each risk_assessment.evidence record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        }
+      }
+    },
+    {
+      "symbol": "NFLX",
+      "company": "Netflix Inc",
+      "output_subdir": "us-NFLX",
+      "state": "awaiting_result",
+      "result_status": "missing",
+      "result_issues": [
+        "expected_result_json_missing"
+      ],
+      "handoff_statuses": {
+        "quote": "resolved",
+        "official_evidence": "missing",
+        "valuation": "input_partial",
+        "risk": "input_partial"
+      },
+      "existing_gate_state": {
+        "research_status": "partial",
+        "valuation_status": "not_run",
+        "risk_status": "not_run",
+        "horizon_status": "partial",
+        "recommendation_label": "Watch only"
+      },
+      "required_source_ledger_objects": [
+        "official_validation",
+        "research_underwrite",
+        "investment_horizon",
+        "valuation",
+        "risk_assessment"
+      ],
+      "next_required_workflows": [
+        "official-evidence review",
+        "company-tearsheet + initiating-coverage",
+        "comps-valuation",
+        "portfolio-risk-management"
+      ],
+      "packet_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/us-NFLX.packet.json",
+      "packet_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/us-NFLX.packet.md",
+      "template_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/us-NFLX.result.template.json",
+      "template_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/us-NFLX.result.template.md",
+      "validate_results_report_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/validate_results_report.json",
+      "expected_result_path": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/us-NFLX.result.json",
+      "object_gaps": {
+        "official_validation": {
+          "workflow": "official-evidence review",
+          "supported_evidence": [
+            "official_validation status=missing source="
+          ],
+          "remaining_evidence_needs": [
+            "official issuer identity and listed-security validation",
+            "official filing/IR or exchange source with as-of or retrieved-at date"
+          ],
+          "checklist": [
+            "official_validation_status is validated, exchange_quote_verified, or explicit limitation",
+            "official_validation includes source, as-of/retrieved-at, and validation scope"
+          ]
+        },
+        "research_underwrite": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [
+            "official issuer identity available"
+          ],
+          "remaining_evidence_needs": [
+            "sourced company facts and business drivers",
+            "official filings/IR, revenue, earnings, or management commentary",
+            "key debates, catalysts, risks, disconfirming evidence, and monitoring items"
+          ],
+          "checklist": [
+            "research_status=complete only if sourced initiating coverage is complete",
+            "research_underwrite.summary",
+            "research_underwrite.underwriting_status",
+            "research_underwrite.thesis",
+            "research_underwrite.key_debates",
+            "research_underwrite.catalysts",
+            "research_underwrite.risks",
+            "research_underwrite.disconfirming_evidence",
+            "research_underwrite.monitoring_items",
+            "research_underwrite.as_of or retrieved_at",
+            "research_underwrite.source_register non-empty",
+            "each research_underwrite.source_register record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        },
+        "investment_horizon": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [],
+          "remaining_evidence_needs": [
+            "3M timing/catalyst view",
+            "12M base underwrite",
+            "3Y ownership thesis",
+            "falsifiers",
+            "as_of/retrieved_at",
+            "source_register covering near_term_3m, base_12m, long_term_3y"
+          ],
+          "checklist": [
+            "investment_horizon.status=complete",
+            "investment_horizon.near_term_3m",
+            "investment_horizon.base_12m",
+            "investment_horizon.long_term_3y",
+            "investment_horizon.falsifiers non-empty",
+            "investment_horizon.as_of or retrieved_at",
+            "investment_horizon.source_register non-empty",
+            "investment_horizon.source_register covers near_term_3m, base_12m, and long_term_3y"
+          ]
+        },
+        "valuation": {
+          "workflow": "comps-valuation",
+          "supported_evidence": [
+            "quote 74.2 USD as_of=2026-08-05T20:00:00Z source=yahoo_finance_chart_api:query2.finance.yahoo.com"
+          ],
+          "remaining_evidence_needs": [
+            "current price and valuation date",
+            "peer set or relevant sector method",
+            "multiple/valuation posture and remaining gaps"
+          ],
+          "checklist": [
+            "valuation_status=complete only after sourced valuation work",
+            "valuation.summary",
+            "valuation.as_of or retrieved_at",
+            "valuation.posture",
+            "valuation.methods non-empty with peer/sector method, inputs, source dates, and gaps",
+            "each valuation.methods record has method, source/source_name/url/file_path, and as_of or retrieved_at"
+          ]
+        },
+        "risk_assessment": {
+          "workflow": "portfolio-risk-management",
+          "supported_evidence": [
+            "price input 74.2 USD as_of=2026-08-05T20:00:00Z",
+            "downside_distance_pct=None; 60d_drawdown=None",
+            "average_trade_value_20d=None; history_days=0"
+          ],
+          "remaining_evidence_needs": [
+            "implementation readiness",
+            "binding constraint",
+            "downside/stop distance",
+            "liquidity cap",
+            "recommended model size and max-loss posture",
+            "monitoring rules and evidence"
+          ],
+          "checklist": [
+            "risk_status=complete only after sourced portfolio-risk-management work",
+            "risk_assessment.summary",
+            "risk_assessment.implementation_readiness",
+            "risk_assessment.binding_constraint",
+            "risk_assessment.downside_or_stop_distance",
+            "risk_assessment.liquidity_cap",
+            "risk_assessment.recommended_size",
+            "risk_assessment.max_loss_posture",
+            "risk_assessment.monitoring_rules",
+            "risk_assessment.as_of or retrieved_at",
+            "risk_assessment.evidence non-empty",
+            "each risk_assessment.evidence record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        }
+      }
+    },
+    {
+      "symbol": "PLTR",
+      "company": "Palantir Technologies Inc",
+      "output_subdir": "us-PLTR",
+      "state": "awaiting_result",
+      "result_status": "missing",
+      "result_issues": [
+        "expected_result_json_missing"
+      ],
+      "handoff_statuses": {
+        "quote": "resolved",
+        "official_evidence": "missing",
+        "valuation": "input_partial",
+        "risk": "input_ready"
+      },
+      "existing_gate_state": {
+        "research_status": "partial",
+        "valuation_status": "not_run",
+        "risk_status": "not_run",
+        "horizon_status": "partial",
+        "recommendation_label": "Not decision-ready"
+      },
+      "required_source_ledger_objects": [
+        "official_validation",
+        "research_underwrite",
+        "investment_horizon",
+        "valuation",
+        "risk_assessment"
+      ],
+      "next_required_workflows": [
+        "official-evidence review",
+        "company-tearsheet + initiating-coverage",
+        "comps-valuation",
+        "portfolio-risk-management"
+      ],
+      "packet_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/us-PLTR.packet.json",
+      "packet_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/us-PLTR.packet.md",
+      "template_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/us-PLTR.result.template.json",
+      "template_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/us-PLTR.result.template.md",
+      "validate_results_report_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/validate_results_report.json",
+      "expected_result_path": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/us-PLTR.result.json",
+      "object_gaps": {
+        "official_validation": {
+          "workflow": "official-evidence review",
+          "supported_evidence": [
+            "official_validation status=missing source="
+          ],
+          "remaining_evidence_needs": [
+            "official issuer identity and listed-security validation",
+            "official filing/IR or exchange source with as-of or retrieved-at date"
+          ],
+          "checklist": [
+            "official_validation_status is validated, exchange_quote_verified, or explicit limitation",
+            "official_validation includes source, as-of/retrieved-at, and validation scope"
+          ]
+        },
+        "research_underwrite": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [
+            "official issuer identity available"
+          ],
+          "remaining_evidence_needs": [
+            "sourced company facts and business drivers",
+            "official filings/IR, revenue, earnings, or management commentary",
+            "key debates, catalysts, risks, disconfirming evidence, and monitoring items"
+          ],
+          "checklist": [
+            "research_status=complete only if sourced initiating coverage is complete",
+            "research_underwrite.summary",
+            "research_underwrite.underwriting_status",
+            "research_underwrite.thesis",
+            "research_underwrite.key_debates",
+            "research_underwrite.catalysts",
+            "research_underwrite.risks",
+            "research_underwrite.disconfirming_evidence",
+            "research_underwrite.monitoring_items",
+            "research_underwrite.as_of or retrieved_at",
+            "research_underwrite.source_register non-empty",
+            "each research_underwrite.source_register record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        },
+        "investment_horizon": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [],
+          "remaining_evidence_needs": [
+            "3M timing/catalyst view",
+            "12M base underwrite",
+            "3Y ownership thesis",
+            "falsifiers",
+            "as_of/retrieved_at",
+            "source_register covering near_term_3m, base_12m, long_term_3y"
+          ],
+          "checklist": [
+            "investment_horizon.status=complete",
+            "investment_horizon.near_term_3m",
+            "investment_horizon.base_12m",
+            "investment_horizon.long_term_3y",
+            "investment_horizon.falsifiers non-empty",
+            "investment_horizon.as_of or retrieved_at",
+            "investment_horizon.source_register non-empty",
+            "investment_horizon.source_register covers near_term_3m, base_12m, and long_term_3y"
+          ]
+        },
+        "valuation": {
+          "workflow": "comps-valuation",
+          "supported_evidence": [
+            "quote 158.43 USD as_of=2026-08-05T20:00:00Z source=yahoo_finance_chart_api:query2.finance.yahoo.com"
+          ],
+          "remaining_evidence_needs": [
+            "current price and valuation date",
+            "peer set or relevant sector method",
+            "multiple/valuation posture and remaining gaps"
+          ],
+          "checklist": [
+            "valuation_status=complete only after sourced valuation work",
+            "valuation.summary",
+            "valuation.as_of or retrieved_at",
+            "valuation.posture",
+            "valuation.methods non-empty with peer/sector method, inputs, source dates, and gaps",
+            "each valuation.methods record has method, source/source_name/url/file_path, and as_of or retrieved_at"
+          ]
+        },
+        "risk_assessment": {
+          "workflow": "portfolio-risk-management",
+          "supported_evidence": [
+            "price input 158.43 USD as_of=2026-08-05T20:00:00Z",
+            "downside_distance_pct=25.5886; 60d_drawdown=4.5947",
+            "average_trade_value_20d=5933010213.7; history_days=60"
+          ],
+          "remaining_evidence_needs": [
+            "convert risk inputs into implementation readiness",
+            "set binding constraint, liquidity cap, recommended size, max-loss posture, and monitoring rules"
+          ],
+          "checklist": [
+            "risk_status=complete only after sourced portfolio-risk-management work",
+            "risk_assessment.summary",
+            "risk_assessment.implementation_readiness",
+            "risk_assessment.binding_constraint",
+            "risk_assessment.downside_or_stop_distance",
+            "risk_assessment.liquidity_cap",
+            "risk_assessment.recommended_size",
+            "risk_assessment.max_loss_posture",
+            "risk_assessment.monitoring_rules",
+            "risk_assessment.as_of or retrieved_at",
+            "risk_assessment.evidence non-empty",
+            "each risk_assessment.evidence record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        }
+      }
+    },
+    {
+      "symbol": "SOFI",
+      "company": "SoFi Technologies Inc",
+      "output_subdir": "us-SOFI",
+      "state": "awaiting_result",
+      "result_status": "missing",
+      "result_issues": [
+        "expected_result_json_missing"
+      ],
+      "handoff_statuses": {
+        "quote": "resolved",
+        "official_evidence": "missing",
+        "valuation": "input_partial",
+        "risk": "input_ready"
+      },
+      "existing_gate_state": {
+        "research_status": "partial",
+        "valuation_status": "not_run",
+        "risk_status": "not_run",
+        "horizon_status": "partial",
+        "recommendation_label": "Watch only"
+      },
+      "required_source_ledger_objects": [
+        "official_validation",
+        "research_underwrite",
+        "investment_horizon",
+        "valuation",
+        "risk_assessment"
+      ],
+      "next_required_workflows": [
+        "official-evidence review",
+        "company-tearsheet + initiating-coverage",
+        "comps-valuation",
+        "portfolio-risk-management"
+      ],
+      "packet_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/us-SOFI.packet.json",
+      "packet_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/us-SOFI.packet.md",
+      "template_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/us-SOFI.result.template.json",
+      "template_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/us-SOFI.result.template.md",
+      "validate_results_report_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/validate_results_report.json",
+      "expected_result_path": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/us-SOFI.result.json",
+      "object_gaps": {
+        "official_validation": {
+          "workflow": "official-evidence review",
+          "supported_evidence": [
+            "official_validation status=missing source="
+          ],
+          "remaining_evidence_needs": [
+            "official issuer identity and listed-security validation",
+            "official filing/IR or exchange source with as-of or retrieved-at date"
+          ],
+          "checklist": [
+            "official_validation_status is validated, exchange_quote_verified, or explicit limitation",
+            "official_validation includes source, as-of/retrieved-at, and validation scope"
+          ]
+        },
+        "research_underwrite": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [
+            "official issuer identity available"
+          ],
+          "remaining_evidence_needs": [
+            "sourced company facts and business drivers",
+            "official filings/IR, revenue, earnings, or management commentary",
+            "key debates, catalysts, risks, disconfirming evidence, and monitoring items"
+          ],
+          "checklist": [
+            "research_status=complete only if sourced initiating coverage is complete",
+            "research_underwrite.summary",
+            "research_underwrite.underwriting_status",
+            "research_underwrite.thesis",
+            "research_underwrite.key_debates",
+            "research_underwrite.catalysts",
+            "research_underwrite.risks",
+            "research_underwrite.disconfirming_evidence",
+            "research_underwrite.monitoring_items",
+            "research_underwrite.as_of or retrieved_at",
+            "research_underwrite.source_register non-empty",
+            "each research_underwrite.source_register record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        },
+        "investment_horizon": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [],
+          "remaining_evidence_needs": [
+            "3M timing/catalyst view",
+            "12M base underwrite",
+            "3Y ownership thesis",
+            "falsifiers",
+            "as_of/retrieved_at",
+            "source_register covering near_term_3m, base_12m, long_term_3y"
+          ],
+          "checklist": [
+            "investment_horizon.status=complete",
+            "investment_horizon.near_term_3m",
+            "investment_horizon.base_12m",
+            "investment_horizon.long_term_3y",
+            "investment_horizon.falsifiers non-empty",
+            "investment_horizon.as_of or retrieved_at",
+            "investment_horizon.source_register non-empty",
+            "investment_horizon.source_register covers near_term_3m, base_12m, and long_term_3y"
+          ]
+        },
+        "valuation": {
+          "workflow": "comps-valuation",
+          "supported_evidence": [
+            "quote 18.25 USD as_of=2026-08-05T20:00:01Z source=yahoo_finance_chart_api:query2.finance.yahoo.com"
+          ],
+          "remaining_evidence_needs": [
+            "current price and valuation date",
+            "peer set or relevant sector method",
+            "multiple/valuation posture and remaining gaps"
+          ],
+          "checklist": [
+            "valuation_status=complete only after sourced valuation work",
+            "valuation.summary",
+            "valuation.as_of or retrieved_at",
+            "valuation.posture",
+            "valuation.methods non-empty with peer/sector method, inputs, source dates, and gaps",
+            "each valuation.methods record has method, source/source_name/url/file_path, and as_of or retrieved_at"
+          ]
+        },
+        "risk_assessment": {
+          "workflow": "portfolio-risk-management",
+          "supported_evidence": [
+            "price input 18.25 USD as_of=2026-08-05T20:00:01Z",
+            "downside_distance_pct=18.4658; 60d_drawdown=7.5481",
+            "average_trade_value_20d=1460711955.15; history_days=60"
+          ],
+          "remaining_evidence_needs": [
+            "convert risk inputs into implementation readiness",
+            "set binding constraint, liquidity cap, recommended size, max-loss posture, and monitoring rules"
+          ],
+          "checklist": [
+            "risk_status=complete only after sourced portfolio-risk-management work",
+            "risk_assessment.summary",
+            "risk_assessment.implementation_readiness",
+            "risk_assessment.binding_constraint",
+            "risk_assessment.downside_or_stop_distance",
+            "risk_assessment.liquidity_cap",
+            "risk_assessment.recommended_size",
+            "risk_assessment.max_loss_posture",
+            "risk_assessment.monitoring_rules",
+            "risk_assessment.as_of or retrieved_at",
+            "risk_assessment.evidence non-empty",
+            "each risk_assessment.evidence record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        }
+      }
+    },
+    {
+      "symbol": "SPCX",
+      "company": "太空探索科技公司",
+      "output_subdir": "us-SPCX",
+      "state": "awaiting_result",
+      "result_status": "missing",
+      "result_issues": [
+        "expected_result_json_missing"
+      ],
+      "handoff_statuses": {
+        "quote": "resolved",
+        "official_evidence": "missing",
+        "valuation": "input_partial",
+        "risk": "input_ready"
+      },
+      "existing_gate_state": {
+        "research_status": "partial",
+        "valuation_status": "not_run",
+        "risk_status": "not_run",
+        "horizon_status": "partial",
+        "recommendation_label": "Not decision-ready"
+      },
+      "required_source_ledger_objects": [
+        "official_validation",
+        "research_underwrite",
+        "investment_horizon",
+        "valuation",
+        "risk_assessment"
+      ],
+      "next_required_workflows": [
+        "official-evidence review",
+        "company-tearsheet + initiating-coverage",
+        "comps-valuation",
+        "portfolio-risk-management"
+      ],
+      "packet_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/us-SPCX.packet.json",
+      "packet_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/us-SPCX.packet.md",
+      "template_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/us-SPCX.result.template.json",
+      "template_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/us-SPCX.result.template.md",
+      "validate_results_report_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/validate_results_report.json",
+      "expected_result_path": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/us-SPCX.result.json",
+      "object_gaps": {
+        "official_validation": {
+          "workflow": "official-evidence review",
+          "supported_evidence": [
+            "official_validation status=missing source="
+          ],
+          "remaining_evidence_needs": [
+            "official issuer identity and listed-security validation",
+            "official filing/IR or exchange source with as-of or retrieved-at date"
+          ],
+          "checklist": [
+            "official_validation_status is validated, exchange_quote_verified, or explicit limitation",
+            "official_validation includes source, as-of/retrieved-at, and validation scope"
+          ]
+        },
+        "research_underwrite": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [
+            "official issuer identity available"
+          ],
+          "remaining_evidence_needs": [
+            "sourced company facts and business drivers",
+            "official filings/IR, revenue, earnings, or management commentary",
+            "key debates, catalysts, risks, disconfirming evidence, and monitoring items"
+          ],
+          "checklist": [
+            "research_status=complete only if sourced initiating coverage is complete",
+            "research_underwrite.summary",
+            "research_underwrite.underwriting_status",
+            "research_underwrite.thesis",
+            "research_underwrite.key_debates",
+            "research_underwrite.catalysts",
+            "research_underwrite.risks",
+            "research_underwrite.disconfirming_evidence",
+            "research_underwrite.monitoring_items",
+            "research_underwrite.as_of or retrieved_at",
+            "research_underwrite.source_register non-empty",
+            "each research_underwrite.source_register record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        },
+        "investment_horizon": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [],
+          "remaining_evidence_needs": [
+            "3M timing/catalyst view",
+            "12M base underwrite",
+            "3Y ownership thesis",
+            "falsifiers",
+            "as_of/retrieved_at",
+            "source_register covering near_term_3m, base_12m, long_term_3y"
+          ],
+          "checklist": [
+            "investment_horizon.status=complete",
+            "investment_horizon.near_term_3m",
+            "investment_horizon.base_12m",
+            "investment_horizon.long_term_3y",
+            "investment_horizon.falsifiers non-empty",
+            "investment_horizon.as_of or retrieved_at",
+            "investment_horizon.source_register non-empty",
+            "investment_horizon.source_register covers near_term_3m, base_12m, and long_term_3y"
+          ]
+        },
+        "valuation": {
+          "workflow": "comps-valuation",
+          "supported_evidence": [
+            "quote 108.27 USD as_of=2026-08-05T20:00:01Z source=yahoo_finance_chart_api:query2.finance.yahoo.com"
+          ],
+          "remaining_evidence_needs": [
+            "current price and valuation date",
+            "peer set or relevant sector method",
+            "multiple/valuation posture and remaining gaps"
+          ],
+          "checklist": [
+            "valuation_status=complete only after sourced valuation work",
+            "valuation.summary",
+            "valuation.as_of or retrieved_at",
+            "valuation.posture",
+            "valuation.methods non-empty with peer/sector method, inputs, source dates, and gaps",
+            "each valuation.methods record has method, source/source_name/url/file_path, and as_of or retrieved_at"
+          ]
+        },
+        "risk_assessment": {
+          "workflow": "portfolio-risk-management",
+          "supported_evidence": [
+            "price input 108.27 USD as_of=2026-08-05T20:00:01Z",
+            "downside_distance_pct=3.1772; 60d_drawdown=52.0165",
+            "average_trade_value_20d=9128412088.0; history_days=37"
+          ],
+          "remaining_evidence_needs": [
+            "convert risk inputs into implementation readiness",
+            "set binding constraint, liquidity cap, recommended size, max-loss posture, and monitoring rules"
+          ],
+          "checklist": [
+            "risk_status=complete only after sourced portfolio-risk-management work",
+            "risk_assessment.summary",
+            "risk_assessment.implementation_readiness",
+            "risk_assessment.binding_constraint",
+            "risk_assessment.downside_or_stop_distance",
+            "risk_assessment.liquidity_cap",
+            "risk_assessment.recommended_size",
+            "risk_assessment.max_loss_posture",
+            "risk_assessment.monitoring_rules",
+            "risk_assessment.as_of or retrieved_at",
+            "risk_assessment.evidence non-empty",
+            "each risk_assessment.evidence record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        }
+      }
+    },
+    {
+      "symbol": "TSLA",
+      "company": "特斯拉 / Tesla",
+      "output_subdir": "us-TSLA",
+      "state": "awaiting_result",
+      "result_status": "missing",
+      "result_issues": [
+        "expected_result_json_missing"
+      ],
+      "handoff_statuses": {
+        "quote": "resolved",
+        "official_evidence": "missing",
+        "valuation": "input_partial",
+        "risk": "input_ready"
+      },
+      "existing_gate_state": {
+        "research_status": "partial",
+        "valuation_status": "not_run",
+        "risk_status": "not_run",
+        "horizon_status": "partial",
+        "recommendation_label": "Watch only"
+      },
+      "required_source_ledger_objects": [
+        "official_validation",
+        "research_underwrite",
+        "investment_horizon",
+        "valuation",
+        "risk_assessment"
+      ],
+      "next_required_workflows": [
+        "official-evidence review",
+        "company-tearsheet + initiating-coverage",
+        "comps-valuation",
+        "portfolio-risk-management"
+      ],
+      "packet_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/us-TSLA.packet.json",
+      "packet_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/us-TSLA.packet.md",
+      "template_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/us-TSLA.result.template.json",
+      "template_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/us-TSLA.result.template.md",
+      "validate_results_report_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/validate_results_report.json",
+      "expected_result_path": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/us-TSLA.result.json",
+      "object_gaps": {
+        "official_validation": {
+          "workflow": "official-evidence review",
+          "supported_evidence": [
+            "official_validation status=missing source="
+          ],
+          "remaining_evidence_needs": [
+            "official issuer identity and listed-security validation",
+            "official filing/IR or exchange source with as-of or retrieved-at date"
+          ],
+          "checklist": [
+            "official_validation_status is validated, exchange_quote_verified, or explicit limitation",
+            "official_validation includes source, as-of/retrieved-at, and validation scope"
+          ]
+        },
+        "research_underwrite": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [
+            "official issuer identity available"
+          ],
+          "remaining_evidence_needs": [
+            "sourced company facts and business drivers",
+            "official filings/IR, revenue, earnings, or management commentary",
+            "key debates, catalysts, risks, disconfirming evidence, and monitoring items"
+          ],
+          "checklist": [
+            "research_status=complete only if sourced initiating coverage is complete",
+            "research_underwrite.summary",
+            "research_underwrite.underwriting_status",
+            "research_underwrite.thesis",
+            "research_underwrite.key_debates",
+            "research_underwrite.catalysts",
+            "research_underwrite.risks",
+            "research_underwrite.disconfirming_evidence",
+            "research_underwrite.monitoring_items",
+            "research_underwrite.as_of or retrieved_at",
+            "research_underwrite.source_register non-empty",
+            "each research_underwrite.source_register record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        },
+        "investment_horizon": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [],
+          "remaining_evidence_needs": [
+            "3M timing/catalyst view",
+            "12M base underwrite",
+            "3Y ownership thesis",
+            "falsifiers",
+            "as_of/retrieved_at",
+            "source_register covering near_term_3m, base_12m, long_term_3y"
+          ],
+          "checklist": [
+            "investment_horizon.status=complete",
+            "investment_horizon.near_term_3m",
+            "investment_horizon.base_12m",
+            "investment_horizon.long_term_3y",
+            "investment_horizon.falsifiers non-empty",
+            "investment_horizon.as_of or retrieved_at",
+            "investment_horizon.source_register non-empty",
+            "investment_horizon.source_register covers near_term_3m, base_12m, and long_term_3y"
+          ]
+        },
+        "valuation": {
+          "workflow": "comps-valuation",
+          "supported_evidence": [
+            "quote 321.55 USD as_of=2026-08-05T20:00:00Z source=yahoo_finance_chart_api:query2.finance.yahoo.com"
+          ],
+          "remaining_evidence_needs": [
+            "current price and valuation date",
+            "peer set or relevant sector method",
+            "multiple/valuation posture and remaining gaps"
+          ],
+          "checklist": [
+            "valuation_status=complete only after sourced valuation work",
+            "valuation.summary",
+            "valuation.as_of or retrieved_at",
+            "valuation.posture",
+            "valuation.methods non-empty with peer/sector method, inputs, source dates, and gaps",
+            "each valuation.methods record has method, source/source_name/url/file_path, and as_of or retrieved_at"
+          ]
+        },
+        "risk_assessment": {
+          "workflow": "portfolio-risk-management",
+          "supported_evidence": [
+            "price input 321.55 USD as_of=2026-08-05T20:00:00Z",
+            "downside_distance_pct=7.5167; 60d_drawdown=29.0803",
+            "average_trade_value_20d=13659548821.1; history_days=60"
+          ],
+          "remaining_evidence_needs": [
+            "convert risk inputs into implementation readiness",
+            "set binding constraint, liquidity cap, recommended size, max-loss posture, and monitoring rules"
+          ],
+          "checklist": [
+            "risk_status=complete only after sourced portfolio-risk-management work",
+            "risk_assessment.summary",
+            "risk_assessment.implementation_readiness",
+            "risk_assessment.binding_constraint",
+            "risk_assessment.downside_or_stop_distance",
+            "risk_assessment.liquidity_cap",
+            "risk_assessment.recommended_size",
+            "risk_assessment.max_loss_posture",
+            "risk_assessment.monitoring_rules",
+            "risk_assessment.as_of or retrieved_at",
+            "risk_assessment.evidence non-empty",
+            "each risk_assessment.evidence record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        }
+      }
+    },
+    {
+      "symbol": "TSM",
+      "company": "Taiwan Semiconductor",
+      "output_subdir": "us-TSM",
+      "state": "awaiting_result",
+      "result_status": "missing",
+      "result_issues": [
+        "expected_result_json_missing"
+      ],
+      "handoff_statuses": {
+        "quote": "resolved",
+        "official_evidence": "missing",
+        "valuation": "input_partial",
+        "risk": "input_ready"
+      },
+      "existing_gate_state": {
+        "research_status": "partial",
+        "valuation_status": "not_run",
+        "risk_status": "not_run",
+        "horizon_status": "partial",
+        "recommendation_label": "Watch only"
+      },
+      "required_source_ledger_objects": [
+        "official_validation",
+        "research_underwrite",
+        "investment_horizon",
+        "valuation",
+        "risk_assessment"
+      ],
+      "next_required_workflows": [
+        "official-evidence review",
+        "company-tearsheet + initiating-coverage",
+        "comps-valuation",
+        "portfolio-risk-management"
+      ],
+      "packet_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/us-TSM.packet.json",
+      "packet_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/input_packets/us-TSM.packet.md",
+      "template_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/us-TSM.result.template.json",
+      "template_md": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/result_templates/us-TSM.result.template.md",
+      "validate_results_report_json": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/validate_results_report.json",
+      "expected_result_path": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/us-TSM.result.json",
+      "object_gaps": {
+        "official_validation": {
+          "workflow": "official-evidence review",
+          "supported_evidence": [
+            "official_validation status=missing source="
+          ],
+          "remaining_evidence_needs": [
+            "official issuer identity and listed-security validation",
+            "official filing/IR or exchange source with as-of or retrieved-at date"
+          ],
+          "checklist": [
+            "official_validation_status is validated, exchange_quote_verified, or explicit limitation",
+            "official_validation includes source, as-of/retrieved-at, and validation scope"
+          ]
+        },
+        "research_underwrite": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [
+            "official issuer identity available"
+          ],
+          "remaining_evidence_needs": [
+            "sourced company facts and business drivers",
+            "official filings/IR, revenue, earnings, or management commentary",
+            "key debates, catalysts, risks, disconfirming evidence, and monitoring items"
+          ],
+          "checklist": [
+            "research_status=complete only if sourced initiating coverage is complete",
+            "research_underwrite.summary",
+            "research_underwrite.underwriting_status",
+            "research_underwrite.thesis",
+            "research_underwrite.key_debates",
+            "research_underwrite.catalysts",
+            "research_underwrite.risks",
+            "research_underwrite.disconfirming_evidence",
+            "research_underwrite.monitoring_items",
+            "research_underwrite.as_of or retrieved_at",
+            "research_underwrite.source_register non-empty",
+            "each research_underwrite.source_register record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        },
+        "investment_horizon": {
+          "workflow": "company-tearsheet + initiating-coverage",
+          "supported_evidence": [],
+          "remaining_evidence_needs": [
+            "3M timing/catalyst view",
+            "12M base underwrite",
+            "3Y ownership thesis",
+            "falsifiers",
+            "as_of/retrieved_at",
+            "source_register covering near_term_3m, base_12m, long_term_3y"
+          ],
+          "checklist": [
+            "investment_horizon.status=complete",
+            "investment_horizon.near_term_3m",
+            "investment_horizon.base_12m",
+            "investment_horizon.long_term_3y",
+            "investment_horizon.falsifiers non-empty",
+            "investment_horizon.as_of or retrieved_at",
+            "investment_horizon.source_register non-empty",
+            "investment_horizon.source_register covers near_term_3m, base_12m, and long_term_3y"
+          ]
+        },
+        "valuation": {
+          "workflow": "comps-valuation",
+          "supported_evidence": [
+            "quote 414.0 USD as_of=2026-08-05T20:00:02Z source=yahoo_finance_chart_api:query2.finance.yahoo.com"
+          ],
+          "remaining_evidence_needs": [
+            "current price and valuation date",
+            "peer set or relevant sector method",
+            "multiple/valuation posture and remaining gaps"
+          ],
+          "checklist": [
+            "valuation_status=complete only after sourced valuation work",
+            "valuation.summary",
+            "valuation.as_of or retrieved_at",
+            "valuation.posture",
+            "valuation.methods non-empty with peer/sector method, inputs, source dates, and gaps",
+            "each valuation.methods record has method, source/source_name/url/file_path, and as_of or retrieved_at"
+          ]
+        },
+        "risk_assessment": {
+          "workflow": "portfolio-risk-management",
+          "supported_evidence": [
+            "price input 414.0 USD as_of=2026-08-05T20:00:02Z",
+            "downside_distance_pct=9.971; 60d_drawdown=13.5699",
+            "average_trade_value_20d=6153337014.85; history_days=60"
+          ],
+          "remaining_evidence_needs": [
+            "convert risk inputs into implementation readiness",
+            "set binding constraint, liquidity cap, recommended size, max-loss posture, and monitoring rules"
+          ],
+          "checklist": [
+            "risk_status=complete only after sourced portfolio-risk-management work",
+            "risk_assessment.summary",
+            "risk_assessment.implementation_readiness",
+            "risk_assessment.binding_constraint",
+            "risk_assessment.downside_or_stop_distance",
+            "risk_assessment.liquidity_cap",
+            "risk_assessment.recommended_size",
+            "risk_assessment.max_loss_posture",
+            "risk_assessment.monitoring_rules",
+            "risk_assessment.as_of or retrieved_at",
+            "risk_assessment.evidence non-empty",
+            "each risk_assessment.evidence record has source/source_name/url/file_path and as_of or retrieved_at"
+          ]
+        }
+      }
+    }
+  ]
+}

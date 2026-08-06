@@ -1,0 +1,346 @@
+{
+  "generated_at": "2026-08-06 08:50:45",
+  "output_root": "reports/public-equity-batch/2026-08-06-inventory",
+  "symbol": "2354",
+  "company": "鴻準",
+  "output_subdir": "tw-2354",
+  "state": "awaiting_result",
+  "prompt_path": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/tw-2354.specialist.prompt.md",
+  "expected_result_path": "reports/public-equity-batch/2026-08-06-inventory/specialist_workorders/tw-2354.result.json",
+  "next_required_workflows": [
+    "company-tearsheet + initiating-coverage",
+    "comps-valuation",
+    "portfolio-risk-management"
+  ],
+  "specialist_skills": [
+    "company-tearsheet",
+    "comps-valuation",
+    "initiating-coverage",
+    "portfolio-risk-management"
+  ],
+  "required_source_ledger_objects": [
+    "research_underwrite",
+    "investment_horizon",
+    "valuation",
+    "risk_assessment"
+  ],
+  "incomplete_objects": [],
+  "handoff_statuses": {
+    "quote": "resolved",
+    "official_evidence": "input_ready",
+    "valuation": "input_ready",
+    "risk": "input_ready"
+  },
+  "horizon_rule": "PEI horizon is 3 months to 3 years: 3M timing/catalyst, 12M base underwrite, and 3Y ownership thesis all require sourced specialist evidence.",
+  "completion_rule": "This packet is input only. It must not mark research_status, valuation_status, risk_status, investment_horizon, or decision-ready gates complete by itself.",
+  "universe_item": {
+    "market_key": "tw",
+    "market": "台股",
+    "symbol": "2354",
+    "company": "鴻準",
+    "industry": "inventory-scope",
+    "canonical_category": "inventory_holding",
+    "canonical_category_label": "庫存持倉",
+    "source_priority": 6,
+    "instrument_type": "common_equity",
+    "output_subdir": "tw-2354",
+    "industry_thesis_gate": "durable_tailwind",
+    "industry_thesis_gate_label": "產業順風且公司證據較完整",
+    "hype_risk": "low",
+    "hype_risk_label": "低",
+    "industry_thesis_summary": "Gate=產業順風且公司證據較完整；炒作風險=低；成長驅動=庫存回補 / 週期復甦；產業驅動與公司級官方資料同時支持，仍需追蹤估值與毛利是否兌現。",
+    "industry_thesis_missing_evidence": [
+      "近 7 日公開新聞熱度未命中或未抓取",
+      "缺少明確後續產業 KPI"
+    ],
+    "industry_thesis_source": "reports/industry-thesis/2026-08-06_industry_thesis.json",
+    "model_portfolio": {
+      "portfolio_units": 100,
+      "long_only": true,
+      "leverage_allowed": false,
+      "single_name_cap": 0.05,
+      "risk_budget_initial": 0.0,
+      "risk_budget_post_trigger": 0.005,
+      "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+      "inventory_scope_note": "Ticker comes from merged inventory; model sizing does not use personal broker position size."
+    },
+    "sources": [
+      {
+        "lane": "inventory",
+        "lane_label": "庫存持倉",
+        "category": "inventory_holding",
+        "category_label": "庫存持倉",
+        "report_path": "/tmp/stockloop_inventory_merged.json",
+        "row_index": 4,
+        "expanded_index": 0,
+        "raw_market": "台股",
+        "raw_symbol_cell": "2354",
+        "raw_company_cell": "鴻準",
+        "raw_row": {
+          "market": "台股",
+          "ticker": "2354",
+          "company_name": "鴻準",
+          "currency": "TWD"
+        }
+      }
+    ]
+  },
+  "existing_source_ledger": {
+    "path": "reports/public-equity-batch/2026-08-06-inventory/companies/tw-2354/source_ledger.json",
+    "exists": true,
+    "recommendation_label": "Wait for trigger",
+    "research_status": "partial",
+    "valuation_status": "not_run",
+    "risk_status": "not_run",
+    "horizon_status": "partial",
+    "missing_evidence": [
+      "本 inventory-scope PEI 批次未逐檔執行完整官方 filings、法說、consensus、估值模型與流動性模型查核",
+      "個人庫存僅用於定義研究宇宙；模型投組 sizing 未使用券商、股數或成本",
+      "需以公司公告、交易所/SEC 文件與正式 PEI specialist workflow 補強後，才可升級為 decision-ready",
+      "產業 thesis Gate=產業順風且公司證據較完整；炒作風險=低",
+      "產業 thesis 缺失證據：近 7 日公開新聞熱度未命中或未抓取",
+      "產業 thesis 缺失證據：缺少明確後續產業 KPI",
+      "估值 handoff 缺失：valuation multiples missing"
+    ],
+    "market_data": {
+      "current_price": {
+        "value": 55.5,
+        "currency": "TWD",
+        "as_of": "2026-08-05",
+        "source": "twse_official_latest_close (2354)"
+      }
+    }
+  },
+  "quote": {
+    "symbol": "2354",
+    "provider_symbol": "2354.TW",
+    "close": 55.5,
+    "currency": "TWD",
+    "as_of": "2026-08-05",
+    "source": "twse_official_latest_close",
+    "retrieved_at": "2026-08-06T00:48:48Z",
+    "fallback_rank": 1,
+    "market_state": "CLOSE",
+    "warnings": []
+  },
+  "official_evidence": {
+    "symbol": "2354",
+    "market_key": "tw",
+    "company": "鴻準",
+    "generated_at": "2026-08-06T00:50:01Z",
+    "official_evidence_handoff_status": "input_ready",
+    "official_validation": {
+      "status": "validated",
+      "source": "TWSE company",
+      "url": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+      "industry": "其他電子業",
+      "company": "鴻準精密工業股份有限公司"
+    },
+    "fundamental_signals": [
+      {
+        "type": "monthly_revenue",
+        "period": "11506",
+        "current_month_revenue": 15054892.0,
+        "mom_growth_pct": 71.90445583428269,
+        "yoy_growth_pct": 10.657353496661475,
+        "source": "TWSE monthly revenue",
+        "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L"
+      }
+    ],
+    "missing_inputs": [],
+    "sources": [
+      {
+        "source_name": "StockLoop industry thesis company exposure evidence",
+        "source_type": "local_industry_thesis_evidence",
+        "path": "/Users/willcoming/code/stockLoop/reports/industry-thesis/2026-08-06_industry_thesis.json",
+        "retrieved_at": "2026-08-06T00:50:01Z",
+        "used_by": [
+          "official_evidence_handoff.json"
+        ]
+      },
+      {
+        "source_name": "industry thesis source",
+        "source_type": "inventory_holding",
+        "path": "",
+        "used_by": [
+          "official_evidence_handoff.json"
+        ]
+      },
+      {
+        "source_name": "TWSE company",
+        "source_type": "direct_official_company_profile",
+        "url": "https://openapi.twse.com.tw/v1/opendata/t187ap03_L",
+        "retrieved_at": "2026-08-06T00:50:01Z",
+        "used_by": [
+          "official_evidence_handoff.json"
+        ]
+      },
+      {
+        "source_name": "TWSE monthly revenue",
+        "source_type": "direct_official_monthly_revenue",
+        "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+        "as_of": "11506",
+        "retrieved_at": "2026-08-06T00:50:01Z",
+        "used_by": [
+          "official_evidence_handoff.json"
+        ]
+      }
+    ],
+    "next_step": "Use official filings, monthly revenue, SEC companyfacts, earnings-call or management-commentary evidence in PEI specialist research before setting research_status=complete."
+  },
+  "valuation_input": {
+    "symbol": "2354",
+    "market_key": "tw",
+    "company": "鴻準",
+    "provider_symbol": "2354.TW",
+    "generated_at": "2026-08-06T00:49:57Z",
+    "valuation_handoff_status": "input_ready",
+    "valuation_status": "not_run",
+    "current_price": {
+      "value": 55.5,
+      "currency": "TWD",
+      "as_of": "2026-08-05",
+      "source": "twse_official_latest_close"
+    },
+    "metrics": {
+      "trailing_pe": 26.3,
+      "price_to_book": 0.73,
+      "dividend_yield": 2.7,
+      "source": "TWSE BWIBBU valuation",
+      "as_of": "2026-08-05",
+      "retrieved_at": "2026-08-06T00:49:56Z",
+      "fiscal_period": "2026Q1"
+    },
+    "methods": [
+      {
+        "method": "market_multiple_input",
+        "metric": "trailing_pe",
+        "value": 26.3,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-08-05",
+        "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+      },
+      {
+        "method": "market_multiple_input",
+        "metric": "price_to_book",
+        "value": 0.73,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-08-05",
+        "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+      },
+      {
+        "method": "market_multiple_input",
+        "metric": "dividend_yield",
+        "value": 2.7,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-08-05",
+        "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+      }
+    ],
+    "sources": [
+      {
+        "source_name": "twse_official_latest_close",
+        "source_type": "market_price",
+        "symbol": "2354",
+        "as_of": "2026-08-05",
+        "retrieved_at": "2026-08-06T00:48:48Z",
+        "used_by": [
+          "valuation_handoff.json"
+        ]
+      },
+      {
+        "source_name": "TWSE BWIBBU valuation",
+        "source_type": "valuation_metrics",
+        "symbol": "2354.TW",
+        "as_of": "2026-08-05",
+        "retrieved_at": "2026-08-06T00:49:56Z",
+        "warning": "",
+        "used_by": [
+          "valuation_handoff.json"
+        ]
+      }
+    ],
+    "missing_inputs": [],
+    "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+  },
+  "risk_input": {
+    "symbol": "2354",
+    "market_key": "tw",
+    "company": "鴻準",
+    "generated_at": "2026-08-06T00:49:18Z",
+    "risk_handoff_status": "input_ready",
+    "current_price": {
+      "value": 55.5,
+      "currency": "TWD",
+      "as_of": "2026-08-05",
+      "source": "twse_official_latest_close"
+    },
+    "risk_inputs": {
+      "low_20d": 51.2,
+      "high_60d": 66.4,
+      "downside_reference": "20d_low",
+      "downside_distance_pct": 7.7477,
+      "drawdown_from_60d_high_pct": 16.4157,
+      "note": "Risk inputs are screening inputs only; portfolio-risk-management must still verify downside, liquidity, and implementation readiness."
+    },
+    "liquidity_inputs": {
+      "history_days": 60,
+      "latest_history_date": "2026-08-05",
+      "latest_volume": 4771508.0,
+      "latest_trade_value": 268777370.0,
+      "average_volume_20d": 4803767.8,
+      "average_trade_value_20d": 266687599.4,
+      "source": "local_daily_bars"
+    },
+    "model_portfolio_inputs": {
+      "portfolio_units": 100,
+      "single_name_cap": 0.05,
+      "risk_budget_initial": 0.0,
+      "screen_size_by_downside": null,
+      "sizing_formula": "min(single-name cap, risk budget / downside_or_stop_distance, liquidity cap)",
+      "note": "Screen size is an input only; final sizing requires portfolio-risk-management."
+    },
+    "sources": [
+      {
+        "source_name": "twse_official_latest_close",
+        "source_type": "market_price",
+        "symbol": "2354",
+        "as_of": "2026-08-05",
+        "retrieved_at": "2026-08-06T00:48:48Z",
+        "used_by": [
+          "risk_handoff.json"
+        ]
+      },
+      {
+        "source_name": "StockLoop local daily_bars",
+        "source_type": "local_ohlcv_history",
+        "path": "/Users/willcoming/code/stockLoop/twStock/data/twstock.sqlite3",
+        "latest_history_date": "2026-08-05",
+        "history_days": 60,
+        "retrieved_at": "2026-08-06T00:49:18Z",
+        "used_by": [
+          "risk_handoff.json"
+        ]
+      }
+    ],
+    "missing_inputs": [],
+    "next_step": "Run Public Equity Investing portfolio-risk-management before treating downside, liquidity, or sizing as implementation-ready."
+  },
+  "expected_result_contract": {
+    "status": "complete|partial|blocked",
+    "updated_source_ledger": "reports/public-equity-batch/2026-08-06-inventory/companies/tw-2354/source_ledger.json",
+    "source_ledger_patch_fields": [
+      "official_validation_status",
+      "official_validation",
+      "research_status",
+      "research_underwrite",
+      "investment_horizon",
+      "valuation_status",
+      "valuation",
+      "risk_status",
+      "risk_assessment",
+      "missing_evidence",
+      "sources"
+    ]
+  }
+}
