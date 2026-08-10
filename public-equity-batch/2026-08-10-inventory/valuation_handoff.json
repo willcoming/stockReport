@@ -1,0 +1,2198 @@
+{
+  "_metadata": {
+    "generated_at": "2026-08-10T00:43:09Z",
+    "item_count": 21,
+    "status_counts": {
+      "input_ready": 21
+    },
+    "enable_yfinance": true,
+    "enable_official_tw_valuation": true,
+    "official_tw_valuation_coverage": {
+      "ready_sources": [
+        "TWSE BWIBBU valuation",
+        "TPEx PE/PB valuation"
+      ],
+      "warnings": [],
+      "network_enabled": true
+    },
+    "note": "This is a valuation input handoff only. It must not change per-symbol source_ledger valuation_status to complete by itself."
+  },
+  "items": [
+    {
+      "symbol": "1215",
+      "market_key": "tw",
+      "company": "卜蜂",
+      "provider_symbol": "1215.TW",
+      "generated_at": "2026-08-10T00:42:52Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 108.0,
+        "currency": "TWD",
+        "as_of": "2026-08-07",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 12.44,
+        "forward_pe": 12.676056,
+        "price_to_book": 2.91,
+        "ev_to_revenue": 1.698,
+        "ev_to_ebitda": 11.753,
+        "market_cap": 31837321216.0,
+        "dividend_yield": 6.48,
+        "sector": "Consumer Defensive",
+        "industry": "Packaged Foods",
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-08-07",
+        "retrieved_at": "2026-08-10T00:42:49Z",
+        "fiscal_period": "2026Q2"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 12.44,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "forward_pe",
+          "value": 12.676056,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 2.91,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_revenue",
+          "value": 1.698,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_ebitda",
+          "value": 11.753,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "market_cap",
+          "value": 31837321216.0,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 6.48,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "1215",
+          "as_of": "2026-08-07",
+          "retrieved_at": "2026-08-10T00:42:33Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "1215.TW",
+          "as_of": "2026-08-07",
+          "retrieved_at": "2026-08-10T00:42:49Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "1216",
+      "market_key": "tw",
+      "company": "統一",
+      "provider_symbol": "1216.TW",
+      "generated_at": "2026-08-10T00:42:53Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 75.7,
+        "currency": "TWD",
+        "as_of": "2026-08-07",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 18.29,
+        "forward_pe": 16.397171,
+        "price_to_book": 3.16,
+        "ev_to_revenue": 0.975,
+        "ev_to_ebitda": 11.201,
+        "market_cap": 430128529408.0,
+        "dividend_yield": 3.96,
+        "sector": "Consumer Defensive",
+        "industry": "Packaged Foods",
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-08-07",
+        "retrieved_at": "2026-08-10T00:42:49Z",
+        "fiscal_period": "2026Q2"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 18.29,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "forward_pe",
+          "value": 16.397171,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 3.16,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_revenue",
+          "value": 0.975,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_ebitda",
+          "value": 11.201,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "market_cap",
+          "value": 430128529408.0,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 3.96,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "1216",
+          "as_of": "2026-08-07",
+          "retrieved_at": "2026-08-10T00:42:33Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "1216.TW",
+          "as_of": "2026-08-07",
+          "retrieved_at": "2026-08-10T00:42:49Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "2330",
+      "market_key": "tw",
+      "company": "台積電",
+      "provider_symbol": "2330.TW",
+      "generated_at": "2026-08-10T00:42:54Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 2370.0,
+        "currency": "TWD",
+        "as_of": "2026-08-07",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 31.86,
+        "forward_pe": 17.190422,
+        "price_to_book": 10.43,
+        "ev_to_revenue": 13.279,
+        "ev_to_ebitda": 18.57,
+        "market_cap": 61459715325952.0,
+        "dividend_yield": 0.93,
+        "sector": "Technology",
+        "industry": "Semiconductors",
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-08-07",
+        "retrieved_at": "2026-08-10T00:42:49Z",
+        "fiscal_period": "2026Q1"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 31.86,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "forward_pe",
+          "value": 17.190422,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 10.43,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_revenue",
+          "value": 13.279,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_ebitda",
+          "value": 18.57,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "market_cap",
+          "value": 61459715325952.0,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 0.93,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "2330",
+          "as_of": "2026-08-07",
+          "retrieved_at": "2026-08-10T00:42:33Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "2330.TW",
+          "as_of": "2026-08-07",
+          "retrieved_at": "2026-08-10T00:42:49Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "2354",
+      "market_key": "tw",
+      "company": "鴻準",
+      "provider_symbol": "2354.TW",
+      "generated_at": "2026-08-10T00:42:55Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 61.8,
+        "currency": "TWD",
+        "as_of": "2026-08-07",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 26.19,
+        "forward_pe": 16.220472,
+        "price_to_book": 0.77,
+        "ev_to_revenue": 0.052,
+        "ev_to_ebitda": 2.374,
+        "market_cap": 87415185408.0,
+        "dividend_yield": 2.43,
+        "sector": "Technology",
+        "industry": "Electronics & Computer Distribution",
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-08-07",
+        "retrieved_at": "2026-08-10T00:42:49Z",
+        "fiscal_period": "2026Q2"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 26.19,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "forward_pe",
+          "value": 16.220472,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 0.77,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_revenue",
+          "value": 0.052,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_ebitda",
+          "value": 2.374,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "market_cap",
+          "value": 87415185408.0,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 2.43,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "2354",
+          "as_of": "2026-08-07",
+          "retrieved_at": "2026-08-10T00:42:33Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "2354.TW",
+          "as_of": "2026-08-07",
+          "retrieved_at": "2026-08-10T00:42:49Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "2454",
+      "market_key": "tw",
+      "company": "聯發科",
+      "provider_symbol": "2454.TW",
+      "generated_at": "2026-08-10T00:42:56Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 3900.0,
+        "currency": "TWD",
+        "as_of": "2026-08-07",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 64.41,
+        "forward_pe": 28.384808,
+        "price_to_book": 14.67,
+        "ev_to_revenue": 10.212,
+        "ev_to_ebitda": 53.868,
+        "market_cap": 6224767090688.0,
+        "dividend_yield": 1.37,
+        "sector": "Technology",
+        "industry": "Semiconductors",
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-08-07",
+        "retrieved_at": "2026-08-10T00:42:49Z",
+        "fiscal_period": "2026Q2"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 64.41,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "forward_pe",
+          "value": 28.384808,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 14.67,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_revenue",
+          "value": 10.212,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_ebitda",
+          "value": 53.868,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "market_cap",
+          "value": 6224767090688.0,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 1.37,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "2454",
+          "as_of": "2026-08-07",
+          "retrieved_at": "2026-08-10T00:42:33Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "2454.TW",
+          "as_of": "2026-08-07",
+          "retrieved_at": "2026-08-10T00:42:49Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "6695",
+      "market_key": "tw",
+      "company": "芯鼎",
+      "provider_symbol": "6695.TW",
+      "generated_at": "2026-08-10T00:42:57Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 49.8,
+        "currency": "TWD",
+        "as_of": "2026-08-07",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "price_to_book": 3.21,
+        "ev_to_revenue": 3.563,
+        "ev_to_ebitda": -33.239,
+        "market_cap": 4804604416.0,
+        "sector": "Technology",
+        "industry": "Semiconductors",
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-08-07",
+        "retrieved_at": "2026-08-10T00:42:49Z",
+        "fiscal_period": "2026Q1"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 3.21,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_revenue",
+          "value": 3.563,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_ebitda",
+          "value": -33.239,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "market_cap",
+          "value": 4804604416.0,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "6695",
+          "as_of": "2026-08-07",
+          "retrieved_at": "2026-08-10T00:42:33Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "6695.TW",
+          "as_of": "2026-08-07",
+          "retrieved_at": "2026-08-10T00:42:49Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "6770",
+      "market_key": "tw",
+      "company": "力積電",
+      "provider_symbol": "6770.TW",
+      "generated_at": "2026-08-10T00:42:57Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 65.5,
+        "currency": "TWD",
+        "as_of": "2026-08-07",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 37.01,
+        "forward_pe": 8.426475,
+        "price_to_book": 2.88,
+        "ev_to_revenue": 5.706,
+        "ev_to_ebitda": 55.029,
+        "market_cap": 279512514560.0,
+        "sector": "Technology",
+        "industry": "Semiconductors",
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-08-07",
+        "retrieved_at": "2026-08-10T00:42:49Z",
+        "fiscal_period": "2026Q1"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 37.01,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "forward_pe",
+          "value": 8.426475,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 2.88,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_revenue",
+          "value": 5.706,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_ebitda",
+          "value": 55.029,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "market_cap",
+          "value": 279512514560.0,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "6770",
+          "as_of": "2026-08-07",
+          "retrieved_at": "2026-08-10T00:42:33Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "6770.TW",
+          "as_of": "2026-08-07",
+          "retrieved_at": "2026-08-10T00:42:49Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "9910",
+      "market_key": "tw",
+      "company": "豐泰",
+      "provider_symbol": "9910.TW",
+      "generated_at": "2026-08-10T00:42:58Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 69.5,
+        "currency": "TWD",
+        "as_of": "2026-08-07",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 15.04,
+        "forward_pe": 13.027301,
+        "price_to_book": 2.56,
+        "ev_to_revenue": 0.879,
+        "ev_to_ebitda": 7.432,
+        "market_cap": 68630052864.0,
+        "dividend_yield": 5.9,
+        "sector": "Consumer Cyclical",
+        "industry": "Footwear & Accessories",
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-08-07",
+        "retrieved_at": "2026-08-10T00:42:49Z",
+        "fiscal_period": "2026Q1"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 15.04,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "forward_pe",
+          "value": 13.027301,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 2.56,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_revenue",
+          "value": 0.879,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_ebitda",
+          "value": 7.432,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "market_cap",
+          "value": 68630052864.0,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 5.9,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-07",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "9910",
+          "as_of": "2026-08-07",
+          "retrieved_at": "2026-08-10T00:42:33Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "9910.TW",
+          "as_of": "2026-08-07",
+          "retrieved_at": "2026-08-10T00:42:49Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "AAPL",
+      "market_key": "us",
+      "company": "Apple Inc",
+      "provider_symbol": "AAPL",
+      "generated_at": "2026-08-10T00:42:59Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 313.33,
+        "currency": "USD",
+        "as_of": "2026-08-07T20:00:01Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {
+        "trailing_pe": 35.97359,
+        "forward_pe": 32.93679,
+        "price_to_book": 42.57201,
+        "ev_to_revenue": 9.843,
+        "ev_to_ebitda": 27.356,
+        "market_cap": 4572794322944.0,
+        "sector": "Technology",
+        "industry": "Consumer Electronics",
+        "source": "yfinance",
+        "retrieved_at": "2026-08-10T00:42:59Z"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 35.97359,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:42:59Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "forward_pe",
+          "value": 32.93679,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:42:59Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 42.57201,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:42:59Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_revenue",
+          "value": 9.843,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:42:59Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_ebitda",
+          "value": 27.356,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:42:59Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "market_cap",
+          "value": 4572794322944.0,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:42:59Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "AAPL",
+          "as_of": "2026-08-07T20:00:01Z",
+          "retrieved_at": "2026-08-10T00:42:34Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "yfinance",
+          "source_type": "valuation_metrics",
+          "symbol": "AAPL",
+          "as_of": null,
+          "retrieved_at": "2026-08-10T00:42:59Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "BABA",
+      "market_key": "us",
+      "company": "阿里巴巴",
+      "provider_symbol": "BABA",
+      "generated_at": "2026-08-10T00:43:00Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 128.41,
+        "currency": "USD",
+        "as_of": "2026-08-07T20:01:37Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {
+        "trailing_pe": 19.694786,
+        "forward_pe": 14.157659,
+        "price_to_book": 1.8969598,
+        "ev_to_revenue": 0.322,
+        "ev_to_ebitda": 2.997,
+        "market_cap": 307782549504.0,
+        "sector": "Consumer Cyclical",
+        "industry": "Internet Retail",
+        "source": "yfinance",
+        "retrieved_at": "2026-08-10T00:43:00Z"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 19.694786,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:00Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "forward_pe",
+          "value": 14.157659,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:00Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 1.8969598,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:00Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_revenue",
+          "value": 0.322,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:00Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_ebitda",
+          "value": 2.997,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:00Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "market_cap",
+          "value": 307782549504.0,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:00Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "BABA",
+          "as_of": "2026-08-07T20:01:37Z",
+          "retrieved_at": "2026-08-10T00:42:36Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "yfinance",
+          "source_type": "valuation_metrics",
+          "symbol": "BABA",
+          "as_of": null,
+          "retrieved_at": "2026-08-10T00:43:00Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "CPRT",
+      "market_key": "us",
+      "company": "Copart Inc",
+      "provider_symbol": "CPRT",
+      "generated_at": "2026-08-10T00:43:01Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 29.66,
+        "currency": "USD",
+        "as_of": "2026-08-07T20:00:01Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {
+        "trailing_pe": 18.42236,
+        "forward_pe": 17.624025,
+        "price_to_book": 3.1296823,
+        "ev_to_revenue": 5.038,
+        "ev_to_ebitda": 11.916,
+        "market_cap": 27459567616.0,
+        "sector": "Industrials",
+        "industry": "Specialty Business Services",
+        "source": "yfinance",
+        "retrieved_at": "2026-08-10T00:43:01Z"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 18.42236,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:01Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "forward_pe",
+          "value": 17.624025,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:01Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 3.1296823,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:01Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_revenue",
+          "value": 5.038,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:01Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_ebitda",
+          "value": 11.916,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:01Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "market_cap",
+          "value": 27459567616.0,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:01Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "CPRT",
+          "as_of": "2026-08-07T20:00:01Z",
+          "retrieved_at": "2026-08-10T00:42:36Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "yfinance",
+          "source_type": "valuation_metrics",
+          "symbol": "CPRT",
+          "as_of": null,
+          "retrieved_at": "2026-08-10T00:43:01Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "CRCL",
+      "market_key": "us",
+      "company": "Circle Internet Group",
+      "provider_symbol": "CRCL",
+      "generated_at": "2026-08-10T00:43:02Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 66.67,
+        "currency": "USD",
+        "as_of": "2026-08-07T20:00:02Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {
+        "trailing_pe": 13.360722,
+        "forward_pe": 38.553394,
+        "price_to_book": 4.802276,
+        "ev_to_revenue": 5.236,
+        "ev_to_ebitda": 66.477,
+        "market_cap": 18173849600.0,
+        "sector": "Financial Services",
+        "industry": "Capital Markets",
+        "source": "yfinance",
+        "retrieved_at": "2026-08-10T00:43:02Z"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 13.360722,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:02Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "forward_pe",
+          "value": 38.553394,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:02Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 4.802276,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:02Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_revenue",
+          "value": 5.236,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:02Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_ebitda",
+          "value": 66.477,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:02Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "market_cap",
+          "value": 18173849600.0,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:02Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "CRCL",
+          "as_of": "2026-08-07T20:00:02Z",
+          "retrieved_at": "2026-08-10T00:42:36Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "yfinance",
+          "source_type": "valuation_metrics",
+          "symbol": "CRCL",
+          "as_of": null,
+          "retrieved_at": "2026-08-10T00:43:02Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "GOOGL",
+      "market_key": "us",
+      "company": "Alphabet 公司",
+      "provider_symbol": "GOOGL",
+      "generated_at": "2026-08-10T00:43:02Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 354.3,
+        "currency": "USD",
+        "as_of": "2026-08-07T20:00:00Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {
+        "trailing_pe": 17.759398,
+        "forward_pe": 24.045721,
+        "price_to_book": 6.961254,
+        "ev_to_revenue": 9.486,
+        "ev_to_ebitda": 24.424,
+        "market_cap": 4333065732096.0,
+        "sector": "Communication Services",
+        "industry": "Internet Content & Information",
+        "source": "yfinance",
+        "retrieved_at": "2026-08-10T00:43:02Z"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 17.759398,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:02Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "forward_pe",
+          "value": 24.045721,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:02Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 6.961254,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:02Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_revenue",
+          "value": 9.486,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:02Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_ebitda",
+          "value": 24.424,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:02Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "market_cap",
+          "value": 4333065732096.0,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:02Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "GOOGL",
+          "as_of": "2026-08-07T20:00:00Z",
+          "retrieved_at": "2026-08-10T00:42:36Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "yfinance",
+          "source_type": "valuation_metrics",
+          "symbol": "GOOGL",
+          "as_of": null,
+          "retrieved_at": "2026-08-10T00:43:02Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "LVS",
+      "market_key": "us",
+      "company": "Las Vegas Sands Corp",
+      "provider_symbol": "LVS",
+      "generated_at": "2026-08-10T00:43:03Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 45.77,
+        "currency": "USD",
+        "as_of": "2026-08-07T20:00:02Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {
+        "trailing_pe": 17.74031,
+        "forward_pe": 12.953676,
+        "price_to_book": 51.025642,
+        "ev_to_revenue": 3.052,
+        "ev_to_ebitda": 9.025,
+        "market_cap": 29645283328.0,
+        "sector": "Consumer Cyclical",
+        "industry": "Resorts & Casinos",
+        "source": "yfinance",
+        "retrieved_at": "2026-08-10T00:43:03Z"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 17.74031,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:03Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "forward_pe",
+          "value": 12.953676,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:03Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 51.025642,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:03Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_revenue",
+          "value": 3.052,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:03Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_ebitda",
+          "value": 9.025,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:03Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "market_cap",
+          "value": 29645283328.0,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:03Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "LVS",
+          "as_of": "2026-08-07T20:00:02Z",
+          "retrieved_at": "2026-08-10T00:42:37Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "yfinance",
+          "source_type": "valuation_metrics",
+          "symbol": "LVS",
+          "as_of": null,
+          "retrieved_at": "2026-08-10T00:43:03Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "MU",
+      "market_key": "us",
+      "company": "Micron Technology",
+      "provider_symbol": "MU",
+      "generated_at": "2026-08-10T00:43:04Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 877.57,
+        "currency": "USD",
+        "as_of": "2026-08-07T20:00:01Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {
+        "trailing_pe": 19.841059,
+        "forward_pe": 5.659457,
+        "price_to_book": 9.8365755,
+        "ev_to_revenue": 10.761,
+        "ev_to_ebitda": 14.24,
+        "market_cap": 991121571840.0,
+        "sector": "Technology",
+        "industry": "Semiconductors",
+        "source": "yfinance",
+        "retrieved_at": "2026-08-10T00:43:04Z"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 19.841059,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:04Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "forward_pe",
+          "value": 5.659457,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:04Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 9.8365755,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:04Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_revenue",
+          "value": 10.761,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:04Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_ebitda",
+          "value": 14.24,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:04Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "market_cap",
+          "value": 991121571840.0,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:04Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "MU",
+          "as_of": "2026-08-07T20:00:01Z",
+          "retrieved_at": "2026-08-10T00:42:37Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "yfinance",
+          "source_type": "valuation_metrics",
+          "symbol": "MU",
+          "as_of": null,
+          "retrieved_at": "2026-08-10T00:43:04Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "NFLX",
+      "market_key": "us",
+      "company": "Netflix Inc",
+      "provider_symbol": "NFLX",
+      "generated_at": "2026-08-10T00:43:05Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 74.14,
+        "currency": "USD",
+        "as_of": "2026-08-07T20:00:00Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {
+        "trailing_pe": 23.314465,
+        "forward_pe": 19.421698,
+        "price_to_book": 10.238917,
+        "ev_to_revenue": 6.538,
+        "ev_to_ebitda": 21.474,
+        "market_cap": 308714471424.0,
+        "sector": "Communication Services",
+        "industry": "Entertainment",
+        "source": "yfinance",
+        "retrieved_at": "2026-08-10T00:43:05Z"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 23.314465,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:05Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "forward_pe",
+          "value": 19.421698,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:05Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 10.238917,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:05Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_revenue",
+          "value": 6.538,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:05Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_ebitda",
+          "value": 21.474,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:05Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "market_cap",
+          "value": 308714471424.0,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:05Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "NFLX",
+          "as_of": "2026-08-07T20:00:00Z",
+          "retrieved_at": "2026-08-10T00:42:37Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "yfinance",
+          "source_type": "valuation_metrics",
+          "symbol": "NFLX",
+          "as_of": null,
+          "retrieved_at": "2026-08-10T00:43:05Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "PLTR",
+      "market_key": "us",
+      "company": "Palantir Technologies Inc",
+      "provider_symbol": "PLTR",
+      "generated_at": "2026-08-10T00:43:06Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 172.01,
+        "currency": "USD",
+        "as_of": "2026-08-07T20:00:00Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {
+        "trailing_pe": 147.01709,
+        "forward_pe": 74.50448,
+        "price_to_book": 42.23177,
+        "ev_to_revenue": 65.67,
+        "ev_to_ebitda": 151.828,
+        "market_cap": 413350068224.0,
+        "sector": "Technology",
+        "industry": "Software - Infrastructure",
+        "source": "yfinance",
+        "retrieved_at": "2026-08-10T00:43:06Z"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 147.01709,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:06Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "forward_pe",
+          "value": 74.50448,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:06Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 42.23177,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:06Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_revenue",
+          "value": 65.67,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:06Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_ebitda",
+          "value": 151.828,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:06Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "market_cap",
+          "value": 413350068224.0,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:06Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "PLTR",
+          "as_of": "2026-08-07T20:00:00Z",
+          "retrieved_at": "2026-08-10T00:42:37Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "yfinance",
+          "source_type": "valuation_metrics",
+          "symbol": "PLTR",
+          "as_of": null,
+          "retrieved_at": "2026-08-10T00:43:06Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "SOFI",
+      "market_key": "us",
+      "company": "SoFi Technologies Inc",
+      "provider_symbol": "SOFI",
+      "generated_at": "2026-08-10T00:43:07Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 18.38,
+        "currency": "USD",
+        "as_of": "2026-08-07T20:00:00Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {
+        "trailing_pe": 37.5102,
+        "forward_pe": 22.629337,
+        "price_to_book": 2.141193,
+        "ev_to_revenue": 5.573,
+        "market_cap": 23739060224.0,
+        "sector": "Financial Services",
+        "industry": "Credit Services",
+        "source": "yfinance",
+        "retrieved_at": "2026-08-10T00:43:07Z"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 37.5102,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:07Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "forward_pe",
+          "value": 22.629337,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:07Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 2.141193,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:07Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_revenue",
+          "value": 5.573,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:07Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "market_cap",
+          "value": 23739060224.0,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:07Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "SOFI",
+          "as_of": "2026-08-07T20:00:00Z",
+          "retrieved_at": "2026-08-10T00:42:38Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "yfinance",
+          "source_type": "valuation_metrics",
+          "symbol": "SOFI",
+          "as_of": null,
+          "retrieved_at": "2026-08-10T00:43:07Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "SPCX",
+      "market_key": "us",
+      "company": "太空探索科技公司",
+      "provider_symbol": "SPCX",
+      "generated_at": "2026-08-10T00:43:08Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 133.11,
+        "currency": "USD",
+        "as_of": "2026-08-07T20:00:00Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {
+        "forward_pe": 71.840294,
+        "price_to_book": 13.785212,
+        "ev_to_revenue": 149.668,
+        "ev_to_ebitda": 584.866,
+        "market_cap": 1754626785280.0,
+        "sector": "Industrials",
+        "industry": "Aerospace & Defense",
+        "source": "yfinance",
+        "retrieved_at": "2026-08-10T00:43:08Z"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "forward_pe",
+          "value": 71.840294,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:08Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 13.785212,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:08Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_revenue",
+          "value": 149.668,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:08Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_ebitda",
+          "value": 584.866,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:08Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "market_cap",
+          "value": 1754626785280.0,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:08Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "SPCX",
+          "as_of": "2026-08-07T20:00:00Z",
+          "retrieved_at": "2026-08-10T00:42:38Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "yfinance",
+          "source_type": "valuation_metrics",
+          "symbol": "SPCX",
+          "as_of": null,
+          "retrieved_at": "2026-08-10T00:43:08Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "TSLA",
+      "market_key": "us",
+      "company": "特斯拉 / Tesla",
+      "provider_symbol": "TSLA",
+      "generated_at": "2026-08-10T00:43:08Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 328.58,
+        "currency": "USD",
+        "as_of": "2026-08-07T20:00:00Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {
+        "trailing_pe": 304.24072,
+        "forward_pe": 148.06036,
+        "price_to_book": 14.9388485,
+        "ev_to_revenue": 12.266,
+        "ev_to_ebitda": 118.174,
+        "market_cap": 1297742299136.0,
+        "sector": "Consumer Cyclical",
+        "industry": "Auto Manufacturers",
+        "source": "yfinance",
+        "retrieved_at": "2026-08-10T00:43:08Z"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 304.24072,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:08Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "forward_pe",
+          "value": 148.06036,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:08Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 14.9388485,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:08Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_revenue",
+          "value": 12.266,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:08Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_ebitda",
+          "value": 118.174,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:08Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "market_cap",
+          "value": 1297742299136.0,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:08Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "TSLA",
+          "as_of": "2026-08-07T20:00:00Z",
+          "retrieved_at": "2026-08-10T00:42:38Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "yfinance",
+          "source_type": "valuation_metrics",
+          "symbol": "TSLA",
+          "as_of": null,
+          "retrieved_at": "2026-08-10T00:43:08Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "TSM",
+      "market_key": "us",
+      "company": "Taiwan Semiconductor",
+      "provider_symbol": "TSM",
+      "generated_at": "2026-08-10T00:43:09Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 420.04,
+        "currency": "USD",
+        "as_of": "2026-08-07T20:00:02Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {
+        "trailing_pe": 36.91037,
+        "forward_pe": 19.439016,
+        "price_to_book": 87.59923,
+        "ev_to_revenue": 3.363,
+        "ev_to_ebitda": 4.703,
+        "market_cap": 2178526609408.0,
+        "sector": "Technology",
+        "industry": "Semiconductors",
+        "source": "yfinance",
+        "retrieved_at": "2026-08-10T00:43:09Z"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 36.91037,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:09Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "forward_pe",
+          "value": 19.439016,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:09Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 87.59923,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:09Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_revenue",
+          "value": 3.363,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:09Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "ev_to_ebitda",
+          "value": 4.703,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:09Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "market_cap",
+          "value": 2178526609408.0,
+          "source": "yfinance",
+          "as_of": "2026-08-10T00:43:09Z",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "TSM",
+          "as_of": "2026-08-07T20:00:02Z",
+          "retrieved_at": "2026-08-10T00:42:38Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "yfinance",
+          "source_type": "valuation_metrics",
+          "symbol": "TSM",
+          "as_of": null,
+          "retrieved_at": "2026-08-10T00:43:09Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    }
+  ]
+}
