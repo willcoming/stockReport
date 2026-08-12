@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-12 08:23:45",
+  "generated_at": "2026-08-12 16:16:26",
   "market_signal_cards": [
     {
       "id": "risk-preference-indicator",
@@ -7,18 +7,18 @@
       "badge": "Risk On",
       "tone": "green",
       "status": "台股與美股資金風向都偏攻擊。",
-      "as_of": "2026-08-11 20:32 Asia/Taipei",
+      "as_of": "2026-08-12 08:34 Asia/Taipei",
       "summary": "用台股電子 / 金融與美股 XLY / XLP 的相對強弱判斷資金偏攻擊或防守；20 日均線上下 2% 作為 Risk On / Off 緩衝。",
       "metrics": [
         {
           "label": "台股",
-          "value": "Risk On（0.9061 / MA20 0.8809）",
-          "note": "電子類 / 金融保險；距 MA20 +2.87%；資料日 2026-08-11。"
+          "value": "Risk On（1.1036 / MA20 1.0689）",
+          "note": "電子類 / 金融保險；距 MA20 +3.24%；資料日 2026-05-29。"
         },
         {
           "label": "美股",
-          "value": "Risk On（1.4087 / MA20 1.3555）",
-          "note": "XLY / XLP；距 MA20 +3.92%；資料日 2026-08-10。"
+          "value": "unavailable（unavailable / MA20 unavailable）",
+          "note": "XLY / XLP；距 MA20 unavailable；資料日 unavailable。"
         },
         {
           "label": "判讀規則",
@@ -51,23 +51,23 @@
       "badge": "低到中風險",
       "tone": "yellow",
       "status": "正常拉回 / 低波動恐懼",
-      "as_of": "2026-08-11 20:32:13 CST",
-      "summary": "正常拉回 / 低波動恐懼；正常分批，不需恐慌。VIX 15.47，Fear & Greed unavailable，信用市場目前判讀為 stable。",
+      "as_of": "2026-08-12 08:34:46 CST",
+      "summary": "正常拉回 / 低波動恐懼；正常分批，不需恐慌。VIX unavailable，Fear & Greed unavailable，信用市場目前判讀為 stable。",
       "metrics": [
         {
           "label": "波動 / 情緒",
-          "value": "VIX 15.47；Fear & Greed unavailable",
-          "note": "calm / unavailable"
+          "value": "VIX unavailable；Fear & Greed unavailable",
+          "note": "unavailable / unavailable"
         },
         {
           "label": "廣度",
-          "value": "SPY -0.03%，RSP +0.06%，IWM -0.52%",
+          "value": "SPY unavailable，RSP unavailable，IWM unavailable",
           "note": "觀察 RSP、IWM 是否跟上 SPY。"
         },
         {
           "label": "信用 / 跨資產",
-          "value": "HY OAS unavailable%；HYG -0.16%，JNK -0.17%",
-          "note": "10Y 4.70%；DXY +0.03%；GLD +1.02%"
+          "value": "HY OAS unavailable%；HYG unavailable，JNK unavailable",
+          "note": "10Y unavailable%；DXY unavailable；GLD unavailable"
         }
       ],
       "sources": [
@@ -92,21 +92,21 @@
     {
       "id": "tw-market-light",
       "title": "台股市場燈號",
-      "badge": "綠燈",
-      "tone": "green",
-      "status": "盤勢偏建設性，可維持正常研究節奏，但仍以分批與條件確認為主。",
-      "as_of": "官方資料日 2026-08-11；目標日 2026-08-11",
-      "summary": "總分 3；盤勢偏建設性，可維持正常研究節奏，但仍以分批與條件確認為主。",
+      "badge": "黃燈",
+      "tone": "yellow",
+      "status": "可以看，但不要重壓。",
+      "as_of": "官方資料日 2026-08-11；目標日 2026-08-12",
+      "summary": "總分 1；可以看，但不要重壓。",
       "metrics": [
         {
           "label": "總分",
-          "value": "3",
+          "value": "1",
           "note": ">= 3 綠燈；-2 以下紅燈；其餘黃燈。"
         },
         {
           "label": "資料日期",
           "value": "2026-08-11",
-          "note": "使用 TWSE MIS 盤中指數資料補入最新開盤日 2026-08-11；盤中 close 代表目前指數，不等於最終收盤。"
+          "note": "TWSE index source returned no usable TAIEX rows."
         },
         {
           "label": "條件數",
@@ -167,6 +167,16 @@
     }
   ],
   "action_reports": [
+    {
+      "lane": "tw_kline",
+      "title": "2026-08-12 台股 K 線警報掃描投資決策報告",
+      "run_id": "2026-08-12-tw-kline",
+      "data_date": "2026-08-12",
+      "generated_at": "2026-08-12 16:15:25",
+      "source_path": "reports/twStock/2026-08-12_tw_kline_decision_report.md",
+      "detail_path": "detail/2026-08-12_tw_kline_decision_report.html",
+      "funnel": "未標示"
+    },
     {
       "lane": "kol",
       "title": "2026-08-12 KOL 觀點、新聞重點與投資決策合併報告",
