@@ -1,0 +1,1232 @@
+{
+  "_metadata": {
+    "generated_at": "2026-08-19T00:46:34Z",
+    "item_count": 26,
+    "status_counts": {
+      "input_ready": 9,
+      "input_partial": 17
+    },
+    "enable_yfinance": false,
+    "enable_official_tw_valuation": true,
+    "official_tw_valuation_coverage": {
+      "ready_sources": [
+        "TWSE BWIBBU valuation",
+        "TPEx PE/PB valuation"
+      ],
+      "warnings": [],
+      "network_enabled": true
+    },
+    "note": "This is a valuation input handoff only. It must not change per-symbol source_ledger valuation_status to complete by itself."
+  },
+  "items": [
+    {
+      "symbol": "1215",
+      "market_key": "tw",
+      "company": "卜蜂",
+      "provider_symbol": "1215.TW",
+      "generated_at": "2026-08-19T00:46:34Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 110.0,
+        "currency": "TWD",
+        "as_of": "2026-08-18",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 12.67,
+        "price_to_book": 2.97,
+        "dividend_yield": 6.36,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-08-18",
+        "retrieved_at": "2026-08-19T00:46:34Z",
+        "fiscal_period": "2026Q2"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 12.67,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-18",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 2.97,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-18",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 6.36,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-18",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "1215",
+          "as_of": "2026-08-18",
+          "retrieved_at": "2026-08-19T00:46:15Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "1215.TW",
+          "as_of": "2026-08-18",
+          "retrieved_at": "2026-08-19T00:46:34Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "1216",
+      "market_key": "tw",
+      "company": "統一",
+      "provider_symbol": "1216.TW",
+      "generated_at": "2026-08-19T00:46:34Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 76.2,
+        "currency": "TWD",
+        "as_of": "2026-08-18",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 18.41,
+        "price_to_book": 3.18,
+        "dividend_yield": 3.94,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-08-18",
+        "retrieved_at": "2026-08-19T00:46:34Z",
+        "fiscal_period": "2026Q2"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 18.41,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-18",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 3.18,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-18",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 3.94,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-18",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "1216",
+          "as_of": "2026-08-18",
+          "retrieved_at": "2026-08-19T00:46:15Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "1216.TW",
+          "as_of": "2026-08-18",
+          "retrieved_at": "2026-08-19T00:46:34Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "2330",
+      "market_key": "tw",
+      "company": "台積電",
+      "provider_symbol": "2330.TW",
+      "generated_at": "2026-08-19T00:46:34Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 2380.0,
+        "currency": "TWD",
+        "as_of": "2026-08-18",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 27.59,
+        "price_to_book": 9.59,
+        "dividend_yield": 0.92,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-08-18",
+        "retrieved_at": "2026-08-19T00:46:34Z",
+        "fiscal_period": "2026Q2"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 27.59,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-18",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 9.59,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-18",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 0.92,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-18",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "2330",
+          "as_of": "2026-08-18",
+          "retrieved_at": "2026-08-19T00:46:15Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "2330.TW",
+          "as_of": "2026-08-18",
+          "retrieved_at": "2026-08-19T00:46:34Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "2354",
+      "market_key": "tw",
+      "company": "鴻準",
+      "provider_symbol": "2354.TW",
+      "generated_at": "2026-08-19T00:46:34Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 59.9,
+        "currency": "TWD",
+        "as_of": "2026-08-18",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 25.38,
+        "price_to_book": 0.74,
+        "dividend_yield": 2.5,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-08-18",
+        "retrieved_at": "2026-08-19T00:46:34Z",
+        "fiscal_period": "2026Q2"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 25.38,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-18",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 0.74,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-18",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 2.5,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-18",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "2354",
+          "as_of": "2026-08-18",
+          "retrieved_at": "2026-08-19T00:46:15Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "2354.TW",
+          "as_of": "2026-08-18",
+          "retrieved_at": "2026-08-19T00:46:34Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "2454",
+      "market_key": "tw",
+      "company": "聯發科",
+      "provider_symbol": "2454.TW",
+      "generated_at": "2026-08-19T00:46:34Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 3885.0,
+        "currency": "TWD",
+        "as_of": "2026-08-18",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 64.16,
+        "price_to_book": 14.62,
+        "dividend_yield": 1.38,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-08-18",
+        "retrieved_at": "2026-08-19T00:46:34Z",
+        "fiscal_period": "2026Q2"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 64.16,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-18",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 14.62,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-18",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 1.38,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-18",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "2454",
+          "as_of": "2026-08-18",
+          "retrieved_at": "2026-08-19T00:46:15Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "2454.TW",
+          "as_of": "2026-08-18",
+          "retrieved_at": "2026-08-19T00:46:34Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "6695",
+      "market_key": "tw",
+      "company": "芯鼎",
+      "provider_symbol": "6695.TW",
+      "generated_at": "2026-08-19T00:46:34Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 48.3,
+        "currency": "TWD",
+        "as_of": "2026-08-18",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "price_to_book": 2.78,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-08-18",
+        "retrieved_at": "2026-08-19T00:46:34Z",
+        "fiscal_period": "2026Q2"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 2.78,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-18",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "6695",
+          "as_of": "2026-08-18",
+          "retrieved_at": "2026-08-19T00:46:15Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "6695.TW",
+          "as_of": "2026-08-18",
+          "retrieved_at": "2026-08-19T00:46:34Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "6770",
+      "market_key": "tw",
+      "company": "力積電",
+      "provider_symbol": "6770.TW",
+      "generated_at": "2026-08-19T00:46:34Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 69.7,
+        "currency": "TWD",
+        "as_of": "2026-08-18",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 23.23,
+        "price_to_book": 2.55,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-08-18",
+        "retrieved_at": "2026-08-19T00:46:34Z",
+        "fiscal_period": "2026Q2"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 23.23,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-18",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 2.55,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-18",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "6770",
+          "as_of": "2026-08-18",
+          "retrieved_at": "2026-08-19T00:46:15Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "6770.TW",
+          "as_of": "2026-08-18",
+          "retrieved_at": "2026-08-19T00:46:34Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "8926",
+      "market_key": "tw",
+      "company": "台汽電",
+      "provider_symbol": "8926.TW",
+      "generated_at": "2026-08-19T00:46:34Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 56.0,
+        "currency": "TWD",
+        "as_of": "2026-08-18",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 15.38,
+        "price_to_book": 2.34,
+        "dividend_yield": 3.79,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-08-18",
+        "retrieved_at": "2026-08-19T00:46:34Z",
+        "fiscal_period": "2026Q2"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 15.38,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-18",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 2.34,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-18",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 3.79,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-18",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "8926",
+          "as_of": "2026-08-18",
+          "retrieved_at": "2026-08-19T00:46:15Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "8926.TW",
+          "as_of": "2026-08-18",
+          "retrieved_at": "2026-08-19T00:46:34Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "9910",
+      "market_key": "tw",
+      "company": "豐泰",
+      "provider_symbol": "9910.TW",
+      "generated_at": "2026-08-19T00:46:34Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 69.1,
+        "currency": "TWD",
+        "as_of": "2026-08-18",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 14.04,
+        "price_to_book": 2.89,
+        "dividend_yield": 5.93,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-08-18",
+        "retrieved_at": "2026-08-19T00:46:34Z",
+        "fiscal_period": "2026Q2"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 14.04,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-18",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 2.89,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-18",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 5.93,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-18",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "9910",
+          "as_of": "2026-08-18",
+          "retrieved_at": "2026-08-19T00:46:15Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "9910.TW",
+          "as_of": "2026-08-18",
+          "retrieved_at": "2026-08-19T00:46:34Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "AAPL",
+      "market_key": "us",
+      "company": "Apple Inc",
+      "provider_symbol": "AAPL",
+      "generated_at": "2026-08-19T00:46:34Z",
+      "valuation_handoff_status": "input_partial",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 310.03,
+        "currency": "USD",
+        "as_of": "2026-08-18T20:00:02Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {},
+      "methods": [],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "AAPL",
+          "as_of": "2026-08-18T20:00:02Z",
+          "retrieved_at": "2026-08-19T00:46:17Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [
+        "valuation multiples missing"
+      ],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "BABA",
+      "market_key": "us",
+      "company": "阿里巴巴",
+      "provider_symbol": "BABA",
+      "generated_at": "2026-08-19T00:46:34Z",
+      "valuation_handoff_status": "input_partial",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 128.15,
+        "currency": "USD",
+        "as_of": "2026-08-18T20:04:13Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {},
+      "methods": [],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "BABA",
+          "as_of": "2026-08-18T20:04:13Z",
+          "retrieved_at": "2026-08-19T00:46:18Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [
+        "valuation multiples missing"
+      ],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "CPRT",
+      "market_key": "us",
+      "company": "Copart Inc",
+      "provider_symbol": "CPRT",
+      "generated_at": "2026-08-19T00:46:34Z",
+      "valuation_handoff_status": "input_partial",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 31.51,
+        "currency": "USD",
+        "as_of": "2026-08-18T20:00:01Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {},
+      "methods": [],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "CPRT",
+          "as_of": "2026-08-18T20:00:01Z",
+          "retrieved_at": "2026-08-19T00:46:18Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [
+        "valuation multiples missing"
+      ],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "CRCL",
+      "market_key": "us",
+      "company": "Circle Internet Group",
+      "provider_symbol": "CRCL",
+      "generated_at": "2026-08-19T00:46:34Z",
+      "valuation_handoff_status": "input_partial",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 71.73,
+        "currency": "USD",
+        "as_of": "2026-08-18T20:00:02Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {},
+      "methods": [],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "CRCL",
+          "as_of": "2026-08-18T20:00:02Z",
+          "retrieved_at": "2026-08-19T00:46:19Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [
+        "valuation multiples missing"
+      ],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "GOOGL",
+      "market_key": "us",
+      "company": "Alphabet 公司",
+      "provider_symbol": "GOOGL",
+      "generated_at": "2026-08-19T00:46:34Z",
+      "valuation_handoff_status": "input_partial",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 344.2,
+        "currency": "USD",
+        "as_of": "2026-08-18T20:00:01Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {},
+      "methods": [],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "GOOGL",
+          "as_of": "2026-08-18T20:00:01Z",
+          "retrieved_at": "2026-08-19T00:46:19Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [
+        "valuation multiples missing"
+      ],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "IBM",
+      "market_key": "us",
+      "company": "國際商業機器公司",
+      "provider_symbol": "IBM",
+      "generated_at": "2026-08-19T00:46:34Z",
+      "valuation_handoff_status": "input_partial",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 232.67,
+        "currency": "USD",
+        "as_of": "2026-08-18T20:00:02Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {},
+      "methods": [],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "IBM",
+          "as_of": "2026-08-18T20:00:02Z",
+          "retrieved_at": "2026-08-19T00:46:19Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [
+        "valuation multiples missing"
+      ],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "LVS",
+      "market_key": "us",
+      "company": "Las Vegas Sands Corp",
+      "provider_symbol": "LVS",
+      "generated_at": "2026-08-19T00:46:34Z",
+      "valuation_handoff_status": "input_partial",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 45.47,
+        "currency": "USD",
+        "as_of": "2026-08-18T20:00:02Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {},
+      "methods": [],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "LVS",
+          "as_of": "2026-08-18T20:00:02Z",
+          "retrieved_at": "2026-08-19T00:46:19Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [
+        "valuation multiples missing"
+      ],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "MRVL",
+      "market_key": "us",
+      "company": "Marvell Technology Inc",
+      "provider_symbol": "MRVL",
+      "generated_at": "2026-08-19T00:46:34Z",
+      "valuation_handoff_status": "input_partial",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 216.0,
+        "currency": "USD",
+        "as_of": "2026-08-18T20:00:01Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {},
+      "methods": [],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "MRVL",
+          "as_of": "2026-08-18T20:00:01Z",
+          "retrieved_at": "2026-08-19T00:46:19Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [
+        "valuation multiples missing"
+      ],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "MU",
+      "market_key": "us",
+      "company": "Micron Technology",
+      "provider_symbol": "MU",
+      "generated_at": "2026-08-19T00:46:34Z",
+      "valuation_handoff_status": "input_partial",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 940.76,
+        "currency": "USD",
+        "as_of": "2026-08-18T20:00:01Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {},
+      "methods": [],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "MU",
+          "as_of": "2026-08-18T20:00:01Z",
+          "retrieved_at": "2026-08-19T00:46:20Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [
+        "valuation multiples missing"
+      ],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "NFLX",
+      "market_key": "us",
+      "company": "Netflix Inc",
+      "provider_symbol": "NFLX",
+      "generated_at": "2026-08-19T00:46:34Z",
+      "valuation_handoff_status": "input_partial",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 77.77,
+        "currency": "USD",
+        "as_of": "2026-08-18T20:00:00Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {},
+      "methods": [],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "NFLX",
+          "as_of": "2026-08-18T20:00:00Z",
+          "retrieved_at": "2026-08-19T00:46:20Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [
+        "valuation multiples missing"
+      ],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "PLTR",
+      "market_key": "us",
+      "company": "Palantir Technologies Inc",
+      "provider_symbol": "PLTR",
+      "generated_at": "2026-08-19T00:46:34Z",
+      "valuation_handoff_status": "input_partial",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 171.54,
+        "currency": "USD",
+        "as_of": "2026-08-18T20:00:00Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {},
+      "methods": [],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "PLTR",
+          "as_of": "2026-08-18T20:00:00Z",
+          "retrieved_at": "2026-08-19T00:46:20Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [
+        "valuation multiples missing"
+      ],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "SOFI",
+      "market_key": "us",
+      "company": "SoFi Technologies Inc",
+      "provider_symbol": "SOFI",
+      "generated_at": "2026-08-19T00:46:34Z",
+      "valuation_handoff_status": "input_partial",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 17.66,
+        "currency": "USD",
+        "as_of": "2026-08-18T20:00:00Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {},
+      "methods": [],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "SOFI",
+          "as_of": "2026-08-18T20:00:00Z",
+          "retrieved_at": "2026-08-19T00:46:20Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [
+        "valuation multiples missing"
+      ],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "SPCX",
+      "market_key": "us",
+      "company": "太空探索科技公司",
+      "provider_symbol": "SPCX",
+      "generated_at": "2026-08-19T00:46:34Z",
+      "valuation_handoff_status": "input_partial",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 143.34,
+        "currency": "USD",
+        "as_of": "2026-08-18T20:00:00Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {},
+      "methods": [],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "SPCX",
+          "as_of": "2026-08-18T20:00:00Z",
+          "retrieved_at": "2026-08-19T00:46:20Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [
+        "valuation multiples missing"
+      ],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "TSLA",
+      "market_key": "us",
+      "company": "特斯拉 / Tesla",
+      "provider_symbol": "TSLA",
+      "generated_at": "2026-08-19T00:46:34Z",
+      "valuation_handoff_status": "input_partial",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 336.87,
+        "currency": "USD",
+        "as_of": "2026-08-18T20:00:00Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {},
+      "methods": [],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "TSLA",
+          "as_of": "2026-08-18T20:00:00Z",
+          "retrieved_at": "2026-08-19T00:46:21Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [
+        "valuation multiples missing"
+      ],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "TSM",
+      "market_key": "us",
+      "company": "Taiwan Semiconductor",
+      "provider_symbol": "TSM",
+      "generated_at": "2026-08-19T00:46:34Z",
+      "valuation_handoff_status": "input_partial",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 413.41,
+        "currency": "USD",
+        "as_of": "2026-08-18T20:00:02Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {},
+      "methods": [],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "TSM",
+          "as_of": "2026-08-18T20:00:02Z",
+          "retrieved_at": "2026-08-19T00:46:21Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [
+        "valuation multiples missing"
+      ],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "TXN",
+      "market_key": "us",
+      "company": "德州儀器",
+      "provider_symbol": "TXN",
+      "generated_at": "2026-08-19T00:46:34Z",
+      "valuation_handoff_status": "input_partial",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 272.24,
+        "currency": "USD",
+        "as_of": "2026-08-18T20:00:00Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {},
+      "methods": [],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "TXN",
+          "as_of": "2026-08-18T20:00:00Z",
+          "retrieved_at": "2026-08-19T00:46:21Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [
+        "valuation multiples missing"
+      ],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "UMC",
+      "market_key": "us",
+      "company": "United Microelectronics",
+      "provider_symbol": "UMC",
+      "generated_at": "2026-08-19T00:46:34Z",
+      "valuation_handoff_status": "input_partial",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 18.48,
+        "currency": "USD",
+        "as_of": "2026-08-18T20:00:02Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {},
+      "methods": [],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "UMC",
+          "as_of": "2026-08-18T20:00:02Z",
+          "retrieved_at": "2026-08-19T00:46:21Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "missing_inputs": [
+        "valuation multiples missing"
+      ],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    }
+  ]
+}
