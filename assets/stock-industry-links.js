@@ -17,6 +17,8 @@
   const REGISTRY_RETRY_DELAY_MS = 250;
   const REPORT_LINK_CLASS = "stock-industry-report-link";
   const REPORT_LINK_TITLE = "開啟 Deep Research 報告";
+  const RESPONSIVE_DISCLOSURE_SELECTOR = "details[data-mobile-collapsible]";
+  const DESKTOP_DISCLOSURE_MEDIA_QUERY = "(min-width: 768px)";
   const REPORT_ICON_SVG =
     '<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">' +
     '<path d="M6 4.5h8l4 4V19.5H6z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path>' +
@@ -258,11 +260,37 @@
     }
   }
 
+  function syncResponsiveDisclosures(doc, mediaQueryList) {
+    if (!doc || !mediaQueryList) {
+      return;
+    }
+    for (const disclosure of Array.from(doc.querySelectorAll(RESPONSIVE_DISCLOSURE_SELECTOR))) {
+      disclosure.open = Boolean(mediaQueryList.matches);
+    }
+  }
+
+  function initResponsiveDisclosures(doc) {
+    if (!doc || typeof root.matchMedia !== "function") {
+      return;
+    }
+    const mediaQueryList = root.matchMedia(DESKTOP_DISCLOSURE_MEDIA_QUERY);
+    const sync = function () {
+      syncResponsiveDisclosures(doc, mediaQueryList);
+    };
+    onDomReady(doc, sync);
+    if (typeof mediaQueryList.addEventListener === "function") {
+      mediaQueryList.addEventListener("change", sync);
+    } else if (typeof mediaQueryList.addListener === "function") {
+      mediaQueryList.addListener(sync);
+    }
+  }
+
   function init(options) {
     const doc = root.document;
     if (!doc) {
       return;
     }
+    initResponsiveDisclosures(doc);
     const registryScriptUrl = options?.registryScriptUrl || DEFAULT_REGISTRY_SCRIPT_URL;
     const decorateWhenReady = function () {
       if (!root.STOCK_INDUSTRY_REPORTS) {
@@ -297,6 +325,7 @@
     stockKeysFromHref,
     normalizeRegistry,
     decorateStockLinkGroups,
+    syncResponsiveDisclosures,
     init,
   };
 });
