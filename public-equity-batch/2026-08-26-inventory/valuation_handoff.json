@@ -1,0 +1,2818 @@
+{
+  "_metadata": {
+    "generated_at": "2026-08-26T00:47:52Z",
+    "item_count": 26,
+    "status_counts": {
+      "input_ready": 11,
+      "input_partial": 15
+    },
+    "enable_yfinance": false,
+    "enable_official_tw_valuation": true,
+    "official_tw_valuation_coverage": {
+      "ready_sources": [
+        "TWSE BWIBBU valuation",
+        "TPEx PE/PB valuation"
+      ],
+      "warnings": [],
+      "network_enabled": true
+    },
+    "note": "This is a valuation input handoff only. It must not change per-symbol source_ledger valuation_status to complete by itself."
+  },
+  "items": [
+    {
+      "symbol": "1215",
+      "market_key": "tw",
+      "company": "卜蜂",
+      "provider_symbol": "1215.TW",
+      "generated_at": "2026-08-26T00:47:52Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 109.0,
+        "currency": "TWD",
+        "as_of": "2026-08-25",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 12.56,
+        "price_to_book": 2.94,
+        "dividend_yield": 6.42,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-08-25",
+        "retrieved_at": "2026-08-26T00:47:51Z",
+        "fiscal_period": "2026Q2"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 12.56,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-25",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 2.94,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-25",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 6.42,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-25",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "1215",
+          "as_of": "2026-08-25",
+          "retrieved_at": "2026-08-26T00:47:35Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "1215.TW",
+          "as_of": "2026-08-25",
+          "retrieved_at": "2026-08-26T00:47:51Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "research_source_plan": {
+        "market_key": "tw",
+        "symbol": "1215",
+        "company": "卜蜂",
+        "evidence_policy": {
+          "official_required_for": [
+            "instrument_identity",
+            "statutory_filing",
+            "audited_or_reviewed_financials"
+          ],
+          "third_party_corroboration": {
+            "minimum_independent_sources": 2,
+            "allowed_gate_scopes": [
+              "valuation_context",
+              "consensus_context",
+              "industry_context",
+              "operating_context"
+            ],
+            "result_status": "corroborated",
+            "decision_ready": false
+          }
+        },
+        "preferred_sources": [
+          {
+            "source_id": "cmoney",
+            "name": "CMoney",
+            "category": "financial_aggregator",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "operating_context",
+              "valuation_context"
+            ],
+            "priority": 4,
+            "status": "candidate_not_retrieved",
+            "url": "https://www.cmoney.tw/finance/1215/f00041",
+            "search_hint": "CMoney 1215 卜蜂 即時財報 新聞"
+          },
+          {
+            "source_id": "fugle",
+            "name": "富果",
+            "category": "earnings_and_market_context",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "operating_context",
+              "consensus_context"
+            ],
+            "priority": 5,
+            "status": "candidate_not_retrieved",
+            "search_hint": "富果 1215 卜蜂 法說會 備忘錄"
+          },
+          {
+            "source_id": "statementdog",
+            "name": "財報狗",
+            "category": "valuation_and_financial_analysis",
+            "authority_level": "secondary_professional",
+            "access_mode": "restricted",
+            "gate_scope": [
+              "valuation_context",
+              "operating_context"
+            ],
+            "priority": 6,
+            "status": "candidate_not_retrieved",
+            "url": "https://statementdog.com/analysis/1215/e-report",
+            "search_hint": "財報狗 1215 卜蜂 財報 估值"
+          },
+          {
+            "source_id": "wantgoo",
+            "name": "玩股網",
+            "category": "valuation_and_financial_analysis",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "valuation_context"
+            ],
+            "priority": 7,
+            "status": "candidate_not_retrieved",
+            "url": "https://www.wantgoo.com/stock/1215",
+            "search_hint": "玩股網 1215 卜蜂 股淨比 PB"
+          },
+          {
+            "source_id": "factset",
+            "name": "FactSet",
+            "category": "institutional_consensus",
+            "authority_level": "institutional",
+            "access_mode": "restricted",
+            "gate_scope": [
+              "consensus_context",
+              "valuation_context"
+            ],
+            "priority": 8,
+            "status": "candidate_not_retrieved",
+            "search_hint": "FactSet 1215 卜蜂 consensus valuation"
+          },
+          {
+            "source_id": "sinopac_research",
+            "name": "永豐金證券法人研究",
+            "category": "institutional_consensus",
+            "authority_level": "institutional",
+            "access_mode": "restricted",
+            "gate_scope": [
+              "consensus_context",
+              "valuation_context",
+              "industry_context"
+            ],
+            "priority": 9,
+            "status": "candidate_not_retrieved",
+            "search_hint": "永豐金證券 1215 卜蜂 法人 研究報告"
+          },
+          {
+            "source_id": "pocket_tw",
+            "name": "口袋證券",
+            "category": "industry_research",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "industry_context",
+              "valuation_context"
+            ],
+            "priority": 12,
+            "status": "candidate_not_retrieved",
+            "url": "https://www.pocket.tw/",
+            "search_hint": "口袋證券 1215 卜蜂 研報"
+          }
+        ]
+      },
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "1708",
+      "market_key": "tw",
+      "company": "東鹼",
+      "provider_symbol": "1708.TW",
+      "generated_at": "2026-08-26T00:47:52Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 50.6,
+        "currency": "TWD",
+        "as_of": "2026-08-25",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 12.25,
+        "price_to_book": 1.65,
+        "dividend_yield": 3.16,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-08-25",
+        "retrieved_at": "2026-08-26T00:47:51Z",
+        "fiscal_period": "2026Q2"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 12.25,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-25",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 1.65,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-25",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 3.16,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-25",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "1708",
+          "as_of": "2026-08-25",
+          "retrieved_at": "2026-08-26T00:47:35Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "1708.TW",
+          "as_of": "2026-08-25",
+          "retrieved_at": "2026-08-26T00:47:51Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "research_source_plan": {
+        "market_key": "tw",
+        "symbol": "1708",
+        "company": "東鹼",
+        "evidence_policy": {
+          "official_required_for": [
+            "instrument_identity",
+            "statutory_filing",
+            "audited_or_reviewed_financials"
+          ],
+          "third_party_corroboration": {
+            "minimum_independent_sources": 2,
+            "allowed_gate_scopes": [
+              "valuation_context",
+              "consensus_context",
+              "industry_context",
+              "operating_context"
+            ],
+            "result_status": "corroborated",
+            "decision_ready": false
+          }
+        },
+        "preferred_sources": [
+          {
+            "source_id": "cmoney",
+            "name": "CMoney",
+            "category": "financial_aggregator",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "operating_context",
+              "valuation_context"
+            ],
+            "priority": 4,
+            "status": "candidate_not_retrieved",
+            "url": "https://www.cmoney.tw/finance/1708/f00041",
+            "search_hint": "CMoney 1708 東鹼 即時財報 新聞"
+          },
+          {
+            "source_id": "fugle",
+            "name": "富果",
+            "category": "earnings_and_market_context",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "operating_context",
+              "consensus_context"
+            ],
+            "priority": 5,
+            "status": "candidate_not_retrieved",
+            "search_hint": "富果 1708 東鹼 法說會 備忘錄"
+          },
+          {
+            "source_id": "statementdog",
+            "name": "財報狗",
+            "category": "valuation_and_financial_analysis",
+            "authority_level": "secondary_professional",
+            "access_mode": "restricted",
+            "gate_scope": [
+              "valuation_context",
+              "operating_context"
+            ],
+            "priority": 6,
+            "status": "candidate_not_retrieved",
+            "url": "https://statementdog.com/analysis/1708/e-report",
+            "search_hint": "財報狗 1708 東鹼 財報 估值"
+          },
+          {
+            "source_id": "wantgoo",
+            "name": "玩股網",
+            "category": "valuation_and_financial_analysis",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "valuation_context"
+            ],
+            "priority": 7,
+            "status": "candidate_not_retrieved",
+            "url": "https://www.wantgoo.com/stock/1708",
+            "search_hint": "玩股網 1708 東鹼 股淨比 PB"
+          },
+          {
+            "source_id": "factset",
+            "name": "FactSet",
+            "category": "institutional_consensus",
+            "authority_level": "institutional",
+            "access_mode": "restricted",
+            "gate_scope": [
+              "consensus_context",
+              "valuation_context"
+            ],
+            "priority": 8,
+            "status": "candidate_not_retrieved",
+            "search_hint": "FactSet 1708 東鹼 consensus valuation"
+          },
+          {
+            "source_id": "sinopac_research",
+            "name": "永豐金證券法人研究",
+            "category": "institutional_consensus",
+            "authority_level": "institutional",
+            "access_mode": "restricted",
+            "gate_scope": [
+              "consensus_context",
+              "valuation_context",
+              "industry_context"
+            ],
+            "priority": 9,
+            "status": "candidate_not_retrieved",
+            "search_hint": "永豐金證券 1708 東鹼 法人 研究報告"
+          },
+          {
+            "source_id": "pocket_tw",
+            "name": "口袋證券",
+            "category": "industry_research",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "industry_context",
+              "valuation_context"
+            ],
+            "priority": 12,
+            "status": "candidate_not_retrieved",
+            "url": "https://www.pocket.tw/",
+            "search_hint": "口袋證券 1708 東鹼 研報"
+          }
+        ]
+      },
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "2308",
+      "market_key": "tw",
+      "company": "台達電",
+      "provider_symbol": "2308.TW",
+      "generated_at": "2026-08-26T00:47:52Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 1710.0,
+        "currency": "TWD",
+        "as_of": "2026-08-25",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 54.42,
+        "price_to_book": 15.12,
+        "dividend_yield": 0.68,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-08-25",
+        "retrieved_at": "2026-08-26T00:47:51Z",
+        "fiscal_period": "2026Q2"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 54.42,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-25",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 15.12,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-25",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 0.68,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-25",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "2308",
+          "as_of": "2026-08-25",
+          "retrieved_at": "2026-08-26T00:47:35Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "2308.TW",
+          "as_of": "2026-08-25",
+          "retrieved_at": "2026-08-26T00:47:51Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "research_source_plan": {
+        "market_key": "tw",
+        "symbol": "2308",
+        "company": "台達電",
+        "evidence_policy": {
+          "official_required_for": [
+            "instrument_identity",
+            "statutory_filing",
+            "audited_or_reviewed_financials"
+          ],
+          "third_party_corroboration": {
+            "minimum_independent_sources": 2,
+            "allowed_gate_scopes": [
+              "valuation_context",
+              "consensus_context",
+              "industry_context",
+              "operating_context"
+            ],
+            "result_status": "corroborated",
+            "decision_ready": false
+          }
+        },
+        "preferred_sources": [
+          {
+            "source_id": "cmoney",
+            "name": "CMoney",
+            "category": "financial_aggregator",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "operating_context",
+              "valuation_context"
+            ],
+            "priority": 4,
+            "status": "candidate_not_retrieved",
+            "url": "https://www.cmoney.tw/finance/2308/f00041",
+            "search_hint": "CMoney 2308 台達電 即時財報 新聞"
+          },
+          {
+            "source_id": "fugle",
+            "name": "富果",
+            "category": "earnings_and_market_context",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "operating_context",
+              "consensus_context"
+            ],
+            "priority": 5,
+            "status": "candidate_not_retrieved",
+            "search_hint": "富果 2308 台達電 法說會 備忘錄"
+          },
+          {
+            "source_id": "statementdog",
+            "name": "財報狗",
+            "category": "valuation_and_financial_analysis",
+            "authority_level": "secondary_professional",
+            "access_mode": "restricted",
+            "gate_scope": [
+              "valuation_context",
+              "operating_context"
+            ],
+            "priority": 6,
+            "status": "candidate_not_retrieved",
+            "url": "https://statementdog.com/analysis/2308/e-report",
+            "search_hint": "財報狗 2308 台達電 財報 估值"
+          },
+          {
+            "source_id": "wantgoo",
+            "name": "玩股網",
+            "category": "valuation_and_financial_analysis",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "valuation_context"
+            ],
+            "priority": 7,
+            "status": "candidate_not_retrieved",
+            "url": "https://www.wantgoo.com/stock/2308",
+            "search_hint": "玩股網 2308 台達電 股淨比 PB"
+          },
+          {
+            "source_id": "factset",
+            "name": "FactSet",
+            "category": "institutional_consensus",
+            "authority_level": "institutional",
+            "access_mode": "restricted",
+            "gate_scope": [
+              "consensus_context",
+              "valuation_context"
+            ],
+            "priority": 8,
+            "status": "candidate_not_retrieved",
+            "search_hint": "FactSet 2308 台達電 consensus valuation"
+          },
+          {
+            "source_id": "sinopac_research",
+            "name": "永豐金證券法人研究",
+            "category": "institutional_consensus",
+            "authority_level": "institutional",
+            "access_mode": "restricted",
+            "gate_scope": [
+              "consensus_context",
+              "valuation_context",
+              "industry_context"
+            ],
+            "priority": 9,
+            "status": "candidate_not_retrieved",
+            "search_hint": "永豐金證券 2308 台達電 法人 研究報告"
+          },
+          {
+            "source_id": "pocket_tw",
+            "name": "口袋證券",
+            "category": "industry_research",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "industry_context",
+              "valuation_context"
+            ],
+            "priority": 12,
+            "status": "candidate_not_retrieved",
+            "url": "https://www.pocket.tw/",
+            "search_hint": "口袋證券 2308 台達電 研報"
+          }
+        ]
+      },
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "2327",
+      "market_key": "tw",
+      "company": "國巨*",
+      "provider_symbol": "2327.TW",
+      "generated_at": "2026-08-26T00:47:52Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 544.0,
+        "currency": "TWD",
+        "as_of": "2026-08-25",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 36.63,
+        "price_to_book": 6.32,
+        "dividend_yield": 1.1,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-08-25",
+        "retrieved_at": "2026-08-26T00:47:51Z",
+        "fiscal_period": "2026Q2"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 36.63,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-25",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 6.32,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-25",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 1.1,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-25",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "2327",
+          "as_of": "2026-08-25",
+          "retrieved_at": "2026-08-26T00:47:35Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "2327.TW",
+          "as_of": "2026-08-25",
+          "retrieved_at": "2026-08-26T00:47:51Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "research_source_plan": {
+        "market_key": "tw",
+        "symbol": "2327",
+        "company": "國巨*",
+        "evidence_policy": {
+          "official_required_for": [
+            "instrument_identity",
+            "statutory_filing",
+            "audited_or_reviewed_financials"
+          ],
+          "third_party_corroboration": {
+            "minimum_independent_sources": 2,
+            "allowed_gate_scopes": [
+              "valuation_context",
+              "consensus_context",
+              "industry_context",
+              "operating_context"
+            ],
+            "result_status": "corroborated",
+            "decision_ready": false
+          }
+        },
+        "preferred_sources": [
+          {
+            "source_id": "cmoney",
+            "name": "CMoney",
+            "category": "financial_aggregator",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "operating_context",
+              "valuation_context"
+            ],
+            "priority": 4,
+            "status": "candidate_not_retrieved",
+            "url": "https://www.cmoney.tw/finance/2327/f00041",
+            "search_hint": "CMoney 2327 國巨* 即時財報 新聞"
+          },
+          {
+            "source_id": "fugle",
+            "name": "富果",
+            "category": "earnings_and_market_context",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "operating_context",
+              "consensus_context"
+            ],
+            "priority": 5,
+            "status": "candidate_not_retrieved",
+            "search_hint": "富果 2327 國巨* 法說會 備忘錄"
+          },
+          {
+            "source_id": "statementdog",
+            "name": "財報狗",
+            "category": "valuation_and_financial_analysis",
+            "authority_level": "secondary_professional",
+            "access_mode": "restricted",
+            "gate_scope": [
+              "valuation_context",
+              "operating_context"
+            ],
+            "priority": 6,
+            "status": "candidate_not_retrieved",
+            "url": "https://statementdog.com/analysis/2327/e-report",
+            "search_hint": "財報狗 2327 國巨* 財報 估值"
+          },
+          {
+            "source_id": "wantgoo",
+            "name": "玩股網",
+            "category": "valuation_and_financial_analysis",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "valuation_context"
+            ],
+            "priority": 7,
+            "status": "candidate_not_retrieved",
+            "url": "https://www.wantgoo.com/stock/2327",
+            "search_hint": "玩股網 2327 國巨* 股淨比 PB"
+          },
+          {
+            "source_id": "factset",
+            "name": "FactSet",
+            "category": "institutional_consensus",
+            "authority_level": "institutional",
+            "access_mode": "restricted",
+            "gate_scope": [
+              "consensus_context",
+              "valuation_context"
+            ],
+            "priority": 8,
+            "status": "candidate_not_retrieved",
+            "search_hint": "FactSet 2327 國巨* consensus valuation"
+          },
+          {
+            "source_id": "sinopac_research",
+            "name": "永豐金證券法人研究",
+            "category": "institutional_consensus",
+            "authority_level": "institutional",
+            "access_mode": "restricted",
+            "gate_scope": [
+              "consensus_context",
+              "valuation_context",
+              "industry_context"
+            ],
+            "priority": 9,
+            "status": "candidate_not_retrieved",
+            "search_hint": "永豐金證券 2327 國巨* 法人 研究報告"
+          },
+          {
+            "source_id": "pocket_tw",
+            "name": "口袋證券",
+            "category": "industry_research",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "industry_context",
+              "valuation_context"
+            ],
+            "priority": 12,
+            "status": "candidate_not_retrieved",
+            "url": "https://www.pocket.tw/",
+            "search_hint": "口袋證券 2327 國巨* 研報"
+          }
+        ]
+      },
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "2330",
+      "market_key": "tw",
+      "company": "台積電",
+      "provider_symbol": "2330.TW",
+      "generated_at": "2026-08-26T00:47:52Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 2400.0,
+        "currency": "TWD",
+        "as_of": "2026-08-25",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 27.82,
+        "price_to_book": 9.68,
+        "dividend_yield": 0.92,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-08-25",
+        "retrieved_at": "2026-08-26T00:47:51Z",
+        "fiscal_period": "2026Q2"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 27.82,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-25",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 9.68,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-25",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 0.92,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-25",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "2330",
+          "as_of": "2026-08-25",
+          "retrieved_at": "2026-08-26T00:47:35Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "2330.TW",
+          "as_of": "2026-08-25",
+          "retrieved_at": "2026-08-26T00:47:51Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "research_source_plan": {
+        "market_key": "tw",
+        "symbol": "2330",
+        "company": "台積電",
+        "evidence_policy": {
+          "official_required_for": [
+            "instrument_identity",
+            "statutory_filing",
+            "audited_or_reviewed_financials"
+          ],
+          "third_party_corroboration": {
+            "minimum_independent_sources": 2,
+            "allowed_gate_scopes": [
+              "valuation_context",
+              "consensus_context",
+              "industry_context",
+              "operating_context"
+            ],
+            "result_status": "corroborated",
+            "decision_ready": false
+          }
+        },
+        "preferred_sources": [
+          {
+            "source_id": "cmoney",
+            "name": "CMoney",
+            "category": "financial_aggregator",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "operating_context",
+              "valuation_context"
+            ],
+            "priority": 4,
+            "status": "candidate_not_retrieved",
+            "url": "https://www.cmoney.tw/finance/2330/f00041",
+            "search_hint": "CMoney 2330 台積電 即時財報 新聞"
+          },
+          {
+            "source_id": "fugle",
+            "name": "富果",
+            "category": "earnings_and_market_context",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "operating_context",
+              "consensus_context"
+            ],
+            "priority": 5,
+            "status": "candidate_not_retrieved",
+            "search_hint": "富果 2330 台積電 法說會 備忘錄"
+          },
+          {
+            "source_id": "statementdog",
+            "name": "財報狗",
+            "category": "valuation_and_financial_analysis",
+            "authority_level": "secondary_professional",
+            "access_mode": "restricted",
+            "gate_scope": [
+              "valuation_context",
+              "operating_context"
+            ],
+            "priority": 6,
+            "status": "candidate_not_retrieved",
+            "url": "https://statementdog.com/analysis/2330/e-report",
+            "search_hint": "財報狗 2330 台積電 財報 估值"
+          },
+          {
+            "source_id": "wantgoo",
+            "name": "玩股網",
+            "category": "valuation_and_financial_analysis",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "valuation_context"
+            ],
+            "priority": 7,
+            "status": "candidate_not_retrieved",
+            "url": "https://www.wantgoo.com/stock/2330",
+            "search_hint": "玩股網 2330 台積電 股淨比 PB"
+          },
+          {
+            "source_id": "factset",
+            "name": "FactSet",
+            "category": "institutional_consensus",
+            "authority_level": "institutional",
+            "access_mode": "restricted",
+            "gate_scope": [
+              "consensus_context",
+              "valuation_context"
+            ],
+            "priority": 8,
+            "status": "candidate_not_retrieved",
+            "search_hint": "FactSet 2330 台積電 consensus valuation"
+          },
+          {
+            "source_id": "sinopac_research",
+            "name": "永豐金證券法人研究",
+            "category": "institutional_consensus",
+            "authority_level": "institutional",
+            "access_mode": "restricted",
+            "gate_scope": [
+              "consensus_context",
+              "valuation_context",
+              "industry_context"
+            ],
+            "priority": 9,
+            "status": "candidate_not_retrieved",
+            "search_hint": "永豐金證券 2330 台積電 法人 研究報告"
+          },
+          {
+            "source_id": "pocket_tw",
+            "name": "口袋證券",
+            "category": "industry_research",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "industry_context",
+              "valuation_context"
+            ],
+            "priority": 12,
+            "status": "candidate_not_retrieved",
+            "url": "https://www.pocket.tw/",
+            "search_hint": "口袋證券 2330 台積電 研報"
+          }
+        ]
+      },
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "2354",
+      "market_key": "tw",
+      "company": "鴻準",
+      "provider_symbol": "2354.TW",
+      "generated_at": "2026-08-26T00:47:52Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 60.5,
+        "currency": "TWD",
+        "as_of": "2026-08-25",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 25.64,
+        "price_to_book": 0.75,
+        "dividend_yield": 2.48,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-08-25",
+        "retrieved_at": "2026-08-26T00:47:51Z",
+        "fiscal_period": "2026Q2"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 25.64,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-25",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 0.75,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-25",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 2.48,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-25",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "2354",
+          "as_of": "2026-08-25",
+          "retrieved_at": "2026-08-26T00:47:35Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "2354.TW",
+          "as_of": "2026-08-25",
+          "retrieved_at": "2026-08-26T00:47:51Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "research_source_plan": {
+        "market_key": "tw",
+        "symbol": "2354",
+        "company": "鴻準",
+        "evidence_policy": {
+          "official_required_for": [
+            "instrument_identity",
+            "statutory_filing",
+            "audited_or_reviewed_financials"
+          ],
+          "third_party_corroboration": {
+            "minimum_independent_sources": 2,
+            "allowed_gate_scopes": [
+              "valuation_context",
+              "consensus_context",
+              "industry_context",
+              "operating_context"
+            ],
+            "result_status": "corroborated",
+            "decision_ready": false
+          }
+        },
+        "preferred_sources": [
+          {
+            "source_id": "cmoney",
+            "name": "CMoney",
+            "category": "financial_aggregator",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "operating_context",
+              "valuation_context"
+            ],
+            "priority": 4,
+            "status": "candidate_not_retrieved",
+            "url": "https://www.cmoney.tw/finance/2354/f00041",
+            "search_hint": "CMoney 2354 鴻準 即時財報 新聞"
+          },
+          {
+            "source_id": "fugle",
+            "name": "富果",
+            "category": "earnings_and_market_context",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "operating_context",
+              "consensus_context"
+            ],
+            "priority": 5,
+            "status": "candidate_not_retrieved",
+            "search_hint": "富果 2354 鴻準 法說會 備忘錄"
+          },
+          {
+            "source_id": "statementdog",
+            "name": "財報狗",
+            "category": "valuation_and_financial_analysis",
+            "authority_level": "secondary_professional",
+            "access_mode": "restricted",
+            "gate_scope": [
+              "valuation_context",
+              "operating_context"
+            ],
+            "priority": 6,
+            "status": "candidate_not_retrieved",
+            "url": "https://statementdog.com/analysis/2354/e-report",
+            "search_hint": "財報狗 2354 鴻準 財報 估值"
+          },
+          {
+            "source_id": "wantgoo",
+            "name": "玩股網",
+            "category": "valuation_and_financial_analysis",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "valuation_context"
+            ],
+            "priority": 7,
+            "status": "candidate_not_retrieved",
+            "url": "https://www.wantgoo.com/stock/2354",
+            "search_hint": "玩股網 2354 鴻準 股淨比 PB"
+          },
+          {
+            "source_id": "factset",
+            "name": "FactSet",
+            "category": "institutional_consensus",
+            "authority_level": "institutional",
+            "access_mode": "restricted",
+            "gate_scope": [
+              "consensus_context",
+              "valuation_context"
+            ],
+            "priority": 8,
+            "status": "candidate_not_retrieved",
+            "search_hint": "FactSet 2354 鴻準 consensus valuation"
+          },
+          {
+            "source_id": "sinopac_research",
+            "name": "永豐金證券法人研究",
+            "category": "institutional_consensus",
+            "authority_level": "institutional",
+            "access_mode": "restricted",
+            "gate_scope": [
+              "consensus_context",
+              "valuation_context",
+              "industry_context"
+            ],
+            "priority": 9,
+            "status": "candidate_not_retrieved",
+            "search_hint": "永豐金證券 2354 鴻準 法人 研究報告"
+          },
+          {
+            "source_id": "pocket_tw",
+            "name": "口袋證券",
+            "category": "industry_research",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "industry_context",
+              "valuation_context"
+            ],
+            "priority": 12,
+            "status": "candidate_not_retrieved",
+            "url": "https://www.pocket.tw/",
+            "search_hint": "口袋證券 2354 鴻準 研報"
+          }
+        ]
+      },
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "2385",
+      "market_key": "tw",
+      "company": "群光",
+      "provider_symbol": "2385.TW",
+      "generated_at": "2026-08-26T00:47:52Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 106.0,
+        "currency": "TWD",
+        "as_of": "2026-08-25",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 11.9,
+        "price_to_book": 1.73,
+        "dividend_yield": 6.79,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-08-25",
+        "retrieved_at": "2026-08-26T00:47:51Z",
+        "fiscal_period": "2026Q2"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 11.9,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-25",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 1.73,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-25",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 6.79,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-25",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "2385",
+          "as_of": "2026-08-25",
+          "retrieved_at": "2026-08-26T00:47:35Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "2385.TW",
+          "as_of": "2026-08-25",
+          "retrieved_at": "2026-08-26T00:47:51Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "research_source_plan": {
+        "market_key": "tw",
+        "symbol": "2385",
+        "company": "群光",
+        "evidence_policy": {
+          "official_required_for": [
+            "instrument_identity",
+            "statutory_filing",
+            "audited_or_reviewed_financials"
+          ],
+          "third_party_corroboration": {
+            "minimum_independent_sources": 2,
+            "allowed_gate_scopes": [
+              "valuation_context",
+              "consensus_context",
+              "industry_context",
+              "operating_context"
+            ],
+            "result_status": "corroborated",
+            "decision_ready": false
+          }
+        },
+        "preferred_sources": [
+          {
+            "source_id": "cmoney",
+            "name": "CMoney",
+            "category": "financial_aggregator",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "operating_context",
+              "valuation_context"
+            ],
+            "priority": 4,
+            "status": "candidate_not_retrieved",
+            "url": "https://www.cmoney.tw/finance/2385/f00041",
+            "search_hint": "CMoney 2385 群光 即時財報 新聞"
+          },
+          {
+            "source_id": "fugle",
+            "name": "富果",
+            "category": "earnings_and_market_context",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "operating_context",
+              "consensus_context"
+            ],
+            "priority": 5,
+            "status": "candidate_not_retrieved",
+            "search_hint": "富果 2385 群光 法說會 備忘錄"
+          },
+          {
+            "source_id": "statementdog",
+            "name": "財報狗",
+            "category": "valuation_and_financial_analysis",
+            "authority_level": "secondary_professional",
+            "access_mode": "restricted",
+            "gate_scope": [
+              "valuation_context",
+              "operating_context"
+            ],
+            "priority": 6,
+            "status": "candidate_not_retrieved",
+            "url": "https://statementdog.com/analysis/2385/e-report",
+            "search_hint": "財報狗 2385 群光 財報 估值"
+          },
+          {
+            "source_id": "wantgoo",
+            "name": "玩股網",
+            "category": "valuation_and_financial_analysis",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "valuation_context"
+            ],
+            "priority": 7,
+            "status": "candidate_not_retrieved",
+            "url": "https://www.wantgoo.com/stock/2385",
+            "search_hint": "玩股網 2385 群光 股淨比 PB"
+          },
+          {
+            "source_id": "factset",
+            "name": "FactSet",
+            "category": "institutional_consensus",
+            "authority_level": "institutional",
+            "access_mode": "restricted",
+            "gate_scope": [
+              "consensus_context",
+              "valuation_context"
+            ],
+            "priority": 8,
+            "status": "candidate_not_retrieved",
+            "search_hint": "FactSet 2385 群光 consensus valuation"
+          },
+          {
+            "source_id": "sinopac_research",
+            "name": "永豐金證券法人研究",
+            "category": "institutional_consensus",
+            "authority_level": "institutional",
+            "access_mode": "restricted",
+            "gate_scope": [
+              "consensus_context",
+              "valuation_context",
+              "industry_context"
+            ],
+            "priority": 9,
+            "status": "candidate_not_retrieved",
+            "search_hint": "永豐金證券 2385 群光 法人 研究報告"
+          },
+          {
+            "source_id": "pocket_tw",
+            "name": "口袋證券",
+            "category": "industry_research",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "industry_context",
+              "valuation_context"
+            ],
+            "priority": 12,
+            "status": "candidate_not_retrieved",
+            "url": "https://www.pocket.tw/",
+            "search_hint": "口袋證券 2385 群光 研報"
+          }
+        ]
+      },
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "2454",
+      "market_key": "tw",
+      "company": "聯發科",
+      "provider_symbol": "2454.TW",
+      "generated_at": "2026-08-26T00:47:52Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 3735.0,
+        "currency": "TWD",
+        "as_of": "2026-08-25",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 61.68,
+        "price_to_book": 14.05,
+        "dividend_yield": 1.43,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-08-25",
+        "retrieved_at": "2026-08-26T00:47:51Z",
+        "fiscal_period": "2026Q2"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 61.68,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-25",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 14.05,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-25",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 1.43,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-25",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "2454",
+          "as_of": "2026-08-25",
+          "retrieved_at": "2026-08-26T00:47:35Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "2454.TW",
+          "as_of": "2026-08-25",
+          "retrieved_at": "2026-08-26T00:47:51Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "research_source_plan": {
+        "market_key": "tw",
+        "symbol": "2454",
+        "company": "聯發科",
+        "evidence_policy": {
+          "official_required_for": [
+            "instrument_identity",
+            "statutory_filing",
+            "audited_or_reviewed_financials"
+          ],
+          "third_party_corroboration": {
+            "minimum_independent_sources": 2,
+            "allowed_gate_scopes": [
+              "valuation_context",
+              "consensus_context",
+              "industry_context",
+              "operating_context"
+            ],
+            "result_status": "corroborated",
+            "decision_ready": false
+          }
+        },
+        "preferred_sources": [
+          {
+            "source_id": "cmoney",
+            "name": "CMoney",
+            "category": "financial_aggregator",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "operating_context",
+              "valuation_context"
+            ],
+            "priority": 4,
+            "status": "candidate_not_retrieved",
+            "url": "https://www.cmoney.tw/finance/2454/f00041",
+            "search_hint": "CMoney 2454 聯發科 即時財報 新聞"
+          },
+          {
+            "source_id": "fugle",
+            "name": "富果",
+            "category": "earnings_and_market_context",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "operating_context",
+              "consensus_context"
+            ],
+            "priority": 5,
+            "status": "candidate_not_retrieved",
+            "search_hint": "富果 2454 聯發科 法說會 備忘錄"
+          },
+          {
+            "source_id": "statementdog",
+            "name": "財報狗",
+            "category": "valuation_and_financial_analysis",
+            "authority_level": "secondary_professional",
+            "access_mode": "restricted",
+            "gate_scope": [
+              "valuation_context",
+              "operating_context"
+            ],
+            "priority": 6,
+            "status": "candidate_not_retrieved",
+            "url": "https://statementdog.com/analysis/2454/e-report",
+            "search_hint": "財報狗 2454 聯發科 財報 估值"
+          },
+          {
+            "source_id": "wantgoo",
+            "name": "玩股網",
+            "category": "valuation_and_financial_analysis",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "valuation_context"
+            ],
+            "priority": 7,
+            "status": "candidate_not_retrieved",
+            "url": "https://www.wantgoo.com/stock/2454",
+            "search_hint": "玩股網 2454 聯發科 股淨比 PB"
+          },
+          {
+            "source_id": "factset",
+            "name": "FactSet",
+            "category": "institutional_consensus",
+            "authority_level": "institutional",
+            "access_mode": "restricted",
+            "gate_scope": [
+              "consensus_context",
+              "valuation_context"
+            ],
+            "priority": 8,
+            "status": "candidate_not_retrieved",
+            "search_hint": "FactSet 2454 聯發科 consensus valuation"
+          },
+          {
+            "source_id": "sinopac_research",
+            "name": "永豐金證券法人研究",
+            "category": "institutional_consensus",
+            "authority_level": "institutional",
+            "access_mode": "restricted",
+            "gate_scope": [
+              "consensus_context",
+              "valuation_context",
+              "industry_context"
+            ],
+            "priority": 9,
+            "status": "candidate_not_retrieved",
+            "search_hint": "永豐金證券 2454 聯發科 法人 研究報告"
+          },
+          {
+            "source_id": "pocket_tw",
+            "name": "口袋證券",
+            "category": "industry_research",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "industry_context",
+              "valuation_context"
+            ],
+            "priority": 12,
+            "status": "candidate_not_retrieved",
+            "url": "https://www.pocket.tw/",
+            "search_hint": "口袋證券 2454 聯發科 研報"
+          }
+        ]
+      },
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "2884",
+      "market_key": "tw",
+      "company": "玉山金",
+      "provider_symbol": "2884.TW",
+      "generated_at": "2026-08-26T00:47:52Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 39.0,
+        "currency": "TWD",
+        "as_of": "2026-08-25",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 16.18,
+        "price_to_book": 2.24,
+        "dividend_yield": 3.59,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-08-25",
+        "retrieved_at": "2026-08-26T00:47:51Z",
+        "fiscal_period": "2026Q2"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 16.18,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-25",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 2.24,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-25",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "dividend_yield",
+          "value": 3.59,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-25",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "2884",
+          "as_of": "2026-08-25",
+          "retrieved_at": "2026-08-26T00:47:35Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "2884.TW",
+          "as_of": "2026-08-25",
+          "retrieved_at": "2026-08-26T00:47:51Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "research_source_plan": {
+        "market_key": "tw",
+        "symbol": "2884",
+        "company": "玉山金",
+        "evidence_policy": {
+          "official_required_for": [
+            "instrument_identity",
+            "statutory_filing",
+            "audited_or_reviewed_financials"
+          ],
+          "third_party_corroboration": {
+            "minimum_independent_sources": 2,
+            "allowed_gate_scopes": [
+              "valuation_context",
+              "consensus_context",
+              "industry_context",
+              "operating_context"
+            ],
+            "result_status": "corroborated",
+            "decision_ready": false
+          }
+        },
+        "preferred_sources": [
+          {
+            "source_id": "cmoney",
+            "name": "CMoney",
+            "category": "financial_aggregator",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "operating_context",
+              "valuation_context"
+            ],
+            "priority": 4,
+            "status": "candidate_not_retrieved",
+            "url": "https://www.cmoney.tw/finance/2884/f00041",
+            "search_hint": "CMoney 2884 玉山金 即時財報 新聞"
+          },
+          {
+            "source_id": "fugle",
+            "name": "富果",
+            "category": "earnings_and_market_context",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "operating_context",
+              "consensus_context"
+            ],
+            "priority": 5,
+            "status": "candidate_not_retrieved",
+            "search_hint": "富果 2884 玉山金 法說會 備忘錄"
+          },
+          {
+            "source_id": "statementdog",
+            "name": "財報狗",
+            "category": "valuation_and_financial_analysis",
+            "authority_level": "secondary_professional",
+            "access_mode": "restricted",
+            "gate_scope": [
+              "valuation_context",
+              "operating_context"
+            ],
+            "priority": 6,
+            "status": "candidate_not_retrieved",
+            "url": "https://statementdog.com/analysis/2884/e-report",
+            "search_hint": "財報狗 2884 玉山金 財報 估值"
+          },
+          {
+            "source_id": "wantgoo",
+            "name": "玩股網",
+            "category": "valuation_and_financial_analysis",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "valuation_context"
+            ],
+            "priority": 7,
+            "status": "candidate_not_retrieved",
+            "url": "https://www.wantgoo.com/stock/2884",
+            "search_hint": "玩股網 2884 玉山金 股淨比 PB"
+          },
+          {
+            "source_id": "factset",
+            "name": "FactSet",
+            "category": "institutional_consensus",
+            "authority_level": "institutional",
+            "access_mode": "restricted",
+            "gate_scope": [
+              "consensus_context",
+              "valuation_context"
+            ],
+            "priority": 8,
+            "status": "candidate_not_retrieved",
+            "search_hint": "FactSet 2884 玉山金 consensus valuation"
+          },
+          {
+            "source_id": "sinopac_research",
+            "name": "永豐金證券法人研究",
+            "category": "institutional_consensus",
+            "authority_level": "institutional",
+            "access_mode": "restricted",
+            "gate_scope": [
+              "consensus_context",
+              "valuation_context",
+              "industry_context"
+            ],
+            "priority": 9,
+            "status": "candidate_not_retrieved",
+            "search_hint": "永豐金證券 2884 玉山金 法人 研究報告"
+          },
+          {
+            "source_id": "pocket_tw",
+            "name": "口袋證券",
+            "category": "industry_research",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "industry_context",
+              "valuation_context"
+            ],
+            "priority": 12,
+            "status": "candidate_not_retrieved",
+            "url": "https://www.pocket.tw/",
+            "search_hint": "口袋證券 2884 玉山金 研報"
+          }
+        ]
+      },
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "6695",
+      "market_key": "tw",
+      "company": "芯鼎",
+      "provider_symbol": "6695.TW",
+      "generated_at": "2026-08-26T00:47:52Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 46.9,
+        "currency": "TWD",
+        "as_of": "2026-08-25",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "price_to_book": 2.7,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-08-25",
+        "retrieved_at": "2026-08-26T00:47:51Z",
+        "fiscal_period": "2026Q2"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 2.7,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-25",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "6695",
+          "as_of": "2026-08-25",
+          "retrieved_at": "2026-08-26T00:47:35Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "6695.TW",
+          "as_of": "2026-08-25",
+          "retrieved_at": "2026-08-26T00:47:51Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "research_source_plan": {
+        "market_key": "tw",
+        "symbol": "6695",
+        "company": "芯鼎",
+        "evidence_policy": {
+          "official_required_for": [
+            "instrument_identity",
+            "statutory_filing",
+            "audited_or_reviewed_financials"
+          ],
+          "third_party_corroboration": {
+            "minimum_independent_sources": 2,
+            "allowed_gate_scopes": [
+              "valuation_context",
+              "consensus_context",
+              "industry_context",
+              "operating_context"
+            ],
+            "result_status": "corroborated",
+            "decision_ready": false
+          }
+        },
+        "preferred_sources": [
+          {
+            "source_id": "cmoney",
+            "name": "CMoney",
+            "category": "financial_aggregator",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "operating_context",
+              "valuation_context"
+            ],
+            "priority": 4,
+            "status": "candidate_not_retrieved",
+            "url": "https://www.cmoney.tw/finance/6695/f00041",
+            "search_hint": "CMoney 6695 芯鼎 即時財報 新聞"
+          },
+          {
+            "source_id": "fugle",
+            "name": "富果",
+            "category": "earnings_and_market_context",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "operating_context",
+              "consensus_context"
+            ],
+            "priority": 5,
+            "status": "candidate_not_retrieved",
+            "search_hint": "富果 6695 芯鼎 法說會 備忘錄"
+          },
+          {
+            "source_id": "statementdog",
+            "name": "財報狗",
+            "category": "valuation_and_financial_analysis",
+            "authority_level": "secondary_professional",
+            "access_mode": "restricted",
+            "gate_scope": [
+              "valuation_context",
+              "operating_context"
+            ],
+            "priority": 6,
+            "status": "candidate_not_retrieved",
+            "url": "https://statementdog.com/analysis/6695/e-report",
+            "search_hint": "財報狗 6695 芯鼎 財報 估值"
+          },
+          {
+            "source_id": "wantgoo",
+            "name": "玩股網",
+            "category": "valuation_and_financial_analysis",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "valuation_context"
+            ],
+            "priority": 7,
+            "status": "candidate_not_retrieved",
+            "url": "https://www.wantgoo.com/stock/6695",
+            "search_hint": "玩股網 6695 芯鼎 股淨比 PB"
+          },
+          {
+            "source_id": "factset",
+            "name": "FactSet",
+            "category": "institutional_consensus",
+            "authority_level": "institutional",
+            "access_mode": "restricted",
+            "gate_scope": [
+              "consensus_context",
+              "valuation_context"
+            ],
+            "priority": 8,
+            "status": "candidate_not_retrieved",
+            "search_hint": "FactSet 6695 芯鼎 consensus valuation"
+          },
+          {
+            "source_id": "sinopac_research",
+            "name": "永豐金證券法人研究",
+            "category": "institutional_consensus",
+            "authority_level": "institutional",
+            "access_mode": "restricted",
+            "gate_scope": [
+              "consensus_context",
+              "valuation_context",
+              "industry_context"
+            ],
+            "priority": 9,
+            "status": "candidate_not_retrieved",
+            "search_hint": "永豐金證券 6695 芯鼎 法人 研究報告"
+          },
+          {
+            "source_id": "pocket_tw",
+            "name": "口袋證券",
+            "category": "industry_research",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "industry_context",
+              "valuation_context"
+            ],
+            "priority": 12,
+            "status": "candidate_not_retrieved",
+            "url": "https://www.pocket.tw/",
+            "search_hint": "口袋證券 6695 芯鼎 研報"
+          }
+        ]
+      },
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "6770",
+      "market_key": "tw",
+      "company": "力積電",
+      "provider_symbol": "6770.TW",
+      "generated_at": "2026-08-26T00:47:52Z",
+      "valuation_handoff_status": "input_ready",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 69.0,
+        "currency": "TWD",
+        "as_of": "2026-08-25",
+        "source": "twse_official_latest_close"
+      },
+      "metrics": {
+        "trailing_pe": 23.0,
+        "price_to_book": 2.52,
+        "source": "TWSE BWIBBU valuation",
+        "as_of": "2026-08-25",
+        "retrieved_at": "2026-08-26T00:47:51Z",
+        "fiscal_period": "2026Q2"
+      },
+      "methods": [
+        {
+          "method": "market_multiple_input",
+          "metric": "trailing_pe",
+          "value": 23.0,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-25",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        },
+        {
+          "method": "market_multiple_input",
+          "metric": "price_to_book",
+          "value": 2.52,
+          "source": "TWSE BWIBBU valuation",
+          "as_of": "2026-08-25",
+          "note": "Input metric only; downstream PEI comps-valuation must still define peer set, adjustments, and valuation posture."
+        }
+      ],
+      "sources": [
+        {
+          "source_name": "twse_official_latest_close",
+          "source_type": "market_price",
+          "symbol": "6770",
+          "as_of": "2026-08-25",
+          "retrieved_at": "2026-08-26T00:47:35Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        },
+        {
+          "source_name": "TWSE BWIBBU valuation",
+          "source_type": "valuation_metrics",
+          "symbol": "6770.TW",
+          "as_of": "2026-08-25",
+          "retrieved_at": "2026-08-26T00:47:51Z",
+          "warning": "",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "research_source_plan": {
+        "market_key": "tw",
+        "symbol": "6770",
+        "company": "力積電",
+        "evidence_policy": {
+          "official_required_for": [
+            "instrument_identity",
+            "statutory_filing",
+            "audited_or_reviewed_financials"
+          ],
+          "third_party_corroboration": {
+            "minimum_independent_sources": 2,
+            "allowed_gate_scopes": [
+              "valuation_context",
+              "consensus_context",
+              "industry_context",
+              "operating_context"
+            ],
+            "result_status": "corroborated",
+            "decision_ready": false
+          }
+        },
+        "preferred_sources": [
+          {
+            "source_id": "cmoney",
+            "name": "CMoney",
+            "category": "financial_aggregator",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "operating_context",
+              "valuation_context"
+            ],
+            "priority": 4,
+            "status": "candidate_not_retrieved",
+            "url": "https://www.cmoney.tw/finance/6770/f00041",
+            "search_hint": "CMoney 6770 力積電 即時財報 新聞"
+          },
+          {
+            "source_id": "fugle",
+            "name": "富果",
+            "category": "earnings_and_market_context",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "operating_context",
+              "consensus_context"
+            ],
+            "priority": 5,
+            "status": "candidate_not_retrieved",
+            "search_hint": "富果 6770 力積電 法說會 備忘錄"
+          },
+          {
+            "source_id": "statementdog",
+            "name": "財報狗",
+            "category": "valuation_and_financial_analysis",
+            "authority_level": "secondary_professional",
+            "access_mode": "restricted",
+            "gate_scope": [
+              "valuation_context",
+              "operating_context"
+            ],
+            "priority": 6,
+            "status": "candidate_not_retrieved",
+            "url": "https://statementdog.com/analysis/6770/e-report",
+            "search_hint": "財報狗 6770 力積電 財報 估值"
+          },
+          {
+            "source_id": "wantgoo",
+            "name": "玩股網",
+            "category": "valuation_and_financial_analysis",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "valuation_context"
+            ],
+            "priority": 7,
+            "status": "candidate_not_retrieved",
+            "url": "https://www.wantgoo.com/stock/6770",
+            "search_hint": "玩股網 6770 力積電 股淨比 PB"
+          },
+          {
+            "source_id": "factset",
+            "name": "FactSet",
+            "category": "institutional_consensus",
+            "authority_level": "institutional",
+            "access_mode": "restricted",
+            "gate_scope": [
+              "consensus_context",
+              "valuation_context"
+            ],
+            "priority": 8,
+            "status": "candidate_not_retrieved",
+            "search_hint": "FactSet 6770 力積電 consensus valuation"
+          },
+          {
+            "source_id": "sinopac_research",
+            "name": "永豐金證券法人研究",
+            "category": "institutional_consensus",
+            "authority_level": "institutional",
+            "access_mode": "restricted",
+            "gate_scope": [
+              "consensus_context",
+              "valuation_context",
+              "industry_context"
+            ],
+            "priority": 9,
+            "status": "candidate_not_retrieved",
+            "search_hint": "永豐金證券 6770 力積電 法人 研究報告"
+          },
+          {
+            "source_id": "pocket_tw",
+            "name": "口袋證券",
+            "category": "industry_research",
+            "authority_level": "secondary_professional",
+            "access_mode": "mixed",
+            "gate_scope": [
+              "industry_context",
+              "valuation_context"
+            ],
+            "priority": 12,
+            "status": "candidate_not_retrieved",
+            "url": "https://www.pocket.tw/",
+            "search_hint": "口袋證券 6770 力積電 研報"
+          }
+        ]
+      },
+      "missing_inputs": [],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "AAPL",
+      "market_key": "us",
+      "company": "Apple Inc",
+      "provider_symbol": "AAPL",
+      "generated_at": "2026-08-26T00:47:52Z",
+      "valuation_handoff_status": "input_partial",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 309.9,
+        "currency": "USD",
+        "as_of": "2026-08-25T20:00:01Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {},
+      "methods": [],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "AAPL",
+          "as_of": "2026-08-25T20:00:01Z",
+          "retrieved_at": "2026-08-26T00:47:36Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "research_source_plan": {
+        "market_key": "us",
+        "symbol": "AAPL",
+        "company": "Apple Inc",
+        "evidence_policy": {},
+        "preferred_sources": []
+      },
+      "missing_inputs": [
+        "valuation multiples missing"
+      ],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "CRCL",
+      "market_key": "us",
+      "company": "Circle Internet Group",
+      "provider_symbol": "CRCL",
+      "generated_at": "2026-08-26T00:47:52Z",
+      "valuation_handoff_status": "input_partial",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 92.02,
+        "currency": "USD",
+        "as_of": "2026-08-25T20:00:02Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {},
+      "methods": [],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "CRCL",
+          "as_of": "2026-08-25T20:00:02Z",
+          "retrieved_at": "2026-08-26T00:47:38Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "research_source_plan": {
+        "market_key": "us",
+        "symbol": "CRCL",
+        "company": "Circle Internet Group",
+        "evidence_policy": {},
+        "preferred_sources": []
+      },
+      "missing_inputs": [
+        "valuation multiples missing"
+      ],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "GOOGL",
+      "market_key": "us",
+      "company": "Alphabet 公司",
+      "provider_symbol": "GOOGL",
+      "generated_at": "2026-08-26T00:47:52Z",
+      "valuation_handoff_status": "input_partial",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 346.96,
+        "currency": "USD",
+        "as_of": "2026-08-25T20:00:01Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {},
+      "methods": [],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "GOOGL",
+          "as_of": "2026-08-25T20:00:01Z",
+          "retrieved_at": "2026-08-26T00:47:38Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "research_source_plan": {
+        "market_key": "us",
+        "symbol": "GOOGL",
+        "company": "Alphabet 公司",
+        "evidence_policy": {},
+        "preferred_sources": []
+      },
+      "missing_inputs": [
+        "valuation multiples missing"
+      ],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "IBM",
+      "market_key": "us",
+      "company": "國際商業機器公司",
+      "provider_symbol": "IBM",
+      "generated_at": "2026-08-26T00:47:52Z",
+      "valuation_handoff_status": "input_partial",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 234.19,
+        "currency": "USD",
+        "as_of": "2026-08-25T20:00:02Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {},
+      "methods": [],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "IBM",
+          "as_of": "2026-08-25T20:00:02Z",
+          "retrieved_at": "2026-08-26T00:47:38Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "research_source_plan": {
+        "market_key": "us",
+        "symbol": "IBM",
+        "company": "國際商業機器公司",
+        "evidence_policy": {},
+        "preferred_sources": []
+      },
+      "missing_inputs": [
+        "valuation multiples missing"
+      ],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "LVS",
+      "market_key": "us",
+      "company": "Las Vegas Sands Corp",
+      "provider_symbol": "LVS",
+      "generated_at": "2026-08-26T00:47:52Z",
+      "valuation_handoff_status": "input_partial",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 47.27,
+        "currency": "USD",
+        "as_of": "2026-08-25T20:00:02Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {},
+      "methods": [],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "LVS",
+          "as_of": "2026-08-25T20:00:02Z",
+          "retrieved_at": "2026-08-26T00:47:38Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "research_source_plan": {
+        "market_key": "us",
+        "symbol": "LVS",
+        "company": "Las Vegas Sands Corp",
+        "evidence_policy": {},
+        "preferred_sources": []
+      },
+      "missing_inputs": [
+        "valuation multiples missing"
+      ],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "MRVL",
+      "market_key": "us",
+      "company": "Marvell Technology Inc",
+      "provider_symbol": "MRVL",
+      "generated_at": "2026-08-26T00:47:52Z",
+      "valuation_handoff_status": "input_partial",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 240.38,
+        "currency": "USD",
+        "as_of": "2026-08-25T20:00:01Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {},
+      "methods": [],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "MRVL",
+          "as_of": "2026-08-25T20:00:01Z",
+          "retrieved_at": "2026-08-26T00:47:38Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "research_source_plan": {
+        "market_key": "us",
+        "symbol": "MRVL",
+        "company": "Marvell Technology Inc",
+        "evidence_policy": {},
+        "preferred_sources": []
+      },
+      "missing_inputs": [
+        "valuation multiples missing"
+      ],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "MU",
+      "market_key": "us",
+      "company": "Micron Technology",
+      "provider_symbol": "MU",
+      "generated_at": "2026-08-26T00:47:52Z",
+      "valuation_handoff_status": "input_partial",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 932.97,
+        "currency": "USD",
+        "as_of": "2026-08-25T20:00:01Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {},
+      "methods": [],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "MU",
+          "as_of": "2026-08-25T20:00:01Z",
+          "retrieved_at": "2026-08-26T00:47:39Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "research_source_plan": {
+        "market_key": "us",
+        "symbol": "MU",
+        "company": "Micron Technology",
+        "evidence_policy": {},
+        "preferred_sources": []
+      },
+      "missing_inputs": [
+        "valuation multiples missing"
+      ],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "NFLX",
+      "market_key": "us",
+      "company": "Netflix Inc",
+      "provider_symbol": "NFLX",
+      "generated_at": "2026-08-26T00:47:52Z",
+      "valuation_handoff_status": "input_partial",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 82.23,
+        "currency": "USD",
+        "as_of": "2026-08-25T20:00:00Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {},
+      "methods": [],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "NFLX",
+          "as_of": "2026-08-25T20:00:00Z",
+          "retrieved_at": "2026-08-26T00:47:39Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "research_source_plan": {
+        "market_key": "us",
+        "symbol": "NFLX",
+        "company": "Netflix Inc",
+        "evidence_policy": {},
+        "preferred_sources": []
+      },
+      "missing_inputs": [
+        "valuation multiples missing"
+      ],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "SOFI",
+      "market_key": "us",
+      "company": "SoFi Technologies Inc",
+      "provider_symbol": "SOFI",
+      "generated_at": "2026-08-26T00:47:52Z",
+      "valuation_handoff_status": "input_partial",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 19.0,
+        "currency": "USD",
+        "as_of": "2026-08-25T20:00:00Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {},
+      "methods": [],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "SOFI",
+          "as_of": "2026-08-25T20:00:00Z",
+          "retrieved_at": "2026-08-26T00:47:39Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "research_source_plan": {
+        "market_key": "us",
+        "symbol": "SOFI",
+        "company": "SoFi Technologies Inc",
+        "evidence_policy": {},
+        "preferred_sources": []
+      },
+      "missing_inputs": [
+        "valuation multiples missing"
+      ],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "SPCX",
+      "market_key": "us",
+      "company": "太空探索科技公司",
+      "provider_symbol": "SPCX",
+      "generated_at": "2026-08-26T00:47:52Z",
+      "valuation_handoff_status": "input_partial",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 137.95,
+        "currency": "USD",
+        "as_of": "2026-08-25T20:00:00Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {},
+      "methods": [],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "SPCX",
+          "as_of": "2026-08-25T20:00:00Z",
+          "retrieved_at": "2026-08-26T00:47:39Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "research_source_plan": {
+        "market_key": "us",
+        "symbol": "SPCX",
+        "company": "太空探索科技公司",
+        "evidence_policy": {},
+        "preferred_sources": []
+      },
+      "missing_inputs": [
+        "valuation multiples missing"
+      ],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "TSLA",
+      "market_key": "us",
+      "company": "特斯拉 / Tesla",
+      "provider_symbol": "TSLA",
+      "generated_at": "2026-08-26T00:47:52Z",
+      "valuation_handoff_status": "input_partial",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 350.25,
+        "currency": "USD",
+        "as_of": "2026-08-25T20:00:01Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {},
+      "methods": [],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "TSLA",
+          "as_of": "2026-08-25T20:00:01Z",
+          "retrieved_at": "2026-08-26T00:47:40Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "research_source_plan": {
+        "market_key": "us",
+        "symbol": "TSLA",
+        "company": "特斯拉 / Tesla",
+        "evidence_policy": {},
+        "preferred_sources": []
+      },
+      "missing_inputs": [
+        "valuation multiples missing"
+      ],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "TSM",
+      "market_key": "us",
+      "company": "Taiwan Semiconductor",
+      "provider_symbol": "TSM",
+      "generated_at": "2026-08-26T00:47:52Z",
+      "valuation_handoff_status": "input_partial",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 417.41,
+        "currency": "USD",
+        "as_of": "2026-08-25T20:00:02Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {},
+      "methods": [],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "TSM",
+          "as_of": "2026-08-25T20:00:02Z",
+          "retrieved_at": "2026-08-26T00:47:40Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "research_source_plan": {
+        "market_key": "us",
+        "symbol": "TSM",
+        "company": "Taiwan Semiconductor",
+        "evidence_policy": {},
+        "preferred_sources": []
+      },
+      "missing_inputs": [
+        "valuation multiples missing"
+      ],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "TXN",
+      "market_key": "us",
+      "company": "德州儀器",
+      "provider_symbol": "TXN",
+      "generated_at": "2026-08-26T00:47:52Z",
+      "valuation_handoff_status": "input_partial",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 260.05,
+        "currency": "USD",
+        "as_of": "2026-08-25T20:00:00Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {},
+      "methods": [],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "TXN",
+          "as_of": "2026-08-25T20:00:00Z",
+          "retrieved_at": "2026-08-26T00:47:40Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "research_source_plan": {
+        "market_key": "us",
+        "symbol": "TXN",
+        "company": "德州儀器",
+        "evidence_policy": {},
+        "preferred_sources": []
+      },
+      "missing_inputs": [
+        "valuation multiples missing"
+      ],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "UMC",
+      "market_key": "us",
+      "company": "United Microelectronics",
+      "provider_symbol": "UMC",
+      "generated_at": "2026-08-26T00:47:52Z",
+      "valuation_handoff_status": "input_partial",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 19.6,
+        "currency": "USD",
+        "as_of": "2026-08-25T20:00:02Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {},
+      "methods": [],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "UMC",
+          "as_of": "2026-08-25T20:00:02Z",
+          "retrieved_at": "2026-08-26T00:47:40Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "research_source_plan": {
+        "market_key": "us",
+        "symbol": "UMC",
+        "company": "United Microelectronics",
+        "evidence_policy": {},
+        "preferred_sources": []
+      },
+      "missing_inputs": [
+        "valuation multiples missing"
+      ],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    },
+    {
+      "symbol": "WDC",
+      "market_key": "us",
+      "company": "威騰電子",
+      "provider_symbol": "WDC",
+      "generated_at": "2026-08-26T00:47:52Z",
+      "valuation_handoff_status": "input_partial",
+      "valuation_status": "not_run",
+      "current_price": {
+        "value": 450.75,
+        "currency": "USD",
+        "as_of": "2026-08-25T20:00:00Z",
+        "source": "yahoo_finance_chart_api:query2.finance.yahoo.com"
+      },
+      "metrics": {},
+      "methods": [],
+      "sources": [
+        {
+          "source_name": "yahoo_finance_chart_api:query2.finance.yahoo.com",
+          "source_type": "market_price",
+          "symbol": "WDC",
+          "as_of": "2026-08-25T20:00:00Z",
+          "retrieved_at": "2026-08-26T00:47:40Z",
+          "used_by": [
+            "valuation_handoff.json"
+          ]
+        }
+      ],
+      "research_source_plan": {
+        "market_key": "us",
+        "symbol": "WDC",
+        "company": "威騰電子",
+        "evidence_policy": {},
+        "preferred_sources": []
+      },
+      "missing_inputs": [
+        "valuation multiples missing"
+      ],
+      "next_step": "Run Public Equity Investing comps-valuation or another sourced downstream valuation workflow before setting valuation_status=complete."
+    }
+  ]
+}
