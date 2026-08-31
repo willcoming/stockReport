@@ -1,0 +1,976 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-08-31 台股 K 線警報掃描投資決策報告</title>
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="stylesheet" href="../assets/report-center.css">
+</head>
+<body class="bg-slate-50 text-neutral-950 antialiased">
+
+<main class="w-full px-4 py-6 md:px-6 xl:px-8">
+  <nav class="mb-6 flex items-center justify-between text-sm text-slate-600">
+    <a class="font-bold tracking-normal text-neutral-950 underline decoration-emerald-700/30 underline-offset-4 hover:text-emerald-800" href="../index.html">← 報告中心</a>
+  </nav>
+  <article class="article-body w-full bg-white p-4 md:p-6 xl:p-8">
+    
+<header class="mb-7 border-b border-slate-200 pb-6">
+  <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+    <div class="min-w-0">
+      <span class="inline-flex w-fit items-center rounded-full border border-slate-300 px-2.5 py-1 text-xs text-slate-600">TW · 台股 K-line 研究行動</span>
+      <h1 class="mt-3 text-3xl font-black leading-tight tracking-normal md:text-4xl">2026-08-31 台股 K 線警報掃描投資決策報告</h1>
+    </div>
+    <div class="shrink-0 rounded-md border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-600">
+      產出時間：<strong class="font-semibold text-neutral-950">2026-08-31 16:17:09</strong>
+    </div>
+  </div>
+</header>
+
+    <p>本報告以已產出的 K 線警報掃描日報為來源，由 AI agent 進行規則化整理與風險分層。內容僅作研究輔助與情境推演，不構成個人化投資建議、投顧服務或下單指令。</p>
+<h2>補充資料搜尋來源</h2>
+<ul>
+<li>網路補強：已啟用，補到產業資料 58 檔，未命中 0 檔。</li>
+<li>實際命中來源：TWSE OpenAPI 上市公司基本資料 58 檔</li>
+<li>補強錯誤：TPEx OpenAPI 上櫃公司基本資料：HTTPError: HTTP Error 520: &lt;none&gt;</li>
+<li>補強錯誤：TPEx OpenAPI 興櫃公司基本資料：HTTPError: HTTP Error 520: &lt;none&gt;</li>
+<li>優先搜尋列表：
+<ul>
+<li>TWSE OpenAPI 上市公司基本資料: https://openapi.twse.com.tw/v1/opendata/t187ap03_L</li>
+<li>TPEx OpenAPI 上櫃公司基本資料: https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_O</li>
+<li>TPEx OpenAPI 興櫃公司基本資料: https://www.tpex.org.tw/openapi/v1/mopsfin_t187ap03_R</li>
+<li>Yahoo奇摩股市個股頁: https://tw.stock.yahoo.com/quote/{symbol}</li>
+<li>本地官方公司產業快取: twStock/data/twstock.sqlite3</li>
+</ul>
+</li>
+</ul>
+<h2>日K V轉警報分類</h2>
+<h3>日K 強確認V轉</h3>
+<p>4 筆。</p>
+<div class="table-scroll"><table class="research-table"><colgroup><col style="width: 220px"><col style="width: 160px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"></colgroup>
+<thead>
+<tr>
+<th style="text-align:right">訊號等級</th>
+<th>代號 / 公司</th>
+<th>V轉決策分類</th>
+<th>判斷理由</th>
+<th>主要風險</th>
+<th style="text-align:right">收盤</th>
+<th style="text-align:right">成交量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">2</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2402" rel="noopener noreferrer" target="_blank">2402(毅嘉)</a><a aria-label="在 TradingView 開啟 2402" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2402" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2402"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>現在不能買，但值得等買點名單</td>
+<td>最高 V 轉=日K 強確認V轉；同日策略=無其他同日進場策略；技術分數=77.0；收盤位置=71.1%</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+<td style="text-align:right">59.7</td>
+<td style="text-align:right">7,201,865</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2540" rel="noopener noreferrer" target="_blank">2540(愛山林)</a><a aria-label="在 TradingView 開啟 2540" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2540" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2540"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>現在不能買，但值得等買點名單</td>
+<td>最高 V 轉=日K 強確認V轉；同日策略=無其他同日進場策略；技術分數=79.0；收盤位置=100.0%</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+<td style="text-align:right">49.9</td>
+<td style="text-align:right">1,644,954</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1909" rel="noopener noreferrer" target="_blank">1909(榮成)</a><a aria-label="在 TradingView 開啟 1909" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A1909" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1909"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>明確不可以買 / 暫時排除名單</td>
+<td>最高 V 轉=日K 強確認V轉；同日策略=無其他同日進場策略；技術分數=47.0；收盤位置=63.6%</td>
+<td>成交金額不足：48,874,673 低於 50,000,000</td>
+<td style="text-align:right">11.1</td>
+<td style="text-align:right">4,407,261</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3447" rel="noopener noreferrer" target="_blank">3447(展達)</a><a aria-label="在 TradingView 開啟 3447" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A3447" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3447"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>明確不可以買 / 暫時排除名單</td>
+<td>最高 V 轉=日K 強確認V轉；同日策略=無其他同日進場策略；技術分數=47.0；收盤位置=72.7%</td>
+<td>成交金額不足：16,519,112 低於 50,000,000</td>
+<td style="text-align:right">30.15</td>
+<td style="text-align:right">555,668</td>
+</tr>
+</tbody>
+</table></div>
+<h3>日K 候選V轉</h3>
+<p>2 筆。</p>
+<div class="table-scroll"><table class="research-table"><colgroup><col style="width: 220px"><col style="width: 160px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"></colgroup>
+<thead>
+<tr>
+<th style="text-align:right">訊號等級</th>
+<th>代號 / 公司</th>
+<th>V轉決策分類</th>
+<th>判斷理由</th>
+<th>主要風險</th>
+<th style="text-align:right">收盤</th>
+<th style="text-align:right">成交量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1773" rel="noopener noreferrer" target="_blank">1773(勝一)</a><a aria-label="在 TradingView 開啟 1773" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A1773" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1773"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>值得觀察，但目前還不能買名單</td>
+<td>最高 V 轉=日K 候選V轉；同日策略=無其他同日進場策略；技術分數=52.0；收盤位置=75.0%</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+<td style="text-align:right">164</td>
+<td style="text-align:right">869,625</td>
+</tr>
+<tr>
+<td style="text-align:right">1</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2723" rel="noopener noreferrer" target="_blank">2723(美食-KY)</a><a aria-label="在 TradingView 開啟 2723" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2723" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2723"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>現在不能買，但值得等買點名單</td>
+<td>最高 V 轉=日K 候選V轉；同日策略=無其他同日進場策略；技術分數=56.0；收盤位置=95.3%</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+<td style="text-align:right">82</td>
+<td style="text-align:right">1,268,506</td>
+</tr>
+</tbody>
+</table></div>
+<h3>日K V轉進入觀察</h3>
+<p>3 筆。</p>
+<div class="table-scroll"><table class="research-table"><colgroup><col style="width: 220px"><col style="width: 160px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"></colgroup>
+<thead>
+<tr>
+<th style="text-align:right">訊號等級</th>
+<th>代號 / 公司</th>
+<th>V轉決策分類</th>
+<th>判斷理由</th>
+<th>主要風險</th>
+<th style="text-align:right">收盤</th>
+<th style="text-align:right">成交量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">0</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6919" rel="noopener noreferrer" target="_blank">6919(康霈*)</a><a aria-label="在 TradingView 開啟 6919" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A6919" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6919"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>值得觀察，但目前還不能買名單</td>
+<td>最高 V 轉=日K V轉進入觀察；同日策略=無其他同日進場策略；技術分數=0.0；收盤位置=0.0%</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+<td style="text-align:right">94.8</td>
+<td style="text-align:right">76,091,003</td>
+</tr>
+<tr>
+<td style="text-align:right">0</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6415" rel="noopener noreferrer" target="_blank">6415(矽力*-KY)</a><a aria-label="在 TradingView 開啟 6415" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A6415" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6415"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>值得觀察，但目前還不能買名單</td>
+<td>最高 V 轉=日K V轉進入觀察；同日策略=無其他同日進場策略；技術分數=0.0；收盤位置=0.0%</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+<td style="text-align:right">412.5</td>
+<td style="text-align:right">4,448,947</td>
+</tr>
+<tr>
+<td style="text-align:right">0</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6715" rel="noopener noreferrer" target="_blank">6715(嘉基)</a><a aria-label="在 TradingView 開啟 6715" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A6715" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6715"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>值得觀察，但目前還不能買名單</td>
+<td>最高 V 轉=日K V轉進入觀察；同日策略=無其他同日進場策略；技術分數=-3.0；收盤位置=0.0%</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+<td style="text-align:right">318.5</td>
+<td style="text-align:right">813,496</td>
+</tr>
+</tbody>
+</table></div>
+<h2>產業前景與題材查核摘要</h2>
+<p>本日 K 線名單未命中 industry thesis JSON；請確認 symbol/market 是否一致。</p>
+<h2>現在可以買名單</h2>
+<div class="table-scroll"><table class="research-table"><colgroup><col style="width: 110px"><col style="width: 160px"><col style="width: 220px"><col style="width: 180px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"></colgroup>
+<thead>
+<tr>
+<th>市場</th>
+<th>代號 / 公司</th>
+<th>訊號等級（0無／1候選／2強）</th>
+<th>產業</th>
+<th>來源提及程度</th>
+<th>來源主觀看法</th>
+<th>布局建議</th>
+<th>持倉建議</th>
+<th>追蹤指標</th>
+<th>風險</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2609" rel="noopener noreferrer" target="_blank">2609(陽明)</a><a aria-label="在 TradingView 開啟 2609" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2609" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2609"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>航運業</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 100.0%；振幅 5.4%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 1.43；爆量 volumeRatio 3.07；成交金額 12,945,242,371</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2834" rel="noopener noreferrer" target="_blank">2834(臺企銀)</a><a aria-label="在 TradingView 開啟 2834" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2834" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2834"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>金融保險業</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 100.0%；振幅 2.9%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 2.34；爆量 volumeRatio 20.55；成交金額 11,950,822,963</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2377" rel="noopener noreferrer" target="_blank">2377(微星)</a><a aria-label="在 TradingView 開啟 2377" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2377" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2377"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>電腦及週邊設備業</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 100.0%；振幅 6.5%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 1.62；成交金額 2,672,542,507</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/4938" rel="noopener noreferrer" target="_blank">4938(和碩)</a><a aria-label="在 TradingView 開啟 4938" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A4938" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 4938"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>電腦及週邊設備業</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 81.0%；振幅 4.6%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 1.46；爆量 volumeRatio 1.55；成交金額 1,884,442,814</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/9904" rel="noopener noreferrer" target="_blank">9904(寶成)</a><a aria-label="在 TradingView 開啟 9904" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A9904" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 9904"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>運動休閒</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 100.0%；振幅 2.4%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 1.43；成交金額 474,305,152</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3016" rel="noopener noreferrer" target="_blank">3016(嘉晶)</a><a aria-label="在 TradingView 開啟 3016" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A3016" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3016"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>半導體業</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 84.4%；振幅 6.2%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；成交金額 471,632,242</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2353" rel="noopener noreferrer" target="_blank">2353(宏碁)</a><a aria-label="在 TradingView 開啟 2353" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2353" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2353"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>電腦及週邊設備業</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 100.0%；振幅 3.0%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；成交金額 345,784,160</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2845" rel="noopener noreferrer" target="_blank">2845(遠東銀)</a><a aria-label="在 TradingView 開啟 2845" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2845" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2845"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>金融保險業</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 100.0%；振幅 1.1%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；爆量 volumeRatio 2.57；成交金額 327,453,253</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2356" rel="noopener noreferrer" target="_blank">2356(英業達)</a><a aria-label="在 TradingView 開啟 2356" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2356" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2356"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>電腦及週邊設備業</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>偏多</td>
+<td>可研究小量分批，仍需等量價續強或回測不破再提高信心</td>
+<td>若已有持倉，可用訊號日低點或短均線作為失效觀察</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 78.4%；振幅 5.5%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 1.41；成交金額 1,426,524,310</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+</tbody>
+</table></div>
+<h2>現在不能買，但值得等買點名單</h2>
+<div class="table-scroll"><table class="research-table"><colgroup><col style="width: 110px"><col style="width: 160px"><col style="width: 220px"><col style="width: 180px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"></colgroup>
+<thead>
+<tr>
+<th>市場</th>
+<th>代號 / 公司</th>
+<th>訊號等級（0無／1候選／2強）</th>
+<th>產業</th>
+<th>來源提及程度</th>
+<th>來源主觀看法</th>
+<th>布局建議</th>
+<th>持倉建議</th>
+<th>追蹤指標</th>
+<th>風險</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2006" rel="noopener noreferrer" target="_blank">2006(東和鋼鐵)</a><a aria-label="在 TradingView 開啟 2006" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2006" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2006"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>鋼鐵工業</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 100.0%；振幅 1.6%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；成交金額 184,927,569</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6757" rel="noopener noreferrer" target="_blank">6757(台灣虎航)</a><a aria-label="在 TradingView 開啟 6757" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A6757" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6757"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>航運業</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 100.0%；振幅 2.5%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；成交量高於均量 volumeRatio 1.24；成交金額 80,028,200</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2515" rel="noopener noreferrer" target="_blank">2515(中工)</a><a aria-label="在 TradingView 開啟 2515" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2515" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2515"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>建材營造業</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 100.0%；振幅 0.8%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；成交金額 71,001,459</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1304" rel="noopener noreferrer" target="_blank">1304(台聚)</a><a aria-label="在 TradingView 開啟 1304" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A1304" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1304"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>塑膠工業</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 100.0%；振幅 5.1%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 1.93；爆量 volumeRatio 2.09；成交金額 64,290,299</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2543" rel="noopener noreferrer" target="_blank">2543(皇昌)</a><a aria-label="在 TradingView 開啟 2543" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2543" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2543"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>建材營造業</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 100.0%；振幅 4.4%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 1.66；成交量高於均量 volumeRatio 1.44；成交金額 52,431,180</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2890" rel="noopener noreferrer" target="_blank">2890(永豐金)</a><a aria-label="在 TradingView 開啟 2890" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2890" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2890"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>金融保險業</td>
+<td>Legacy 買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 100.0%；振幅 3.6%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=多方趨勢開始；buyCount 1；今日買點 LZEMA20；波幅放大 rangeRatio 1.76；爆量 volumeRatio 2.92；成交金額 2,569,032,418</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2379" rel="noopener noreferrer" target="_blank">2379(瑞昱)</a><a aria-label="在 TradingView 開啟 2379" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2379" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2379"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>半導體業</td>
+<td>Legacy 買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 80.0%；振幅 2.1%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=空方趨勢結束；buyCount 1；今日買點 LZEMA20；成交金額 2,103,270,955</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/5871" rel="noopener noreferrer" target="_blank">5871(中租-KY)</a><a aria-label="在 TradingView 開啟 5871" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A5871" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 5871"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>其他業</td>
+<td>Legacy 買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 100.0%；振幅 4.7%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=多方趨勢開始；buyCount 1；今日買點 LZEMA20；波幅放大 rangeRatio 2.00；爆量 volumeRatio 2.52；成交金額 1,672,477,231</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1590" rel="noopener noreferrer" target="_blank">1590(亞德客-KY)</a><a aria-label="在 TradingView 開啟 1590" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A1590" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1590"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>電機機械</td>
+<td>Legacy 買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 92.3%；振幅 4.6%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=空方趨勢結束；buyCount 1；今日買點 LZEMA20；成交金額 881,366,180</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3036" rel="noopener noreferrer" target="_blank">3036(文曄)</a><a aria-label="在 TradingView 開啟 3036" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A3036" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3036"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>電子通路業</td>
+<td>Legacy 買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 100.0%；振幅 1.8%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=空方趨勢結束；buyCount 1；今日買點 LZEMA20；成交金額 855,239,622</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6789" rel="noopener noreferrer" target="_blank">6789(采鈺)</a><a aria-label="在 TradingView 開啟 6789" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A6789" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6789"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>半導體業</td>
+<td>三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>三均線趨勢策略：3MA；收盤位置 100.0%；振幅 4.0%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=多方趨勢開始；buyCount 1；今日買點 3MA；成交金額 674,299,642</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1402" rel="noopener noreferrer" target="_blank">1402(遠東新)</a><a aria-label="在 TradingView 開啟 1402" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A1402" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1402"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>紡織纖維</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 64.3%；振幅 2.5%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；成交金額 420,230,699</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2312" rel="noopener noreferrer" target="_blank">2312(金寶)</a><a aria-label="在 TradingView 開啟 2312" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2312" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2312"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>其他電子業</td>
+<td>三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>三均線趨勢策略：3MA；收盤位置 90.0%；振幅 3.1%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 1；今日買點 3MA；成交金額 330,224,540</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2347" rel="noopener noreferrer" target="_blank">2347(聯強)</a><a aria-label="在 TradingView 開啟 2347" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2347" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2347"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>電子通路業</td>
+<td>三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>三均線趨勢策略：3MA；收盤位置 100.0%；振幅 2.2%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=空方趨勢結束；buyCount 1；今日買點 3MA；成交金額 267,409,054</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6165" rel="noopener noreferrer" target="_blank">6165(浪凡)</a><a aria-label="在 TradingView 開啟 6165" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A6165" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6165"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>數位雲端</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 71.4%；振幅 5.5%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 2.53；爆量 volumeRatio 3.30；成交金額 73,200,986</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2360" rel="noopener noreferrer" target="_blank">2360(致茂)</a><a aria-label="在 TradingView 開啟 2360" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2360" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2360"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>其他電子業</td>
+<td>Legacy 買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 64.7%；振幅 4.3%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=空方趨勢結束；buyCount 1；今日買點 LZEMA20；成交金額 4,544,934,350</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6670" rel="noopener noreferrer" target="_blank">6670(復盛應用)</a><a aria-label="在 TradingView 開啟 6670" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A6670" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6670"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>運動休閒</td>
+<td>Legacy 買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 96.8%；振幅 5.4%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=多方趨勢開始；buyCount 1；今日買點 LZEMA20；波幅放大 rangeRatio 2.97；爆量 volumeRatio 2.76；成交金額 171,580,559</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/4961" rel="noopener noreferrer" target="_blank">4961(天鈺)</a><a aria-label="在 TradingView 開啟 4961" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A4961" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 4961"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>半導體業</td>
+<td>三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>三均線趨勢策略：3MA；收盤位置 80.0%；振幅 3.1%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=空方趨勢結束；buyCount 1；今日買點 3MA；爆量 volumeRatio 1.53；成交金額 126,474,188</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/8131" rel="noopener noreferrer" target="_blank">8131(福懋科)</a><a aria-label="在 TradingView 開啟 8131" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A8131" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 8131"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>半導體業</td>
+<td>三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>三均線趨勢策略：3MA；收盤位置 100.0%；振幅 3.5%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=空方趨勢結束；buyCount 1；今日買點 3MA；成交金額 79,246,585</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2539" rel="noopener noreferrer" target="_blank">2539(櫻花建)</a><a aria-label="在 TradingView 開啟 2539" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2539" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2539"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>建材營造業</td>
+<td>Legacy 買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 100.0%；振幅 5.7%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=多方趨勢開始；buyCount 1；今日買點 LZEMA20；波幅放大 rangeRatio 2.11；成交金額 59,035,693</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1104" rel="noopener noreferrer" target="_blank">1104(環泥)</a><a aria-label="在 TradingView 開啟 1104" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A1104" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1104"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>水泥工業</td>
+<td>Legacy 買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 57.1%；振幅 1.3%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=空方趨勢結束；buyCount 1；今日買點 LZEMA20；爆量 volumeRatio 12.51；成交金額 235,283,268</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2388" rel="noopener noreferrer" target="_blank">2388(威盛)</a><a aria-label="在 TradingView 開啟 2388" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2388" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2388"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>半導體業</td>
+<td>Legacy 買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 60.0%；振幅 2.8%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=空方趨勢結束；sellSources=3MA；sellCount=1；buyCount 1；今日買點 LZEMA20；今日賣點 3MA；今日賣點數 1；成交金額 144,478,876</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2838" rel="noopener noreferrer" target="_blank">2838(聯邦銀)</a><a aria-label="在 TradingView 開啟 2838" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2838" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2838"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>金融保險業</td>
+<td>三均線買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>三均線趨勢策略：3MA；收盤位置 80.0%；振幅 1.2%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=空方趨勢結束；buyCount 1；今日買點 3MA；成交量高於均量 volumeRatio 1.42；成交金額 59,413,018</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2359" rel="noopener noreferrer" target="_blank">2359(所羅門)</a><a aria-label="在 TradingView 開啟 2359" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2359" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2359"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>其他電子業</td>
+<td>Legacy 買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 40.0%；振幅 3.5%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=空方趨勢結束；buyCount 1；今日買點 LZEMA20；成交金額 467,094,539</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3033" rel="noopener noreferrer" target="_blank">3033(威健)</a><a aria-label="在 TradingView 開啟 3033" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A3033" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3033"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>電子通路業</td>
+<td>Legacy 買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 44.4%；振幅 2.0%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=空方趨勢結束；buyCount 1；今日買點 LZEMA20；成交金額 118,492,450</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3533" rel="noopener noreferrer" target="_blank">3533(嘉澤)</a><a aria-label="在 TradingView 開啟 3533" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A3533" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3533"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>電子零組件業</td>
+<td>Legacy 買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 27.3%；振幅 3.3%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=空方趨勢結束；buyCount 1；今日買點 LZEMA20；成交金額 2,842,755,175</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/8210" rel="noopener noreferrer" target="_blank">8210(勤誠)</a><a aria-label="在 TradingView 開啟 8210" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A8210" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 8210"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>電腦及週邊設備業</td>
+<td>Legacy 買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 23.5%；振幅 3.5%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=空方趨勢結束；buyCount 1；今日買點 LZEMA20；成交金額 1,120,456,887</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/8926" rel="noopener noreferrer" target="_blank">8926(台汽電)</a><a aria-label="在 TradingView 開啟 8926" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A8926" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 8926"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>油電燃氣業</td>
+<td>Legacy 買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 11.1%；振幅 1.6%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=空方趨勢結束；buyCount 1；今日買點 LZEMA20；成交金額 215,327,937</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2406" rel="noopener noreferrer" target="_blank">2406(國碩)</a><a aria-label="在 TradingView 開啟 2406" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2406" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2406"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>光電業</td>
+<td>Legacy 買點</td>
+<td>中性觀察</td>
+<td>先等回測支撐、突破續強或量縮沉澱後再評估</td>
+<td>若已有持倉，維持小部位觀察，不在確認前放大風險</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 22.2%；振幅 3.2%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=空方趨勢結束；buyCount 1；今日買點 LZEMA20；成交金額 88,136,382</td>
+<td>未見硬性排除條件，仍需追蹤隔日量價與大盤風險</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1707" rel="noopener noreferrer" target="_blank">1707(葡萄王)</a><a aria-label="在 TradingView 開啟 1707" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A1707" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1707"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>生技醫療業</td>
+<td>Legacy 買點</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 42.9%；振幅 1.6%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=空方趨勢結束；buyCount 1；今日買點 LZEMA20；爆量 volumeRatio 9.22；成交金額 330,909,919</td>
+<td>上影線壓力重：57.1%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/8271" rel="noopener noreferrer" target="_blank">8271(宇瞻)</a><a aria-label="在 TradingView 開啟 8271" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A8271" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 8271"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>半導體業</td>
+<td>Legacy 買點</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 6.7%；振幅 3.3%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=多方趨勢開始；buyCount 1；今日買點 LZEMA20；成交金額 572,487,781</td>
+<td>上影線壓力重：60.0%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1810" rel="noopener noreferrer" target="_blank">1810(和成)</a><a aria-label="在 TradingView 開啟 1810" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A1810" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1810"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>玻璃陶瓷</td>
+<td>Legacy 買點</td>
+<td>不建議追高</td>
+<td>先等回測支撐或隔日收復上影線後再評估</td>
+<td>若已有持倉，避免在上影線壓力未化解前放大部位</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 25.0%；振幅 1.6%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=空方趨勢結束；buyCount 1；今日買點 LZEMA20；成交金額 71,707,029</td>
+<td>上影線壓力重：50.0%</td>
+</tr>
+</tbody>
+</table></div>
+<h2>值得觀察，但目前還不能買名單</h2>
+<p>無符合名單。</p>
+<h2>明確不可以買 / 暫時排除名單</h2>
+<div class="table-scroll"><table class="research-table"><colgroup><col style="width: 110px"><col style="width: 160px"><col style="width: 220px"><col style="width: 180px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"><col style="width: 220px"></colgroup>
+<thead>
+<tr>
+<th>市場</th>
+<th>代號 / 公司</th>
+<th>訊號等級（0無／1候選／2強）</th>
+<th>產業</th>
+<th>來源提及程度</th>
+<th>來源主觀看法</th>
+<th>布局建議</th>
+<th>持倉建議</th>
+<th>追蹤指標</th>
+<th>風險</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2023" rel="noopener noreferrer" target="_blank">2023(燁輝)</a><a aria-label="在 TradingView 開啟 2023" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2023" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2023"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>鋼鐵工業</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 100.0%；振幅 3.9%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 2.86；爆量 volumeRatio 2.12；成交金額 31,348,408</td>
+<td>成交金額不足：31,348,408 低於 50,000,000</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2614" rel="noopener noreferrer" target="_blank">2614(東森)</a><a aria-label="在 TradingView 開啟 2614" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2614" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2614"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>其他業</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 100.0%；振幅 1.4%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；成交金額 10,328,421</td>
+<td>成交金額不足：10,328,421 低於 50,000,000</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2477" rel="noopener noreferrer" target="_blank">2477(美隆電)</a><a aria-label="在 TradingView 開啟 2477" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2477" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2477"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>其他電子業</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 66.7%；振幅 11.6%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 6.11；爆量 volumeRatio 10.09；成交金額 28,330,114</td>
+<td>成交金額不足：28,330,114 低於 50,000,000</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/4526" rel="noopener noreferrer" target="_blank">4526(東台)</a><a aria-label="在 TradingView 開啟 4526" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A4526" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 4526"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>電機機械</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 66.7%；振幅 2.5%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束；buyCount 2；今日買點 LZEMA20/3MA；成交金額 25,453,254</td>
+<td>成交金額不足：25,453,254 低於 50,000,000</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2104" rel="noopener noreferrer" target="_blank">2104(國際中橡)</a><a aria-label="在 TradingView 開啟 2104" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2104" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2104"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>橡膠工業</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 71.4%；振幅 3.3%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；波幅放大 rangeRatio 1.45；成交金額 23,269,202</td>
+<td>成交金額不足：23,269,202 低於 50,000,000</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1227" rel="noopener noreferrer" target="_blank">1227(佳格)</a><a aria-label="在 TradingView 開啟 1227" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A1227" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1227"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>食品工業</td>
+<td>三均線買點</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>三均線趨勢策略：3MA；收盤位置 100.0%；振幅 1.6%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=空方趨勢結束；buyCount 1；今日買點 3MA；爆量 volumeRatio 1.91；成交金額 43,497,420</td>
+<td>成交金額不足：43,497,420 低於 50,000,000</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1305" rel="noopener noreferrer" target="_blank">1305(華夏)</a><a aria-label="在 TradingView 開啟 1305" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A1305" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1305"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>塑膠工業</td>
+<td>三均線買點</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>三均線趨勢策略：3MA；收盤位置 100.0%；振幅 4.4%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=多方趨勢開始；buyCount 1；今日買點 3MA；波幅放大 rangeRatio 1.58；爆量 volumeRatio 1.75；成交金額 32,113,299</td>
+<td>成交金額不足：32,113,299 低於 50,000,000</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2457" rel="noopener noreferrer" target="_blank">2457(飛宏)</a><a aria-label="在 TradingView 開啟 2457" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2457" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2457"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>電子零組件業</td>
+<td>三均線買點</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>三均線趨勢策略：3MA；收盤位置 100.0%；振幅 2.8%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=空方趨勢結束；buyCount 1；今日買點 3MA；成交金額 29,155,179</td>
+<td>成交金額不足：29,155,179 低於 50,000,000</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2903" rel="noopener noreferrer" target="_blank">2903(遠百)</a><a aria-label="在 TradingView 開啟 2903" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2903" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2903"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>貿易百貨業</td>
+<td>Legacy 買點 / 三均線買點</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>雙策略整合：LZEMA20/3MA；收盤位置 42.9%；振幅 1.6%；buySources=LZEMA20/3MA；buyCount=2；entrySource=LZEMA20；entrySource=3MA；entryReason=多方趨勢開始；entryReason=空方趨勢結束 / 多方趨勢開始；buyCount 2；今日買點 LZEMA20/3MA；成交金額 49,919,471</td>
+<td>成交金額不足：49,919,471 低於 50,000,000</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1309" rel="noopener noreferrer" target="_blank">1309(台達化)</a><a aria-label="在 TradingView 開啟 1309" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A1309" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1309"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>塑膠工業</td>
+<td>三均線買點</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>三均線趨勢策略：3MA；收盤位置 69.2%；振幅 4.8%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=空方趨勢結束；buyCount 1；今日買點 3MA；波幅放大 rangeRatio 1.73；爆量 volumeRatio 1.93；成交金額 41,946,156</td>
+<td>成交金額不足：41,946,156 低於 50,000,000</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2208" rel="noopener noreferrer" target="_blank">2208(台船)</a><a aria-label="在 TradingView 開啟 2208" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2208" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2208"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>航運業</td>
+<td>三均線買點</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>三均線趨勢策略：3MA；收盤位置 60.0%；振幅 1.3%；buySources=3MA；buyCount=1；entrySource=3MA；entryReason=空方趨勢結束；buyCount 1；今日買點 3MA；成交金額 32,876,674</td>
+<td>成交金額不足：32,876,674 低於 50,000,000</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2014" rel="noopener noreferrer" target="_blank">2014(中鴻)</a><a aria-label="在 TradingView 開啟 2014" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2014" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2014"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>鋼鐵工業</td>
+<td>Legacy 買點</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 66.7%；振幅 0.9%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=空方趨勢結束；buyCount 1；今日買點 LZEMA20；成交金額 28,443,472</td>
+<td>成交金額不足：28,443,472 低於 50,000,000</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/9105" rel="noopener noreferrer" target="_blank">9105(泰金寶-DR)</a><a aria-label="在 TradingView 開啟 9105" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A9105" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 9105"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>產業代碼 91</td>
+<td>Legacy 買點</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 87.7%；振幅 6.5%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=多方趨勢開始；buyCount 1；今日買點 LZEMA20；波幅放大 rangeRatio 2.06；成交量高於均量 volumeRatio 1.49；成交金額 210,007,468</td>
+<td>低價風險：收盤 8.71 低於門檻 10</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2913" rel="noopener noreferrer" target="_blank">2913(農林)</a><a aria-label="在 TradingView 開啟 2913" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2913" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2913"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>貿易百貨業</td>
+<td>Legacy 買點</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 50.0%；振幅 0.9%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=多方趨勢開始；buyCount 1；今日買點 LZEMA20；成交金額 9,393,477</td>
+<td>成交金額不足：9,393,477 低於 50,000,000；上影線壓力重：50.0%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2897" rel="noopener noreferrer" target="_blank">2897(王道銀行)</a><a aria-label="在 TradingView 開啟 2897" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2897" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2897"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>金融保險業</td>
+<td>Legacy 買點</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 0.0%；振幅 1.0%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=多方趨勢開始；buyCount 1；今日買點 LZEMA20；成交金額 26,866,373</td>
+<td>成交金額不足：26,866,373 低於 50,000,000；上影線壓力重：100.0%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2405" rel="noopener noreferrer" target="_blank">2405(輔信)</a><a aria-label="在 TradingView 開啟 2405" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2405" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2405"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>電腦及週邊設備業</td>
+<td>Legacy 買點</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 33.3%；振幅 2.0%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=空方趨勢結束；buyCount 1；今日買點 LZEMA20；成交金額 11,685,064</td>
+<td>成交金額不足：11,685,064 低於 50,000,000；上影線壓力重：50.0%</td>
+</tr>
+<tr>
+<td>TWSE</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1444" rel="noopener noreferrer" target="_blank">1444(力麗)</a><a aria-label="在 TradingView 開啟 1444" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A1444" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1444"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+<td>0</td>
+<td>紡織纖維</td>
+<td>Legacy 買點</td>
+<td>偏空</td>
+<td>暫時排除，待流動性、價格或波動風險改善後再重看</td>
+<td>若已有持倉，優先檢查部位大小與失效條件</td>
+<td>Legacy ZLSMA EMA20 趨勢策略：LZEMA20；收盤位置 11.1%；振幅 1.3%；buySources=LZEMA20；buyCount=1；entrySource=LZEMA20；entryReason=空方趨勢結束；buyCount 1；今日買點 LZEMA20；成交金額 7,997,743</td>
+<td>低價風險：收盤 7.09 低於門檻 10；成交金額不足：7,997,743 低於 50,000,000</td>
+</tr>
+</tbody>
+</table></div>
+<h2>重要校正與限制</h2>
+<ul>
+<li>本報告的 <code>來源主觀看法</code> 是 agent 依 K 線訊號與風險條件做出的技術面分層，不代表新聞、KOL 或基本面來源意見。</li>
+<li><code>可研究</code> 不等於無條件進場；仍需確認個人風險承受度、部位大小、隔日量價與大盤環境。</li>
+<li>對低價、低成交金額、過大振幅與重上影線標的，本報告會優先降級或排除。</li>
+<li>Futu/Moomoo OpenAPI 已列入常用來源清單；因需本機 OpenD gateway 與帳號權限，這版只列為人工複核/後續整合來源。</li>
+</ul>
+<h2>賣點觸發清單</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>觸發賣點</th>
+<th>代號名稱</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LZEMA20/3MA</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1218" rel="noopener noreferrer" target="_blank">1218(泰山)</a><a aria-label="在 TradingView 開啟 1218" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A1218" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1218"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1503" rel="noopener noreferrer" target="_blank">1503(士電)</a><a aria-label="在 TradingView 開啟 1503" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A1503" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1503"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1513" rel="noopener noreferrer" target="_blank">1513(中興電)</a><a aria-label="在 TradingView 開啟 1513" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A1513" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1513"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1514" rel="noopener noreferrer" target="_blank">1514(亞力)</a><a aria-label="在 TradingView 開啟 1514" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A1514" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1514"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1515" rel="noopener noreferrer" target="_blank">1515(力山)</a><a aria-label="在 TradingView 開啟 1515" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A1515" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1515"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1531" rel="noopener noreferrer" target="_blank">1531(高林股)</a><a aria-label="在 TradingView 開啟 1531" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A1531" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1531"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1560" rel="noopener noreferrer" target="_blank">1560(中砂)</a><a aria-label="在 TradingView 開啟 1560" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A1560" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1560"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1808" rel="noopener noreferrer" target="_blank">1808(潤隆)</a><a aria-label="在 TradingView 開啟 1808" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A1808" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1808"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1809" rel="noopener noreferrer" target="_blank">1809(中釉)</a><a aria-label="在 TradingView 開啟 1809" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A1809" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1809"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2049" rel="noopener noreferrer" target="_blank">2049(上銀)</a><a aria-label="在 TradingView 開啟 2049" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2049" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2049"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2207" rel="noopener noreferrer" target="_blank">2207(和泰車)</a><a aria-label="在 TradingView 開啟 2207" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2207" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2207"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2316" rel="noopener noreferrer" target="_blank">2316(楠梓電)</a><a aria-label="在 TradingView 開啟 2316" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2316" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2316"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2327" rel="noopener noreferrer" target="_blank">2327(國巨*)</a><a aria-label="在 TradingView 開啟 2327" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2327" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2327"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2329" rel="noopener noreferrer" target="_blank">2329(華泰)</a><a aria-label="在 TradingView 開啟 2329" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2329" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2329"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2331" rel="noopener noreferrer" target="_blank">2331(精英)</a><a aria-label="在 TradingView 開啟 2331" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2331" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2331"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2338" rel="noopener noreferrer" target="_blank">2338(光罩)</a><a aria-label="在 TradingView 開啟 2338" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2338" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2338"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2369" rel="noopener noreferrer" target="_blank">2369(菱生)</a><a aria-label="在 TradingView 開啟 2369" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2369" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2369"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2375" rel="noopener noreferrer" target="_blank">2375(凱美)</a><a aria-label="在 TradingView 開啟 2375" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2375" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2375"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2464" rel="noopener noreferrer" target="_blank">2464(盟立)</a><a aria-label="在 TradingView 開啟 2464" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2464" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2464"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2478" rel="noopener noreferrer" target="_blank">2478(大毅)</a><a aria-label="在 TradingView 開啟 2478" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2478" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2478"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2495" rel="noopener noreferrer" target="_blank">2495(普安)</a><a aria-label="在 TradingView 開啟 2495" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2495" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2495"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2832" rel="noopener noreferrer" target="_blank">2832(台產)</a><a aria-label="在 TradingView 開啟 2832" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2832" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2832"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2836" rel="noopener noreferrer" target="_blank">2836(高雄銀)</a><a aria-label="在 TradingView 開啟 2836" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2836" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2836"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2915" rel="noopener noreferrer" target="_blank">2915(潤泰全)</a><a aria-label="在 TradingView 開啟 2915" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2915" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2915"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3030" rel="noopener noreferrer" target="_blank">3030(德律)</a><a aria-label="在 TradingView 開啟 3030" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A3030" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3030"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3037" rel="noopener noreferrer" target="_blank">3037(欣興)</a><a aria-label="在 TradingView 開啟 3037" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A3037" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3037"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3056" rel="noopener noreferrer" target="_blank">3056(富華新)</a><a aria-label="在 TradingView 開啟 3056" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A3056" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3056"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3062" rel="noopener noreferrer" target="_blank">3062(建漢)</a><a aria-label="在 TradingView 開啟 3062" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A3062" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3062"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3189" rel="noopener noreferrer" target="_blank">3189(景碩)</a><a aria-label="在 TradingView 開啟 3189" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A3189" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3189"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3711" rel="noopener noreferrer" target="_blank">3711(日月光投控)</a><a aria-label="在 TradingView 開啟 3711" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A3711" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3711"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3717" rel="noopener noreferrer" target="_blank">3717(聯嘉投控)</a><a aria-label="在 TradingView 開啟 3717" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A3717" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3717"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/4770" rel="noopener noreferrer" target="_blank">4770(上品)</a><a aria-label="在 TradingView 開啟 4770" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A4770" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 4770"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/4916" rel="noopener noreferrer" target="_blank">4916(事欣科)</a><a aria-label="在 TradingView 開啟 4916" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A4916" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 4916"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/4960" rel="noopener noreferrer" target="_blank">4960(誠美材)</a><a aria-label="在 TradingView 開啟 4960" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A4960" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 4960"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/4989" rel="noopener noreferrer" target="_blank">4989(榮科)</a><a aria-label="在 TradingView 開啟 4989" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A4989" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 4989"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6155" rel="noopener noreferrer" target="_blank">6155(鈞寶)</a><a aria-label="在 TradingView 開啟 6155" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A6155" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6155"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6191" rel="noopener noreferrer" target="_blank">6191(精成科)</a><a aria-label="在 TradingView 開啟 6191" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A6191" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6191"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6197" rel="noopener noreferrer" target="_blank">6197(佳必琪)</a><a aria-label="在 TradingView 開啟 6197" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A6197" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6197"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6202" rel="noopener noreferrer" target="_blank">6202(盛群)</a><a aria-label="在 TradingView 開啟 6202" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A6202" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6202"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6415" rel="noopener noreferrer" target="_blank">6415(矽力*-KY)</a><a aria-label="在 TradingView 開啟 6415" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A6415" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6415"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6446" rel="noopener noreferrer" target="_blank">6446(藥華藥)</a><a aria-label="在 TradingView 開啟 6446" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A6446" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6446"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6449" rel="noopener noreferrer" target="_blank">6449(鈺邦)</a><a aria-label="在 TradingView 開啟 6449" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A6449" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6449"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6477" rel="noopener noreferrer" target="_blank">6477(安集)</a><a aria-label="在 TradingView 開啟 6477" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A6477" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6477"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6525" rel="noopener noreferrer" target="_blank">6525(捷敏-KY)</a><a aria-label="在 TradingView 開啟 6525" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A6525" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6525"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6589" rel="noopener noreferrer" target="_blank">6589(台康生技)</a><a aria-label="在 TradingView 開啟 6589" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A6589" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6589"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/7769" rel="noopener noreferrer" target="_blank">7769(鴻勁)</a><a aria-label="在 TradingView 開啟 7769" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A7769" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 7769"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/7780" rel="noopener noreferrer" target="_blank">7780(大研生醫*)</a><a aria-label="在 TradingView 開啟 7780" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A7780" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 7780"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/7795" rel="noopener noreferrer" target="_blank">7795(長廣)</a><a aria-label="在 TradingView 開啟 7795" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A7795" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 7795"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/8033" rel="noopener noreferrer" target="_blank">8033(雷虎)</a><a aria-label="在 TradingView 開啟 8033" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A8033" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 8033"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/8105" rel="noopener noreferrer" target="_blank">8105(凌巨)</a><a aria-label="在 TradingView 開啟 8105" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A8105" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 8105"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/9912" rel="noopener noreferrer" target="_blank">9912(偉聯)</a><a aria-label="在 TradingView 開啟 9912" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A9912" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 9912"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/9946" rel="noopener noreferrer" target="_blank">9946(三發地產)</a><a aria-label="在 TradingView 開啟 9946" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A9946" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 9946"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+</tr>
+<tr>
+<td>LZEMA20</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/1536" rel="noopener noreferrer" target="_blank">1536(和大)</a><a aria-label="在 TradingView 開啟 1536" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A1536" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 1536"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2504" rel="noopener noreferrer" target="_blank">2504(國產)</a><a aria-label="在 TradingView 開啟 2504" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2504" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2504"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3665" rel="noopener noreferrer" target="_blank">3665(貿聯-KY)</a><a aria-label="在 TradingView 開啟 3665" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A3665" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3665"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/8150" rel="noopener noreferrer" target="_blank">8150(南茂)</a><a aria-label="在 TradingView 開啟 8150" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A8150" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 8150"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+</tr>
+<tr>
+<td>3MA</td>
+<td><span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2317" rel="noopener noreferrer" target="_blank">2317(鴻海)</a><a aria-label="在 TradingView 開啟 2317" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2317" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2317"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2332" rel="noopener noreferrer" target="_blank">2332(友訊)</a><a aria-label="在 TradingView 開啟 2332" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2332" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2332"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2388" rel="noopener noreferrer" target="_blank">2388(威盛)</a><a aria-label="在 TradingView 開啟 2388" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2388" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2388"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2441" rel="noopener noreferrer" target="_blank">2441(超豐)</a><a aria-label="在 TradingView 開啟 2441" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2441" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2441"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2449" rel="noopener noreferrer" target="_blank">2449(京元電子)</a><a aria-label="在 TradingView 開啟 2449" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2449" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2449"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2492" rel="noopener noreferrer" target="_blank">2492(華新科)</a><a aria-label="在 TradingView 開啟 2492" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2492" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2492"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2511" rel="noopener noreferrer" target="_blank">2511(太子)</a><a aria-label="在 TradingView 開啟 2511" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2511" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2511"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/2633" rel="noopener noreferrer" target="_blank">2633(台灣高鐵)</a><a aria-label="在 TradingView 開啟 2633" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A2633" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 2633"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3035" rel="noopener noreferrer" target="_blank">3035(智原)</a><a aria-label="在 TradingView 開啟 3035" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A3035" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3035"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3305" rel="noopener noreferrer" target="_blank">3305(昇貿)</a><a aria-label="在 TradingView 開啟 3305" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A3305" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3305"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3550" rel="noopener noreferrer" target="_blank">3550(聯穎)</a><a aria-label="在 TradingView 開啟 3550" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A3550" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3550"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3583" rel="noopener noreferrer" target="_blank">3583(辛耘)</a><a aria-label="在 TradingView 開啟 3583" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A3583" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3583"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/3645" rel="noopener noreferrer" target="_blank">3645(達邁)</a><a aria-label="在 TradingView 開啟 3645" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A3645" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 3645"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/4108" rel="noopener noreferrer" target="_blank">4108(懷特)</a><a aria-label="在 TradingView 開啟 4108" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A4108" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 4108"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/5434" rel="noopener noreferrer" target="_blank">5434(崇越)</a><a aria-label="在 TradingView 開啟 5434" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A5434" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 5434"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6239" rel="noopener noreferrer" target="_blank">6239(力成)</a><a aria-label="在 TradingView 開啟 6239" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A6239" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6239"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6285" rel="noopener noreferrer" target="_blank">6285(啟碁)</a><a aria-label="在 TradingView 開啟 6285" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A6285" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6285"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span> / <span class="stock-link-group"><a href="https://tw.stock.yahoo.com/quote/6834" rel="noopener noreferrer" target="_blank">6834(天二科技)</a><a aria-label="在 TradingView 開啟 6834" class="stock-tradingview-link" href="https://tw.tradingview.com/chart/44CZpBZM/?symbol=TWSE%3A6834" rel="noopener noreferrer" target="_blank" title="在 TradingView 開啟 6834"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 15l3.2-4 3.1 2.7 4.7-6.2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="6.5" cy="15" fill="currentColor" r="1.5"></circle><circle cx="9.7" cy="11" fill="currentColor" r="1.5"></circle><circle cx="12.8" cy="13.7" fill="currentColor" r="1.5"></circle><circle cx="17.5" cy="7.5" fill="currentColor" r="1.5"></circle></svg></a></span></td>
+</tr>
+</tbody>
+</table></div>
+
+    <footer class="mt-9 border-t border-slate-200 pt-5 text-sm text-slate-500">
+      本頁由 K-line 決策報告產生，內容僅作一般化研究輔助，不構成個人化投資建議或下單指令。
+    </footer>
+  </article>
+</main>
+
+<script src="../assets/stock-industry-links.js" defer></script>
+</body>
+</html>
