@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-09-01 08:35:05",
+  "generated_at": "2026-09-01 16:15:58",
   "market_signal_cards": [
     {
       "id": "risk-preference-indicator",
       "title": "風險偏好性指標",
-      "badge": "Neutral",
-      "tone": "yellow",
-      "status": "台股與美股資金風向未明顯偏攻擊或防守。",
-      "as_of": "2026-09-01 08:32 Asia/Taipei",
+      "badge": "Risk Off watch",
+      "tone": "red",
+      "status": "至少一個市場轉向防守，風險偏好降溫。",
+      "as_of": "2026-09-01 16:12 Asia/Taipei",
       "summary": "用台股電子 / 金融與美股 XLY / XLP 的相對強弱判斷資金偏攻擊或防守；20 日均線上下 2% 作為 Risk On / Off 緩衝。",
       "metrics": [
         {
           "label": "台股",
-          "value": "Neutral（0.8990 / MA20 0.8990）",
-          "note": "電子類 / 金融保險；距 MA20 -0.00%；資料日 2026-08-28。"
+          "value": "Risk Off（0.8793 / MA20 0.9010）",
+          "note": "電子類 / 金融保險；距 MA20 -2.40%；資料日 2026-09-01。"
         },
         {
           "label": "美股",
@@ -51,23 +51,23 @@
       "badge": "低到中風險",
       "tone": "yellow",
       "status": "正常拉回 / 低波動恐懼",
-      "as_of": "2026-09-01 08:32:06 CST",
-      "summary": "正常拉回 / 低波動恐懼；正常分批，不需恐慌。VIX 14.92，Fear & Greed unavailable，信用市場目前判讀為 stable。",
+      "as_of": "2026-09-01 16:12:43 CST",
+      "summary": "正常拉回 / 低波動恐懼；正常分批，不需恐慌。VIX 15.13，Fear & Greed unavailable，信用市場目前判讀為 stable。",
       "metrics": [
         {
           "label": "波動 / 情緒",
-          "value": "VIX 14.92；Fear & Greed unavailable",
+          "value": "VIX 15.13；Fear & Greed unavailable",
           "note": "calm / unavailable"
         },
         {
           "label": "廣度",
-          "value": "SPY -0.53%，RSP -0.93%，IWM -1.96%",
+          "value": "SPY -0.30%，RSP -0.93%，IWM -1.96%",
           "note": "觀察 RSP、IWM 是否跟上 SPY。"
         },
         {
           "label": "信用 / 跨資產",
           "value": "HY OAS unavailable%；HYG -0.08%，JNK -0.07%",
-          "note": "10Y 4.76%；DXY +0.20%；GLD -3.36%"
+          "note": "10Y 4.76%；DXY +0.17%；GLD -0.11%"
         }
       ],
       "sources": [
@@ -92,21 +92,21 @@
     {
       "id": "tw-market-light",
       "title": "台股市場燈號",
-      "badge": "綠燈",
-      "tone": "green",
-      "status": "盤勢偏建設性，可維持正常研究節奏，但仍以分批與條件確認為主。",
-      "as_of": "官方資料日 2026-08-31；目標日 2026-09-01",
-      "summary": "總分 3；盤勢偏建設性，可維持正常研究節奏，但仍以分批與條件確認為主。",
+      "badge": "黃燈",
+      "tone": "yellow",
+      "status": "可以看，但不要重壓。",
+      "as_of": "官方資料日 2026-09-01；目標日 2026-09-01",
+      "summary": "總分 1；可以看，但不要重壓。",
       "metrics": [
         {
           "label": "總分",
-          "value": "3",
+          "value": "1",
           "note": ">= 3 綠燈；-2 以下紅燈；其餘黃燈。"
         },
         {
           "label": "資料日期",
-          "value": "2026-08-31",
-          "note": "官方最新可用資料日為 2026-08-31，早於今天 2026-09-01。"
+          "value": "2026-09-01",
+          "note": "使用 TWSE MIS 盤中指數資料補入最新開盤日 2026-09-01；盤中 close 代表目前指數，不等於最終收盤。"
         },
         {
           "label": "條件數",
@@ -167,6 +167,16 @@
     }
   ],
   "action_reports": [
+    {
+      "lane": "tw_kline",
+      "title": "2026-09-01 台股 K 線警報掃描投資決策報告",
+      "run_id": "2026-09-01-tw-kline",
+      "data_date": "2026-09-01",
+      "generated_at": "2026-09-01 16:12:43",
+      "source_path": "reports/twStock/2026-09-01_tw_kline_decision_report.md",
+      "detail_path": "detail/2026-09-01_tw_kline_decision_report.html",
+      "funnel": "未標示"
+    },
     {
       "lane": "kol",
       "title": "2026-09-01 KOL 觀點、新聞重點與投資決策合併報告",
