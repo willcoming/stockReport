@@ -207,7 +207,7 @@
     return null;
   }
 
-  function createReportLink(doc, stock, textOnly = false) {
+  function createReportLink(doc, stock) {
     const link = doc.createElement("a");
     link.setAttribute("aria-label", `${REPORT_LINK_TITLE} ${stock.symbol}`);
     link.setAttribute("class", REPORT_LINK_CLASS);
@@ -215,10 +215,7 @@
     link.setAttribute("rel", "noopener noreferrer");
     link.setAttribute("target", "_blank");
     link.setAttribute("title", `${REPORT_LINK_TITLE}${stock.name ? `：${stock.symbol} ${stock.name}` : `：${stock.symbol}`}`);
-    if (textOnly) {
-      link.setAttribute("class", REPORT_LINK_CLASS + " stock-industry-report-text-link");
-      link.textContent = "研究";
-    } else link.innerHTML = REPORT_ICON_SVG;
+    link.innerHTML = REPORT_ICON_SVG;
     return link;
   }
 
@@ -335,7 +332,7 @@
       if (!doc) {
         continue;
       }
-      anchor.after(createReportLink(doc, stock, linkOnly));
+      anchor.after(createReportLink(doc, stock));
       if (!linkOnly) group.appendChild(createResearchDisclosure(doc, stock, group));
       if (group.dataset) {
         group.dataset.stockIndustryLinked = "1";
