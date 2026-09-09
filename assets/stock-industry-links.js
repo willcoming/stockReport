@@ -16,7 +16,10 @@
   const REGISTRY_RETRY_COUNT = 40;
   const REGISTRY_RETRY_DELAY_MS = 250;
   const REPORT_LINK_CLASS = "stock-industry-report-link";
-  const REPORT_LINK_TITLE = "開啟 Deep Research 報告";
+  const REPORT_LINK_TITLE = "開啟最新研究";
+  const researchStatus = root.StockResearchStatus || (typeof require === "function" ? require("./research-status.js") : null);
+  const VALID_RATINGS = new Set(["買入", "分批布局", "續抱", "觀察", "減碼/賣出"]);
+  let disclosureId = 0;
   const RESPONSIVE_DISCLOSURE_SELECTOR = "details[data-mobile-collapsible]";
   const DESKTOP_DISCLOSURE_MEDIA_QUERY = "(min-width: 768px)";
   const REPORT_ICON_SVG =
@@ -164,6 +167,12 @@
         symbol,
         name: compact(stock.name),
         url,
+        rating: VALID_RATINGS.has(stock.rating) && stock.rating_status === "verified" ? stock.rating : "",
+        rating_status: stock.rating_status === "verified" && VALID_RATINGS.has(stock.rating) ? "verified" : "needs_review",
+        rating_issue_labels: Array.isArray(stock.rating_issue_labels) ? stock.rating_issue_labels.map(compact) : [],
+        latest_report_date: compact(stock.latest_report_date),
+        valid_until: compact(stock.valid_until),
+        content_hash: compact(stock.content_hash),
       };
       keysForSymbol(market, symbol).forEach((key) => {
         stocks[key] = record;
@@ -208,6 +217,82 @@
     return link;
   }
 
+  function researchPresentation(stock, context = {}, today) {
+    const fresh = researchStatus?.freshness(stock.valid_until, stock.latest_report_date, today) || "unknown";
+    const notes = [];
+    let label = `研究：${stock.rating}`;
+    let tone = "neutral";
+    if (stock.rating_status !== "verified" || !VALID_RATINGS.has(stock.rating)) {
+      label = "評級待核對";
+      tone = "warning";
+      notes.push(...(stock.rating_issue_labels?.length ? stock.rating_issue_labels : ["尚無可確認的正文與評級一致性資料。"]));
+    } else if (fresh !== "valid") {
+      label = fresh === "expired" ? "研究已過期" : "有效期未確認";
+      tone = "warning";
+      notes.push("研究日期或有效期未支持將這份報告視為當日研究依據。");
+    } else {
+      const category = context.sourceCategory;
+      const rating = stock.rating;
+      const entry = context.sourceLane === "kol" ? "來源列為現在可買" : "技術出現買點";
+      if (category === "ready" && rating === "觀察") notes.push(`${entry}；研究尚未支持新增部位。`);
+      else if (category === "ready" && rating === "續抱") notes.push(`${entry}；續抱不等於新增部位。`);
+      else if (["ready", "wait"].includes(category) && rating === "減碼/賣出") notes.push("來源訊號與研究風險判斷存在分歧。");
+      else if (["wait", "observe"].includes(category) && ["買入", "分批布局"].includes(rating)) notes.push("研究偏多；來源買點仍待確認。");
+      else if (category === "exclude" && ["買入", "分批布局"].includes(rating)) notes.push("研究偏多；來源仍有排除條件。");
+      if (notes.length) tone = "difference";
+    }
+    if (researchStatus?.validDate(context.sourceDate) && researchStatus?.validDate(stock.latest_report_date) && stock.latest_report_date > context.sourceDate) {
+      notes.push(`研究更新晚於來源報告（${context.sourceDate}），不代表原報告當時引用的結論。`);
+    }
+    notes.push("有效期僅表示報告標示期限，不表示行情已更新。");
+    return { label, tone, notes, freshness: fresh };
+  }
+
+  function createResearchDisclosure(doc, stock, group) {
+    const wrapper = doc.createElement("span");
+    wrapper.setAttribute("class", "stock-research-status");
+    const button = doc.createElement("button");
+    button.setAttribute("class", "stock-research-status-toggle");
+    button.setAttribute("type", "button");
+    button.setAttribute("aria-expanded", "false");
+    const panel = doc.createElement("span");
+    panel.setAttribute("class", "stock-research-status-panel");
+    panel.setAttribute("id", `stock-research-info-${++disclosureId}`);
+    panel.hidden = true;
+    button.setAttribute("aria-controls", panel.getAttribute("id"));
+    const summary = doc.createElement("span");
+    summary.setAttribute("class", "stock-research-status-notes");
+    const dates = doc.createElement("span");
+    dates.setAttribute("class", "stock-research-status-dates");
+    const update = () => {
+      const view = researchPresentation(stock, group.dataset || {});
+      button.textContent = view.label + " ▾";
+      button.setAttribute("data-tone", view.tone);
+      button.setAttribute("aria-label", `${stock.symbol} ${view.label}，展開最新研究說明`);
+      dates.textContent = `最新研究日：${stock.latest_report_date || "未標示"}；有效至：${stock.valid_until || "未標示"}（${view.freshness === "expired" ? "已過期" : view.freshness === "valid" ? "標示期限內" : "有效期未確認"}）`;
+      summary.textContent = view.notes.join("\n");
+    };
+    update();
+    panel.appendChild(dates);
+    panel.appendChild(summary);
+    button.addEventListener?.("click", () => {
+      update();
+      panel.hidden = !panel.hidden;
+      button.setAttribute("aria-expanded", String(!panel.hidden));
+    });
+    wrapper.addEventListener?.("keydown", (event) => {
+      if (event.key === "Escape") {
+        panel.hidden = true;
+        button.setAttribute("aria-expanded", "false");
+        button.focus();
+      }
+    });
+    doc.addEventListener?.("stock-research-date:refresh", update);
+    wrapper.appendChild(button);
+    wrapper.appendChild(panel);
+    return wrapper;
+  }
+
   function decorateStockLinkGroups(rootNode, registry) {
     const normalized = registry && registry.stocks ? registry : normalizeRegistry(registry);
     const groups = Array.from(rootNode.querySelectorAll(".stock-link-group"));
@@ -227,6 +312,7 @@
         continue;
       }
       tradingViewLink.after(createReportLink(doc, stock));
+      group.appendChild(createResearchDisclosure(doc, stock, group));
       if (group.dataset) {
         group.dataset.stockIndustryLinked = "1";
       }
@@ -324,6 +410,7 @@
     keysForSymbol,
     stockKeysFromHref,
     normalizeRegistry,
+    researchPresentation,
     decorateStockLinkGroups,
     syncResponsiveDisclosures,
     init,
