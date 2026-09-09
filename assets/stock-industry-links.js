@@ -315,6 +315,10 @@
       const linkOnly = group.dataset?.researchDisplay === "link-only";
       const stock = findStockForGroup(group, normalized);
       const existingLink = group.querySelector(`.${REPORT_LINK_CLASS}`);
+      if (linkOnly && group.dataset?.decisionLayer === "research-confirmed") {
+        group.hidden = !canLinkFreshResearch(stock, group.dataset, today) || !["買入", "分批布局"].includes(stock?.rating);
+        if (group.hidden) { existingLink?.remove(); if (group.dataset) delete group.dataset.stockIndustryLinked; continue; }
+      }
       if (linkOnly && !canLinkFreshResearch(stock, group.dataset, today)) {
         existingLink?.remove();
         if (group.dataset) delete group.dataset.stockIndustryLinked;
