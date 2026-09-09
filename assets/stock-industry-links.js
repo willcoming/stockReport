@@ -173,6 +173,8 @@
         latest_report_date: compact(stock.latest_report_date),
         valid_until: compact(stock.valid_until),
         content_hash: compact(stock.content_hash),
+        source_report_sha256: compact(stock.source_report_sha256),
+        research_run_id: compact(stock.research_run_id),
       };
       keysForSymbol(market, symbol).forEach((key) => {
         stocks[key] = record;
@@ -205,7 +207,7 @@
     return null;
   }
 
-  function createReportLink(doc, stock) {
+  function createReportLink(doc, stock, textOnly = false) {
     const link = doc.createElement("a");
     link.setAttribute("aria-label", `${REPORT_LINK_TITLE} ${stock.symbol}`);
     link.setAttribute("class", REPORT_LINK_CLASS);
@@ -213,7 +215,10 @@
     link.setAttribute("rel", "noopener noreferrer");
     link.setAttribute("target", "_blank");
     link.setAttribute("title", `${REPORT_LINK_TITLE}${stock.name ? `：${stock.symbol} ${stock.name}` : `：${stock.symbol}`}`);
-    link.innerHTML = REPORT_ICON_SVG;
+    if (textOnly) {
+      link.setAttribute("class", REPORT_LINK_CLASS + " stock-industry-report-text-link");
+      link.textContent = "研究";
+    } else link.innerHTML = REPORT_ICON_SVG;
     return link;
   }
 
@@ -293,26 +298,45 @@
     return wrapper;
   }
 
-  function decorateStockLinkGroups(rootNode, registry) {
+  function canLinkFreshResearch(stock, context = {}, today) {
+    return Boolean(stock && researchStatus?.validDate(context.researchDate)
+      && /^[a-f0-9]{64}$/.test(context.researchSourceHash || "")
+      && /^[a-f0-9]{32}$/.test(context.researchRunId || "")
+      && stock.research_run_id === context.researchRunId
+      && stock.source_report_sha256 === context.researchSourceHash
+      && stock.latest_report_date === context.researchDate
+      && stock.rating_status === "verified" && VALID_RATINGS.has(stock.rating)
+      && researchStatus.freshness(stock.valid_until, stock.latest_report_date, today) === "valid");
+  }
+
+  function decorateStockLinkGroups(rootNode, registry, today) {
     const normalized = registry && registry.stocks ? registry : normalizeRegistry(registry);
     const groups = Array.from(rootNode.querySelectorAll(".stock-link-group"));
     let inserted = 0;
 
     for (const group of groups) {
-      if (group.dataset?.stockIndustryLinked === "1" || group.querySelector(`.${REPORT_LINK_CLASS}`)) {
+      const linkOnly = group.dataset?.researchDisplay === "link-only";
+      const stock = findStockForGroup(group, normalized);
+      const existingLink = group.querySelector(`.${REPORT_LINK_CLASS}`);
+      if (linkOnly && !canLinkFreshResearch(stock, group.dataset, today)) {
+        existingLink?.remove();
+        if (group.dataset) delete group.dataset.stockIndustryLinked;
         continue;
       }
-      const stock = findStockForGroup(group, normalized);
+      if (group.dataset?.stockIndustryLinked === "1" || existingLink) {
+        continue;
+      }
       const tradingViewLink = group.querySelector(".stock-tradingview-link");
-      if (!stock || !tradingViewLink) {
+      const anchor = tradingViewLink || (linkOnly ? group.querySelector("a[href]") : null);
+      if (!stock || !anchor) {
         continue;
       }
       const doc = group.ownerDocument || rootNode.ownerDocument || root.document;
       if (!doc) {
         continue;
       }
-      tradingViewLink.after(createReportLink(doc, stock));
-      group.appendChild(createResearchDisclosure(doc, stock, group));
+      anchor.after(createReportLink(doc, stock, linkOnly));
+      if (!linkOnly) group.appendChild(createResearchDisclosure(doc, stock, group));
       if (group.dataset) {
         group.dataset.stockIndustryLinked = "1";
       }
@@ -395,6 +419,7 @@
     };
 
     onDomReady(doc, decorateWhenReady);
+    doc.addEventListener?.("stock-research-date:refresh", decorateWhenReady);
     root.addEventListener?.(READY_EVENT, decorateWhenReady);
     if (!root.STOCK_INDUSTRY_REPORTS) {
       loadRegistryScript(doc, registryScriptUrl);
@@ -411,6 +436,7 @@
     stockKeysFromHref,
     normalizeRegistry,
     researchPresentation,
+    canLinkFreshResearch,
     decorateStockLinkGroups,
     syncResponsiveDisclosures,
     init,
