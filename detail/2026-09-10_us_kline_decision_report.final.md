@@ -785,3 +785,26 @@
   - Morningstar profile: https://www.morningstar.com/stocks/xnys/{symbol}/quote
   - Yahoo Finance profile: https://finance.yahoo.com/quote/{symbol}/profile/
   - Yahoo Finance 個股頁: https://finance.yahoo.com/quote/{symbol}
+
+## 產業前景與題材查核摘要
+
+此段只做公司級產業前景與炒作風險查核，不改動原 K 線買賣分類。
+
+| K 線分類 | 代號 | 公司 | 產業 Gate | 炒作風險 | 成長驅動 | 核心判斷 | 缺失證據 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 現在可買 | HGTY | Hagerty, Inc. Class A Common Stock | 炒作或擁擠交易風險偏高 | 高 | 整合買入／KDJ 一般黃金交叉；收盤 13.49；收盤位置 100.0%；振幅 10.4%；上影線 0.0%；距日低 10.4%；成交量 7,475,485；估算成交金額USD 100,844,291 | 題材/價格/新聞熱度偏熱，但缺少公司級官方營收、訂單或財報證據支撐。 | SEC company tickers 未命中或 SEC_USER_AGENT 未設定；近 7 日公開新聞熱度未命中或未抓取 |
+| 現在可買 | AAPL | Apple Inc. - Common Stock | 目前偏題材，缺公司級落地證據 | 低 | Legacy 買點／三均線買點／整合買入；收盤 326.57；收盤位置 98.9%；振幅 3.1%；上影線 1.1%；距日低 3.1%；成交量 69,820,744；估算成交金額USD 22,801,360,879 | 目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。 | SEC company tickers 未命中或 SEC_USER_AGENT 未設定；近 7 日公開新聞熱度未命中或未抓取 |
+| 現在可買 | ATAI | AtaiBeckley Inc. - Common Stock | 目前偏題材，缺公司級落地證據 | 低 | AI / 資料中心 | 目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。 | SEC company tickers 未命中或 SEC_USER_AGENT 未設定；近 7 日公開新聞熱度未命中或未抓取 |
+| 現在可買 | BAH | Booz Allen Hamilton Holding Corporation Common Stock | 目前偏題材，缺公司級落地證據 | 低 | Legacy 買點／三均線買點／整合買入／KDJ 一般黃金交叉；收盤 75.68；收盤位置 89.0%；振幅 4.5%；上影線 11.0%；距日低 4.0%；成交量 2,340,590；估算成交金額USD 177,135,852 | 目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。 | SEC company tickers 未命中或 SEC_USER_AGENT 未設定；近 7 日公開新聞熱度未命中或未抓取 |
+| 現在可買 | BMRN | BioMarin Pharmaceutical Inc. - Common Stock | 目前偏題材，缺公司級落地證據 | 低 | Legacy 買點／三均線買點／整合買入／KDJ 一般黃金交叉；收盤 65.51；收盤位置 96.0%；振幅 3.1%；上影線 4.0%；距日低 3.0%；成交量 2,202,726；估算成交金額USD 144,300,585 | 目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。 | SEC company tickers 未命中或 SEC_USER_AGENT 未設定；近 7 日公開新聞熱度未命中或未抓取 |
+| 現在可買 | DIS | Walt Disney Company (The) Common Stock | 目前偏題材，缺公司級落地證據 | 低 | Legacy 買點／三均線買點／整合買入／KDJ 低檔黃金交叉；收盤 105.82；收盤位置 98.3%；振幅 2.2%；上影線 1.7%；距日低 2.1%；成交量 7,387,622；估算成交金額USD 781,758,158 | 目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。 | SEC company tickers 未命中或 SEC_USER_AGENT 未設定；近 7 日公開新聞熱度未命中或未抓取 |
+| 現在可買 | DVN | Devon Energy Corporation Common Stock | 目前偏題材，缺公司級落地證據 | 低 | MACD黃金交叉＋KDJ多方藍色箭頭；收盤 50.02；收盤位置 98.4%；振幅 3.1%；上影線 1.6%；距日低 3.0%；成交量 15,771,457；估算成交金額USD 788,888,286 | 目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。 | SEC company tickers 未命中或 SEC_USER_AGENT 未設定；近 7 日公開新聞熱度未命中或未抓取 |
+| 現在可買 | EXE | Expand Energy Corporation - Common Stock | 目前偏題材，缺公司級落地證據 | 低 | Legacy 買點／三均線買點／整合買入；收盤 96.87；收盤位置 71.2%；振幅 3.0%；上影線 2.1%；距日低 2.1%；成交量 2,199,478；估算成交金額USD 213,063,440 | 目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。 | SEC company tickers 未命中或 SEC_USER_AGENT 未設定；近 7 日公開新聞熱度未命中或未抓取 |
+| 現在可買 | GGB | Gerdau S.A. Common Stock | 目前偏題材，缺公司級落地證據 | 低 | Legacy 買點；收盤 5.1；收盤位置 93.2%；振幅 4.3%；上影線 6.8%；距日低 4.0%；成交量 11,392,890；估算成交金額USD 58,103,738 | 目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。 | SEC company tickers 未命中或 SEC_USER_AGENT 未設定；近 7 日公開新聞熱度未命中或未抓取 |
+| 現在可買 | GM | General Motors Company Common Stock | 目前偏題材，缺公司級落地證據 | 低 | Legacy 買點／三均線買點／整合買入；收盤 86.12；收盤位置 98.2%；振幅 3.9%；上影線 1.8%；距日低 3.8%；成交量 6,139,106；估算成交金額USD 528,699,826 | 目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。 | SEC company tickers 未命中或 SEC_USER_AGENT 未設定；近 7 日公開新聞熱度未命中或未抓取 |
+| 現在可買 | GME | GameStop Corporation Common Stock | 目前偏題材，缺公司級落地證據 | 低 | 三均線買點；收盤 20.39；收盤位置 85.9%；振幅 4.5%；上影線 14.1%；距日低 3.9%；成交量 10,519,071；估算成交金額USD 214,483,851 | 目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。 | SEC company tickers 未命中或 SEC_USER_AGENT 未設定；近 7 日公開新聞熱度未命中或未抓取 |
+| 現在可買 | MET | MetLife, Inc. Common Stock | 目前偏題材，缺公司級落地證據 | 低 | Legacy 買點／三均線買點／整合買入；收盤 96.78；收盤位置 85.5%；振幅 0.9%；上影線 14.5%；距日低 0.8%；成交量 2,184,672；估算成交金額USD 211,432,553 | 目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。 | SEC company tickers 未命中或 SEC_USER_AGENT 未設定；近 7 日公開新聞熱度未命中或未抓取 |
+| 現在可買 | NTSK | Netskope, Inc. - Class A Common Stock | 目前偏題材，缺公司級落地證據 | 低 | Legacy 買點；收盤 15.1；收盤位置 75.7%；振幅 7.8%；上影線 24.3%；距日低 5.9%；成交量 5,606,110；估算成交金額USD 84,652,263 | 目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。 | SEC company tickers 未命中或 SEC_USER_AGENT 未設定；近 7 日公開新聞熱度未命中或未抓取 |
+| 現在可買 | RDDT | Reddit, Inc. Class A Common Stock | 目前偏題材，缺公司級落地證據 | 低 | Legacy 買點／三均線買點／整合買入／KDJ 一般黃金交叉；收盤 155.34；收盤位置 86.7%；振幅 7.8%；上影線 13.3%；距日低 6.8%；成交量 5,781,958；估算成交金額USD 898,169,335 | 目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。 | SEC company tickers 未命中或 SEC_USER_AGENT 未設定；近 7 日公開新聞熱度未命中或未抓取 |
+| 現在可買 | S | SentinelOne, Inc. Class A Common Stock | 目前偏題材，缺公司級落地證據 | 低 | 三均線買點／整合買入；收盤 19.81；收盤位置 67.4%；振幅 4.9%；上影線 32.6%；距日低 3.3%；成交量 6,629,073；估算成交金額USD 131,321,933 | 目前主要是題材或來源敘事，尚未看到足夠公司級落地證據。 | SEC company tickers 未命中或 SEC_USER_AGENT 未設定；近 7 日公開新聞熱度未命中或未抓取 |
+| ... | ... | ... | 另有 4 檔 | ... | ... | 詳見 industry thesis JSON/MD | ... |
