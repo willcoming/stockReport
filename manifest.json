@@ -42,7 +42,7 @@
       "report_sha256": "68634a159be0af8f38f79c896ebc9ea84fff1d7a1e36652820f2a38f77dbfb31"
     }
   ],
-  "generated_at": "2026-09-10 07:28:06",
+  "generated_at": "2026-09-11 06:44:10",
   "market_signal_cards": [
     {
       "id": "risk-preference-indicator",
@@ -91,11 +91,11 @@
     {
       "id": "us-equity-five-signals",
       "title": "美股 5 信號",
-      "badge": "unavailable",
+      "badge": "資料不完整",
       "tone": "neutral",
-      "status": "必要來源未通過已完成交易日驗證",
+      "status": "CNN Fear & Greed 來源拒絕存取",
       "as_of": "2026-09-08",
-      "summary": "部分必要來源不足或日期未對齊；正常拉回 / 低波動恐懼；正常分批，不需恐慌。VIX 15.72，Fear & Greed unavailable，信用市場目前判讀為 stable。",
+      "summary": "驗證交易日：2026-09-08。CNN Fear & Greed 來源拒絕存取。完整風險判讀暫停；已取得的指標可於下方查看。",
       "metrics": [
         {
           "label": "波動 / 情緒",
@@ -214,6 +214,26 @@
     }
   ],
   "action_reports": [
+    {
+      "lane": "us_kline",
+      "title": "2026-09-10 美股 K 線警報掃描投資決策報告",
+      "run_id": "2026-09-10-us-kline",
+      "data_date": "2026-09-10",
+      "generated_at": "2026-09-11 06:41:29",
+      "source_path": "reports/usStock/2026-09-10_us_kline_decision_report.md",
+      "detail_path": "detail/2026-09-10_us_kline_decision_report.html",
+      "funnel": "未標示"
+    },
+    {
+      "lane": "tw_kline",
+      "title": "2026-09-10 台股 K 線警報掃描投資決策報告",
+      "run_id": "2026-09-10-tw-kline",
+      "data_date": "2026-09-10",
+      "generated_at": "2026-09-10 16:12:01",
+      "source_path": "reports/twStock/2026-09-10_tw_kline_decision_report.md",
+      "detail_path": "detail/2026-09-10_tw_kline_decision_report.html",
+      "funnel": "未標示"
+    },
     {
       "lane": "us_kline",
       "title": "2026-09-09 美股 K 線警報掃描投資決策報告",
@@ -2168,7 +2188,7 @@
   "source_snapshot": {
     "schema_version": 1,
     "kind": "center",
-    "source_hash": "279177d2a900838ea42823a88955d7df872de4afa4fc4effabaf49682bd81361",
+    "source_hash": "6ddae7d64c77fc4b771f32039d5f23f043cda82c87a7db2c8be5900ce998ae2c",
     "files": {
       "industry-thesis/2026-06-24_industry_thesis.md": "598410b749a11e6d079da60de54d95ec89b5a335a077ac8d843504ee27c8d5ad",
       "industry-thesis/2026-06-25_industry_thesis.md": "9e74589853657de2c802ea97a9140c1928ba12b513fbd249d64b2ea11a2bdeb6",
@@ -47429,6 +47449,7 @@
       "twStock/2026-09-07_tw_kline_decision_report.md": "03df133d1c1a08f391d38a887038da2a8635bd598260309fc919154aac6dc614",
       "twStock/2026-09-08_tw_kline_decision_report.md": "1a8f14b5f184c878db8db2b16e964cf5a9189aa7ce1a0df97371f31c200934cb",
       "twStock/2026-09-09_tw_kline_decision_report.md": "4b49223b81c1f1973ee2fdcf662fe0d9c88fdbf166724fc4c3467107a4ca133b",
+      "twStock/2026-09-10_tw_kline_decision_report.md": "fabaf4f553143de1a0750a05007fc516fe4bec5c9a59142bc8a61daeb5447f7d",
       "us-premarket/2026-09-08/163558-025ad478/versions/163558-025ad478-171830-271197/integrity.json": "05968b995e46f64ce3dcac340dbee8ae50978a3c0af740d0b9805f3752fdc9c3",
       "us-premarket/2026-09-08/163558-025ad478/versions/163558-025ad478-171830-271197/report.json": "68634a159be0af8f38f79c896ebc9ea84fff1d7a1e36652820f2a38f77dbfb31",
       "us-premarket/2026-09-08/163558-025ad478/versions/163558-025ad478-171830-271197/report.md": "d1af0879b883d46ad658f5acf8bf3c99aa51fccb6ffcddf166674475ab720461",
@@ -47487,10 +47508,33 @@
       "usStock/2026-09-03_us_kline_decision_report.md": "a5ed7439aec42d12093ef78666430314a53710705869f3c2cc2ff7c3b85037c3",
       "usStock/2026-09-04_us_kline_decision_report.md": "3c81a2b4962fd6fd4ae517e94d663a0aa6e6efb37dae0b7577bacf0ac7dbc808",
       "usStock/2026-09-08_us_kline_decision_report.md": "e71f6f9218f5d2726c3fddd399572808267e4ecfe9295d014ad11dc5127376d7",
-      "usStock/2026-09-09_us_kline_decision_report.md": "7a38b239472e2512bc4a3e2b970fde6aae4db20e8cc4c558bcc102b3e2dbde09"
+      "usStock/2026-09-09_us_kline_decision_report.md": "7a38b239472e2512bc4a3e2b970fde6aae4db20e8cc4c558bcc102b3e2dbde09",
+      "usStock/2026-09-10_us_kline_decision_report.md": "6a01331e43952ccd6f89fc85bf6a9785f9ab92c030f423d8380db1f1d6f760c3"
     }
   },
   "final_decision_reports": [
+    {
+      "source_path": "reports/usStock/2026-09-10_us_kline_decision_report.md",
+      "ledger_path": "detail/2026-09-10_us_kline_decision_report.final.json",
+      "markdown_path": "detail/2026-09-10_us_kline_decision_report.final.md",
+      "counts": {
+        "observe": 94,
+        "exclude": 7
+      },
+      "source_report_sha256": "6a01331e43952ccd6f89fc85bf6a9785f9ab92c030f423d8380db1f1d6f760c3",
+      "research_run_id": ""
+    },
+    {
+      "source_path": "reports/twStock/2026-09-10_tw_kline_decision_report.md",
+      "ledger_path": "detail/2026-09-10_tw_kline_decision_report.final.json",
+      "markdown_path": "detail/2026-09-10_tw_kline_decision_report.final.md",
+      "counts": {
+        "observe": 71,
+        "exclude": 23
+      },
+      "source_report_sha256": "fabaf4f553143de1a0750a05007fc516fe4bec5c9a59142bc8a61daeb5447f7d",
+      "research_run_id": ""
+    },
     {
       "source_path": "reports/usStock/2026-09-09_us_kline_decision_report.md",
       "ledger_path": "detail/2026-09-09_us_kline_decision_report.final.json",
