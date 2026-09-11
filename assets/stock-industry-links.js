@@ -296,6 +296,16 @@
   }
 
   function canLinkFreshResearch(stock, context = {}, today) {
+    if (context.researchSelection === "validated-artifact") {
+      return Boolean(stock && researchStatus?.validDate(context.selectedResearchDate)
+        && /^[a-f0-9]{64}$/.test(context.researchSourceHash || "")
+        && /^[a-f0-9]{32}$/.test(context.researchRunId || "")
+        && /^[a-f0-9]{64}$/.test(context.researchContentHash || "")
+        && stock.content_hash === context.researchContentHash
+        && stock.latest_report_date === context.selectedResearchDate
+        && stock.rating_status === "verified" && VALID_RATINGS.has(stock.rating)
+        && researchStatus.freshness(stock.valid_until, stock.latest_report_date, today) === "valid");
+    }
     return Boolean(stock && researchStatus?.validDate(context.researchDate)
       && /^[a-f0-9]{64}$/.test(context.researchSourceHash || "")
       && /^[a-f0-9]{32}$/.test(context.researchRunId || "")
