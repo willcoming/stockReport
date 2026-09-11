@@ -42,7 +42,7 @@
       "report_sha256": "68634a159be0af8f38f79c896ebc9ea84fff1d7a1e36652820f2a38f77dbfb31"
     }
   ],
-  "generated_at": "2026-09-11 08:12:29",
+  "generated_at": "2026-09-11 21:43:31",
   "market_signal_cards": [
     {
       "id": "risk-preference-indicator",
@@ -50,18 +50,18 @@
       "badge": "Risk Off watch",
       "tone": "red",
       "status": "至少一個市場轉向防守，風險偏好降溫。",
-      "as_of": "台股資料日 2026-09-08；美股資料日 2026-09-08",
+      "as_of": "台股資料日 2026-09-11；美股資料日 2026-09-10",
       "summary": "用台股電子 / 金融與美股 XLY / XLP 的相對強弱判斷資金偏攻擊或防守；20 日均線上下 2% 作為 Risk On / Off 緩衝。",
       "metrics": [
         {
           "label": "台股",
-          "value": "Risk Off（0.8387 / MA20 0.8892）",
-          "note": "電子類 / 金融保險；距 MA20 -5.68%；資料日 2026-09-08。"
+          "value": "Risk Off（0.8197 / MA20 0.8771）",
+          "note": "電子類 / 金融保險；距 MA20 -6.54%；資料日 2026-09-11。"
         },
         {
           "label": "美股",
-          "value": "Neutral（1.3567 / MA20 1.3670）",
-          "note": "XLY / XLP；距 MA20 -0.76%；資料日 2026-09-08。"
+          "value": "Neutral（1.3475 / MA20 1.3624）",
+          "note": "XLY / XLP；距 MA20 -1.10%；資料日 2026-09-10。"
         },
         {
           "label": "判讀規則",
@@ -91,26 +91,26 @@
     {
       "id": "us-equity-five-signals",
       "title": "美股 5 信號",
-      "badge": "資料不完整",
-      "tone": "neutral",
-      "status": "CNN Fear & Greed 來源拒絕存取",
-      "as_of": "2026-09-08",
-      "summary": "驗證交易日：2026-09-08。CNN Fear & Greed 來源拒絕存取。完整風險判讀暫停；已取得的指標可於下方查看。",
+      "badge": "低到中風險",
+      "tone": "yellow",
+      "status": "正常拉回 / 低波動恐懼",
+      "as_of": "2026-09-10",
+      "summary": "正常拉回 / 低波動恐懼；正常分批，不需恐慌。VIX 17.84，Fear & Greed 33.26，信用市場目前判讀為 stable。",
       "metrics": [
         {
           "label": "波動 / 情緒",
-          "value": "VIX 15.72；Fear & Greed unavailable",
-          "note": "calm / unavailable"
+          "value": "VIX 17.84；Fear & Greed 33.26",
+          "note": "calm / fear；Fear & Greed 使用第三方 CNN 資料鏡像。"
         },
         {
           "label": "廣度",
-          "value": "SPY -0.55%，RSP -1.04%，IWM -0.45%",
+          "value": "SPY -0.60%，RSP -0.68%，IWM -1.01%",
           "note": "觀察 RSP、IWM 是否跟上 SPY。"
         },
         {
           "label": "信用 / 跨資產",
-          "value": "HY OAS 2.68%；HYG -0.05%，JNK -0.06%",
-          "note": "10Y 4.81%；DXY -0.33%；GLD -1.73%；HY OAS 宏觀參考觀察日 2026-09-07。"
+          "value": "HY OAS 2.71%；HYG -0.46%，JNK -0.43%",
+          "note": "10Y 4.94%；DXY +0.32%；GLD -1.73%；HY OAS 宏觀參考觀察日 2026-09-09。"
         }
       ],
       "sources": [
@@ -129,27 +129,31 @@
         {
           "label": "FRED 10Y",
           "url": "https://fred.stlouisfed.org/series/DGS10"
+        },
+        {
+          "label": "CNN 資料備援鏡像（第三方）",
+          "url": "https://raw.githubusercontent.com/whit3rabbit/fear-greed-data/main/datasets/cnn_fear_greed.csv"
         }
       ]
     },
     {
       "id": "tw-market-light",
       "title": "台股市場燈號",
-      "badge": "黃燈",
-      "tone": "yellow",
-      "status": "可以看，但不要重壓。",
-      "as_of": "官方資料日 2026-09-08；目標日 2026-09-08",
-      "summary": "總分 1；可以看，但不要重壓。",
+      "badge": "unavailable",
+      "tone": "neutral",
+      "status": "資料未通過已完成交易日驗證",
+      "as_of": "官方資料日 2026-09-11；目標日 2026-09-11",
+      "summary": "總分 -2；盤勢偏弱，優先控風險，避免擴大高波動部位。",
       "metrics": [
         {
           "label": "總分",
-          "value": "1",
+          "value": "-2",
           "note": ">= 3 綠燈；-2 以下紅燈；其餘黃燈。"
         },
         {
           "label": "資料日期",
-          "value": "2026-09-08",
-          "note": "官方最新可用資料日為 2026-09-08，早於今天 2026-09-09。"
+          "value": "2026-09-11",
+          "note": "使用 TAIFEX 首頁商品行情補入 TX 期貨即時快照 2026-09-11；此來源提供現價、漲跌與成交量，不提供完整 OHLC。"
         },
         {
           "label": "條件數",
@@ -188,8 +192,8 @@
         },
         {
           "label": "領先 / 同時",
-          "value": "104.63 / 106.80",
-          "note": "月增0.72% / 月增0.36%；2026-07資料，2026-08-27发布。"
+          "value": "104.63 / 106.8",
+          "note": "上升 / 上升"
         },
         {
           "label": "構成項目",
@@ -205,15 +209,21 @@
         {
           "label": "NDC 景氣指標查詢系統",
           "url": "https://index.ndc.gov.tw/n/zh_tw"
-        },
-        {
-          "label": "NDC 115年7月份景氣概況新聞稿",
-          "url": "https://www.ndc.gov.tw/nc_332_40404"
         }
       ]
     }
   ],
   "action_reports": [
+    {
+      "lane": "tw_kline",
+      "title": "2026-09-11 台股 K 線警報掃描投資決策報告",
+      "run_id": "2026-09-11-tw-kline",
+      "data_date": "2026-09-11",
+      "generated_at": "2026-09-11 16:12:05",
+      "source_path": "reports/twStock/2026-09-11_tw_kline_decision_report.md",
+      "detail_path": "detail/2026-09-11_tw_kline_decision_report.html",
+      "funnel": "未標示"
+    },
     {
       "lane": "us_kline",
       "title": "2026-09-10 美股 K 線警報掃描投資決策報告",
@@ -2188,7 +2198,7 @@
   "source_snapshot": {
     "schema_version": 1,
     "kind": "center",
-    "source_hash": "94efaa9db2beaf1adc8c8759babd9ac821ede0122197d37c814c60f75b39ebe6",
+    "source_hash": "20aafad01ccc1f32ceaca49a9484a3fbe819833c37ba30f3b64f0733b03afdf5",
     "files": {
       "industry-thesis/2026-06-24_industry_thesis.md": "598410b749a11e6d079da60de54d95ec89b5a335a077ac8d843504ee27c8d5ad",
       "industry-thesis/2026-06-25_industry_thesis.md": "9e74589853657de2c802ea97a9140c1928ba12b513fbd249d64b2ea11a2bdeb6",
@@ -2260,7 +2270,7 @@
       "industry-thesis/2026-09-08_industry_thesis.md": "0b749b19c53361fc58699dee1502c61caac8e59ad576f8b513430a42b5274e7b",
       "industry-thesis/2026-09-09_industry_thesis.md": "ba3e994b903ff74acf1f824c8b0d1fa89f12d56689e6e6da78b92a3d649af061",
       "industry-thesis/2026-09-10_industry_thesis.md": "c05692b11a2c6455a75bdecb3d3499b12db9c62d9e3b4b7bccf0cc087a42f412",
-      "market-signals/latest_market_signal_cards.json": "4e5d88f15824bf8f8faf4c5d54f7757d1815d24bbe3533b86dacf7959d0c8b92",
+      "market-signals/latest_market_signal_cards.json": "2b65803c75f8cb84c0a12330e306cb659182287d7989502d22857f1d6fc633c5",
       "news/2026-06-24-0700_kol_news_decision_report.md": "c61f91d82a1d8efb8cb09c8b564e35a89acc85eedbd1b4fa5587c2aca09722f1",
       "news/2026-06-24_kol_news_decision_report.md": "87978e7d111f6ceb3aeeb5fc0cbd07aa838bffa864a14e7b4587a43c0720ab85",
       "news/2026-06-25-0732_kol_news_decision_report.md": "492c150ad74766087ca277b8e0ecb2d2c75741d578ee9a7575677fda639da435",
@@ -47755,6 +47765,7 @@
       "twStock/2026-09-08_tw_kline_decision_report.md": "1a8f14b5f184c878db8db2b16e964cf5a9189aa7ce1a0df97371f31c200934cb",
       "twStock/2026-09-09_tw_kline_decision_report.md": "4b49223b81c1f1973ee2fdcf662fe0d9c88fdbf166724fc4c3467107a4ca133b",
       "twStock/2026-09-10_tw_kline_decision_report.md": "fabaf4f553143de1a0750a05007fc516fe4bec5c9a59142bc8a61daeb5447f7d",
+      "twStock/2026-09-11_tw_kline_decision_report.md": "7fce3b8d1a71bcbb99248709f795de469cf5cf383d68b56ddd248357d1733903",
       "us-premarket/2026-09-08/163558-025ad478/versions/163558-025ad478-171830-271197/integrity.json": "05968b995e46f64ce3dcac340dbee8ae50978a3c0af740d0b9805f3752fdc9c3",
       "us-premarket/2026-09-08/163558-025ad478/versions/163558-025ad478-171830-271197/report.json": "68634a159be0af8f38f79c896ebc9ea84fff1d7a1e36652820f2a38f77dbfb31",
       "us-premarket/2026-09-08/163558-025ad478/versions/163558-025ad478-171830-271197/report.md": "d1af0879b883d46ad658f5acf8bf3c99aa51fccb6ffcddf166674475ab720461",
@@ -47818,6 +47829,17 @@
     }
   },
   "final_decision_reports": [
+    {
+      "source_path": "reports/twStock/2026-09-11_tw_kline_decision_report.md",
+      "ledger_path": "detail/2026-09-11_tw_kline_decision_report.final.json",
+      "markdown_path": "detail/2026-09-11_tw_kline_decision_report.final.md",
+      "counts": {
+        "observe": 72,
+        "exclude": 31
+      },
+      "source_report_sha256": "7fce3b8d1a71bcbb99248709f795de469cf5cf383d68b56ddd248357d1733903",
+      "research_run_id": ""
+    },
     {
       "source_path": "reports/usStock/2026-09-10_us_kline_decision_report.md",
       "ledger_path": "detail/2026-09-10_us_kline_decision_report.final.json",
