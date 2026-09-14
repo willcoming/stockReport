@@ -23,7 +23,7 @@
   }
   function freshness(validUntil, researchDate, today = taipeiDate()) {
     if (!validDate(validUntil) || !validDate(researchDate) || researchDate > today || validUntil < researchDate) return "unknown";
-    return validUntil < today ? "expired" : "valid";
+    return validUntil <= today ? "expired" : "valid";
   }
   function freshnessLabel(status, validUntil) {
     return status === "expired" ? `已過期（有效至 ${validUntil}）` : status === "valid" ? `有效至 ${validUntil}` : "有效期未確認";
