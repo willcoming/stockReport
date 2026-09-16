@@ -322,6 +322,7 @@
     let inserted = 0;
 
     for (const group of groups) {
+      if (group.closest?.('[data-report-mode="signals_only"]')) continue;
       const linkOnly = group.dataset?.researchDisplay === "link-only";
       const stock = findStockForGroup(group, normalized);
       const existingLink = group.querySelector(`.${REPORT_LINK_CLASS}`);
